@@ -54,7 +54,7 @@ jobs:
           
       - name: Copy output to gh-pages
         run: |
-          cp $GH_PAGES_DIR/* $GH_PAGES_DIR/
+          cp $GH_PAGES_DIR/* $GH_PAGES_BRANCH/
           
       - name: Commit files
         working-directory: ${{ env.GH_PAGES_BRANCH }}
