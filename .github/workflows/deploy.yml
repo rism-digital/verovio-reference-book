@@ -6,6 +6,10 @@ on:
   push:
     branches: [ master ]
 
+env:
+  GH_PAGES_DIR: "_site/"
+  GH_PAGES_BRANCH: gh-pages
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -32,3 +36,21 @@ jobs:
 
       # Tune the jekyll action
       - uses:  lemonarc/jekyll-action@1.0.0
+      
+      - name: Configure git
+        working-directory: ${{ env.GH_PAGES_DIR }}
+        run: |
+          echo "Configuring git"
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          
+      - name: Commit files
+        working-directory: ${{ env.GH_PAGES_DIR }}
+        run: |
+          echo "Running git commit"
+          git add .
+          git commit -m "Auto-commit of toolkit build for ${{ github.repository }}@${{ github.sha }}"
+      
+      - name: Push changes to gh-pages
+        working-directory: ${{ env.GH_PAGES_DIR }}
+        run: git push origin HEAD:$GH_PAGES_BRANCH
