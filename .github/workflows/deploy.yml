@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 env:
-  GH_PAGES_DIR: "_site/"
+  GH_PAGES_DIR: "_site"
   GH_PAGES_BRANCH: gh-pages
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -54,7 +54,7 @@ jobs:
           
       - name: Copy output to gh-pages
         run: |
-          cp $GH_PAGES_DIR/* $GH_PAGES_BRANCH/
+          cp -r $GH_PAGES_DIR/* $GH_PAGES_BRANCH/
           
       - name: Commit files
         working-directory: ${{ env.GH_PAGES_BRANCH }}
