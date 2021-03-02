@@ -1,0 +1,20 @@
+name: Jekyll Build and Deploy
+
+on:
+  push:
+    branches:
+    - master
+
+jobs: 
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Building a jekyll site from configured directory, maybe deploying it.
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          REMOVE_GEMLOCK: false
+          REMOTE_BRANCH: "gh-pages"
+        uses: agentd00nut/jekyll-build-optional-deploy-gh-pages@master
