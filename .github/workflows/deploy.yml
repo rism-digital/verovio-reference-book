@@ -48,8 +48,8 @@ jobs:
         working-directory: ${{ env.GH_PAGES_DIR }}
         run: |
           echo "Running git commit"
-          git add .
-          git commit -f -m "Auto-commit of toolkit build for ${{ github.repository }}@${{ github.sha }}"
+          git -f add .
+          git commit -m "Auto-commit of toolkit build for ${{ github.repository }}@${{ github.sha }}"
       
       - name: Push changes to gh-pages
         working-directory: ${{ env.GH_PAGES_DIR }}
