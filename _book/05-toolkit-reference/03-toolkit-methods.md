@@ -14,3 +14,4 @@ title: "Toolkit methods"
 
 ### RenderToSVGFile
 
+### SetOptions
