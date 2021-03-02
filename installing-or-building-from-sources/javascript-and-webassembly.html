@@ -1,6 +1,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Command-line version</title>
+        <title>JavaScript and WebAssembly</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -92,48 +92,66 @@
 
 
 <div class="row">
-    <div class="col-md-3 sidebar-offcanvas" id="sidebar" role="navigatin">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
         <div class="toc-group">
 
+    
+    
     <a class="toc-item "  href="/introduction.html">Introduction</a>
     
 
+    
+    
     <a class="toc-item "  href="/web-based-notation.html">Tutorial 1: Web-based notation</a>
     
 
+    
+    
     <a class="toc-item "  href="/interactive-notation.html">Tutorial 2: Interactive notation</a>
     
 
+    
+    
     <a class="toc-item "  href="/advanced-topics.html">Beyond tutorials: Advanced topics</a>
     
 
+    
+    
     <a class="toc-item "  href="/toolkit-reference.html">Toolkit Reference</a>
     
 
-    <a class="toc-item "  href="/building-from-sources.html">Building from sources</a>
+    
+    
+    <a class="toc-item "  href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
     
         
         
-<a class="toc-item toc-section selected" href="/building-from-sources/command-line.html">Command-line version</a>
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/command-line.html">Command-line version</a>
+    
+
+<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
     
         
         
-    
+<a class="toc-item toc-subsection" href="#pre-build-versions">Pre-build versions</a>
 
-<a class="toc-item toc-section " href="/building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
-    
-
-<a class="toc-item toc-section " href="/building-from-sources/python.html">Python</a>
-    
-
-<a class="toc-item toc-section " href="/building-from-sources/java.html">Java</a>
-    
-
-<a class="toc-item toc-section " href="/building-from-sources/generate-code-with-libmei.html">Generate code with libMEI</a>
-    
+<a class="toc-item toc-subsection" href="#building-the-toolkit">Building the toolkit</a>
 
     
 
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/python.html">Python</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/java.html">Java</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/generate-code-with-libmei.html">Generate code with libMEI</a>
+    
+
+    
+
+    
+    
     <a class="toc-item "  href="/contributing.html">Contributing</a>
     
 
@@ -142,11 +160,55 @@
 
     <div class="col-md-9">
         <div class="panel">
-            
+            <h3 id="pre-build-versions">Pre-build versions</h3>
+
+<p>The verovio.org <a href="https://github.com/rism-digital/verovio.org">GitHub repository</a> provides compiled versions of the JavaScript toolkit. The toolkit is available in three options.</p>
+<ol>
+  <li><strong>verovio-toolkit.js</strong> - in JavaScript (more precisely in <a href="https://asmjs.org">asm.js</a>)</li>
+  <li><strong>verovio-toolkit-wasm.js</strong> – in <a href="https://webassembly.org/">WebAssembly</a></li>
+  <li><strong>verovio-toolkit-hum.js</strong> – in JavaScript with the Humdrum support</li>
+</ol>
+
+<p>A build of each of these is provided by CI for the development version as well as for each <a href="https://github.com/rism-digital/verovio/releases">release</a>.</p>
+
+<p>The latest release is always available from:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/latest/verovio-toolkit.js
+</code></pre></div></div>
+
+<p>The latest development version is available from:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/develop/verovio-toolkit.js
+</code></pre></div></div>
+
+<p>Previous releases are available from their corresponding directory, e.g.:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/2.7.1/verovio-toolkit.js
+</code></pre></div></div>
+
+<h4 id="npm">NPM</h4>
+
+<p>The latest stable version is available via <a href="https://www.npmjs.com/package/verovio">NPM</a></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>verovio
+</code></pre></div></div>
+
+<h3 id="building-the-toolkit">Building the toolkit</h3>
+
+<p>To build the JavaScript toolkit you need to have the <a href="http://www.emscripten.org" target="_blank">Emscripten</a> compiler installed on your machine. You also need <a href="https://cmake.org">CMake</a>. You need to run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd emscripten
+$ ./buildToolkit -H
+</code></pre></div></div>
+<p>The toolkit will be written to:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./emscripten/build/verovio-toolkit.js
+</code></pre></div></div>
+
+<p>Building without <code class="language-plaintext highlighter-rouge">-H</code> will include the Humdrum support, which increases the size of the toolkit by about one third. In that case, the output will be written to <code class="language-plaintext highlighter-rouge">verovio-toolkit-hum.js</code>.</p>
+
+<p>If you are building with another option set than previously, or if you want to regenerate the makefiles, add the option <code class="language-plaintext highlighter-rouge">-M</code>.</p>
+
 
         </div>
     </div>
 </div>
+
+
 
         </div>
 

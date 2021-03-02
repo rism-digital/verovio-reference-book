@@ -67,15 +67,15 @@ code.panel-header { background-color: #464646; color: #f9f2f4; }
 
 .footer p { text-align: center; }
 
-.toc-item { position: relative; display: block; padding: 4px 10px; color: #555; }
+.toc-item { position: relative; display: block; padding: 3px 8px; color: #555; }
 
 .toc-group a.selected { text-decoration: underline; color: #660000; }
 
-a.toc-section, a.toc-subsection { padding-left: 20px; border-left: 2px solid; margin-left: 11px; }
+a.toc-section, a.toc-subsection { padding-left: 18px; border-left: 2px solid; margin-left: 9px; }
 
-a.toc-subsection { padding-left: 40px; }
+a.toc-subsection { padding-left: 36px; }
 
-a.toc-subsection::before { content: ""; position: absolute; left: 20px; top: 0px; bottom: 0px; border-left: 1px solid; }
+a.toc-subsection::before { content: ""; position: absolute; left: 18px; top: 0px; bottom: 0px; border-left: 1px solid; }
 
 .carousel-inner { -webkit-transform-style: preserve-3d; }
 

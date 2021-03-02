@@ -1,0 +1,273 @@
+<html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Command-line version</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap.min.css" type="text/css" /><!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/fileinput.min.css" />
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/verovio.css" />
+        <link rel="stylesheet" href="/assets/css/midiplayer.css" />
+
+        <link rel="stylesheet" href="/css/verovio-site.css" />
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                </li>
+                <li class="active">
+                    <a href="/index.html">Reference book</a>
+                </li>
+                <li >
+                    <a href="https://www.verovio.org/test-suite.xhtml">Test suite</a>
+                </li>
+                <!--
+                <li >
+                    <a href="/tutorial.xhtml">Tutorial</a>
+                </li>
+                <li >
+                    <a href="/mei-viewer.xhtml">MEI Viewer</a>
+                </li>
+                <li >
+                    <a href="/app.html">Verovio App</a>
+                </li>
+                <li >
+                    <a href="/musicxml.html">Other formats</a>
+                </li>
+                -->
+                <!--
+                <li class="dropdown ">
+                    <a href="/" class="dropdown-toggle" data-toggle="dropdown">Plaine &amp; Easie<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                          <li><a href="/pae-examples.xhtml">Examples</a></li>
+                          <li><a href="/pae-editor.xhtml">Editor</a></li>
+                    </ul>
+                </li>
+                -->
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+        <div class="top-header"> 
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;"> 
+        <h1 class="hidden-xs">A music notation engraving library</h1> 
+        <h3 class="visible-xs">A music notation engraving library</h3> 
+        <p>Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    </div>
+</div>
+
+
+        <div class="container with-footer">
+
+            
+
+
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="toc-group">
+
+    
+    
+    <a class="toc-item "  href="/introduction.html">Introduction</a>
+    
+
+    
+    
+    <a class="toc-item "  href="/web-based-notation.html">Tutorial 1: Web-based notation</a>
+    
+
+    
+    
+    <a class="toc-item "  href="/interactive-notation.html">Tutorial 2: Interactive notation</a>
+    
+
+    
+    
+    <a class="toc-item "  href="/advanced-topics.html">Beyond tutorials: Advanced topics</a>
+    
+
+    
+    
+    <a class="toc-item "  href="/toolkit-reference.html">Toolkit Reference</a>
+    
+
+    
+    
+    <a class="toc-item "  href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+        
+        
+<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/command-line.html">Command-line version</a>
+    
+        
+        
+<a class="toc-item toc-subsection" href="#macos-or-linux">MacOS or Linux</a>
+
+<a class="toc-item toc-subsection" href="#windows-10">Windows 10</a>
+
+<a class="toc-item toc-subsection" href="#xcode">Xcode</a>
+
+<a class="toc-item toc-subsection" href="#visual-studio">Visual Studio</a>
+
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/python.html">Python</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/java.html">Java</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/generate-code-with-libmei.html">Generate code with libMEI</a>
+    
+
+    
+
+    
+    
+    <a class="toc-item "  href="/contributing.html">Contributing</a>
+    
+
+</div>
+    </div>
+
+    <div class="col-md-9">
+        <div class="panel">
+            <p>Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward.</p>
+
+<h3 id="macos-or-linux">MacOS or Linux</h3>
+
+<p>To build the the command-line tool, you need <a href="https://cmake.org">CMake</a> to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>tools
+cmake ../cmake
+make
+</code></pre></div></div>
+<p>The generates a <code class="language-plaintext highlighter-rouge">verovio</code> binary within <code class="language-plaintext highlighter-rouge">./tools</code>. You can run Verovio from there or install it. Installing it means copying the executable and the resource files to directories which paths are globally accessible. You simply need to run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>make <span class="nb">install</span>
+</code></pre></div></div>
+<p>If you do not install it and run it from <code class="language-plaintext highlighter-rouge">./tools</code> or from another directory, you need to use the <code class="language-plaintext highlighter-rouge">-r</code> option to set the appropriate resource directory. The parameter of the <code class="language-plaintext highlighter-rouge">-r</code> option has to be a path to the <code class="language-plaintext highlighter-rouge">./data</code> folder of the codebase.</p>
+
+<p>Keep in mind that if you have installed, you should not run another version without re-installing it or using the <code class="language-plaintext highlighter-rouge">-r</code> options because otherwise the resources installed can be invalid. A typical problem is missing font glyphs that a newer version needs but that are not in the older version of the resources.</p>
+
+<p>(Until version 2.6.0, the cmake command was <code class="language-plaintext highlighter-rouge">cmake .</code> and not <code class="language-plaintext highlighter-rouge">cmake ../cmake</code>.)</p>
+
+<h4 id="additional-building-options">Additional building options</h4>
+
+<p>By default the executable is not stripped. To strip it during the installation do</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>make <span class="nb">install</span>/strip
+</code></pre></div></div>
+<p>For seeing the command-line options, run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./verovio <span class="nt">--help</span>
+</code></pre></div></div>
+
+<p>For building it without Plain and Easy support (without <code>regex.h</code>), run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ../cmake <span class="nt">-DNO_PAE_SUPPORT</span><span class="o">=</span>ON
+</code></pre></div></div>
+
+<p>To allow PAE support again, you must run the command</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ../cmake <span class="nt">-DNO_PAE_SUPPORT</span><span class="o">=</span>OFF
+</code></pre></div></div>
+
+<p>since running <code class="language-plaintext highlighter-rouge">cmake ../cmake</code> will not clear the state of the define variable.</p>
+
+<p>Likewise, the Humdrum importer can be turned on/off by using <code class="language-plaintext highlighter-rouge">NO_HUMDRUM_SUPPORT</code>. Also, to use the MusicXML Humdrum importer by default instead of the direct MusicXML importer, add <code class="language-plaintext highlighter-rouge">-DMUSICXML_DEFAULT_HUMDRUM=ON</code>.</p>
+
+<h4 id="uninstall-a-previous-version">Uninstall a previous version</h4>
+
+<p>To uninstall a previously installed version of Verovio from the system, run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-f</span> /usr/local/bin/verovio
+<span class="nb">rm</span> <span class="nt">-rf</span> /usr/local/share/verovio
+</code></pre></div></div>
+
+<p>Occasionally there are problems with updates necessary to the <code class="language-plaintext highlighter-rouge">Makefile</code> when compiling a new version of Verovio with make. It may be necessary to clear out the automatically generated cmake files and regenerate them. To do that, run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-rf</span> CMakeFiles CMakeCache.txt Makefile cmake_install.cmake
+</code></pre></div></div>
+
+<h3 id="windows-10">Windows 10</h3>
+
+<p>To build Verovio on Windows 10 from the command-line, you will need to have <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools">Microsoft C++ Build Tools</a> and <a href="https://sourceforge.net/projects/gnuwin32/">make</a> installed on your computer.</p>
+
+<p>Run the following commands from the <em>x86 Native Tools Command Prompt for VS</em> (with administrator privileges):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> &lt;sourceCode&gt;/tools 
+cmake ../cmake <span class="nt">-G</span> <span class="s2">"NMake Makefiles"</span>
+nmake
+nmake <span class="nb">install</span>
+</code></pre></div></div>
+<p>After the installation, add <code class="language-plaintext highlighter-rouge">&lt;sourceCode&gt;/tools</code> to the <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/">PATH</a> of your system.</p>
+
+<p>When running the commands, the resource path should be provided explicitly with the following option:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">-r</span> <span class="s2">"C:/Program Files (x86)/Verovio/share/verovio"</span>
+</code></pre></div></div>
+
+<h3 id="xcode">Xcode</h3>
+
+<p>For MacOS users, there is also an Xcode project in the Verovio root directory.</p>
+
+<p>By default, humdrum support is turned off in Xcode. To turn in on, you need to use the <code class="language-plaintext highlighter-rouge">Verovio-Humdrum</code> building scheme.</p>
+
+<h3 id="visual-studio">Visual Studio</h3>
+
+<ul>
+  <li>Install <a href="https://cmake.org">CMake</a></li>
+  <li>Go into the tools folder of Verovio</li>
+  <li>Execute <code class="language-plaintext highlighter-rouge">cmake ../cmake -DNO_PAE_SUPPORT=ON</code> (add <code class="language-plaintext highlighter-rouge">-DCMAKE_GENERATOR_PLATFORM=x64</code> for a x64 solution)</li>
+  <li>Open the resulting <code class="language-plaintext highlighter-rouge">Verovio.sln</code> with Visual Studio and build it from there</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+
+        <footer class="footer navbar-fixed-bottom">
+            <p>
+                
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).ready(function() {
+
+                
+
+            });
+        //]]>
+        </script>
+    </body>
+</html>

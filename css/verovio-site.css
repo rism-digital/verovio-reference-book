@@ -1,0 +1,15 @@
+@media (min-width: 992px) { .toc-group { position: fixed; z-index: 1; top: 240px; max-width: 236px; overflow-x: hidden; } }
+
+.highlighter-rouge pre.highlight { border: none; }
+
+.highlighter-rouge div.highlight::before { display: inline-block; color: #fff; font-size: 1rem; font-weight: 700; height: 1.5rem; letter-spacing: .1em; line-height: 1.5rem; padding: 0 .5em; text-transform: uppercase; top: 0; }
+
+.language-bash div.highlight::before { background: #669; content: "Terminal"; }
+
+.language-xml div.highlight::before { background: #5d8494; content: "XML"; }
+
+.language-python div.highlight::before { background: #66998c; content: "Python"; }
+
+.language-cpp div.highlight::before { background: #998166; content: "C++"; }
+
+.language-js div.highlight::before { background: #b5c206; content: "JavaScript"; }

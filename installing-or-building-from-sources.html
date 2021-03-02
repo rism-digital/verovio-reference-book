@@ -1,6 +1,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Generate code with libMEI</title>
+        <title>Installing or building from sources</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -92,48 +92,59 @@
 
 
 <div class="row">
-    <div class="col-md-3 sidebar-offcanvas" id="sidebar" role="navigatin">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
         <div class="toc-group">
 
+    
+    
     <a class="toc-item "  href="/introduction.html">Introduction</a>
     
 
+    
+    
     <a class="toc-item "  href="/web-based-notation.html">Tutorial 1: Web-based notation</a>
     
 
+    
+    
     <a class="toc-item "  href="/interactive-notation.html">Tutorial 2: Interactive notation</a>
     
 
+    
+    
     <a class="toc-item "  href="/advanced-topics.html">Beyond tutorials: Advanced topics</a>
     
 
+    
+    
     <a class="toc-item "  href="/toolkit-reference.html">Toolkit Reference</a>
     
 
-    <a class="toc-item "  href="/building-from-sources.html">Building from sources</a>
+    
+    
+    <a class="toc-item "  href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
     
         
         
-<a class="toc-item toc-section " href="/building-from-sources/command-line.html">Command-line version</a>
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/command-line.html">Command-line version</a>
     
 
-<a class="toc-item toc-section " href="/building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
     
 
-<a class="toc-item toc-section " href="/building-from-sources/python.html">Python</a>
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/python.html">Python</a>
     
 
-<a class="toc-item toc-section " href="/building-from-sources/java.html">Java</a>
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/java.html">Java</a>
     
 
-<a class="toc-item toc-section selected" href="/building-from-sources/generate-code-with-libmei.html">Generate code with libMEI</a>
-    
-        
-        
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/generate-code-with-libmei.html">Generate code with libMEI</a>
     
 
     
 
+    
+    
     <a class="toc-item "  href="/contributing.html">Contributing</a>
     
 
@@ -142,11 +153,59 @@
 
     <div class="col-md-9">
         <div class="panel">
-            
+            <p>Compile <code class="language-plaintext highlighter-rouge">from</code> sources is easy.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Test
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">int</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">string</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">string</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>OK</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="cp">&lt;?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0" ?&gt;</span>
+<span class="cp">&lt;?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron" ?&gt;</span>
+<span class="nt">&lt;mei</span> <span class="na">xmlns=</span><span class="s">"http://www.music-encoding.org/ns/mei"</span> <span class="na">meiversion=</span><span class="s">"4.0.0"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;meiHead&gt;</span>
+      <span class="nt">&lt;fileDesc&gt;</span>
+         <span class="nt">&lt;titleStmt&gt;</span>
+            <span class="nt">&lt;title&gt;</span>Measure barline example<span class="nt">&lt;/title&gt;</span>
+         <span class="nt">&lt;/titleStmt&gt;</span>
+         <span class="nt">&lt;pubStmt&gt;</span>
+            <span class="nt">&lt;date&gt;</span>2017-05-04<span class="nt">&lt;/date&gt;</span>
+         <span class="nt">&lt;/pubStmt&gt;</span>
+         <span class="nt">&lt;seriesStmt&gt;</span>
+            <span class="nt">&lt;title&gt;</span>Verovio test suite<span class="nt">&lt;/title&gt;</span>
+         <span class="nt">&lt;/seriesStmt&gt;</span>
+         <span class="nt">&lt;notesStmt&gt;</span>
+            <span class="nt">&lt;annot&gt;</span>Verovio supports various types of barline for the "measure" elements. It also supports "scale" attributes on "staffDef".<span class="nt">&lt;/annot&gt;</span>
+         <span class="nt">&lt;/notesStmt&gt;</span>
+      <span class="nt">&lt;/fileDesc&gt;</span>
+   <span class="nt">&lt;/meiHead&gt;</span>
+<span class="nt">&lt;/mei&gt;</span>
+</code></pre></div></div>
 
         </div>
     </div>
 </div>
+
+
 
         </div>
 
