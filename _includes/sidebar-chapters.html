@@ -1,6 +1,10 @@
 <div class="toc-group">
 {% for c in toc %}
-    <a class="toc-item {% if page.url == c.url %}selected{% endif %}"  href="{{ c.url }}">{{ c.name }}</a>
+    {% assign selected = false %}
+    {% if c.url == page.url and c.link_to_section != true %}
+        {% assign selected = true %}
+    {% endif %}
+    <a class="toc-item {% if selected %}selected{% endif %}"  href="{{ c.url }}">{{ c.name }}</a>
     {% if c.id == chapters[page.path] %}
         {% assign toc_sections = c.sections %}
         {% include sidebar-sections.html %}

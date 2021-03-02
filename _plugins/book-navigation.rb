@@ -52,7 +52,7 @@ module Jekyll
         # This is a chapter doc
         if (!section_id)
           # Sections are empty for now
-          toc.push({"id" => chapter_id, "name" => doc['title'], "url" => url, "sections" => []})
+          toc.push({"id" => chapter_id, "name" => doc['title'], "url" => url, "sections" => [], "link_to_section" => doc.data['link_to_section']})
           chapters[short_path] = chapter_id
           next
         end
@@ -70,6 +70,15 @@ module Jekyll
 
         # We can add subsection directly when adding the section
         sectionChapter[0]['sections'].push({"id" => section_id, "name" => doc['title'], "url" => url, "subsections" => get_subsection_array(doc)})
+      end
+
+      # Chapters can have a member 'link_to_section'.
+      # When set to true, we want the link in the toc to directly show the first
+      # section of the chapter. We adjust the url of the chapter here
+      toc.each do |chapter|
+        if chapter['link_to_section'] && !chapter['sections'].empty?
+          chapter['url'] = chapter['sections'][0]['url']
+        end
       end
 
       site.data['toc'] = toc

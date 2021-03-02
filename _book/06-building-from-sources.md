@@ -1,3 +1,0 @@
----
-title: "Building from sources"
----

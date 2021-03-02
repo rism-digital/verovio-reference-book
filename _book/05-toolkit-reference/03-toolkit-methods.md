@@ -2,6 +2,10 @@
 title: "Toolkit methods"
 ---
 
+### GetExpansionIdsForElement
+
+### GetTimesForElement
+
 ### LoadData
 
 ### LoadFile

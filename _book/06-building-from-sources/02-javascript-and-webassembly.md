@@ -1,3 +1,0 @@
----
-title: "JavaScript and WebAssembly"
----
