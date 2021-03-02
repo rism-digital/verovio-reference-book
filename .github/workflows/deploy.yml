@@ -44,13 +44,25 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           
+      - name: Checkout GH_PAGES_DIR
+        uses: actions/checkout@v2
+        with:
+          # ref (branch, tag or SHA) to check out
+          ref: ${{ env.GH_PAGES_BRANCH }}
+          # relative path under $GITHUB_WORKSPACE to place the repository
+          path: ${{ env.GH_PAGES_BRANCH }}
+          
+      - name: Copy output to gh-pages
+        run: |
+          cp $GH_PAGES_DIR/* $GH_PAGES_DIR/
+          
       - name: Commit files
-        working-directory: ${{ env.GH_PAGES_DIR }}
+        working-directory: ${{ env.GH_PAGES_BRANCH }}
         run: |
           echo "Running git commit"
-          git -f add .
+          git add .
           git commit -m "Auto-commit of toolkit build for ${{ github.repository }}@${{ github.sha }}"
       
       - name: Push changes to gh-pages
-        working-directory: ${{ env.GH_PAGES_DIR }}
+        working-directory: ${{ env.GH_PAGES_BRANCH }}
         run: git push origin HEAD:$GH_PAGES_BRANCH
