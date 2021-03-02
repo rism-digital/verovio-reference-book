@@ -1,18 +1,12 @@
 name: Jekyll deployment
 
-# Controls when the action will run. Triggers the workflow on push
-# events but only for the master branches
+# Builds the site and pushes the _site/ output to gh-pages
+
 on:
   push:
     branches: [ master ]
 
-env:
-  GH_PAGES_DIR: "_site"
-  GH_PAGES_BRANCH: gh-pages
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -37,6 +31,7 @@ jobs:
       # Tune the jekyll action
       - uses:  lemonarc/jekyll-action@1.0.0
       
+      # Deploy _site to the gh-pages branch
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
@@ -44,34 +39,3 @@ jobs:
           BRANCH: gh-pages
           FOLDER: _site
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Configure git
-        working-directory: ${{ env.GH_PAGES_DIR }}
-        run: |
-          echo "Configuring git"
-          git config --get remote.origin.url
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          
-      - name: Checkout GH_PAGES_DIR
-        uses: actions/checkout@v2
-        with:
-          # ref (branch, tag or SHA) to check out
-          ref: ${{ env.GH_PAGES_BRANCH }}
-          # relative path under $GITHUB_WORKSPACE to place the repository
-          path: ${{ env.GH_PAGES_BRANCH }}
-          
-      - name: Copy output to gh-pages
-        run: |
-          cp -r $GH_PAGES_DIR/* $GH_PAGES_BRANCH/
-          
-      - name: Commit files
-        working-directory: ${{ env.GH_PAGES_BRANCH }}
-        run: |
-          echo "Running git commit"
-          git add .
-          git commit -m "Auto-commit of toolkit build for ${{ github.repository }}@${{ github.sha }}"
-      
-      - name: Push changes to gh-pages
-        working-directory: ${{ env.GH_PAGES_BRANCH }}
-        run: git push origin HEAD:$GH_PAGES_BRANCH
