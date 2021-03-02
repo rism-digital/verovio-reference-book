@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% assign toc = site.data['toc'] %}
+{% assign chapters = site.data['chapters'] %}
+{% assign sections = site.data['sections'] %}
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar" role="navigatin">
+        {% include sidebar-chapters.html %}
+    </div>
+
+    <div class="col-md-9">
+        <div class="panel">
+            {{ content }}
+        </div>
+    </div>
+</div>

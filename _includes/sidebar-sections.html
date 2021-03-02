@@ -1,0 +1,7 @@
+{% for s in toc_sections %}
+<a class="toc-item toc-section {% if page.url == s.url %}selected{% endif %}" href="{{ s.url }}">{{ s.name }}</a>
+    {% if s.id == sections[page.path] %}
+        {% assign toc_subsections = s.subsections %}
+        {% include sidebar-subsections.html %}
+    {% endif %}
+{% endfor %}
