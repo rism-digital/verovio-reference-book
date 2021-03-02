@@ -1,7 +1,13 @@
 name: Verovio music engraving library
-markdown: kramdown
 baseurl: ""
 exclude: []
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    #css_class   : 'syntax'
 
 webrick:
   headers:
