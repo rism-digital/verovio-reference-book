@@ -21,6 +21,7 @@ defaults:
     values:
       layout: book
       verovio: false
+      active: book
 
 collections:
     book:
