@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/rism-digital/verovio-theme
-  revision: f1085f924378a3d4dea971d990d3c0f23d195ee9
+  revision: eecb1c3014803cdffdc7756d5af7de825049404a
   specs:
-    verovio-theme (0.1.2)
+    verovio-theme (0.1.3)
       jekyll (~> 4.1)
 
 GEM
