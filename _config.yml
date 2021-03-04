@@ -1,4 +1,4 @@
-name: Verovio music engraving library
+name: Referenc book for the Verovio music engraving library
 baseurl: ""
 exclude: ['mei']
 
@@ -18,8 +18,7 @@ sass:
 
 theme: verovio-theme
 
-tests-edit-path: "https://github.com/rism-digital/verovio.org/edit/gh-pages"
-tests-verovio-edit-path: "https://editor.verovio.org/?file=https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages"
+edit-path: "https://github.com/rism-digital/verovio-reference-book/edit/master"
 
 defaults:
   - scope:
