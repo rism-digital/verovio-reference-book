@@ -6,7 +6,7 @@ To get started with Verovio, you need to load the JavaScript library in a web pa
 
 You can start with the following HTML page:
 
-```
+```html
 <html>
   <head>
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
@@ -22,7 +22,7 @@ If you view this page in your browser, you should text in a large font that says
 
 To start Verovio, you should add the following to your page in the head, after the `<script>` tag that loads the Verovio toolkit:
 
-```
+```html
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
       Module.onRuntimeInitialized = async _ => {
@@ -52,7 +52,7 @@ At the end of this first section you should have a working web page, with a mess
 
 #### Full example
 
-```
+```html
 <html>
   <head>
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
