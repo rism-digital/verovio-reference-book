@@ -15,7 +15,7 @@ Later tutorials will cover more in-depth topics, such as how to have more contro
 
 ### Basic browser skills
 
-A good skill to have in working through these tutorials is how to access and use the JavaScript error console in your browser. Every modern browser comes with this facility. This feature is useful to see what might be causing problems, since these problems may not be noticeable; your page just may not work, or it may not do what you expect.
+A good skill to have in working through these tutorials is how to access and use the JavaScript error console in your browser. Every modern browser comes with this facility. This feature is useful to see what might be causing problems since these problems may not be otherwise noticeable; your page just may not work, or it may not do what you expect.
 
 Accessing the JavaScript console is slightly different in each browser.
 
@@ -30,7 +30,7 @@ Menu location:
 
  - Menu > More Tools > Developer Tools > Console tab
 
-https://developers.google.com/web/tools/chrome-devtools/debug/console/console-ui?hl=en
+[Chrome documentation](https://developers.google.com/web/tools/chrome-devtools/debug/console/console-ui?hl=en)
 
 #### Firefox
 
@@ -43,7 +43,7 @@ Menu location:
 
  - Menu > Developer > Web Console
 
-https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console
+[Firefox documentation](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
 
 #### Internet Explorer / Edge
 
@@ -51,7 +51,7 @@ Keyboard shortcut: F12
 
 Menu location: Menu "three dots" icon > F12 Developer Tools > Console tab
 
-https://dev.windows.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/
+[Edge documentation](https://dev.windows.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/)
 
 #### Safari
 
@@ -66,6 +66,6 @@ The Safari developer tools must be enabled before use.
  1. Safari > Preferences > Advanced > enable "Show Develop menu in menu bar"
  2. Develop > Show Error Console
 
-https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html#//apple_ref/doc/uid/TP40007874-CH2-SW1
+[Safari documentation](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html#//apple_ref/doc/uid/TP40007874-CH2-SW1)
 
-(Source)[https://documentation.concrete5.org/tutorials/how-open-browser-console-view-errors]
+[Source](https://documentation.concrete5.org/tutorials/how-open-browser-console-view-errors)
