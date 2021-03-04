@@ -1,6 +1,6 @@
 name: Verovio music engraving library
 baseurl: ""
-exclude: []
+exclude: ['mei']
 
 markdown: kramdown
 highlighter: rouge
