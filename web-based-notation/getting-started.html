@@ -110,6 +110,10 @@
     
         
         
+<a class="toc-item toc-subsection" href="#logging-to-the-console">Logging to the Console</a>
+
+<a class="toc-item toc-subsection" href="#end-of-section-1">End of Section 1</a>
+
     
 
 <a class="toc-item toc-section " href="/web-based-notation/basic-rendering.html">Basic rendering</a>
@@ -155,7 +159,72 @@
         <div class="panel">
             <a href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-web-based-notation/01-getting-started.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
             <h2>Getting started</h2>
-            
+            <p>To get started with Verovio, you need to load the JavaScript library in a web page. If you were building your own website, you may choose to host this on your own servers, but in this tutorial we will use a version that is hosted on the Verovio website.</p>
+
+<p>You can start with the following HTML page:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello Verovio!&lt;/h1&gt;
+    &lt;div id="notation"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>If you view this page in your browser, you should text in a large font that says “Hello Verovio!” but not much else. If you have your browser console open, you should see no errors.</p>
+
+<p>To start Verovio, you should add the following to your page in the head, after the <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag that loads the Verovio toolkit:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
+  document.addEventListener("DOMContentLoaded", (event) =&gt; {
+      Module.onRuntimeInitialized = async _ =&gt; {
+        tk = new verovio.toolkit();
+      }
+  });
+&lt;/script&gt;
+</code></pre></div></div>
+
+<p>When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let’s start from the inside out.</p>
+
+<p>The line <code class="language-plaintext highlighter-rouge">tk = new verovio.toolkit();</code> creates a new instance of the Verovio toolkit. This is what we will eventually use to render the notation. However, we first need to wait until the Verovio library is fully downloaded and ready to use by your browser. The <code class="language-plaintext highlighter-rouge">Module.onRuntimeInitialized</code> line, and the <code class="language-plaintext highlighter-rouge">document.addEventListener</code> lines do just that – they tell your browser to wait until other things have happened before trying to work with Verovio. This is a good, safe way to ensure all the requirements are met before we try to start working with Verovio.</p>
+
+<h3 id="logging-to-the-console">Logging to the Console</h3>
+
+<p>While you are developing, it can be useful to write little notes to yourself to let you know what types of data you have, or to see what is happening at any given point in your code. As you proceed to more advanced uses you may wish to explore the browser’s built-in debugger, but until then a quick and easy way to do this is to use your browser’s error console.</p>
+
+<p>In your page, just after the line where you instantiate a new Verovio toolkit, insert the following:</p>
+
+<p><code class="language-plaintext highlighter-rouge">console.log("Verovio has loaded!");</code></p>
+
+<p>When you refresh your page, you can see this note to yourself appear in the browser console. If no other errors appear, this gives you a critical pieces of information: Your browser has reached that point in execution, which means it has successfully loaded and initialized Verovio. If you do not see this, go back through the examples to see where you may have gone wrong. If you still cannot find this, you can find the full example for this stage of the tutorial below.</p>
+
+<h3 id="end-of-section-1">End of Section 1</h3>
+
+<p>At the end of this first section you should have a working web page, with a message printed to your browser console, and no other errors showing up. In the next section we will look at how to load and render some basic music notation in this page.</p>
+
+<h4 id="full-example">Full example</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer&gt;&lt;/script&gt;
+    &lt;script&gt;
+      document.addEventListener("DOMContentLoaded", (event) =&gt; {
+          Module.onRuntimeInitialized = async _ =&gt; {
+            tk = new verovio.toolkit();
+            console.log("Verovio has loaded!");
+          }
+      });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello Verovio!&lt;/h1&gt;
+    &lt;div id="notation"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
         </div>
     </div>
