@@ -12,7 +12,7 @@ Each chapter of the book is composed of a Markdown file a corresponding director
 
 The content of a chapter is a list of files, one per section. Chapter and section file names have to be prefixed with a `dd-` numbering that determines their order in the book.
 
-Subsections in a section are `h3` headings (`###` in Markdown) in the text. Text paragraphs have not hard wraps.
+Subsections in a section are `h3` headings (`###` in Markdown) in the text. Text paragraphs should not have hard wraps to help cut down on the size of the diffs that appear when changes are made, making changes easier to review.
 
 ## Build the book locally
 
