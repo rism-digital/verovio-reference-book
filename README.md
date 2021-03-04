@@ -6,11 +6,11 @@ This is the repository for the Reference book for the Verovio engraving library.
 
 The book is a Jekyll site written in Markdown. The text content of the book is in the [_book](./_book) folder of this repository.
 
-Each chapter of the book is composed of a Markdown file a corresponding directory with its content. The name of the directory of the content of a chapter has to be exactly the name of the chapter file (without the `.md` extension).
+Each chapter of the book is composed of a Markdown file in a corresponding directory with its content. The name of the directory containing the content of a chapter has to be exactly the name of the chapter file (without the `.md` extension).
 
 The content of a chapter is a list of files, one per section. Chapters and section file names have to be prefixed with a `dd-` numbering that determines their order in the book.
 
-Subsections in a section are `h3` headings (`###` in Markdown) in the text. Text paragraphs have not hard wraps.
+Subsections in a section are `h3` headings (`###` in Markdown) in the text. Text paragraphs should not have hard wraps to help cut down on the size of the diffs that appear when changes are made, making changes easier to review.
 
 ## Build the book locally
 
