@@ -20,8 +20,7 @@ Verovio uses the Standard Music Font Layout (SMuFL) as the basis for its notatio
 shapes. This means that any [SMuFL-compliant font](https://www.smufl.org/fonts/)
 may be used to customize and personalize the look of the engraved output.
 
-
-## About this book
+### About this book
 
 This book is intended to serve as a reference guide for how to work with Verovio,
 and is meant for users of all skill levels. The first three sections will
