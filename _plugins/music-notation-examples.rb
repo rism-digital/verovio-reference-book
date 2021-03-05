@@ -1,6 +1,6 @@
 
 module Jekyll
-  class MeiExamples < Generator
+  class MusicNotationExamples < Generator
     safe true
     priority :high
 
@@ -32,7 +32,7 @@ module Jekyll
             examples.push(example)
             # Here check if the file exists. If not, it means it still need to be generated with the 
             # file need to be generated with ./scripts/generate-examples.py
-            # The flags set here are to inform the _include/mei template not to actually include them
+            # The flags set here are to inform the _include/music-notation template not to actually include them
             puts svgExamples + svgFile
             puts meiExamples + meiFile
             example['svg-example-exists'] = true unless (!File.exists?(svgExamples + svgFile))

@@ -16,8 +16,8 @@ examples:
 
 Here is one example - show first note
 
-{% include mei example="accid-001" %}
+{% include music-notation example="accid-001" %}
 
 Here is another one - show first and last note
 
-{% include mei example="accid-003" %}
+{% include music-notation example="accid-003" %}

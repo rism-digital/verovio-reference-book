@@ -17,8 +17,8 @@ examples:
 
 Here is one example - we show measure 1 and 3 with a separator
 
-{% include mei example="accid-001" %}
+{% include music-notation example="accid-001" %}
 
 Here is another one - we show measure 1 and 2 without separator
 
-{% include mei example="accid-002" %}
+{% include music-notation example="accid-002" %}
