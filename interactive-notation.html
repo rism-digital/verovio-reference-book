@@ -147,10 +147,85 @@
         <div class="panel">
             <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/03-interactive-notation.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
             <h2>Tutorial 2: Interactive notation</h2>
-            
-<p>[SVG file is missing and need to be generated]</p>
+            <p>Here is one example - we show measure 1 and 3 with a separator</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[MEI file is missing and need to be generated]
+<p><img class="img-responsive" src="/images/examples/accid-001.svg" alt="examples/accid-001.svg]" /></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;measure</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;staff</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"c"</span> <span class="na">stem.dir=</span><span class="s">"down"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"d"</span> <span class="na">stem.dir=</span><span class="s">"down"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"c"</span> <span class="na">stem.dir=</span><span class="s">"down"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid=</span><span class="s">"n"</span> <span class="na">func=</span><span class="s">"edit"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"b"</span> <span class="na">stem.dir=</span><span class="s">"down"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid=</span><span class="s">"f"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+    <span class="nt">&lt;/layer&gt;</span>
+  <span class="nt">&lt;/staff&gt;</span>
+<span class="nt">&lt;/measure&gt;</span>
+<span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;measure</span> <span class="na">right=</span><span class="s">"end"</span> <span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;staff</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"c"</span> <span class="na">stem.dir=</span><span class="s">"down"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"g"</span> <span class="na">stem.dir=</span><span class="s">"up"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid=</span><span class="s">"s"</span> <span class="na">func=</span><span class="s">"edit"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"e"</span> <span class="na">stem.dir=</span><span class="s">"up"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"d"</span> <span class="na">stem.dir=</span><span class="s">"up"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;accid</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/note&gt;</span>
+    <span class="nt">&lt;/layer&gt;</span>
+  <span class="nt">&lt;/staff&gt;</span>
+<span class="nt">&lt;/measure&gt;</span>
+</code></pre></div></div>
+
+<p>Here is another one - we show measure 1 and 2 without separator</p>
+
+<p><img class="img-responsive" src="/images/examples/accid-002.svg" alt="examples/accid-002.svg]" /></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;measure</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;staff</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"c"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"d"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"e"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"f"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/layer&gt;</span>
+  <span class="nt">&lt;/staff&gt;</span>
+<span class="nt">&lt;/measure&gt;</span>
+<span class="nt">&lt;measure</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;staff</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;beam&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"g"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"a"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/beam&gt;</span>
+      <span class="nt">&lt;beam&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"4"</span> <span class="na">pname=</span><span class="s">"b"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"c"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/beam&gt;</span>
+      <span class="nt">&lt;beam&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"d"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"e"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/beam&gt;</span>
+      <span class="nt">&lt;beam&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"f"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">pname=</span><span class="s">"g"</span> <span class="na">accid.ges=</span><span class="s">"n"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/beam&gt;</span>
+    <span class="nt">&lt;/layer&gt;</span>
+  <span class="nt">&lt;/staff&gt;</span>
+<span class="nt">&lt;/measure&gt;</span>
 </code></pre></div></div>
 
 
