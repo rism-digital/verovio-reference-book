@@ -1,6 +1,6 @@
-name: Referenc book for the Verovio music engraving library
+name: Reference book for Verovio
 baseurl: ""
-exclude: ['mei']
+exclude: ['scripts']
 
 markdown: kramdown
 highlighter: rouge
