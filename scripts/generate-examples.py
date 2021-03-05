@@ -24,10 +24,10 @@ testOptions = {
     'header': 'none',
     'footer': 'none',
     'scale': 50,
-    'spacingStaff': 4,
-    'svgViewBox': False
+    'spacingStaff': 4
 }
 
+# Helper for fixing indentation in XML subtrees
 def indent(elem, level=0):
   i = "\n" + level*"  "
   if len(elem):
@@ -52,26 +52,29 @@ if __name__ == "__main__":
     # version of the toolkit
     print(tk.getVersion())
 
-    # keep all the options to be able to reset them for each test
+    # keep all the options to be able to reset them for each example
     defaultOptions = json.loads(tk.getOptions(True))
 
     with open(r'scripts/examples.yaml') as file:
         examples = yaml.load(file, Loader=yaml.FullLoader)
         for example in examples:
+            # TODO Add a --clean option and regenerate all examples only if set
             #if 'svg-example-exists' in example and example['svg-example-exists']:
                 #continue
             #if 'mei-example-exists' in example and example['mei-example-exists']:
                 #continue
 
+            # Download the MEI file from the given url
             meiFile = wget.download(example['url'], out="./scripts/tmp")
             print("\nFile successfully downloaded to .{}".format(meiFile))
 
+            # Set the base (default) options
             options = {**defaultOptions, **testOptions}
-            # parse the MEI file
-            
-            tree = ET.parse(meiFile)
 
+            # parse the MEI file
+            tree = ET.parse(meiFile)
             root = tree.getroot()
+
             # try to get the extMeta tag and load the options if existing
             meta = root.findtext(".//mei:meiHead/mei:extMeta", namespaces=ns)
             if (meta != None and meta != ''):
@@ -79,16 +82,30 @@ if __name__ == "__main__":
                 metaOptions = json.loads(meta)
                 options = {**options, **metaOptions}
 
-            f = root.findall(".//mei:measure", namespaces=ns)
+            # needed to avoid ns0 in the output
             ET.register_namespace('', 'http://www.music-encoding.org/ns/mei')
 
+            queries = None
             meiSnippetStr = ""
-            for i in f:
-                indent(i)
-                xmlStr = ET.tostring(i, method='xml').decode()
-                if xmlStr:
-                    #xmlStr = re.sub(xmlStr, ' xmlns="http:\/\/www.music-encoding.org\/ns\/mei"', '')
-                    meiSnippetStr += xmlStr
+            
+            if 'xpath' in example and example['xpath']:
+              queries = example['xpath']
+            for query in queries:
+              if (query == "[...]"):
+                meiSnippetStr += "<!-- ... -->\n"
+                continue
+              f = root.findall(query, namespaces=ns)
+              for i in f:
+                  indent(i)
+                  xmlStr = ET.tostring(i, method='xml').decode()
+                  if xmlStr:
+                      meiSnippetStr += xmlStr
+
+            # Some cleanup
+            # Remove the namespace (could not find another way...)
+            meiSnippetStr = meiSnippetStr.replace(" xmlns=\"http://www.music-encoding.org/ns/mei\"", "")
+            # Remove empty lines
+            meiSnippetStr = os.linesep.join([s for s in meiSnippetStr.splitlines() if s])
 
             meiSnippetFile = os.path.join("_includes", example['mei-example-file'])
             meiSnippetDir = os.path.dirname(meiSnippetFile)

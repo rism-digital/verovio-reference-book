@@ -5,12 +5,20 @@ examples:
     - name: accid-001
       url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-001.mei
       xpath:
-        - "TODO"
-        - "TODO"
+        - ".//mei:section/mei:measure[1]"
+        - "[...]"
+        - ".//mei:section/mei:measure[3]"
     - name: accid-002
       url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-002.mei
       xpath:
-        - "TODO"
+        - ".//mei:section/mei:measure[1]"
+        - ".//mei:section/mei:measure[2]"
 ---
 
-{% include mei example="ex1" %}
+Here is one example - we show measure 1 and 3 with a separator
+
+{% include mei example="accid-001" %}
+
+Here is another one - we show measure 1 and 2 without separator
+
+{% include mei example="accid-002" %}
