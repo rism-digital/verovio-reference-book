@@ -1,0 +1,27 @@
+---
+- name: accid-001
+  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-001.mei
+  xpath:
+  - TODO
+  - TODO
+  mei-example-file: examples/accid-001.mei
+  svg-example-file: examples/accid-001.svg
+- name: accid-002
+  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-002.mei
+  xpath:
+  - TODO
+  mei-example-file: examples/accid-002.mei
+  svg-example-file: examples/accid-002.svg
+- name: accid-001
+  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-001.mei
+  xpath:
+  - TODO
+  mei-example-file: examples/03-interactive-notation/accid-001.mei
+  svg-example-file: examples/03-interactive-notation/accid-001.svg
+- name: accid-003
+  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-003.mei
+  xpath:
+  - TODO
+  - TODO
+  mei-example-file: examples/03-interactive-notation/accid-003.mei
+  svg-example-file: examples/03-interactive-notation/accid-003.svg
