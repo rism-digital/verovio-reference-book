@@ -77,10 +77,11 @@
 
 
         <div class="top-header"> 
-    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;"> 
-        <h1 class="hidden-xs">A music notation engraving library</h1> 
-        <h3 class="visible-xs">A music notation engraving library</h3> 
-        <p>Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
+        <h1 class="visible-print">Reference book for Verovio</h1>
+        <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
     </div>
 </div>
 
@@ -157,7 +158,7 @@
 
     <div class="col-md-9">
         <div class="panel">
-            <a href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-web-based-notation/01-getting-started.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+            <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-web-based-notation/01-getting-started.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
             <h2>Getting started</h2>
             <p>To get started with Verovio, you need to load the JavaScript library in a web page. If you were building your own website, you may choose to host this on your own servers, but in this tutorial we will use a version that is hosted on the Verovio website.</p>
 
@@ -178,14 +179,14 @@
 
 <p>To start Verovio, you should add the following to your page in the head, after the <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag that loads the Verovio toolkit:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
   <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
       <span class="p">}</span>
   <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre></div></div>
 
 <p>When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let’s start from the inside out.</p>
 
