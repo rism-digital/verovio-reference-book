@@ -1,6 +1,6 @@
 {% assign example = page.examples | where: "name", include.example | first %}
 {% if example and example['svg-example-exists'] %}
-![{{ example['svg-example-file'] }}](/images/{{ example['svg-example-file'] }})
+<img class="img-responsive" src="/images/{{ example['svg-example-file'] }}" alt="{{ example['svg-example-file'] }}]">
 {% else %}
 [SVG file is missing and need to be generated]
 {% endif %}

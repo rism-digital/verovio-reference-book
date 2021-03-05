@@ -23,9 +23,9 @@ testOptions = {
     'pageWidth': 2100,
     'header': 'none',
     'footer': 'none',
-    'scale': 10,
+    'scale': 50,
     'spacingStaff': 4,
-    'svgViewBox': True
+    'svgViewBox': False
 }
 
 def indent(elem, level=0):
