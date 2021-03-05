@@ -37,25 +37,31 @@
 }
 .language-xml {
     div.highlight::before {
-        background: rgb(93, 132, 148);
+        background: rgb(87, 125, 143);
         content: "XML";
     }
 }
 .language-python {
     div.highlight::before {
-        background: rgb(102, 153, 140);
+        background: rgb(97, 150, 77);
         content: "Python";
     }
 }
 .language-cpp {
     div.highlight::before {
-        background: rgb(153, 129, 102);
+        background: rgb(153, 102, 128);
         content: "C++";
     }
 }
 .language-js {
     div.highlight::before {
-        background: rgb(181, 194, 6);
+        background: rgb(187, 160, 7);
         content: "JavaScript"
+    }
+}
+.language-html {
+    div.highlight::before {
+        background: rgb(168, 137, 90);
+        content: "HTML / JavaScript"
     }
 }

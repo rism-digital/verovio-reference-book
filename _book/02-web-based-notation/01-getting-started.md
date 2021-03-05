@@ -22,7 +22,7 @@ If you view this page in your browser, you should text in a large font that says
 
 To start Verovio, you should add the following to your page in the head, after the `<script>` tag that loads the Verovio toolkit:
 
-```js
+```html
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
       Module.onRuntimeInitialized = async _ => {

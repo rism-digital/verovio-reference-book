@@ -3,12 +3,26 @@ title: "Installing or building from sources"
 link_to_section: true
 ---
 
+Secret page ;-) with tests for syntax highlighting...
+
 Compile `from` sources is easy.
 
 ```bash
-Test
+ls -a
+echo "Hello World!
 ```
 
+```html
+<html>
+  <head>
+    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello Verovio!</h1>
+    <div id="notation"></div>
+  </body>
+</html>
+```
 
 ```js
 int main() {
@@ -30,8 +44,6 @@ int main() {
     return 0;
 }
 ```
-
-OK
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
