@@ -6,10 +6,12 @@
 
 .language-bash div.highlight::before { background: #669; content: "Terminal"; }
 
-.language-xml div.highlight::before { background: #5d8494; content: "XML"; }
+.language-xml div.highlight::before { background: #577d8f; content: "XML"; }
 
-.language-python div.highlight::before { background: #66998c; content: "Python"; }
+.language-python div.highlight::before { background: #61964d; content: "Python"; }
 
-.language-cpp div.highlight::before { background: #998166; content: "C++"; }
+.language-cpp div.highlight::before { background: #996680; content: "C++"; }
 
-.language-js div.highlight::before { background: #b5c206; content: "JavaScript"; }
+.language-js div.highlight::before { background: #bba007; content: "JavaScript"; }
+
+.language-html div.highlight::before { background: #a8895a; content: "HTML / JavaScript"; }
