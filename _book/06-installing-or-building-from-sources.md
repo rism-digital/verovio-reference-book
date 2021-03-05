@@ -31,6 +31,19 @@ int main() {
 }
 ```
 
+```json
+{
+   "adjustPageHeight":true,
+   "breaks":"none",
+   "pageHeight":2970,
+   "pageWidth":2100,
+   "header":"none",
+   "footer":"none",
+   "scale":50,
+   "spacingStaff":4
+}
+```
+
 ```cpp
 int main() {
     std::string string;

@@ -65,3 +65,9 @@
         content: "HTML / JavaScript"
     }
 }
+.language-json {
+    div.highlight::before {
+        background: rgb(187, 160, 7);
+        content: "Json"
+    }
+}
