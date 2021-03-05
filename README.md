@@ -34,7 +34,7 @@ In the front matter of the page where you want to include the example, add it in
 ```yaml
 examples:
     - name: accid-003
-      url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-003.mei
+      test-suite: accid/accid-003.mei
       xpath:
         - ".//mei:section/mei:measure[1]//mei:note[1]"
         - "[...]"
@@ -42,8 +42,8 @@ examples:
 ```
 The example entry has three values:
 1. `name` is the value you will refer to when including the example within the content of the page
-2. `url` is the address of the MEI example in the Verovio test suite that needs to be included
-3. `xpath` is an array of xpath queries to execute in order to extract the MEI snippet to be displayed with the example
+3. `test-suite` is MEI example in the Verovio test suite that needs to be included
+4. `xpath` is an array of xpath queries to execute in order to extract the MEI snippet to be displayed with the example
 
 For example, if you want to show in the MEI snippet the second and the third measure of the example, use:
 ```yaml
@@ -52,7 +52,9 @@ xpath:
   - ".//mei:section/mei:measure[3]"
 ```
 
-The `xpath` array can contains the `[...]` value, which will not be executed but simply be replaced by `<!-- ... --->` in the code displayed. It can be used when the MEI snippet includes parts of the code that are not adjacent.
+The `xpath` array can contains the `[...]` value, which will not be executed but simply be replaced by `<!-- ... -->` in the code displayed. It can be used when the MEI snippet includes parts of the code that are not adjacent.
+
+For including an example not in the test suite (which should be the exception), replace the example `test-suite` entry with `url` with the address where the example lives.
 
 ### Add the example in the text
 
