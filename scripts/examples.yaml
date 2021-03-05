@@ -1,6 +1,6 @@
 ---
 - name: accid-001
-  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-001.mei
+  test-suite: accid/accid-001.mei
   xpath:
   - ".//mei:section/mei:measure[1]"
   - "[...]"
@@ -9,8 +9,9 @@
   svg-example-file: examples/accid-001.svg
   svg-example-exists: true
   mei-example-exists: true
+
 - name: accid-002
-  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-002.mei
+  test-suite: accid/accid-002.mei
   xpath:
   - ".//mei:section/mei:measure[1]"
   - ".//mei:section/mei:measure[2]"
@@ -18,16 +19,18 @@
   svg-example-file: examples/accid-002.svg
   svg-example-exists: true
   mei-example-exists: true
+
 - name: accid-001
-  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-001.mei
+  test-suite: accid/accid-001.mei
   xpath:
   - ".//mei:section/mei:measure[1]//mei:note[1]"
   mei-example-file: examples/03-interactive-notation/accid-001.mei
   svg-example-file: examples/03-interactive-notation/accid-001.svg
   svg-example-exists: true
   mei-example-exists: true
+
 - name: accid-003
-  url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-003.mei
+  test-suite: accid/accid-003.mei
   xpath:
   - ".//mei:section/mei:measure[1]//mei:note[1]"
   - "[...]"
