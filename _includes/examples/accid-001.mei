@@ -2,16 +2,16 @@
   <staff n="1">
     <layer n="1">
       <note dur="4" oct="5" pname="c" stem.dir="down">
-        <accid accid.ges="n" />
+        <accid accid.ges="n"/>
       </note>
       <note dur="4" oct="5" pname="d" stem.dir="down">
-        <accid accid.ges="n" />
+        <accid accid.ges="n"/>
       </note>
       <note dur="4" oct="5" pname="c" stem.dir="down">
-        <accid accid="n" func="edit" />
+        <accid accid="n" func="edit"/>
       </note>
       <note dur="4" oct="4" pname="b" stem.dir="down">
-        <accid accid="f" />
+        <accid accid="f"/>
       </note>
     </layer>
   </staff>
@@ -21,16 +21,16 @@
   <staff n="1">
     <layer n="1">
       <note dur="4" oct="5" pname="c" stem.dir="down">
-        <accid accid.ges="n" />
+        <accid accid.ges="n"/>
       </note>
       <note dur="4" oct="4" pname="g" stem.dir="up">
-        <accid accid="s" func="edit" />
+        <accid accid="s" func="edit"/>
       </note>
       <note dur="4" oct="4" pname="e" stem.dir="up">
-        <accid accid.ges="n" />
+        <accid accid.ges="n"/>
       </note>
       <note dur="4" oct="4" pname="d" stem.dir="up">
-        <accid accid.ges="n" />
+        <accid accid.ges="n"/>
       </note>
     </layer>
   </staff>
