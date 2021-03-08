@@ -26,67 +26,67 @@
    <style type="text/css">g.page-margin{font-family:Times;} g.reh, g.tempo{font-weight:bold;} g.dir, g.dynam, g.mNum{font-style:italic;} g.label{font-weight:normal;}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 9910 2320">
       <g class="page-margin" transform="translate(500, 500)">
-         <g id="system-0000001864673845" class="system">
-            <g id="section-0000001549215026" class="section boundaryStart" />
-            <g id="measure-0000001565205754" class="measure">
-               <g id="staff-0000000186797921" class="staff">
+         <g id="system-0000001247225322" class="system">
+            <g id="section-0000001009234823" class="section boundaryStart" />
+            <g id="measure-0000001383826155" class="measure">
+               <g id="staff-0000000846535014" class="staff">
                   <path d="M0 559 L8910 559" stroke="currentColor" stroke-width="13" />
                   <path d="M0 739 L8910 739" stroke="currentColor" stroke-width="13" />
                   <path d="M0 919 L8910 919" stroke="currentColor" stroke-width="13" />
                   <path d="M0 1099 L8910 1099" stroke="currentColor" stroke-width="13" />
                   <path d="M0 1279 L8910 1279" stroke="currentColor" stroke-width="13" />
-                  <g id="clef-0000001793352317" class="clef">
+                  <g id="clef-0000001643887459" class="clef">
                      <use xlink:href="#E050" x="90" y="1099" height="720px" width="720px" />
                   </g>
-                  <g id="layer-0000002039049980" class="layer">
-                     <g id="note-0000000768975034" class="note">
+                  <g id="layer-0000000634818923" class="layer">
+                     <g id="note-0000000702880565" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A2" x="915" y="559" height="720px" width="720px" />
                         </g>
-                        <g id="accid-0000000606808792" class="accid">
+                        <g id="accid-0000000006113808" class="accid">
                            <use xlink:href="#E262" x="1007" y="196" height="540px" width="540px" />
                         </g>
                      </g>
-                     <g id="note-0000000235527541" class="note">
+                     <g id="note-0000001823039647" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A2" x="2505" y="559" height="720px" width="720px" />
                         </g>
-                        <g id="accid-0000000699020166" class="accid">
+                        <g id="accid-0000001678155380" class="accid">
                            <use xlink:href="#E260" x="2596" y="285" height="540px" width="540px" />
                         </g>
                      </g>
-                     <g id="note-0000001696380872" class="note">
+                     <g id="note-0000001854735609" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A2" x="4095" y="559" height="720px" width="720px" />
                         </g>
-                        <g id="accid-0000001080418132" class="accid">
+                        <g id="accid-0000001816244258" class="accid">
                            <use xlink:href="#E261" x="4198" y="190" height="540px" width="540px" />
                         </g>
                      </g>
-                     <g id="note-0000001613309139" class="note">
+                     <g id="note-0000001284685748" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A2" x="5685" y="559" height="720px" width="720px" />
                         </g>
-                        <g id="accid-0000000758172151" class="accid">
+                        <g id="accid-0000000912779698" class="accid">
                            <use xlink:href="#E263" x="5760" y="315" height="540px" width="540px" />
                         </g>
                      </g>
-                     <g id="note-0000001578864206" class="note">
+                     <g id="note-0000001612693765" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A2" x="7275" y="559" height="720px" width="720px" />
                         </g>
-                        <g id="accid-0000001662767910" class="accid">
+                        <g id="accid-0000001152999568" class="accid">
                            <use xlink:href="#E264" x="7315" y="285" height="540px" width="540px" />
                         </g>
                      </g>
                   </g>
                </g>
-               <g id="bline-0000000064153245" class="barLineAttr">
+               <g id="bline-0000001952168840" class="barLineAttr">
                   <path d="M8735 1279 L8735 559" stroke="currentColor" stroke-width="27" />
                   <path d="M8865 1279 L8865 559" stroke="currentColor" stroke-width="90" />
                </g>
             </g>
-            <g id="bdend-0000000944627478" class="boundaryEnd section-0000001549215026" />
+            <g id="bdend-0000000600466629" class="boundaryEnd section-0000001009234823" />
          </g>
       </g>
    </svg>
