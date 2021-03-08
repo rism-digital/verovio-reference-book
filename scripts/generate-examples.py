@@ -111,8 +111,10 @@ if __name__ == "__main__":
                 options.update(metaOptions)
 
             # If the example has additional options, load them.
-            example_options: str = example.get("options", "{}")
-            options.update(json.loads(example_options))
+            example_options: str = example.get("options", {})
+            if example_options:
+              log.info("Adding example options")
+              options.update(example_options)
 
             # Always returns a list, even if it's empty; won't raise an error
             # if 'xpath' doesn't exist.

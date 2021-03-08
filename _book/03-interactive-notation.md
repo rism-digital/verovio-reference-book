@@ -13,7 +13,8 @@ examples:
       xpath:
         - ".//mei:section/mei:measure[1]"
         - ".//mei:section/mei:measure[2]"
-      options: '{ "transpose": "e" }'
+      options: 
+        transpose: "e"
 ---
 
 Here is one example - we show measure 1 and 3 with a separator

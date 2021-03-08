@@ -58,9 +58,10 @@ For including an example not in the test suite (which should be the exception), 
 
 #### Additional options
 
-Additional options for an example can be passed to Verovio with the `options` entry. For example:
+Additional options for an example can be passed to Verovio with the `options` entry as a dictionary. For example:
 ```yaml
-options: '{ "transpose": "e" }'
+options:
+    transpose: "e"
 }
 ```
 These options will be set *after* specific options set in the header of the test-suite example and overwrite them.
