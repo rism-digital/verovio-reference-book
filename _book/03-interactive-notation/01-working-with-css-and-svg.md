@@ -3,11 +3,11 @@ title: "Working with CSS and SVG"
 
 examples:
     - name: accid-001
-      url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-001.mei
+      test-suite: accid/accid-001.mei
       xpath:
         - ".//mei:section/mei:measure[1]//mei:note[1]"
     - name: accid-003
-      url: https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/accid/accid-003.mei
+      test-suite: accid/accid-003.mei
       xpath:
         - ".//mei:section/mei:measure[1]//mei:note[1]"
         - "[...]"
