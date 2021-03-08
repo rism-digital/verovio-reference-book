@@ -20,6 +20,11 @@ If you do not install it and run it from `./tools` or from another directory, yo
 
 Keep in mind that if you have installed, you should not run another version without re-installing it or using the `-r` options because otherwise the resources installed can be invalid. A typical problem is missing font glyphs that a newer version needs but that are not in the older version of the resources.
 
+For seeing the command-line options, run:
+```bash
+./verovio --help
+```
+
 (Until version 2.6.0, the cmake command was `cmake .` and not `cmake ../cmake`.)
 
 #### Additional building options
@@ -27,10 +32,6 @@ Keep in mind that if you have installed, you should not run another version with
 By default the executable is not stripped. To strip it during the installation do
 ```bash
 sudo make install/strip
-```
-For seeing the command-line options, run:
-```bash
-./verovio --help
 ```
 
 For building it without Plain and Easy support (without <code>regex.h</code>), run:
@@ -45,7 +46,11 @@ cmake ../cmake -DNO_PAE_SUPPORT=OFF
 
 since running `cmake ../cmake` will not clear the state of the define variable.
 
-Likewise, the Humdrum importer can be turned on/off by using `NO_HUMDRUM_SUPPORT`. Also, to use the MusicXML Humdrum importer by default instead of the direct MusicXML importer, add `-DMUSICXML_DEFAULT_HUMDRUM=ON`.
+The other building options are:
+* `NO_ABC_SUPPORT` for the ABC importer to be turned on/off
+* `NO_HUMDRUM_SUPPORT` for the Humdrum importer to be turned on/off
+* `MUSICXML_DEFAULT_HUMDRUM` to use the MusicXML Humdrum importer by default instead of the direct MusicXML importer
+* `BUILD_AS_LIBRARY` for Verovio to be built as dynamic shared library instead of a command-line executable
 
 #### Uninstall a previous version
 

@@ -28,17 +28,20 @@ https://www.verovio.org/javascript/2.7.1/verovio-toolkit.js
 
 #### NPM
 
-The latest stable version is available via [NPM](https://www.npmjs.com/package/verovio)
+The latest stable version is available via [NPM](https://www.npmjs.com/package/verovio) registry. The version distributed via NPM it the WebAssembly build. It can be installed with:
 ```bash
 npm install verovio
 ```
 
+The homepage of the Verovio package includes [documentation](https://www.npmjs.com/package/verovio#usage) on how to use it.
+
+
 ### Building the toolkit
 
-To build the JavaScript toolkit you need to have the <a href="http://www.emscripten.org" target="_blank">Emscripten</a> compiler installed on your machine. You also need [CMake](https://cmake.org). You need to run:
-```
-$ cd emscripten
-$ ./buildToolkit -H
+ To build the JavaScript toolkit you need to have the <a href="http://www.emscripten.org" target="_blank">Emscripten</a> compiler installed on your machine. You also need [CMake](https://cmake.org). You need to run:
+```bash
+cd emscripten
+./buildToolkit -H
 ```
 The toolkit will be written to:
 ```
