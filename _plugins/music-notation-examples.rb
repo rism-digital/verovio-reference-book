@@ -48,7 +48,7 @@ module Jekyll
 
     def get_example_path_for(path)
       example_path = "examples"
-      return example_path + path.gsub(/[^\/]*$/,"")
+      return example_path + path.gsub(/\.md$/,"/")
     end
 
   end
