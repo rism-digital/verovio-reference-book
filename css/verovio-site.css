@@ -1,5 +1,7 @@
 @media (min-width: 992px) { .toc-group { position: fixed; z-index: 1; top: 240px; max-width: 236px; overflow-x: hidden; } }
 
+@media print { a[href]:after { content: ""; } }
+
 .highlighter-rouge pre.highlight { border: none; }
 
 .highlighter-rouge div.highlight::before { display: inline-block; color: #fff; font-size: 1rem; font-weight: 700; height: 1.5rem; letter-spacing: .1em; line-height: 1.5rem; padding: 0 .5em; text-transform: uppercase; top: 0; }
