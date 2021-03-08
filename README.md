@@ -62,7 +62,6 @@ Additional options for an example can be passed to Verovio with the `options` en
 ```yaml
 options:
     transpose: "e"
-}
 ```
 These options will be set *after* specific options set in the header of the test-suite example and overwrite them.
 
