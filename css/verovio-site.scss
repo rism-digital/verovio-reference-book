@@ -2,14 +2,23 @@
 
 ---
 
+// All to be moved to the theme once finalized
+
 @media (min-width: 992px) {
-.toc-group {
-    position: fixed;
-    z-index: 1;
-    top: 240px;
-    max-width: 236px;
-    overflow-x: hidden;
-  }
+    .toc-group {
+        position: fixed;
+        z-index: 1;
+        top: 240px;
+        max-width: 236px;
+        overflow-x: hidden;
+    }
+}
+
+@media print {
+    // do not show links url when printing
+    a[href]:after {
+        content: "";
+    }
 }
 
 .highlighter-rouge {
@@ -71,3 +80,5 @@
         content: "Json"
     }
 }
+
+
