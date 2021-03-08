@@ -183,15 +183,16 @@ make
 
 <p>Keep in mind that if you have installed, you should not run another version without re-installing it or using the <code class="language-plaintext highlighter-rouge">-r</code> options because otherwise the resources installed can be invalid. A typical problem is missing font glyphs that a newer version needs but that are not in the older version of the resources.</p>
 
+<p>For seeing the command-line options, run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./verovio <span class="nt">--help</span>
+</code></pre></div></div>
+
 <p>(Until version 2.6.0, the cmake command was <code class="language-plaintext highlighter-rouge">cmake .</code> and not <code class="language-plaintext highlighter-rouge">cmake ../cmake</code>.)</p>
 
 <h4 id="additional-building-options">Additional building options</h4>
 
 <p>By default the executable is not stripped. To strip it during the installation do</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>make <span class="nb">install</span>/strip
-</code></pre></div></div>
-<p>For seeing the command-line options, run:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./verovio <span class="nt">--help</span>
 </code></pre></div></div>
 
 <p>For building it without Plain and Easy support (without <code>regex.h</code>), run:</p>
@@ -204,7 +205,13 @@ make
 
 <p>since running <code class="language-plaintext highlighter-rouge">cmake ../cmake</code> will not clear the state of the define variable.</p>
 
-<p>Likewise, the Humdrum importer can be turned on/off by using <code class="language-plaintext highlighter-rouge">NO_HUMDRUM_SUPPORT</code>. Also, to use the MusicXML Humdrum importer by default instead of the direct MusicXML importer, add <code class="language-plaintext highlighter-rouge">-DMUSICXML_DEFAULT_HUMDRUM=ON</code>.</p>
+<p>The other building options are:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NO_ABC_SUPPORT</code> for the ABC importer to be turned on/off</li>
+  <li><code class="language-plaintext highlighter-rouge">NO_HUMDRUM_SUPPORT</code> for the Humdrum importer to be turned on/off</li>
+  <li><code class="language-plaintext highlighter-rouge">MUSICXML_DEFAULT_HUMDRUM</code> to use the MusicXML Humdrum importer by default instead of the direct MusicXML importer</li>
+  <li><code class="language-plaintext highlighter-rouge">BUILD_AS_LIBRARY</code> for Verovio to be built as dynamic shared library instead of a command-line executable</li>
+</ul>
 
 <h4 id="uninstall-a-previous-version">Uninstall a previous version</h4>
 
