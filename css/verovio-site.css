@@ -15,3 +15,5 @@
 .language-js div.highlight::before { background: #bba007; content: "JavaScript"; }
 
 .language-html div.highlight::before { background: #a8895a; content: "HTML / JavaScript"; }
+
+.language-json div.highlight::before { background: #bba007; content: "Json"; }
