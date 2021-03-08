@@ -61,9 +61,9 @@ if __name__ == "__main__":
     log.info("Using Verovio %s", tk.getVersion())
 
     # keep all the options to be able to reset them for each example
-    options: Dict = json.loads(tk.getOptions(True))
+    defaultOptions: Dict = json.loads(tk.getOptions(True))
     # Overwrite the default options with our locally-defined options
-    options.update(VRV_OPTIONS)
+    defaultOptions.update(VRV_OPTIONS)
 
     # Will remove extraneous whitespace
     et_parser = etree.XMLParser(remove_blank_text=True)
@@ -72,6 +72,8 @@ if __name__ == "__main__":
         examples: Dict = yaml.full_load(file)
 
         for example in examples:
+            options: Dict = defaultOptions.copy()
+
             svg_file = os.path.join("images", example['svg-example-file'])
             svg_dir = os.path.dirname(svg_file)
 
