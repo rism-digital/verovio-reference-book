@@ -117,3 +117,19 @@ cmake ../cmake -B python -DBUILD_AS_PYTHON=ON -DNO_PAE_SUPPORT=ON
 ```
 
 *Installation with CMake has not be tested yet*
+
+#### Resources for versions built locally
+
+When using a version built locally, you usually have to specify the path to the Verovio resources. To do so, you can do
+```python
+import verovio
+tk = verovio.toolkit(False)
+tk.setResourcePath("path-to-resource-dir")
+```
+
+Alternatively, you can set it before you create the instance of the toolkit
+```python
+import verovio
+verovio.setDefaultResourcePath("path-to-resource-dir")
+tk = verovio.toolkit()
+```
