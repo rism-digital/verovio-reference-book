@@ -1,5 +1,5 @@
 ---
-title: "Installing or building from sources"
+chapter-title: "Installing or building from sources"
 link_to_section: true
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: "Tutorial 1: Web-based notation"
+chapter-title: "Tutorial 1: Web-based notation"
+title: "Introduction"
 ---
 
 The first tutorial will look at how you can use Verovio to render music notation on a web page, using the pre-built JavaScript library. In this tutorial you will be building a small HTML page, with a minimal amount of JavaScript, to create an SVG rendering of an MEI file. In-depth technical expertise is not necessary, but you should be familiar with the basic principles of HTML to get the most out of this tutorial, and have access to a plain-text editor, preferably with facilities for automatically highlighting HTML and JavaScript code. (The [Atom](https://atom.io) editor is a good choice if you need a recommendation.)

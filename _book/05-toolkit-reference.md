@@ -1,3 +1,0 @@
----
-title: "Toolkit Reference"
----

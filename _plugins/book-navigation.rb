@@ -44,17 +44,16 @@ module Jekyll
         section_id = get_section(short_path)
 
         # Something must be wrong...
-        if (!chapter_id)
+        if (!chapter_id or !section_id)
           puts "Missing chapter"
           next
         end
 
         # This is a chapter doc
-        if (!section_id)
+        if (section_id == '00-index')
           # Sections are empty for now
-          toc.push({"id" => chapter_id, "name" => doc['title'], "url" => url, "sections" => [], "link_to_section" => doc.data['link_to_section']})
+          toc.push({"id" => chapter_id, "name" => doc['chapter-title'], "url" => url, "sections" => [], "link_to_section" => doc.data['link_to_section']})
           chapters[short_path] = chapter_id
-          next
         end
 
         chapters[short_path] = chapter_id
@@ -76,8 +75,9 @@ module Jekyll
       # When set to true, we want the link in the toc to directly show the first
       # section of the chapter. We adjust the url of the chapter here
       toc.each do |chapter|
-        if chapter['link_to_section'] && !chapter['sections'].empty?
-          chapter['url'] = chapter['sections'][0]['url']
+        if chapter['link_to_section'] && chapter['sections'].size > 1
+          chapter['url'] = chapter['sections'][1]['url']
+          chapter['sections'].shift
         end
       end
 

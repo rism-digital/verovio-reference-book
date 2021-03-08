@@ -1,5 +1,6 @@
 ---
-title: "Tutorial 2: Interactive notation"
+chapter-title: "Tutorial 2: Interactive notation"
+title: "Introduction"
 
 examples:
     - name: accid-001

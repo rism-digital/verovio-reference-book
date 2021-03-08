@@ -5,8 +5,8 @@
   - ".//mei:section/mei:measure[1]"
   - "[...]"
   - ".//mei:section/mei:measure[3]"
-  mei-example-file: examples/accid-001.mei
-  svg-example-file: examples/accid-001.svg
+  mei-example-file: examples/03-interactive-notation/accid-001.mei
+  svg-example-file: examples/03-interactive-notation/accid-001.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: accid-002
@@ -16,10 +16,8 @@
   - ".//mei:section/mei:measure[2]"
   options:
     transpose: e
-  mei-example-file: examples/accid-002.mei
-  svg-example-file: examples/accid-002.svg
-  svg-example-exists: true
-  mei-example-exists: true
+  mei-example-file: examples/03-interactive-notation/accid-002.mei
+  svg-example-file: examples/03-interactive-notation/accid-002.svg
 - name: accid-001
   test-suite: accid/accid-001.mei
   xpath:
