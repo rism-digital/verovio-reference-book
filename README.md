@@ -56,6 +56,15 @@ The `xpath` array can contains the `[...]` value, which will not be executed but
 
 For including an example not in the test suite (which should be the exception), replace the example `test-suite` entry with `url` with the address where the example lives.
 
+#### Additional options
+
+Additional options for an example can be passed to Verovio with the `options` entry. For example:
+```yaml
+options: '{ "transpose": "e" }'
+}
+```
+These options will be set *after* specific options set in the header of the test-suite example and overwrite them.
+
 ### Add the example in the text
 
 In the text of the page, the example can then be included with the templates `music-notation`. It takes a `example` parameter referring to its `name`. For the example above, it will look like:
@@ -69,11 +78,7 @@ For the example to properly display, You need to:
 1. Generate the Jekyll site - this will update the `scripts/examples.yml` file that contains all the examples in the book
 2. Run the script `scripts/generate-examples.py`
 
-The Python script will generate the SVG and extract the MEI snippet for each example. The following packages are required and can all be install with `pip`:
-* verovio
-* wget
-* ...
-* ...
+The Python script will generate the SVG and extract the MEI snippet for each example. The packages required can all be install with `pip`, including `verovio`.
 
 The script has to be run from the site root directory with the command
 ```bash
