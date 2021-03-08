@@ -266,6 +266,20 @@ make <span class="nt">-j8</span>
 
 <p><em>Installation with CMake has not be tested yet</em></p>
 
+<h4 id="resources-for-versions-built-locally">Resources for versions built locally</h4>
+
+<p>When using a version built locally, you usually have to specify the path to the Verovio resources. To do so, you can do</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">verovio</span>
+<span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="n">toolkit</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">tk</span><span class="p">.</span><span class="n">setResourcePath</span><span class="p">(</span><span class="s">"path-to-resource-dir"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Alternatively, you can set it before you create the instance of the toolkit</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">verovio</span>
+<span class="n">verovio</span><span class="p">.</span><span class="n">setDefaultResourcePath</span><span class="p">(</span><span class="s">"path-to-resource-dir"</span><span class="p">)</span>
+<span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="n">toolkit</span><span class="p">()</span>
+</code></pre></div></div>
+
         </div>
     </div>
 </div>
