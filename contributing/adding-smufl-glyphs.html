@@ -1,6 +1,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Java</title>
+        <title>Adding SMuFL glyphs</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -96,16 +96,16 @@
     <div class="col-md-3 sidebar-offcanvas" id="sidebar">
         <div class="toc-group">
 
-    <a class="toc-item" href="/introduction/index.html">Introduction</a>
+    <a class="toc-item" href="/introduction/">Introduction</a>
     
 
-    <a class="toc-item" href="/web-based-notation/index.html">Tutorial 1: Web-based notation</a>
+    <a class="toc-item" href="/web-based-notation/">Tutorial 1: Web-based notation</a>
     
 
-    <a class="toc-item" href="/interactive-notation/index.html">Tutorial 2: Interactive notation</a>
+    <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
     
 
-    <a class="toc-item" href="/advanced-topics/index.html">Beyond tutorials: Advanced topics</a>
+    <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
     
 
     <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
@@ -113,29 +113,29 @@
 
     <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
     
-        
-        
-<a class="toc-item toc-section " href="/installing-or-building-from-sources/command-line.html">Command-line version</a>
-    
 
-<a class="toc-item toc-section " href="/installing-or-building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
-    
-
-<a class="toc-item toc-section " href="/installing-or-building-from-sources/python.html">Python</a>
-    
-
-<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/java.html">Java</a>
+    <a class="toc-item" href="/contributing/">Contributing</a>
     
         
         
+<a class="toc-item toc-section " href="/contributing/">Introduction</a>
     
 
-<a class="toc-item toc-section " href="/installing-or-building-from-sources/generate-code-with-libmei.html">Generate code with libMEI</a>
+<a class="toc-item toc-section " href="/contributing/guidelines.html">Coding guidelines</a>
     
 
+<a class="toc-item toc-section " href="/contributing/workflow.html">Contributing workflow</a>
     
 
-    <a class="toc-item" href="/contributing/index.html">Contributing</a>
+<a class="toc-item toc-section " href="/contributing/generate-code-with-libmei.html">Generate code with libMEI</a>
+    
+
+<a class="toc-item toc-section selected" href="/contributing/adding-smufl-glyphs.html">Adding SMuFL glyphs</a>
+    
+        
+        
+    
+
     
 
 </div>
@@ -143,9 +143,37 @@
 
     <div class="col-md-9">
         <div class="panel">
-            <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/06-installing-or-building-from-sources/04-java.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
-            <h2>Java</h2>
-            
+            <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/07-contributing/05-adding-smufl-glyphs.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+            <h2>Adding SMuFL glyphs</h2>
+            <p>All SMuFL glyphs used by Verovio have to be available in the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font. For adding support for a new SMuFL glyph, the steps are:</p>
+
+<ol>
+  <li>Add the glyph to the Leipzig font file</li>
+  <li>Generate the Leipzig font as SVG font</li>
+  <li>Add the glyph to the list of supported glyph in the XSL list</li>
+</ol>
+
+<p>Make sure you always add glyphs <strong>only</strong> in the develop-leipzig branch because conflict solving is problematic with the process of adding a glyph, in particular for the Leipzig font file. For this reason, make sure you always pull the latest version from the develop-leipzig branch before starting your work and do not wait too long before making a PR. If changes have been made in between, you will need to add your glyphs again.</p>
+
+<p>When making a PR, always add an image (e.g., screenshot of FontForge) showing the glyphs.</p>
+
+<h4 id="adding-the-glyph-to-the-leipzig-font-file">Adding the glyph to the Leipzig font file</h4>
+
+<p>The file is <code class="language-plaintext highlighter-rouge">./fonts/Leipzig-5.2.sfd</code> and should be edited with <a href="https://fontforge.org/">FontForge</a>. Very often it is possible to copy another existing glyph as basis for the new glyph. Leipzig is visually lighter and thinner than Bravura and new glyphs have to follow this design choice. Do not copy glyphs from Bravura. Make sure the font is valid by running “Element =&gt; “Find Problems…”.</p>
+
+<p>Once the new glyph(s) has/have been added, you also need to change the version number in the font info (menu “Element” =&gt; “Font Info” and then tab “PS Names” in fields “Version” and “Copyright” and tab “Comment” where you also need to add a comment together with the version number. The file can be saved.</p>
+
+<h4 id="generate-the-leipzig-font-as-svg-font">Generate the Leipzig font as SVG font</h4>
+
+<p>From FontForge, export the with menu “File” =&gt; “Generate Fonts…” and select “SVG font” (option “validate before saving” can be turned off). The file needs to be written to <code class="language-plaintext highlighter-rouge">./fonts/Leipzig.svg</code>.</p>
+
+<h4 id="add-the-glyph-to-the-list-of-supported-glyph-in-the-xsl-list">Add the glyph to the list of supported glyph in the XSL list</h4>
+
+<p>Open the file <code class="language-plaintext highlighter-rouge">./fonts/supported.xsl</code> and uncomment the glyph(s) you added to Leipzig. The XSL file is then used to extract the glyphs supported by Verovio</p>
+
+<h4 id="make-a-pr-to-the-develop-leipzig-branch">Make a PR to the develop-leipzig branch</h4>
+
+<p>Once the PR will have been merged, the glyphs will be extracted from the SVG font by running the script <code class="language-plaintext highlighter-rouge">./fonts/generate_all.sh</code> (from <code class="language-plaintext highlighter-rouge">./fonts/</code>). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in <code class="language-plaintext highlighter-rouge">./data/</code> and in <code class="language-plaintext highlighter-rouge">./include/vrv/smufl.h</code></p>
 
         </div>
     </div>
