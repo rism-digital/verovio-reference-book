@@ -28,7 +28,7 @@ VRV_OPTIONS: Dict = {
 
 if __name__ == "__main__":
     description = """
-        Fetches and renders SVG from a given set of examples. Will generate any new examples found; to 
+        Fetches and renders SVG from a given set of examples. Will generate any new examples found; to
         re-generate all examples use the '--clean' option.
     """
     parser = argparse.ArgumentParser(description=description)
@@ -120,7 +120,7 @@ if __name__ == "__main__":
             # if 'xpath' doesn't exist.
             queries: List = example.get("xpath", [])
             mei_snippet: str = ""
-            
+
             for query in queries:
                 if query == "[...]":
                     log.debug("Found a comment")
@@ -136,7 +136,7 @@ if __name__ == "__main__":
             # to strip out the xmlns declaration.
             mei_snippet = mei_snippet.replace(" xmlns=\"http://www.music-encoding.org/ns/mei\"", "")
             # Remove empty lines
-            mei_snippet = os.linesep.join([s for s in mei_snippet.splitlines() if s])
+            mei_snippet = "\n".join(s for s in mei_snippet.splitlines() if s.strip())
 
             if not os.path.exists(mei_snippet_directory):
                 log.debug("Making MEI Snippet directory %s", mei_snippet_directory)
