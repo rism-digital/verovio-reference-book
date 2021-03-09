@@ -34,6 +34,8 @@ module Jekyll
         url = doc.url.gsub(/\d\d-/,"")
         # Remove the root /book from the url
         url = url.gsub(/^\/book/,"")
+        # Remove index.html
+        url = url.gsub(/\/index.html$/,"/")
         # Set it
         doc.url = url
 
