@@ -8,7 +8,14 @@ This is the repository for the Reference book for the Verovio engraving library.
 
 The book is a Jekyll site written in Markdown. The text content of the book is in the [_book](./_book) folder of this repository.
 
-Each chapter of the book is composed of a Markdown file and a corresponding directory with its sections. The chapter file can have not text but has to exist. The name of the content directory of a chapter is exactly the name of the chapter file (without the `.md` extension). This needs to be maintained.
+Each chapter of the book is composed of directory. The chapter directory contains at least a chapter file in Markdown `00-index.md`. This file needs to exist. Its front matter must include the title of the chapter and (optionally) of its first section:
+```yaml
+---
+chapter-title: "Introduction"
+title: "About Verovio"
+---
+```
+When there is no need to have an introduction text for the chapter, the title of the first section in the frontmatter can be ommitted and replaced by `redirect_to_section: true`. The link to the chapter in the table of content will redirect directly to its first section.
 
 The content of a chapter is a list of files, one per section. Chapter and section file names have to be prefixed with a `dd-` numbering that determines their order in the book.
 
