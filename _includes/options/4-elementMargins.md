@@ -41,4 +41,4 @@
 | <span class="lang1">rightMarginRightBarLine</span><span class="lang2">--right-margin-right-bar-line</span> &lt;f&gt; | The right margin for right barLine in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) | [Link](link-to) |
 | <span class="lang1">topMarginArtic</span><span class="lang2">--top-margin-artic</span> &lt;f&gt; | The margin for artic in MEI units<br/>(default: 0.75; min: 0.0; max: 10.0) | [Link](link-to) |
 | <span class="lang1">topMarginHarm</span><span class="lang2">--top-margin-harm</span> &lt;f&gt; | The margin for harm in MEI units<br/>(default: 1.0; min: 0.0; max: 10.0) | [Link](link-to) |
-{: .table }
+{: .table .table-condensed}

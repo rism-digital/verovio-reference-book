@@ -55,4 +55,4 @@
 | <span class="lang1">tieMidpointThickness</span><span class="lang2">--tie-midpoint-thickness</span> &lt;f&gt; | The midpoint tie thickness in MEI units<br/>(default: 0.5; min: 0.2; max: 1.0) | [Link](link-to) |
 | <span class="lang1">tupletBracketThickness</span><span class="lang2">--tuplet-bracket-thickness</span> &lt;f&gt; | The thickness of the tuplet bracket<br/>(default: 0.2; min: 0.1; max: 0.8) | [Link](link-to) |
 | <span class="lang1">tupletNumHead</span><span class="lang2">--tuplet-num-head</span> | Placement of tuplet number on the side of the note head | [Link](link-to) |
-{: .table }
+{: .table .table-condensed}

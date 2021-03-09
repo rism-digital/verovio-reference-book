@@ -39,4 +39,4 @@
 | <span class="lang1">useFacsimile</span><span class="lang2">--use-facsimile</span> | Use information in the <facsimile> element to control the layout | [Link](link-to) |
 | <span class="lang1">usePgFooterForAll</span><span class="lang2">--use-pg-footer-for-all</span> | Use the pgFooter for all pages | [Link](link-to) |
 | <span class="lang1">usePgHeaderForAll</span><span class="lang2">--use-pg-header-for-all</span> | Use the pgHeader for all pages | [Link](link-to) |
-{: .table }
+{: .table .table-condensed}

@@ -104,7 +104,7 @@ if __name__ == "__main__":
             f.write("| <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span>{} ".format(option_id, cmd_option, opt_type_str))
             f.write("| {} | {} |\n".format(description, see_also))
 
-        f.write("{: .table }\n")
+        f.write("{: .table .table-condensed}\n")
         f.close()
 
     log.debug("Finished processing")

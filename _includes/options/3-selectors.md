@@ -6,4 +6,4 @@
 | <span class="lang1">substXPathQuery</span><span class="lang2">--subst-x-path-query</span>* &lt;s&gt; | Set the xPath query for selecting <subst> child elements, for example: "./del"; by default the first child is selected | [Link](link-to) |
 | <span class="lang1">transpose</span><span class="lang2">--transpose</span> &lt;s&gt; | SUMMARY<br/>(default: "") | [Link](link-to) |
 | <span class="lang1">transposeSelectedOnly</span><span class="lang2">--transpose-selected-only</span> | Transpose only the selected content and ignore unselected editorial content | [Link](link-to) |
-{: .table }
+{: .table .table-condensed}
