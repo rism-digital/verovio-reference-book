@@ -35,6 +35,9 @@ npm install verovio
 
 The homepage of the Verovio package includes [documentation](https://www.npmjs.com/package/verovio#usage) on how to use it.
 
+### Basic usage of the toolkit
+
+For instructions on a basic usage of the JavaScript version of the toolkit, see the [Getting started](/web-based-notation/getting-started.html) section of the [Tutorial 1: Web-based notation](/web-based-notation/) chapter.
 
 ### Building the toolkit
 
