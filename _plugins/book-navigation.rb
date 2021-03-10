@@ -87,6 +87,24 @@ module Jekyll
       site.data['chapters'] = chapters
       site.data['sections'] = sections
 
+      # Generate the script/toc.yaml file with a hash url => name
+      # Used by generate-options.py to add approriate labels to references
+      toc_hash = Hash.new
+      toc.each do |chapter|
+        # chapter url => name
+        toc_hash[chapter['url']] = chapter['name']
+        chapter['sections'].each do |section|
+          # section url => name
+          toc_hash[section['url']] = section['name']
+          section['subsections'].each do |subsection|
+            # section url + # + subsection hash => name
+            toc_hash["#{section['url']}##{subsection['hash']}"] = subsection['name']
+          end
+        end
+      end
+      path = File.expand_path "scripts/toc.yaml", site.source
+      file = File.open(path, 'w') { |file| file.write(toc_hash.to_yaml) }
+
     end
 
     def get_chapter(path)

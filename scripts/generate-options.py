@@ -1,4 +1,5 @@
 import argparse
+import frontmatter
 import json
 import os
 import sys
@@ -12,6 +13,7 @@ import yaml
 
 options_index_page = "./_book/05-toolkit-reference/04-toolkit-options.md"
 options_output = "./_includes/options/"
+toc_file = "scripts/toc.yaml"
 
 if __name__ == "__main__":
     description = """
@@ -24,6 +26,15 @@ if __name__ == "__main__":
     verbose_group.add_argument("--debug", "-d", action="store_true")
 
     #parser.add_argument("examples", help="Path to examples.yaml file")
+
+    see_also = {}
+    with open(options_index_page, 'r') as file:
+        options_file = frontmatter.loads(file.read())
+        see_also = options_file.get('see-also', {})
+
+    toc = {}
+    with open(toc_file, 'r') as file:
+        toc: Dict = yaml.full_load(file)
 
     args = parser.parse_args()
     if args.debug:
@@ -48,10 +59,6 @@ if __name__ == "__main__":
     # keep all the options to be able to reset them for each example
     options: Dict = json.loads(tk.getAvailableOptions())
 
-    #print(options)
-
-
-
     for grp_id in options['groups']:
 
         # Open the file for the option group
@@ -73,19 +80,18 @@ if __name__ == "__main__":
             cmd_option = "--{}".format(cmd_option.lower())
 
             # Add the parameter type
-            # <f> / <i> / <s> / * <s>
             opt_type_str = ""
             opt_type = option.get('type')
             if opt_type == 'double':
-                opt_type_str = " &lt;f&gt;"
+                opt_type_str = " `<f>`"
             elif opt_type == 'int':
-                opt_type_str = " &lt;i&gt;"
+                opt_type_str = " `<i>`"
             elif opt_type == 'std::string':
-                opt_type_str = " &lt;s&gt;"
+                opt_type_str = " `<s>`"
             elif opt_type == 'array':
-                opt_type_str = "* &lt;s&gt;"
+                opt_type_str = "`*` `<s>`"
             elif opt_type != 'bool':
-                opt_type_str = " &lt;s&gt;"
+                opt_type_str = " `<s>`"
 
             # Add the default values when appropriate
             default_str = ""
@@ -106,11 +112,21 @@ if __name__ == "__main__":
             description = option['description']
             description = "{}{}".format(description, default_str)
             
-            see_also = "[Link](link-to)"
+            # If we have one or more see-also entries in the option.md, add the links
+            see_also_this = see_also.get(option_id)
+            see_also_str = ""
+            if see_also_this:
+                see_also_links = []
+                for ref in see_also_this:
+                    # Get the name of the link target from the scripts/toc.yaml file
+                    link = "[{}]({})".format(toc.get(ref, "[missing]"), ref)
+                    see_also_links.append(link)
+                see_also_str = "<br/>".join(see_also_links)
 
             # Add the table line with span.lang1 / span.lang2 for toggling JSON and Cmd-line
-            f.write("| <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span>{} ".format(option_id, cmd_option, opt_type_str))
-            f.write("| {} | {} |\n".format(description, see_also))
+            f.write("| <span class=\"lang1\">`{}`</span><span class=\"lang2\">`{}`</span>{} ".format(option_id, cmd_option, opt_type_str))
+            # Add the descripion and the links
+            f.write("| {} | {} |\n".format(description, see_also_str))
 
         f.write("{: .table .table-condensed}\n")
         f.close()
