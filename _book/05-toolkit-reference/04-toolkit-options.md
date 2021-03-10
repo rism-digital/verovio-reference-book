@@ -1,12 +1,22 @@
 ---
 title: "Toolkit options"
+
+# If an option is documented in a section, add the link here
+# The script scripts/generate-options.py needs to be run for the links to be updated
+see-also:
+    mensuralToMeasure:
+      - "/advanced-topics/mensural-notation.html#ligatures"
+      - "/advanced-topics/mensural-notation.html#layout"
+    transpose:
+      - "/advanced-topics/transposition.html"
+    
 ---
 
 <div class="radio-inline">
-  <label><input type="radio" name="lang" checked>Command-line</label>
+  <label><input type="radio" name="lang" checked>Command-line parameters</label>
 </div>
 <div class="radio-inline">
-  <label><input type="radio" name="lang">JSON</label>
+  <label><input type="radio" name="lang">JSON keys</label>
 </div>
 
 ### Input and page layout options
