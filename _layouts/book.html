@@ -20,3 +20,34 @@ layout: default
     </div>
 </div>
 
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    console.log(`${id} In`);
+                    var sections = document.querySelectorAll(`.toc-group a.toc-subsection.selected`)
+                    console.log(sections.length);
+                    //for (i = 0; i < sections.length; i++){
+                    //    sections[i].classList.remove('selected');
+                    //}
+                    if (sections.length == 0) {
+                        document.querySelector(`.toc-group a[href="#${id}"]`).classList.add('selected');
+                    }
+                        
+                } else {
+                    console.log(`${id} Oout`);
+                    document.querySelector(`.toc-group a[href="#${id}"]`).classList.remove('selected');
+                }
+            });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+        });
+</script>
+
