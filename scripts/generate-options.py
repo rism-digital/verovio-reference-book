@@ -54,7 +54,9 @@ if __name__ == "__main__":
 
     for grp_id in options['groups']:
 
+        # Open the file for the option group
         f = open(options_output + grp_id + ".md", 'w')
+        # Table header in MD
         f.write("| Name and parameter | Description | See also |\n")
         f.write("|---|---|---|\n")
 
@@ -63,11 +65,15 @@ if __name__ == "__main__":
         for option_id in grp['options']:
             option = grp['options'][option_id]
 
+            # Use regex to transform JSON option names into Cmd-line option names
+            # E.g, transform adjustPageHeight into --adjust-page-height
             cmd_option = option_id
             cmd_option = regex.sub(r"(.)([A-Z][a-z]+)", r"\1-\2", cmd_option)
             cmd_option = regex.sub(r"([a-z0-9])([A-Z])", r"\1-\2", cmd_option)
             cmd_option = "--{}".format(cmd_option.lower())
 
+            # Add the parameter type
+            # <f> / <i> / <s> / * <s>
             opt_type_str = ""
             opt_type = option.get('type')
             if opt_type == 'double':
@@ -81,6 +87,7 @@ if __name__ == "__main__":
             elif opt_type != 'bool':
                 opt_type_str = " &lt;s&gt;"
 
+            # Add the default values when appropriate
             default_str = ""
             if opt_type == 'double':
                 default_str =  "<br/>(default: " + str(option['default'])
@@ -101,6 +108,7 @@ if __name__ == "__main__":
             
             see_also = "[Link](link-to)"
 
+            # Add the table line with span.lang1 / span.lang2 for toggling JSON and Cmd-line
             f.write("| <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span>{} ".format(option_id, cmd_option, opt_type_str))
             f.write("| {} | {} |\n".format(description, see_also))
 
