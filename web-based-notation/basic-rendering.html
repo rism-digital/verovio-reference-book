@@ -114,13 +114,9 @@
     
         
         
-<a class="toc-item toc-subsection" href="#hello1">Hello1!</a>
+<a class="toc-item toc-subsection" href="#fetching-mei-with-javascript">Fetching MEI with JavaScript</a>
 
-<a class="toc-item toc-subsection" href="#hello2">Hello2!</a>
-
-<a class="toc-item toc-subsection" href="#hello3">Hello3!</a>
-
-<a class="toc-item toc-subsection" href="#hello4">Hello4!</a>
+<a class="toc-item toc-subsection" href="#end-of-section-2">End of Section 2</a>
 
     
 
@@ -154,13 +150,63 @@
         <div class="panel">
             <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-web-based-notation/02-basic-rendering.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
             <h2>Basic rendering</h2>
-            <h3 id="hello1">Hello1!</h3>
+            <p>At the end of part 1, we finished with a page that was successfully loading the Verovio library, but with nothing to display. In this part of the tutorial We will write some JavaScript that will fetch an MEI file from a URL, and then pass that MEI file to Verovio. This will turn the MEI file into an Scalable Vector Graphics (SVG) file that we can then embed in our page.</p>
 
-<h3 id="hello2">Hello2!</h3>
+<aside>
+<i>Scalable Vector Graphics</i> (SVG) is an image format that can be directly embedded into web pages. Vector graphics can be made larger or smaller with no pixellation, unlike other image formats you may be familiar with such as JPEG or PNG.
+</aside>
 
-<h3 id="hello3">Hello3!</h3>
+<h3 id="fetching-mei-with-javascript">Fetching MEI with JavaScript</h3>
 
-<h3 id="hello4">Hello4!</h3>
+<p>The first step is to fetch an MEI file from a URL. To do this, you can write the following in your HTML file, immediately after the <code class="language-plaintext highlighter-rouge">console.log</code> statement:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">,</span> <span class="p">{});</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<p>To break this down a bit, we start with a <code class="language-plaintext highlighter-rouge">fetch</code> statement with a URL; this tells your browser to try and load the file available at this address from a remote server. If it’s successful, then it should extract the XML data from the server: <code class="language-plaintext highlighter-rouge">then( (response) =&gt; response.text() )</code>.</p>
+
+<p>Finally, we take this MEI response and pass it off to our Verovio instance. Remember that we ‘started’ Verovio by creating a new Toolkit and assigning it to the variable <code class="language-plaintext highlighter-rouge">tk</code>? Well, now we are using this toolkit to render the MEI file. The result, as you might guess by the variable name (<code class="language-plaintext highlighter-rouge">let svg = ...</code>), will be some SVG.</p>
+
+<p>Once we have this SVG, we look through the page for HTML element with the <code class="language-plaintext highlighter-rouge">id</code> of “notation”. You should see a <code class="language-plaintext highlighter-rouge">&lt;div id="notation"&gt;&lt;/div&gt;</code> line already in your HTML file. We set the content of this element (the <code class="language-plaintext highlighter-rouge">innerHTML</code>) to the SVG output of Verovio.</p>
+
+<p>If you refresh your HTML page now, you should see a rendered version of a Schubert lied, “Der Lindenbaum”. Congratulations! If you do not see this, go back and double-check that you do not have any errors in your browser console.</p>
+
+<h3 id="end-of-section-2">End of Section 2</h3>
+
+<p>At the end of this section, you should have a page with some rendered music notation on it. It’s probably a bit too big, though, to read comfortably on your screen. You may also be wondering how Verovio handles larger scores, with lots of pages. We will answer these two questions in the next sections by looking at how we can control the layout options, and how we can use JavaScript to navigate the score dynamically.</p>
+
+<h4 id="full-example">Full example</h4>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio has loaded!</span><span class="dl">"</span><span class="p">);</span>
+
+            <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
+              <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">,</span> <span class="p">{});</span>
+                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+              <span class="p">});</span>
+          <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello Verovio!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
 
         </div>
     </div>

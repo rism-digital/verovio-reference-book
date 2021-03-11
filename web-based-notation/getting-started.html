@@ -165,18 +165,20 @@
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<p>If you view this page in your browser, you should text in a large font that says “Hello Verovio!” but not much else. If you have your browser console open, you should see no errors.</p>
+<p>Save this in a plain text file somewhere on your hard-drive, and then open it with your browser. (The name does not matter, but it should end in <code class="language-plaintext highlighter-rouge">.html</code>; <code class="language-plaintext highlighter-rouge">verovio.html</code> is a good choice.) You should text in a large font that says “Hello Verovio!” but not much else. If you have your browser console open (discussed in the introduction), you should see no errors.</p>
 
 <p>To start Verovio, you should add the following to your page in the head, after the <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag that loads the Verovio toolkit:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
   <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+        <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
       <span class="p">}</span>
   <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
+
+<p>(If you are unsure, scroll to the bottom of this page; the full example is given below.)</p>
 
 <p>When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let’s start from the inside out.</p>
 
@@ -204,7 +206,7 @@
     <span class="nt">&lt;script&gt;</span>
       <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
           <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
-            <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+            <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio has loaded!</span><span class="dl">"</span><span class="p">);</span>
           <span class="p">}</span>
       <span class="p">});</span>

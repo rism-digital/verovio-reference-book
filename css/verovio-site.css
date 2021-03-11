@@ -21,3 +21,5 @@ span.lang1 { display: none; }
 .language-html div.highlight::before { background: #a8895a; content: "HTML / JavaScript"; }
 
 .language-json div.highlight::before { background: #bba007; content: "Json"; }
+
+aside { padding: 10px 20px; margin: 0 0 20px; background: #D0EAF1; border-left: 5px solid #52B1CB; border-right: 5px solid #52B1CB; }
