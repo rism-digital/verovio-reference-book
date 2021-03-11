@@ -14,7 +14,7 @@ examples:
       xpath:
         - ".//mei:section/mei:measure[1]"
         - ".//mei:section/mei:measure[2]"
-      options: 
+      options:
         transpose: "e"
 ---
 
@@ -25,3 +25,7 @@ Here is one example - we show measure 1 and 3 with a separator
 Here is another one - we show measure 1 and 2 without separator
 
 {% include music-notation example="accid-002" %}
+
+### Inspecting the SVG
+
+[Describe how to inspect the SVG output in the browser; useful to know for later chapters on how to style them!]
