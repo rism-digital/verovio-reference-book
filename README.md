@@ -23,7 +23,7 @@ Subsections in a section are `h3` headings (`###` in Markdown) in the text. Text
 
 ## Build the book locally
 
-You can build the site locally following a standard Jekyll installation procedure. This is recommended if you want to submit more significant changes than a small correction or addition to an existing text.
+You can build the site locally following a [standard Jekyll installation procedure](https://jekyllrb.com/docs/step-by-step/01-setup/#build). This is recommended if you want to submit more significant changes than a small correction or addition to an existing text.
 
 ## Adding a subsection or a section
 
