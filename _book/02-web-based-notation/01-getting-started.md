@@ -18,7 +18,7 @@ You can start with the following HTML page:
 </html>
 ```
 
-If you view this page in your browser, you should text in a large font that says "Hello Verovio!" but not much else. If you have your browser console open, you should see no errors.
+Save this in a plain text file somewhere on your hard-drive, and then open it with your browser. (The name does not matter, but it should end in `.html`; `verovio.html` is a good choice.) You should text in a large font that says "Hello Verovio!" but not much else. If you have your browser console open (discussed in the introduction), you should see no errors.
 
 To start Verovio, you should add the following to your page in the head, after the `<script>` tag that loads the Verovio toolkit:
 
@@ -26,11 +26,13 @@ To start Verovio, you should add the following to your page in the head, after t
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
       Module.onRuntimeInitialized = async _ => {
-        tk = new verovio.toolkit();
+        let tk = new verovio.toolkit();
       }
   });
 </script>
 ```
+
+(If you are unsure, scroll to the bottom of this page; the full example is given below.)
 
 When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let's start from the inside out.
 
@@ -59,7 +61,7 @@ At the end of this first section you should have a working web page, with a mess
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
           Module.onRuntimeInitialized = async _ => {
-            tk = new verovio.toolkit();
+            let tk = new verovio.toolkit();
             console.log("Verovio has loaded!");
           }
       });
