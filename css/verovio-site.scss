@@ -95,3 +95,12 @@ aside {
         margin-bottom: 0px;
     }
 }
+
+// CSS trick to have anchor links not hidden behind the fixed header
+h3::before {
+  content: '';
+  display: block;
+  height:      70px;
+  margin-top: -70px;
+  visibility: hidden;
+}
