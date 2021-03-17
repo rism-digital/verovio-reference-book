@@ -59,18 +59,14 @@ if __name__ == "__main__":
     # keep all the options to be able to reset them for each example
     options: Dict = json.loads(tk.getAvailableOptions())
 
-    for grp_id in options['groups']:
-
+    for grp_id, grp in options['groups'].items():
         # Open the file for the option group
         f = open(options_output + grp_id + ".md", 'w')
         # Table header in MD
         f.write("| Name and parameter | Description | See also |\n")
         f.write("|---|---|---|\n")
-
-        grp = options['groups'][grp_id]
         
-        for option_id in grp['options']:
-            option = grp['options'][option_id]
+        for option_id, option in grp['options'].items():
 
             # Use regex to transform JSON option names into Cmd-line option names
             # E.g, transform adjustPageHeight into --adjust-page-height
@@ -79,19 +75,29 @@ if __name__ == "__main__":
             cmd_option = regex.sub(r"([a-z0-9])([A-Z])", r"\1-\2", cmd_option)
             cmd_option = "--{}".format(cmd_option.lower())
 
+            if option.get('shortOption'):
+                cmd_option = "-{}, {}".format(option['shortOption'], cmd_option)
+
             # Add the parameter type
             opt_type_str = ""
             opt_type = option.get('type')
             if opt_type == 'double':
-                opt_type_str = " `<f>`"
+                opt_type_str = " <f>"
             elif opt_type == 'int':
-                opt_type_str = " `<i>`"
+                opt_type_str = " <i>"
             elif opt_type == 'std::string':
-                opt_type_str = " `<s>`"
+                opt_type_str = " <s>"
             elif opt_type == 'array':
-                opt_type_str = "`*` `<s>`"
+                opt_type_str = "* <s>"
             elif opt_type != 'bool':
-                opt_type_str = " `<s>`"
+                opt_type_str = " <s>"
+
+            opt_type_json_str = opt_type_str
+            if opt_type == 'bool':
+                opt_type_json_str = " <b>"
+
+            cmd_option_str = "`{} {}`".format(cmd_option, opt_type_str)
+            json_option_str = "`\"{}\": {}`".format(option_id, opt_type_json_str)
 
             # Add the default values when appropriate
             default_str = ""
@@ -99,7 +105,7 @@ if __name__ == "__main__":
                 default_str =  "<br/>(default: " + str(option['default'])
                 default_str +=  "; min: " + str(option['min'])
                 default_str +=  "; max: " + str(option['max']) + ")"
-            elif opt_type == 'int':
+            elif opt_type == 'int' and (option['default'] != option['min'] != option['max']):
                 default_str =  "<br/>(default: " + str(option['default'])
                 default_str +=  "; min: " + str(option['min'])
                 default_str +=  "; max: " + str(option['max']) + ")"
@@ -123,8 +129,11 @@ if __name__ == "__main__":
                     see_also_links.append(link)
                 see_also_str = "<br/>".join(see_also_links)
 
+            if option.get('cmdOnly'):
+                json_option_str = "∅"
+
             # Add the table line with span.lang1 / span.lang2 for toggling JSON and Cmd-line
-            f.write("| <span class=\"lang1\">`{}`</span><span class=\"lang2\">`{}`</span>{} ".format(option_id, cmd_option, opt_type_str))
+            f.write("| <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span> ".format(json_option_str, cmd_option_str))
             # Add the descripion and the links
             f.write("| {} | {} |\n".format(description, see_also_str))
 

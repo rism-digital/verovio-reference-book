@@ -91,4 +91,7 @@ aside {
     background: #D0EAF1;
     border-left: 5px solid #52B1CB;
     border-right: 5px solid #52B1CB;
+    p:last-child {
+        margin-bottom: 0px;
+    }
 }

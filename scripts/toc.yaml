@@ -60,7 +60,9 @@
 "/toolkit-reference/toolkit-methods.html#rendertosvg": RenderToSVG
 "/toolkit-reference/toolkit-methods.html#rendertosvgfile": RenderToSVGFile
 "/toolkit-reference/toolkit-methods.html#setoptions": SetOptions
+"/toolkit-reference/toolkit-methods.html#setresourcepath": SetResourcePath
 "/toolkit-reference/toolkit-options.html": Toolkit options
+"/toolkit-reference/toolkit-options.html#base-short-options": Base short options
 "/toolkit-reference/toolkit-options.html#input-and-page-layout-options": Input and
   page layout options
 "/toolkit-reference/toolkit-options.html#general-layout-options": General layout options

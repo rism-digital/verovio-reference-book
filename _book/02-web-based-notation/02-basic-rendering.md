@@ -4,9 +4,9 @@ title: "Basic rendering"
 
 At the end of part 1, we finished with a page that was successfully loading the Verovio library, but with nothing to display. In this part of the tutorial We will write some JavaScript that will fetch an MEI file from a URL, and then pass that MEI file to Verovio. This will turn the MEI file into an Scalable Vector Graphics (SVG) file that we can then embed in our page.
 
-<aside>
-<i>Scalable Vector Graphics</i> (SVG) is an image format that can be directly embedded into web pages. Vector graphics can be made larger or smaller with no pixellation, unlike other image formats you may be familiar with such as JPEG or PNG.
-</aside>
+{% aside %}
+_Scalable Vector Graphics_ (SVG) is an image format that can be directly embedded into web pages. Vector graphics can be made larger or smaller with no pixellation, unlike other image formats you may be familiar with such as JPEG or PNG.
+{% endaside %}
 
 ### Fetching MEI with JavaScript
 
