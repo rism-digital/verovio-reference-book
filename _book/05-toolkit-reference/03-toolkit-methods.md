@@ -19,3 +19,5 @@ title: "Toolkit methods"
 ### RenderToSVGFile
 
 ### SetOptions
+
+### SetResourcePath

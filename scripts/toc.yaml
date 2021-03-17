@@ -16,14 +16,13 @@
   Console
 "/web-based-notation/getting-started.html#end-of-section-1": End of Section 1
 "/web-based-notation/basic-rendering.html": Basic rendering
-"/web-based-notation/basic-rendering.html#hello1": Hello1!
-"/web-based-notation/basic-rendering.html#hello2": Hello2!
-"/web-based-notation/basic-rendering.html#hello3": Hello3!
-"/web-based-notation/basic-rendering.html#hello4": Hello4!
+"/web-based-notation/basic-rendering.html#fetching-mei-with-javascript": Fetching
+  MEI with JavaScript
+"/web-based-notation/basic-rendering.html#end-of-section-2": End of Section 2
 "/web-based-notation/layout-options.html": Layout options
-"/web-based-notation/layout-options.html#there": There?
 "/web-based-notation/score-navigation.html": Score navigation
 "/interactive-notation/": Introduction
+"/interactive-notation/#inspecting-the-svg": Inspecting the SVG
 "/interactive-notation/working-with-css-and-svg.html": Working with CSS and SVG
 "/interactive-notation/xpath-queries.html": XPath queries
 "/advanced-topics/": Introduction
@@ -61,7 +60,9 @@
 "/toolkit-reference/toolkit-methods.html#rendertosvg": RenderToSVG
 "/toolkit-reference/toolkit-methods.html#rendertosvgfile": RenderToSVGFile
 "/toolkit-reference/toolkit-methods.html#setoptions": SetOptions
+"/toolkit-reference/toolkit-methods.html#setresourcepath": SetResourcePath
 "/toolkit-reference/toolkit-options.html": Toolkit options
+"/toolkit-reference/toolkit-options.html#base-short-options": Base short options
 "/toolkit-reference/toolkit-options.html#input-and-page-layout-options": Input and
   page layout options
 "/toolkit-reference/toolkit-options.html#general-layout-options": General layout options
