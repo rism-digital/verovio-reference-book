@@ -48,10 +48,6 @@ All of the base options are short options in the command-line version of the too
 
 {% include options/4-elementMargins.md %}
 
-### Deprecated options
-
-{% include options/Deprecated.md %}
-
 <script type="text/javascript">
 $('input:radio[name="lang"]').click(function() {
     $("span").toggleClass("lang1 lang2");
