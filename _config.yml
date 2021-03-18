@@ -32,4 +32,4 @@ collections:
     book:
         output: true
 
-generate-full-chapters: false
+generate-full-chapters: true

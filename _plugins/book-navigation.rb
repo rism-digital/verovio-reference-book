@@ -14,6 +14,8 @@ module Jekyll
 
     def generate(site)
 
+      @site = site
+
       # A flag in the config that can be turned on to genearate on page per chapter for PDF generation
       @generate_full_chapters = site.config['generate-full-chapters']
 
