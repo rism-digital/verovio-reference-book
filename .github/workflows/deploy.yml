@@ -13,10 +13,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      
+      - name: "Checks-out the repository"
+        uses: actions/checkout@v2
         
-      - run: |
+      - name: "Change config to generate full-chapter pages"
+        run: |
           sed -i 's/generate-full-chapters: false/generate-full-chapters: true/g' _config.yml
       
       - name: "Install wkhtmltopdf"
@@ -24,22 +26,24 @@ jobs:
           wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
           sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb
 
-      - uses: actions/setup-ruby@v1
+      - name: "Install ruby"
+        uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
 
-      # Use GitHub Actions' cache to shorten build times and decrease load on servers
-      - uses: actions/cache@v2.1.0
+      - name: "Install gems with cache"
+        uses: actions/cache@v2.1.0
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      # Tune the jekyll action
-      - uses:  lemonarc/jekyll-action@1.0.0
+      - name: "Build the site"
+        uses:  lemonarc/jekyll-action@1.0.0
       
-      - run: |
+      - name: "Run a server locally and generate the PDF"
+        run: |
           cd _site
           ls
           ruby -run -ehttpd . -p4000 &
@@ -47,6 +51,7 @@ jobs:
           cd ..
           ./scripts/generate-pdf.sh
           sudo cp scripts/verovio-reference-book.pdf _site/
+          sudo rm -rf _site/full-chapters
       
       # Deploy _site to the gh-pages branch
       - name: Deploy
