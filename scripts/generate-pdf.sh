@@ -13,5 +13,5 @@ http://127.0.0.1:4000/full-chapters/05-toolkit-reference.html \
 http://127.0.0.1:4000/full-chapters/06-installing-or-building-from-sources.html \
 http://127.0.0.1:4000/full-chapters/07-contributing.html \
 toc --xsl-style-sheet ./scripts/toc.xsl \
-scripts/verovio-reference-book.pdf
+_site/verovio-reference-book.pdf
 
