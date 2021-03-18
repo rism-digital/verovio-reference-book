@@ -12,11 +12,10 @@ layout: default
     </div>
 
     <div class="col-md-9">
-        <div class="panel">
-            <a class="hidden-print" href="{{ site.edit-path}}/{{ page.path }}"><button class="btn btn-xs pull-right">Edit this page</button></a>
-            <h2>{{ page.title }}</h2>
-            {{ content }}
-        </div>
+        <a class="hidden-print" href="{{ site.edit-path}}/{{ page.path }}"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        {% if page.chapter-title %}<h1>{{ page.chapter-title }}</h1>{% endif %}
+        {% if page.title != '00 Index' %}<h2>{{ page.title }}</h2>{% endif %}
+        {{ content }}
     </div>
 </div>
 

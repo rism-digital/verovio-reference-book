@@ -14,6 +14,17 @@
     }
 }
 
+@media screen {
+    // CSS trick to have anchor links not hidden behind the fixed header
+    h3::before {
+        content: '';
+        display: block;
+        height:      70px;
+        margin-top: -70px;
+        visibility: hidden;
+    }
+}
+
 @media print {
     // do not show links url when printing
     a[href]:after {
@@ -35,7 +46,6 @@ span.lang1 {
         font-size: 1rem;
         font-weight: 700;
         height: 1.5rem;
-        letter-spacing: .1em;
         line-height: 1.5rem;
         padding: 0 .5em;
         text-transform: uppercase;
@@ -96,11 +106,3 @@ aside {
     }
 }
 
-// CSS trick to have anchor links not hidden behind the fixed header
-h3::before {
-  content: '';
-  display: block;
-  height:      70px;
-  margin-top: -70px;
-  visibility: hidden;
-}
