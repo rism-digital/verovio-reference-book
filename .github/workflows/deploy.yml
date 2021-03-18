@@ -15,7 +15,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        run: |
+        
+      - run: |
           sed -i 's/generate-full-chapters: false/generate-full-chapters: true/g' _config.yml
       
       - name: "Install wkhtmltopdf"
