@@ -26,67 +26,67 @@
    <style type="text/css">g.page-margin{font-family:Times;} g.ending, g.reh, g.tempo{font-weight:bold;} g.dir, g.dynam, g.mNum{font-style:italic;} g.label{font-weight:normal;}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 19710 2680">
       <g class="page-margin" transform="translate(500, 500)">
-         <g id="system-0000000852989983" class="system">
-            <g id="section-0000001329526015" class="section boundaryStart" />
-            <g id="measure-0000000776387070" class="measure">
-               <g id="staff-0000000405913548" class="staff">
+         <g id="system-0000001843440180" class="system">
+            <g id="section-0000001017007058" class="section boundaryStart" />
+            <g id="measure-0000001015277333" class="measure">
+               <g id="staff-0000000503115138" class="staff">
                   <path d="M0 607 L4146 607" stroke="currentColor" stroke-width="13" />
                   <path d="M0 787 L4146 787" stroke="currentColor" stroke-width="13" />
                   <path d="M0 967 L4146 967" stroke="currentColor" stroke-width="13" />
                   <path d="M0 1147 L4146 1147" stroke="currentColor" stroke-width="13" />
                   <path d="M0 1327 L4146 1327" stroke="currentColor" stroke-width="13" />
-                  <g id="clef-0000000514115777" class="clef">
+                  <g id="clef-0000000196559994" class="clef">
                      <use xlink:href="#E050" x="90" y="1147" height="720px" width="720px" />
                   </g>
-                  <g id="msig-0000000335190629" class="meterSig">
+                  <g id="msig-0000001821482804" class="meterSig">
                      <use xlink:href="#E084" x="825" y="787" height="720px" width="720px" />
                      <use xlink:href="#E084" x="825" y="1147" height="720px" width="720px" />
                   </g>
-                  <g id="layer-0000001780938364" class="layer">
-                     <g id="note-0000000604011862" class="note">
+                  <g id="layer-0000001213006127" class="layer">
+                     <g id="note-0000000931715518" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="1373" y="1327" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000002085407325" class="stem">
+                        <g id="stem-0000001403860361" class="stem">
                            <rect x="1581" y="697" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000472165265" class="accid" />
+                        <g id="accid-0000002039440749" class="accid" />
                      </g>
-                     <g id="note-0000000729533190" class="note">
+                     <g id="note-0000000894178676" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="2063" y="1237" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000000360308588" class="stem">
+                        <g id="stem-0000000278257738" class="stem">
                            <rect x="2271" y="607" height="602" width="18" />
                         </g>
-                        <g id="accid-0000001280183607" class="accid" />
+                        <g id="accid-0000000370445826" class="accid" />
                      </g>
-                     <g id="note-0000000407223556" class="note">
+                     <g id="note-0000000527904929" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="2753" y="1147" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001950037623" class="stem">
+                        <g id="stem-0000001605903047" class="stem">
                            <rect x="2961" y="517" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000175922703" class="accid" />
+                        <g id="accid-0000001243195946" class="accid" />
                      </g>
-                     <g id="note-0000001795371049" class="note">
+                     <g id="note-0000001525862759" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="3443" y="1057" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001534392894" class="stem">
+                        <g id="stem-0000000838035433" class="stem">
                            <rect x="3651" y="427" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000508496546" class="accid" />
+                        <g id="accid-0000002073161686" class="accid" />
                      </g>
                   </g>
                </g>
-               <g id="bline-0000000978766624" class="barLineAttr">
+               <g id="bline-0000000450685901" class="barLineAttr">
                   <path d="M4133 1327 L4133 607" stroke="currentColor" stroke-width="27" />
                </g>
             </g>
-            <g id="measure-0000001464017209" class="measure">
-               <g id="staff-0000000336399591" class="staff">
+            <g id="measure-0000000706284027" class="measure">
+               <g id="staff-0000000087850874" class="staff">
                   <path d="M4146 607 L7939 607" stroke="currentColor" stroke-width="13" />
                   <path d="M4146 787 L7939 787" stroke="currentColor" stroke-width="13" />
                   <path d="M4146 967 L7939 967" stroke="currentColor" stroke-width="13" />
@@ -96,157 +96,157 @@
                      <path d="M6993 427 L7276 427" stroke="currentColor" stroke-width="22" />
                      <path d="M7443 427 L7726 427" stroke="currentColor" stroke-width="22" />
                   </g>
-                  <g id="layer-0000001690967033" class="layer">
-                     <g id="beam-0000000284339233" class="beam">
+                  <g id="layer-0000001188373829" class="layer">
+                     <g id="beam-0000001401026903" class="beam">
                         <polygon points="4326,1642 4794,1597 4794,1507 4326,1552 " />
-                        <g id="note-0000000738374456" class="note">
+                        <g id="note-0000002048453013" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="4326" y="967" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001557736282" class="stem">
+                           <g id="stem-0000001663765405" class="stem">
                               <rect x="4326" y="995" height="629" width="18" />
                            </g>
-                           <g id="accid-0000001698969626" class="accid" />
+                           <g id="accid-0000002039444434" class="accid" />
                         </g>
-                        <g id="note-0000001639933670" class="note">
+                        <g id="note-0000000956112471" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="4776" y="877" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000000900550997" class="stem">
+                           <g id="stem-0000000520594248" class="stem">
                               <rect x="4776" y="905" height="674" width="18" />
                            </g>
-                           <g id="accid-0000001560066092" class="accid" />
+                           <g id="accid-0000001909653243" class="accid" />
                         </g>
                      </g>
-                     <g id="beam-0000001402962021" class="beam">
+                     <g id="beam-0000001398950686" class="beam">
                         <polygon points="5226,1462 5694,1417 5694,1327 5226,1372 " />
-                        <g id="note-0000000212242887" class="note">
+                        <g id="note-0000001513212246" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="5226" y="787" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000000095862523" class="stem">
+                           <g id="stem-0000000779148258" class="stem">
                               <rect x="5226" y="815" height="629" width="18" />
                            </g>
-                           <g id="accid-0000000195864142" class="accid" />
+                           <g id="accid-0000002056870748" class="accid" />
                         </g>
-                        <g id="note-0000001943687390" class="note">
+                        <g id="note-0000001782395877" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="5676" y="697" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000000548688811" class="stem">
+                           <g id="stem-0000001936976447" class="stem">
                               <rect x="5676" y="725" height="674" width="18" />
                            </g>
-                           <g id="accid-0000000032725566" class="accid" />
+                           <g id="accid-0000001478112736" class="accid" />
                         </g>
                      </g>
-                     <g id="beam-0000000262774130" class="beam">
+                     <g id="beam-0000000549925456" class="beam">
                         <polygon points="6126,1282 6594,1237 6594,1147 6126,1192 " />
-                        <g id="note-0000001218424678" class="note">
+                        <g id="note-0000001975005951" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="6126" y="607" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000000518066259" class="stem">
+                           <g id="stem-0000001058539856" class="stem">
                               <rect x="6126" y="635" height="629" width="18" />
                            </g>
-                           <g id="accid-0000001806989001" class="accid" />
+                           <g id="accid-0000000270286778" class="accid" />
                         </g>
-                        <g id="note-0000000350403933" class="note">
+                        <g id="note-0000000781964441" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="6576" y="517" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001240910075" class="stem">
+                           <g id="stem-0000001124828044" class="stem">
                               <rect x="6576" y="545" height="674" width="18" />
                            </g>
-                           <g id="accid-0000000838741857" class="accid" />
+                           <g id="accid-0000002023923894" class="accid" />
                         </g>
                      </g>
-                     <g id="beam-0000000651731691" class="beam">
+                     <g id="beam-0000002095401625" class="beam">
                         <polygon points="7026,1102 7494,1057 7494,967 7026,1012 " />
-                        <g id="note-0000001487930937" class="note">
+                        <g id="note-0000000830784222" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="7026" y="427" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001761934508" class="stem">
+                           <g id="stem-0000000686390967" class="stem">
                               <rect x="7026" y="455" height="629" width="18" />
                            </g>
-                           <g id="accid-0000000208188844" class="accid" />
+                           <g id="accid-0000000051746360" class="accid" />
                         </g>
-                        <g id="note-0000000779040145" class="note">
+                        <g id="note-0000002117679132" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="7476" y="337" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001181267473" class="stem">
+                           <g id="stem-0000002038314332" class="stem">
                               <rect x="7476" y="365" height="674" width="18" />
                            </g>
-                           <g id="accid-0000000119921256" class="accid" />
+                           <g id="accid-0000001586689793" class="accid" />
                         </g>
                      </g>
                   </g>
                </g>
-               <g id="bline-0000000167786186" class="barLineAttr">
+               <g id="bline-0000000038592724" class="barLineAttr">
                   <path d="M7926 1327 L7926 607" stroke="currentColor" stroke-width="27" />
                </g>
             </g>
-            <g id="measure-0000001176888706" class="measure">
-               <g id="staff-0000000119188242" class="staff">
+            <g id="measure-0000000043422505" class="measure">
+               <g id="staff-0000001243226218" class="staff">
                   <path d="M7939 607 L11087 607" stroke="currentColor" stroke-width="13" />
                   <path d="M7939 787 L11087 787" stroke="currentColor" stroke-width="13" />
                   <path d="M7939 967 L11087 967" stroke="currentColor" stroke-width="13" />
                   <path d="M7939 1147 L11087 1147" stroke="currentColor" stroke-width="13" />
                   <path d="M7939 1327 L11087 1327" stroke="currentColor" stroke-width="13" />
-                  <g id="layer-0000001742024290" class="layer">
-                     <g id="note-0000001557682479" class="note">
+                  <g id="layer-0000002034644263" class="layer">
+                     <g id="note-0000001884017060" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="8314" y="1327" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000000076102196" class="stem">
+                        <g id="stem-0000001289840980" class="stem">
                            <rect x="8522" y="697" height="602" width="18" />
                         </g>
-                        <g id="accid-0000002143767623" class="accid">
+                        <g id="accid-0000000028352405" class="accid">
                            <use xlink:href="#E262" x="8119" y="1327" height="720px" width="720px" />
                         </g>
                      </g>
-                     <g id="note-0000001969294042" class="note">
+                     <g id="note-0000001924984848" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="9004" y="1237" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001296838207" class="stem">
+                        <g id="stem-0000001657418042" class="stem">
                            <rect x="9212" y="607" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000906996330" class="accid">
+                        <g id="accid-0000001379198281" class="accid">
                            <use xlink:href="#E261" x="8837" y="1237" height="720px" width="720px" />
                         </g>
                      </g>
-                     <g id="note-0000001048391904" class="note">
+                     <g id="note-0000000247023049" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="9694" y="1147" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001148211646" class="stem">
+                        <g id="stem-0000001214646657" class="stem">
                            <rect x="9902" y="517" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000219406893" class="accid">
+                        <g id="accid-0000000630494892" class="accid">
                            <use xlink:href="#E260" x="9498" y="1147" height="720px" width="720px" />
                         </g>
                      </g>
-                     <g id="note-0000000342228752" class="note">
+                     <g id="note-0000001043335546" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="10384" y="1057" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000000705082380" class="stem">
+                        <g id="stem-0000000586815817" class="stem">
                            <rect x="10592" y="427" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000877428198" class="accid">
+                        <g id="accid-0000001136543867" class="accid">
                            <use xlink:href="#E263" x="10145" y="1057" height="720px" width="720px" />
                         </g>
                      </g>
                   </g>
                </g>
-               <g id="bline-0000000395592822" class="barLineAttr">
+               <g id="bline-0000001208041508" class="barLineAttr">
                   <path d="M11074 1327 L11074 607" stroke="currentColor" stroke-width="27" />
                </g>
             </g>
-            <g id="measure-0000000165519837" class="measure">
-               <g id="staff-0000000791910141" class="staff">
+            <g id="measure-0000000025732604" class="measure">
+               <g id="staff-0000000880504437" class="staff">
                   <path d="M11087 607 L15536 607" stroke="currentColor" stroke-width="13" />
                   <path d="M11087 787 L15536 787" stroke="currentColor" stroke-width="13" />
                   <path d="M11087 967 L15536 967" stroke="currentColor" stroke-width="13" />
@@ -256,173 +256,173 @@
                      <path d="M14528 427 L14811 427" stroke="currentColor" stroke-width="22" />
                      <path d="M15040 427 L15323 427" stroke="currentColor" stroke-width="22" />
                   </g>
-                  <g id="layer-0000001677579328" class="layer">
-                     <g id="beam-0000000762964233" class="beam">
+                  <g id="layer-0000000328261182" class="layer">
+                     <g id="beam-0000000200196731" class="beam">
                         <polygon points="11434,1642 11935,1597 11935,1507 11434,1552 " />
-                        <g id="note-0000000515007794" class="note">
+                        <g id="note-0000001747066715" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="11434" y="967" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000000504796514" class="stem">
+                           <g id="stem-0000001368529295" class="stem">
                               <rect x="11434" y="995" height="629" width="18" />
                            </g>
-                           <g id="accid-0000001376896348" class="accid">
+                           <g id="accid-0000000406373574" class="accid">
                               <use xlink:href="#E261" x="11267" y="967" height="720px" width="720px" />
                            </g>
                         </g>
-                        <g id="note-0000000213140764" class="note">
+                        <g id="note-0000000922660758" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="11917" y="877" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001554605148" class="stem">
+                           <g id="stem-0000001322001695" class="stem">
                               <rect x="11917" y="905" height="674" width="18" />
                            </g>
-                           <g id="accid-0000000254097352" class="accid">
+                           <g id="accid-0000000179944719" class="accid">
                               <use xlink:href="#E261" x="11750" y="877" height="720px" width="720px" />
                            </g>
                         </g>
                      </g>
-                     <g id="beam-0000001416704828" class="beam">
+                     <g id="beam-0000000673917257" class="beam">
                         <polygon points="12429,1417 13002,1327 13002,1237 12429,1327 " />
-                        <g id="note-0000001406849907" class="note">
+                        <g id="note-0000000698584121" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="12429" y="787" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001962673034" class="stem">
+                           <g id="stem-0000001016676003" class="stem">
                               <rect x="12429" y="815" height="584" width="18" />
                            </g>
-                           <g id="accid-0000001131433479" class="accid">
+                           <g id="accid-0000000810223498" class="accid">
                               <use xlink:href="#E260" x="12233" y="787" height="720px" width="720px" />
                            </g>
                         </g>
-                        <g id="note-0000000034787368" class="note">
+                        <g id="note-0000000232525259" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="12984" y="697" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001296864518" class="stem">
+                           <g id="stem-0000001893686889" class="stem">
                               <rect x="12984" y="725" height="584" width="18" />
                            </g>
-                           <g id="accid-0000000555741992" class="accid">
+                           <g id="accid-0000001779274120" class="accid">
                               <use xlink:href="#E263" x="12745" y="697" height="720px" width="720px" />
                            </g>
                         </g>
                      </g>
-                     <g id="beam-0000000949278741" class="beam">
+                     <g id="beam-0000000550350365" class="beam">
                         <polygon points="13539,1282 14068,1237 14068,1147 13539,1192 " />
-                        <g id="note-0000000871786424" class="note">
+                        <g id="note-0000000526516926" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="13539" y="607" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000001590420623" class="stem">
+                           <g id="stem-0000001487894883" class="stem">
                               <rect x="13539" y="635" height="629" width="18" />
                            </g>
-                           <g id="accid-0000001980988334" class="accid">
+                           <g id="accid-0000001537349642" class="accid">
                               <use xlink:href="#E263" x="13300" y="607" height="720px" width="720px" />
                            </g>
                         </g>
-                        <g id="note-0000002031950097" class="note">
+                        <g id="note-0000001859676037" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="14050" y="517" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000000470456552" class="stem">
+                           <g id="stem-0000001749712913" class="stem">
                               <rect x="14050" y="545" height="674" width="18" />
                            </g>
-                           <g id="accid-0000001700325685" class="accid">
+                           <g id="accid-0000001098155421" class="accid">
                               <use xlink:href="#E262" x="13855" y="517" height="720px" width="720px" />
                            </g>
                         </g>
                      </g>
-                     <g id="beam-0000000808897166" class="beam">
+                     <g id="beam-0000001223698429" class="beam">
                         <polygon points="14561,1102 15091,1057 15091,967 14561,1012 " />
-                        <g id="note-0000001563183452" class="note">
+                        <g id="note-0000000248608884" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="14561" y="427" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000002075964857" class="stem">
+                           <g id="stem-0000001931350420" class="stem">
                               <rect x="14561" y="455" height="629" width="18" />
                            </g>
-                           <g id="accid-0000000109340366" class="accid">
+                           <g id="accid-0000001513819973" class="accid">
                               <use xlink:href="#E262" x="14366" y="427" height="720px" width="720px" />
                            </g>
                         </g>
-                        <g id="note-0000001585013177" class="note">
+                        <g id="note-0000001533520202" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4" x="15073" y="337" height="720px" width="720px" />
                            </g>
-                           <g id="stem-0000000574538790" class="stem">
+                           <g id="stem-0000000991184535" class="stem">
                               <rect x="15073" y="365" height="674" width="18" />
                            </g>
-                           <g id="accid-0000001929308451" class="accid">
+                           <g id="accid-0000001922787367" class="accid">
                               <use xlink:href="#E260" x="14877" y="337" height="720px" width="720px" />
                            </g>
                         </g>
                      </g>
                   </g>
                </g>
-               <g id="bline-0000000603647567" class="barLineAttr">
+               <g id="bline-0000001994463780" class="barLineAttr">
                   <path d="M15523 1327 L15523 607" stroke="currentColor" stroke-width="27" />
                </g>
             </g>
-            <g id="measure-0000001031549904" class="measure">
-               <g id="staff-0000000490275518" class="staff">
+            <g id="measure-0000000953357113" class="measure">
+               <g id="staff-0000000729433479" class="staff">
                   <path d="M15536 607 L18716 607" stroke="currentColor" stroke-width="13" />
                   <path d="M15536 787 L18716 787" stroke="currentColor" stroke-width="13" />
                   <path d="M15536 967 L18716 967" stroke="currentColor" stroke-width="13" />
                   <path d="M15536 1147 L18716 1147" stroke="currentColor" stroke-width="13" />
                   <path d="M15536 1327 L18716 1327" stroke="currentColor" stroke-width="13" />
-                  <g id="layer-0000000165877487" class="layer">
-                     <g id="note-0000000469150203" class="note">
+                  <g id="layer-0000001751824477" class="layer">
+                     <g id="note-0000000913184569" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="15911" y="1327" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001186966618" class="stem">
+                        <g id="stem-0000000807829966" class="stem">
                            <rect x="16119" y="697" height="602" width="18" />
                         </g>
-                        <g id="accid-0000001594993684" class="accid">
+                        <g id="accid-0000001974909721" class="accid">
                            <use xlink:href="#E262" x="15716" y="1327" height="720px" width="720px" />
                         </g>
                      </g>
-                     <g id="note-0000000020481487" class="note">
+                     <g id="note-0000000800432815" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="16601" y="1327" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001372351743" class="stem">
+                        <g id="stem-0000000806622228" class="stem">
                            <rect x="16809" y="697" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000634968489" class="accid">
+                        <g id="accid-0000001036756897" class="accid">
                            <use xlink:href="#E262" x="16406" y="1327" height="720px" width="720px" />
                         </g>
                      </g>
-                     <g id="note-0000001069152680" class="note">
+                     <g id="note-0000000090856121" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="17291" y="1327" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001141375821" class="stem">
+                        <g id="stem-0000001983006132" class="stem">
                            <rect x="17499" y="697" height="602" width="18" />
                         </g>
-                        <g id="accid-0000001253418311" class="accid">
+                        <g id="accid-0000000157952630" class="accid">
                            <use xlink:href="#E262" x="17351" y="334" height="540px" width="540px" />
                         </g>
                      </g>
-                     <g id="note-0000001534459554" class="note">
+                     <g id="note-0000000420064718" class="note">
                         <g class="notehead">
                            <use xlink:href="#E0A4" x="17981" y="1327" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000001779488543" class="stem">
+                        <g id="stem-0000001585342731" class="stem">
                            <rect x="18189" y="697" height="602" width="18" />
                         </g>
-                        <g id="accid-0000000530607255" class="accid">
+                        <g id="accid-0000001248967737" class="accid">
                            <use xlink:href="#E261" x="17814" y="1327" height="720px" width="720px" />
                         </g>
                      </g>
                   </g>
                </g>
-               <g id="bline-0000001104883761" class="barLineAttr">
+               <g id="bline-0000001269469832" class="barLineAttr">
                   <path d="M18541 1327 L18541 607" stroke="currentColor" stroke-width="27" />
                   <path d="M18671 1327 L18671 607" stroke="currentColor" stroke-width="90" />
                </g>
             </g>
-            <g id="bdend-0000002005429569" class="boundaryEnd section-0000001329526015" />
+            <g id="bdend-0000000335372623" class="boundaryEnd section-0000001017007058" />
          </g>
       </g>
    </svg>

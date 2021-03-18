@@ -1,12 +1,14 @@
 @media (min-width: 992px) { .toc-group { position: fixed; z-index: 1; top: 240px; max-width: 236px; overflow-x: hidden; } }
 
+@media screen { h3::before { content: ''; display: block; height: 70px; margin-top: -70px; visibility: hidden; } }
+
 @media print { a[href]:after { content: ""; } }
 
 span.lang1 { display: none; }
 
 .highlighter-rouge pre.highlight { border: none; }
 
-.highlighter-rouge div.highlight::before { display: inline-block; color: #fff; font-size: 1rem; font-weight: 700; height: 1.5rem; letter-spacing: .1em; line-height: 1.5rem; padding: 0 .5em; text-transform: uppercase; top: 0; }
+.highlighter-rouge div.highlight::before { display: inline-block; color: #fff; font-size: 1rem; font-weight: 700; height: 1.5rem; line-height: 1.5rem; padding: 0 .5em; text-transform: uppercase; top: 0; }
 
 .language-bash div.highlight::before { background: #669; content: "Terminal"; }
 
@@ -25,5 +27,3 @@ span.lang1 { display: none; }
 aside { padding: 10px 20px; margin: 0 0 20px; background: #D0EAF1; border-left: 5px solid #52B1CB; border-right: 5px solid #52B1CB; }
 
 aside p:last-child { margin-bottom: 0px; }
-
-h3::before { content: ''; display: block; height: 70px; margin-top: -70px; visibility: hidden; }

@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="/css/verovio-site.css" />
 
         <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
     </head>
     <body>
 
@@ -79,7 +80,6 @@
 
         <div class="top-header"> 
     <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
-        <h1 class="visible-print">Reference book for Verovio</h1>
         <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
         <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
         <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
@@ -143,10 +143,10 @@
     </div>
 
     <div class="col-md-9">
-        <div class="panel">
-            <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/07-contributing/05-adding-smufl-glyphs.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
-            <h2>Adding SMuFL glyphs</h2>
-            <p>All SMuFL glyphs used by Verovio have to be available in the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font. For adding support for a new SMuFL glyph, the steps are:</p>
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/07-contributing/05-adding-smufl-glyphs.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        
+        <h2>Adding SMuFL glyphs</h2>
+        <p>All SMuFL glyphs used by Verovio have to be available in the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font. For adding support for a new SMuFL glyph, the steps are:</p>
 
 <ol>
   <li>Add the glyph to the Leipzig font file</li>
@@ -176,7 +176,6 @@
 
 <p>Once the PR will have been merged, the glyphs will be extracted from the SVG font by running the script <code class="language-plaintext highlighter-rouge">./fonts/generate_all.sh</code> (from <code class="language-plaintext highlighter-rouge">./fonts/</code>). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in <code class="language-plaintext highlighter-rouge">./data/</code> and in <code class="language-plaintext highlighter-rouge">./include/vrv/smufl.h</code></p>
 
-        </div>
     </div>
 </div>
 
@@ -232,7 +231,7 @@
 
         </div>
 
-        <footer class="footer navbar-fixed-bottom">
+        <footer class="hidden-print footer navbar-fixed-bottom">
             <p>
                 
             </p>

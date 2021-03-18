@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="/css/verovio-site.css" />
 
         <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
     </head>
     <body>
 
@@ -79,7 +80,6 @@
 
         <div class="top-header"> 
     <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
-        <h1 class="visible-print">Reference book for Verovio</h1>
         <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
         <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
         <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
@@ -147,10 +147,10 @@
     </div>
 
     <div class="col-md-9">
-        <div class="panel">
-            <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-web-based-notation/02-basic-rendering.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
-            <h2>Basic rendering</h2>
-            <p>At the end of part 1, we finished with a page that was successfully loading the Verovio library, but with nothing to display. In this part of the tutorial We will write some JavaScript that will fetch an MEI file from a URL, and then pass that MEI file to Verovio. This will turn the MEI file into an Scalable Vector Graphics (SVG) file that we can then embed in our page.</p>
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-web-based-notation/02-basic-rendering.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        
+        <h2>Basic rendering</h2>
+        <p>At the end of part 1, we finished with a page that was successfully loading the Verovio library, but with nothing to display. In this part of the tutorial We will write some JavaScript that will fetch an MEI file from a URL, and then pass that MEI file to Verovio. This will turn the MEI file into an Scalable Vector Graphics (SVG) file that we can then embed in our page.</p>
 
 <aside>
 <p><em>Scalable Vector Graphics</em> (SVG) is an image format that can be directly embedded into web pages. Vector graphics can be made larger or smaller with no pixellation, unlike other image formats you may be familiar with such as JPEG or PNG.</p>
@@ -208,7 +208,6 @@
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-        </div>
     </div>
 </div>
 
@@ -264,7 +263,7 @@
 
         </div>
 
-        <footer class="footer navbar-fixed-bottom">
+        <footer class="hidden-print footer navbar-fixed-bottom">
             <p>
                 
             </p>
