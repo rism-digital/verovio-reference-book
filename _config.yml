@@ -31,3 +31,5 @@ defaults:
 collections:
     book:
         output: true
+
+generate-full-chapters: false
