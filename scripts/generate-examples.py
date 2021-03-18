@@ -75,6 +75,7 @@ if __name__ == "__main__":
             options: Dict = defaultOptions.copy()
 
             svg_file = os.path.join("images", example['svg-example-file'])
+            svg_inc_file = os.path.join("_includes", example['svg-example-file'])
             svg_dir = os.path.dirname(svg_file)
 
             mei_snippet_file = os.path.join("_includes", example['mei-example-file'])
@@ -158,6 +159,9 @@ if __name__ == "__main__":
                 os.makedirs(svg_dir)
 
             with open(svg_file, 'w') as f:
+                f.write(svg)
+
+            with open(svg_inc_file, 'w') as f:
                 f.write(svg)
 
             log.debug("Finished processing %s", test_file)

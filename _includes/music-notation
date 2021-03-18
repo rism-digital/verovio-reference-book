@@ -1,11 +1,21 @@
+{% comment %} 
+* First output SVG the image
+    * One <img> for screen with img-responsive class
+    * The SVG inline for printed output
+
+* Then include the MEI snippet
+
+In both cases check the the file exists
+{% endcomment %}
+
 {% assign example = page.examples | where: "name", include.example | first %}
 {% if example and example['svg-example-exists'] %}
-<img class="img-responsive" src="/images/{{ example['svg-example-file'] }}" alt="{{ example['svg-example-file'] }}]">
+{% assign svgFile = example['svg-example-file'] %}
+<img class="img-responsive hidden-print" src="/images/{{ example['svg-example-file'] }}" alt="{{ example['svg-example-file'] }}]">
+<div class="visible-print">{% include  {{ svgFile }} %}</div>
 {% else %}
 [SVG file is missing and need to be generated]
 {% endif %}
-
-
 
 {% if example and example['mei-example-exists'] %}
 {% assign meiFile = example['mei-example-file'] %} 
