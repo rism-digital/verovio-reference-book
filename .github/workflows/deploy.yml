@@ -35,6 +35,8 @@ jobs:
           cd _site
           ls
           ruby -run -ehttpd . -p4000 &
+          cd ..
+          ./scripts/generate-pdf.sh
       
       # Deploy _site to the gh-pages branch
       - name: Deploy
