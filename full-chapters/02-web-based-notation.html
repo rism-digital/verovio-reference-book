@@ -1,0 +1,421 @@
+<html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Introduction</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap.min.css" type="text/css" /><!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/fileinput.min.css" />
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/verovio.css" />
+        <link rel="stylesheet" href="/assets/css/midiplayer.css" />
+
+        <link rel="stylesheet" href="/css/verovio-site.css" />
+
+        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                </li>
+                <li class="active">
+                    <a href="/index.html">Reference book</a>
+                </li>
+                <li >
+                    <a href="https://www.verovio.org/test-suite.xhtml">Test suite</a>
+                </li>
+                <!--
+                <li >
+                    <a href="/tutorial.xhtml">Tutorial</a>
+                </li>
+                <li >
+                    <a href="/mei-viewer.xhtml">MEI Viewer</a>
+                </li>
+                <li >
+                    <a href="/app.html">Verovio App</a>
+                </li>
+                <li >
+                    <a href="/musicxml.html">Other formats</a>
+                </li>
+                -->
+                <!--
+                <li class="dropdown ">
+                    <a href="/" class="dropdown-toggle" data-toggle="dropdown">Plaine &amp; Easie<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                          <li><a href="/pae-examples.xhtml">Examples</a></li>
+                          <li><a href="/pae-editor.xhtml">Editor</a></li>
+                    </ul>
+                </li>
+                -->
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+        <div class="top-header"> 
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
+        <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    </div>
+</div>
+
+
+        <div class="container with-footer">
+
+            
+
+
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="toc-group">
+
+    <a class="toc-item" href="/introduction/">Introduction</a>
+    
+
+    <a class="toc-item" href="/web-based-notation/">Tutorial 1: Web-based notation</a>
+    
+
+    <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
+    
+
+    <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
+    
+
+    <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
+    
+
+    <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+
+    <a class="toc-item" href="/contributing/">Contributing</a>
+    
+
+</div>
+    </div>
+
+    <div class="col-md-9">
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/full-chapters/02-web-based-notation.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        <h1>Tutorial 1: Web-based notation</h1>
+        <h2>Introduction</h2>
+        <p>The first tutorial will look at how you can use Verovio to render music notation on a web page, using the pre-built JavaScript library. In this tutorial you will be building a small HTML page, with a minimal amount of JavaScript, to create an SVG rendering of an MEI file. In-depth technical expertise is not necessary, but you should be familiar with the basic principles of HTML to get the most out of this tutorial, and have access to a plain-text editor, preferably with facilities for automatically highlighting HTML and JavaScript code. (The <a href="https://atom.io">Atom</a> editor is a good choice if you need a recommendation.)</p>
+
+<p>By the end of this tutorial, you should have a good understanding of the following:</p>
+
+<ol>
+  <li>How to load the Verovio JavaScript library using the <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag;</li>
+  <li>How to initialize Verovio, and how to set some basic rendering options;</li>
+  <li>How to load an MEI file from a URL and pass it to Verovio to render;</li>
+  <li>How to navigate between pages a multi-page score.</li>
+</ol>
+
+<p>Later tutorials will cover more in-depth topics, such as how to have more control over rendering options, how to interact with the rendered notation, and how to play the notation back using MIDI.</p>
+
+<h3 id="basic-browser-skills">Basic browser skills</h3>
+
+<p>A good skill to have in working through these tutorials is how to access and use the JavaScript error console in your browser. Every modern browser comes with this facility. This feature is useful to see what might be causing problems since these problems may not be otherwise noticeable; your page just may not work, or it may not do what you expect.</p>
+
+<p>Accessing the JavaScript console is slightly different in each browser.</p>
+
+<h4 id="chrome">Chrome</h4>
+
+<p>Keyboard shortcut:</p>
+
+<ul>
+  <li>Ctrl + Shift + J (Windows/Linux)</li>
+  <li>Command + Option + J (Mac)</li>
+</ul>
+
+<p>Menu location:</p>
+
+<ul>
+  <li>Menu &gt; More Tools &gt; Developer Tools &gt; Console tab</li>
+</ul>
+
+<p><a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/console-ui?hl=en">Chrome documentation</a></p>
+
+<h4 id="firefox">Firefox</h4>
+
+<p>Keyboard shortcut:</p>
+
+<ul>
+  <li>Ctrl + Shift + K (Windows/Linux)</li>
+  <li>Command + Option + K (Mac)</li>
+</ul>
+
+<p>Menu location:</p>
+
+<ul>
+  <li>Menu &gt; Developer &gt; Web Console</li>
+</ul>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console">Firefox documentation</a></p>
+
+<h4 id="internet-explorer--edge">Internet Explorer / Edge</h4>
+
+<p>Keyboard shortcut: F12</p>
+
+<p>Menu location: Menu “three dots” icon &gt; F12 Developer Tools &gt; Console tab</p>
+
+<p><a href="https://dev.windows.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/">Edge documentation</a></p>
+
+<h4 id="safari">Safari</h4>
+
+<p>Keyboard shortcut:</p>
+
+<ul>
+  <li>Command + Option + C</li>
+</ul>
+
+<p>Menu location:</p>
+
+<p>The Safari developer tools must be enabled before use.</p>
+
+<ol>
+  <li>Safari &gt; Preferences &gt; Advanced &gt; enable “Show Develop menu in menu bar”</li>
+  <li>Develop &gt; Show Error Console</li>
+</ol>
+
+<p><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html#//apple_ref/doc/uid/TP40007874-CH2-SW1">Safari documentation</a></p>
+
+<p><a href="https://documentation.concrete5.org/tutorials/how-open-browser-console-view-errors">Source</a></p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>To get started with Verovio, you need to load the JavaScript library in a web page. If you were building your own website, you may choose to host this on your own servers, but in this tutorial we will use a version that is hosted on the Verovio website.</p>
+
+<p>You can start with the following HTML page:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello Verovio!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Save this in a plain text file somewhere on your hard-drive, and then open it with your browser. (The name does not matter, but it should end in <code class="language-plaintext highlighter-rouge">.html</code>; <code class="language-plaintext highlighter-rouge">verovio.html</code> is a good choice.) You should text in a large font that says “Hello Verovio!” but not much else. If you have your browser console open (discussed in the introduction), you should see no errors.</p>
+
+<p>To start Verovio, you should add the following to your page in the head, after the <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag that loads the Verovio toolkit:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+      <span class="p">}</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>(If you are unsure, scroll to the bottom of this page; the full example is given below.)</p>
+
+<p>When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let’s start from the inside out.</p>
+
+<p>The line <code class="language-plaintext highlighter-rouge">tk = new verovio.toolkit();</code> creates a new instance of the Verovio toolkit. This is what we will eventually use to render the notation. However, we first need to wait until the Verovio library is fully downloaded and ready to use by your browser. The <code class="language-plaintext highlighter-rouge">Module.onRuntimeInitialized</code> line, and the <code class="language-plaintext highlighter-rouge">document.addEventListener</code> lines do just that – they tell your browser to wait until other things have happened before trying to work with Verovio. This is a good, safe way to ensure all the requirements are met before we try to start working with Verovio.</p>
+
+<h3 id="logging-to-the-console">Logging to the Console</h3>
+
+<p>While you are developing, it can be useful to write little notes to yourself to let you know what types of data you have, or to see what is happening at any given point in your code. As you proceed to more advanced uses you may wish to explore the browser’s built-in debugger, but until then a quick and easy way to do this is to use your browser’s error console.</p>
+
+<p>In your page, just after the line where you instantiate a new Verovio toolkit, insert the following:</p>
+
+<p><code class="language-plaintext highlighter-rouge">console.log("Verovio has loaded!");</code></p>
+
+<p>When you refresh your page, you can see this note to yourself appear in the browser console. If no other errors appear, this gives you a critical pieces of information: Your browser has reached that point in execution, which means it has successfully loaded and initialized Verovio. If you do not see this, go back through the examples to see where you may have gone wrong. If you still cannot find this, you can find the full example for this stage of the tutorial below.</p>
+
+<h3 id="end-of-section-1">End of Section 1</h3>
+
+<p>At the end of this first section you should have a working web page, with a message printed to your browser console, and no other errors showing up. In the next section we will look at how to load and render some basic music notation in this page.</p>
+
+<h4 id="full-example">Full example</h4>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio has loaded!</span><span class="dl">"</span><span class="p">);</span>
+          <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello Verovio!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="basic-rendering">Basic rendering</h2>
+
+<p>At the end of part 1, we finished with a page that was successfully loading the Verovio library, but with nothing to display. In this part of the tutorial We will write some JavaScript that will fetch an MEI file from a URL, and then pass that MEI file to Verovio. This will turn the MEI file into an Scalable Vector Graphics (SVG) file that we can then embed in our page.</p>
+
+<aside>
+<p><em>Scalable Vector Graphics</em> (SVG) is an image format that can be directly embedded into web pages. Vector graphics can be made larger or smaller with no pixellation, unlike other image formats you may be familiar with such as JPEG or PNG.</p>
+</aside>
+
+<h3 id="fetching-mei-with-javascript">Fetching MEI with JavaScript</h3>
+
+<p>The first step is to fetch an MEI file from a URL. To do this, you can write the following in your HTML file, immediately after the <code class="language-plaintext highlighter-rouge">console.log</code> statement:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">,</span> <span class="p">{});</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<p>To break this down a bit, we start with a <code class="language-plaintext highlighter-rouge">fetch</code> statement with a URL; this tells your browser to try and load the file available at this address from a remote server. If it’s successful, then it should extract the XML data from the server: <code class="language-plaintext highlighter-rouge">then( (response) =&gt; response.text() )</code>.</p>
+
+<p>Finally, we take this MEI response and pass it off to our Verovio instance. Remember that we ‘started’ Verovio by creating a new Toolkit and assigning it to the variable <code class="language-plaintext highlighter-rouge">tk</code>? Well, now we are using this toolkit to render the MEI file. The result, as you might guess by the variable name (<code class="language-plaintext highlighter-rouge">let svg = ...</code>), will be some SVG.</p>
+
+<p>Once we have this SVG, we look through the page for HTML element with the <code class="language-plaintext highlighter-rouge">id</code> of “notation”. You should see a <code class="language-plaintext highlighter-rouge">&lt;div id="notation"&gt;&lt;/div&gt;</code> line already in your HTML file. We set the content of this element (the <code class="language-plaintext highlighter-rouge">innerHTML</code>) to the SVG output of Verovio.</p>
+
+<p>If you refresh your HTML page now, you should see a rendered version of a Schubert lied, “Der Lindenbaum”. Congratulations! If you do not see this, go back and double-check that you do not have any errors in your browser console.</p>
+
+<h3 id="end-of-section-2">End of Section 2</h3>
+
+<p>At the end of this section, you should have a page with some rendered music notation on it. It’s probably a bit too big, though, to read comfortably on your screen. You may also be wondering how Verovio handles larger scores, with lots of pages. We will answer these two questions in the next sections by looking at how we can control the layout options, and how we can use JavaScript to navigate the score dynamically.</p>
+
+<h4 id="full-example-1">Full example</h4>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio has loaded!</span><span class="dl">"</span><span class="p">);</span>
+
+            <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
+              <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">,</span> <span class="p">{});</span>
+                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+              <span class="p">});</span>
+          <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello Verovio!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="layout-options">Layout options</h2>
+
+<p>Now that we have successfully rendered an MEI file to a web page, we can start to explore how to customize the SVG output. There are <a href="/toolkit-reference/toolkit-options.html">many possible options</a>, most of which you will never need.</p>
+
+<p>To start, we will first try and reduce the size of the image output, to demonstrate how we can scale the music notation to fit the screen.</p>
+
+<h2 id="score-navigation">Score navigation</h2>
+
+
+    </div>
+</div>
+
+<script>
+    let options = {
+        rootMargin: '60px'
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    // First deselect everything
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection`);
+                    for (i = 0; i < sections.length; i++){
+                        sections[i].classList.remove('selected');
+                    }
+                    // The one entering is marked as .on-screen
+                    document.querySelector(`.toc-group a[href="#${id}"]`).classList.add('on-screen');
+                    // Select the first that in .on-screen
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    sections[0].classList.add('selected');
+
+                } else {
+                    leaving = document.querySelector(`.toc-group a[href="#${id}"]`)
+                    // Remove the .on-screen from the one leaving
+                    leaving.classList.remove('on-screen');
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    // If no other one is on screen, just leave things as they are
+                    if (sections.length > 0) {
+                        // Otherwise de-select the one that is leaving
+                        leaving.classList.remove('selected');
+                        // Selected the first .on-screen one and de-select the other ones
+                        sections[0].classList.add('selected');
+                        for (i = 1; i < sections.length; i++){
+                            console.log(sections[i].getAttribute('id'))
+                            sections[i].classList.remove('selected');
+                        }
+                    }
+                }
+            });
+        }, options);
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+        });
+</script>
+
+
+
+        </div>
+
+        <footer class="hidden-print footer navbar-fixed-bottom">
+            <p>
+                
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).ready(function() {
+
+                
+
+            });
+        //]]>
+        </script>
+    </body>
+</html>

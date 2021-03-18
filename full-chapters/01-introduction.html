@@ -1,0 +1,253 @@
+<html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>About Verovio</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap.min.css" type="text/css" /><!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/fileinput.min.css" />
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/verovio.css" />
+        <link rel="stylesheet" href="/assets/css/midiplayer.css" />
+
+        <link rel="stylesheet" href="/css/verovio-site.css" />
+
+        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                </li>
+                <li class="active">
+                    <a href="/index.html">Reference book</a>
+                </li>
+                <li >
+                    <a href="https://www.verovio.org/test-suite.xhtml">Test suite</a>
+                </li>
+                <!--
+                <li >
+                    <a href="/tutorial.xhtml">Tutorial</a>
+                </li>
+                <li >
+                    <a href="/mei-viewer.xhtml">MEI Viewer</a>
+                </li>
+                <li >
+                    <a href="/app.html">Verovio App</a>
+                </li>
+                <li >
+                    <a href="/musicxml.html">Other formats</a>
+                </li>
+                -->
+                <!--
+                <li class="dropdown ">
+                    <a href="/" class="dropdown-toggle" data-toggle="dropdown">Plaine &amp; Easie<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                          <li><a href="/pae-examples.xhtml">Examples</a></li>
+                          <li><a href="/pae-editor.xhtml">Editor</a></li>
+                    </ul>
+                </li>
+                -->
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+        <div class="top-header"> 
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
+        <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    </div>
+</div>
+
+
+        <div class="container with-footer">
+
+            
+
+
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="toc-group">
+
+    <a class="toc-item" href="/introduction/">Introduction</a>
+    
+
+    <a class="toc-item" href="/web-based-notation/">Tutorial 1: Web-based notation</a>
+    
+
+    <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
+    
+
+    <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
+    
+
+    <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
+    
+
+    <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+
+    <a class="toc-item" href="/contributing/">Contributing</a>
+    
+
+</div>
+    </div>
+
+    <div class="col-md-9">
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/full-chapters/01-introduction.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        <h1>Introduction</h1>
+        <h2>About Verovio</h2>
+        <p>Verovio is open-source music notation engraving software. It supports files encoded using the <a href="https://music-encoding.org">Music Encoding Initiative</a>, as well as MusicXML, Humdrum <code class="language-plaintext highlighter-rouge">**kern</code>, and Plaine and Easie. There are several versions of Verovio available: A command-line utility, a JavaScript library suitable for embedding notation on web-pages, and as a library for several other languages and platforms, including Python, iOS, Android, and Java. Verovio is cross-platorm and can be used in digital environments of various kind. The output of Verovio is beautifully engraved music notation rendered using the Scalable Vector Graphics (SVG) format.</p>
+
+<p>While Verovio can be used as a core component for building powerful music notation editors, it is not an editor itself. There are a number of engraving options available to help control and adjust, to a fine level of detail, the specifics of the engraving.</p>
+
+<p>Verovio uses the Standard Music Font Layout (SMuFL) as the basis for its notation shapes. This means that any <a href="https://www.smufl.org/fonts/">SMuFL-compliant font</a> may be used to customize and personalize the look of the engraved output.</p>
+
+<h3 id="about-this-book">About this book</h3>
+
+<p>This book is intended to serve as a reference guide for how to work with Verovio, and is meant for users of all skill levels. The book is a collaborative work that brings together inputs from the many contributors to the Verovio projects under the editorial leadership of the RISM Digital Center team.</p>
+
+<p>[How to cite it?]</p>
+
+<p>The first three sections will provide a number of tutorials, starting at the very basic and ending at advanced topics in notation. By the end of these sections you should have a very good understanding of how to use Verovio in its different forms, and how you can start to integrate it into your own work.</p>
+
+<p>The following sections will cover the specifics of Verovio, serving as a reference for the operations and options available. It will also cover how to build Verovio from the source code, and how to contribute to the active development of Verovio.</p>
+
+<h3 id="getting-help">Getting help</h3>
+
+<p>As you work through this book, from the most basic to the most advanced topics, you may find that you are struggling to understand something. The quickest and easiest way to get help is to reach out on the <code class="language-plaintext highlighter-rouge">#verovio</code> channel in the <a href="https://music-encoding.slack.com/">MEI Community’s Slack chat</a>. If you are not already a member, <a href="https://join.slack.com/t/music-encoding/shared_invite/zt-4zgx6zbq-2jEjDiUT7ym3dygTaY8C0g">you can join</a>.</p>
+
+<h2 id="licensing">Licensing</h2>
+
+<p>Verovio is licensed under the <a href="https://opensource.org/">OSI</a>-approved <a href="https://www.gnu.org/licenses/lgpl-3.0.en.html">GNU Lesser General Public License (LGPLv3)</a>. This means that Verovio can be used in any contexts that are compliant with the requirements of that license. In this section, we explain more concretely what you can do with it in your project, but also what is required or not allowed for you to do, and what we additionally recommend.</p>
+
+<h3 id="what-is-allowed">What is allowed</h3>
+
+<p>The LGPLv3 license allows you to use the Verovio library as-is in open-source projects that are compliant with this license. It can also be used in commercial products that are open-source or not. It can be a web application, a desktop application or a mobile one. The Verovio library can be embedded in the product and shipped with it without having your product itself to be open-source as long as the Verovio library <strong>is not modified</strong> and is dynamically linked to your product.</p>
+
+<h3 id="what-is-required">What is required</h3>
+
+<p>Whichever use you make of the library, you have to give <strong>visible credit</strong> to the Verovio library. For a web application, it has to be through a prominent notice on your web-site. For a mobile application, it has to be given in the metadata of the application (e.g., iOS App Store or the Google Play store).</p>
+
+<p>Here are some minimal examples to follow:</p>
+<ul>
+  <li>NomadPlay <a href="https://www.nomadplay.app/fr/legal-notice">web application</a> and in the <a href="https://apps.apple.com/fr/app/nomadplay-partitions-musique/id1443790777">App Store</a></li>
+  <li>Trala in the <a href="https://apps.apple.com/us/app/trala-learn-violin/id1143205265">App Store</a></li>
+</ul>
+
+<p>Using Verovio in a product without giving credit is a clear license violation. However, it is also important to understand that, by giving the appropriate credits, you are not only fulfilling the very basic and free-of-charge requirements of the license but also supporting the community by recognizing its work. This will help us make Verovio better and more sustainable and will be beneficial to all users - including you - in the long-run.</p>
+
+<h3 id="what-is-not-allowed">What is not allowed</h3>
+
+<p>You are not allowed to make any modifications to the Verovio library without making all of your changes publicly available and under the original LGPLv3 license. For example, if you improve the layout algorithm, or add support for additional music notation elements, these improvements must be made open-source under LGPLv3. Not doing it is also a license violation and is un-supportive of the community.</p>
+
+<h3 id="what-is-recommended">What is recommended</h3>
+
+<p>Providing credit if you use Verovio, and making the source code of your modifications to the Verovio library available to the community, are the only minimal legal requirements. However, we strongly encourage you to go one step further and to ask for your changes to be integrated into the original code-base of Verovio with a pull-request to the <a href="https://github.com/rism-digital/verovio">rism-digital/verovio</a> repository. Before your changes can be integrated into the repository, we will need you to accept the Verovio <a href="https://rism.digital/resources/verovio-cla.pdf">Contributor License Agreement (CLA)</a>. This is a standard procedure for open-source projects and will allow for the community to benefit directly from your work.</p>
+
+<p>We would also be happy to hear about your use of Verovio in your applications. Please get in touch if you are using Verovio, and let us know where we can learn more about your project!</p>
+
+<h2 id="overview">Overview</h2>
+
+<h3 id="there">There?</h3>
+
+    </div>
+</div>
+
+<script>
+    let options = {
+        rootMargin: '60px'
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    // First deselect everything
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection`);
+                    for (i = 0; i < sections.length; i++){
+                        sections[i].classList.remove('selected');
+                    }
+                    // The one entering is marked as .on-screen
+                    document.querySelector(`.toc-group a[href="#${id}"]`).classList.add('on-screen');
+                    // Select the first that in .on-screen
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    sections[0].classList.add('selected');
+
+                } else {
+                    leaving = document.querySelector(`.toc-group a[href="#${id}"]`)
+                    // Remove the .on-screen from the one leaving
+                    leaving.classList.remove('on-screen');
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    // If no other one is on screen, just leave things as they are
+                    if (sections.length > 0) {
+                        // Otherwise de-select the one that is leaving
+                        leaving.classList.remove('selected');
+                        // Selected the first .on-screen one and de-select the other ones
+                        sections[0].classList.add('selected');
+                        for (i = 1; i < sections.length; i++){
+                            console.log(sections[i].getAttribute('id'))
+                            sections[i].classList.remove('selected');
+                        }
+                    }
+                }
+            });
+        }, options);
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+        });
+</script>
+
+
+
+        </div>
+
+        <footer class="hidden-print footer navbar-fixed-bottom">
+            <p>
+                
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).ready(function() {
+
+                
+
+            });
+        //]]>
+        </script>
+    </body>
+</html>
