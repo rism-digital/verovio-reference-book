@@ -208,6 +208,19 @@ java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
     let options = {
         rootMargin: '60px'
     }
+    function adjustSideBar() {
+        elem = document.getElementsByClassName("toc-group")[0];
+        // 992 is the breakpoint for which the sidebar moves to the top; 35 is the footer height
+        elem.style.height = (window.innerWidth < 992) ? "" : `${window.innerHeight - elem.offsetTop - 35}px`;
+    }
+
+    window.onresize = function () {
+        adjustSideBar();
+    };
+    window.onload = function() {
+        adjustSideBar();
+    };
+
     window.addEventListener('DOMContentLoaded', () => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -249,7 +262,7 @@ java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
             observer.observe(section);
         });
 
-        });
+    });
 </script>
 
 
