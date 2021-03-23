@@ -1,0 +1,8 @@
+# A list of methods to exclude from the toolkit reference
+- ~Toolkit
+- GetShowBoundingBoxes
+- GetCString
+- GetLogString
+- ResetLogBuffer
+- SetShowBoundingBoxes
+- SetCString
