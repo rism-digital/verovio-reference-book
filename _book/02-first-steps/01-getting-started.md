@@ -48,6 +48,10 @@ In your page, just after the line where you instantiate a new Verovio toolkit, i
 
 When you refresh your page, you can see this note to yourself appear in the browser console. If no other errors appear, this gives you a critical pieces of information: Your browser has reached that point in execution, which means it has successfully loaded and initialized Verovio. If you do not see this, go back through the examples to see where you may have gone wrong. If you still cannot find this, you can find the full example for this stage of the tutorial below.
 
+<aside>
+You may notice that Verovio prints some warnings to your browser console. We can ignore these options for this tutorial, but if you are working with your own encoded scores and see these warnings it may help you track down problems or unexpected behaviours when rendering your scores.
+</aside>
+
 ### End of Section 1
 
 At the end of this first section you should have a working web page, with a message printed to your browser console, and no other errors showing up. In the next section we will look at how to load and render some basic music notation in this page.

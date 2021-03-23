@@ -1,5 +1,5 @@
 ---
-chapter-title: "Tutorial 1: Web-based notation"
+chapter-title: "Tutorial 1: First Steps"
 title: "Introduction"
 ---
 
