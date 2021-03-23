@@ -30,6 +30,9 @@
     a[href]:after {
         content: "";
     }
+    div.highlight {
+        border: solid 1px #ddd;
+    }
 }
 
 span.lang1 {
