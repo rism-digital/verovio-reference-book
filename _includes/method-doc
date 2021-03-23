@@ -1,0 +1,16 @@
+{% comment %} 
+* First output SVG the image
+    * One <img> for screen with img-responsive class
+    * The SVG inline for printed output
+
+* Then include the MEI snippet
+
+In both cases check the the file exists
+{% endcomment %}
+
+{% assign full_path = "_includes/methods/" | append: include.file | append: ".md" %}
+{% capture doc_exists %}{% file_exists {{ full_path }} %}{% endcapture %}
+{% if doc_exists == "true" %}
+{% assign include_path = "methods/" | append: include.file | append: ".md" %}
+{% include {{ include_path }} %}
+{% endif %}
