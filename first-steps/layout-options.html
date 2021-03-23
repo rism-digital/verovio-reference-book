@@ -2,7 +2,7 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>Getting started</title>
+        <title>Layout options</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -102,32 +102,39 @@
     <a class="toc-item" href="/introduction/">Introduction</a>
     
 
-    <a class="toc-item" href="/web-based-notation/">Tutorial 1: Web-based notation</a>
+    <a class="toc-item" href="/first-steps/">Tutorial 1: First Steps</a>
     
         
         
-<a class="toc-item toc-section " href="/web-based-notation/">Introduction</a>
+<a class="toc-item toc-section " href="/first-steps/">Introduction</a>
     
 
-<a class="toc-item toc-section selected" href="/web-based-notation/getting-started.html">Getting started</a>
+<a class="toc-item toc-section " href="/first-steps/getting-started.html">Getting started</a>
+    
+
+<a class="toc-item toc-section " href="/first-steps/basic-rendering.html">Basic rendering</a>
+    
+
+<a class="toc-item toc-section selected" href="/first-steps/layout-options.html">Layout options</a>
     
         
         
-<a class="toc-item toc-subsection" href="#logging-to-the-console">Logging to the Console</a>
+<a class="toc-item toc-subsection" href="#passing-options-to-verovio">Passing options to Verovio</a>
 
-<a class="toc-item toc-subsection" href="#end-of-section-1">End of Section 1</a>
+<a class="toc-item toc-subsection" href="#defaults">Defaults</a>
+
+<a class="toc-item toc-subsection" href="#change-the-page-orientation">Change the page orientation</a>
+
+<a class="toc-item toc-subsection" href="#end-of-section-3">End of Section 3</a>
 
     
 
-<a class="toc-item toc-section " href="/web-based-notation/basic-rendering.html">Basic rendering</a>
+<a class="toc-item toc-section " href="/first-steps/score-navigation.html">Score navigation</a>
     
 
-<a class="toc-item toc-section " href="/web-based-notation/layout-options.html">Layout options</a>
     
 
-<a class="toc-item toc-section " href="/web-based-notation/score-navigation.html">Score navigation</a>
-    
-
+    <a class="toc-item" href="/web-based-notation/layout-options.html">Tutorial 1: Web-based notation</a>
     
 
     <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
@@ -150,57 +157,52 @@
 
     <div class="col-md-9">
         
-        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-web-based-notation/01-getting-started.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/02-first-steps/03-layout-options.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
         
         
-        <h2>Getting started</h2>
-        <p>To get started with Verovio, you need to load the JavaScript library in a web page. If you were building your own website, you may choose to host this on your own servers, but in this tutorial we will use a version that is hosted on the Verovio website.</p>
+        <h2>Layout options</h2>
+        <p>Now that we have successfully rendered an MEI file to a web page, we can start to explore how to customize the SVG output. There are <a href="/toolkit-reference/toolkit-options.html">many possible options</a>, most of which you will never need.</p>
 
-<p>You can start with the following HTML page:</p>
+<p>To start, we will first try and reduce the size of the image output, to demonstrate how we can scale the music notation to fit the screen.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Hello Verovio!<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<h3 id="passing-options-to-verovio">Passing options to Verovio</h3>
+
+<p>Passing options to Verovio is as easy as creating a set of key and value pairs, and using the <code class="language-plaintext highlighter-rouge">setOptions</code> method on the toolkit. To scale the output we will use the <code class="language-plaintext highlighter-rouge">scale</code> option. Add the following to your page, after we have instantiated the toolkit but before we render the data:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span>
+  <span class="na">scale</span><span class="p">:</span> <span class="mi">30</span>
+<span class="p">});</span>
 </code></pre></div></div>
 
-<p>Save this in a plain text file somewhere on your hard-drive, and then open it with your browser. (The name does not matter, but it should end in <code class="language-plaintext highlighter-rouge">.html</code>; <code class="language-plaintext highlighter-rouge">verovio.html</code> is a good choice.) You should text in a large font that says “Hello Verovio!” but not much else. If you have your browser console open (discussed in the introduction), you should see no errors.</p>
+<p>When you refresh your page, you should see your score scaled to 30% of its original size. Try experimenting with other values to see their effects! (Hint: you can use sizes above 100%.)</p>
 
-<p>To start Verovio, you should add the following to your page in the head, after the <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag that loads the Verovio toolkit:</p>
+<h3 id="defaults">Defaults</h3>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
-      <span class="p">}</span>
-  <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
+<p>All of the options have default values. You can use the <code class="language-plaintext highlighter-rouge">getOptions</code> method to view the list of all the options and their default values. We will use the browser console to explore these defaults. Add the following line:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio options:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">());</span>
 </code></pre></div></div>
 
-<p>(If you are unsure, scroll to the bottom of this page; the full example is given below.)</p>
+<p>When you refresh your page and open your browser’s console you should see the text “Verovio options:” followed by a small disclosure triangle. Clicking this triangle will produce a long list of options that you can pass to <code class="language-plaintext highlighter-rouge">setOptions</code>. Let’s try a few more.</p>
 
-<p>When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let’s start from the inside out.</p>
+<h3 id="change-the-page-orientation">Change the page orientation</h3>
 
-<p>The line <code class="language-plaintext highlighter-rouge">tk = new verovio.toolkit();</code> creates a new instance of the Verovio toolkit. This is what we will eventually use to render the notation. However, we first need to wait until the Verovio library is fully downloaded and ready to use by your browser. The <code class="language-plaintext highlighter-rouge">Module.onRuntimeInitialized</code> line, and the <code class="language-plaintext highlighter-rouge">document.addEventListener</code> lines do just that – they tell your browser to wait until other things have happened before trying to work with Verovio. This is a good, safe way to ensure all the requirements are met before we try to start working with Verovio.</p>
+<p>You may have noticed that, by default, Verovio renders the score in “portrait” orientation; that is, the width of the score is shorter than the length. To change this, we can use the <code class="language-plaintext highlighter-rouge">landscape</code> and <code class="language-plaintext highlighter-rouge">adjustPageWidth</code> options:</p>
 
-<h3 id="logging-to-the-console">Logging to the Console</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span>
+  <span class="na">scale</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+  <span class="na">landscape</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">adjustPageWidth</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</code></pre></div></div>
 
-<p>While you are developing, it can be useful to write little notes to yourself to let you know what types of data you have, or to see what is happening at any given point in your code. As you proceed to more advanced uses you may wish to explore the browser’s built-in debugger, but until then a quick and easy way to do this is to use your browser’s error console.</p>
+<p>When you refresh the page you should notice that your SVG has changed orientation! But wait… the score is now cut off! Where did the rest of it go?</p>
 
-<p>In your page, just after the line where you instantiate a new Verovio toolkit, insert the following:</p>
+<p>It turns out that Verovio has the ability to split scores into “pages” automatically. When it calculates the notation cannot fit on the current page, Verovio will automatically push it to the next page. Adjusting the different options will have an effect on this calculation, so it is worth looking through the options that we printed out, and trying some on your own. You may wish to change the <code class="language-plaintext highlighter-rouge">pageWidth</code> option, for example, to a bigger or smaller value and see what the result is.</p>
 
-<p><code class="language-plaintext highlighter-rouge">console.log("Verovio has loaded!");</code></p>
+<h3 id="end-of-section-3">End of Section 3</h3>
 
-<p>When you refresh your page, you can see this note to yourself appear in the browser console. If no other errors appear, this gives you a critical pieces of information: Your browser has reached that point in execution, which means it has successfully loaded and initialized Verovio. If you do not see this, go back through the examples to see where you may have gone wrong. If you still cannot find this, you can find the full example for this stage of the tutorial below.</p>
-
-<h3 id="end-of-section-1">End of Section 1</h3>
-
-<p>At the end of this first section you should have a working web page, with a message printed to your browser console, and no other errors showing up. In the next section we will look at how to load and render some basic music notation in this page.</p>
+<p>In this section we have explored Verovio’s default options, and looked at how to adjust them to change the rendering output. In the next section we will look at how we can adjust these options dynamically, using on-screen controls to provide a user interface for building interactive music notation displays.</p>
 
 <h4 id="full-example">Full example</h4>
 
@@ -212,6 +214,20 @@
           <span class="nx">Module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
             <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio has loaded!</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">tk</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span>
+              <span class="na">scale</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+              <span class="na">landscape</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="na">adjustPageWidth</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">});</span>
+            <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio options:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">());</span>
+
+            <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
+              <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">,</span> <span class="p">{});</span>
+                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+              <span class="p">});</span>
           <span class="p">}</span>
       <span class="p">});</span>
     <span class="nt">&lt;/script&gt;</span>
@@ -221,6 +237,7 @@
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span><span class="nt">&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
+
 </code></pre></div></div>
 
     </div>
