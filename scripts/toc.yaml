@@ -9,16 +9,23 @@
 "/introduction/licensing.html#what-is-recommended": What is recommended
 "/introduction/overview.html": Overview
 "/introduction/overview.html#there": There?
-"/web-based-notation/": Introduction
-"/web-based-notation/#basic-browser-skills": Basic browser skills
-"/web-based-notation/getting-started.html": Getting started
-"/web-based-notation/getting-started.html#logging-to-the-console": Logging to the
-  Console
-"/web-based-notation/getting-started.html#end-of-section-1": End of Section 1
-"/web-based-notation/basic-rendering.html": Basic rendering
-"/web-based-notation/basic-rendering.html#fetching-mei-with-javascript": Fetching
-  MEI with JavaScript
-"/web-based-notation/basic-rendering.html#end-of-section-2": End of Section 2
+"/first-steps/": Introduction
+"/first-steps/#basic-browser-skills": Basic browser skills
+"/first-steps/getting-started.html": Getting started
+"/first-steps/getting-started.html#logging-to-the-console": Logging to the Console
+"/first-steps/getting-started.html#end-of-section-1": End of Section 1
+"/first-steps/basic-rendering.html": Basic rendering
+"/first-steps/basic-rendering.html#fetching-mei-with-javascript": Fetching MEI with
+  JavaScript
+"/first-steps/basic-rendering.html#end-of-section-2": End of Section 2
+"/first-steps/layout-options.html": Layout options
+"/first-steps/layout-options.html#passing-options-to-verovio": Passing options to
+  Verovio
+"/first-steps/layout-options.html#defaults": Defaults
+"/first-steps/layout-options.html#change-the-page-orientation": Change the page orientation
+"/first-steps/layout-options.html#end-of-section-3": End of Section 3
+"/first-steps/score-navigation.html": Score navigation
+"/first-steps/score-navigation.html#creating-the-controls": Creating the controls
 "/web-based-notation/layout-options.html": Layout options
 "/web-based-notation/score-navigation.html": Score navigation
 "/interactive-notation/": Introduction
