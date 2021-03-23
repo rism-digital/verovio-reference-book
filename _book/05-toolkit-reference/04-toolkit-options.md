@@ -19,10 +19,10 @@ see-also:
     
 ---
 
-<div class="radio-inline">
+<div class="hidden-print radio-inline">
   <label><input type="radio" name="lang" checked>Command-line parameters</label>
 </div>
-<div class="radio-inline">
+<div class="hidden-print radio-inline">
   <label><input type="radio" name="lang">JSON keys</label>
 </div>
 
