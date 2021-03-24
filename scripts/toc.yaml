@@ -8,7 +8,6 @@
 "/introduction/licensing.html#what-is-not-allowed": What is not allowed
 "/introduction/licensing.html#what-is-recommended": What is recommended
 "/introduction/overview.html": Overview
-"/introduction/overview.html#there": There?
 "/first-steps/": Introduction
 "/first-steps/#basic-browser-skills": Basic browser skills
 "/first-steps/getting-started.html": Getting started
@@ -33,6 +32,9 @@
 "/interactive-notation/working-with-css-and-svg.html": Working with CSS and SVG
 "/interactive-notation/xpath-queries.html": XPath queries
 "/advanced-topics/": Introduction
+"/advanced-topics/internal-structure.html": Internal structure
+"/advanced-topics/internal-structure.html#layout-and-positioning": Layout and positioning
+"/advanced-topics/internal-structure.html#svg-structure": SVG structure
 "/advanced-topics/transposition.html": Transposition
 "/advanced-topics/smufl.html": SMuFL fonts
 "/advanced-topics/smufl.html#embedded-fonts": Embedded fonts
@@ -48,7 +50,7 @@
 "/advanced-topics/mensural-notation.html#ligatures": Ligatures
 "/toolkit-reference/input-formats.html": Input formats
 "/toolkit-reference/input-formats.html#mei": MEI
-"/toolkit-reference/input-formats.html#humdrum": humdrum
+"/toolkit-reference/input-formats.html#humdrum": Humdrum
 "/toolkit-reference/input-formats.html#musicxml": MusicXML
 "/toolkit-reference/input-formats.html#plain-and-easy": Plain and Easy
 "/toolkit-reference/input-formats.html#abc": ABC
