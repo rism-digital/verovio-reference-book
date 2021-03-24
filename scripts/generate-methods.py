@@ -13,7 +13,6 @@ import yaml
 
 header_url = "https://raw.githubusercontent.com/rism-digital/verovio-doxygen/master/xml/classvrv_1_1_toolkit.xml"
 header_tmp_file = "scripts/classvrv_1_1_toolkit.xml"
-methods_exclude = "./_data/methods-exclude.yml"
 methods_ouptut_page = "./_book/05-toolkit-reference/03-toolkit-methods.md"
 
 def get_text_for_nodes(xml_nodes):
@@ -147,10 +146,6 @@ if __name__ == "__main__":
 
     #parser.add_argument("examples", help="Path to examples.yaml file")
 
-    excludes = []
-    with open(methods_exclude, 'r') as file:
-        excludes = yaml.safe_load(file)
-
     args = parser.parse_args()
     if args.debug:
         level_msg: str = "Debug"
@@ -187,12 +182,13 @@ if __name__ == "__main__":
     toolkit = index_xml.xpath('//compoundname[text()="vrv::Toolkit"]')[0]
 
     # get all the public methods
-    doxygen_methods = toolkit.xpath('//memberdef[@kind="function" and @prot="public"]')
+    doxygen_methods = toolkit.xpath('//memberdef[@kind="function" and @prot="public" and not(starts-with(@id, "group__nodoc_"))]')
 
     # extract their content into an array of dictionaries
     methods = []
     for doxygen_method in doxygen_methods:
-        if doxygen_method.findtext('name') in excludes:
+        # Skip the destructor
+        if doxygen_method.findtext('name') == "~Toolkit":
             continue
         methods.append(extract_method(doxygen_method))
 
