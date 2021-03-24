@@ -238,8 +238,6 @@
 
 <p>Edit the MEI data.</p>
 
-<p>True if the edit action was successfully applied</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the edit action was successfully applied</p>
@@ -277,8 +275,6 @@
 
 <p>Return the editor status.</p>
 
-<p>The editor status as a string</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – The editor status as a string</p>
@@ -297,7 +293,7 @@
 
 <p>Return all available options grouped by category.</p>
 
-<p>For each option, returns the type, the default value, and the minimum and maximum value (when available)A stringified JSON object</p>
+<p>For each option, returns the type, the default value, and the minimum and maximum value (when available)</p>
 
 <p><strong>Returns</strong></p>
 
@@ -322,8 +318,6 @@
 <p>Return element attributes as a JSON string.</p>
 
 <p>The attributes returned include the ones not supported by Verovio</p>
-
-<p>A stringified JSON object with all attributes</p>
 
 <p><strong>Returns</strong></p>
 
@@ -362,8 +356,6 @@
 
 <p>Returns array of IDs of elements being currently played.</p>
 
-<p>A stringified JSON object with the page and notes being played</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with the page and notes being played</p>
@@ -401,8 +393,6 @@
 
 <p>Returns a vector of ID strings of all elements (the notated and the expanded) for a given element.</p>
 
-<p>A stringified JSON object with all IDs</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with all IDs</p>
@@ -439,8 +429,6 @@
 <h3 id="gethumdrum">GetHumdrum</h3>
 
 <p>Get the humdrum buffer.</p>
-
-<p>The humdrum buffer as a string</p>
 
 <p><strong>Returns</strong></p>
 
@@ -499,8 +487,6 @@
 
 <p>Get the log content for the latest operation.</p>
 
-<p>The log content as a string</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – The log content as a string</p>
@@ -558,8 +544,6 @@
 
 <p>RenderToMIDI() must be called prior to using this method</p>
 
-<p>A stringified JSON object with the MIDI values</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with the MIDI values</p>
@@ -597,8 +581,6 @@
 
 <p>Returns the ID string of the notated (the original) element.</p>
 
-<p>A stringified JSON object with all IDs</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with all IDs</p>
@@ -635,8 +617,6 @@
 <h3 id="getoption">GetOption</h3>
 
 <p>Get the value for an option.</p>
-
-<p>The option value as a string</p>
 
 <p><strong>Returns</strong></p>
 
@@ -681,8 +661,6 @@
 
 <p>Return a dictionary of all the options.</p>
 
-<p>A stringified JSON object</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object</p>
@@ -720,7 +698,7 @@
 
 <p>Return the number of pages in the loaded document.</p>
 
-<p>The number of pages depends one the page size and if encoded layout was taken into account or not.The number of pages</p>
+<p>The number of pages depends one the page size and if encoded layout was taken into account or not.</p>
 
 <p><strong>Returns</strong></p>
 
@@ -741,8 +719,6 @@
 <p>Return the page on which the element is the ID (xml:id) is rendered.</p>
 
 <p>This takes into account the current layout options.</p>
-
-<p>the page number (1-based) where the element is (0 if not found)</p>
 
 <p><strong>Returns</strong></p>
 
@@ -781,8 +757,6 @@
 
 <p>Get the scale option.</p>
 
-<p>the scale option as integer</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">int</code> – the scale option as integer</p>
@@ -802,8 +776,6 @@
 <p>Return the time at which the element is the ID (xml:id) is played.</p>
 
 <p>RenderToMIDI() must be called prior to using this method.</p>
-
-<p>The time in milliseconds</p>
 
 <p><strong>Returns</strong></p>
 
@@ -844,8 +816,6 @@
 
 <p>Return scoreTimeOnset, scoreTimeOffset, scoreTimeTiedDuration, realTimeOnsetMilliseconds, realTimeOffsetMilliseconds, realTimeTiedDurationMilliseconds.</p>
 
-<p>A stringified JSON object with the values</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with the values</p>
@@ -883,8 +853,6 @@
 
 <p>Return the ID of the Toolkit instance.</p>
 
-<p>The ID as as string</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – The ID as as string</p>
@@ -902,8 +870,6 @@
 <h3 id="getversion">GetVersion</h3>
 
 <p>Return the version number.</p>
-
-<p>the version number as a string</p>
 
 <p><strong>Returns</strong></p>
 
@@ -924,8 +890,6 @@
 <p>Load a string data with the type previously specified in the options.</p>
 
 <p>By default, the methods try to auto-detect the type.</p>
-
-<p>True if the data was successfully loaded</p>
 
 <p><strong>Returns</strong></p>
 
@@ -966,8 +930,6 @@
 
 <p>Previously convert UTF16 files to UTF8 or extract files from MusicXML compressed files.</p>
 
-<p>True if the file was successfully loaded</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully loaded</p>
@@ -1005,8 +967,6 @@
 
 <p>Load a MusicXML compressed file passed as base64 encoded string.</p>
 
-<p>True if the data was successfully loaded</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the data was successfully loaded</p>
@@ -1043,8 +1003,6 @@
 <h3 id="loadzipdatabuffer">LoadZipDataBuffer</h3>
 
 <p>Load a MusicXML compressed file passed as a buffer of bytes.</p>
-
-<p>True if the data was successfully loaded</p>
 
 <p><strong>Returns</strong></p>
 
@@ -1129,8 +1087,6 @@
 
 <p>Render the document to MIDI.</p>
 
-<p>A MIDI file as a base64 encoded string</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A MIDI file as a base64 encoded string</p>
@@ -1188,7 +1144,7 @@
 
 <p>Render a document to Plaine and Easie.</p>
 
-<p>Only the top staff / layer is exported.The PAE as a string</p>
+<p>Only the top staff / layer is exported.</p>
 
 <p><strong>Returns</strong></p>
 
@@ -1246,8 +1202,6 @@
 <h3 id="rendertosvg">RenderToSVG</h3>
 
 <p>Render a page to SVG.</p>
-
-<p>The SVG page as a string</p>
 
 <p><strong>Returns</strong></p>
 
@@ -1337,8 +1291,6 @@
 
 <p>Render a document to a timemap.</p>
 
-<p>The timemap as a string</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – The timemap as a string</p>
@@ -1398,8 +1350,6 @@
 
 <p>This methods is not available in the JavaScript version of the toolkit.</p>
 
-<p>True if the file was successfully written</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
@@ -1443,8 +1393,6 @@
 
 <p>Set the input from option.</p>
 
-<p>True if the option was successfully set</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the option was successfully set</p>
@@ -1481,8 +1429,6 @@
 <h3 id="setoption">SetOption</h3>
 
 <p>Set the value for an option.</p>
-
-<p>True if the option was successfully set</p>
 
 <p><strong>Returns</strong></p>
 
@@ -1529,8 +1475,6 @@
 
 <p>The name of each option to be set is to be given as JSON key.</p>
 
-<p>True if the options were successfully set</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the options were successfully set</p>
@@ -1567,8 +1511,6 @@
 <h3 id="setoutputto">SetOutputTo</h3>
 
 <p>Set the output to option.</p>
-
-<p>True if the option was successfully set</p>
 
 <p><strong>Returns</strong></p>
 
@@ -1609,8 +1551,6 @@
 
 <p>This method needs to be called if the constructor had initFont=false or if the resource path needs to be changed.</p>
 
-<p>True if the resources was successfully loaded</p>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the resources was successfully loaded</p>
@@ -1647,8 +1587,6 @@
 <h3 id="setscale">SetScale</h3>
 
 <p>Set the scale option.</p>
-
-<p>True if the option was successfully set</p>
 
 <p><strong>Returns</strong></p>
 
