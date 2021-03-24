@@ -8,8 +8,6 @@ no-edit: true
 
 Edit the MEI data.
 
-True if the edit action was successfully applied
-
 **Returns**
 
 `bool` – True if the edit action was successfully applied
@@ -38,8 +36,6 @@ result = toolkit.edit(editorAction)
 
 Return the editor status.
 
-The editor status as a string
-
 **Returns**
 
 `std::string` – The editor status as a string
@@ -61,7 +57,7 @@ result = toolkit.editInfo()
 
 Return all available options grouped by category.
 
-For each option, returns the type, the default value, and the minimum and maximum value (when available)A stringified JSON object
+For each option, returns the type, the default value, and the minimum and maximum value (when available)
 
 **Returns**
 
@@ -85,8 +81,6 @@ result = toolkit.getAvailableOptions()
 Return element attributes as a JSON string.
 
 The attributes returned include the ones not supported by Verovio
-
-A stringified JSON object with all attributes
 
 **Returns**
 
@@ -116,8 +110,6 @@ result = toolkit.getElementAttr(xmlId)
 
 Returns array of IDs of elements being currently played.
 
-A stringified JSON object with the page and notes being played
-
 **Returns**
 
 `std::string` – A stringified JSON object with the page and notes being played
@@ -146,8 +138,6 @@ result = toolkit.getElementsAtTime(millisec)
 
 Returns a vector of ID strings of all elements (the notated and the expanded) for a given element.
 
-A stringified JSON object with all IDs
-
 **Returns**
 
 `std::string` – A stringified JSON object with all IDs
@@ -175,8 +165,6 @@ result = toolkit.getExpansionIdsForElement(xmlId)
 ### GetHumdrum
 
 Get the humdrum buffer.
-
-The humdrum buffer as a string
 
 **Returns**
 
@@ -229,8 +217,6 @@ result = toolkit.getHumdrumFile(filename)
 
 Get the log content for the latest operation.
 
-The log content as a string
-
 **Returns**
 
 `std::string` – The log content as a string
@@ -282,8 +268,6 @@ Return MIDI values of the element with the ID (xml:id)
 
 RenderToMIDI() must be called prior to using this method
 
-A stringified JSON object with the MIDI values
-
 **Returns**
 
 `std::string` – A stringified JSON object with the MIDI values
@@ -312,8 +296,6 @@ result = toolkit.getMIDIValuesForElement(xmlId)
 
 Returns the ID string of the notated (the original) element.
 
-A stringified JSON object with all IDs
-
 **Returns**
 
 `std::string` – A stringified JSON object with all IDs
@@ -341,8 +323,6 @@ result = toolkit.getNotatedIdForElement(xmlId)
 ### GetOption
 
 Get the value for an option.
-
-The option value as a string
 
 **Returns**
 
@@ -373,8 +353,6 @@ result = toolkit.getOption(option, defaultValue)
 
 Return a dictionary of all the options.
 
-A stringified JSON object
-
 **Returns**
 
 `std::string` – A stringified JSON object
@@ -403,7 +381,7 @@ result = toolkit.getOptions(defaultValues)
 
 Return the number of pages in the loaded document.
 
-The number of pages depends one the page size and if encoded layout was taken into account or not.The number of pages
+The number of pages depends one the page size and if encoded layout was taken into account or not.
 
 **Returns**
 
@@ -427,8 +405,6 @@ result = toolkit.getPageCount()
 Return the page on which the element is the ID (xml:id) is rendered.
 
 This takes into account the current layout options.
-
-the page number (1-based) where the element is (0 if not found)
 
 **Returns**
 
@@ -458,8 +434,6 @@ result = toolkit.getPageWithElement(xmlId)
 
 Get the scale option.
 
-the scale option as integer
-
 **Returns**
 
 `int` – the scale option as integer
@@ -482,8 +456,6 @@ result = toolkit.getScale()
 Return the time at which the element is the ID (xml:id) is played.
 
 RenderToMIDI() must be called prior to using this method.
-
-The time in milliseconds
 
 **Returns**
 
@@ -515,8 +487,6 @@ Return a JSON object string with the following key values for a given note.
 
 Return scoreTimeOnset, scoreTimeOffset, scoreTimeTiedDuration, realTimeOnsetMilliseconds, realTimeOffsetMilliseconds, realTimeTiedDurationMilliseconds.
 
-A stringified JSON object with the values
-
 **Returns**
 
 `std::string` – A stringified JSON object with the values
@@ -545,8 +515,6 @@ result = toolkit.getTimesForElement(xmlId)
 
 Return the ID of the Toolkit instance.
 
-The ID as as string
-
 **Returns**
 
 `std::string` – The ID as as string
@@ -567,8 +535,6 @@ result = toolkit.getUuid()
 ### GetVersion
 
 Return the version number.
-
-the version number as a string
 
 **Returns**
 
@@ -592,8 +558,6 @@ result = toolkit.getVersion()
 Load a string data with the type previously specified in the options.
 
 By default, the methods try to auto-detect the type.
-
-True if the data was successfully loaded
 
 **Returns**
 
@@ -625,8 +589,6 @@ Load a file from the file system.
 
 Previously convert UTF16 files to UTF8 or extract files from MusicXML compressed files.
 
-True if the file was successfully loaded
-
 **Returns**
 
 `bool` – True if the file was successfully loaded
@@ -655,8 +617,6 @@ result = toolkit.loadFile(filename)
 
 Load a MusicXML compressed file passed as base64 encoded string.
 
-True if the data was successfully loaded
-
 **Returns**
 
 `bool` – True if the data was successfully loaded
@@ -684,8 +644,6 @@ result = toolkit.loadZipDataBase64(data)
 ### LoadZipDataBuffer
 
 Load a MusicXML compressed file passed as a buffer of bytes.
-
-True if the data was successfully loaded
 
 **Returns**
 
@@ -762,8 +720,6 @@ toolkit.redoPagePitchPosLayout()
 
 Render the document to MIDI.
 
-A MIDI file as a base64 encoded string
-
 **Returns**
 
 `std::string` – A MIDI file as a base64 encoded string
@@ -815,7 +771,7 @@ result = toolkit.renderToMIDIFile(filename)
 
 Render a document to Plaine and Easie.
 
-Only the top staff / layer is exported.The PAE as a string
+Only the top staff / layer is exported.
 
 **Returns**
 
@@ -867,8 +823,6 @@ result = toolkit.renderToPAEFile(filename)
 ### RenderToSVG
 
 Render a page to SVG.
-
-The SVG page as a string
 
 **Returns**
 
@@ -930,8 +884,6 @@ result = toolkit.renderToSVGFile(filename, pageNo)
 
 Render a document to a timemap.
 
-The timemap as a string
-
 **Returns**
 
 `std::string` – The timemap as a string
@@ -985,9 +937,6 @@ Get the MEI and save it to the file.
 
 This methods is not available in the JavaScript version of the toolkit.
 
-
-True if the file was successfully written
-
 **Returns**
 
 `bool` – True if the file was successfully written
@@ -1017,8 +966,6 @@ result = toolkit.saveFile(filename, jsonOptions)
 
 Set the input from option.
 
-True if the option was successfully set
-
 **Returns**
 
 `bool` – True if the option was successfully set
@@ -1046,8 +993,6 @@ result = toolkit.setInputFrom(inputFrom)
 ### SetOption
 
 Set the value for an option.
-
-True if the option was successfully set
 
 **Returns**
 
@@ -1080,8 +1025,6 @@ Set option values.
 
 The name of each option to be set is to be given as JSON key.
 
-True if the options were successfully set
-
 **Returns**
 
 `bool` – True if the options were successfully set
@@ -1109,8 +1052,6 @@ result = toolkit.setOptions(jsonOptions)
 ### SetOutputTo
 
 Set the output to option.
-
-True if the option was successfully set
 
 **Returns**
 
@@ -1142,8 +1083,6 @@ Set the resource path for the Toolkit instance.
 
 This method needs to be called if the constructor had initFont=false or if the resource path needs to be changed.
 
-True if the resources was successfully loaded
-
 **Returns**
 
 `bool` – True if the resources was successfully loaded
@@ -1171,8 +1110,6 @@ result = toolkit.setResourcePath(path)
 ### SetScale
 
 Set the scale option.
-
-True if the option was successfully set
 
 **Returns**
 

@@ -65,7 +65,7 @@ def extract_method(xml_node):
     method['briefdescription'] = get_text_for_nodes(texts)
 
     detaileddescription = ""
-    texts = xml_node.xpath('./detaileddescription/descendant::*[not(ancestor::parameterlist)]/text()')
+    texts = xml_node.xpath('./detaileddescription/descendant::*[not(ancestor::parameterlist) and not(ancestor::simplesect)]/text()')
     method['detaileddescription'] = get_text_for_nodes(texts)
     
     return method
