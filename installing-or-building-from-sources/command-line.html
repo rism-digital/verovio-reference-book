@@ -180,6 +180,16 @@ make
 
 <p>(Until version 2.6.0, the cmake command was <code class="language-plaintext highlighter-rouge">cmake .</code> and not <code class="language-plaintext highlighter-rouge">cmake ../cmake</code>.)</p>
 
+<h4 id="basic-usage">Basic usage</h4>
+
+<p>For typesetting an MEI file with the default options, you need to do:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-o</span> output.svg Hummel_Concerto_for_trumpet.mei
+</code></pre></div></div>
+
+<p>If you use a version locally that is not installed, do not forget to add the <code class="language-plaintext highlighter-rouge">-r</code> parameter:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./verovio <span class="nt">-r</span> ../data <span class="nt">-o</span> output.svg Hummel_Concerto_for_trumpet.mei
+</code></pre></div></div>
+
 <h4 id="additional-building-options">Additional building options</h4>
 
 <p>By default the executable is not stripped. To strip it during the installation do</p>

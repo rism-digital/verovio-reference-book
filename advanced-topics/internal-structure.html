@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Internal structure</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap.min.css" type="text/css" /><!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/fileinput.min.css" />
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/verovio.css" />
+        <link rel="stylesheet" href="/assets/css/midiplayer.css" />
+
+        <link rel="stylesheet" href="/css/verovio-site.css" />
+
+        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                </li>
+                <li class="active">
+                    <a href="/index.html">Reference book</a>
+                </li>
+                <li >
+                    <a href="https://www.verovio.org/test-suite.xhtml">Test suite</a>
+                </li>
+                <!--
+                <li >
+                    <a href="/tutorial.xhtml">Tutorial</a>
+                </li>
+                <li >
+                    <a href="/mei-viewer.xhtml">MEI Viewer</a>
+                </li>
+                <li >
+                    <a href="/app.html">Verovio App</a>
+                </li>
+                <li >
+                    <a href="/musicxml.html">Other formats</a>
+                </li>
+                -->
+                <!--
+                <li class="dropdown ">
+                    <a href="/" class="dropdown-toggle" data-toggle="dropdown">Plaine &amp; Easie<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                          <li><a href="/pae-examples.xhtml">Examples</a></li>
+                          <li><a href="/pae-editor.xhtml">Editor</a></li>
+                    </ul>
+                </li>
+                -->
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+        <div class="top-header"> 
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
+        <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    </div>
+</div>
+
+
+        <div class="container with-footer">
+
+            
+
+
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="toc-group">
+
+    <a class="toc-item" href="/introduction/">Introduction</a>
+    
+
+    <a class="toc-item" href="/first-steps/">Tutorial 1: First Steps</a>
+    
+
+    <a class="toc-item" href="/web-based-notation/layout-options.html">Tutorial 1: Web-based notation</a>
+    
+
+    <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
+    
+
+    <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
+    
+        
+        
+<a class="toc-item toc-section " href="/advanced-topics/">Introduction</a>
+    
+
+<a class="toc-item toc-section selected" href="/advanced-topics/internal-structure.html">Internal structure</a>
+    
+        
+        
+<a class="toc-item toc-subsection" href="#layout-and-positioning">Layout and positioning</a>
+
+<a class="toc-item toc-subsection" href="#svg-structure">SVG structure</a>
+
+    
+
+<a class="toc-item toc-section " href="/advanced-topics/transposition.html">Transposition</a>
+    
+
+<a class="toc-item toc-section " href="/advanced-topics/smufl.html">SMuFL fonts</a>
+    
+
+<a class="toc-item toc-section " href="/advanced-topics/controlling-the-svg-output.html">Controlling the SVG output</a>
+    
+
+<a class="toc-item toc-section " href="/advanced-topics/mensural-notation.html">Mensural notation</a>
+    
+
+    
+
+    <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
+    
+
+    <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+
+    <a class="toc-item" href="/contributing/">Contributing</a>
+    
+
+</div>
+    </div>
+
+    <div class="col-md-9">
+        
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/04-advanced-topics/01-internal-structure.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        
+        
+        <h2>Internal structure</h2>
+        <p>The purpose of Verovio is to provide a self-contained typesetting engine that is directly capable of rendering MEI to its graphical representation in high quality. Its main goal is also to develop a library with an internal structure identical to MEI as far as possible.</p>
+
+<p>For practical reasons, however, the Verovio library uses a page-based customization of MEI internally. Since the modifications introduced by the customization are very limited, the Verovio library can also be used to render un-customized MEI files. With the page-based customization, the content of the music is encoded in <code class="language-plaintext highlighter-rouge">&lt;page&gt;</code> elements that are themselves contained in a <code class="language-plaintext highlighter-rouge">&lt;pages&gt;</code> element within <code class="language-plaintext highlighter-rouge">&lt;mdiv&gt;</code>.</p>
+
+<p>A <code class="language-plaintext highlighter-rouge">&lt;page&gt;</code> element contains <code class="language-plaintext highlighter-rouge">&lt;system&gt;</code> elements. From then on, the encoding is identical to standard MEI. That is, a <code class="language-plaintext highlighter-rouge">&lt;system&gt;</code> element will contain <code class="language-plaintext highlighter-rouge">&lt;measure&gt;</code> elements or <code class="language-plaintext highlighter-rouge">&lt;staff&gt;</code> elements that are both un-customized, depending on whether or not the music is measured or un-measured respectively.</p>
+
+<h3 id="layout-and-positioning">Layout and positioning</h3>
+
+<p>The idea of a page-based customization is also to make it possible to encode the positioning of elements directly in the content tree. This can be useful in some uses of MEI where the encoding represents one single source with one image per page. This is typically the case with optical music recognition applications. Verovio supports both positioned elements and automatic layout. The latter will be executed when un-customized MEI files are rendered.</p>
+
+<p>The page-based organization is modeled by a MEI customization that defines the structure describe above. The ODD file of the customization and the corresponding RNG schema are available from the <a href="https://github.com/music-encoding/mei-incubator/tree/master/page-based">MEI Incubator</a>. This is still work-in-progress.</p>
+
+<h3 id="svg-structure">SVG structure</h3>
+
+<p>One advantage of SVG rendering over other formats (e.g., images or PDF) is that SVG is rendered natively in all modern web-browsers. Because it is in XML, it also has the advantage that it is well suitable to interaction since every graphic is an XML element that is easy addressable. With Verovio, we also have the advantage that the SVG is organized in such a way that the MEI structure is preserved as much as possible. For example, a <code class="language-plaintext highlighter-rouge">&lt;note&gt;</code> element with an <code class="language-plaintext highlighter-rouge">xml:id</code> attribute in the MEI file will have a corresponding <code class="language-plaintext highlighter-rouge">&lt;g&gt;</code> element in the SVG with and <code class="language-plaintext highlighter-rouge">class</code> attribute <code class="language-plaintext highlighter-rouge">"note"</code> and an <code class="language-plaintext highlighter-rouge">id</code> attribute corresponding to the <code class="language-plaintext highlighter-rouge">xml:id</code>. This makes interaction with the SVG very easy. The hierarchy of the element is also preserved as shown below.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;tuplet</span> <span class="na">xml:id=</span><span class="s">"t1"</span> <span class="na">num=</span><span class="s">"3"</span> <span class="na">numbase=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;beam</span> <span class="na">xml:id=</span><span class="s">"b1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n1"</span> <span class="na">pname=</span><span class="s">"d"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n2"</span> <span class="na">pname=</span><span class="s">"e"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"16"</span> <span class="na">dots=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n3"</span> <span class="na">pname=</span><span class="s">"d"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"32"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n4"</span> <span class="na">pname=</span><span class="s">"c"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="na">accid=</span><span class="s">"s"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/beam&gt;</span>
+<span class="nt">&lt;/tuplet&gt;</span>
+<span class="nt">&lt;beam</span> <span class="na">xml:id=</span><span class="s">"b2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tuplet</span> <span class="na">xml:id=</span><span class="s">"t2"</span> <span class="na">num=</span><span class="s">"3"</span> <span class="na">numbase=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n5"</span> <span class="na">pname=</span><span class="s">"d"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n6"</span> <span class="na">pname=</span><span class="s">"e"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"16"</span> <span class="na">dots=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n7"</span> <span class="na">pname=</span><span class="s">"f"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"32"</span> <span class="na">accid=</span><span class="s">"s"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"n8"</span> <span class="na">pname=</span><span class="s">"e"</span> <span class="na">oct=</span><span class="s">"5"</span> <span class="na">dur=</span><span class="s">"8"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/tuplet&gt;</span>
+<span class="nt">&lt;/beam&gt;</span>
+</code></pre></div></div>
+
+<div class="row">
+<div class="col col-md-5">
+<p><img src="/images/advanced-topics/tuplet-beam.png" alt="tuplet-and-beams" class="img-repsonive" /></p>
+</div>
+<div class="col col-md-7">
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"tuplet"</span> <span class="na">id=</span><span class="s">"svg-t1"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"beam"</span> <span class="na">id=</span><span class="s">"svg-b1"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n1"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n2"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n3"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n4"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"beam"</span> <span class="na">id=</span><span class="s">"svg-b2"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"tuplet"</span> <span class="na">id=</span><span class="s">"svg-t2"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n5"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n6"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n7"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">id=</span><span class="s">"svg-n8"</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/g&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;/g&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
+
+    </div>
+</div>
+
+<script>
+    let options = {
+        rootMargin: '60px'
+    }
+    function adjustSideBar() {
+        elem = document.getElementsByClassName("toc-group")[0];
+        // 992 is the breakpoint for which the sidebar moves to the top; 35 is the footer height
+        elem.style.height = (window.innerWidth < 992) ? "" : `${window.innerHeight - elem.offsetTop - 35}px`;
+    }
+
+    window.onresize = function () {
+        adjustSideBar();
+    };
+    window.onload = function() {
+        adjustSideBar();
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    // First deselect everything
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection`);
+                    for (i = 0; i < sections.length; i++){
+                        sections[i].classList.remove('selected');
+                    }
+                    // The one entering is marked as .on-screen
+                    document.querySelector(`.toc-group a[href="#${id}"]`).classList.add('on-screen');
+                    // Select the first that in .on-screen
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    sections[0].classList.add('selected');
+
+                } else {
+                    leaving = document.querySelector(`.toc-group a[href="#${id}"]`)
+                    // Remove the .on-screen from the one leaving
+                    leaving.classList.remove('on-screen');
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    // If no other one is on screen, just leave things as they are
+                    if (sections.length > 0) {
+                        // Otherwise de-select the one that is leaving
+                        leaving.classList.remove('selected');
+                        // Selected the first .on-screen one and de-select the other ones
+                        sections[0].classList.add('selected');
+                        for (i = 1; i < sections.length; i++){
+                            console.log(sections[i].getAttribute('id'))
+                            sections[i].classList.remove('selected');
+                        }
+                    }
+                }
+            });
+        }, options);
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+    });
+</script>
+
+
+
+        </div>
+
+        <footer class="hidden-print footer navbar-fixed-bottom">
+            <p>
+                
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).ready(function() {
+
+                
+
+            });
+        //]]>
+        </script>
+    </body>
+</html>
