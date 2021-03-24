@@ -27,6 +27,18 @@ For seeing the command-line options, run:
 
 (Until version 2.6.0, the cmake command was `cmake .` and not `cmake ../cmake`.)
 
+#### Basic usage
+
+For typesetting an MEI file with the default options, you need to do:
+```bash
+verovio -o output.svg Hummel_Concerto_for_trumpet.mei
+```
+
+If you use a version locally that is not installed, do not forget to add the `-r` parameter:
+```bash
+./verovio -r ../data -o output.svg Hummel_Concerto_for_trumpet.mei
+```
+
 #### Additional building options
 
 By default the executable is not stripped. To strip it during the installation do

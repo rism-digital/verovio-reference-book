@@ -4,7 +4,7 @@ title: "Input formats"
 
 ### MEI
 
-### humdrum
+### Humdrum
 
 ### MusicXML
     
