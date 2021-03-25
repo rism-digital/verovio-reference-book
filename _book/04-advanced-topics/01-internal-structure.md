@@ -39,7 +39,7 @@ One advantage of SVG rendering over other formats (e.g., images or PDF) is that 
 
 {% row %}
 {% col 5 %}
-![tuplet-and-beams](/images/advanced-topics/tuplet-beam.png){:.img-repsonive}
+![tuplet-and-beams](/images/advanced-topics/tuplet-beam.png){:.img-responsive}
 {% endcol %}
 {% col 7 %}
 ```xml
