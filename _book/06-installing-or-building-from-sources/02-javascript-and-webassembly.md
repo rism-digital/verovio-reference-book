@@ -37,7 +37,7 @@ The homepage of the Verovio package includes [documentation](https://www.npmjs.c
 
 ### Basic usage of the toolkit
 
-For instructions on a basic usage of the JavaScript version of the toolkit, see the [Getting started](/web-based-notation/getting-started.html) section of the [Tutorial 1: Web-based notation](/web-based-notation/) chapter.
+For instructions on a basic usage of the JavaScript version of the toolkit, see the [Getting started](/first-steps/getting-started.html) section of the [Tutorial 1: First steps](/first-steps/) chapter.
 
 ### Building the toolkit
 

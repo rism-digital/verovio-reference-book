@@ -6,7 +6,7 @@ wkhtmltopdf -g -s A4 --javascript-delay 500 --no-background  --print-media-type 
 -B 20 -R 20 -L 20 -T 20 \
 --minimum-font-size 18  \
 http://127.0.0.1:4000/full-chapters/01-introduction.html \
-http://127.0.0.1:4000/full-chapters/02-web-based-notation.html \
+http://127.0.0.1:4000/full-chapters/02-first-steps.html \
 http://127.0.0.1:4000/full-chapters/03-interactive-notation.html \
 http://127.0.0.1:4000/full-chapters/04-advanced-topics.html \
 http://127.0.0.1:4000/full-chapters/05-toolkit-reference.html \
