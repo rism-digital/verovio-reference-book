@@ -134,6 +134,10 @@
     
         
         
+<a class="toc-item toc-subsection" href="#running-libmei">Running LibMEI</a>
+
+<a class="toc-item toc-subsection" href="#customization">Customization</a>
+
     
 
 <a class="toc-item toc-section " href="/contributing/adding-smufl-glyphs.html">Adding SMuFL glyphs</a>
@@ -150,7 +154,26 @@
         
         
         <h2>Generate code with libMEI</h2>
-        
+        <p>Verovio uses a <a href="https://github.com/rism-digital/libmei">forked version</a> of <a href="https://github.com/dddmal/libmei">LibMEI</a>, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the <code class="language-plaintext highlighter-rouge">./libmei</code> directory and the LibMEI repository does not need to be cloned for building Verovio.</p>
+
+<p>Whenever the MEI schema is modified, this code needs to be re-generated in order to integrate these changes. However, since Verovio implements only a small subset of the MEI schema, this really needs to be done only for the changes in the schema that touch features supported by Verovio. This means that the code within the <code class="language-plaintext highlighter-rouge">./libmei</code> directory should never be edited by hand because any change will be overwritten by the LibMEI output when the code generated from the schema needs to be updated and LibMEI is run again.</p>
+
+<h3 id="running-libmei">Running LibMEI</h3>
+
+<p>In order to update to code generated with LibMEI, you need to clone the <a href="https://github.com/rism-digital/libmei">forked version</a> of LibMEI.</p>
+
+<p>LibMEI takes a compiled ODD as input. You need to run, from the LibMEI directory:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python tools/parseschema2.py <span class="nt">-l</span> vrv <span class="nt">-o</span> /path/to/the/verovio/directory <span class="nt">-i</span> tools/includes/vrv mei/dev/mei-verovio_compiled.odd
+</code></pre></div></div>
+<p>You need to set to option <code class="language-plaintext highlighter-rouge">-o</code> to point to the Verovio directory where the <code class="language-plaintext highlighter-rouge">./libmei</code> files will be written.</p>
+
+<h3 id="customization">Customization</h3>
+
+<p>Verovio currently uses an MEI customization that adds or modified a few elements. It is defined in the <code class="language-plaintext highlighter-rouge">./mei/dev/mei-verovio.xml</code> file. If you want to makes changes to it, you can make them there. You will need to re-generate the <code class="language-plaintext highlighter-rouge">./mei/dev/mei-verovio_compiled.odd</code> ODD file using the Edirom <a href="https://meigarage.edirom.de/">MEI Garage</a> or the MEI command-line script. To do so, you will need to a clone of the <a href="https://github.com/music-encoding/music-encoding">MEI</a> repository, copy your customization file (e.g., <code class="language-plaintext highlighter-rouge">mei-verovio.xml</code>) into it and do:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ant init
+ant <span class="nt">-lib</span> lib/saxon/saxon9he.jar <span class="nt">-Dcustomization</span>.path<span class="o">=</span>mei-verovio.xml
+</code></pre></div></div>
+<p>The ODD file will be written to <code class="language-plaintext highlighter-rouge">./dist/schemata/mei-verovio_compiled.odd</code>, which you can use as new input file for LibMEI.</p>
 
     </div>
 </div>
