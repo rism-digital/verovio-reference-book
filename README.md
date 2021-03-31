@@ -2,7 +2,7 @@
 
 # Reference book for Verovio
 
-This is the repository for the Reference book for the Verovio engraving library. Contributions to this book are very welcome. These can be minor corrections, additions to a section or more. Contributions should be submitted as pull-requests to the `master` (default) branch of this repository.
+This is the repository for the [Reference book](https://book.verovio.org) for the Verovio engraving library. Contributions to this book are very welcome. These can be minor corrections, additions to a section or more. Contributions should be submitted as pull-requests to the `master` (default) branch of this repository.
 
 ## Structure and syntax
 
