@@ -349,6 +349,8 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getElementAttr</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
+<p>The method performs a lookup in the loaded MEI tree and will return all attributes for the retrieved element. This includes attributes currently not supported by Verovio. Looking in the MEI tree means that looking for elements added dynamically for the rendering by Verovio will no be found. This is the case for <code class="language-plaintext highlighter-rouge">system</code> elements when loading score-based MEI, or <code class="language-plaintext highlighter-rouge">meterSig</code> or <code class="language-plaintext highlighter-rouge">clef</code> elements displayed at the beginning of a system.</p>
+
 <h3 id="getelementsattime">GetElementsAtTime</h3>
 
 <p>Returns array of IDs of elements being currently played.</p>
