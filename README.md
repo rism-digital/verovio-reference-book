@@ -79,6 +79,11 @@ In the text of the page, the example can then be included with the templates `mu
 {% include music-notation example="accid-003" %}
 ```
 
+For an example without showing MEI snippet, do:
+```md
+{% include music-notation-only example="accid-003" %}
+```
+
 ### Generate the examples
 
 For the example to properly display, You need to:
