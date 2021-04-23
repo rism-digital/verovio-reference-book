@@ -65,7 +65,6 @@ Verovio will print an error message if the string option is not formatted correc
 
 Example interval names:
 
-|------|---------|
 | name | meaning |
 |------|---------|
 | P1 | perfect unison |
@@ -172,7 +171,7 @@ The algorithm for transposition by tonic proceeds as follow:
 
 * If all parts do not have the same transposition, then choose a part that does not have a transposition from which to extract the key information. If all parts have transpositions, but the transpositions are different, then apply transposition to the key information to get it to sounding pitch for one of those instruments and use this transposed pitch as the basis for the key transposition.
 
-* The key information may be stored in one of two main locations: `staffDef@key.pname`/`staffDef@key.accid` (the most common currently) or `keySig@pname`/`keySig@accid.  The `staffDef@key.mode`/`keySig@mode` is not needed.  This key information must come before the first notes on the staff.  `keySig` may be found as a child of `staffDef`, or may be found outside of the `staffDef` (at the start  `<layer>`) or in `<scoreDef>` if it applies to all staves in the score (or the majority of staves in the score?).
+* The key information may be stored in one of two main locations: `staffDef@key.pname`/`staffDef@key.accid` (the most common currently) or `keySig@pname`/`keySig@accid`.  The `staffDef@key.mode`/`keySig@mode` is not needed.  This key information must come before the first notes on the staff.  `keySig` may be found as a child of `staffDef`, or may be found outside of the `staffDef` (at the start  `layer`) or in `scoreDef` if it applies to all staves in the score (or the majority of staves in the score?).
 
 * If there is no key information found before the first notes of the music, print an error warning and do not transpose.
 
