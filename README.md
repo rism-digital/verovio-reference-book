@@ -2,7 +2,7 @@
 
 # Reference book for Verovio
 
-This is the repository for the Reference book for the Verovio engraving library. Contributions to this book are very welcome. These can be minor corrections, additions to a section or more. Contributions should be submitted as pull-requests to the `master` (default) branch of this repository.
+This is the repository for the [Reference book](https://book.verovio.org) for the Verovio engraving library. Contributions to this book are very welcome. These can be minor corrections, additions to a section or more. Contributions should be submitted as pull-requests to the `master` (default) branch of this repository.
 
 ## Structure and syntax
 
@@ -77,6 +77,11 @@ These options will be set *after* specific options set in the header of the test
 In the text of the page, the example can then be included with the templates `music-notation`. It takes a `example` parameter referring to its `name`. For the example above, it will look like:
 ```md
 {% include music-notation example="accid-003" %}
+```
+
+For an example without showing MEI snippet, do:
+```md
+{% include music-notation-only example="accid-003" %}
 ```
 
 ### Generate the examples

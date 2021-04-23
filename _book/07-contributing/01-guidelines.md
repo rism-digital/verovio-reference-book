@@ -103,7 +103,6 @@ class ScoreDef;
 class StaffDef;
 ```
      
-
 All method names must also be in upper CamelCase:
 
 ```cpp
@@ -125,6 +124,12 @@ public:
 ```
     
 In the class declaration, the methods are declared first, and then the member variables. For both, the declaration order is `public`, `protected`, and `private`.
+
+#### Use of `this`
+
+The convention for the pointer `this` is to use it for method calls and not to use if for member access because these are prefixed with `m_`.
+
+*As it stands, the codebase is not consistently following this convention*
     
 ### Comments
 
