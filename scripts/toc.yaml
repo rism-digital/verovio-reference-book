@@ -34,6 +34,13 @@
 "/advanced-topics/internal-structure.html#layout-and-positioning": Layout and positioning
 "/advanced-topics/internal-structure.html#svg-structure": SVG structure
 "/advanced-topics/transposition.html": Transposition
+"/advanced-topics/transposition.html#transposition-by-chromatic-interval": Transposition
+  by chromatic interval
+"/advanced-topics/transposition.html#transposition-by-tonic-pitch": Transposition
+  by tonic pitch
+"/advanced-topics/transposition.html#illustrated-examples": Illustrated examples
+"/advanced-topics/transposition.html#algorithm-for-transposition-by-tonic": Algorithm
+  for transposition by tonic
 "/advanced-topics/smufl.html": SMuFL fonts
 "/advanced-topics/smufl.html#embedded-fonts": Embedded fonts
 "/advanced-topics/smufl.html#selecting-a-font": Selecting a font
@@ -144,4 +151,6 @@
 "/contributing/guidelines.html#libmei": LibMEI
 "/contributing/workflow.html": Contributing workflow
 "/contributing/generate-code-with-libmei.html": Generate code with libMEI
+"/contributing/generate-code-with-libmei.html#running-libmei": Running LibMEI
+"/contributing/generate-code-with-libmei.html#customization": Customization
 "/contributing/adding-smufl-glyphs.html": Adding SMuFL glyphs

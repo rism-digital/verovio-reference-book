@@ -38,3 +38,91 @@
   svg-example-file: examples/03-interactive-notation/01-working-with-css-and-svg/accid-003.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: t-01
+  test-suite: chord/chord-005.mei
+  xpath:
+  - ".//mei:score"
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-01.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-02
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: M2
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-02.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-02.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-03
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: "-m2"
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-03.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-03.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-04
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: '1'
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-04.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-04.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-05
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: m2
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-05.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-05.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-06
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: a1
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-06.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-06.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-07
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: E
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-07.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-07.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-08
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: F#
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-08.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-08.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-09
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: Gb
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-09.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-09.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-10
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: "+Gb"
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-10.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-10.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: t-11
+  test-suite: chord/chord-005.mei
+  options:
+    transpose: "++Gb"
+  mei-example-file: examples/04-advanced-topics/02-transposition/t-11.mei
+  svg-example-file: examples/04-advanced-topics/02-transposition/t-11.svg
+  svg-example-exists: true
+  mei-example-exists: true

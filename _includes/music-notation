@@ -17,6 +17,8 @@ In both cases check the the file exists
 [SVG file is missing and need to be generated]
 {% endif %}
 
+
+{% unless include.without_mei == "true" %}
 {% if example and example['mei-example-exists'] %}
 {% assign meiFile = example['mei-example-file'] %} 
 ```xml
@@ -27,4 +29,5 @@ In both cases check the the file exists
 [MEI file is missing and need to be generated]
 ```
 {% endif %}
+{% endunless %}
 

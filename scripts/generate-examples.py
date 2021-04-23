@@ -86,8 +86,15 @@ if __name__ == "__main__":
                 continue
 
             # Download the MEI file from the given url
-            test_file = example['test-suite']
-            url = f"https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/{test_file}"
+            url = ""
+            if example.get("test-suite"):
+                test_file = example['test-suite']
+                url = f"https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/{test_file}"
+            elif example.get("url"):
+                url = example['url']
+            else:
+                log.error("This example is missing a test-suite file or a url. Skipping.")
+                continue
 
             log.debug("Downloading %s", url)
             mei_example_req = requests.get(url)
@@ -129,6 +136,7 @@ if __name__ == "__main__":
                     mei_snippet += "<!-- ... -->\n"
                     continue
 
+                print(query)
                 results = tree.findall(query, namespaces=MEI_NS)
 
                 for result in results:
