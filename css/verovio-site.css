@@ -2,7 +2,7 @@
 
 @media screen { h3::before { content: ''; display: block; height: 70px; margin-top: -70px; visibility: hidden; } }
 
-@media print { a[href]:after { content: ""; } div.highlight { border: solid 1px #ddd; } }
+@media print { a[href]:after { content: ""; } div.highlight { border: solid 1px #ddd; } h1:not(:first-of-type) { page-break-before: always; } }
 
 span.lang1 { display: none; }
 
