@@ -28,8 +28,9 @@ jobs:
           
       - name: "Install the VerovioText font"
         run: |
+          cd scripts
           wget https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf?raw=true
-          sudo cp ./fonts/VerovioText-1.0.ttf /usr/local/share/fonts
+          sudo cp ./VerovioText-1.0.ttf /usr/local/share/fonts
           sudo fc-cache -f -v
 
       - name: "Install ruby"
