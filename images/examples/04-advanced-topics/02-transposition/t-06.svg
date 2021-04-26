@@ -1,5 +1,5 @@
 <svg width="266px" height="119px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mei="http://www.music-encoding.org/ns/mei" overflow="visible">
-   <desc>Engraved by Verovio 3.3.0-e62c7d5</desc>
+   <desc>Engraved by Verovio 3.4.0-dev-f80787c</desc>
    <defs>
       <symbol id="E050" viewBox="0 0 1000 1000" overflow="inherit">
          <path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
@@ -14,22 +14,22 @@
          <path transform="scale(1,-1)" d="M136 186v169h17v-164l44 14v-91l-44 -14v-165l44 12v-91l-44 -13v-155h-17v150l-76 -22v-155h-17v149l-43 -13v90l43 14v167l-43 -14v92l43 13v169h17v-163zM60 73v-167l76 22v168z" />
       </symbol>
    </defs>
-   <style type="text/css">g.page-margin{font-family:Times;} g.reh, g.tempo{font-weight:bold;} g.dir, g.dynam, g.mNum{font-style:italic;} g.label{font-weight:normal;}</style>
+   <style type="text/css">g.page-margin{font-family:Times;} g.ending, g.reh, g.tempo{font-weight:bold;} g.dir, g.dynam, g.mNum{font-style:italic;} g.label{font-weight:normal;}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 5320 2380">
       <g class="page-margin" transform="translate(500, 500)">
-         <g id="system-0000000991502028" class="system">
-            <g id="section-0000001074313834" class="section boundaryStart" />
-            <g id="measure-0000002097587709" class="measure">
-               <g id="staff-0000001397482630" class="staff">
+         <g id="system-0000001033509302" class="system">
+            <g id="section-0000000271975373" class="section boundaryStart" />
+            <g id="measure-0000001244893195" class="measure">
+               <g id="staff-0000000029971954" class="staff">
                   <path d="M0 345 L4327 345" stroke="currentColor" stroke-width="13" />
                   <path d="M0 525 L4327 525" stroke="currentColor" stroke-width="13" />
                   <path d="M0 705 L4327 705" stroke="currentColor" stroke-width="13" />
                   <path d="M0 885 L4327 885" stroke="currentColor" stroke-width="13" />
                   <path d="M0 1065 L4327 1065" stroke="currentColor" stroke-width="13" />
-                  <g id="clef-0000001908153498" class="clef">
+                  <g id="clef-0000001029459200" class="clef">
                      <use xlink:href="#E050" x="90" y="885" height="720px" width="720px" />
                   </g>
-                  <g id="keysig-0000001962540235" class="keySig">
+                  <g id="keysig-0000001992514168" class="keySig">
                      <use xlink:href="#E262" x="735" y="345" height="720px" width="720px" />
                      <use xlink:href="#E262" x="913" y="615" height="720px" width="720px" />
                      <use xlink:href="#E262" x="1091" y="255" height="720px" width="720px" />
@@ -38,41 +38,41 @@
                      <use xlink:href="#E262" x="1625" y="435" height="720px" width="720px" />
                      <use xlink:href="#E262" x="1803" y="705" height="720px" width="720px" />
                   </g>
-                  <g id="msig-0000001212395372" class="meterSig">
+                  <g id="msig-0000000325630258" class="meterSig">
                      <use xlink:href="#E08A" x="2124" y="705" height="720px" width="720px" />
                   </g>
                   <g class="ledgerLines below">
                      <path d="M2644 1245 L3030 1245" stroke="currentColor" stroke-width="22" />
                   </g>
-                  <g id="layer-0000000461915171" class="layer">
-                     <g id="chord-0000000254895092" class="chord">
-                        <g id="note-0000001939419126" class="note">
+                  <g id="layer-0000001227457480" class="layer">
+                     <g id="chord-0000001149953278" class="chord">
+                        <g id="note-0000002059403993" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A2" x="2692" y="1245" height="720px" width="720px" />
                            </g>
-                           <g id="accid-0000000822796928" class="accid" />
+                           <g id="accid-0000001002212232" class="accid" />
                         </g>
-                        <g id="note-0000001310456516" class="note">
+                        <g id="note-0000001408971652" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A2" x="2692" y="1065" height="720px" width="720px" />
                            </g>
-                           <g id="accid-0000001100765863" class="accid" />
+                           <g id="accid-0000001466739803" class="accid" />
                         </g>
-                        <g id="note-0000000250380780" class="note">
+                        <g id="note-0000000284379695" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A2" x="2692" y="885" height="720px" width="720px" />
                            </g>
-                           <g id="accid-0000000000240536" class="accid" />
+                           <g id="accid-0000000531085108" class="accid" />
                         </g>
                      </g>
                   </g>
                </g>
-               <g id="bline-0000000379569460" class="barLineAttr">
+               <g id="bline-0000000762296508" class="barLineAttr">
                   <path d="M4152 1065 L4152 345" stroke="currentColor" stroke-width="27" />
                   <path d="M4282 1065 L4282 345" stroke="currentColor" stroke-width="90" />
                </g>
             </g>
-            <g id="bdend-0000000695717821" class="boundaryEnd section-0000001074313834" />
+            <g id="bdend-0000000277613583" class="boundaryEnd section-0000000271975373" />
          </g>
       </g>
    </svg>
