@@ -25,6 +25,12 @@ jobs:
         run: |
           wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
           sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb
+          
+      - name: "Install the VerovioText font"
+        run: |
+          wget https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf?raw=true
+          sudo cp ./fonts/VerovioText-1.0.ttf /usr/local/share/fonts
+          sudo fc-cache -f -v
 
       - name: "Install ruby"
         uses: actions/setup-ruby@v1
