@@ -10,14 +10,11 @@ module Jekyll
 
   class BookNavigation < Generator
     safe true
-    priority :high
+    priority :normal
 
     def generate(site)
 
       @site = site
-
-      # A flag in the config that can be turned on to genearate on page per chapter for PDF generation
-      @generate_full_chapters = site.config['generate-full-chapters']
 
       # We use the parse to add h3 (###) item to the toc
       @parser = Jekyll::Converters::Markdown.new(site.config)
@@ -61,12 +58,6 @@ module Jekyll
           # Sections are empty for now
           toc.push({"id" => chapter_id, "name" => doc['chapter-title'], "url" => url, "sections" => [], "link_to_section" => doc.data['link_to_section']})
           chapters[short_path] = chapter_id
-
-          # This will start a new page for the chapter (PDF)
-          generate_full_chapter_page(doc, chapter_id)
-        else
-          # Add the title and the content to the chapter page (PDF)
-          generate_full_chapter_page_section(doc)
         end
 
         chapters[short_path] = chapter_id
@@ -116,23 +107,6 @@ module Jekyll
       path = File.expand_path "scripts/toc.yaml", site.source
       file = File.open(path, 'w') { |file| file.write(toc_hash.to_yaml) }
 
-    end
-
-    def generate_full_chapter_page(doc, chapter_id)
-      return unless (@generate_full_chapters)
-      # Start a chapter page 
-      @chapter_page = PageWithoutAFile.new(@site, __dir__, "full-chapters/", chapter_id + ".md")
-      @chapter_page.data = doc.data
-      @chapter_page.content = doc.content
-      @site.pages << @chapter_page
-    end
-
-    def generate_full_chapter_page_section(doc)
-      return unless (@generate_full_chapters)
-      # Add the content to the current page
-      @chapter_page.content += "\n## #{doc.data['title']}\n\n"
-      # TODO We also need to fix the links in the content...
-      @chapter_page.content += doc.content
     end
 
     def get_chapter(path)

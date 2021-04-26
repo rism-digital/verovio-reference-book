@@ -33,6 +33,9 @@
     div.highlight {
         border: solid 1px #ddd;
     }
+    h1:not(:first-of-type) {
+        page-break-before: always;
+    }
 }
 
 span.lang1 {

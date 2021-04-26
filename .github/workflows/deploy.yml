@@ -51,7 +51,7 @@ jobs:
           cd ..
           ./scripts/generate-pdf.sh
           sudo cp scripts/verovio-reference-book.pdf _site/
-          sudo rm -rf _site/full-chapters
+          sudo rm -rf _site/pdf
       
       # Deploy _site to the gh-pages branch
       - name: Deploy

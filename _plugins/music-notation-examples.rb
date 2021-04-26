@@ -2,7 +2,7 @@
 module Jekyll
   class MusicNotationExamples < Generator
     safe true
-    priority :high
+    priority :normal
 
     def generate(site)
 

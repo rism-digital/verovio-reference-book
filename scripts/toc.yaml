@@ -29,6 +29,7 @@
 "/interactive-notation/#inspecting-the-svg": Inspecting the SVG
 "/interactive-notation/working-with-css-and-svg.html": Working with CSS and SVG
 "/interactive-notation/xpath-queries.html": XPath queries
+"/interactive-notation/working-with-midi.html": Working with MIDI
 "/advanced-topics/": Introduction
 "/advanced-topics/internal-structure.html": Internal structure
 "/advanced-topics/internal-structure.html#layout-and-positioning": Layout and positioning
@@ -42,8 +43,7 @@
 "/advanced-topics/transposition.html#algorithm-for-transposition-by-tonic": Algorithm
   for transposition by tonic
 "/advanced-topics/smufl.html": SMuFL fonts
-"/advanced-topics/smufl.html#embedded-fonts": Embedded fonts
-"/advanced-topics/smufl.html#selecting-a-font": Selecting a font
+"/advanced-topics/smufl.html#music-symbols-in-text": Music symbols in text
 "/advanced-topics/controlling-the-svg-output.html": Controlling the SVG output
 "/advanced-topics/controlling-the-svg-output.html#html5": HTML5
 "/advanced-topics/controlling-the-svg-output.html#towards-svg-20": Towards SVG 2.0

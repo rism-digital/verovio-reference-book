@@ -26,7 +26,6 @@ module Jekyll
       super
       @size = size.to_i
       @size = (@size == 0) ? 6 : @size
-      puts @size
     end
 
     def render(context)
