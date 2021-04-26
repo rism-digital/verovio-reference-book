@@ -136,7 +136,6 @@ if __name__ == "__main__":
                     mei_snippet += "<!-- ... -->\n"
                     continue
 
-                print(query)
                 results = tree.findall(query, namespaces=MEI_NS)
 
                 for result in results:

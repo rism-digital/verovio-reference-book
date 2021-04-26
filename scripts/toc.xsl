@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <style>
           h1 {
-            font-size: 36px;
+            font-size: 29px;
             font-weight: 500;
             color: #333;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

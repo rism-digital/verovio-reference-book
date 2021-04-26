@@ -126,3 +126,74 @@
   svg-example-file: examples/04-advanced-topics/02-transposition/t-11.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: ex-01
+  test-suite: dynam/dynam-003.mei
+  mei-example-file: examples/04-advanced-topics/03-smufl/ex-01.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/ex-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: ex-02
+  test-suite: dynam/dynam-003.mei
+  options:
+    font: Bravura
+  mei-example-file: examples/04-advanced-topics/03-smufl/ex-02.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/ex-02.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: ex-03
+  test-suite: dynam/dynam-003.mei
+  options:
+    font: Gootville
+  mei-example-file: examples/04-advanced-topics/03-smufl/ex-03.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/ex-03.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: ex-04
+  test-suite: dynam/dynam-003.mei
+  options:
+    font: Leland
+  mei-example-file: examples/04-advanced-topics/03-smufl/ex-04.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/ex-04.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: ex-05
+  test-suite: artic/artic-001.mei
+  options:
+    scale: 60
+  mei-example-file: examples/04-advanced-topics/03-smufl/ex-05.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/ex-05.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: ex-06
+  test-suite: artic/artic-001.mei
+  options:
+    scale: 60
+    font: Bravura
+  mei-example-file: examples/04-advanced-topics/03-smufl/ex-06.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/ex-06.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: lyric-01
+  test-suite: lyric/lyric-007.mei
+  xpath:
+  - ".//mei:note[1]/mei:verse"
+  mei-example-file: examples/04-advanced-topics/03-smufl/lyric-01.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/lyric-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: tempo-01
+  test-suite: tempo/tempo-001.mei
+  xpath:
+  - ".//mei:tempo"
+  mei-example-file: examples/04-advanced-topics/03-smufl/tempo-01.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/tempo-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: dynam-01
+  test-suite: dynam/dynam-006.mei
+  xpath:
+  - ".//mei:dynam"
+  mei-example-file: examples/04-advanced-topics/03-smufl/dynam-01.mei
+  svg-example-file: examples/04-advanced-topics/03-smufl/dynam-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
