@@ -3,7 +3,7 @@ chapter-title: "Introduction"
 title: "About Verovio"
 ---
 
-Verovio is open-source music notation engraving software. It supports files encoded using the [Music Encoding Initiative](https://music-encoding.org), as well as MusicXML, Humdrum `**kern`, and Plaine and Easie. There are several versions of Verovio available: A command-line utility, a JavaScript library suitable for embedding notation on web-pages, and as a library for several other languages and platforms, including Python, iOS, Android, and Java. Verovio is cross-platorm and can be used in digital environments of various kind. The output of Verovio is beautifully engraved music notation rendered using the Scalable Vector Graphics (SVG) format.
+Verovio is an open-source music notation engraving software. It supports files encoded using the [Music Encoding Initiative](https://music-encoding.org), as well as MusicXML, Humdrum `**kern`, and Plaine and Easie. There are several versions of Verovio available: A command-line utility, a JavaScript library suitable for embedding notation on web-pages, and as a library for several other languages and platforms, including Python, iOS, Android, and Java. Verovio is cross-platorm and can be used in digital environments of various kind. The output of Verovio is beautifully engraved music notation rendered using the Scalable Vector Graphics (SVG) format.
 
 While Verovio can be used as a core component for building powerful music notation editors, it is not an editor itself. There are a number of engraving options available to help control and adjust, to a fine level of detail, the specifics of the engraving.
 
