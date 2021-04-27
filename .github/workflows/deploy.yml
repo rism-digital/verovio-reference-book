@@ -20,7 +20,15 @@ jobs:
       - name: "Change config to generate full-chapter pages"
         run: |
           sed -i 's/generate-full-chapters: false/generate-full-chapters: true/g' _config.yml
-      
+     
+      - name: "Install the VerovioText font"
+        run: |
+          cd scripts
+          wget https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf
+          sudo cp ./VerovioText-1.0.ttf /usr/local/share/fonts
+          sudo cp ./VerovioText-1.0.ttf /usr/share/fonts
+          sudo fc-cache -f -v
+  
       - name: "Install wkhtmltopdf"
         run: |
           wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
