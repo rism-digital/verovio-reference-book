@@ -521,7 +521,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
-      <td>∅</td>
+      <td><code class="language-plaintext highlighter-rouge">""</code></td>
       <td>A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; noXmlIds: true or false; false by default - remove all @xml:id not used in the data;</td>
     </tr>
   </tbody>
@@ -529,7 +529,7 @@
 
 <p><strong>Original header</strong></p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetMEI</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetMEI</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">jsonOptions</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><strong>Example call</strong></p>
@@ -1372,7 +1372,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
-      <td>∅</td>
+      <td><code class="language-plaintext highlighter-rouge">""</code></td>
       <td>A stringified JSON object with the output options</td>
     </tr>
   </tbody>
@@ -1380,7 +1380,7 @@
 
 <p><strong>Original header</strong></p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">SaveFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">SaveFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">jsonOptions</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><strong>Example call</strong></p>
