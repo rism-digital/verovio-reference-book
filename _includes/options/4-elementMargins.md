@@ -23,6 +23,7 @@
 | <span class="lang1">`"leftMarginNote":  <f>`</span><span class="lang2">`--left-margin-note  <f>`</span> | The margin for note in MEI units<br/>(default: 1.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"leftMarginRest":  <f>`</span><span class="lang2">`--left-margin-rest  <f>`</span> | The margin for rest in MEI units<br/>(default: 1.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"leftMarginRightBarLine":  <f>`</span><span class="lang2">`--left-margin-right-bar-line  <f>`</span> | The margin for right barLine in MEI units<br/>(default: 1.0; min: 0.0; max: 2.0) |  |
+| <span class="lang1">`"leftMarginTabRhythm":  <f>`</span><span class="lang2">`--left-margin-tab-rhythm  <f>`</span> | The margin for tabRhythm in MEI units<br/>(default: 1.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"rightMarginAccid":  <f>`</span><span class="lang2">`--right-margin-accid  <f>`</span> | The right margin for accid in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"rightMarginBarLine":  <f>`</span><span class="lang2">`--right-margin-bar-line  <f>`</span> | The right margin for barLine in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"rightMarginBeatRpt":  <f>`</span><span class="lang2">`--right-margin-beat-rpt  <f>`</span> | The right margin for beatRpt in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) |  |
@@ -39,6 +40,7 @@
 | <span class="lang1">`"rightMarginNote":  <f>`</span><span class="lang2">`--right-margin-note  <f>`</span> | The right margin for note in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"rightMarginRest":  <f>`</span><span class="lang2">`--right-margin-rest  <f>`</span> | The right margin for rest in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"rightMarginRightBarLine":  <f>`</span><span class="lang2">`--right-margin-right-bar-line  <f>`</span> | The right margin for right barLine in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) |  |
+| <span class="lang1">`"rightMarginTabRhythm":  <f>`</span><span class="lang2">`--right-margin-tab-rhythm  <f>`</span> | The right margin for tabRhythm in MEI units<br/>(default: 0.0; min: 0.0; max: 2.0) |  |
 | <span class="lang1">`"topMarginArtic":  <f>`</span><span class="lang2">`--top-margin-artic  <f>`</span> | The margin for artic in MEI units<br/>(default: 0.75; min: 0.0; max: 10.0) |  |
 | <span class="lang1">`"topMarginHarm":  <f>`</span><span class="lang2">`--top-margin-harm  <f>`</span> | The margin for harm in MEI units<br/>(default: 1.0; min: 0.0; max: 10.0) |  |
 {: .table .table-condensed}

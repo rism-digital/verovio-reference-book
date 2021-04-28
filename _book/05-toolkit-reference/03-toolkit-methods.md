@@ -246,13 +246,13 @@ Get the MEI as a string.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `jsonOptions` | `const std::string &` | ∅ | A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; noXmlIds: true or false; false by default - remove all @xml:id not used in the data; |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; noXmlIds: true or false; false by default - remove all @xml:id not used in the data; |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetMEI(const std::string &jsonOptions)
+std::string vrv::Toolkit::GetMEI(const std::string &jsonOptions="")
 ```
 
 **Example call**
@@ -946,13 +946,13 @@ This methods is not available in the JavaScript version of the toolkit.
 |---|---|---|
 | Name | Type | Default | Description |
 | `filename` | `const std::string &` | ∅ | The output filename |
-| `jsonOptions` | `const std::string &` | ∅ | A stringified JSON object with the output options |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON object with the output options |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
 
 ```cpp
-bool vrv::Toolkit::SaveFile(const std::string &filename, const std::string &jsonOptions)
+bool vrv::Toolkit::SaveFile(const std::string &filename, const std::string &jsonOptions="")
 ```
 
 **Example call**

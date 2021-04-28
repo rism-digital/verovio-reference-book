@@ -5,6 +5,7 @@
 | <span class="lang1">`"beamMaxSlope":  <i>`</span><span class="lang2">`--beam-max-slope  <i>`</span> | The maximum beam slope<br/>(default: 10; min: 1; max: 20) |  |
 | <span class="lang1">`"beamMinSlope":  <i>`</span><span class="lang2">`--beam-min-slope  <i>`</span> | The minimum beam slope |  |
 | <span class="lang1">`"bracketThickness":  <f>`</span><span class="lang2">`--bracket-thickness  <f>`</span> | The thickness of the system bracket<br/>(default: 1.0; min: 0.5; max: 2.0) |  |
+| <span class="lang1">`"dynamDist":  <f>`</span><span class="lang2">`--dynam-dist  <f>`</span> | The default distance from the staff for dynamic marks<br/>(default: 1.0; min: 0.5; max: 16.0) |  |
 | <span class="lang1">`"engravingDefaults":  <s>`</span><span class="lang2">`--engraving-defaults  <s>`</span> | Path to json file describing defaults for engraving SMuFL elements |  |
 | <span class="lang1">`"font":  <s>`</span><span class="lang2">`--font  <s>`</span> | Set the music font<br/>(default: "Leipzig") |  |
 | <span class="lang1">`"graceFactor":  <f>`</span><span class="lang2">`--grace-factor  <f>`</span> | The grace size ratio numerator<br/>(default: 0.75; min: 0.5; max: 1.0) |  |
@@ -12,6 +13,7 @@
 | <span class="lang1">`"graceRightAlign":  <b>`</span><span class="lang2">`--grace-right-align `</span> | Align the right position of a grace group with all staves |  |
 | <span class="lang1">`"hairpinSize":  <f>`</span><span class="lang2">`--hairpin-size  <f>`</span> | The haripin size in MEI units<br/>(default: 3.0; min: 1.0; max: 8.0) |  |
 | <span class="lang1">`"hairpinThickness":  <f>`</span><span class="lang2">`--hairpin-thickness  <f>`</span> | The thickness of the hairpin<br/>(default: 0.2; min: 0.1; max: 0.8) |  |
+| <span class="lang1">`"harmDist":  <f>`</span><span class="lang2">`--harm-dist  <f>`</span> | The default distance from the staff of harmonic indications<br/>(default: 1.0; min: 0.5; max: 16.0) |  |
 | <span class="lang1">`"justificationBraceGroup":  <f>`</span><span class="lang2">`--justification-brace-group  <f>`</span> | Space between staves inside a braced group ijustification<br/>(default: 1.0; min: 0.0; max: 10.0) |  |
 | <span class="lang1">`"justificationBracketGroup":  <f>`</span><span class="lang2">`--justification-bracket-group  <f>`</span> | Space between staves inside a bracketed group justification<br/>(default: 1.0; min: 0.0; max: 10.0) |  |
 | <span class="lang1">`"justificationStaff":  <f>`</span><span class="lang2">`--justification-staff  <f>`</span> | The staff justification<br/>(default: 1.0; min: 0.0; max: 10.0) |  |
@@ -24,9 +26,9 @@
 | <span class="lang1">`"lyricSize":  <f>`</span><span class="lang2">`--lyric-size  <f>`</span> | The lyrics size in MEI units<br/>(default: 4.5; min: 2.0; max: 8.0) |  |
 | <span class="lang1">`"lyricTopMinMargin":  <f>`</span><span class="lang2">`--lyric-top-min-margin  <f>`</span> | The minmal margin above the lyrics in MEI units<br/>(default: 2.0; min: 0.0; max: 8.0) |  |
 | <span class="lang1">`"lyricWordSpace":  <f>`</span><span class="lang2">`--lyric-word-space  <f>`</span> | The lyric word space length<br/>(default: 1.2; min: 0.5; max: 3.0) |  |
-| <span class="lang1">`"measureNumber":  <s>`</span><span class="lang2">`--measure-number  <s>`</span> | The measure numbering rule (unused)<br/>(default: "system"; other values: ['system', 'interval']) |  |
 | <span class="lang1">`"midiTempoAdjustment":  <f>`</span><span class="lang2">`--midi-tempo-adjustment  <f>`</span> | The MIDI tempo adjustment factor<br/>(default: 1.0; min: 0.2; max: 4.0) |  |
 | <span class="lang1">`"minMeasureWidth":  <i>`</span><span class="lang2">`--min-measure-width  <i>`</span> | The minimal measure width in MEI units<br/>(default: 15; min: 1; max: 30) |  |
+| <span class="lang1">`"mnumInterval":  <i>`</span><span class="lang2">`--mnum-interval  <i>`</span> | How frequently to place measure numbers |  |
 | <span class="lang1">`"repeatBarLineDotSeparation":  <f>`</span><span class="lang2">`--repeat-bar-line-dot-separation  <f>`</span> | The default horizontal distance between the dots and the inner barline of a repeat barline<br/>(default: 0.3; min: 0.1; max: 1.0) |  |
 | <span class="lang1">`"repeatEndingLineThickness":  <f>`</span><span class="lang2">`--repeat-ending-line-thickness  <f>`</span> | Repeat and ending line thickness<br/>(default: 0.15; min: 0.1; max: 2.0) |  |
 | <span class="lang1">`"slurControlPoints":  <i>`</span><span class="lang2">`--slur-control-points  <i>`</span> | Slur control points - higher value means more curved at the end<br/>(default: 5; min: 1; max: 10) |  |

@@ -29,6 +29,7 @@
 | <span class="lang1">`"pageMarginRight":  <i>`</span><span class="lang2">`--page-margin-right  <i>`</span> | The page right margin<br/>(default: 50; min: 0; max: 500) |  |
 | <span class="lang1">`"pageMarginTop":  <i>`</span><span class="lang2">`--page-margin-top  <i>`</span> | The page top margin<br/>(default: 50; min: 0; max: 500) |  |
 | <span class="lang1">`"pageWidth":  <i>`</span><span class="lang2">`--page-width  <i>`</span> | The page width<br/>(default: 2100; min: 100; max: 60000) |  |
+| <span class="lang1">`"preserveAnalyticalMarkup":  <b>`</span><span class="lang2">`--preserve-analytical-markup `</span> | Preserves the analytical markup in MEI |  |
 | <span class="lang1">`"removeIds":  <b>`</span><span class="lang2">`--remove-ids `</span> | Remove XML IDs in the MEI output that are not referenced |  |
 | <span class="lang1">`"shrinkToFit":  <b>`</span><span class="lang2">`--shrink-to-fit `</span> | Scale down page content to fit the page height if needed |  |
 | <span class="lang1">`"svgBoundingBoxes":  <b>`</span><span class="lang2">`--svg-bounding-boxes `</span> | Include bounding boxes in SVG output |  |
