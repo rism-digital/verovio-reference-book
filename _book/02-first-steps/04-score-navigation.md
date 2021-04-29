@@ -12,6 +12,6 @@ Before we start we will need to create some HTML form controls. These controls w
  - "Next page" and "Previous page" buttons for navigating the score;
  - A checkbox for adjusting the orientation (portrait or landscape)
 
-<aside>
+{% aside %}
 If you are not familiar with how HTML form controls are created, you may wish to consult the [Basic form controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls) and the [HTML5 input types](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types) documentation.
-</aside>
+{% endaside %}
