@@ -97,6 +97,15 @@ The script has to be run from the site root directory with the command
 python scripts/generate-examples.py
 ```
 
+### Documenting options
+
+The option documentation is generated from the Verovio codebase. To update the documentation, you need to run:
+```bash
+python scripts/generate-options.py
+```
+
+Note that it will generate the option documentation for the Python version currently installed on your machine.
+
 ## License
 
 The content of the repo is licensed under a
