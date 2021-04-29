@@ -63,8 +63,8 @@ if __name__ == "__main__":
         # Open the file for the option group
         f = open(options_output + grp_id + ".md", 'w')
         # Table header in MD
-        f.write("| Name and parameter | Description | See also |\n")
-        f.write("|---|---|---|\n")
+        #f.write("| Name and parameter | Description | See also |\n")
+        #f.write("|---|---|---|\n")
         
         for option_id, option in grp['options'].items():
 
@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
             opt_type_json_str = opt_type_str
             if opt_type == 'bool':
-                opt_type_json_str = " <b>"
+                opt_type_json_str = " <br>"
 
             cmd_option_str = "`{} {}`".format(cmd_option, opt_type_str)
             json_option_str = "`\"{}\": {}`".format(option_id, opt_type_json_str)
@@ -115,29 +115,39 @@ if __name__ == "__main__":
                 default_str =  "<br/>(default: \"" + option['default']
                 default_str += "\"; other values: " + str(option['values']) + ")"
 
+            # Add the description
             description = option['description']
             description = "{}{}".format(description, default_str)
+
+            # Check if we have an extended description in _includes/options/
+            extended_description = os.path.join(options_output, grp_id,option_id + ".md")
+            if os.path.exists(extended_description):
+                log.info("Include extended description %s", extended_description)
+                description += ("\n\n{{% include {} %}}".format(os.path.join("options", grp_id, option_id + ".md")))
             
             # If we have one or more see-also entries in the option.md, add the links
             see_also_this = see_also.get(option_id)
             see_also_str = ""
             if see_also_this:
+                see_also_str = "See also: "
                 see_also_links = []
                 for ref in see_also_this:
                     # Get the name of the link target from the scripts/toc.yaml file
                     link = "[{}]({})".format(toc.get(ref, "[missing]"), ref)
                     see_also_links.append(link)
-                see_also_str = "<br/>".join(see_also_links)
+                see_also_str += " \\| ".join(see_also_links)
 
             if option.get('cmdOnly'):
                 json_option_str = "∅"
 
             # Add the table line with span.lang1 / span.lang2 for toggling JSON and Cmd-line
-            f.write("| <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span> ".format(json_option_str, cmd_option_str))
+            #f.write("| <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span> ".format(json_option_str, cmd_option_str))
+            f.write("{% row %}")
+            f.write("{{% col 3 %}} <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span> {{% endcol %}}".format(json_option_str, cmd_option_str))
             # Add the descripion and the links
-            f.write("| {} | {} |\n".format(description, see_also_str))
+            f.write("{{% col 6 %}} {} {{% endcol %}}{{% col 3 %}} {} {{% endcol %}}\n".format(description, see_also_str))
+            f.write("{% endrow %}")
 
-        f.write("{: .table .table-condensed}\n")
         f.close()
 
     log.debug("Finished processing")

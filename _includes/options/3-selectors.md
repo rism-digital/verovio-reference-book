@@ -1,9 +1,7 @@
-| Name and parameter | Description | See also |
-|---|---|---|
-| <span class="lang1">`"appXPathQuery": * <s>`</span><span class="lang2">`--app-x-path-query * <s>`</span> | Set the xPath query for selecting <app> child elements, for example: "./rdg[contains(@source, 'source-id')]"; by default the <lem> or the first <rdg> is selected |  |
-| <span class="lang1">`"choiceXPathQuery": * <s>`</span><span class="lang2">`--choice-x-path-query * <s>`</span> | Set the xPath query for selecting <choice> child elements, for example: "./orig"; by default the first child is selected |  |
-| <span class="lang1">`"mdivXPathQuery":  <s>`</span><span class="lang2">`--mdiv-x-path-query  <s>`</span> | Set the xPath query for selecting the <mdiv> to be rendered; only one <mdiv> can be rendered<br/>(default: "") |  |
-| <span class="lang1">`"substXPathQuery": * <s>`</span><span class="lang2">`--subst-x-path-query * <s>`</span> | Set the xPath query for selecting <subst> child elements, for example: "./del"; by default the first child is selected |  |
-| <span class="lang1">`"transpose":  <s>`</span><span class="lang2">`--transpose  <s>`</span> | SUMMARY<br/>(default: "") | [Transposition](/advanced-topics/transposition.html) |
-| <span class="lang1">`"transposeSelectedOnly":  <b>`</span><span class="lang2">`--transpose-selected-only `</span> | Transpose only the selected content and ignore unselected editorial content |  |
-{: .table .table-condensed}
+{% row %}{% col 3 %} <span class="lang1">`"appXPathQuery": * <s>`</span><span class="lang2">`--app-x-path-query * <s>`</span> {% endcol %}{% col 6 %} Set the xPath query for selecting <app> child elements, for example: "./rdg[contains(@source, 'source-id')]"; by default the <lem> or the first <rdg> is selected {% endcol %}{% col 3 %}  {% endcol %}
+{% endrow %}{% row %}{% col 3 %} <span class="lang1">`"choiceXPathQuery": * <s>`</span><span class="lang2">`--choice-x-path-query * <s>`</span> {% endcol %}{% col 6 %} Set the xPath query for selecting <choice> child elements, for example: "./orig"; by default the first child is selected {% endcol %}{% col 3 %}  {% endcol %}
+{% endrow %}{% row %}{% col 3 %} <span class="lang1">`"mdivXPathQuery":  <s>`</span><span class="lang2">`--mdiv-x-path-query  <s>`</span> {% endcol %}{% col 6 %} Set the xPath query for selecting the <mdiv> to be rendered; only one <mdiv> can be rendered<br/>(default: "") {% endcol %}{% col 3 %}  {% endcol %}
+{% endrow %}{% row %}{% col 3 %} <span class="lang1">`"substXPathQuery": * <s>`</span><span class="lang2">`--subst-x-path-query * <s>`</span> {% endcol %}{% col 6 %} Set the xPath query for selecting <subst> child elements, for example: "./del"; by default the first child is selected {% endcol %}{% col 3 %}  {% endcol %}
+{% endrow %}{% row %}{% col 3 %} <span class="lang1">`"transpose":  <s>`</span><span class="lang2">`--transpose  <s>`</span> {% endcol %}{% col 6 %} SUMMARY<br/>(default: "") {% endcol %}{% col 3 %} See also: [Transposition](/advanced-topics/transposition.html) {% endcol %}
+{% endrow %}{% row %}{% col 3 %} <span class="lang1">`"transposeSelectedOnly":  <br>`</span><span class="lang2">`--transpose-selected-only `</span> {% endcol %}{% col 6 %} Transpose only the selected content and ignore unselected editorial content {% endcol %}{% col 3 %}  {% endcol %}
+{% endrow %}

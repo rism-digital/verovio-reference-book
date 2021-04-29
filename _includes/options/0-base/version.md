@@ -1,0 +1,1 @@
+The version number includes major, minor and revision numbers and the last number of the git commit.
