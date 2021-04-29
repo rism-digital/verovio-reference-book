@@ -4,6 +4,8 @@ title: "Toolkit options"
 # If an option is documented in a section, add the link here
 # The script scripts/generate-options.py needs to be run for the links to be updated
 see-also:
+    font:
+      - "/advanced-topics/smufl.html"
     inputFrom:
       - "/toolkit-reference/input-formats.html"
     mensuralToMeasure:
