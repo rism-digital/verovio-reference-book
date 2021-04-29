@@ -31,13 +31,13 @@ The table of content (i.e., the navigation sidebar) is built from the content. A
 
 Adding a section requires a section file to be added following the file structure described above. If the section needs to be inserted in-between exsisting sections, then the files of following sections needs to be renumbered accordingly.
 
-## Adding a music notation examples
+## Music notation examples
 
 Music notation examples included in the book are imported from the [Verovio test suite](https://www.verovio.org/test-suite.xhmtl). They are pre-generated and included as SVG together with a snippet of the MEI code. Examples used in a page a listed in its front matter in `examples`. To include a new example, you need to proceed as follow.
 
-### Add the example in the front matter
+### Add examples
 
-In the front matter of the page where you want to include the example, add it in `examples`. For example:
+Examples need to be listed in the front matter of the page where they need to be included. The list should be given in the `examples` entry in the frontmatter. For example:
 ```yaml
 examples:
     - name: accid-003
@@ -97,7 +97,7 @@ The script has to be run from the site root directory with the command
 python scripts/generate-examples.py
 ```
 
-### Documenting options
+## Documenting options
 
 The option documentation is generated from the Verovio codebase. To update the documentation, you need to run:
 ```bash
@@ -105,6 +105,21 @@ python scripts/generate-options.py
 ```
 
 Note that it will generate the option documentation for the Python version currently installed on your machine.
+
+### Include extended documentation for specific options
+
+Extended documentation for specific options can be added in `_includes/options/` directory. They need to be listed in the directory corresponding to their group and in the filename corresponding to the JSON option name. For example, `_include/options/0-base/version.md` provides extended documentation for the `--version` option.
+
+Once added, the option documentation needs to be re-generated in order for the extended documentation to appear.
+
+### Add "See also" links to options
+
+Links through "See also" references for options have to be added to the frontmatter of the `_book/05-toolkit-reference/04-toolkit-option.md` file. For example:
+```md
+see-also:
+    inputFrom:
+      - "/toolkit-reference/input-formats.html"
+```
 
 ## License
 
