@@ -31,3 +31,5 @@ aside { padding: 10px 20px; margin: 0 0 20px; background: #D0EAF1; border-left: 
 aside p:last-child { margin-bottom: 0px; }
 
 div.toc-group { overflow-y: scroll; border-top: 2px solid #555; }
+
+img.title-page { padding: 180px; padding-top: 300px; }
