@@ -53,7 +53,7 @@
   </xsl:template>
   <xsl:template match="outline:item">
     <li>
-      <xsl:if test="@title != ''">
+      <xsl:if test="(@title!='') and (@title!='Verovio Reference Book')">
         <div>
           <a>
             <xsl:if test="@link">

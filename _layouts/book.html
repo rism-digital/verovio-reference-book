@@ -16,7 +16,7 @@ layout: default
         <a class="hidden-print" href="{{ site.edit-path}}/{{ page.path }}"><button class="btn btn-xs pull-right">Edit this page</button></a>
         {% endunless %}
         {% if page.chapter-title %}<h1>{{ page.chapter-title }}</h1>{% endif %}
-        {% if page.title != '00 Index' %}<h2>{{ page.title }}</h2>{% endif %}
+        {% if page.title != '00 Index' and page.hide_title != true %}<h2>{{ page.title }}</h2>{% endif %}
         {{ content }}
     </div>
 </div>
