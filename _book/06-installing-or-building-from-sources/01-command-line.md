@@ -46,7 +46,7 @@ By default the executable is not stripped. To strip it during the installation d
 sudo make install/strip
 ```
 
-For building it without Plain and Easy support (without <code>regex.h</code>), run:
+For building it without Plain and Easy support, run:
 ```bash
 cmake ../cmake -DNO_PAE_SUPPORT=ON
 ```
