@@ -97,6 +97,20 @@ The script has to be run from the site root directory with the command
 python scripts/generate-examples.py
 ```
 
+## Documenting methods
+
+The method documentation is generated from the Verovio codebase through its [Doxygen documentation](https://github.com/rism-digital/verovio-doxygen).
+
+To update the documentation, you need to run:
+```bash
+python scripts/generate-methods.py release
+```
+
+Note that it will generate the option documentation for the latest release of Verovio. For the documentation of the develop version, run:
+```bash
+python scripts/generate-methods.py develop
+```
+
 ## Documenting options
 
 The option documentation is generated from the Verovio codebase. To update the documentation, you need to run:
