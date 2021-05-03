@@ -246,7 +246,7 @@ Get the MEI as a string.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `jsonOptions` | `const std::string &` | `""` | A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; noXmlIds: true or false; false by default - remove all @xml:id not used in the data; |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; removeIds: true or false; false by default - remove all @xml:id not used in the data; |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**

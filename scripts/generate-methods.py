@@ -11,7 +11,7 @@ import sys
 from typing import Dict, List
 import yaml
 
-header_url = "https://raw.githubusercontent.com/rism-digital/verovio-doxygen/master/xml/classvrv_1_1_toolkit.xml"
+header_url = "https://raw.githubusercontent.com/rism-digital/verovio-doxygen/{}/xml/classvrv_1_1_toolkit.xml"
 header_tmp_file = "scripts/classvrv_1_1_toolkit.xml"
 methods_ouptut_page = "./_book/05-toolkit-reference/03-toolkit-methods.md"
 
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     verbose_group.add_argument("--verbose", "-v", action="store_true")
     verbose_group.add_argument("--debug", "-d", action="store_true")
 
-    #parser.add_argument("examples", help="Path to examples.yaml file")
+    parser.add_argument("mode", help="Mode (release or develop)")
 
     args = parser.parse_args()
     if args.debug:
@@ -163,13 +163,14 @@ if __name__ == "__main__":
     log.info("Running at logging level %s", level_msg)
 
     # Download the header_file file from the given url
-    log.debug("Downloading %s", header_url)
-    header_file = requests.get(header_url)
+    url = header_url.format(args.mode)
+    log.debug("Downloading %s", url)
+    header_file = requests.get(url)
 
     if 200 <= header_file.status_code < 400:
-        log.info("%s successfully downloaded", header_url)
+        log.info("%s successfully downloaded", url)
     else:
-        log.error("Problem downloading %s. Skipping this example", header_url)
+        log.error("Problem downloading %s. Skipping this example", url)
         sys.exit()
 
     # Save the file locally for parsing
