@@ -34,7 +34,7 @@
     "@headings-font-family": "inherit",
     "@headings-font-weight": "500",
     "@headings-line-height": "1.1",
-    "@headings-color": "inherit",
+    "@headings-color": "#555;",
     "@icon-font-path": "\"../fonts/\"",
     "@icon-font-name": "\"glyphicons-halflings-regular\"",
     "@icon-font-svg-id": "\"glyphicons_halflingsregular\"",

@@ -41,37 +41,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                    <a href="/index.xhtml">Homepage</a>
                 </li>
-                <li class="active">
-                    <a href="/index.html">Reference book</a>
-                </li>
-                <li >
-                    <a href="https://www.verovio.org/test-suite.xhtml">Test suite</a>
-                </li>
-                <!--
-                <li >
-                    <a href="/tutorial.xhtml">Tutorial</a>
+                <li>
+                    <a href="https://book.verovio.org/">Reference book</a>
                 </li>
                 <li >
-                    <a href="/mei-viewer.xhtml">MEI Viewer</a>
+                    <a href="/musicxml.html">Online tools</a>
                 </li>
-                <li >
-                    <a href="/app.html">Verovio App</a>
-                </li>
-                <li >
-                    <a href="/musicxml.html">Other formats</a>
-                </li>
-                -->
-                <!--
-                <li class="dropdown ">
-                    <a href="/" class="dropdown-toggle" data-toggle="dropdown">Plaine &amp; Easie<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                          <li><a href="/pae-examples.xhtml">Examples</a></li>
-                          <li><a href="/pae-editor.xhtml">Editor</a></li>
-                    </ul>
-                </li>
-                -->
               </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -82,8 +59,8 @@
 
         <div class="top-header"> 
     <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
-        <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
-        <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <h1 style="color: #eee;" class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 style="color: #eee;" class="hidden-print visible-xs">A music notation engraving library</h3> 
         <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
     </div>
 </div>
@@ -522,7 +499,7 @@
       <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td><code class="language-plaintext highlighter-rouge">""</code></td>
-      <td>A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; noXmlIds: true or false; false by default - remove all @xml:id not used in the data;</td>
+      <td>A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; removeIds: true or false; false by default - remove all @xml:id not used in the data;</td>
     </tr>
   </tbody>
 </table>

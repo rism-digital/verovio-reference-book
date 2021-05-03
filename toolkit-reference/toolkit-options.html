@@ -41,37 +41,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                    <a href="/index.xhtml">Homepage</a>
                 </li>
-                <li class="active">
-                    <a href="/index.html">Reference book</a>
-                </li>
-                <li >
-                    <a href="https://www.verovio.org/test-suite.xhtml">Test suite</a>
-                </li>
-                <!--
-                <li >
-                    <a href="/tutorial.xhtml">Tutorial</a>
+                <li>
+                    <a href="https://book.verovio.org/">Reference book</a>
                 </li>
                 <li >
-                    <a href="/mei-viewer.xhtml">MEI Viewer</a>
+                    <a href="/musicxml.html">Online tools</a>
                 </li>
-                <li >
-                    <a href="/app.html">Verovio App</a>
-                </li>
-                <li >
-                    <a href="/musicxml.html">Other formats</a>
-                </li>
-                -->
-                <!--
-                <li class="dropdown ">
-                    <a href="/" class="dropdown-toggle" data-toggle="dropdown">Plaine &amp; Easie<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                          <li><a href="/pae-examples.xhtml">Examples</a></li>
-                          <li><a href="/pae-editor.xhtml">Editor</a></li>
-                    </ul>
-                </li>
-                -->
               </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -82,8 +59,8 @@
 
         <div class="top-header"> 
     <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
-        <h1 class="hidden-print hidden-xs">A music notation engraving library</h1> 
-        <h3 class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <h1 style="color: #eee;" class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 style="color: #eee;" class="hidden-print visible-xs">A music notation engraving library</h3> 
         <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
     </div>
 </div>
@@ -336,6 +313,11 @@
 <div class="col col-md-6"><p>Render open control events</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputFormatRaw":  &lt;br&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-format-raw </code></span></p>
+</div>
+<div class="col col-md-6"><p>Writes MEI out with no line indenting or non-content newlines.</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputIndent":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-indent  &lt;i&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>Output indentation value for MEI and SVG<br />(default: 3; min: 1; max: 10)</p>
@@ -449,6 +431,11 @@
 
 <h3 id="general-layout-options">General layout options</h3>
 
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"alternativeOctaveSymbols":  &lt;br&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--alternative-octave-symbols </code></span></p>
+</div>
+<div class="col col-md-6"><p>Use alternative symbols for displaying octaves</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"barLineSeparation":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bar-line-separation  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The default distance between multiple barlines when locked together<br />(default: 0.8; min: 0.5; max: 2.0)</p>
@@ -487,6 +474,8 @@
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"font":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--font  &lt;s&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>Set the music font<br />(default: “Leipzig”)</p>
+</div>
+<div class="col col-md-3"><p>See also: <a href="/advanced-topics/smufl.html">SMuFL fonts</a></p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"graceFactor":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--grace-factor  &lt;f&gt;</code></span></p>
@@ -592,6 +581,16 @@
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mnumInterval":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mnum-interval  &lt;i&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>How frequently to place measure numbers</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"multiRestStyle":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--multi-rest-style  &lt;s&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>Rendering style of multiple measure rests<br />(default: “auto”; other values: [‘auto’, ‘default’, ‘block’, ‘symbols’])</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-line-thickness  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>The thickness of the line used for an octave line<br />(default: 0.2; min: 0.1; max: 1.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"repeatBarLineDotSeparation":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--repeat-bar-line-dot-separation  &lt;f&gt;</code></span></p>
@@ -887,9 +886,9 @@
 <div class="col col-md-6"><p>The margin for right barLine in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginTabRhythm":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-tab-rhythm  &lt;f&gt;</code></span></p>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginTabDurSym":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-tab-dur-sym  &lt;f&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for tabRhythm in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-6"><p>The margin for tabDurSym in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginAccid":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-accid  &lt;f&gt;</code></span></p>
@@ -972,9 +971,9 @@
 <div class="col col-md-6"><p>The right margin for right barLine in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginTabRhythm":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-tab-rhythm  &lt;f&gt;</code></span></p>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginTabDurSym":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-tab-dur-sym  &lt;f&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for tabRhythm in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-6"><p>The right margin for tabDurSym in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginArtic":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-artic  &lt;f&gt;</code></span></p>
