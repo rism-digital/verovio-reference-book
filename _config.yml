@@ -2,6 +2,8 @@ name: Reference book for Verovio
 baseurl: ""
 exclude: ['scripts']
 
+verovio-version: 3.4
+
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -17,6 +19,9 @@ sass:
   sourcemap: never
 
 theme: verovio-theme
+
+plugins:
+  - "jekyll-github-metadata"
 
 edit-path: "https://github.com/rism-digital/verovio-reference-book/edit/master"
 
