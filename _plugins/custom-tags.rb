@@ -41,13 +41,14 @@ module Jekyll
     
     def initialize(tag_name, markup, tokens)
       super
+      @warning = (markup.to_s.include? ".warning") ? "class=\"warning\"" : ""
     end
 
     def render(context)
       site = context.registers[:site]
       converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
       output = converter.convert(super(context))
-      "<aside>#{output}</aside>"
+      "<aside #{@warning}>#{output}</aside>"
     end
   end
 
