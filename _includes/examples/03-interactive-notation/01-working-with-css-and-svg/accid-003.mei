@@ -1,7 +1,0 @@
-<note dur="1" oct="5" pname="f">
-  <accid accid="s" func="edit"/>
-</note>
-<!-- ... -->
-<note dur="1" oct="5" pname="f">
-  <accid accid="x" func="edit"/>
-</note>

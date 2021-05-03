@@ -23,7 +23,7 @@ VRV_OPTIONS: Dict = {
     'footer': 'none',
     'scale': 50,
     'spacingStaff': 4,
-    'xmlIdSeed': 0
+    'xmlIdSeed': 1
 }
 
 
