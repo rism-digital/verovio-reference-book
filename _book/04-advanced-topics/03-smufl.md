@@ -43,11 +43,11 @@ examples:
         - ".//mei:dynam"
 ---
 
-Verovio follows the Standard Music Font Layout ([SMuFL](https://www.smufl.org/)) specification. It means that it is easily possible to change the music font used in Verovio and to have a personalised output. Verovio includes the [Leipzig](https://github.com/rism-digital/leipzig) font, its own SMuFL-compliant music font. Leipzig was initially developed by Etienne Darbellay and Jean-François Marti as part of the Wolfgang music notation software. It is SMuFL compliant since version 5.0 and distributed under the [SIL Open Font License](https://github.com/rism-digital/leipzig/blob/main/LICENSE.txt).
+Verovio follows the Standard Music Font Layout ([SMuFL](https://www.smufl.org/)) specification. It means that it is possible to easily change the music font used in Verovio for personalised output. Verovio includes the [Leipzig](https://github.com/rism-digital/leipzig) font, its own SMuFL-compliant music font. Leipzig was initially developed by Etienne Darbellay and Jean-François Marti as part of the Wolfgang music notation software. It is SMuFL compliant since version 5.0 and distributed under the [SIL Open Font License](https://github.com/rism-digital/leipzig/blob/main/LICENSE.txt).
 
-Verovio also supports and includes the [Bravura](https://github.com/steinbergmedia/bravura) font designed by Daniel Spreadbury, the [Gootville](https://github.com/musescore/MuseScore/tree/master/fonts/gootville) and the [Leland](https://github.com/MuseScoreFonts/Leland) fonts designed by MuseScore community.
+Verovio also supports and includes the [Bravura](https://github.com/steinbergmedia/bravura) font designed by Daniel Spreadbury, and the [Gootville](https://github.com/musescore/MuseScore/tree/master/fonts/gootville) and [Leland](https://github.com/MuseScoreFonts/Leland) fonts designed by the MuseScore community.
 
-Fonts included can be selected by setting the `--font` option. For example, the Bravura font can be selected with the `--font Bravura` option in the command-line tool or by adding `{ font: "Bravura" }` in the JavaScript toolkit options.
+Fonts included can be selected by setting the `--font` option. For example, the Bravura font can be selected with the `--font Bravura` option on the command-line tool or by adding `{ font: "Bravura" }` in the JavaScript toolkit options.
 
 #### Examples
 
@@ -91,7 +91,7 @@ Fonts included can be selected by setting the `--font` option. For example, the 
 
 ### Music symbols in text
 
-For cases when music symbols have to displayed within text, Verovio uses the [VerovioText](https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf) font. This font is a based on Leipzig and include only a very limited set of [symbols](https://torinak.com/font/lsfont.html#https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf?raw=true). They include:
+For cases when music symbols are displayed within text, Verovio uses the [VerovioText](https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf) font. This font is a based on Leipzig and includes a limited set of [symbols](https://torinak.com/font/lsfont.html#https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf?raw=true). They include:
 * Note symbols for tempo indications
 * Lyric elision symbols
 * Figured bass symbols
@@ -107,8 +107,8 @@ Characters in tempo indications can be encoded as Unicode characters or as entit
 
 #### Dynamics
 
-For dynamics, the font is used only in cases where text and dynamic symbols are mixed together. Verovio automatically detects dynamic symbols within text and display them appropriately. In such cases, however, the music font will always be VerovioText and the font specified with the `--font` option will not be used.
+For dynamics, the font is used only where text and dynamic symbols are mixed together. Verovio automatically detects dynamic symbols within text and displays them appropriately. In such cases, however, the music font will always be VerovioText and the font specified with the `--font` option will not be used.
 
 {% include music-notation example="dynam-01" %}
 
-In some cases, it might be desirable to disable the automatic detection of dynamic symbols and the use of the music font. This can be achieved by setting explicitly a text font as illustrated with the `<rend fontfam="Times">` in the second dynamic in the example above.
+In some cases, it might be desirable to disable the automatic detection of dynamic symbols and the use of the music font. This can be achieved by setting a text font explicitly, as illustrated with the `<rend fontfam="Times">` in the second dynamic in the example above.

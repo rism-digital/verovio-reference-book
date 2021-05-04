@@ -49,17 +49,17 @@ examples:
 ---
 
 
-Transposition implementation in Verovio uses the base-40 system that allows for an arbitrary maximum sharp/flat count (where base-40 can handle up to double sharps/flats). The option `--transpose` can be given two types of data: (1) a chromatic interval, or (2) a tonic pitch in the new key with optional direction and octave of transposition added.
+Transposition in Verovio uses the base-40 system that allows for an arbitrary maximum sharp/flat count (where base-40 can handle up to double sharps/flats). The option `--transpose` can be given two types of data: (1) a chromatic interval, or (2) a tonic pitch in the new key with optional direction and octave of transposition added.
 
 ### Transposition by chromatic interval
 
 For transposition by chromatic intervals, the format is an optional sign, followed by a chromatic quality followed by a diatonic number of steps.  Examples: `+M2` = up major second, `-d5` = down diminished fifth
 
-The direction of the interval, with `-` indicating down and no sign or a `+` means up.  A special cases is `P1` which is a perfect unison (so `+P1` == `-P1` since there is no movement up or down.
+The direction of the interval, with `-` indicating down and no sign or a `+` means up.  A special cases is `P1` which is a perfect unison, so `+P1` and `-P1` are equivalent since there is no movement up or down.
 
-Then there is the chromatic quality of the interval.  `P` means perfect, `M` means major, `m` means minor, `d` means diminished, `A` means augmented, `dd` means doubly diminished (and so on), `AA` means doubly augmented (and so on).   For `[PdA]` the case of the letter does not matter so `[pDa]` should be interpreted as equivalent.  `M` and `m` are case sensitive (major and minor).
+For the chromatic quality of the interval, `P` means perfect, `M` means major, `m` means minor, `d` means diminished, `A` means augmented, `dd` means doubly diminished (and so on), `AA` means doubly augmented (and so on).   For `[PdA]` the case of the letter does not matter so `[pDa]` should be interpreted as equivalent. `M` and `m` are case-sensitive (major and minor).
 
-This is the diatonic interval which is any (reasonable) positive integer.  A unison is `1`, a second is `2`, etc.  Compound intervals an octave and above can also be represented, such as `8` for an octave, a `9` for a ninth (octave plus a second), `10` for a tenth (octave plus a third), `15` = two octaves, `16` = two octaves plus a second.
+The diatonic interval is any (reasonable) positive integer.  A unison is `1`, a second is `2`, and so on.  Compound intervals an octave and above can also be represented, such as `8` for an octave, a `9` for a ninth (octave plus a second), `10` for a tenth (octave plus a third), `15` is two octaves, and `16` is two octaves plus a second.
 
 Verovio will print an error message if the string option is not formatted correctly, and it will return an error interval which is a very large interval going down.
 
@@ -91,11 +91,11 @@ For transposition by tonic pitch names, the format is made up of an optional dir
 
 If no direction is given, then the smallest interval will be chosen. For example if starting from C major and transposing to G major, the calculated interval will be down a perfect fourth, since the G below C is closer than the G above C.
 
-When the direction is `+`, the next higher pitch that matches the new tonic will define the interval.  For C major to G major, this is a perfect fifth up.   When the direction is `-`, the next lower pitch that matches the new tonic will define the interval.  For C major to G major, this is a perfect fourth down.
+When the direction is `+`, the next higher pitch that matches the new tonic will define the interval.  For C major to G major, this is a perfect fifth up. When the direction is `-`, the next lowest pitch that matches the new tonic will define the interval.  For C major to G major, this is a perfect fourth down.
 
-The `+` or `-` direction can be doubled/tripled/etc. to indicate additional octave transpositions.   For example `--g` from C major means to transpose down an octave and a fourth: A forth to the next lower G, and then an octave to the next lower G.  Likewise, `+++g` from C major means to transpose up two octaves and a fifth:  A fifth to the next higher G and `++` means two octaves above that G.
+The `+` or `-` direction can be doubled/tripled/etc. to indicate additional octave transpositions.   For example `--g` from C major means to transpose down an octave and a fourth: The fourth to the G below, and then the octave to the next lower G.  Likewise, `+++g` from C major means to transpose up two octaves and a fifth:  A fifth to the G above, then `++` means two octaves above that G.
 
-Then comes a case-insensitive `@pname` for the tonic of the new key `([A-Ga-g])`, followed by an optional `accid` for the new key tonic, which is also case-insensitive `([Ss]*|[Ff]*)`.
+When using a case-insensitive `@pname` for the tonic of the new key, use `([A-Ga-g])` followed by an optional `accid` for the new key tonic. This is also case-insensitive: `([Ss]*|[Ff]*)`.
 
 Examples:  
 
