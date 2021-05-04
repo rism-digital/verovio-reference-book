@@ -1,14 +1,19 @@
 ---
 "/introduction/": About this book
 "/introduction/#getting-help": Getting help
+"/introduction/history.html": History of the project
+"/introduction/history.html#early-stages": Early stages
+"/introduction/history.html#interacting-with-music-encoding": Interacting with music
+  encoding
+"/introduction/history.html#design-principles": Design principles
+"/introduction/use-cases.html": Use-case scenarios
+"/introduction/use-cases.html#architecture-possibilities": Architecture possibilities
+"/introduction/use-cases.html#application-examples": Application examples
 "/introduction/licensing.html": Verovio licensing
 "/introduction/licensing.html#what-is-allowed": What is allowed
 "/introduction/licensing.html#what-is-required": What is required
 "/introduction/licensing.html#what-is-not-allowed": What is not allowed
 "/introduction/licensing.html#what-is-recommended": What is recommended
-"/introduction/overview.html": Overview
-"/introduction/overview.html#early-stages": Early stages
-"/introduction/overview.html#about-this-book": About this book
 "/first-steps/": Introduction
 "/first-steps/#basic-browser-skills": Basic browser skills
 "/first-steps/getting-started.html": Getting started
@@ -139,7 +144,6 @@
 "/installing-or-building-from-sources/other-bindings.html": Other bindings
 "/installing-or-building-from-sources/other-bindings.html#java": Java
 "/installing-or-building-from-sources/other-bindings.html#cocoapods": CocoaPods
-"/contributing/": Introduction
 "/contributing/guidelines.html": Coding guidelines
 "/contributing/guidelines.html#formatting": Formatting
 "/contributing/guidelines.html#includes-and-forward-declarations": Includes and forward
