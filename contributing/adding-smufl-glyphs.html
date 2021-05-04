@@ -114,14 +114,6 @@
     
         
         
-<a class="toc-item toc-subsection" href="#adding-the-glyph-to-the-leipzig-font-file">Adding the glyph to the Leipzig font file</a>
-
-<a class="toc-item toc-subsection" href="#generate-the-leipzig-font-as-svg-font">Generate the Leipzig font as SVG font</a>
-
-<a class="toc-item toc-subsection" href="#add-the-glyph-to-the-list-of-supported-glyph-in-the-xsl-list">Add the glyph to the list of supported glyph in the XSL list</a>
-
-<a class="toc-item toc-subsection" href="#make-a-pr-to-the-develop-leipzig-branch">Make a PR to the develop-leipzig branch</a>
-
     
 
     
@@ -147,21 +139,21 @@
 
 <p>When making a PR, always add an image (e.g., screenshot of FontForge) showing the glyphs.</p>
 
-<h3 id="adding-the-glyph-to-the-leipzig-font-file">Adding the glyph to the Leipzig font file</h3>
+<h4 id="adding-the-glyph-to-the-leipzig-font-file">Adding the glyph to the Leipzig font file</h4>
 
 <p>The file is <code class="language-plaintext highlighter-rouge">./fonts/Leipzig-5.2.sfd</code> and should be edited with <a href="https://fontforge.org/">FontForge</a>. Very often it is possible to copy another existing glyph as basis for the new glyph. Leipzig is visually lighter and thinner than Bravura and new glyphs have to follow this design choice. Do not copy glyphs from Bravura. Make sure the font is valid by running “Element =&gt; “Find Problems…”.</p>
 
 <p>Once the new glyph(s) has/have been added, you also need to change the version number in the font info (menu “Element” =&gt; “Font Info” and then tab “PS Names” in fields “Version” and “Copyright” and tab “Comment” where you also need to add a comment together with the version number. The file can be saved.</p>
 
-<h3 id="generate-the-leipzig-font-as-svg-font">Generate the Leipzig font as SVG font</h3>
+<h4 id="generate-the-leipzig-font-as-svg-font">Generate the Leipzig font as SVG font</h4>
 
 <p>From FontForge, export the with menu “File” =&gt; “Generate Fonts…” and select “SVG font” (option “validate before saving” can be turned off). The file needs to be written to <code class="language-plaintext highlighter-rouge">./fonts/Leipzig.svg</code>.</p>
 
-<h3 id="add-the-glyph-to-the-list-of-supported-glyph-in-the-xsl-list">Add the glyph to the list of supported glyph in the XSL list</h3>
+<h4 id="add-the-glyph-to-the-list-of-supported-glyph-in-the-xsl-list">Add the glyph to the list of supported glyph in the XSL list</h4>
 
 <p>Open the file <code class="language-plaintext highlighter-rouge">./fonts/supported.xsl</code> and uncomment the glyph(s) you added to Leipzig. The XSL file is then used to extract the glyphs supported by Verovio</p>
 
-<h3 id="make-a-pr-to-the-develop-leipzig-branch">Make a PR to the develop-leipzig branch</h3>
+<h4 id="make-a-pr-to-the-develop-leipzig-branch">Make a PR to the develop-leipzig branch</h4>
 
 <p>Once the PR will have been merged, the glyphs will be extracted from the SVG font by running the script <code class="language-plaintext highlighter-rouge">./fonts/generate_all.sh</code> (from <code class="language-plaintext highlighter-rouge">./fonts/</code>). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in <code class="language-plaintext highlighter-rouge">./data/</code> and in <code class="language-plaintext highlighter-rouge">./include/vrv/smufl.h</code></p>
 
