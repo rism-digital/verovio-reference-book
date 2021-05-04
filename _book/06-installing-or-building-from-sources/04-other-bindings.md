@@ -30,7 +30,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Verovio` by adding it
 platform :ios, '12.0'
 use_frameworks!
 target 'MyApp' do
-	pod 'Verovio', :git => 'https://github.com/rism-ch/verovio.git', :branch => 'develop'
+	pod 'Verovio', :git => 'https://github.com/rism-digital/verovio.git', :branch => 'develop'
 end
 ```
 
