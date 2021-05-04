@@ -132,11 +132,11 @@
         
         
         <h2>SMuFL fonts</h2>
-        <p>Verovio follows the Standard Music Font Layout (<a href="https://www.smufl.org/">SMuFL</a>) specification. It means that it is easily possible to change the music font used in Verovio and to have a personalised output. Verovio includes the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font, its own SMuFL-compliant music font. Leipzig was initially developed by Etienne Darbellay and Jean-François Marti as part of the Wolfgang music notation software. It is SMuFL compliant since version 5.0 and distributed under the <a href="https://github.com/rism-digital/leipzig/blob/main/LICENSE.txt">SIL Open Font License</a>.</p>
+        <p>Verovio follows the Standard Music Font Layout (<a href="https://www.smufl.org/">SMuFL</a>) specification. It means that it is possible to easily change the music font used in Verovio for personalised output. Verovio includes the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font, its own SMuFL-compliant music font. Leipzig was initially developed by Etienne Darbellay and Jean-François Marti as part of the Wolfgang music notation software. It is SMuFL compliant since version 5.0 and distributed under the <a href="https://github.com/rism-digital/leipzig/blob/main/LICENSE.txt">SIL Open Font License</a>.</p>
 
-<p>Verovio also supports and includes the <a href="https://github.com/steinbergmedia/bravura">Bravura</a> font designed by Daniel Spreadbury, the <a href="https://github.com/musescore/MuseScore/tree/master/fonts/gootville">Gootville</a> and the <a href="https://github.com/MuseScoreFonts/Leland">Leland</a> fonts designed by MuseScore community.</p>
+<p>Verovio also supports and includes the <a href="https://github.com/steinbergmedia/bravura">Bravura</a> font designed by Daniel Spreadbury, and the <a href="https://github.com/musescore/MuseScore/tree/master/fonts/gootville">Gootville</a> and <a href="https://github.com/MuseScoreFonts/Leland">Leland</a> fonts designed by the MuseScore community.</p>
 
-<p>Fonts included can be selected by setting the <code class="language-plaintext highlighter-rouge">--font</code> option. For example, the Bravura font can be selected with the <code class="language-plaintext highlighter-rouge">--font Bravura</code> option in the command-line tool or by adding <code class="language-plaintext highlighter-rouge">{ font: "Bravura" }</code> in the JavaScript toolkit options.</p>
+<p>Fonts included can be selected by setting the <code class="language-plaintext highlighter-rouge">--font</code> option. For example, the Bravura font can be selected with the <code class="language-plaintext highlighter-rouge">--font Bravura</code> option on the command-line tool or by adding <code class="language-plaintext highlighter-rouge">{ font: "Bravura" }</code> in the JavaScript toolkit options.</p>
 
 <h4 id="examples">Examples</h4>
 
@@ -2872,7 +2872,7 @@
 
 <h3 id="music-symbols-in-text">Music symbols in text</h3>
 
-<p>For cases when music symbols have to displayed within text, Verovio uses the <a href="https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf">VerovioText</a> font. This font is a based on Leipzig and include only a very limited set of <a href="https://torinak.com/font/lsfont.html#https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf?raw=true">symbols</a>. They include:</p>
+<p>For cases when music symbols are displayed within text, Verovio uses the <a href="https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf">VerovioText</a> font. This font is a based on Leipzig and includes a limited set of <a href="https://torinak.com/font/lsfont.html#https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf?raw=true">symbols</a>. They include:</p>
 <ul>
   <li>Note symbols for tempo indications</li>
   <li>Lyric elision symbols</li>
@@ -3171,7 +3171,7 @@
 
 <h4 id="dynamics">Dynamics</h4>
 
-<p>For dynamics, the font is used only in cases where text and dynamic symbols are mixed together. Verovio automatically detects dynamic symbols within text and display them appropriately. In such cases, however, the music font will always be VerovioText and the font specified with the <code class="language-plaintext highlighter-rouge">--font</code> option will not be used.</p>
+<p>For dynamics, the font is used only where text and dynamic symbols are mixed together. Verovio automatically detects dynamic symbols within text and displays them appropriately. In such cases, however, the music font will always be VerovioText and the font specified with the <code class="language-plaintext highlighter-rouge">--font</code> option will not be used.</p>
 
 <p><img class="img-responsive hidden-print" src="/images/examples/04-advanced-topics/03-smufl/dynam-01.svg" alt="examples/04-advanced-topics/03-smufl/dynam-01.svg]" /></p>
 <div class="visible-print"><svg width="504.5px" height="207px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mei="http://www.music-encoding.org/ns/mei" overflow="visible">
@@ -3314,7 +3314,7 @@
 <span class="nt">&lt;dynam</span> <span class="na">staff=</span><span class="s">"1"</span> <span class="na">tstamp=</span><span class="s">"3.000000"</span><span class="nt">&gt;</span>sempre fff rfz e poi<span class="nt">&lt;lb/&gt;</span>poco <span class="nt">&lt;rend</span> <span class="na">fontstyle=</span><span class="s">"normal"</span> <span class="na">fontweight=</span><span class="s">"bold"</span><span class="nt">&gt;</span>a<span class="nt">&lt;/rend&gt;</span> poco crescendo ma non ffff<span class="nt">&lt;lb/&gt;</span>troppo<span class="nt">&lt;/dynam&gt;</span>
 </code></pre></div></div>
 
-<p>In some cases, it might be desirable to disable the automatic detection of dynamic symbols and the use of the music font. This can be achieved by setting explicitly a text font as illustrated with the <code class="language-plaintext highlighter-rouge">&lt;rend fontfam="Times"&gt;</code> in the second dynamic in the example above.</p>
+<p>In some cases, it might be desirable to disable the automatic detection of dynamic symbols and the use of the music font. This can be achieved by setting a text font explicitly, as illustrated with the <code class="language-plaintext highlighter-rouge">&lt;rend fontfam="Times"&gt;</code> in the second dynamic in the example above.</p>
 
     </div>
 </div>
