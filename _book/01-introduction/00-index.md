@@ -13,7 +13,9 @@ The chapter on [advanced-topics](/advanced-topics) provides some more in-depths 
 
 The last chapters provides a [reference](/toolkit-reference) for the operations and options available. They also cover how to [build and install](/installing-or-building-from-sources) Verovio, including from the source code, and how to [contribute](/contributing) to the active development of Verovio.
 
-The DOI [10.5448/7em6-my23](https://doi.org/10.5448/7em6-my23) identifies the currently applicable version of the book documenting the latest release of Verovio.
+#### Reference
+
+This book is identified with the DOI [10.5448/7em6-my23](https://doi.org/10.5448/7em6-my23) which refers to the currently applicable version of the book documenting the latest release of Verovio.
 
 ### Getting help
 
