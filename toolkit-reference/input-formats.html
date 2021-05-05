@@ -150,19 +150,141 @@
 
 <p><strong>MEI 3.0 files</strong></p>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;turn@form&gt;</code> attribute is upgraded with <code class="language-plaintext highlighter-rouge">inv</code> and <code class="language-plaintext highlighter-rouge">norm</code> values changed to <code class="language-plaintext highlighter-rouge">lower</code> and <code class="language-plaintext highlighter-rouge">upper</code> respectively.</p>
+<p>The following elements / attributes are upgraded:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">turn@form</code></li>
+  <li><code class="language-plaintext highlighter-rouge">staffDef@barthru</code></li>
+  <li><code class="language-plaintext highlighter-rouge">staffDef@label</code></li>
+  <li><code class="language-plaintext highlighter-rouge">staffDef@label.abbr</code></li>
+  <li><code class="language-plaintext highlighter-rouge">staffGrp@label</code></li>
+  <li><code class="language-plaintext highlighter-rouge">staffGrp@label.abbr</code></li>
+  <li><code class="language-plaintext highlighter-rouge">fTrem@slash</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@dur.ges</code></li>
+  <li><code class="language-plaintext highlighter-rouge">beatRpt</code></li>
+</ul>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;staffGrp@barthru&gt;</code> attribute is upgraded to <code class="language-plaintext highlighter-rouge">&lt;staffGrp@bar.thru&gt;</code>.</p>
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;turn</span> <span class="na">form=</span><span class="s">"inv"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;turn</span> <span class="na">form=</span><span class="s">"norm"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;turn</span> <span class="na">form=</span><span class="s">"lower"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;turn</span> <span class="na">form=</span><span class="s">"upper"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;staffDef@label&gt;</code> (or <code class="language-plaintext highlighter-rouge">&lt;staffGrp&gt;</code>) attribute is upgraded to <code class="language-plaintext highlighter-rouge">&lt;staffDef&gt;&lt;label&gt;&lt;/label&gt;&lt;/staffDef&gt;</code> element. The same applies to the <code class="language-plaintext highlighter-rouge">&lt;staffDef@label.abbr&gt;</code> (or <code class="language-plaintext highlighter-rouge">&lt;staffGrp&gt;</code>) attribute which is upgraded to a <code class="language-plaintext highlighter-rouge">&lt;staffDef&gt;&lt;labelAbbr&gt;&lt;/labelAbbr&gt;&lt;/staffDef&gt;</code> element.</p>
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;staff</span> <span class="na">barthru=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;staff</span> <span class="na">bar.thru=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;fTrem@beams&gt;</code> attribute is replacing <code class="language-plaintext highlighter-rouge">&lt;fTrem@slash&gt;</code> with its value if given.</p>
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;staffDef</span> <span class="na">label=</span><span class="s">"violin I"</span> <span class="na">label.abbr=</span><span class="s">"vl I"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;staffDef&gt;</span>
+   <span class="nt">&lt;label&gt;</span>Violin I<span class="nt">&lt;label&gt;</span>
+   <span class="nt">&lt;labelAbbr&gt;</span>Vl I<span class="nt">&lt;labelAbbr&gt;</span>
+<span class="nt">&lt;/staffDef&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
+
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;fTrem</span> <span class="na">slash=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;fTrem</span> <span class="na">beams=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
+
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;note</span> <span class="na">dur.ges=</span><span class="s">"8p"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;note</span> <span class="na">dur.ges=</span><span class="s">"32r"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;note</span> <span class="na">dur.ges=</span><span class="s">"32s"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;note</span> <span class="na">dur.ppq=</span><span class="s">"8"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;note</span> <span class="na">dur.recip=</span><span class="s">"32"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;note</span> <span class="na">dur.real=</span><span class="s">"32"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
+
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;beatRpt</span> <span class="na">rend=</span><span class="s">"4"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;beatRpt</span> <span class="na">rend=</span><span class="s">"8"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;beatRpt</span> <span class="na">rend=</span><span class="s">"16"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;beatRpt</span> <span class="na">form=</span><span class="s">"4"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;beatRpt</span> <span class="na">slash=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;beatRpt</span> <span class="na">slash=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;beatRpt</span> <span class="na">slash=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;beatRpt</span> <span class="na">slash=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
 
 <p><strong>MEI 4.0 files</strong></p>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;mensur@sign&gt;</code> is set to <code class="language-plaintext highlighter-rouge">O</code> if <code class="language-plaintext highlighter-rouge">mensur@tempus="3"</code> and to <code class="language-plaintext highlighter-rouge">C</code> otherwise.</p>
+<p>The following elements / attributes are upgraded:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mensur@tempus</code></li>
+  <li><code class="language-plaintext highlighter-rouge">mensur@prolatio</code></li>
+</ul>
 
-<p>The <code class="language-plaintext highlighter-rouge">&lt;mensur@dot&gt;</code> is set to <code class="language-plaintext highlighter-rouge">true</code> if <code class="language-plaintext highlighter-rouge">mensur@prolatio="3"</code> and to <code class="language-plaintext highlighter-rouge">false</code> otherwise.</p>
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;mensur</span> <span class="na">tempus=</span><span class="s">"3"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;mensur</span> <span class="na">tempus=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;mensur</span> <span class="na">tempus=</span><span class="s">"3"</span> <span class="na">sign=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;mensur</span> <span class="na">tempus=</span><span class="s">"2"</span> <span class="na">sign=</span><span class="s">"C"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
+
+<div class="row"><div class="col col-md-6">
+<p><em>Original data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;mensur</span> <span class="na">prolatio=</span><span class="s">"3"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;mensur</span> <span class="na">prolatio=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+<div class="col col-md-6">
+<p><em>Upgraded data</em></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;mensur</span> <span class="na">prolatio=</span><span class="s">"3"</span> <span class="na">dot=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;mensur</span> <span class="na">prolatio=</span><span class="s">"2"</span> <span class="na">dot=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+</div>
 
 <h4 id="page-based-mei">Page-based MEI</h4>
 
