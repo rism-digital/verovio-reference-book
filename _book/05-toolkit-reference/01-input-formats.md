@@ -266,20 +266,138 @@ Various attributes in `<page>` and `<measure>` for the page-based version of MEI
 
 **MEI 3.0 files**
 
-The `<turn@form>` attribute is upgraded with `inv` and `norm` values changed to `lower` and `upper` respectively.
+The following elements / attributes are upgraded:
+* `turn@form`
+* `staffDef@barthru`
+* `staffDef@label`
+* `staffDef@label.abbr`
+* `staffGrp@label`
+* `staffGrp@label.abbr`
+* `fTrem@slash`
+* `@dur.ges`
+* `beatRpt`
 
-The `<staffGrp@barthru>` attribute is upgraded to `<staffGrp@bar.thru>`.
+{% row %}{% col %}
+*Original data*
+```xml
+<turn form="inv"/>
+<turn form="norm"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<turn form="lower"/>
+<turn form="upper"/>
+```
+{% endcol %}{% endrow %}
 
-The `<staffDef@label>` (or `<staffGrp>`) attribute is upgraded to `<staffDef><label></label></staffDef>` element. The same applies to the `<staffDef@label.abbr>` (or `<staffGrp>`) attribute which is upgraded to a `<staffDef><labelAbbr></labelAbbr></staffDef>` element.
+{% row %}{% col %}
+*Original data*
+```xml
+<staff barthru="true"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<staff bar.thru="true"/>
+```
+{% endcol %}{% endrow %}
 
-The `<fTrem@beams>` attribute is replacing `<fTrem@slash>` with its value if given.
+{% row %}{% col %}
+*Original data*
+```xml
+<staffDef label="violin I" label.abbr="vl I"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<staffDef>
+   <label>Violin I<label>
+   <labelAbbr>Vl I<labelAbbr>
+</staffDef>
+```
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+```xml
+<fTrem slash="2"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<fTrem beams="2"/>
+```
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+```xml
+<note dur.ges="8p"/>
+<note dur.ges="32r"/>
+<note dur.ges="32s"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<note dur.ppq="8"/>
+<note dur.recip="32"/>
+<note dur.real="32"/>
+```
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+```xml
+<beatRpt rend="4"/>
+<beatRpt rend="8"/>
+<beatRpt rend="16"/>
+<beatRpt form="4"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<beatRpt slash="1"/>
+<beatRpt slash="1"/>
+<beatRpt slash="2"/>
+<beatRpt slash="1"/>
+```
+{% endcol %}{% endrow %}
+
 
 **MEI 4.0 files**
 
-The `<mensur@sign>` is set to `O` if `mensur@tempus="3"` and to `C` otherwise.
+The following elements / attributes are upgraded:
+* `mensur@tempus`
+* `mensur@prolatio`
 
-The `<mensur@dot>` is set to `true` if `mensur@prolatio="3"` and to `false` otherwise.
+{% row %}{% col %}
+*Original data*
+```xml
+<mensur tempus="3"/>
+<mensur tempus="2"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<mensur tempus="3" sign="0"/>
+<mensur tempus="2" sign="C"/>
+```
+{% endcol %}{% endrow %}
 
+{% row %}{% col %}
+*Original data*
+```xml
+<mensur prolatio="3"/>
+<mensur prolatio="2"/>
+```
+{% endcol %}{% col %}
+*Upgraded data*
+```xml
+<mensur prolatio="3" dot="true"/>
+<mensur prolatio="2" dot="false"/>
+```
+{% endcol %}{% endrow %}
 
 #### Page-based MEI
 
