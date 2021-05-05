@@ -120,7 +120,7 @@
     <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
     
 
-    <a class="toc-item" href="/contributing/">Contributing</a>
+    <a class="toc-item" href="/contributing/guidelines.html">Contributing</a>
     
 
 </div>
@@ -132,7 +132,11 @@
         
         
         <h2>SMuFL fonts</h2>
-        <p>Verovio follows the Standard Music Font Layout (<a href="https://www.smufl.org/">SMuFL</a>) specification. It means that it is possible to easily change the music font used in Verovio for personalised output. Verovio includes the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font, its own SMuFL-compliant music font. Leipzig was initially developed by Etienne Darbellay and Jean-François Marti as part of the Wolfgang music notation software. It is SMuFL compliant since version 5.0 and distributed under the <a href="https://github.com/rism-digital/leipzig/blob/main/LICENSE.txt">SIL Open Font License</a>.</p>
+        <p>Most music notation software applications use music fonts for rendering music symbols or parts of music symbols. These may include clefs, note heads, time signatures or articulation signs. However, these fonts often have incompatible code points – the internal location within the font that points to a symbol. They are most of the time developed with no common agreement on which code point represents which character. The code point for the G clef symbol in one font may be the code point used for a quarter rest in another, or may be simply undefined. Furthermore, they usually have their own metric and positioning system for specifying what the size of the glyph is and where its baseline is. Because of this, music fonts are difficult to use interchangeably.</p>
+
+<p>To address this, the Standard Music Font Layout (<a href="https://www.smufl.org/">SMuFL</a>) specification has been developed to attempt to harmonize code points across music fonts by specifying code points and symbol sizes for music fonts. SMuFL gives users the ability to reference specific Unicode code points with the understanding that it would represent the same, or similar, symbol across fonts. This presents new opportunities for exploring visual representations of music within a music encoding system without necessarily tying them to a particular font. While previous music encoding systems could not reference font code points without becoming tied to that font for representation, the introduction of SMuFL to music encoding can provide a reference to a particular graphical symbol that should be used to render a given encoding.</p>
+
+<p>Verovio follows the SMuFL specification. It means that it is possible to easily change the music font used in Verovio for personalised output. Verovio includes the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font, its own SMuFL-compliant music font. Leipzig was initially developed by Etienne Darbellay and Jean-François Marti as part of the Wolfgang music notation software. It is SMuFL compliant since version 5.0 and distributed under the <a href="https://github.com/rism-digital/leipzig/blob/main/LICENSE.txt">SIL Open Font License</a>.</p>
 
 <p>Verovio also supports and includes the <a href="https://github.com/steinbergmedia/bravura">Bravura</a> font designed by Daniel Spreadbury, and the <a href="https://github.com/musescore/MuseScore/tree/master/fonts/gootville">Gootville</a> and <a href="https://github.com/MuseScoreFonts/Leland">Leland</a> fonts designed by the MuseScore community.</p>
 

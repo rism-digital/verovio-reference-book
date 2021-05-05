@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>History of the project</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap.min.css" type="text/css" /><!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/fileinput.min.css" />
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/verovio.css" />
+        <link rel="stylesheet" href="/assets/css/midiplayer.css" />
+
+        <link rel="stylesheet" href="/css/verovio-site.css" />
+
+        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                </li>
+                <li class="active">
+                    <a href="https://book.verovio.org/">Reference book</a>
+                </li>
+                <li >
+                    <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+        <div class="top-header"> 
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
+        <h1 style="color: #eee;" class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 style="color: #eee;" class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    </div>
+</div>
+
+
+        <div class="container with-footer">
+
+            
+
+
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="toc-group">
+
+    <a class="toc-item" href="/introduction/">Introduction</a>
+    
+        
+        
+<a class="toc-item toc-section " href="/introduction/">About this book</a>
+    
+
+<a class="toc-item toc-section selected" href="/introduction/history.html">History of the project</a>
+    
+        
+        
+<a class="toc-item toc-subsection" href="#early-stages">Early stages</a>
+
+<a class="toc-item toc-subsection" href="#interacting-with-music-encoding">Interacting with music encoding</a>
+
+<a class="toc-item toc-subsection" href="#design-principles">Design principles</a>
+
+    
+
+<a class="toc-item toc-section " href="/introduction/use-cases.html">Use-case scenarios</a>
+    
+
+<a class="toc-item toc-section " href="/introduction/licensing.html">Verovio licensing</a>
+    
+
+    
+
+    <a class="toc-item" href="/first-steps/">Tutorial 1: First Steps</a>
+    
+
+    <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
+    
+
+    <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
+    
+
+    <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
+    
+
+    <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+
+    <a class="toc-item" href="/contributing/guidelines.html">Contributing</a>
+    
+
+</div>
+    </div>
+
+    <div class="col-md-9">
+        
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/01-introduction/01-history.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        
+        
+        <h2>History of the project</h2>
+        <p>Engraving music notation by computer is a notoriously complex task, and the most powerful music notation rendering engines are, for the most part, the result of long-term developments of commercial music notation editors in which considerable resources had to be invested. They each have their own internal structure and file formats. Furthermore, the music notation rendering engines of music notation editors are not very modular and cannot easily be used or integrated into other applications.</p>
+
+<p>Besides music notation editors, some music notation rendering engines are also available as command-line tools. These are easier to integrate than desktop applications, however with occasionally quite significant dependencies and requirements that limit the contexts in which their use is possible. This is the case for <a href="http://lilypond.org/">LilyPond</a>, a very popular and powerful typesetting engine</p>
+
+<p>Such tools have been used for many years within the <a href="https://music-encoding.org">Music Encoding Initiative</a> (MEI) community for engraving scores encoded in MEI. Using them, however, meant converting the MEI to another encoding scheme that could be used as input format for the engraving tool. Whichever solution was used to do this, it remained clearly suboptimal. MEI users willing to benefit from all the strengths of MEI were facing the problem of not being able to render their data properly. Converting a music encoding format to another one is known to become quickly problematic. It is particularly true when converting from MEI markup that is rich and detailed, a feature that distinguishes MEI from other encoding schemes. With a conversion step, it is likely that not all the information will be preserved in the rendering, or at least only in cumbersome ways and with sometimes quite limited results.</p>
+
+<p>At that time, by about thirty years after the initial development of music notation software applications, the digital domain had significantly changed with the advent of the online world. For music notation, this translated into new possibilities but also new challenges to be faced. While most music notation engraving tools target PDF, this format is clearly not the ideal one in web-based environments. It can be published online, but some web browsers still require a dedicated viewer plugin to be installed for this to be possible. They yield inconsistent viewing and document browsing experiences, which is far from ideal. To embed PDF files directly in web pages code, they need to be converted to images, which creates an overhead and additional complications in the publication process, with often poor results in the display quality.</p>
+
+<h3 id="early-stages">Early stages</h3>
+
+<p>In 2013, the <a href="https://rism.digital">RISM Digital Center</a> launched the development of Verovio for rendering the music incipits or the <a href="https://rism.info">RISM project</a>. The main idea behind the development of Verovio was to implement a tool that could render the RISM music incipits directly but also to support MEI natively. That is, without having MEI converted to another format, either explicitly or internally in the software application used for rendering. With Verovio, the MEI markup is parsed and rendered as notation with a single tool and in one step.</p>
+
+<p>One of the reasons for choosing to implement a library from scratch rather than modifying an existing library was that it will allow to operate on a memory representation of MEI, which will make it significantly easier to render complex MEI features in the long run. Previous experience has indeed shown that modifying an existing solution can be very quick to develop at the beginning, but that the development curve eventually reaches a plateau.</p>
+
+<p>Another idea behind the development of Verovio was to have a tool that would be easy to use in web environments. Instead of targeting PDF output, Verovio uses the <a href="https://www.w3.org/TR/SVG11/">Scalable Vector Graphics</a> (SVG) format developed and maintained by the <a href="https://www.w3.org/">W3C</a>. The advantage of SVG over other output formats, and Postscript and PDF in particular, is that it can easily be used in a web-based environment because it is rendered natively in most modern web browsers with no plug-in required. In addition, since SVG is a vector format, the output can also be used for high-quality printing, which means that it offers the best of both digital and paper-based worlds.</p>
+
+<p>With the same goal in mind, Verovio was designed to be light and fast and has no external dependencies, making it very flexible and easy to use or integrate into digital environments.</p>
+
+<h3 id="interacting-with-music-encoding">Interacting with music encoding</h3>
+
+<p>Today, partly in response to the development of MIR applications, rendering of music notation can be necessary in very different contexts, for example within standalone desktop applications, in server-side web application scenarios, or directly in a web browser. Music notation might need to be rendered for displaying search results or for visualising analysis outputs. Another example is score-following applications, where the passage currently played needs to be displayed and possibly highlighted. These are different use-cases of interactive applications where music notation plays a key role, including many cases where the notation itself has to be an interactive component.</p>
+
+<p>Several design features of the Verovio library make it highly suitable for interactive music notation applications. It is a software library that can run in a wide range of environments (and not a full software application) and it is light and fast. The JavaScript version of Verovio is particularly promising because it provides a fast in-browser music MEI typesetting engine that can easily be integrated into web-based applications. This setup makes it possible to design ground-breaking web applications where the MEI encoding is rendered on the fly. In such designs we can rethink the interface and avoid mimicking page output. We can instead adjust the layout dynamically to the screen of the device employed by the user. The layout can be calculated to fill the size of the screen, or interactively changed according to a zoom level adjusted by the user. This opens up new responsive web-interfaces to be designed and developed based on dynamic music notation reflow. This works particularly well with SVG, especially since it is now supported by all modern web browsers. However innovative the dynamic layout of music notation may be, it remains a very basic interaction. Verovio aims to go further and to produce a graphic output that can then be the foundation for more complex interactions.</p>
+
+<p>Because SVG is XML, it has an advantage over raster image formats in that every graphical element is addressable. This feature makes it intrinsically well suited for interaction, and this is also true for music notation. In a web environment, the addressability can be used for highlighting graphical elements such as notes or any other music symbols. One additional characteristic of SVG is that its XML tree can be structured as desired, and an innovative design feature of Verovio was to go further in the structuring of the output by leveraging this characteristic. Since Verovio implements the MEI structure internally, this key feature of SVG made it possible to preserve the MEI structure in the design of the SVG output in Verovio. Preserving the MEI structure in the SVG output is a considerable overhead in the rendering process but makes it a unique feature of Verovio.</p>
+
+<p>As a result, Verovio output in SVG is not the end of a unidirectional rendering process. Quite on the contrary, it should instead be seen as an intermediate layer standing between the MEI encoding and its rendering that can act as the cornerstone for a bi-directional interaction: from the encoding to the notation, but also from the notation to the encoding through the user interface.</p>
+
+<h3 id="design-principles">Design principles</h3>
+
+<p>The basis for interactivity offered by MEI coupled with Verovio follows some important design principles. First for all, the principle of <em>availability</em> and <em>discoverability</em>. That is, all the content (e.g., all the MEI editorial variants) is available. Alternative text can be made discoverable, for example with CSS highlighting. It also follows the design principle of <em>scalability</em>. Verovio is light and fast. It can run on small devices, but it also supports large files in higher resource environments.</p>
+
+<p>They are also some technical principles that are followed as far as possible. They include <em>reusability</em> and <em>durability</em>. By providing only the interaction foundation and not making any assumption in interface design, especially with a software library that has no dependency, reusability is undeniably maximised. So is the durability, although durability is hard to predict in software development, particularly for digital humanities projects which have slow development cycles in comparison with the development of the technology itself. Reducing dependencies as much as possible is one way to increase durability. In the case of MEI rendering, keeping the rendering engine separate from larger applications that will use it is another way.</p>
+
+<p>In terms of editions and interface design, there is much still to invent. This will need to be done hand in hand with the development of MEI. It is obvious that merely imitating printed output in a digital environment will not be satisfactory. Most effort should be spent on developing the added value that digital environments can offer. Parallel with the development of the online world is the appearance of new devices, such as tablets with wireless network access. They offer new possibilities in terms of digital access and change the manner and location in which digital content can be read. Developing these possibilities will not preclude the co-existence of printed editions, which have and will continue to retain their own added value. The challenge now is neither to replicate nor to supplant existing media or applications, but to expand horizons by exploring new ways of conceiving the information to which we have access, and MEI and Verovio are a decisive and exciting step in this direction.</p>
+
+    </div>
+</div>
+
+<script>
+    let options = {
+        rootMargin: '60px'
+    }
+    function adjustSideBar() {
+        elem = document.getElementsByClassName("toc-group")[0];
+        // 992 is the breakpoint for which the sidebar moves to the top; 35 is the footer height
+        elem.style.height = (window.innerWidth < 992) ? "" : `${window.innerHeight - elem.offsetTop - 35}px`;
+    }
+
+    window.onresize = function () {
+        adjustSideBar();
+    };
+    window.onload = function() {
+        adjustSideBar();
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    // First deselect everything
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection`);
+                    for (i = 0; i < sections.length; i++){
+                        sections[i].classList.remove('selected');
+                    }
+                    // The one entering is marked as .on-screen
+                    document.querySelector(`.toc-group a[href="#${id}"]`).classList.add('on-screen');
+                    // Select the first that in .on-screen
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    sections[0].classList.add('selected');
+
+                } else {
+                    leaving = document.querySelector(`.toc-group a[href="#${id}"]`)
+                    // Remove the .on-screen from the one leaving
+                    leaving.classList.remove('on-screen');
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    // If no other one is on screen, just leave things as they are
+                    if (sections.length > 0) {
+                        // Otherwise de-select the one that is leaving
+                        leaving.classList.remove('selected');
+                        // Selected the first .on-screen one and de-select the other ones
+                        sections[0].classList.add('selected');
+                        for (i = 1; i < sections.length; i++){
+                            console.log(sections[i].getAttribute('id'))
+                            sections[i].classList.remove('selected');
+                        }
+                    }
+                }
+            });
+        }, options);
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+    });
+</script>
+
+
+
+        </div>
+
+        <footer class="hidden-print footer navbar-fixed-bottom">
+            <p>
+                
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).ready(function() {
+
+                
+
+            });
+        //]]>
+        </script>
+    </body>
+</html>
