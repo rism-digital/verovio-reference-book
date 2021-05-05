@@ -1,5 +1,5 @@
 ---
-title: "Licensing"
+title: "Verovio licensing"
 ---
 
 Verovio is licensed under the [OSI](https://opensource.org/)-approved [GNU Lesser General Public License (LGPLv3)](https://www.gnu.org/licenses/lgpl-3.0.en.html). This means that Verovio can be used in any contexts that are compliant with the requirements of that license. In this section, we explain more concretely what you can do with it in your project, but also what is required or not allowed for you to do, and what we additionally recommend.
