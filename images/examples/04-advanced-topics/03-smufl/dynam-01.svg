@@ -1,16 +1,16 @@
 <svg width="504.5px" height="207px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mei="http://www.music-encoding.org/ns/mei" overflow="visible">
    <desc>Engraved by Verovio 3.4.1-8f65a58</desc>
    <defs>
-      <symbol id="E050-0000001044788124" viewBox="0 0 1000 1000" overflow="inherit">
+      <symbol id="E050-0000001838436187" viewBox="0 0 1000 1000" overflow="inherit">
          <path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
       </symbol>
-      <symbol id="E084-0000001044788124" viewBox="0 0 1000 1000" overflow="inherit">
+      <symbol id="E084-0000001838436187" viewBox="0 0 1000 1000" overflow="inherit">
          <path transform="scale(1,-1)" d="M0 -78c84 97 114 180 134 329h170c-13 -32 -82 -132 -99 -151l-84 -97c-33 -36 -59 -63 -80 -81h162v102l127 123v-225h57v-39h-57v-34c0 -43 19 -65 57 -65v-34h-244v36c48 0 60 26 60 70v27h-203v39z" />
       </symbol>
-      <symbol id="E0A4-0000001044788124" viewBox="0 0 1000 1000" overflow="inherit">
+      <symbol id="E0A4-0000001838436187" viewBox="0 0 1000 1000" overflow="inherit">
          <path transform="scale(1,-1)" d="M0 -39c0 68 73 172 200 172c66 0 114 -37 114 -95c0 -84 -106 -171 -218 -171c-64 0 -96 30 -96 94z" />
       </symbol>
-      <symbol id="E260-0000001044788124" viewBox="0 0 1000 1000" overflow="inherit">
+      <symbol id="E260-0000001838436187" viewBox="0 0 1000 1000" overflow="inherit">
          <path transform="scale(1,-1)" d="M20 110c32 16 54 27 93 27c26 0 35 -3 54 -13c13 -7 24 -20 27 -38l4 -25c0 -28 -16 -57 -45 -89c-23 -25 -39 -44 -65 -68l-88 -79v644h20v-359zM90 106c-32 0 -48 -10 -70 -29v-194c31 31 54 59 71 84c21 32 32 59 32 84c0 9 1 16 1 20c0 14 -3 21 -11 30l-8 3z" />
       </symbol>
    </defs>
@@ -26,105 +26,105 @@
    <style type="text/css">g.page-margin{font-family:Times;} g.ending, g.reh, g.tempo{font-weight:bold;} g.dir, g.dynam, g.mNum{font-style:italic;} g.label{font-weight:normal;}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 10090 4140">
       <g class="page-margin" transform="translate(500, 500)">
-         <g id="system-0000001399125485" class="system">
-            <g id="section-0000001115438165" class="section boundaryStart" />
-            <g id="measure-0000001784484492" class="measure">
-               <g id="staff-0000001474833169" class="staff">
+         <g id="system-0000001400928261" class="system">
+            <g id="section-0000001436600438" class="section boundaryStart" />
+            <g id="measure-0000000784918245" class="measure">
+               <g id="staff-0000001512003261" class="staff">
                   <path d="M0 247 L9096 247" stroke="currentColor" stroke-width="13" />
                   <path d="M0 427 L9096 427" stroke="currentColor" stroke-width="13" />
                   <path d="M0 607 L9096 607" stroke="currentColor" stroke-width="13" />
                   <path d="M0 787 L9096 787" stroke="currentColor" stroke-width="13" />
                   <path d="M0 967 L9096 967" stroke="currentColor" stroke-width="13" />
-                  <g id="clef-0000000382955828" class="clef">
-                     <use xlink:href="#E050-0000001044788124" x="90" y="787" height="720px" width="720px" />
+                  <g id="clef-0000001552580702" class="clef">
+                     <use xlink:href="#E050-0000001838436187" x="90" y="787" height="720px" width="720px" />
                   </g>
-                  <g id="keysig-0000000330111137" class="keySig">
-                     <use xlink:href="#E260-0000001044788124" x="735" y="607" height="720px" width="720px" />
-                     <use xlink:href="#E260-0000001044788124" x="915" y="337" height="720px" width="720px" />
-                     <use xlink:href="#E260-0000001044788124" x="1095" y="697" height="720px" width="720px" />
+                  <g id="keysig-0000000150063817" class="keySig">
+                     <use xlink:href="#E260-0000001838436187" x="735" y="607" height="720px" width="720px" />
+                     <use xlink:href="#E260-0000001838436187" x="915" y="337" height="720px" width="720px" />
+                     <use xlink:href="#E260-0000001838436187" x="1095" y="697" height="720px" width="720px" />
                   </g>
-                  <g id="msig-0000001227619358" class="meterSig">
-                     <use xlink:href="#E084-0000001044788124" x="1417" y="427" height="720px" width="720px" />
-                     <use xlink:href="#E084-0000001044788124" x="1417" y="787" height="720px" width="720px" />
+                  <g id="msig-0000000976770741" class="meterSig">
+                     <use xlink:href="#E084-0000001838436187" x="1417" y="427" height="720px" width="720px" />
+                     <use xlink:href="#E084-0000001838436187" x="1417" y="787" height="720px" width="720px" />
                   </g>
-                  <g id="layer-0000001264817709" class="layer">
-                     <g id="note-0000001998097157" class="note">
+                  <g id="layer-0000001064812676" class="layer">
+                     <g id="note-0000001325415081" class="note">
                         <g class="notehead">
-                           <use xlink:href="#E0A4-0000001044788124" x="1965" y="877" height="720px" width="720px" />
+                           <use xlink:href="#E0A4-0000001838436187" x="1965" y="877" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000000590357944" class="stem">
+                        <g id="stem-0000001142966699" class="stem">
                            <rect x="2173" y="247" height="602" width="18" />
                         </g>
                      </g>
-                     <g id="note-0000001817129560" class="note">
+                     <g id="note-0000000403396036" class="note">
                         <g class="notehead">
-                           <use xlink:href="#E0A4-0000001044788124" x="2655" y="877" height="720px" width="720px" />
+                           <use xlink:href="#E0A4-0000001838436187" x="2655" y="877" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000000771515668" class="stem">
+                        <g id="stem-0000000600087678" class="stem">
                            <rect x="2863" y="247" height="602" width="18" />
                         </g>
                      </g>
-                     <g id="note-0000001131570933" class="note">
+                     <g id="note-0000000271303473" class="note">
                         <g class="notehead">
-                           <use xlink:href="#E0A4-0000001044788124" x="3345" y="877" height="720px" width="720px" />
+                           <use xlink:href="#E0A4-0000001838436187" x="3345" y="877" height="720px" width="720px" />
                         </g>
-                        <g id="stem-0000000357571490" class="stem">
+                        <g id="stem-0000001090397834" class="stem">
                            <rect x="3553" y="247" height="602" width="18" />
                         </g>
                      </g>
                   </g>
                </g>
-               <g id="dynam-0000000197493099" class="dynam">
+               <g id="dynam-0000000689688130" class="dynam">
                   <text x="1965" y="1328" font-size="0px">
-                     <tspan id="text-0000001404280278" class="text">
+                     <tspan id="text-0000001619158051" class="text">
                         <tspan font-family="VerovioText" font-size="405px" font-style="normal" class="text"></tspan>
                         <tspan font-size="405px" class="text"> e senza sordini ma non </tspan>
                         <tspan font-family="VerovioText" font-size="405px" font-style="normal" class="text"></tspan>
                      </tspan>
                   </text>
                </g>
-               <g id="dynam-0000000893351816" class="dynam">
+               <g id="dynam-0000000276588373" class="dynam">
                   <text x="2655" y="1809" font-size="0px">
-                     <tspan id="rend-0000001505795335" class="rend">
-                        <tspan id="text-0000001954899097" class="text">
+                     <tspan id="rend-0000001466172903" class="rend">
+                        <tspan id="text-0000001740615043" class="text">
                            <tspan font-size="405px" class="text">sempre pp e senza sordini</tspan>
                         </tspan>
                      </tspan>
                   </text>
                </g>
-               <g id="dynam-0000001636807826" class="dynam">
+               <g id="dynam-0000001494788267" class="dynam">
                   <text x="3345" y="2254" font-size="0px">
-                     <tspan id="text-0000000563613512" class="text">
+                     <tspan id="text-0000001642700863" class="text">
                         <tspan font-size="405px" class="text">sempre </tspan>
                         <tspan font-family="VerovioText" font-size="405px" font-style="normal" class="text"></tspan>
                         <tspan font-size="405px" class="text"> </tspan>
                         <tspan font-family="VerovioText" font-size="405px" font-style="normal" class="text"></tspan>
                         <tspan font-size="405px" class="text"> e poi</tspan>
                      </tspan>
-                     <tspan id="lb-0000000101929267" class="lb" />
-                     <tspan id="text-0000001580723810" class="text" x="3345" y="2644">
+                     <tspan id="lb-0000000823638609" class="lb" />
+                     <tspan id="text-0000000214512901" class="text" x="3345" y="2644">
                         <tspan font-size="405px" class="text">poco </tspan>
                      </tspan>
-                     <tspan id="rend-0000000704877633" class="rend" font-style="normal" font-weight="bold">
-                        <tspan id="text-0000001358580979" class="text">
+                     <tspan id="rend-0000001840767441" class="rend" font-style="normal" font-weight="bold">
+                        <tspan id="text-0000001128962205" class="text">
                            <tspan font-size="405px" font-style="normal" class="text">a</tspan>
                         </tspan>
                      </tspan>
-                     <tspan id="text-0000001624379149" class="text">
+                     <tspan id="text-0000001449758190" class="text">
                         <tspan font-size="405px" class="text"> poco crescendo ma non </tspan>
                         <tspan font-family="VerovioText" font-size="405px" font-style="normal" class="text"></tspan>
                      </tspan>
-                     <tspan id="lb-0000002128236579" class="lb" />
-                     <tspan id="text-0000000784558821" class="text" x="3345" y="3034">
+                     <tspan id="lb-0000000736440468" class="lb" />
+                     <tspan id="text-0000001406688015" class="text" x="3345" y="3034">
                         <tspan font-size="405px" class="text">troppo</tspan>
                      </tspan>
                   </text>
                </g>
-               <g id="bline-0000000896544303" class="barLineAttr">
+               <g id="bline-0000000336516716" class="barLineAttr">
                   <path d="M9083 967 L9083 247" stroke="currentColor" stroke-width="27" />
                </g>
             </g>
-            <g id="bdend-0000001899894091" class="boundaryEnd section-0000001115438165" />
+            <g id="bdend-0000000053757103" class="boundaryEnd section-0000001436600438" />
          </g>
       </g>
    </svg>

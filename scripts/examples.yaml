@@ -89,6 +89,8 @@
   mei-example-exists: true
 - name: ex-01
   test-suite: dynam/dynam-003.mei
+  options:
+    xmlIdSeed: 0
   mei-example-file: examples/04-advanced-topics/03-smufl/ex-01.mei
   svg-example-file: examples/04-advanced-topics/03-smufl/ex-01.svg
   svg-example-exists: true
@@ -96,6 +98,7 @@
 - name: ex-02
   test-suite: dynam/dynam-003.mei
   options:
+    xmlIdSeed: 0
     font: Bravura
   mei-example-file: examples/04-advanced-topics/03-smufl/ex-02.mei
   svg-example-file: examples/04-advanced-topics/03-smufl/ex-02.svg
@@ -104,6 +107,7 @@
 - name: ex-03
   test-suite: dynam/dynam-003.mei
   options:
+    xmlIdSeed: 0
     font: Gootville
   mei-example-file: examples/04-advanced-topics/03-smufl/ex-03.mei
   svg-example-file: examples/04-advanced-topics/03-smufl/ex-03.svg
@@ -112,6 +116,7 @@
 - name: ex-04
   test-suite: dynam/dynam-003.mei
   options:
+    xmlIdSeed: 0
     font: Leland
   mei-example-file: examples/04-advanced-topics/03-smufl/ex-04.mei
   svg-example-file: examples/04-advanced-topics/03-smufl/ex-04.svg
@@ -120,6 +125,7 @@
 - name: ex-05
   test-suite: artic/artic-001.mei
   options:
+    xmlIdSeed: 0
     scale: 60
   mei-example-file: examples/04-advanced-topics/03-smufl/ex-05.mei
   svg-example-file: examples/04-advanced-topics/03-smufl/ex-05.svg
@@ -128,6 +134,7 @@
 - name: ex-06
   test-suite: artic/artic-001.mei
   options:
+    xmlIdSeed: 0
     scale: 60
     font: Bravura
   mei-example-file: examples/04-advanced-topics/03-smufl/ex-06.mei
@@ -136,6 +143,8 @@
   mei-example-exists: true
 - name: lyric-01
   test-suite: lyric/lyric-007.mei
+  options:
+    xmlIdSeed: 0
   xpath:
   - ".//mei:note[1]/mei:verse"
   mei-example-file: examples/04-advanced-topics/03-smufl/lyric-01.mei
@@ -143,6 +152,8 @@
   svg-example-exists: true
   mei-example-exists: true
 - name: tempo-01
+  options:
+    xmlIdSeed: 0
   test-suite: tempo/tempo-001.mei
   xpath:
   - ".//mei:tempo"
@@ -151,10 +162,234 @@
   svg-example-exists: true
   mei-example-exists: true
 - name: dynam-01
+  options:
+    xmlIdSeed: 0
   test-suite: dynam/dynam-006.mei
   xpath:
   - ".//mei:dynam"
   mei-example-file: examples/04-advanced-topics/03-smufl/dynam-01.mei
   svg-example-file: examples/04-advanced-topics/03-smufl/dynam-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: humdrum-01
+  options:
+    breaks: auto
+    header: auto
+  inline: "!!!COM: Mozart, Wolfgang Amadeus\n!!!OTL: Piano Sonata No. 2 in F major\n!!!OMV:
+    1\n!!!SCT1: K1 280\n!!!SCT2: K6 189e\n!!!OMD: Allegro assai\n**kern\t**kern\t**dynam\n*staff2\t*staff1\t*staff1/2\n*clefF4\t*clefG2\t*\n*k[b-]\t*k[b-]\t*\n*F:\t*F:\t*\n*M3/4\t*M3/4\t*\n*MM152\t*MM152\t*\n=1-\t=1-\t=1-\n4FF
+    4F\t4c: 4f: 4a: 4cc:\tf\n4C\t4a/ 4cc/\t.\n4AA\t4a/ 4cc/\t.\n=2\t=2\t=2\n4FF\t4.a/
+    4.cc/\t.\n4FFF\t.\t.\n.\t(16ddLL\t.\n.\t16ccJJ\t.\n4r\t16b-LL\t.\n.\t16a\t.\n.\t16g\t.\n.\t16fJJ\t.\n=3\t=3\t=3\n8F
+    8AL\t4ff\t.\n8F 8A\t.\t.\n8F 8G 8B-\t4ee\t.\n8F 8G 8B-\t.\t.\n8F 8A 8c\t4ee-)\t.\n8F
+    8A 8cJ\t.\t.\n=4\t=4\t=4\n8F 8B- 8dL\t4dd\t.\n8F 8B- 8d\t.\t.\n8F 8B- 8d\t4r\t.\n8F
+    8B- 8d\t.\t.\n8F 8B- 8d\t4r\t.\n8F 8B- 8dJ\t.\t.\n=5\t=5\t=5\n8F 8G 8eL\t(8ccL\tp\n8F
+    8G 8e\t8b-J)\t.\n8F 8G 8e\t4b-'\t.\n8F 8G 8e\t.\t.\n8F 8G 8e\t4r\t.\n8F 8G 8eJ\t.\t.\n=6\t=6\t=6\n*-\t*-\t*-"
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/humdrum-01.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/humdrum-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: humdrum-02
+  options:
+    breaks: auto
+    header: auto
+  inline: "!!!OTL@@DE: Liebes-A-B-C\n!!!COM: Pohlenz, August\n!!!CDT: 1790/07/03/-1843/03/09/\n!!!ODT:
+    1827\n!!!OMD: Allegretto\n!!!LYR: Gerhard, Wilhelm\n!!!LDT: 1826\n!!!OCL: Erk,
+    Ludwig\n!!!GCO: Deutscher Liederschatz, Band 1\n**kern\t**kern\t**kern\t**text\t**text\t**text\t**text\t**text\t**text\t**text\n*staff3\t*staff2\t*staff1\t*staff1\t*staff1\t*staff1\t*staff1\t*staff1\t*staff1\t*staff1\n*Ipiano\t*Ipiano\t*Ivox\t*\t*\t*\t*\t*\t*\t*\n*clefF4\t*clefG2\t*clefG2\t*\t*\t*\t*\t*\t*\t*\n*k[b-]\t*k[b-]\t*k[b-]\t*\t*\t*\t*\t*\t*\t*\n*F:\t*F:\t*F:\t*\t*\t*\t*\t*\t*\t*\n*M3/8\t*M3/8\t*M3/8\t*\t*\t*\t*\t*\t*\t*\n*MM100\t*MM100\t*MM100\t*\t*\t*\t*\t*\t*\t*\n=1-\t=1-\t=1-\t=1-\t=1-\t=1-\t=1-\t=1-\t=1-\t=1-\n*^\t*^\t*\t*\t*\t*\t*\t*\t*\t*\n8AL\t4F\t8fL\t4c\t8f\tA\tE\tI\tM\tQ\tU\tYp-\n8G\t.\t8e\t.\t8e\tB\tF\tK\tN\tR\tV\t-si-\n8AJ\t8F\t8fJ\t8c\t8f\tC\tG\tund\tO\tS\tW\t-lon\n*v\t*v\t*\t*\t*\t*\t*\t*\t*\t*\t*\t*\n*\t*v\t*v\t*\t*\t*\t*\t*\t*\t*\t*\n=2\t=2\t=2\t=2\t=2\t=2\t=2\t=2\t=2\t=2\n4C
+    4c\t4e 4g\t4g\tD,\tH,\tL,\tP,\tT,\tX,\tZ,\n8r\t8r\t8r\t.\t.\t.\t.\t.\t.\t.\n=3\t=3\t=3\t=3\t=3\t=3\t=3\t=3\t=3\t=3\n4C
+    4c\t8e 8gL\t8g\twenn\twärst\tAeug-\tgleich\tSchei-\tmach'\tnun\n.\t8d 8f\t8f\tich\tdu\t-lein\tei-\t-den\tei-\tgeh'\n8C
+    8c\t8e 8gJ\t8g\tdich\tdoch\tso\t-ner\tthut\t-nen\tzu\n=4\t=4\t=4\t=4\t=4\t=4\t=4\t=4\t=4\t=4\n4F
+    4c\t4f 4a\t4a\tseh',\tda!\thell\tFee\tweh.\tKnix,\tBett!\n8r\t8r\t8r\t.\t.\t.\t.\t.\t.\t.\n=5\t=5\t=5\t=5\t=5\t=5\t=5\t=5\t=5\t=5\n4DD
+    4D\t8r\t8a\tdich,\tDrück-\tglänz-\tfes-\tHal-\tdrückt\tBricht\n.\t8c 8d 8f#L\t8a\tmei-\t-te\t-ten\t-selst\t-te\tdir\tdoch\n8r\t8c
+    8d 8f#J\t8dd\t-ne\tmein\tin\tdu\tmit\tein\tdie\n=6\t=6\t=6\t=6\t=6\t=6\t=6\t=6\t=6\t=6\n4GG\t8r\t8.cc\tsü-\ttreu-\tLie-\tHerz\tHerz\tjun-\tNacht\n.\t8B-
+    8d 8gL\t.\t.\t.\t.\t.\t.\t.\t.\n.\t.\t16b-\t-sse\t-er\t-bes-\tund\tund\t-ger\tschon\n8r\t8B-
+    8d 8gJ\t8b-\tLust,\tArm,\t-pracht\tSinn,\tMund\tFant\tein,\n=7\t=7\t=7\t=7\t=7\t=7\t=7\t=7\t=7\t=7\n4CC
+    4C\t8r\t8g\tklopft\tHol-\tmir\tGrüb-\ttreu\tzärt-\tkann\n.\t8B- 8c 8eL\t8g\tdie\t-de,\taus\t-chen\tan\t-lich\tja\n8r\t8B-
+    8c 8eJ\t8cc\tem-\tdich\tder\tin\tdem\tdie\tnicht\n=8\t=8\t=8\t=8\t=8\t=8\t=8\t=8\t=8\t=8\n4FF\t8r\t8.b-\t-pör-\tlie-\tWim-\tWang'\tLie-\tSchwa-\tbei\n.\t8A
+    8c 8fL\t.\t.\t.\t.\t.\t.\t.\t.\n.\t.\t16a\t-te\t-be-\t-pern\tund\t-bes-\t-nen-\tdir\n8r\t8A
+    8c 8fJ\t8a\tBrust,\twarm!\tNacht,\tKinn,\t-bund,\t-hand,\tsein,\n=9\t=9\t=9\t=9\t=9\t=9\t=9\t=9\t=9\t=9\n8FFL\t8A
+    8fL\t8f\twird\tSchätz-\ttra-\tRo-\tsa-\ta-\twenn\n8GG\t8B- 8e\t8e\tmir\t-chen,\t-fen\t-sen-\t-ge\t-ber\tich\n8AAJ\t8c
+    8fJ\t8f\tso\tach\twie\t-glut,\tmir\tnur\tauch\n=10\t=10\t=10\t=10\t=10\t=10\t=10\t=10\t=10\t=10\n4BB-\t8r\t8.ee\twohl\twärst\tbli-\tLi-\tnie\tern-\tFlü-\n.\t8B-
+    8d 8gL\t.\t.\t.\t.\t.\t.\t.\t.\n.\t.\t16dd\tund\tdu\t-tzes-\t-lien-\tA-\t-sten\t-gel\n8r\t8B-
+    8d 8gJ\t8dd\tweh,\tda!\t-schnell,\tschnee,\tde!\tBlicks\thätt'!\n=11\t=11\t=11\t=11\t=11\t=11\t=11\t=11\t=11\t=11\n4C\t8r\t8cc\twenn\twärst\tAeug-\trei-\tSchei-\tmach'\tGeh'\n.\t8B-
+    8c 8eL\t8g\tich\tdu\t-lein\t-zen-\t-den\tihm\tnur\n8r\t8B- 8c 8eJ\t8a\tdich\tmir\tso\t-de\tthut\tden\tzu\n=12\t=12\t=12\t=12\t=12\t=12\t=12\t=12\t=12\t=12\n4FF
+    4F\t4A 4c 4f\t4f\tseh'!\tnah'!\thell.\tFee!\tweh.\tKnix!\tBett!\n8r\t8r\t8r\t.\t.\t.\t.\t.\t.\t.\n==\t==\t==\t==\t==\t==\t==\t==\t==\t==\n*-\t*-\t*-\t*-\t*-\t*-\t*-\t*-\t*-\t*-\n!!!SMS:
+    Deutscher Liederschatz, Band 1, Ludwig Erk, ed.\n!!!ENC: Craig Stuart Sapp\n!!!END:
+    2004/05/16/\n!!!EED: 2011/02/05/\n!!!EFL: 001/651\n!!muse2ps: s^(.){(..)}^z21jv200,114,144\n!!CharacterEncoding:
+    UTF-8"
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/humdrum-02.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/humdrum-02.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-01
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/beams_and_tuplets.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-01.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-02
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/measure_rest_and_keysig_change.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-02.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-02.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-03
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/clef_changes.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-03.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-03.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-04
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/trills_and_fermata.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-04.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-04.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-05
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/ties.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-05.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-05.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-06
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/grace_notes_accaciature.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-06.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-06.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-07
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/grace_notes_appogiature.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-07.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-07.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-08
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/rhythmic_patterns.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-08.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-08.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: pae-09
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/abbreviated_writing.pae
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-09.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-09.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-01
+  options:
+    breaks: auto
+    header: auto
+  inline: |-
+    X: 99
+    T:Short tune
+    C:K. Rettinghaus
+    M:4/4
+    L:1/4
+    K:G
+    D|G>ABG|A>BAD|G>ABA|G3|]
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-01.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-03
+  options:
+    breaks: auto
+    header: auto
+  inline: |-
+    X: 99
+    T:Short tune
+    C:K. Rettinghaus
+    M:4/4
+    L:1/4
+    Q:"Andante"
+    K:G
+    "D"!mf!D|"G"G>A "Em"B {/A/}G|"Am"A>B "D7"A{/E/}D|"G"G>A "C"B "D"A|"G"G3|]
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-03.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-03.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-04
+  options:
+    breaks: encoded
+    header: auto
+  inline: |-
+    X:1
+    T:Dusty Miller, The
+    T:Binny's Jig
+    C:Trad.
+    R:DH
+    M:3/4
+    K:G
+    B>cd BAG|FA Ac BA|B>cd BAG|DG GB AG:|
+    Bdd gfg|aA Ac BA|Bdd gfa|gG GB AG:|
+    BG G/2G/2G BG|FA Ac BA|BG G/2G/2G BG|DG GB AG:|
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-04.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-04.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-05
+  options:
+    breaks: auto
+    header: auto
+  inline: |-
+    X:2
+    T:Old Sir Simon the King
+    C:Trad.
+    S:Offord MSS          % from Offord manuscript
+    N:see also Playford   % reference note
+    M:9/8
+    R:SJ                  % slip jig
+    N:originally in C     % transcription note
+    K:G
+    D|GFG GAG G2D|GFG GAG F2D|EFE EFE EFG|A2G F2E D2:|
+    D|GAG GAB d2D|GAG GAB c2D|[1 EFE EFE EFG|A2G F2E D2:|\\\ % no line-break in score
+    M:12/8                % change of meter
+    [2 E2E EFE E2E EFG|\\\  % no line-break in score
+    M:9/8                 % change of meter
+    A2G F2E D2|]
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-05.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-05.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-06
+  inline: |-
+    X:1
+    T:Broken rhythm markers
+    M:C
+    K:C
+    A>A A2>A2 A>>A A2>>>A2|]
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-06.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-06.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-07
+  inline: |-
+    X:1
+    T:Ties and Slurs
+    M:C
+    K:C
+    (AA) (A(A)A) ((AA)A) (A|A) A-A A-A-A A2-|A4|]
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-07.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-07.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-08
+  inline: |-
+    X:1
+    T:Accidentals
+    M:C
+    K:C
+    __A _A =A ^A ^^A|]
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-08.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-08.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: abc-09
+  inline: |-
+    X:1
+    T:Chords
+    M:2/4
+    K:C
+    [CEGc] [C2G2] [CE][DF]|[D2F2][EG][FA] [A4d4]|]
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/abc-09.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-09.svg
   svg-example-exists: true
   mei-example-exists: true

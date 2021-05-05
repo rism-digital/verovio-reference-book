@@ -1,3 +1,6 @@
+require 'net/http'
+require 'uri'
+
 module Jekyll
 
   # Custom block for adding row and cols
@@ -74,9 +77,30 @@ module Jekyll
         "#{File.exist?(file_path.strip!)}"
     end
   end
+
+  # Custom tag for remote includes from external sources.
+  class RemoteInclude < Liquid::Tag
+
+    def initialize(tag_name, remote_include, tokens)
+      super
+      @remote_include = remote_include
+    end
+
+    def open(url)
+      Net::HTTP.get(URI.parse(url.strip)).force_encoding 'utf-8'
+    end
+
+    def render(context)
+      # check if we passed a variable or directly a url
+      url = @remote_include.to_s.match(/^ ?{{.*}} ?$/) ? context[@remote_include] : @remote_include
+      open("#{url}")
+    end
+
+  end
 end
-  
+
 Liquid::Template.register_tag('row', Jekyll::RowTagBlock)
 Liquid::Template.register_tag('col', Jekyll::ColTagBlock)
 Liquid::Template.register_tag('aside', Jekyll::AsideTagBlock)
 Liquid::Template.register_tag('file_exists', Jekyll::FileExistsTag)
+Liquid::Template.register_tag('remote_include', Jekyll::RemoteInclude)

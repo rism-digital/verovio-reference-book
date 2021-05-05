@@ -4,40 +4,53 @@ title: "SMuFL fonts"
 examples:
     - name: ex-01
       test-suite: dynam/dynam-003.mei
+      options:
+        xmlIdSeed: 0
     - name: ex-02
       test-suite: dynam/dynam-003.mei
       options:
+        xmlIdSeed: 0
         font: "Bravura"
     - name: ex-03
       test-suite: dynam/dynam-003.mei
       options:
+        xmlIdSeed: 0
         font: "Gootville"
     - name: ex-04
       test-suite: dynam/dynam-003.mei
       options:
+        xmlIdSeed: 0
         font: "Leland"
 
     - name: ex-05
       test-suite: artic/artic-001.mei
       options:
+        xmlIdSeed: 0
         scale: 60
     - name: ex-06
       test-suite: artic/artic-001.mei
       options:
+        xmlIdSeed: 0
         scale: 60
         font: "Bravura"
 
     - name: lyric-01
       test-suite: lyric/lyric-007.mei
+      options:
+        xmlIdSeed: 0  
       xpath:
         - ".//mei:note[1]/mei:verse"
 
     - name: tempo-01
+      options:
+        xmlIdSeed: 0
       test-suite: tempo/tempo-001.mei
       xpath:
         - ".//mei:tempo"
 
     - name: dynam-01
+      options:
+        xmlIdSeed: 0
       test-suite: dynam/dynam-006.mei
       xpath:
         - ".//mei:dynam"
