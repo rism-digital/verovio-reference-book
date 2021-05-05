@@ -86,32 +86,44 @@ if __name__ == "__main__":
                 continue
 
             # Download the MEI file from the given url
-            url = ""
+            mei_example: str = ""
+            url: str = ""
             if example.get("test-suite"):
                 test_file = example['test-suite']
                 url = f"https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/{test_file}"
             elif example.get("url"):
                 url = example['url']
+                test_file = example['name']
+            elif example.get("inline"):
+                mei_example = example['inline']
+                log.debug(mei_example)
+                test_file = example['name']
             else:
                 log.error("This example is missing a test-suite file or a url. Skipping.")
                 continue
 
-            log.debug("Downloading %s", url)
-            mei_example_req = requests.get(url)
+            if len(url):
+                log.debug("Downloading %s", url)
+                mei_example_req = requests.get(url)
 
-            if 200 <= mei_example_req.status_code < 400:
-                log.info("%s successfully downloaded", url)
-            else:
-                log.error("Problem downloading %s. Skipping this example", url)
-                continue
+                if 200 <= mei_example_req.status_code < 400:
+                    log.info("%s successfully downloaded", url)
+                else:
+                    log.error("Problem downloading %s. Skipping this example", url)
+                    continue
 
-            mei_example = mei_example_req.text
+                mei_example = mei_example_req.text
 
             # parse the MEI file to XML
             log.debug("Parsing downloaded text to XML")
-            tree = etree.fromstring(bytes(mei_example.encode("utf-8")), parser=et_parser)
-            # try to get the extMeta tag and load the options if existing
-            meta = tree.findtext(".//mei:meiHead/mei:extMeta", namespaces=MEI_NS)
+            tree = None
+            meta = None
+            try:
+                tree = etree.fromstring(bytes(mei_example.encode("utf-8")), parser=et_parser)
+                # try to get the extMeta tag and load the options if existing
+                meta = tree.findtext(".//mei:meiHead/mei:extMeta", namespaces=MEI_NS)
+            except:
+                log.info("Could not parse file")
 
             if meta:
                 # Overwrite any pre-defined options with the options from the MEI file.
