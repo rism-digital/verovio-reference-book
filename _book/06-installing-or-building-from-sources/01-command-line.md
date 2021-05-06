@@ -60,6 +60,7 @@ since running `cmake ../cmake` will not clear the state of the define variable.
 
 The other building options are:
 * `NO_ABC_SUPPORT` for the ABC importer to be turned on/off
+* `NO_MXL_SUPPORT` for the compressed MusicXML importer to be turned on/off
 * `NO_HUMDRUM_SUPPORT` for the Humdrum importer to be turned on/off
 * `MUSICXML_DEFAULT_HUMDRUM` to use the MusicXML Humdrum importer by default instead of the direct MusicXML importer
 * `BUILD_AS_LIBRARY` for Verovio to be built as dynamic shared library instead of a command-line executable
