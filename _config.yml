@@ -2,7 +2,7 @@ name: Reference book for Verovio
 baseurl: ""
 exclude: ['scripts']
 
-verovio-version: 3.4
+verovio-version: 3.5
 
 markdown: kramdown
 highlighter: rouge
