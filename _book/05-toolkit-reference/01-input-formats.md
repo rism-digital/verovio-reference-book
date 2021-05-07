@@ -252,17 +252,20 @@ examples:
 
 ### MEI
 
-The native input format for Verovio is MEI. 
+The native input format for Verovio is MEI. Verovio supports MEI as input format from MEI 2013 onwards. From Verovio 2.x.x, the plan is to have even version numbers for Verovio releases using a stable version of MEI, and odd version numbers for releases using a development version of MEI. It means that once MEI 5.0 will be released, Verovio will move to version 4.x.x. Older versions of MEI are still supported by newer versions of Verovio.
+
+When loading MEI data into Verovio and outputting MEI, elements that are not supported by Verovio will be ignored. This means that they are not loaded into memory and will not be preserved in the MEI output. This includes the element themselves, but also any descendant they might have. A warning will be given in the console. For example:
+```bash
+[Warning] Unsupported '<ossia>' within <measure>
+```
 
 #### Support for previous version of MEI
-
-Verovio supports MEI as input format from MEI 2013 onwards. From Verovio 2.x.x, the plan is to have even version numbers for Verovio releases using a stable version of MEI, and odd version numbers for releases using a development version of MEI. It means that once MEI 5.0 will be released, Verovio will move to version 4.x.x. Older versions of MEI are still supported by newer versions of Verovio. 
 
 When an MEI file in loaded into Verovio and is not of the latest version for that version of Verovio, it performs upgrade steps for the features that were supported by Verovio for that older version of MEI.
 
 **MEI 2013 files**
 
-Various attributes in `<page>` and `<measure>` for the page-based version of MEI are upgraded.
+Various attributes in `<page>` and `<measure>` for the page-based version of MEI are upgraded (experimental work).
 
 **MEI 3.0 files**
 
@@ -489,7 +492,7 @@ Below is a song for voice and piano accompaniment. Each verse is listed in a sep
 
 [In preparation]
     
-### Plain and Easy
+### Plaine and Easie
 
 The Plaine & Easie Code is a library standard that enables entering music incipits in modern or mensural notation. It is mostly used by the [Répertoire International des Sources Musicales](https://rism.info) (RISM) for inventorying the music incipits of the manuscripts. More information about the syntax is available on the [IAML](http://www.iaml.info/plaine-easie-code) website. 
 
