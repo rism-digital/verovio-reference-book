@@ -393,3 +393,9 @@
   svg-example-file: examples/05-toolkit-reference/01-input-formats/abc-09.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: pae-01
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/abbreviated_writing.pae
+  mei-example-file: examples/05-toolkit-reference/02-output-formats/pae-01.mei
+  svg-example-file: examples/05-toolkit-reference/02-output-formats/pae-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
