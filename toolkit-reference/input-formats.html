@@ -102,7 +102,7 @@
 
 <a class="toc-item toc-subsection" href="#musicxml">MusicXML</a>
 
-<a class="toc-item toc-subsection" href="#plain-and-easy">Plain and Easy</a>
+<a class="toc-item toc-subsection" href="#plaine-and-easie">Plaine and Easie</a>
 
 <a class="toc-item toc-subsection" href="#abc">ABC</a>
 
@@ -136,17 +136,19 @@
         <h2>Input formats</h2>
         <h3 id="mei">MEI</h3>
 
-<p>The native input format for Verovio is MEI.</p>
+<p>The native input format for Verovio is MEI. Verovio supports MEI as input format from MEI 2013 onwards. From Verovio 2.x.x, the plan is to have even version numbers for Verovio releases using a stable version of MEI, and odd version numbers for releases using a development version of MEI. It means that once MEI 5.0 will be released, Verovio will move to version 4.x.x. Older versions of MEI are still supported by newer versions of Verovio.</p>
+
+<p>When loading MEI data into Verovio and outputting MEI, elements that are not supported by Verovio will be ignored. This means that they are not loaded into memory and will not be preserved in the MEI output. This includes the element themselves, but also any descendant they might have. A warning will be given in the console. For example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Warning] Unsupported <span class="s1">'&lt;ossia&gt;'</span> within &lt;measure&gt;
+</code></pre></div></div>
 
 <h4 id="support-for-previous-version-of-mei">Support for previous version of MEI</h4>
-
-<p>Verovio supports MEI as input format from MEI 2013 onwards. From Verovio 2.x.x, the plan is to have even version numbers for Verovio releases using a stable version of MEI, and odd version numbers for releases using a development version of MEI. It means that once MEI 5.0 will be released, Verovio will move to version 4.x.x. Older versions of MEI are still supported by newer versions of Verovio.</p>
 
 <p>When an MEI file in loaded into Verovio and is not of the latest version for that version of Verovio, it performs upgrade steps for the features that were supported by Verovio for that older version of MEI.</p>
 
 <p><strong>MEI 2013 files</strong></p>
 
-<p>Various attributes in <code class="language-plaintext highlighter-rouge">&lt;page&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;measure&gt;</code> for the page-based version of MEI are upgraded.</p>
+<p>Various attributes in <code class="language-plaintext highlighter-rouge">&lt;page&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;measure&gt;</code> for the page-based version of MEI are upgraded (experimental work).</p>
 
 <p><strong>MEI 3.0 files</strong></p>
 
@@ -5244,7 +5246,7 @@
 
 <p>[In preparation]</p>
 
-<h3 id="plain-and-easy">Plain and Easy</h3>
+<h3 id="plaine-and-easie">Plaine and Easie</h3>
 
 <p>The Plaine &amp; Easie Code is a library standard that enables entering music incipits in modern or mensural notation. It is mostly used by the <a href="https://rism.info">Répertoire International des Sources Musicales</a> (RISM) for inventorying the music incipits of the manuscripts. More information about the syntax is available on the <a href="http://www.iaml.info/plaine-easie-code">IAML</a> website.</p>
 
