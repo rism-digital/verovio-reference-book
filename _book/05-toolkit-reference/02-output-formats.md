@@ -88,6 +88,28 @@ The MEI page-based model is not part of MEI. It was put in place for the develop
     
 ### MIDI
 
+Verovio provides a basic MIDI output feature that can be used from the command-line tool or from the JavaScript toolkit. The MIDI output can be written to a file for further processing or for building application with MIDI playback, including in online environments. However, since MIDI is not supported in web-browsers in a standard way, an additional player will be required in such cases.
+
+#### The MIDI output takes into account:
+
+* Tempo indication (`@midi.bpm`) provided in the first `scoreDef` and in `tempo` elements.
+* The sounding accidental values provided by `@accid.ges` on `notes` and `accid`.
+* The sounding octave values provided by `@oct.ges` on `note`.
+* Transposing instrument information provided by `@trans.semi` on `staffDef`.
+* Tie elements referring to notes with `@startid` and `@endid`.
+
+Verovio uses the [Midifile library](https://github.com/craigsapp/midifile) for generating the MIDI output.
+
+#### Usage
+
+With the command-line tool, for generating a MIDI file with the default options, you need to do:
+
+```bash
+verovio -t midi -o output.midi input-file.mei
+```
+
+With the JavaScript toolkit, the MIDI output is available through the `renderToMIDI()` method. This returns a base64-coded MIDI file as string, which can be passed to a player or made available for download.
+
 ### Timemap
 
 ### Plaine and Easie 
