@@ -28,6 +28,8 @@ This repository has three main branches:
 * develop, that holds all changes currently documenting features that are not available in the current version of Verovio
 * gh-pages, that contains a build of master
 
+PR for changes should be made to the master branch for edits applying to the latest release of Verovio and to develop (only) for edits applying striclty to new features or changes to the develop version of Verovio. The develop branch is merge to master for each release (major or minor one) of Verovio.
+
 ## Build the book locally
 
 You can build the site locally following a [standard Jekyll installation procedure](https://jekyllrb.com/docs/step-by-step/01-setup/#build). This is recommended if you want to submit more significant changes than a small correction or addition to an existing text.
