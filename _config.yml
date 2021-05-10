@@ -36,7 +36,7 @@ defaults:
       layout: book
       verovio: false
       active: book
-      image: /images/card.png
+      image: https://book.verovio.org/images/card.png
 
 collections:
     book:
