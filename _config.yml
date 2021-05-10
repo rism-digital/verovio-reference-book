@@ -1,4 +1,5 @@
 name: Reference book for Verovio
+description: Everything you need to use the Verovio music notation engraving library
 baseurl: ""
 exclude: ['scripts']
 
@@ -20,6 +21,9 @@ sass:
 
 theme: verovio-theme
 
+twitter:
+  card: summary
+
 plugins:
   - "jekyll-github-metadata"
 
@@ -32,6 +36,7 @@ defaults:
       layout: book
       verovio: false
       active: book
+      image: https://book.verovio.org/images/card.png
 
 collections:
     book:

@@ -1,0 +1,26 @@
+<measure n="0" type="upbeat" label="feature-example">
+  <staff n="1">
+    <layer n="1">
+      <beam>
+        <note xml:id="m0_s2_e1" dur="8" oct="5" pname="e"/>
+        <note xml:id="m0_s2_e2" dur="8" oct="5" pname="f"/>
+      </beam>
+    </layer>
+  </staff>
+  <tempo midi.bpm="70" staff="1" tstamp="1.000000">Andante con moto <rend fontname="VerovioText"></rend> = 70</tempo>
+  <slur startid="#m0_s2_e1" endid="#m0_s2_e2"/>
+</measure>
+<measure n="1">
+  <staff n="1">
+    <layer n="1">
+      <note dots="1" dur="4" oct="5" pname="g"/>
+      <note dur="8" oct="5" pname="g"/>
+      <note dur="4" oct="5" pname="g"/>
+      <beam>
+        <note xml:id="m1_s2_e4" dur="8" oct="5" pname="g"/>
+        <note xml:id="m1_s2_e5" dur="8" oct="6" pname="c"/>
+      </beam>
+    </layer>
+  </staff>
+  <slur startid="#m1_s2_e4" endid="#m1_s2_e5"/>
+</measure>
