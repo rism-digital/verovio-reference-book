@@ -2,6 +2,14 @@
 title: "Output formats"
 
 examples:
+    - name: t-01
+      test-suite: tempo/tempo-001.mei
+      xpath:
+        - ".//mei:measure"
+
+    - name: t-02
+      test-suite: tuplet/tuplet-003.mei
+
     - name: pae-01
       url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/abbreviated_writing.pae
 ---
@@ -111,6 +119,139 @@ verovio -t midi -o output.midi input-file.mei
 With the JavaScript toolkit, the MIDI output is available through the `renderToMIDI()` method. This returns a base64-coded MIDI file as string, which can be passed to a player or made available for download.
 
 ### Timemap
+
+The timemap is an array of JSON objects, with each entry having these keys:
+* tstamp: this is the time in millisecond from the start of the music to the start of the current event (real time)
+* qstamp: the time in quarter notes from the start of the music to the start of the current event entry (score time)
+* tempo: when the tempo changes the new tempo will be given for the current event. Also the tempo changes are only allowed to occur at the starts of measures in the current code for creating MIDI files, and this is the same limitation for the timemap file. The tempo and qstamp values can be used to re-calculate a new set of tstamp values if the tempo changes.
+* on: This is an array of note ids that start at the current event time. This list will not be given if there are no note ons at the current event.
+* off: This is an array of note ids that end at the current event time. This list will not be given if there are no note offs at the current event.
+
+#### Examples
+
+{% include music-notation example="t-01" %}
+
+```json
+[
+  {
+    "tstamp": 0,
+    "qstamp": 0,
+    "tempo": 70,
+    "on": [
+      "m0_s2_e1"
+    ]
+  },
+  {
+    "tstamp": 428.571429,
+    "qstamp": 0.5,
+    "on": [
+      "m0_s2_e2"
+    ],
+    "off": [
+      "m0_s2_e1"
+    ]
+  },
+  {
+    "tstamp": 857.142857,
+    "qstamp": 1,
+    "on": [
+      "note-0000001938389898"
+    ],
+    "off": [
+      "m0_s2_e2"
+    ]
+  },
+  {
+    "tstamp": 2142.857143,
+    "qstamp": 2.5,
+    "on": [
+      "note-0000001651747389"
+    ],
+    "off": [
+      "note-0000001938389898"
+    ]
+  },
+  {
+    "tstamp": 2571.428571,
+    "qstamp": 3,
+    "on": [
+      "note-0000001917733971"
+    ],
+    "off": [
+      "note-0000001651747389"
+    ]
+  },
+  {
+    "tstamp": 3428.571429,
+    "qstamp": 4,
+    "on": [
+      "m1_s2_e4"
+    ],
+    "off": [
+      "note-0000001917733971"
+    ]
+  },
+  {
+    "tstamp": 3857.142857,
+    "qstamp": 4.5,
+    "on": [
+      "m1_s2_e5"
+    ],
+    "off": [
+      "m1_s2_e4"
+    ]
+  },
+  {
+    "tstamp": 4285.714286,
+    "qstamp": 5,
+    "off": [
+      "m1_s2_e5"
+    ]
+  }
+]
+```
+
+{% include music-notation-only example="t-02" %}
+
+```json
+[
+  {
+    "tstamp": 0,
+    "qstamp": 0,
+    "tempo": 120,
+    "on": [
+      "note-0000002010789077"
+    ]
+  },
+  {
+    "tstamp": 666.666667,
+    "qstamp": 1.333333,
+    "on": [
+      "note-0000001595005340"
+    ],
+    "off": [
+      "note-0000002010789077"
+    ]
+  },
+  {
+    "tstamp": 1333.333333,
+    "qstamp": 2.666667,
+    "on": [
+      "note-0000000084354770"
+    ],
+    "off": [
+      "note-0000001595005340"
+    ]
+  },
+  {
+    "tstamp": 2000,
+    "qstamp": 4,
+    "off": [
+      "note-0000000084354770"
+    ]
+  }
+]
+```
 
 ### Plaine and Easie 
 
