@@ -21,6 +21,13 @@ The content of a chapter is a list of files, one per section. Chapter and sectio
 
 Subsections in a section are `h3` headings (`###` in Markdown) in the text. Text paragraphs should not have hard wraps to help cut down on the size of the diffs that appear when changes are made, making changes easier to review.
 
+### Branches
+
+This repository has three main branches:
+* master, that holds the content for the latest release of Verovio
+* develop, that holds all changes currently documenting features that are not available in the current version of Verovio
+* gh-pages, that contains a build of master
+
 ## Build the book locally
 
 You can build the site locally following a [standard Jekyll installation procedure](https://jekyllrb.com/docs/step-by-step/01-setup/#build). This is recommended if you want to submit more significant changes than a small correction or addition to an existing text.
