@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>MEI supported elements</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap.min.css" type="text/css" /><!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/fileinput.min.css" />
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/verovio.css" />
+        <link rel="stylesheet" href="/assets/css/midiplayer.css" />
+
+        <link rel="stylesheet" href="/css/verovio-site.css" />
+
+        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>MEI supported elements | Reference book for Verovio</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="MEI supported elements" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Note that, for the MEI attribute classes listed here, not necessary all attributes are implemented and that not necessary all possible attribute values are supported." />
+<meta property="og:description" content="Note that, for the MEI attribute classes listed here, not necessary all attributes are implemented and that not necessary all possible attribute values are supported." />
+<meta property="og:site_name" content="Reference book for Verovio" />
+<meta property="og:image" content="https://book.verovio.org/images/card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-11T14:01:57+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
+<meta property="twitter:title" content="MEI supported elements" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"description":"Note that, for the MEI attribute classes listed here, not necessary all attributes are implemented and that not necessary all possible attribute values are supported.","url":"/toolkit-reference/mei-support.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"MEI supported elements","dateModified":"2021-05-11T14:01:57+00:00","datePublished":"2021-05-11T14:01:57+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/mei-support.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                </li>
+                <li class="active">
+                    <a href="https://book.verovio.org/">Reference book</a>
+                </li>
+                <li >
+                    <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+        <div class="top-header"> 
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
+        <h1 style="color: #eee;" class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 style="color: #eee;" class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    </div>
+</div>
+
+
+        <div class="container with-footer">
+
+            
+
+
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="toc-group">
+
+    <a class="toc-item" href="/introduction/">Introduction</a>
+    
+
+    <a class="toc-item" href="/first-steps/">Tutorial 1: First Steps</a>
+    
+
+    <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
+    
+
+    <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
+    
+
+    <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
+    
+        
+        
+<a class="toc-item toc-section " href="/toolkit-reference/input-formats.html">Input formats</a>
+    
+
+<a class="toc-item toc-section " href="/toolkit-reference/output-formats.html">Output formats</a>
+    
+
+<a class="toc-item toc-section " href="/toolkit-reference/toolkit-methods.html">Toolkit methods</a>
+    
+
+<a class="toc-item toc-section " href="/toolkit-reference/toolkit-options.html">Toolkit options</a>
+    
+
+<a class="toc-item toc-section selected" href="/toolkit-reference/mei-support.html">MEI supported elements</a>
+    
+        
+        
+    
+
+    
+
+    <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+
+    <a class="toc-item" href="/contributing/guidelines.html">Contributing</a>
+    
+
+</div>
+    </div>
+
+    <div class="col-md-9">
+        
+        
+        <h2>MEI supported elements</h2>
+        <aside class="warning"><p>Note that, for the MEI attribute classes listed here, not necessary all attributes are implemented and that not necessary all possible attribute values are supported.</p>
+</aside>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/abbr.html">&lt;abbr&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/accid.html">&lt;accid&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.accidental.html">@att.accidental</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.accidentalGestural.html">@att.accidentalGestural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.enclosingChars.html">@att.enclosingChars</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.accid.log.html">@att.accid.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/add.html">&lt;add&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/anchoredText.html">&lt;anchoredText&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/annot.html">&lt;annot&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.plist.html">@att.plist</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/app.html">&lt;app&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/arpeg.html">&lt;arpeg&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.plist.html">@att.plist</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.arpeg.vis.html">@att.arpeg.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.arpeg.log.html">@att.arpeg.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/artic.html">&lt;artic&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.articulation.html">@att.articulation</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelEvent.html">@att.placementRelEvent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/bTrem.html">&lt;bTrem&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.bTrem.log.html">@att.bTrem.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.tremMeasured.html">@att.tremMeasured</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/barLine.html">&lt;barLine&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.barLine.log.html">@att.barLine.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/beam.html">&lt;beam&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamRend.html">@att.beamRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamedWith.html">@att.beamedWith</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/beatRpt.html">&lt;beatRpt&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beatRpt.vis.html">@att.beatRpt.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/bracketSpan.html">&lt;bracketSpan&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.base.html">@att.lineRend.base</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.bracketSpan.log.html">@att.bracketSpan.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.html">@att.lineRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/breath.html">&lt;breath&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/choice.html">&lt;choice&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/chord.html">&lt;chord&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.logical.html">@att.duration.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamSecondary.html">@att.beamSecondary</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermataPresent.html">@att.fermataPresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.tiePresent.html">@att.tiePresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.stems.html">@att.stems</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.augmentDots.html">@att.augmentDots</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.graced.html">@att.graced</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.cue.html">@att.cue</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.stemsCmn.html">@att.stemsCmn</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.quality.html">@att.duration.quality</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationGestural.html">@att.durationGestural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/clef.html">&lt;clef&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.clefShape.html">@att.clefShape</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.octaveDisplacement.html">@att.octaveDisplacement</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineLoc.html">@att.lineLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/corr.html">&lt;corr&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/course.html">&lt;course&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/custos.html">&lt;custos&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.noteGes.html">@att.noteGes</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pitch.html">@att.pitch</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.octave.html">@att.octave</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/damage.html">&lt;damage&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/del.html">&lt;del&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/dir.html">&lt;dir&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.base.html">@att.lineRend.base</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.verticalGroup.html">@att.verticalGroup</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extender.html">@att.extender</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/dot.html">&lt;dot&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.dot.log.html">@att.dot.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/dynam.html">&lt;dynam&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.base.html">@att.lineRend.base</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.midiValue.html">@att.midiValue</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.verticalGroup.html">@att.verticalGroup</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extender.html">@att.extender</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.midiValue.html">@att.midiValue</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/ending.html">&lt;ending&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.html">@att.lineRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/expan.html">&lt;expan&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/expansion.html">&lt;expansion&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.plist.html">@att.plist</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/f.html">&lt;f&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extender.html">@att.extender</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/fTrem.html">&lt;fTrem&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fTrem.vis.html">@att.fTrem.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.tremMeasured.html">@att.tremMeasured</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/facsimile.html">&lt;facsimile&gt;</a></p>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/fb.html">&lt;fb&gt;</a></p>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/fermata.html">&lt;fermata&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermata.vis.html">@att.fermata.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/fig.html">&lt;fig&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.horizontalAlign.html">@att.horizontalAlign</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.verticalAlign.html">@att.verticalAlign</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/fing.html">&lt;fing&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/gliss.html">&lt;gliss&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.base.html">@att.lineRend.base</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.html">@att.lineRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/graceGrp.html">&lt;graceGrp&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.graceGrp.log.html">@att.graceGrp.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.graced.html">@att.graced</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/grpSym.html">&lt;grpSym&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffGroupingSym.html">@att.staffGroupingSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.grpSym.log.html">@att.grpSym.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/hairpin.html">&lt;hairpin&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.hairpin.vis.html">@att.hairpin.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.hairpin.log.html">@att.hairpin.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.verticalGroup.html">@att.verticalGroup</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/halfmRpt.html">&lt;halfmRpt&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/harm.html">&lt;harm&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/instrDef.html">&lt;instrDef&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.midiInstrument.html">@att.midiInstrument</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.channelized.html">@att.channelized</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/keyAccid.html">&lt;keyAccid&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.accidental.html">@att.accidental</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.noteGes.html">@att.noteGes</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pitch.html">@att.pitch</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.enclosingChars.html">@att.enclosingChars</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.octave.html">@att.octave</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/keySig.html">&lt;keySig&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.keySig.log.html">@att.keySig.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.accidental.html">@att.accidental</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pitch.html">@att.pitch</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.keySig.anl.html">@att.keySig.anl</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.keySig.vis.html">@att.keySig.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/label.html">&lt;label&gt;</a></p>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/labelAbbr.html">&lt;labelAbbr&gt;</a></p>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/layer.html">&lt;layer&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nInteger.html">@att.nInteger</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/lb.html">&lt;lb&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/lem.html">&lt;lem&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/ligature.html">&lt;ligature&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.ligature.vis.html">@att.ligature.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mNum.html">&lt;mNum&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typography.html">@att.typography</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mRest.html">&lt;mRest&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermataPresent.html">@att.fermataPresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.cue.html">@att.cue</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mRpt.html">&lt;mRpt&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mRpt2.html">&lt;mRpt2&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mSpace.html">&lt;mSpace&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mdiv.html">&lt;mdiv&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/measure.html">&lt;measure&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.meterConformanceBar.html">@att.meterConformanceBar</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.barring.html">@att.barring</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pointing.html">@att.pointing</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.measure.log.html">@att.measure.log</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mensur.html">&lt;mensur&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.slashCount.html">@att.slashCount</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.cue.html">@att.cue</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.mensur.vis.html">@att.mensur.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.mensuralShared.html">@att.mensuralShared</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/meterSig.html">&lt;meterSig&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.meterSig.log.html">@att.meterSig.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.meterSig.vis.html">@att.meterSig.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/mordent.html">&lt;mordent&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.ornamentAccid.html">@att.ornamentAccid</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.mordent.log.html">@att.mordent.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/multiRest.html">&lt;multiRest&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.numbered.html">@att.numbered</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.width.html">@att.width</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.multiRest.vis.html">@att.multiRest.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/multiRpt.html">&lt;multiRpt&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.numbered.html">@att.numbered</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/nc.html">&lt;nc&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.logical.html">@att.duration.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.noteGes.html">@att.noteGes</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamSecondary.html">@att.beamSecondary</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermataPresent.html">@att.fermataPresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pitch.html">@att.pitch</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.intervalMelodic.html">@att.intervalMelodic</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.augmentDots.html">@att.augmentDots</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.octave.html">@att.octave</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.ncForm.html">@att.ncForm</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.quality.html">@att.duration.quality</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationGestural.html">@att.durationGestural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/neume.html">&lt;neume&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/note.html">&lt;note&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.noteVisMensural.html">@att.noteVisMensural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.logical.html">@att.duration.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.noteGes.html">@att.noteGes</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamSecondary.html">@att.beamSecondary</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.coloration.html">@att.coloration</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermataPresent.html">@att.fermataPresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pitch.html">@att.pitch</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.tiePresent.html">@att.tiePresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.stems.html">@att.stems</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.noteGesTab.html">@att.noteGesTab</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.augmentDots.html">@att.augmentDots</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.octave.html">@att.octave</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.graced.html">@att.graced</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.cue.html">@att.cue</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.noteHeads.html">@att.noteHeads</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.stemsCmn.html">@att.stemsCmn</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.midiVelocity.html">@att.midiVelocity</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.quality.html">@att.duration.quality</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationGestural.html">@att.durationGestural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/num.html">&lt;num&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/object.html">&lt;object&gt;</a></p>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/octave.html">&lt;octave&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.octaveDisplacement.html">@att.octaveDisplacement</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.base.html">@att.lineRend.base</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extender.html">@att.extender</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.html">@att.lineRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/orig.html">&lt;orig&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/pb.html">&lt;pb&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/pedal.html">&lt;pedal&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pedal.log.html">@att.pedal.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.verticalGroup.html">@att.verticalGroup</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.pedal.vis.html">@att.pedal.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/pgFoot.html">&lt;pgFoot&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.horizontalAlign.html">@att.horizontalAlign</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/pgFoot2.html">&lt;pgFoot2&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.horizontalAlign.html">@att.horizontalAlign</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/pgHead.html">&lt;pgHead&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.horizontalAlign.html">@att.horizontalAlign</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/pgHead2.html">&lt;pgHead2&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.horizontalAlign.html">@att.horizontalAlign</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/phrase.html">&lt;phrase&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.curveRend.html">@att.curveRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.curvature.html">@att.curvature</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/pitchInflection.html">&lt;pitchInflection&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/plica.html">&lt;plica&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.plica.vis.html">@att.plica.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/proport.html">&lt;proport&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/rdg.html">&lt;rdg&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/ref.html">&lt;ref&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/reg.html">&lt;reg&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/reh.html">&lt;reh&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.verticalGroup.html">@att.verticalGroup</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/rend.html">&lt;rend&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.textRendition.html">@att.textRendition</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typography.html">@att.typography</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.whitespace.html">@att.whitespace</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.horizontalAlign.html">@att.horizontalAlign</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.verticalAlign.html">@att.verticalAlign</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/rest.html">&lt;rest&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.logical.html">@att.duration.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamSecondary.html">@att.beamSecondary</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermataPresent.html">@att.fermataPresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.html">@att.staffLoc</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffLoc.pitched.html">@att.staffLoc.pitched</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.augmentDots.html">@att.augmentDots</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.cue.html">@att.cue</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.restVisMensural.html">@att.restVisMensural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.quality.html">@att.duration.quality</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationGestural.html">@att.durationGestural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/restore.html">&lt;restore&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/sb.html">&lt;sb&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/score.html">&lt;score&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/scoreDef.html">&lt;scoreDef&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.multinumMeasures.html">@att.multinumMeasures</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.systems.html">@att.systems</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.distances.html">@att.distances</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.midiTempo.html">@att.midiTempo</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.endings.html">@att.endings</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.spacing.html">@att.spacing</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lyricStyle.html">@att.lyricStyle</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.optimization.html">@att.optimization</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.measureNumbers.html">@att.measureNumbers</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timeBase.html">@att.timeBase</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/section.html">&lt;section&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/sic.html">&lt;sic&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/slur.html">&lt;slur&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.curveRend.html">@att.curveRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.curvature.html">@att.curvature</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/space.html">&lt;space&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.logical.html">@att.duration.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamSecondary.html">@att.beamSecondary</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermataPresent.html">@att.fermataPresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.augmentDots.html">@att.augmentDots</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.quality.html">@att.duration.quality</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationGestural.html">@att.durationGestural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/staff.html">&lt;staff&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.visibility.html">@att.visibility</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nInteger.html">@att.nInteger</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/staffDef.html">&lt;staffDef&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.multinumMeasures.html">@att.multinumMeasures</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.systems.html">@att.systems</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.distances.html">@att.distances</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.midiTempo.html">@att.midiTempo</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffDef.vis.html">@att.staffDef.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nInteger.html">@att.nInteger</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.spacing.html">@att.spacing</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.notationType.html">@att.notationType</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lyricStyle.html">@att.lyricStyle</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.transposition.html">@att.transposition</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffDef.log.html">@att.staffDef.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.measureNumbers.html">@att.measureNumbers</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.scalable.html">@att.scalable</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timeBase.html">@att.timeBase</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/staffGrp.html">&lt;staffGrp&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffGrp.vis.html">@att.staffGrp.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.basic.html">@att.basic</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffGroupingSym.html">@att.staffGroupingSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/stem.html">&lt;stem&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.stems.html">@att.stems</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.graced.html">@att.graced</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.stemsCmn.html">@att.stemsCmn</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/subst.html">&lt;subst&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/supplied.html">&lt;supplied&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/svg.html">&lt;svg&gt;</a></p>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/syl.html">&lt;syl&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typography.html">@att.typography</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.syl.log.html">@att.syl.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/syllable.html">&lt;syllable&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.slashCount.html">@att.slashCount</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/system.html">&lt;system&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/tabDurSym.html">&lt;tabDurSym&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/tabGrp.html">&lt;tabGrp&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.logical.html">@att.duration.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.beamSecondary.html">@att.beamSecondary</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.fermataPresent.html">@att.fermataPresent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.augmentDots.html">@att.augmentDots</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.duration.quality.html">@att.duration.quality</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationGestural.html">@att.durationGestural</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/tabRhythm.html">&lt;tabRhythm&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/tempo.html">&lt;tempo&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.mmTempo.html">@att.mmTempo</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.midiTempo.html">@att.midiTempo</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/text.html">&lt;text&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/tie.html">&lt;tie&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.curveRend.html">@att.curveRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.curvature.html">@att.curvature</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/trill.html">&lt;trill&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html">@att.startEndId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.ornamentAccid.html">@att.ornamentAccid</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extender.html">@att.extender</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lineRend.html">@att.lineRend</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html">@att.nNumberLike</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/tuning.html">&lt;tuning&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.course.log.html">@att.course.log</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/tuplet.html">&lt;tuplet&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.durationRatio.html">@att.durationRatio</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.numberPlacement.html">@att.numberPlacement</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.tuplet.vis.html">@att.tuplet.vis</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/turn.html">&lt;turn&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html">@att.startId</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html">@att.placementRelStaff</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.ornamentAccid.html">@att.ornamentAccid</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html">@att.timestamp.logical</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.turn.log.html">@att.turn.log</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html">@att.staffIdent</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html">@att.extSym</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/unclear.html">&lt;unclear&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html">@att.source</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col col-md-2">
+<p><a href="https://music-encoding.org/guidelines/dev/elements/verse.html">&lt;verse&gt;</a></p>
+</div>
+<div class="col col-md-10">
+<p><a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html">@att.typed</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.nInteger.html">@att.nInteger</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.typography.html">@att.typography</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html">@att.linking</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html">@att.facsimile</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html">@att.lang</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html">@att.color</a>, <a href="https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html">@att.labelled</a></p>
+</div>
+</div>
+
+
+    </div>
+</div>
+
+<script>
+    let options = {
+        rootMargin: '60px'
+    }
+    function adjustSideBar() {
+        elem = document.getElementsByClassName("toc-group")[0];
+        // 992 is the breakpoint for which the sidebar moves to the top; 35 is the footer height
+        elem.style.height = (window.innerWidth < 992) ? "" : `${window.innerHeight - elem.offsetTop - 35}px`;
+    }
+
+    window.onresize = function () {
+        adjustSideBar();
+    };
+    window.onload = function() {
+        adjustSideBar();
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    // First deselect everything
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection`);
+                    for (i = 0; i < sections.length; i++){
+                        sections[i].classList.remove('selected');
+                    }
+                    // The one entering is marked as .on-screen
+                    document.querySelector(`.toc-group a[href="#${id}"]`).classList.add('on-screen');
+                    // Select the first that in .on-screen
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    sections[0].classList.add('selected');
+
+                } else {
+                    leaving = document.querySelector(`.toc-group a[href="#${id}"]`)
+                    // Remove the .on-screen from the one leaving
+                    leaving.classList.remove('on-screen');
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    // If no other one is on screen, just leave things as they are
+                    if (sections.length > 0) {
+                        // Otherwise de-select the one that is leaving
+                        leaving.classList.remove('selected');
+                        // Selected the first .on-screen one and de-select the other ones
+                        sections[0].classList.add('selected');
+                        for (i = 1; i < sections.length; i++){
+                            console.log(sections[i].getAttribute('id'))
+                            sections[i].classList.remove('selected');
+                        }
+                    }
+                }
+            });
+        }, options);
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+    });
+</script>
+
+
+
+        </div>
+
+        <footer class="hidden-print footer navbar-fixed-bottom">
+            <p>
+                
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).ready(function() {
+
+                
+
+            });
+        //]]>
+        </script>
+    </body>
+</html>
