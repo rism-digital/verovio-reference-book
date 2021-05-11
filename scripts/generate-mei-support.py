@@ -176,6 +176,8 @@ if __name__ == "__main__":
                 log.debug("\t{}".format(label))
                 attribute_classes.append(label)
 
+            if attribute_classes:
+                attribute_classes.sort()
             print_element(vrv_name, attribute_classes, file)
 
     file.close()
