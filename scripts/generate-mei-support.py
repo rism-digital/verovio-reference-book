@@ -87,7 +87,7 @@ def print_element(element, attributes, file):
         first = False
         attribute = format_attribute(attribute)
         #print(attribute)
-        file.write("[@{}]({}{}.html)".format(attribute, mei_attribute_base_url, attribute))
+        file.write("[{}]({}{}.html)".format(attribute, mei_attribute_base_url, attribute))
 
     file.write("\n{% endcol %}\n{% endrow %}\n\n")
 
