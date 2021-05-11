@@ -953,15 +953,6 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
-[\<tabRhythm\>](https://music-encoding.org/guidelines/dev/elements/tabRhythm.html)
-{% endcol %}
-{% col 10 %}
-[att.facsimile](https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
-{% endcol %}
-{% endrow %}
-
-{% row %}
-{% col 2 %}
 [\<tempo\>](https://music-encoding.org/guidelines/dev/elements/tempo.html)
 {% endcol %}
 {% col 10 %}
