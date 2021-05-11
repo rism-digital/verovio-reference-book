@@ -49,7 +49,7 @@ Thanks to the overall simple structure of its notation (e.g., monophony for chan
 
 Alignment of scores with audio recordings, also known as score following, is a typical music information retrieval task. The main challenge is to generate the alignment data taking into account the fact that performances vary in tempo and that sections of the score can be repeated in some performances. The [Freischütz Digital](https://freischuetz-digital.de/) is an example project where the alignment data is stored in MEI with synchronisation information at the measure level generated for multiple recordings. The playback is synchronised with Verovio using measure xml:id for following the score or jumping anywhere in it. Clicking anywhere on the score can conversely be used to jump to the corresponding place in the recording. In the case of this project, because the MEI data also contains mapping of the measures with their corresponding zone in the facsimile image of the handwritten manuscript, the same synchronisation can be realized with it.
 
-![freischütz](/images/introduction/use-cases/freischütz.png){:.img-responsive .example}
+![freischütz](/images/introduction/use-cases/freischuetz.png){:.img-responsive .example}
 
 #### Music notation editing
 
