@@ -70,7 +70,22 @@ xpath:
 
 The `xpath` array can contains the `[...]` value, which will not be executed but simply be replaced by `<!-- ... -->` in the code displayed. It can be used when the MEI snippet includes parts of the code that are not adjacent.
 
-For including an example not in the test suite (which should be the exception), replace the example `test-suite` entry with `url` with the address where the example lives.
+For including an example not in the test suite (which should be the exception), replace the example `test-suite` entry with `url` with the address where the example lives. Another possibility is to include the examples directly in the front matter with `inline`.
+
+```yaml
+examples:
+    - name: abc-01
+      inline: |-
+        X: 99
+        T:Short tune
+        C:K. Rettinghaus
+        M:4/4
+        L:1/4
+        K:G
+        D|G>ABG|A>BAD|G>ABA|G3|]
+```
+
+With both `url` and `inline`, an `name` entry is required.
 
 #### Additional options
 
@@ -115,7 +130,7 @@ To update the documentation, you need to run:
 python scripts/generate-methods.py release
 ```
 
-Note that it will generate the option documentation for the latest release of Verovio. For the documentation of the develop version, run:
+Note that it will generate the documentation for the latest release of Verovio. For the documentation of the develop version, run:
 ```bash
 python scripts/generate-methods.py develop
 ```
@@ -142,6 +157,20 @@ Links through "See also" references for options have to be added to the frontmat
 see-also:
     inputFrom:
       - "/toolkit-reference/input-formats.html"
+```
+
+## Documenting MEI support
+
+The MEI support documentation is also generated from the Verovio codebase through its [Doxygen documentation](https://github.com/rism-digital/verovio-doxygen).
+
+To update the MEI support documentation, you need to run:
+```bash
+python scripts/generate-mei-support.py release
+```
+
+Note that it will generate the documentation for the latest release of Verovio. For the documentation of the develop version, run:
+```bash
+python scripts/generate-mei-support.py develop
 ```
 
 ## License
