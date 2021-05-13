@@ -2,6 +2,7 @@
 layout: book
 title: Verovio Reference Book
 hide_title: true
+no-edit: true
 ---
 
 {% include title-page.md %}
