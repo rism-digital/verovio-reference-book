@@ -12,7 +12,8 @@ from typing import Dict, List
 import yaml
 
 header_url = "https://raw.githubusercontent.com/rism-digital/verovio-doxygen/{}/xml/classvrv_1_1_toolkit.xml"
-header_tmp_file = "scripts/classvrv_1_1_toolkit.xml"
+header_tmp_dir = "scripts/tmp"
+header_tmp_name = "classvrv_1_1_toolkit.xml"
 methods_ouptut_page = "./_book/05-toolkit-reference/03-toolkit-methods.md"
 
 def get_text_for_nodes(xml_nodes):
@@ -173,6 +174,11 @@ if __name__ == "__main__":
         log.error("Problem downloading %s. Skipping this example", url)
         sys.exit()
 
+            # create the output directory if necessary
+    if not(os.path.isdir(header_tmp_dir)):
+        os.mkdir(header_tmp_dir)
+
+    header_tmp_file = os.path.join(header_tmp_dir, header_tmp_name)
     # Save the file locally for parsing
     with open(header_tmp_file, 'w') as f:
         f.write(header_file.text)
