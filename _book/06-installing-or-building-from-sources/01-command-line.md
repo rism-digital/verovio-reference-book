@@ -12,6 +12,11 @@ cd tools
 cmake ../cmake
 make
 ```
+You can increase the building speed by using the `-j` option when running make that specifies the number of jobs to be run in parallel:
+```bash
+make -j 8
+```
+
 The generates a `verovio` binary within `./tools`. You can run Verovio from there or install it. Installing it means copying the executable and the resource files to directories which paths are globally accessible. You simply need to run:
 ```bash
 sudo make install
