@@ -490,6 +490,14 @@ Below is a song for voice and piano accompaniment. Each verse is listed in a sep
 {{ humdrum.inline }}
 ```
 
+#### Additional input format via Humdrum
+
+Verovio with Humdrum enabled supports some additional input formats that can be used with `--input-from`:
+* **MuseData** with option `md`, `musedata`, or `musedata-hum`
+* **EsAC** with `esac`
+
+For more information about these input formats, see the Verovio Humdrum Viewer [documentation](https://doc.verovio.humdrum.org/).
+
 ### MusicXML
 
 Verovio has two converters for importing MusicXML data. The first one directly converts MusicXML into MEI. The second one first converts to Humdrum and then converts the Humdrum to MEI. By default, the first importer is used. It is also the one triggered when the value `xml` is passed to the `--input-from` option.
