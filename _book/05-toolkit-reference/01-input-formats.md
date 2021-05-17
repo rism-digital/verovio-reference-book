@@ -502,6 +502,10 @@ For more information about these input formats, see the Verovio Humdrum Viewer [
 
 Verovio has two converters for importing MusicXML data. The first one directly converts MusicXML into MEI. The second one first converts to Humdrum and then converts the Humdrum to MEI. By default, the first importer is used. It is also the one triggered when the value `xml` is passed to the `--input-from` option.
 
+#### Compressed MusicXML files
+
+Verovio supports MusicXML compressed (MXL) files. It only loads basic single-file MusicXML MXL files containing the index file (`META-INF/container.xml`) and the MusicXML file, with the extension `.xml`. The input process searches for the `META-INF/container.xml` file from which the filename of the MusicXML file is extracted. The filename extracted is the first `./rootfile@full-path` listed in `/container/rootfiles`. Input of MXL files is auto detected and the `xml` value does not have to be passed to  `--input-format`.
+
 #### Importing MusicXML via Humdrum
 
 The MusicXML import via Humdrum is available only for Verovio builds where Humdrum support has been enabled specifically at build time. For the JavaScript toolkit, this is not the default and it is important to make sure that the appropriate build is being used. See the related [section](/installing-or-building-from-sources/javascript-and-webassembly.html) for more information about this. With the command-line tool and the Python toolkit, Humdrum support is enabled by default. 
