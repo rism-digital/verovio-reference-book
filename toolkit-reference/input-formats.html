@@ -27,18 +27,18 @@
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Input formats" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="MEI" />
-<meta property="og:description" content="MEI" />
+<meta name="description" content="When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f)." />
+<meta property="og:description" content="When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f)." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-15T13:13:27+00:00" />
+<meta property="article:published_time" content="2021-05-17T06:13:49+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Input formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"MEI","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-15T13:13:27+00:00","datePublished":"2021-05-15T13:13:27+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
+{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-17T06:13:49+00:00","datePublished":"2021-05-17T06:13:49+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -157,7 +157,9 @@
         
         
         <h2>Input formats</h2>
-        <h3 id="mei">MEI</h3>
+        <p>When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option <code class="language-plaintext highlighter-rouge">--input-from</code> (or <code class="language-plaintext highlighter-rouge">-f</code>).</p>
+
+<h3 id="mei">MEI</h3>
 
 <p>The native input format for Verovio is MEI. Verovio supports MEI as input format from MEI 2013 onwards. From Verovio 2.x.x, the plan is to have even version numbers for Verovio releases using a stable version of MEI, and odd version numbers for releases using a development version of MEI. It means that once MEI 5.0 will be released, Verovio will move to version 4.x.x. Older versions of MEI are still supported by newer versions of Verovio.</p>
 
@@ -5267,7 +5269,13 @@
 
 <h3 id="musicxml">MusicXML</h3>
 
-<p>[In preparation]</p>
+<p>Verovio has two converters for importing MusicXML data. The first one directly converts MusicXML into MEI. The second one first converts to Humdrum and then converts the Humdrum to MEI. By default, the first importer is used. It is also the one triggered when the value <code class="language-plaintext highlighter-rouge">xml</code> is passed to the <code class="language-plaintext highlighter-rouge">--input-from</code> option.</p>
+
+<h4 id="importing-musicxml-via-humdrum">Importing MusicXML via Humdrum</h4>
+
+<p>For the JavaScript toolkit, the MusicXML import via Humdrum is available only for builds where Humdrum support has been enabled specifically. See the related <a href="/installing-or-building-from-sources/javascript-and-webassembly.html">section</a> for more information about this. With builds that support Humdrum, the MusicXML import via Humdrum can be triggered by setting the <code class="language-plaintext highlighter-rouge">inputFrom</code> option to <code class="language-plaintext highlighter-rouge">musicxml-hum</code>.</p>
+
+<p>With the command-line tool and the Python toolkit, Humdrum support is enabled by default. The MusicXML import via Humdrum can itself be made the default MusicXML importer with the build option <code class="language-plaintext highlighter-rouge">MUSICXML_DEFAULT_HUMDRUM</code>. See the <a href="/installing-or-building-from-sources/command-line.html">command-line</a> section for more information on how to change build options. With this, MusicXML files will be loaded via the Humdrum importer. The direct importer can still be chosen with the value <code class="language-plaintext highlighter-rouge">xml</code> passed to <code class="language-plaintext highlighter-rouge">--input-from</code>.</p>
 
 <h3 id="plaine-and-easie">Plaine and Easie</h3>
 
