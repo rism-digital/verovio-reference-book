@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-17T06:13:49+00:00" />
+<meta property="article:published_time" content="2021-05-17T08:30:33+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Input formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-17T06:13:49+00:00","datePublished":"2021-05-17T06:13:49+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
+{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-17T08:30:33+00:00","datePublished":"2021-05-17T08:30:33+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -5273,9 +5273,13 @@
 
 <h4 id="importing-musicxml-via-humdrum">Importing MusicXML via Humdrum</h4>
 
-<p>For the JavaScript toolkit, the MusicXML import via Humdrum is available only for builds where Humdrum support has been enabled specifically. See the related <a href="/installing-or-building-from-sources/javascript-and-webassembly.html">section</a> for more information about this. With builds that support Humdrum, the MusicXML import via Humdrum can be triggered by setting the <code class="language-plaintext highlighter-rouge">inputFrom</code> option to <code class="language-plaintext highlighter-rouge">musicxml-hum</code>.</p>
+<p>The MusicXML import via Humdrum is available only for Verovio builds where Humdrum support has been enabled specifically at build time. For the JavaScript toolkit, this is not the default and it is important to make sure that the appropriate build is being used. See the related <a href="/installing-or-building-from-sources/javascript-and-webassembly.html">section</a> for more information about this. With the command-line tool and the Python toolkit, Humdrum support is enabled by default.</p>
 
-<p>With the command-line tool and the Python toolkit, Humdrum support is enabled by default. The MusicXML import via Humdrum can itself be made the default MusicXML importer with the build option <code class="language-plaintext highlighter-rouge">MUSICXML_DEFAULT_HUMDRUM</code>. See the <a href="/installing-or-building-from-sources/command-line.html">command-line</a> section for more information on how to change build options. With this, MusicXML files will be loaded via the Humdrum importer. The direct importer can still be chosen with the value <code class="language-plaintext highlighter-rouge">xml</code> passed to <code class="language-plaintext highlighter-rouge">--input-from</code>.</p>
+<p>With Verovio builds that support Humdrum, the MusicXML import via Humdrum can be triggered by setting the <code class="language-plaintext highlighter-rouge">--input-from</code> option to <code class="language-plaintext highlighter-rouge">musicxml-hum</code>. For example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-f</span> musicxml-hum <span class="nt">-t</span> hum file.xml
+</code></pre></div></div>
+
+<p>The MusicXML import via Humdrum can itself be made the default MusicXML importer with the build option <code class="language-plaintext highlighter-rouge">MUSICXML_DEFAULT_HUMDRUM</code>. See the <a href="/installing-or-building-from-sources/command-line.html">command-line</a> section for more information on how to change build options. With this, MusicXML files will be loaded via the Humdrum importer without having to specify <code class="language-plaintext highlighter-rouge">musicxml-hum</code> for the option <code class="language-plaintext highlighter-rouge">--input-from</code>. The direct importer can still be used by passing the value <code class="language-plaintext highlighter-rouge">xml</code> to <code class="language-plaintext highlighter-rouge">--input-from</code>.</p>
 
 <h3 id="plaine-and-easie">Plaine and Easie</h3>
 

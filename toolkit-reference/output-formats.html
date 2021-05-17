@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-17T06:13:49+00:00" />
+<meta property="article:published_time" content="2021-05-17T08:30:33+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Output formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"SVG","url":"/toolkit-reference/output-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Output formats","dateModified":"2021-05-17T06:13:49+00:00","datePublished":"2021-05-17T06:13:49+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"@context":"https://schema.org"}</script>
+{"description":"SVG","url":"/toolkit-reference/output-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Output formats","dateModified":"2021-05-17T08:30:33+00:00","datePublished":"2021-05-17T08:30:33+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -1154,9 +1154,13 @@
 
 <h3 id="humdrum">Humdrum</h3>
 
-<p>The Humdrum output format for Verovio is available only from MusicXML input and only if the Humdrum importer is used when loading the data into Verovio. For this to happen, you need to make sure that both the Humdrum support and the build option <code class="language-plaintext highlighter-rouge">MUSICXML_DEFAULT_HUMDRUM</code> have been enabled in the build of Verovio being used. See the <a href="/installing-or-building-from-sources">related</a> chapter for more information about this.</p>
+<p>The Humdrum output format for Verovio is available only from MusicXML input and only if the Humdrum importer is used when loading the data into Verovio. See <a href="/toolkit-reference/input-formats.html#musicxml">this section</a> for more information about the MusicXML import via Humdrum.</p>
 
 <p>With this in hand, you can convert MusicXML to Humdrum from the command-line with:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-f</span> musicxml-hum <span class="nt">-t</span> hum file.xml
+</code></pre></div></div>
+
+<p>If the MusicXML importer via Humdrum is the default, you can simply do:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-t</span> hum file.xml
 </code></pre></div></div>
 
