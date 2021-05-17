@@ -496,9 +496,14 @@ Verovio has two converters for importing MusicXML data. The first one directly c
 
 #### Importing MusicXML via Humdrum
 
-For the JavaScript toolkit, the MusicXML import via Humdrum is available only for builds where Humdrum support has been enabled specifically. See the related [section](/installing-or-building-from-sources/javascript-and-webassembly.html) for more information about this. With builds that support Humdrum, the MusicXML import via Humdrum can be triggered by setting the `inputFrom` option to `musicxml-hum`.
+The MusicXML import via Humdrum is available only for Verovio builds where Humdrum support has been enabled specifically at build time. For the JavaScript toolkit, this is not the default and it is important to make sure that the appropriate build is being used. See the related [section](/installing-or-building-from-sources/javascript-and-webassembly.html) for more information about this. With the command-line tool and the Python toolkit, Humdrum support is enabled by default. 
 
-With the command-line tool and the Python toolkit, Humdrum support is enabled by default. The MusicXML import via Humdrum can itself be made the default MusicXML importer with the build option `MUSICXML_DEFAULT_HUMDRUM`. See the [command-line](/installing-or-building-from-sources/command-line.html) section for more information on how to change build options. With this, MusicXML files will be loaded via the Humdrum importer. The direct importer can still be chosen with the value `xml` passed to `--input-from`.
+With Verovio builds that support Humdrum, the MusicXML import via Humdrum can be triggered by setting the `--input-from` option to `musicxml-hum`. For example:
+```bash
+verovio -f musicxml-hum -t hum file.xml
+```
+
+The MusicXML import via Humdrum can itself be made the default MusicXML importer with the build option `MUSICXML_DEFAULT_HUMDRUM`. See the [command-line](/installing-or-building-from-sources/command-line.html) section for more information on how to change build options. With this, MusicXML files will be loaded via the Humdrum importer without having to specify `musicxml-hum` for the option `--input-from`. The direct importer can still be used by passing the value `xml` to `--input-from`.
     
 ### Plaine and Easie
 
