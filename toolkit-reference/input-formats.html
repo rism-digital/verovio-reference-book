@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-17T08:30:33+00:00" />
+<meta property="article:published_time" content="2021-05-17T08:43:40+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Input formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-17T08:30:33+00:00","datePublished":"2021-05-17T08:30:33+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
+{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-17T08:43:40+00:00","datePublished":"2021-05-17T08:43:40+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -5266,6 +5266,16 @@
 !!muse2ps: s^(.){(..)}^z21jv200,114,144
 !!CharacterEncoding: UTF-8
 </code></pre></div></div>
+
+<h4 id="additional-input-format-via-humdrum">Additional input format via Humdrum</h4>
+
+<p>Verovio with Humdrum enabled supports some additional input formats that can be used with <code class="language-plaintext highlighter-rouge">--input-from</code>:</p>
+<ul>
+  <li><strong>MuseData</strong> with option <code class="language-plaintext highlighter-rouge">md</code>, <code class="language-plaintext highlighter-rouge">musedata</code>, or <code class="language-plaintext highlighter-rouge">musedata-hum</code></li>
+  <li><strong>EsAC</strong> with <code class="language-plaintext highlighter-rouge">esac</code></li>
+</ul>
+
+<p>For more information about these input formats, see the Verovio Humdrum Viewer <a href="https://doc.verovio.humdrum.org/">documentation</a>.</p>
 
 <h3 id="musicxml">MusicXML</h3>
 
