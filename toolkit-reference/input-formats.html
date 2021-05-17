@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-17T08:43:40+00:00" />
+<meta property="article:published_time" content="2021-05-17T10:42:44+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Input formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-17T08:43:40+00:00","datePublished":"2021-05-17T08:43:40+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
+{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-05-17T10:42:44+00:00","datePublished":"2021-05-17T10:42:44+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -5280,6 +5280,10 @@
 <h3 id="musicxml">MusicXML</h3>
 
 <p>Verovio has two converters for importing MusicXML data. The first one directly converts MusicXML into MEI. The second one first converts to Humdrum and then converts the Humdrum to MEI. By default, the first importer is used. It is also the one triggered when the value <code class="language-plaintext highlighter-rouge">xml</code> is passed to the <code class="language-plaintext highlighter-rouge">--input-from</code> option.</p>
+
+<h4 id="compressed-musicxml-files">Compressed MusicXML files</h4>
+
+<p>Verovio supports MusicXML compressed (MXL) files. It only loads basic single-file MusicXML MXL files containing the index file (<code class="language-plaintext highlighter-rouge">META-INF/container.xml</code>) and the MusicXML file, with the extension <code class="language-plaintext highlighter-rouge">.xml</code>. The input process searches for the <code class="language-plaintext highlighter-rouge">META-INF/container.xml</code> file from which the filename of the MusicXML file is extracted. The filename extracted is the first <code class="language-plaintext highlighter-rouge">./rootfile@full-path</code> listed in <code class="language-plaintext highlighter-rouge">/container/rootfiles</code>. Input of MXL files is auto detected and the <code class="language-plaintext highlighter-rouge">xml</code> value does not have to be passed to  <code class="language-plaintext highlighter-rouge">--input-format</code>.</p>
 
 <h4 id="importing-musicxml-via-humdrum">Importing MusicXML via Humdrum</h4>
 
