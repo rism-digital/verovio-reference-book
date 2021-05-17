@@ -250,6 +250,8 @@ examples:
   
 ---
 
+When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option `--input-from` (or `-f`).
+
 ### MEI
 
 The native input format for Verovio is MEI. Verovio supports MEI as input format from MEI 2013 onwards. From Verovio 2.x.x, the plan is to have even version numbers for Verovio releases using a stable version of MEI, and odd version numbers for releases using a development version of MEI. It means that once MEI 5.0 will be released, Verovio will move to version 4.x.x. Older versions of MEI are still supported by newer versions of Verovio.
@@ -490,7 +492,13 @@ Below is a song for voice and piano accompaniment. Each verse is listed in a sep
 
 ### MusicXML
 
-[In preparation]
+Verovio has two converters for importing MusicXML data. The first one directly converts MusicXML into MEI. The second one first converts to Humdrum and then converts the Humdrum to MEI. By default, the first importer is used. It is also the one triggered when the value `xml` is passed to the `--input-from` option.
+
+#### Importing MusicXML via Humdrum
+
+For the JavaScript toolkit, the MusicXML import via Humdrum is available only for builds where Humdrum support has been enabled specifically. See the related [section](/installing-or-building-from-sources/javascript-and-webassembly.html) for more information about this. With builds that support Humdrum, the MusicXML import via Humdrum can be triggered by setting the `inputFrom` option to `musicxml-hum`.
+
+With the command-line tool and the Python toolkit, Humdrum support is enabled by default. The MusicXML import via Humdrum can itself be made the default MusicXML importer with the build option `MUSICXML_DEFAULT_HUMDRUM`. See the [command-line](/installing-or-building-from-sources/command-line.html) section for more information on how to change build options. With this, MusicXML files will be loaded via the Humdrum importer. The direct importer can still be chosen with the value `xml` passed to `--input-from`.
     
 ### Plaine and Easie
 

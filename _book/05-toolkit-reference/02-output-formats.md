@@ -279,4 +279,9 @@ Verovio will produce the following Plaine and Easie output:
 
 ### Humdrum
 
-The Humdrum output format for Verovio is available only from MusicXML input. Furthermore, you need to make sure that both the Humdrum support and the build option `MUSICXML_DEFAULT_HUMDRUM` have been enabled in the build of Verovio being used. See the [related](/installing-or-building-from-sources) chapter for more information about this.
+The Humdrum output format for Verovio is available only from MusicXML input and only if the Humdrum importer is used when loading the data into Verovio. For this to happen, you need to make sure that both the Humdrum support and the build option `MUSICXML_DEFAULT_HUMDRUM` have been enabled in the build of Verovio being used. See the [related](/installing-or-building-from-sources) chapter for more information about this.
+
+With this in hand, you can convert MusicXML to Humdrum from the command-line with:
+```bash
+verovio -t hum file.xml
+```
