@@ -602,15 +602,6 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
-[\<object\>](https://music-encoding.org/guidelines/dev/elements/object.html)
-{% endcol %}
-{% col 10 %}
-
-{% endcol %}
-{% endrow %}
-
-{% row %}
-{% col 2 %}
 [\<octave\>](https://music-encoding.org/guidelines/dev/elements/octave.html)
 {% endcol %}
 {% col 10 %}
