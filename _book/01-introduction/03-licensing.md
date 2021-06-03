@@ -13,6 +13,7 @@ The LGPLv3 license allows you to use the Verovio library as-is in open-source pr
 Whichever use you make of the library, you have to give **visible credit** to the Verovio library. For a web application, it has to be through a prominent notice on your web-site. For a mobile application, it has to be given in the metadata of the application (e.g., iOS App Store or the Google Play store).
 
 Here are some minimal examples to follow:
+
 * NomadPlay [web application](https://www.nomadplay.app/fr/legal-notice) and in the [App Store](https://apps.apple.com/fr/app/nomadplay-partitions-musique/id1443790777)
 * Trala in the [App Store](https://apps.apple.com/us/app/trala-learn-violin/id1143205265)
 

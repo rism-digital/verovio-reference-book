@@ -20,8 +20,8 @@ For more information about the SVG output in Verovio, see the [Internal structur
 
 #### Font limitation
 
-Firefox on Linux (Ubuntu), uses "DejaVu Serif" as default font, which can cause some text layout problems when displaying the SVG files generated with Verovio. 
-    
+Firefox on Linux (Ubuntu), uses "DejaVu Serif" as default font, which can cause some text layout problems when displaying the SVG files generated with Verovio.
+
 ### MEI
 
 With its MEI output, Verovio can serve as a converter to MEI. This can be useful for converting data from another input format supported by Verovio (e.g., MusicXML, ABC) to MEI. It can also be used to upgrade files encoded in an older version of MEI to the one supported by the version of Verovio that being used. Another typical use-case where outputting MEI from Verovio can be desirable is for [transposing](/advanced-topics/transposition.html) content.
@@ -39,33 +39,42 @@ When loading MEI data into Verovio and outputting MEI, the following is to expec
 When loading MEI data into Verovio, some analytical markup is converted into standard markup. 
 
 The attributes that are converted are:
+
 * `@fermata`
 * `@tie`
 
 For example:
 {% row %}{% col %}
 *Original data*
+
 ```xml
 <note t="i" xml:id="n1"/>
 <note t="t" xml:id="n2"/>
 ```
+
 {% endcol %}{% col %}
 *Output data*
+
 ```xml
 <tie startid="#n1" endid="#n2"/>
 ```
+
 {% endcol %}{% endrow %}
 
 {% row %}{% col %}
 *Original data*
+
 ```xml
 <mRest fermata="above" xml:id="mr1"/>
 ```
+
 {% endcol %}{% col %}
 *Output data*
+
 ```xml
 <fermata startid="#mr1" place="above"/>
 ```
+
 {% endcol %}{% endrow %}
 
 By default, the analytical markup is not preserve in the MEI output. It can be with the option `--preserve-analytical-markup`.  
@@ -76,24 +85,27 @@ Articulations in MEI can be encoded with multiple values within a `@artic` attri
 
 {% row %}{% col %}
 *Original data*
+
 ```xml
 <artic artic="marc ten" place="above"/>
 ```
+
 {% endcol %}{% col %}
 *Output data*
+
 ```xml
 <artic artic="marc" place="above"/>
 <artic artic="ten" place="above"/>
 ```
-{% endcol %}{% endrow %}
 
+{% endcol %}{% endrow %}
 
 #### Page-based MEI
 
 {% aside .warning %}
 The MEI page-based model is not part of MEI. It was put in place for the development of Verovio and can still change in the future. It will be documented as input format once it is stabilized.
 {% endaside %}
-    
+
 ### MIDI
 
 Verovio provides a basic MIDI output feature that can be used from the command-line tool or from the JavaScript toolkit. The MIDI output can be written to a file for further processing or for building application with MIDI playback, including in online environments. However, since MIDI is not supported in web-browsers in a standard way, an additional player will be required in such cases.
@@ -121,6 +133,7 @@ With the JavaScript toolkit, the MIDI output is available through the `renderToM
 ### Timemap
 
 The timemap is an array of JSON objects, with each entry having these keys:
+
 * tstamp: this is the time in millisecond from the start of the music to the start of the current event (real time)
 * qstamp: the time in quarter notes from the start of the music to the start of the current event entry (score time)
 * tempo: when the tempo changes the new tempo will be given for the current event. Also the tempo changes are only allowed to occur at the starts of measures in the current code for creating MIDI files, and this is the same limitation for the timemap file. The tempo and qstamp values can be used to re-calculate a new set of tstamp values if the tempo changes.
@@ -253,24 +266,28 @@ The timemap is an array of JSON objects, with each entry having these keys:
 ]
 ```
 
-### Plaine and Easie 
+### Plaine and Easie
 
-The output format for the Plaine and Easie output in Verovio uses the same file structure with `key:value` lines as described in the section in the [Input formats](/toolkit-reference/input-formats.html#plaine-and-easie). See also there for the features supported. 
+The output format for the Plaine and Easie output in Verovio uses the same file structure with `key:value` lines as described in the section in the [Input formats](/toolkit-reference/input-formats.html#plaine-and-easie). See also there for the features supported.
 
 Note that:
+
 * duration is given explicitly for every note
 * no abbreviated writing is used in the Plaine and Easie output
 
 For example, let's consider the following example passed as input to Verovio: 
 
 {% assign pae = page.examples | where: "name", "pae-01" | first %}
-```
+
+```pae
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-01" %}
 
 Verovio will produce the following Plaine and Easie output:
-```
+
+```pae
 @keysig:b
 @timesig:3/4
 @clef:G-2
@@ -282,11 +299,13 @@ Verovio will produce the following Plaine and Easie output:
 The Humdrum output format for Verovio is available only from MusicXML input and only if the Humdrum importer is used when loading the data into Verovio. See [this section](/toolkit-reference/input-formats.html#musicxml) for more information about the MusicXML import via Humdrum.
 
 With this in hand, you can convert MusicXML to Humdrum from the command-line with:
+
 ```bash
 verovio -f musicxml-hum -t hum file.xml
 ```
 
 If the MusicXML importer via Humdrum is the default, you can simply do:
+
 ```bash
 verovio -t hum file.xml
 ```
