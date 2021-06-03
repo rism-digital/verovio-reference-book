@@ -258,7 +258,7 @@ The native input format for Verovio is MEI. Verovio supports MEI as input format
 
 When loading MEI data into Verovio and outputting MEI, elements that are not supported by Verovio will be ignored. This means that they are not loaded into memory and will not be preserved in the MEI output. This includes the element themselves, but also any descendant they might have. A warning will be given in the console. For example:
 
-```bash
+```console
 [Warning] Unsupported '<ossia>' within <measure>
 ```
 
@@ -274,15 +274,89 @@ Various attributes in `<page>` and `<measure>` for the page-based version of MEI
 
 The following elements / attributes are upgraded:
 
+* `beatRpt`
+* `fTrem@slash`
+* `instrDef@midi.volume`
+* `mordent@form`
 * `turn@form`
 * `staffDef@barthru`
 * `staffDef@label`
 * `staffDef@label.abbr`
 * `staffGrp@label`
 * `staffGrp@label.abbr`
-* `fTrem@slash`
 * `@dur.ges`
-* `beatRpt`
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<beatRpt rend="4"/>
+<beatRpt rend="8"/>
+<beatRpt rend="16"/>
+<beatRpt form="4"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<beatRpt slash="1"/>
+<beatRpt slash="1"/>
+<beatRpt slash="2"/>
+<beatRpt slash="1"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<fTrem slash="2"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<fTrem beams="2"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<instrDef midi.volume="111"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<instrDef midi.volume="87.40%"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<mordent form="inv"/>
+<mordent form="norm"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<mordent form="upper"/>
+<mordent form="lower"/>
+```
+
+{% endcol %}{% endrow %}
 
 {% row %}{% col %}
 *Original data*
@@ -341,22 +415,6 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<fTrem slash="2"/>
-```
-
-{% endcol %}{% col %}
-*Upgraded data*
-
-```xml
-<fTrem beams="2"/>
-```
-
-{% endcol %}{% endrow %}
-
-{% row %}{% col %}
-*Original data*
-
-```xml
 <note dur.ges="8p"/>
 <note dur.ges="32r"/>
 <note dur.ges="32s"/>
@@ -369,28 +427,6 @@ The following elements / attributes are upgraded:
 <note dur.ppq="8"/>
 <note dur.recip="32"/>
 <note dur.real="32"/>
-```
-
-{% endcol %}{% endrow %}
-
-{% row %}{% col %}
-*Original data*
-
-```xml
-<beatRpt rend="4"/>
-<beatRpt rend="8"/>
-<beatRpt rend="16"/>
-<beatRpt form="4"/>
-```
-
-{% endcol %}{% col %}
-*Upgraded data*
-
-```xml
-<beatRpt slash="1"/>
-<beatRpt slash="1"/>
-<beatRpt slash="2"/>
-<beatRpt slash="1"/>
 ```
 
 {% endcol %}{% endrow %}
