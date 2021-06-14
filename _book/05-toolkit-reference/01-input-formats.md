@@ -258,7 +258,7 @@ The native input format for Verovio is MEI. Verovio supports MEI as input format
 
 When loading MEI data into Verovio and outputting MEI, elements that are not supported by Verovio will be ignored. This means that they are not loaded into memory and will not be preserved in the MEI output. This includes the element themselves, but also any descendant they might have. A warning will be given in the console. For example:
 
-```console
+```
 [Warning] Unsupported '<ossia>' within <measure>
 ```
 
