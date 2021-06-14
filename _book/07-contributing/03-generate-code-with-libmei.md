@@ -11,16 +11,20 @@ Whenever the MEI schema is modified, this code needs to be re-generated in order
 In order to update to code generated with LibMEI, you need to clone the [forked version](https://github.com/rism-digital/libmei) of LibMEI.
 
 LibMEI takes a compiled ODD as input. You need to run, from the LibMEI directory:
+
 ```bash
 python tools/parseschema2.py -l vrv -o /path/to/the/verovio/directory -i tools/includes/vrv mei/dev/mei-verovio_compiled.odd
 ```
+
 You need to set to option `-o` to point to the Verovio directory where the `./libmei` files will be written.
 
 ### Customization
 
 Verovio currently uses an MEI customization that adds or modified a few elements. It is defined in the `./mei/dev/mei-verovio.xml` file. If you want to makes changes to it, you can make them there. You will need to re-generate the `./mei/dev/mei-verovio_compiled.odd` ODD file. This can be done using the Edirom [MEI Garage](https://meigarage.edirom.de/). Alternatively, you can also use the MEI command-line script. To do so, you will need to a clone of the [MEI](https://github.com/music-encoding/music-encoding) repository, copy your customization file (e.g., `mei-verovio.xml`) into it and do:
+
 ```bash
 ant init
 ant -lib lib/saxon/saxon9he.jar -Dcustomization.path=mei-verovio.xml
 ```
+
 The ODD file will be written to `./dist/schemata/mei-verovio_compiled.odd`, which you can use as new input file for LibMEI.

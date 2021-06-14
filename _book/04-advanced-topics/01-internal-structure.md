@@ -38,6 +38,7 @@ To give an example, a `<note>` element with an `xml:id` attribute in the MEI fil
   </tuplet>
 </beam>
 ```
+
 {% row %}
 {% col 5 %}
 ![tuplet-and-beams](/images/advanced-topics/internal-structure/tuplet-beam.png){:.img-responsive}
