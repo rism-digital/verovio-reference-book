@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-20T08:02:04+00:00" />
+<meta property="article:published_time" content="2021-06-14T10:36:56+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Other bindings" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Java","url":"/installing-or-building-from-sources/other-bindings.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Other bindings","dateModified":"2021-05-20T08:02:04+00:00","datePublished":"2021-05-20T08:02:04+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/other-bindings.html"},"@context":"https://schema.org"}</script>
+{"description":"Java","url":"/installing-or-building-from-sources/other-bindings.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Other bindings","dateModified":"2021-06-14T10:36:56+00:00","datePublished":"2021-06-14T10:36:56+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/other-bindings.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -151,12 +151,14 @@
         <h3 id="java">Java</h3>
 
 <p>To build the Java toolkit you need to have swig and swig-java installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) as well as <a href="https://maven.apache.org/">Maven</a>. You need to run:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings/java
 mvn package
 mvn package
 </code></pre></div></div>
 
 <p>Note the <code class="language-plaintext highlighter-rouge">mvn package</code> command needs to be run twice. You can test it with the MEI and PAE examples. For example – replace <code class="language-plaintext highlighter-rouge">X.X.X</code> with the appropriate version number:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>example-mei
 javac <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main.java 
 java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
@@ -183,6 +185,7 @@ java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
 </code></pre></div></div>
 
 <p>To use Verovio in your iOS project import</p>
+
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import &lt;Verovio/Verovio-umbrella.h&gt;
 </span></code></pre></div></div>
 

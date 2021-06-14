@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-20T08:02:04+00:00" />
+<meta property="article:published_time" content="2021-06-14T10:36:56+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Python" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Pre-build versions","url":"/installing-or-building-from-sources/python.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Python","dateModified":"2021-05-20T08:02:04+00:00","datePublished":"2021-05-20T08:02:04+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"@context":"https://schema.org"}</script>
+{"description":"Pre-build versions","url":"/installing-or-building-from-sources/python.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Python","dateModified":"2021-06-14T10:36:56+00:00","datePublished":"2021-06-14T10:36:56+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -157,10 +157,12 @@
 <p>The Python versions for which a pre-build is provided are 3.6, 3.7, 3.8 and 3.9. The platforms supported are MacOS 10.9, Linux with <a href="https://github.com/pypa/manylinux">manylinux</a> for x86-64, Win-32 and Win-amd64.</p>
 
 <p>The latest release can be installed with:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>verovio
 </code></pre></div></div>
 
 <p>A previous version can be installed with:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pip <span class="nb">install </span><span class="nv">verovio</span><span class="o">==</span>3.2.0
 </code></pre></div></div>
 
@@ -169,26 +171,31 @@
 <h3 id="basic-usage-of-the-toolkit">Basic usage of the toolkit</h3>
 
 <p>Once installed, the Verovio tookit module can be imported with</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">verovio</span>
 </code></pre></div></div>
 
 <p>You can then create an instance of the toolkit and load data. For example:</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="n">toolkit</span><span class="p">()</span>
 <span class="n">tk</span><span class="p">.</span><span class="n">loadFile</span><span class="p">(</span><span class="s">"path-to-mei-file"</span><span class="p">)</span>
 <span class="n">tk</span><span class="p">.</span><span class="n">getPageCount</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Once loaded, the data can be rendered to a string:</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">svg_string</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>It can also be rendered to a file:</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tk</span><span class="p">.</span><span class="n">renderToSVGFile</span><span class="p">(</span> <span class="s">"page.svg"</span><span class="p">,</span> <span class="mi">1</span> <span class="p">)</span>
 </code></pre></div></div>
 
 <h4 id="setting-options">Setting options</h4>
 
 <p>The options are set on the toolkit instance. For example, the following code will change the dimensions of the page and redo the layout for the previously loaded data:</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tk</span><span class="p">.</span><span class="n">setOption</span><span class="p">(</span> <span class="s">"pageHeight"</span><span class="p">,</span> <span class="s">"2100"</span> <span class="p">)</span>
 <span class="n">tk</span><span class="p">.</span><span class="n">setOption</span><span class="p">(</span> <span class="s">"pageWidth"</span><span class="p">,</span> <span class="s">"2900"</span> <span class="p">)</span>
 <span class="n">tk</span><span class="p">.</span><span class="n">setScale</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
@@ -197,6 +204,7 @@
 </code></pre></div></div>
 
 <p>It is also possbile to collect options in a Python Dictionary and pass them as Json dump to the toolkit:</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
 <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'pageHeight'</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
@@ -212,26 +220,33 @@
 <p>To build the Python toolkit you need to have swig and swig-python installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) and the Python distutils package. Version 4.0 or newer of SWIG is recommended but older versions should work too.  To install SWIG in MacOS using <a href="http://brew.sh">Homebrew</a>, type the command <code class="language-plaintext highlighter-rouge">brew install swig</code>.</p>
 
 <p>The toolkit needs to be built from from the root directory of the repository content. To build it in-place, run:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py build_ext <span class="nt">--inplace</span>
 </code></pre></div></div>
 
 <p>If you want to install it, run:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py build_ext
 <span class="nb">sudo </span>python setup.py <span class="nb">install</span>
 </code></pre></div></div>
 
 <p>For building it with one or more specific options (e.g., without Plain and Easy support), run:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py build_ext <span class="nt">--inplace</span> <span class="nt">--define</span> NO_PAE_SUPPORT
 </code></pre></div></div>
 
 <h4 id="building-a-python-wheel-locally">Building a Python wheel locally</h4>
 
 <p>You can build a Python wheel locally with:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py bdist
 </code></pre></div></div>
+
 <p>For a source distribution, do:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py sdist
 </code></pre></div></div>
+
 <p>In both cases, the wheel will be written to the <code class="language-plaintext highlighter-rouge">./dist</code> directory.</p>
 
 <h4 id="building-with-cmake">Building with CMake</h4>
@@ -239,6 +254,7 @@
 <p>The Python toolkit can be built with <a href="https://cmake.org">CMake</a>, which can be significantly faster because parallel processing can be used. This is also the approach to recommend when developing because it will not rebuild the entire codebase when a change it made to a file but only the files that actually need to rebuilt.</p>
 
 <p>For this approach to work you need at least version 3.13 of CMake because it uses the option <code class="language-plaintext highlighter-rouge">-B</code> introduced in that version of CMake. The steps are:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings
 cmake ../cmake <span class="nt">-B</span> python <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON
 <span class="nb">cd </span>python
@@ -246,6 +262,7 @@ make <span class="nt">-j8</span>
 </code></pre></div></div>
 
 <p>If you want to enable or disable other specific options, you can do:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ../cmake <span class="nt">-B</span> python <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON <span class="nt">-DNO_PAE_SUPPORT</span><span class="o">=</span>ON
 </code></pre></div></div>
 
@@ -254,12 +271,14 @@ make <span class="nt">-j8</span>
 <h4 id="resources-for-versions-built-locally">Resources for versions built locally</h4>
 
 <p>When using a version built locally, you usually have to specify the path to the Verovio resources. To do so, you can do</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">verovio</span>
 <span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="n">toolkit</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">tk</span><span class="p">.</span><span class="n">setResourcePath</span><span class="p">(</span><span class="s">"path-to-resource-dir"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Alternatively, you can set it before you create the instance of the toolkit</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">verovio</span>
 <span class="n">verovio</span><span class="p">.</span><span class="n">setDefaultResourcePath</span><span class="p">(</span><span class="s">"path-to-resource-dir"</span><span class="p">)</span>
 <span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="n">toolkit</span><span class="p">()</span>

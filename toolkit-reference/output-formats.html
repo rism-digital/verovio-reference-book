@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-20T08:02:04+00:00" />
+<meta property="article:published_time" content="2021-06-14T10:36:56+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Output formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"SVG","url":"/toolkit-reference/output-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Output formats","dateModified":"2021-05-20T08:02:04+00:00","datePublished":"2021-05-20T08:02:04+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"@context":"https://schema.org"}</script>
+{"description":"SVG","url":"/toolkit-reference/output-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Output formats","dateModified":"2021-06-14T10:36:56+00:00","datePublished":"2021-06-14T10:36:56+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -184,6 +184,7 @@
 <p>When loading MEI data into Verovio, some analytical markup is converted into standard markup.</p>
 
 <p>The attributes that are converted are:</p>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">@fermata</code></li>
   <li><code class="language-plaintext highlighter-rouge">@tie</code></li>
@@ -192,26 +193,34 @@
 <p>For example:</p>
 <div class="row"><div class="col col-md-6">
 <p><em>Original data</em></p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;note</span> <span class="na">t=</span><span class="s">"i"</span> <span class="na">xml:id=</span><span class="s">"n1"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;note</span> <span class="na">t=</span><span class="s">"t"</span> <span class="na">xml:id=</span><span class="s">"n2"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
+
 </div>
 <div class="col col-md-6">
 <p><em>Output data</em></p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;tie</span> <span class="na">startid=</span><span class="s">"#n1"</span> <span class="na">endid=</span><span class="s">"#n2"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
+
 </div>
 </div>
 
 <div class="row"><div class="col col-md-6">
 <p><em>Original data</em></p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;mRest</span> <span class="na">fermata=</span><span class="s">"above"</span> <span class="na">xml:id=</span><span class="s">"mr1"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
+
 </div>
 <div class="col col-md-6">
 <p><em>Output data</em></p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;fermata</span> <span class="na">startid=</span><span class="s">"#mr1"</span> <span class="na">place=</span><span class="s">"above"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
+
 </div>
 </div>
 
@@ -223,14 +232,18 @@
 
 <div class="row"><div class="col col-md-6">
 <p><em>Original data</em></p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;artic</span> <span class="na">artic=</span><span class="s">"marc ten"</span> <span class="na">place=</span><span class="s">"above"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
+
 </div>
 <div class="col col-md-6">
 <p><em>Output data</em></p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;artic</span> <span class="na">artic=</span><span class="s">"marc"</span> <span class="na">place=</span><span class="s">"above"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;artic</span> <span class="na">artic=</span><span class="s">"ten"</span> <span class="na">place=</span><span class="s">"above"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
+
 </div>
 </div>
 
@@ -268,6 +281,7 @@
 <h3 id="timemap">Timemap</h3>
 
 <p>The timemap is an array of JSON objects, with each entry having these keys:</p>
+
 <ul>
   <li>tstamp: this is the time in millisecond from the start of the music to the start of the current event (real time)</li>
   <li>qstamp: the time in quarter notes from the start of the music to the start of the current event entry (score time)</li>
@@ -688,6 +702,7 @@
 <p>The output format for the Plaine and Easie output in Verovio uses the same file structure with <code class="language-plaintext highlighter-rouge">key:value</code> lines as described in the section in the <a href="/toolkit-reference/input-formats.html#plaine-and-easie">Input formats</a>. See also there for the features supported.</p>
 
 <p>Note that:</p>
+
 <ul>
   <li>duration is given explicitly for every note</li>
   <li>no abbreviated writing is used in the Plaine and Easie output</li>
@@ -695,11 +710,11 @@
 
 <p>For example, let’s consider the following example passed as input to Verovio:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@clef:G-2
+<pre><code class="language-pae">@clef:G-2
 @keysig:none
 @timesig:3/4
 @data:'6!{GGCC}!f{GCGC}/i/i/
-</code></pre></div></div>
+</code></pre>
 
 <p><img class="img-responsive hidden-print" src="/images/examples/05-toolkit-reference/02-output-formats/pae-01.svg" alt="examples/05-toolkit-reference/02-output-formats/pae-01.svg]" /></p>
 <div class="visible-print"><svg width="709.5px" height="104px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mei="http://www.music-encoding.org/ns/mei" overflow="visible">
@@ -1146,21 +1161,24 @@
 </div>
 
 <p>Verovio will produce the following Plaine and Easie output:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@keysig:b
+
+<pre><code class="language-pae">@keysig:b
 @timesig:3/4
 @clef:G-2
 @data:{6'G6G6C6C}{6G6G6C6C}{6G6C6G6C}/{6G6G6C6C}{6G6G6C6C}{6G6C6G6C}/{6G6G6C6C}{6G6G6C6C}{6G6C6G6C}/
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="humdrum">Humdrum</h3>
 
 <p>The Humdrum output format for Verovio is available only from MusicXML input and only if the Humdrum importer is used when loading the data into Verovio. See <a href="/toolkit-reference/input-formats.html#musicxml">this section</a> for more information about the MusicXML import via Humdrum.</p>
 
 <p>With this in hand, you can convert MusicXML to Humdrum from the command-line with:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-f</span> musicxml-hum <span class="nt">-t</span> hum file.xml
 </code></pre></div></div>
 
 <p>If the MusicXML importer via Humdrum is the default, you can simply do:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-t</span> hum file.xml
 </code></pre></div></div>
 

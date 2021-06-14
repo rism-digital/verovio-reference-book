@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-20T08:02:04+00:00" />
+<meta property="article:published_time" content="2021-06-14T10:36:56+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="JavaScript and WebAssembly" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Pre-build versions","url":"/installing-or-building-from-sources/javascript-and-webassembly.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"JavaScript and WebAssembly","dateModified":"2021-05-20T08:02:04+00:00","datePublished":"2021-05-20T08:02:04+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/javascript-and-webassembly.html"},"@context":"https://schema.org"}</script>
+{"description":"Pre-build versions","url":"/installing-or-building-from-sources/javascript-and-webassembly.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"JavaScript and WebAssembly","dateModified":"2021-06-14T10:36:56+00:00","datePublished":"2021-06-14T10:36:56+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/javascript-and-webassembly.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -153,6 +153,7 @@
         <h3 id="pre-build-versions">Pre-build versions</h3>
 
 <p>The verovio.org <a href="https://github.com/rism-digital/verovio.org">GitHub repository</a> provides compiled versions of the JavaScript toolkit. The toolkit is available in three options.</p>
+
 <ol>
   <li><strong>verovio-toolkit.js</strong> - in JavaScript (more precisely in <a href="https://asmjs.org">asm.js</a>)</li>
   <li><strong>verovio-toolkit-wasm.js</strong> – in <a href="https://webassembly.org/">WebAssembly</a></li>
@@ -162,20 +163,24 @@
 <p>A build of each of these is provided by CI for the development version as well as for each <a href="https://github.com/rism-digital/verovio/releases">release</a>.</p>
 
 <p>The latest release is always available from:</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/latest/verovio-toolkit.js
 </code></pre></div></div>
 
 <p>The latest development version is available from:</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/develop/verovio-toolkit.js
 </code></pre></div></div>
 
 <p>Previous releases are available from their corresponding directory, e.g.:</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/2.7.1/verovio-toolkit.js
 </code></pre></div></div>
 
 <h4 id="npm">NPM</h4>
 
 <p>The latest stable version is available via <a href="https://www.npmjs.com/package/verovio">NPM</a> registry. The version distributed via NPM it the WebAssembly build. It can be installed with:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>verovio
 </code></pre></div></div>
 
@@ -188,17 +193,19 @@
 <h3 id="building-the-toolkit">Building the toolkit</h3>
 
 <p>To build the JavaScript toolkit you need to have the <a href="http://www.emscripten.org" target="_blank">Emscripten</a> compiler installed on your machine. You also need <a href="https://cmake.org">CMake</a>. You need to run:</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>emscripten
 ./buildToolkit <span class="nt">-H</span>
 </code></pre></div></div>
+
 <p>The toolkit will be written to:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./emscripten/build/verovio-toolkit.js
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./emscripten/build/verovio-toolkit.js
 </code></pre></div></div>
 
 <p>Building without <code class="language-plaintext highlighter-rouge">-H</code> will include the Humdrum support, which increases the size of the toolkit by about one third. In that case, the output will be written to <code class="language-plaintext highlighter-rouge">verovio-toolkit-hum.js</code>.</p>
 
 <p>If you are building with another option set than previously, or if you want to regenerate the makefiles, add the option <code class="language-plaintext highlighter-rouge">-M</code>.</p>
-
 
     </div>
 </div>

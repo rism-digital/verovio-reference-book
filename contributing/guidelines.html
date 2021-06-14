@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-20T08:02:04+00:00" />
+<meta property="article:published_time" content="2021-06-14T10:36:56+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Coding guidelines" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"This document describes the coding style for the Verovio project for the C++ part of the codebase.","url":"/contributing/guidelines.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Coding guidelines","dateModified":"2021-05-20T08:02:04+00:00","datePublished":"2021-05-20T08:02:04+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/guidelines.html"},"@context":"https://schema.org"}</script>
+{"description":"This document describes the coding style for the Verovio project for the C++ part of the codebase.","url":"/contributing/guidelines.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Coding guidelines","dateModified":"2021-06-14T10:36:56+00:00","datePublished":"2021-06-14T10:36:56+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/guidelines.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -160,35 +160,41 @@
 
 <h3 id="formatting">Formatting</h3>
 
-<p>Verovio uses a <a href="http://clang.llvm.org/docs/ClangFormat.html">Clang-Format</a> (<strong>5.0</strong>) coding style based on the <a href="https://webkit.org/code-style-guidelines/">WebKit</a> style, with a few minor modifications. The modifications include:</p>
+<p>Verovio uses a <a href="http://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a> (<strong>10.0</strong>) coding style based on the <a href="https://webkit.org/code-style-guidelines/">WebKit</a> style, with a few minor modifications. The modifications include:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AllowShortIfStatementsOnASingleLine: true
-AllowShortLoopsOnASingleLine: true
-ColumnLimit: 120
-ConstructorInitializerAllOnOneLineOrOnePerLine: true
-PointerAlignment: Right
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">AllowShortIfStatementsOnASingleLine</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">AllowShortLoopsOnASingleLine</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">ColumnLimit</span><span class="pi">:</span> <span class="m">120</span>
+<span class="na">ConstructorInitializerAllOnOneLineOrOnePerLine</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">PointerAlignment</span><span class="pi">:</span> <span class="s">Right</span>
 </code></pre></div></div>
 
-<p>The simplest way to fullfil the Verovio coding style is to use a clang-format tool and to apply the style defined in the 
-<a href="../.clang-format">.clang-format</a> file available in the project root directory.</p>
+<p>The simplest way to fullfil the Verovio coding style is to use a clang-format tool and to apply the style defined in the <code class="language-plaintext highlighter-rouge">.clang-format</code> file available in the project root directory.</p>
 
-<h4 id="downloading-clang-format-for-os-x">Downloading clang-format for OS X</h4>
+<h4 id="how-to-install-clang-format-on-macos">How to install clang-format on macOS</h4>
 
-<p>An easy way to install clang-format on OS X computers is to use <a href="http://brew.sh">Hombrew</a>.  Type this command in the terminal to install:</p>
+<p>An easy way to install clang-format on macOS computers is to use <a href="http://brew.sh">Hombrew</a>. Type this command in the terminal to install:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>clang-format
 </code></pre></div></div>
 
+<h4 id="how-to-install-clang-format-on-ubuntu">How to install clang-format on Ubuntu</h4>
+
+<p>On Ubuntu clang-format is available in the universe repository. You can install it easily with the command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>clang-format
+</code></pre></div></div>
+
 <h4 id="running-clang-format">Running clang-format</h4>
 
-<p><em>Please make sure you use version 5.0</em></p>
+<p><em>Please make sure you use at least version 10.0</em></p>
 
 <p>To use clang-format to adjust a single file:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang-format <span class="nt">-style</span><span class="o">=</span>file <span class="nt">-i</span>   some-directory/some-file.cpp
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang-format <span class="nt">-style</span><span class="o">=</span>file <span class="nt">-i</span> some-directory/some-file.cpp
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">-style=file</code> option instructs clang-format to search for the .clang-format configuration file (recursively in some parent directory).  The <code class="language-plaintext highlighter-rouge">-i</code> option is used to alter the file “in-place”.  If you don’t give the <code class="language-plaintext highlighter-rouge">-i</code> option, a fomatted copy of the file will be sent to standard output.</p>
+<p>The <code class="language-plaintext highlighter-rouge">-style=file</code> option instructs clang-format to search for the .clang-format configuration file (recursively in some parent directory). The <code class="language-plaintext highlighter-rouge">-i</code> option is used to alter the file “in-place”. If you don’t give the <code class="language-plaintext highlighter-rouge">-i</code> option, a fomatted copy of the file will be sent to standard output.</p>
 
 <h3 id="includes-and-forward-declarations">Includes and forward declarations</h3>
 
@@ -203,7 +209,7 @@ PointerAlignment: Right
 <span class="cp">#include "attclasses.h"
 #include "atttypes.h"
 </span>
-<span class="c1">//----------------------------------------------------------------------------  </span>
+<span class="c1">//----------------------------------------------------------------------------</span>
 
 <span class="cp">#include "pugixml.hpp"
 #include "utf8.h"
@@ -232,7 +238,7 @@ PointerAlignment: Right
 <span class="cp">#include "object.h"
 #include "vrv.h"
 </span>
-<span class="c1">//----------------------------------------------------------------------------  </span>
+<span class="c1">//----------------------------------------------------------------------------</span>
 
 <span class="cp">#include "pugixml.hpp"
 </span></code></pre></div></div>
