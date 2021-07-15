@@ -7,6 +7,7 @@ import pprint
 import regex
 from typing import Dict, List
 import logging
+import html
 
 import verovio
 import yaml
@@ -116,8 +117,11 @@ if __name__ == "__main__":
                 default_str += "\"; other values: " + str(option['values']) + ")"
 
             # Add the description
-            description = option['description']
-            description = "{}{}".format(description, default_str)
+            initial_description = option['description']
+            # Some of the descriptions have XML tags which get hidden when rendered. Escape them
+            # so that they use HTML entities instead.
+            escaped_description = html.escape(initial_description)
+            description = f"{escaped_description}{default_str}"
 
             # Check if we have an extended description in _includes/options/
             extended_description = os.path.join(options_output, grp_id,option_id + ".md")
