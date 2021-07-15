@@ -11,7 +11,6 @@ import frontmatter
 import verovio
 import yaml
 
-toc_file = "scripts/toc.yaml"
 
 if __name__ == "__main__":
     description = """
@@ -60,7 +59,7 @@ if __name__ == "__main__":
         options_file = frontmatter.loads(file.read())
         see_also = options_file.get('see-also', {})
 
-    with open(toc_file, 'r') as file:
+    with open(args.toc_file, 'r') as file:
         toc = yaml.full_load(file)
 
     tk = verovio.toolkit()
