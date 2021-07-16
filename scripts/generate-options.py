@@ -104,7 +104,7 @@ if __name__ == "__main__":
 
             opt_type_json_str = opt_type_str
             if opt_type == 'bool':
-                opt_type_json_str = " <br>"
+                opt_type_json_str = " <b>"
 
             cmd_option_str = f"`{cmd_option} {opt_type_str}`"
             json_option_str = f"`\"{option_id}\": {opt_type_json_str}`"
