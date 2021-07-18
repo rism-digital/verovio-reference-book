@@ -29,7 +29,7 @@ Keyboard shortcut:
 
 Menu location:
 
- - Menu > More Tools > Developer Tools > Console tab
+- Menu > More Tools > Developer Tools > Console tab
 
 [Chrome documentation](https://developers.google.com/web/tools/chrome-devtools/debug/console/console-ui?hl=en)
 
@@ -42,7 +42,7 @@ Keyboard shortcut:
 
 Menu location:
 
- - Menu > Developer > Web Console
+- Menu > Developer > Web Console
 
 [Firefox documentation](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
 
@@ -58,7 +58,7 @@ Menu location: Menu "three dots" icon > F12 Developer Tools > Console tab
 
 Keyboard shortcut:
 
- - Command + Option + C
+- Command + Option + C
 
 Menu location:
 

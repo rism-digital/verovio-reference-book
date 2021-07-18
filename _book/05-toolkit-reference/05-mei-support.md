@@ -4,7 +4,7 @@ no-edit: true
 # This file is auto-generated - do not edit
 ---
 
-{% aside .warning %} Note that, for the MEI attribute classes listed here, not necessary all attributes are implemented and that not necessary all possible attribute values are supported. {% endaside %}
+{% aside .warning %} Note that, for the MEI attribute classes listed here, some attributes may not be implemented and that not all possible attribute values are supported. {% endaside %}
 
 {% row %}
 {% col 2 %}
@@ -1004,4 +1004,3 @@ no-edit: true
 [att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.facsimile](https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.lang](https://music-encoding.org/guidelines/dev/attribute-classes/att.lang.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.nInteger](https://music-encoding.org/guidelines/dev/attribute-classes/att.nInteger.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html), [att.typography](https://music-encoding.org/guidelines/dev/attribute-classes/att.typography.html)
 {% endcol %}
 {% endrow %}
-

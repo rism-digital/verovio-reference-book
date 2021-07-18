@@ -257,7 +257,8 @@ When data is loaded into Verovio with no input format specifies, it tries to det
 The native input format for Verovio is MEI. Verovio supports MEI as input format from MEI 2013 onwards. From Verovio 2.x.x, the plan is to have even version numbers for Verovio releases using a stable version of MEI, and odd version numbers for releases using a development version of MEI. It means that once MEI 5.0 will be released, Verovio will move to version 4.x.x. Older versions of MEI are still supported by newer versions of Verovio.
 
 When loading MEI data into Verovio and outputting MEI, elements that are not supported by Verovio will be ignored. This means that they are not loaded into memory and will not be preserved in the MEI output. This includes the element themselves, but also any descendant they might have. A warning will be given in the console. For example:
-```bash
+
+```
 [Warning] Unsupported '<ossia>' within <measure>
 ```
 
@@ -272,136 +273,205 @@ Various attributes in `<page>` and `<measure>` for the page-based version of MEI
 **MEI 3.0 files**
 
 The following elements / attributes are upgraded:
+
+* `beatRpt`
+* `fTrem@slash`
+* `instrDef@midi.volume`
+* `mordent@form`
 * `turn@form`
 * `staffDef@barthru`
 * `staffDef@label`
 * `staffDef@label.abbr`
 * `staffGrp@label`
 * `staffGrp@label.abbr`
-* `fTrem@slash`
 * `@dur.ges`
-* `beatRpt`
 
 {% row %}{% col %}
 *Original data*
-```xml
-<turn form="inv"/>
-<turn form="norm"/>
-```
-{% endcol %}{% col %}
-*Upgraded data*
-```xml
-<turn form="lower"/>
-<turn form="upper"/>
-```
-{% endcol %}{% endrow %}
 
-{% row %}{% col %}
-*Original data*
-```xml
-<staff barthru="true"/>
-```
-{% endcol %}{% col %}
-*Upgraded data*
-```xml
-<staff bar.thru="true"/>
-```
-{% endcol %}{% endrow %}
-
-{% row %}{% col %}
-*Original data*
-```xml
-<staffDef label="violin I" label.abbr="vl I"/>
-```
-{% endcol %}{% col %}
-*Upgraded data*
-```xml
-<staffDef>
-   <label>Violin I<label>
-   <labelAbbr>Vl I<labelAbbr>
-</staffDef>
-```
-{% endcol %}{% endrow %}
-
-{% row %}{% col %}
-*Original data*
-```xml
-<fTrem slash="2"/>
-```
-{% endcol %}{% col %}
-*Upgraded data*
-```xml
-<fTrem beams="2"/>
-```
-{% endcol %}{% endrow %}
-
-{% row %}{% col %}
-*Original data*
-```xml
-<note dur.ges="8p"/>
-<note dur.ges="32r"/>
-<note dur.ges="32s"/>
-```
-{% endcol %}{% col %}
-*Upgraded data*
-```xml
-<note dur.ppq="8"/>
-<note dur.recip="32"/>
-<note dur.real="32"/>
-```
-{% endcol %}{% endrow %}
-
-{% row %}{% col %}
-*Original data*
 ```xml
 <beatRpt rend="4"/>
 <beatRpt rend="8"/>
 <beatRpt rend="16"/>
 <beatRpt form="4"/>
 ```
+
 {% endcol %}{% col %}
 *Upgraded data*
+
 ```xml
 <beatRpt slash="1"/>
 <beatRpt slash="1"/>
 <beatRpt slash="2"/>
 <beatRpt slash="1"/>
 ```
+
 {% endcol %}{% endrow %}
 
+{% row %}{% col %}
+*Original data*
+
+```xml
+<fTrem slash="2"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<fTrem beams="2"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<instrDef midi.volume="111"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<instrDef midi.volume="87.40%"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<mordent form="inv"/>
+<mordent form="norm"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<mordent form="upper"/>
+<mordent form="lower"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<turn form="inv"/>
+<turn form="norm"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<turn form="lower"/>
+<turn form="upper"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<staff barthru="true"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<staff bar.thru="true"/>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<staffDef label="violin I" label.abbr="vl I"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<staffDef>
+   <label>Violin I<label>
+   <labelAbbr>Vl I<labelAbbr>
+</staffDef>
+```
+
+{% endcol %}{% endrow %}
+
+{% row %}{% col %}
+*Original data*
+
+```xml
+<note dur.ges="8p"/>
+<note dur.ges="32r"/>
+<note dur.ges="32s"/>
+```
+
+{% endcol %}{% col %}
+*Upgraded data*
+
+```xml
+<note dur.ppq="8"/>
+<note dur.recip="32"/>
+<note dur.real="32"/>
+```
+
+{% endcol %}{% endrow %}
 
 **MEI 4.0 files**
 
 The following elements / attributes are upgraded:
+
 * `mensur@tempus`
 * `mensur@prolatio`
 
 {% row %}{% col %}
 *Original data*
+
 ```xml
 <mensur tempus="3"/>
 <mensur tempus="2"/>
 ```
+
 {% endcol %}{% col %}
 *Upgraded data*
+
 ```xml
 <mensur tempus="3" sign="0"/>
 <mensur tempus="2" sign="C"/>
 ```
+
 {% endcol %}{% endrow %}
 
 {% row %}{% col %}
 *Original data*
+
 ```xml
 <mensur prolatio="3"/>
 <mensur prolatio="2"/>
 ```
+
 {% endcol %}{% col %}
 *Upgraded data*
+
 ```xml
 <mensur prolatio="3" dot="true"/>
 <mensur prolatio="2" dot="false"/>
 ```
+
 {% endcol %}{% endrow %}
 
 #### Page-based MEI
@@ -420,10 +490,11 @@ The following example from Mozart's piano sonata in F major, K1 280 (K6 189e), m
 
 {% include music-notation-only example="humdrum-01" %}
 
-The data consists of three separate streams of information, called spines that usually consist of one column, but sometime more due to spine splits into subspines. The first column represents music on the bottom staff, the second column represents the top staff, and the third column contains the dynamics, which in this case apply to both staves. 
+The data consists of three separate streams of information, called spines that usually consist of one column, but sometime more due to spine splits into subspines. The first column represents music on the bottom staff, the second column represents the top staff, and the third column contains the dynamics, which in this case apply to both staves.
 
 {% assign humdrum = page.examples | where: "name", "humdrum-01" | first %}
-```
+
+```humdrum
 {{ humdrum.inline }}
 ```
 
@@ -431,7 +502,7 @@ The data consists of three separate streams of information, called spines that u
 
 The [Verovio Humdrum Viewer](http://verovio.humdrum.org) (VHV) is a special-purpose interactive website for viewing and editing Humdrum files with the Verovio notation egraving library.  You can view the full score for the above Mozart example in VHV from this link: [verovio.humdrum.org/?file=mozart/sonatas/sonata02-1.krn](http://verovio.humdrum.org/?file=mozart/sonatas/sonata02-1.krn).
 
-When on a VHV notation page, try pressing the key "<b>p</b>" to view the scan of the original print from which the musical data was encoded.  Also try pressing "<b>m</b>" to view the internal conversion to MEI data.  Vi users can try pressing "<b>v</b>" to toggle between the basic and vim modes for the text editor.  Use the left/right arrow keys or PageUp/PageDown to navigate to different pages.  Press shift-left/right arrows to go to the next/previous work/movement in the repertory.
+When on a VHV notation page, try pressing the key "__p__" to view the scan of the original print from which the musical data was encoded.  Also try pressing "__m__" to view the internal conversion to MEI data.  Vi users can try pressing "__v__" to toggle between the basic and vim modes for the text editor.  Use the left/right arrow keys or PageUp/PageDown to navigate to different pages.  Press shift-left/right arrows to go to the next/previous work/movement in the repertory.
 
 Sample repertories of Humdrum data displayed in the Verovio Humdrum Viewer:
 
@@ -486,13 +557,15 @@ Below is a song for voice and piano accompaniment. Each verse is listed in a sep
 {% include music-notation-only example="humdrum-02" %}
 
 {% assign humdrum = page.examples | where: "name", "humdrum-02" | first %}
-```
+
+```humdrum
 {{ humdrum.inline }}
 ```
 
 #### Additional input format via Humdrum
 
 Verovio with Humdrum enabled supports some additional input formats that can be used with `--input-from`:
+
 * **MuseData** with option `md`, `musedata`, or `musedata-hum`
 * **EsAC** with `esac`
 
@@ -508,20 +581,22 @@ Verovio supports MusicXML compressed (MXL) files. It only loads basic single-fil
 
 #### Importing MusicXML via Humdrum
 
-The MusicXML import via Humdrum is available only for Verovio builds where Humdrum support has been enabled specifically at build time. For the JavaScript toolkit, this is not the default and it is important to make sure that the appropriate build is being used. See the related [section](/installing-or-building-from-sources/javascript-and-webassembly.html) for more information about this. With the command-line tool and the Python toolkit, Humdrum support is enabled by default. 
+The MusicXML import via Humdrum is available only for Verovio builds where Humdrum support has been enabled specifically at build time. For the JavaScript toolkit, this is not the default and it is important to make sure that the appropriate build is being used. See the related [section](/installing-or-building-from-sources/javascript-and-webassembly.html) for more information about this. With the command-line tool and the Python toolkit, Humdrum support is enabled by default.
 
 With Verovio builds that support Humdrum, the MusicXML import via Humdrum can be triggered by setting the `--input-from` option to `musicxml-hum`. For example:
+
 ```bash
 verovio -f musicxml-hum -t hum file.xml
 ```
 
 The MusicXML import via Humdrum can itself be made the default MusicXML importer with the build option `MUSICXML_DEFAULT_HUMDRUM`. See the [command-line](/installing-or-building-from-sources/command-line.html) section for more information on how to change build options. With this, MusicXML files will be loaded via the Humdrum importer without having to specify `musicxml-hum` for the option `--input-from`. The direct importer can still be used by passing the value `xml` to `--input-from`.
-    
+
 ### Plaine and Easie
 
-The Plaine & Easie Code is a library standard that enables entering music incipits in modern or mensural notation. It is mostly used by the [Répertoire International des Sources Musicales](https://rism.info) (RISM) for inventorying the music incipits of the manuscripts. More information about the syntax is available on the [IAML](http://www.iaml.info/plaine-easie-code) website. 
+The Plaine & Easie Code is a library standard that enables entering music incipits in modern or mensural notation. It is mostly used by the [Répertoire International des Sources Musicales](https://rism.info) (RISM) for inventorying the music incipits of the manuscripts. More information about the syntax is available on the [IAML](http://www.iaml.info/plaine-easie-code) website.
 
 Plaine and Easie input in Verovio is a text file (or string) with a list of the following `@key:value` lines:
+
 * `@clef` – the initial clef
 * `@keysig` – the initial key signature
 * `@timesig` – the initial time signature
@@ -536,122 +611,149 @@ The structure of this input format is not part of the PAE specification but only
 **Beams and tuplets**
 
 {% assign pae_02 = page.examples | where: "name", "pae-01" | first %}
+
 ```
 {% remote_include {{ pae_02.url }} %}
 ```
+
 {% include music-notation-only example="pae-01" %}
 
 **Measure rests and key and time signature changes**
 
 {% assign pae = page.examples | where: "name", "pae-02" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-02" %}
 
 **Clef changes**
 
 {% assign pae = page.examples | where: "name", "pae-03" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-03" %}
 
 **Trills and fermata**
 
 {% assign pae = page.examples | where: "name", "pae-04" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-04" %}
 
 **Ties**
 
 {% assign pae = page.examples | where: "name", "pae-05" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-05" %}
 
 **Grace notes (acciaccaturas)**
 
 {% assign pae = page.examples | where: "name", "pae-06" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-06" %}
 
 **Grace notes (appoggiaturas)**
 
 {% assign pae = page.examples | where: "name", "pae-07" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-07" %}
 
 **Rhythmic patterns**
 
 {% assign pae = page.examples | where: "name", "pae-08" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
+
 {% include music-notation-only example="pae-08" %}
 
 **Abbreviated writing**
 
 {% assign pae = page.examples | where: "name", "pae-09" | first %}
+
 ```
 {% remote_include {{ pae.url }} %}
 ```
-{% include music-notation-only example="pae-09" %}
 
+{% include music-notation-only example="pae-09" %}
 
 ### ABC
 
-Abc is a text-based music notation system originally designed for use with folk and traditional tunes and used throughout the web. You can find the documentation on the [ABC notation](http://abcnotation.com/wiki/abc:standard) website. 
+Abc is a text-based music notation system originally designed for use with folk and traditional tunes and used throughout the web. You can find the documentation on the [ABC notation](http://abcnotation.com/wiki/abc:standard) website.
 
 #### Examples
 
-Let's start with a simple little tune. 
+Let's start with a simple little tune.
 
 {% assign abc = page.examples | where: "name", "abc-01" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-01" %}
 
 Verovio takes several information fields into account, e.g. the reference number `X`, the tune title `T`, the meter `M`, the unit note length `L`, the key `K`. As you can see, Verovio prints the header as expected by default. You may suppress this behaviour with the `--header none` option.
 
-Now let's add a literal tempo as well as some grace notes and chord symbols. Dynamics are also very important! Note that chord symbols are put above the melody. 
+Now let's add a literal tempo as well as some grace notes and chord symbols. Dynamics are also very important! Note that chord symbols are put above the melody.
 
 {% assign abc = page.examples | where: "name", "abc-03" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-03" %}
 
-With the option `--breaks: 'encoded'` Verovio keeps the encoded layout, as you can see on this page. The default value is `'auto'`, which lets Verovio to decide where to put a line-break. 
+With the option `--breaks: 'encoded'` Verovio keeps the encoded layout, as you can see on this page. The default value is `'auto'`, which lets Verovio to decide where to put a line-break.
 
 {% assign abc = page.examples | where: "name", "abc-04" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-04" %}
 
-Alternatively it is always possible to suppress score line-breaks. Meter changes are also supported. 
+Alternatively it is always possible to suppress score line-breaks. Meter changes are also supported.
 
 {% assign abc = page.examples | where: "name", "abc-05" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-05" %}
 
 **Broken rhythm markers**
 
 {% assign abc = page.examples | where: "name", "abc-06" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-06" %}
 
 **Ties and slurs**
@@ -659,28 +761,35 @@ Alternatively it is always possible to suppress score line-breaks. Meter changes
 Verovio correctly differentiates between ties and slurs. 
 
 {% assign abc = page.examples | where: "name", "abc-07" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-07" %}
 
 **Accidentals**
 
 {% assign abc = page.examples | where: "name", "abc-08" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-08" %}
 
 **Chords**
 
 {% assign abc = page.examples | where: "name", "abc-09" | first %}
+
 ```
 {{ abc.inline }}
 ```
+
 {% include music-notation-only example="abc-09" %}
 
 #### Known limitations:
+
 * Verovio imports only the first tune in a collection
 * Tuplets are not supported
 * User defined symbols are not supported

@@ -32,7 +32,6 @@ When you refresh your page and open your browser's console you should see the te
 
 You may have noticed that, by default, Verovio renders the score in "portrait" orientation; that is, the width of the score is shorter than the length. To change this, we can use the `landscape` and `adjustPageWidth` options:
 
-
 ```js
 tk.setOptions({
   scale: 30,
@@ -83,5 +82,4 @@ In this section we have explored Verovio's default options, and looked at how to
     <div id="notation"></div>
   </body>
 </html>
-
 ```

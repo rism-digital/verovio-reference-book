@@ -7,6 +7,7 @@ title: "Use-case scenarios"
 Verovio is a C++ codebase that can be compiled and wrapped into different programming languages and integrated into various environments and several use-cases can be imagined for the Verovio toolkit. 
 
 First of all, it can be built and used as a standalone command-line tool. This option is well suited to scripting environments and applications. The command-line tool can be used to render music notation files into SVG or into MIDI files. These files can be embedded in HTML files with everything happening on the server side. Verovio can also be used to convert data (e.g., MusicXML or Humdrum) to MEI. Typical use cases would be :
+
 * generate SVG and MIDI from MEI documents or other supported formats,
 * generate MEI documents from other supported formats (e.g., convert files).
 
@@ -37,7 +38,6 @@ The [Digital Interactive Mozart Edition (DIME)](https://mozarteum.at/dime/) is a
 Genetic editing is still an exploratory field in music. In this context, MEI is in active development under the lead of the [Beethovens Werkstatt](https://beethovens-werkstatt.de/) project. In genetic editing, time is a key dimension to be taken into account in the representation of differences. The differences in genetic editing represent different stages of writing for which it is not always possible to determine clearly their scope, their order in time or even their content because it is not always readable. This yields potentially very complex and large datasets for which the music notation content cannot be visualised as a whole. Only subsets of the data can here be reasonably visualised at a time, and interaction is the perfect approach for allowing highlighting, selection and navigation in the data.
 
 ![beethoven](/images/introduction/use-cases/beethoven.png){:.img-responsive .example}
-
 
 #### Early music
 

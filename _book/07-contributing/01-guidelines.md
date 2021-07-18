@@ -6,9 +6,9 @@ This document describes the coding style for the Verovio project for the C++ par
 
 ### Formatting
 
-Verovio uses a [Clang-Format](http://clang.llvm.org/docs/ClangFormat.html) (**5.0**) coding style based on the [WebKit](https://webkit.org/code-style-guidelines/) style, with a few minor modifications. The modifications include:
+Verovio uses a [ClangFormat](http://clang.llvm.org/docs/ClangFormat.html) (**10.0**) coding style based on the [WebKit](https://webkit.org/code-style-guidelines/) style, with a few minor modifications. The modifications include:
 
-```
+```yaml
 AllowShortIfStatementsOnASingleLine: true
 AllowShortLoopsOnASingleLine: true
 ColumnLimit: 120
@@ -16,28 +16,35 @@ ConstructorInitializerAllOnOneLineOrOnePerLine: true
 PointerAlignment: Right
 ```
 
-The simplest way to fullfil the Verovio coding style is to use a clang-format tool and to apply the style defined in the 
-[.clang-format](../.clang-format) file available in the project root directory.
+The simplest way to fullfil the Verovio coding style is to use a clang-format tool and to apply the style defined in the `.clang-format` file available in the project root directory.
 
-#### Downloading clang-format for OS X
+#### How to install clang-format on macOS
 
-An easy way to install clang-format on OS X computers is to use [Hombrew](http://brew.sh).  Type this command in the terminal to install:
+An easy way to install clang-format on macOS computers is to use [Hombrew](http://brew.sh). Type this command in the terminal to install:
 
 ```bash
 brew install clang-format
 ```
 
+#### How to install clang-format on Ubuntu
+
+On Ubuntu clang-format is available in the universe repository. You can install it easily with the command:
+
+```bash
+sudo apt install clang-format
+```
+
 #### Running clang-format
 
-*Please make sure you use version 5.0*
+*Please make sure you use at least version 10.0*
 
 To use clang-format to adjust a single file:
 
 ```bash
-clang-format -style=file -i   some-directory/some-file.cpp
+clang-format -style=file -i some-directory/some-file.cpp
 ```
 
-The `-style=file` option instructs clang-format to search for the .clang-format configuration file (recursively in some parent directory).  The `-i` option is used to alter the file "in-place".  If you don't give the `-i` option, a fomatted copy of the file will be sent to standard output.
+The `-style=file` option instructs clang-format to search for the .clang-format configuration file (recursively in some parent directory). The `-i` option is used to alter the file "in-place". If you don't give the `-i` option, a fomatted copy of the file will be sent to standard output.
 
 ### Includes and forward declarations
 
@@ -53,7 +60,7 @@ Includes in the header files must list first the system includes followed by the
 #include "attclasses.h"
 #include "atttypes.h"
 
-//----------------------------------------------------------------------------  
+//----------------------------------------------------------------------------
 
 #include "pugixml.hpp"
 #include "utf8.h"
@@ -84,11 +91,11 @@ In the implementation files, the first include in always the include of the corr
 #include "object.h"
 #include "vrv.h"
 
-//----------------------------------------------------------------------------  
+//----------------------------------------------------------------------------
 
 #include "pugixml.hpp"
 ```
-    
+
 ### Null and boolean
 
 The null pointer value should be written as `NULL`. Boolean values should be written as `true` and `false`.
@@ -102,13 +109,13 @@ class Measure;
 class ScoreDef;
 class StaffDef;
 ```
-     
+
 All method names must also be in upper CamelCase:
 
 ```cpp
 void Measure::AddStaff(Staff *staff) {}
 ```
-     
+
 All member names must be in lower camelCase. Instance members must be prefixed with `m_` and class (static) members with `s_`:
 
 ```cpp
@@ -122,7 +129,7 @@ public:
     static std::string s_systemPath;
 };
 ```
-    
+
 In the class declaration, the methods are declared first, and then the member variables. For both, the declaration order is `public`, `protected`, and `private`.
 
 #### Use of `this`
@@ -130,7 +137,7 @@ In the class declaration, the methods are declared first, and then the member va
 The convention for the pointer `this` is to use it for method calls and not to use if for member access because these are prefixed with `m_`.
 
 *As it stands, the codebase is not consistently following this convention*
-    
+
 ### Comments
 
 Comments for describing methods can be grouped using `///@{` and `///@}` delimiters together with the `@name` indication:
@@ -145,7 +152,7 @@ void AddLayerElement(LayerElement *child);
 void AddTextElement(TextElement *child);
 ///@}
 ```
-    
+
 ### LibMEI
 
 The code for the attribute classes of Verovio are generated from the MEI schema using a modified version of LibMEI available [here](https://github.com/rism-digital/libmei). See the section [Generate code with LibMEI](/contributing/generate-code-with-libmei.html) for detailed information on how to modify and generate this code.
@@ -168,7 +175,7 @@ class Note : public LayerElement,
                 public AttStems,
                 public AttTiepresent
 ```
-                 
+
 In the implementation, the same order must be followed, for the constructor calls and for the registration of the interfaces and individual attribute classes:
 
 ```cpp

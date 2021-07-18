@@ -178,4 +178,3 @@ The algorithm for transposition by tonic proceeds as follow:
 * Once the original key is known, then the interval necessary for transposition can be calculated. The next step is to identify the closest new tonic's octave.  For extra `+` or `-` in the tonic string, add an octave to the interval to calculate the final interval for transposition.
 
 At this point the key transposition process becomes equivalent to the interval transposition process.
-

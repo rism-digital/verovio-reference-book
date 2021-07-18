@@ -55,4 +55,3 @@ $('input:radio[name="lang"]').click(function() {
     $("span").toggleClass("lang1 lang2");
 });
 </script>
-

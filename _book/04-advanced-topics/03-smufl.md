@@ -56,7 +56,7 @@ examples:
         - ".//mei:dynam"
 ---
 
-Most music notation software applications use music fonts for rendering music symbols or parts of music symbols. These may include clefs, note heads, time signatures or articulation signs. However, these fonts often have incompatible code points – the internal location within the font that points to a symbol. They are most of the time developed with no common agreement on which code point represents which character. The code point for the G clef symbol in one font may be the code point used for a quarter rest in another, or may be simply undefined. Furthermore, they usually have their own metric and positioning system for specifying what the size of the glyph is and where its baseline is. Because of this, music fonts are difficult to use interchangeably. 
+Most music notation software applications use music fonts for rendering music symbols or parts of music symbols. These may include clefs, note heads, time signatures or articulation signs. However, these fonts often have incompatible code points – the internal location within the font that points to a symbol. They are most of the time developed with no common agreement on which code point represents which character. The code point for the G clef symbol in one font may be the code point used for a quarter rest in another, or may be simply undefined. Furthermore, they usually have their own metric and positioning system for specifying what the size of the glyph is and where its baseline is. Because of this, music fonts are difficult to use interchangeably.
 
 To address this, the Standard Music Font Layout ([SMuFL](https://www.smufl.org/)) specification has been developed to attempt to harmonize code points across music fonts by specifying code points and symbol sizes for music fonts. SMuFL gives users the ability to reference specific Unicode code points with the understanding that it would represent the same, or similar, symbol across fonts. This presents new opportunities for exploring visual representations of music within a music encoding system without necessarily tying them to a particular font. While previous music encoding systems could not reference font code points without becoming tied to that font for representation, the introduction of SMuFL to music encoding can provide a reference to a particular graphical symbol that should be used to render a given encoding.
 
@@ -109,6 +109,7 @@ Fonts included can be selected by setting the `--font` option. For example, the 
 ### Music symbols in text
 
 For cases when music symbols are displayed within text, Verovio uses the [VerovioText](https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf) font. This font is a based on Leipzig and includes a limited set of [symbols](https://torinak.com/font/lsfont.html#https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf?raw=true). They include:
+
 * Note symbols for tempo indications
 * Lyric elision symbols
 * Figured bass symbols

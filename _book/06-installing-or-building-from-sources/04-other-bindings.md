@@ -5,6 +5,7 @@ title: "Other bindings"
 ### Java
 
 To build the Java toolkit you need to have swig and swig-java installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) as well as [Maven](https://maven.apache.org/). You need to run:
+
 ```bash
 cd bindings/java
 mvn package
@@ -12,6 +13,7 @@ mvn package
 ```
 
 Note the `mvn package` command needs to be run twice. You can test it with the MEI and PAE examples. For example – replace `X.X.X` with the appropriate version number:
+
 ```bash
 cd example-mei
 javac -cp .:../target/VerovioToolkit-X.X.X.jar main.java 
@@ -41,6 +43,7 @@ pod install
 ```
 
 To use Verovio in your iOS project import
+
 ```cpp
 #import <Verovio/Verovio-umbrella.h>
 ```
