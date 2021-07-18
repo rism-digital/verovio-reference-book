@@ -97,7 +97,7 @@ def print_frontmatter(file):
     """
     file.write('---\ntitle: "MEI supported elements"\nno-edit: true\n')
     file.write('# This file is auto-generated - do not edit\n---\n\n')
-    file.write('{% aside .warning %} Note that, for the MEI attribute classes listed here, not necessary all attributes are implemented and that not necessary all possible attribute values are supported. {% endaside %}\n\n')
+    file.write('{% aside .warning %} Note that, for the MEI attribute classes listed here, some attributes may not be implemented and that not all possible attribute values are supported. {% endaside %}\n\n')
 
 if __name__ == "__main__":
     description = """
