@@ -4,7 +4,7 @@ no-edit: true
 # This file is auto-generated - do not edit
 ---
 
-{% aside .warning %} Note that, for the MEI attribute classes listed here, not necessary all attributes are implemented and that not necessary all possible attribute values are supported. {% endaside %}
+{% aside .warning %} Note that, for the MEI attribute classes listed here, some attributes may not be implemented and that not all possible attribute values are supported. {% endaside %}
 
 {% row %}
 {% col 2 %}
