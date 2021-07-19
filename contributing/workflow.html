@@ -27,18 +27,18 @@
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Contributing workflow" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="[in preparation]" />
-<meta property="og:description" content="[in preparation]" />
+<meta name="description" content="When contributing to Verovio there are a few steps you can take to help make your contribution easy to understand and evaluate. Verovio uses the GitHub issue tracker and pull requests mechanism to organize these contributions." />
+<meta property="og:description" content="When contributing to Verovio there are a few steps you can take to help make your contribution easy to understand and evaluate. Verovio uses the GitHub issue tracker and pull requests mechanism to organize these contributions." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-07-18T09:03:23+00:00" />
+<meta property="article:published_time" content="2021-07-19T15:38:10+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Contributing workflow" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"[in preparation]","url":"/contributing/workflow.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Contributing workflow","dateModified":"2021-07-18T09:03:23+00:00","datePublished":"2021-07-18T09:03:23+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/workflow.html"},"@context":"https://schema.org"}</script>
+{"description":"When contributing to Verovio there are a few steps you can take to help make your contribution easy to understand and evaluate. Verovio uses the GitHub issue tracker and pull requests mechanism to organize these contributions.","url":"/contributing/workflow.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Contributing workflow","dateModified":"2021-07-19T15:38:10+00:00","datePublished":"2021-07-19T15:38:10+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/workflow.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -125,6 +125,10 @@
     
         
         
+<a class="toc-item toc-subsection" href="#adding-examples-to-the-test-suite">Adding examples to the test-suite</a>
+
+<a class="toc-item toc-subsection" href="#what-to-expect-with-an-open-issue">What to expect with an open issue</a>
+
     
 
 <a class="toc-item toc-section " href="/contributing/generate-code-with-libmei.html">Generate code with libMEI</a>
@@ -144,7 +148,92 @@
         
         
         <h2>Contributing workflow</h2>
-        <p>[in preparation]</p>
+        <p>When contributing to Verovio there are a few steps you can take to help make your contribution easy to understand and evaluate. Verovio uses the GitHub issue tracker and pull requests mechanism to organize these contributions.</p>
+
+<p>These steps are:</p>
+
+<ol>
+  <li>Provide an short example MEI encoding that demonstrates a bug or a new feature that can be included in our test suite. You can use the <a href="https://editor.verovio.org">Verovio Editor</a> to create your example. This is described in more detail below.</li>
+  <li>Open an <a href="https://github.com/rism-digital/verovio">issue</a> describing the problem or the new feature, and attach your short example. This provides our developer community with an opportunity to provide feedback on the problem, and determine the appropriate course of action.</li>
+  <li>If you can also provide the solution to the problem by modifying the Verovio source code, then that will speed up the process of getting your issue fixed! If you are a first-time contributor, then please make sure you have read the <a href="/contributing/guidelines.html">contributing guidelines</a>. When you are ready, open a <a href="https://github.com/rism-digital/verovio/pulls">Pull Request</a>, making sure to reference the open issue that it solves.</li>
+</ol>
+
+<h3 id="adding-examples-to-the-test-suite">Adding examples to the test-suite</h3>
+
+<p>When adding examples to the test-suite, you should keep in mind the following points:</p>
+<ul>
+  <li>The example should be as minimal as possible, ideally one or two measures and without un-related MEI / notation features</li>
+  <li>The example has to be valid MEI (4.0 or 5.0-dev)</li>
+  <li>The header should follow the test-suite style</li>
+  <li>The XML should be indented with 3-spaces</li>
+  <li>It is not mandatory to have an @xml:id on all MEI elements</li>
+  <li>The file name should follow the test-suite style</li>
+</ul>
+
+<h4 id="example-header">Example header</h4>
+
+<p>Example MEI header for a test-suite example:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meiHead&gt;</span>
+    <span class="nt">&lt;fileDesc&gt;</span>
+        <span class="nt">&lt;titleStmt&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Slur position with cross-staff<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;respStmt&gt;</span>
+            <span class="nt">&lt;persName</span> <span class="na">role=</span><span class="s">"editor"</span><span class="nt">&gt;</span>Laurent Pugin<span class="nt">&lt;/persName&gt;</span>
+            <span class="nt">&lt;persName</span> <span class="na">role=</span><span class="s">"encoder"</span><span class="nt">&gt;</span>Craig Sapp<span class="nt">&lt;/persName&gt;</span>
+        <span class="nt">&lt;/respStmt&gt;</span>
+        <span class="nt">&lt;/titleStmt&gt;</span>
+        <span class="nt">&lt;pubStmt&gt;</span>
+        <span class="nt">&lt;date</span> <span class="na">isodate=</span><span class="s">"2021-01-06"</span><span class="nt">&gt;</span>2021-01-06<span class="nt">&lt;/date&gt;</span>
+        <span class="nt">&lt;pubPlace&gt;</span>
+            <span class="nt">&lt;ref</span> <span class="na">target=</span><span class="s">"https://github.com/rism-digital/verovio/issues/1898"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/pubPlace&gt;</span>
+        <span class="nt">&lt;/pubStmt&gt;</span>
+        <span class="nt">&lt;notesStmt&gt;</span>
+        <span class="nt">&lt;annot&gt;</span>Slurs with cross-staff should be place identically as in normal situations.<span class="nt">&lt;/annot&gt;</span>
+        <span class="nt">&lt;/notesStmt&gt;</span>
+    <span class="nt">&lt;/fileDesc&gt;</span>
+    <span class="nt">&lt;encodingDesc&gt;</span>
+        <span class="nt">&lt;appInfo&gt;</span>
+        <span class="nt">&lt;application</span> <span class="na">version=</span><span class="s">"3.1.0"</span> <span class="na">label=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;name&gt;</span>Verovio<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;/application&gt;</span>
+        <span class="nt">&lt;/appInfo&gt;</span>
+    <span class="nt">&lt;/encodingDesc&gt;</span>
+<span class="nt">&lt;/meiHead&gt;</span>
+</code></pre></div></div>
+
+<h4 id="file-names">File names</h4>
+
+<p>The test suite examples are grouped by element name, with a very few exceptions. There is a corresponding folder name in the <a href="https://github.com/rism-digital/verovio.org/_tests/">test suite folder</a>. A test-suite example should be saved in the folder corresponding to the MEI element it targets. File names also use the element name and are numbered using the three digits (<code class="language-plaintext highlighter-rouge">-001.mei</code>) pattern.</p>
+
+<h4 id="additional-options">Additional options</h4>
+
+<p>In some cases, a test suite example can require specific Verovio options to be set for it to make sense. For instance, it can require a specific layout or spacing parameter, or a specific font. The options can be set in the header of the MEI file as JSON object encoded as <code class="language-plaintext highlighter-rouge">CDATA</code> in the <code class="language-plaintext highlighter-rouge">&lt;extMeta&gt;</code> tag.</p>
+
+<p>For example, setting the Bravura font can be triggered by including the following tag in the header of the test suite example:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;extMeta&gt;</span><span class="err">&lt;</span>[CDATA[{ "font": "Bravura" }]]&gt;<span class="nt">&lt;/extMeta&gt;</span>
+</code></pre></div></div>
+
+<aside class="warning">
+<p>The additional options set in the MEI header are taken into account in both the test-suite page and the test-suite evaluation performed by the GitHub Actions. However, they currently remain ignored in the Verovio Editor.</p>
+</aside>
+
+<h3 id="what-to-expect-with-an-open-issue">What to expect with an open issue</h3>
+
+<p>When opening an issue, you should be prepared to help shepherd it through the process of getting fixed. If it is a problem with the software itself and you do not know how to fix it, you can still help with testing any potential fixes. You can also help by improving documentation about the new feature by contributing to the Verovio book, as appropriate. <strong>Please do not open an issue unless you are willing to help, in some way, solve it.</strong></p>
+
+<p>If you open an issue and someone provides a fix that requires no further changes, please respond! A “thank-you” and a note to say that it fixed the problem is always appreciated. You can also close the issue so that we know it has been addressed.</p>
+
+<p>Sometimes an issue may be open for several years. These issues may be particularly complex, or may have been partially but not fully fixed. They usually have a discussion attached with sample encodings. Sometimes these issues have actually been fixed later, but as part of a separate issue. If you open an issue that happens to be fixed later, you can help us by leaving a note on your issue and closing it yourself.</p>
+
+<p>If you are a software developer and can provide a solution, you should mention this in your issue. <strong>For new contributors it is useful to open issues prior to opening pull requests.</strong> Sometimes a change cannot be accepted, so opening an issue first gives an opportunity for the more experienced members of the community to provide feedback before you invest a lot of time in it. The quickest and easiest way to get help is to reach out on the #verovio channel in the <a href="https://music-encoding.slack.com/">MEI Community’s Slack chat</a>. If you are not already a member, <a href="https://join.slack.com/t/music-encoding/shared_invite/zt-4zgx6zbq-2jEjDiUT7ym3dygTaY8C0g">you can join</a>.</p>
+
+<p><strong>Issues that have a code contribution attached, and which have active participation from the reporter, are typically addressed first and fixed sooner.</strong> This is largely due to the community-driven nature of the project, recognizing that the more experienced developers have their own set of priorities.  If you can provide a fix, even if it is not 100% correct, then it is easier to review your contribution and provide feedback than it is for someone else to code something from the ground up.</p>
+
+<aside>
+<p>If Verovio is a critically important part of your project, and you need dedicated help to make changes and contributions, the Verovio project accepts some sponsorship arrangements. Please <a href="mailto:info@rism.digital">get in touch</a> to find out more about this.</p>
+</aside>
 
     </div>
 </div>
