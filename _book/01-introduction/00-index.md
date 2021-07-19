@@ -17,6 +17,9 @@ The last chapters provides a [reference](/toolkit-reference) for the operations 
 
 This book is identified with the DOI [10.5448/7em6-my23](https://doi.org/10.5448/7em6-my23) which refers to the currently applicable version of the book documenting the latest release of Verovio.
 
+#### License
+This book is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/), see also in the [README](https://github.com/rism-digital/verovio-reference-book).
+
 ### Getting help
 
 As you work through this book, from the most basic to the most advanced topics, you may find that you are struggling to understand something. The quickest and easiest way to get help is to reach out on the `#verovio` channel in the [MEI Community's Slack chat](https://music-encoding.slack.com/). If you are not already a member, [you can join](https://join.slack.com/t/music-encoding/shared_invite/zt-4zgx6zbq-2jEjDiUT7ym3dygTaY8C0g).
