@@ -4,7 +4,7 @@ title: "Contributing workflow"
 
 ### Adding examples to the test-suite
 
-When adding examples to the test-suite, you should keep in mind the following points:
+When adding examples to the test suite, you should keep in mind the following points:
 * The example should be as minimal as possible, ideally one or two measures and without un-related MEI / notation features
 * The example has to be valid MEI (4.0 or 5.0-dev)
 * The header should follow the test-suite style
@@ -14,36 +14,48 @@ When adding examples to the test-suite, you should keep in mind the following po
 
 #### Example header
 
+The MEI header of a test-suite example should contain the followin elements:
+* A `<titleStmt>` with title describing the example 
+* A `<respStmt>` with the names of the persons or institutions involed (e.g., encoder, editor)
+* A `<pubStmt>` with the date, and (if applicable) a link to the GitHub issue the example was taken from
+* A `<notesStmt>` with a short description
+* A `<encodingDesc>` providing information about the version of Verovio
+
 Example MEI header for a test-suite example:
 ```xml
 <meiHead>
-    <fileDesc>
-        <titleStmt>
-        <title>Slur position with cross-staff</title>
-        <respStmt>
+   <fileDesc>
+      <titleStmt>
+         <title>Slur position with cross-staff</title>
+         <respStmt>
             <persName role="editor">Laurent Pugin</persName>
             <persName role="encoder">Craig Sapp</persName>
-        </respStmt>
-        </titleStmt>
-        <pubStmt>
-        <date isodate="2021-01-06">2021-01-06</date>
-        <pubPlace>
+         </respStmt>
+      </titleStmt>
+      <pubStmt>
+         <date isodate="2021-01-06">2021-01-06</date>
+         <pubPlace>
             <ref target="https://github.com/rism-digital/verovio/issues/1898" />
-        </pubPlace>
-        </pubStmt>
-        <notesStmt>
-        <annot>Slurs with cross-staff should be place identically as in normal situations.</annot>
-        </notesStmt>
-    </fileDesc>
-    <encodingDesc>
-        <appInfo>
-        <application version="3.1.0" label="2">
+         </pubPlace>
+      </pubStmt>
+      <notesStmt>
+         <annot>Slurs with cross-staff should be place identically as in normal situations.</annot>
+      </notesStmt>
+   </fileDesc>
+   <encodingDesc>
+      <appInfo>
+         <application version="3.5.0" label="2">
             <name>Verovio</name>
-        </application>
-        </appInfo>
-    </encodingDesc>
+         </application>
+      </appInfo>
+   </encodingDesc>
 </meiHead>
 ```
+
+The `<application>` element in the encoding description should have two attributes. First `@version` with the version number of Verovio with which the test was checked for the last time, and `@label` taking the following values:
+* "2" for succesfully passing
+* "1" for acceptable but needs improvement
+* "0" for failing
 
 #### File names
 
