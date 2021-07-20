@@ -64,7 +64,7 @@ In some cases, a test suite example can require specific Verovio options to be s
 For example, setting the Bravura font can be triggered by including the following tag in the header of the test suite example:
 
 ```xml
-<extMeta><[CDATA[{ "font": "Bravura" }]]></extMeta>
+<extMeta><![CDATA[{ "font": "Bravura" }]]></extMeta>
 ```
 
 {% aside .warning %}
