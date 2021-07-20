@@ -6,7 +6,7 @@ When contributing to Verovio there are a few steps you can take to help make you
 
 These steps are:
 
-1. Provide an short example MEI encoding that demonstrates a bug or a new feature that can be included in our test suite. You can use the [Verovio Editor](https://editor.verovio.org) to create your example. This is described in more detail below.
+1. Provide an short example MEI encoding that demonstrates a bug or a new feature that can be included in our test suite. You can use the [Verovio Editor](https://editor.verovio.org/?file=https://raw.githubusercontent.com/rism-digital/verovio.org/gh-pages/_tests/note/note-006.mei) to create your example. This is described in more detail below.
 2. Open an [issue](https://github.com/rism-digital/verovio) describing the problem or the new feature, and attach your short example. This provides our developer community with an opportunity to provide feedback on the problem, and determine the appropriate course of action.
 3. If you can also provide the solution to the problem by modifying the Verovio source code, then that will speed up the process of getting your issue fixed! If you are a first-time contributor, then please make sure you have read the [contributing guidelines](/contributing/guidelines.html). When you are ready, open a [Pull Request](https://github.com/rism-digital/verovio/pulls), making sure to reference the open issue that it solves.
 
