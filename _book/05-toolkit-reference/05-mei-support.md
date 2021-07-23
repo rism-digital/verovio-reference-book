@@ -935,15 +935,6 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
-[\<text\>](https://music-encoding.org/guidelines/dev/elements/text.html)
-{% endcol %}
-{% col 10 %}
-[att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
-{% endcol %}
-{% endrow %}
-
-{% row %}
-{% col 2 %}
 [\<tie\>](https://music-encoding.org/guidelines/dev/elements/tie.html)
 {% endcol %}
 {% col 10 %}
