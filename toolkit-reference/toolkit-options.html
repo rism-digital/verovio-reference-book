@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-07-20T09:09:46+00:00" />
+<meta property="article:published_time" content="2021-07-23T06:36:44+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit options" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Command-line parameters JSON keys","url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit options","dateModified":"2021-07-20T09:09:46+00:00","datePublished":"2021-07-20T09:09:46+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"@context":"https://schema.org"}</script>
+{"description":"Command-line parameters JSON keys","url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit options","dateModified":"2021-07-23T06:36:44+00:00","datePublished":"2021-07-23T06:36:44+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -254,11 +254,6 @@
 <div class="col col-md-6"><p>In smart breaks mode, the portion of system width usage at which an encoded sb will be used<br />(default: 0.66; min: 0.0; max: 1.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"clefChangeFactor":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--clef-change-factor  &lt;f&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>Set the ratio of normal clefs to changing clefs<br />(default: 0.66; min: 0.25; max: 1.0)</p>
-</div>
-</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condense":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense  &lt;s&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>Control condensed score layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘encoded’])</p>
@@ -309,6 +304,11 @@
 <div class="col col-md-6"><p>The landscape paper orientation flag</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"ligatureAsBracket":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--ligature-as-bracket </code></span></p>
+</div>
+<div class="col col-md-6"><p>Render ligatures as bracket instead of original notation</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mensuralToMeasure":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mensural-to-measure </code></span></p>
 </div>
 <div class="col col-md-6"><p>Convert mensural sections to measure-based MEI</p>
@@ -353,7 +353,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputSmuflXmlEntities":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-smufl-xml-entities </code></span></p>
 </div>
-<div class="col col-md-6"><p>Output SMuFL charachters as XML entities instead of byte codes</p>
+<div class="col col-md-6"><p>Output SMuFL characters as XML entities instead of hex byte codes</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageHeight":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-height  &lt;i&gt;</code></span></p>
@@ -454,11 +454,6 @@
 
 <h3 id="general-layout-options">General layout options</h3>
 
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"alternativeOctaveSymbols":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--alternative-octave-symbols </code></span></p>
-</div>
-<div class="col col-md-6"><p>Use alternative symbols for displaying octaves</p>
-</div>
-</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"barLineSeparation":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bar-line-separation  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The default distance between multiple barlines when locked together<br />(default: 0.8; min: 0.5; max: 2.0)</p>
@@ -484,6 +479,16 @@
 <div class="col col-md-6"><p>The thickness of the system bracket<br />(default: 1.0; min: 0.5; max: 2.0)</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaksNoWidow":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks-no-widow </code></span></p>
+</div>
+<div class="col col-md-6"><p>Prevent single measures on the last page by fitting it into previous system</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"clefChangeFactor":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--clef-change-factor  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>Set the ratio of normal clefs to changing clefs<br />(default: 0.66; min: 0.25; max: 1.0)</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dynamDist":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dynam-dist  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The default distance from the staff for dynamic marks<br />(default: 1.0; min: 0.5; max: 16.0)</p>
@@ -491,7 +496,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"engravingDefaults":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--engraving-defaults  &lt;s&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Path to json file describing defaults for engraving SMuFL elements</p>
+<div class="col col-md-6"><p>Json describing defaults for engraving SMuFL elements</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"font":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--font  &lt;s&gt;</code></span></p>
@@ -533,7 +538,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationBraceGroup":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-brace-group  &lt;f&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Space between staves inside a braced group ijustification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
+<div class="col col-md-6"><p>Space between staves inside a braced group justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationBracketGroup":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-bracket-group  &lt;f&gt;</code></span></p>
@@ -586,6 +591,11 @@
 <div class="col col-md-6"><p>The minmal margin above the lyrics in MEI units<br />(default: 2.0; min: 0.0; max: 8.0)</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricVerseCollapse":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-verse-collapse </code></span></p>
+</div>
+<div class="col col-md-6"><p>Collapse empty verse lines in lyrics</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricWordSpace":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-word-space  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The lyric word space length<br />(default: 1.2; min: 0.5; max: 3.0)</p>
@@ -611,9 +621,19 @@
 <div class="col col-md-6"><p>Rendering style of multiple measure rests<br />(default: “auto”; other values: [‘auto’, ‘default’, ‘block’, ‘symbols’])</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveAlternativeSymbols":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-alternative-symbols </code></span></p>
+</div>
+<div class="col col-md-6"><p>Use alternative symbols for displaying octaves</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-line-thickness  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The thickness of the line used for an octave line<br />(default: 0.2; min: 0.1; max: 1.0)</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pedalLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--pedal-line-thickness  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>The thickness of the line used for piano pedaling<br />(default: 0.2; min: 0.1; max: 1.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"repeatBarLineDotSeparation":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--repeat-bar-line-dot-separation  &lt;f&gt;</code></span></p>
