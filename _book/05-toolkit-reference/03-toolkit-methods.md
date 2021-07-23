@@ -32,7 +32,6 @@ result = toolkit.edit(editorAction)
 ```
 
 {% include method-doc file="edit-editoraction" %}
-
 ### EditInfo
 
 Return the editor status.
@@ -54,7 +53,6 @@ result = toolkit.editInfo()
 ```
 
 {% include method-doc file="editinfo" %}
-
 ### GetAvailableOptions
 
 Return all available options grouped by category.
@@ -78,7 +76,6 @@ result = toolkit.getAvailableOptions()
 ```
 
 {% include method-doc file="getavailableoptions" %}
-
 ### GetElementAttr
 
 Return element attributes as a JSON string.
@@ -109,7 +106,6 @@ result = toolkit.getElementAttr(xmlId)
 ```
 
 {% include method-doc file="getelementattr-xmlid" %}
-
 ### GetElementsAtTime
 
 Returns array of IDs of elements being currently played.
@@ -138,7 +134,6 @@ result = toolkit.getElementsAtTime(millisec)
 ```
 
 {% include method-doc file="getelementsattime-millisec" %}
-
 ### GetExpansionIdsForElement
 
 Returns a vector of ID strings of all elements (the notated and the expanded) for a given element.
@@ -167,7 +162,6 @@ result = toolkit.getExpansionIdsForElement(xmlId)
 ```
 
 {% include method-doc file="getexpansionidsforelement-xmlid" %}
-
 ### GetHumdrum
 
 Get the humdrum buffer.
@@ -189,7 +183,6 @@ result = toolkit.getHumdrum()
 ```
 
 {% include method-doc file="gethumdrum" %}
-
 ### GetHumdrumFile
 
 Write the humdrum buffer to the file.
@@ -220,7 +213,6 @@ result = toolkit.getHumdrumFile(filename)
 ```
 
 {% include method-doc file="gethumdrumfile-filename" %}
-
 ### GetLog
 
 Get the log content for the latest operation.
@@ -242,7 +234,6 @@ result = toolkit.getLog()
 ```
 
 {% include method-doc file="getlog" %}
-
 ### GetMEI
 
 Get the MEI as a string.
@@ -271,7 +262,6 @@ result = toolkit.getMEI(jsonOptions)
 ```
 
 {% include method-doc file="getmei-jsonoptions" %}
-
 ### GetMIDIValuesForElement
 
 Return MIDI values of the element with the ID (xml:id)
@@ -302,7 +292,6 @@ result = toolkit.getMIDIValuesForElement(xmlId)
 ```
 
 {% include method-doc file="getmidivaluesforelement-xmlid" %}
-
 ### GetNotatedIdForElement
 
 Returns the ID string of the notated (the original) element.
@@ -331,7 +320,6 @@ result = toolkit.getNotatedIdForElement(xmlId)
 ```
 
 {% include method-doc file="getnotatedidforelement-xmlid" %}
-
 ### GetOption
 
 Get the value for an option.
@@ -361,7 +349,6 @@ result = toolkit.getOption(option, defaultValue)
 ```
 
 {% include method-doc file="getoption-option-defaultvalue" %}
-
 ### GetOptions
 
 Return a dictionary of all the options.
@@ -390,7 +377,6 @@ result = toolkit.getOptions(defaultValues)
 ```
 
 {% include method-doc file="getoptions-defaultvalues" %}
-
 ### GetPageCount
 
 Return the number of pages in the loaded document.
@@ -414,7 +400,6 @@ result = toolkit.getPageCount()
 ```
 
 {% include method-doc file="getpagecount" %}
-
 ### GetPageWithElement
 
 Return the page on which the element is the ID (xml:id) is rendered.
@@ -445,7 +430,6 @@ result = toolkit.getPageWithElement(xmlId)
 ```
 
 {% include method-doc file="getpagewithelement-xmlid" %}
-
 ### GetScale
 
 Get the scale option.
@@ -467,7 +451,6 @@ result = toolkit.getScale()
 ```
 
 {% include method-doc file="getscale" %}
-
 ### GetTimeForElement
 
 Return the time at which the element is the ID (xml:id) is played.
@@ -498,7 +481,6 @@ result = toolkit.getTimeForElement(xmlId)
 ```
 
 {% include method-doc file="gettimeforelement-xmlid" %}
-
 ### GetTimesForElement
 
 Return a JSON object string with the following key values for a given note.
@@ -529,7 +511,6 @@ result = toolkit.getTimesForElement(xmlId)
 ```
 
 {% include method-doc file="gettimesforelement-xmlid" %}
-
 ### GetUuid
 
 Return the ID of the Toolkit instance.
@@ -551,7 +532,6 @@ result = toolkit.getUuid()
 ```
 
 {% include method-doc file="getuuid" %}
-
 ### GetVersion
 
 Return the version number.
@@ -573,7 +553,6 @@ result = toolkit.getVersion()
 ```
 
 {% include method-doc file="getversion" %}
-
 ### LoadData
 
 Load a string data with the type previously specified in the options.
@@ -604,7 +583,6 @@ result = toolkit.loadData(data)
 ```
 
 {% include method-doc file="loaddata-data" %}
-
 ### LoadFile
 
 Load a file from the file system.
@@ -635,7 +613,6 @@ result = toolkit.loadFile(filename)
 ```
 
 {% include method-doc file="loadfile-filename" %}
-
 ### LoadZipDataBase64
 
 Load a MusicXML compressed file passed as base64 encoded string.
@@ -664,7 +641,6 @@ result = toolkit.loadZipDataBase64(data)
 ```
 
 {% include method-doc file="loadzipdatabase64-data" %}
-
 ### LoadZipDataBuffer
 
 Load a MusicXML compressed file passed as a buffer of bytes.
@@ -694,7 +670,6 @@ result = toolkit.loadZipDataBuffer(data, length)
 ```
 
 {% include method-doc file="loadzipdatabuffer-data-length" %}
-
 ### RedoLayout
 
 Redo the layout of the loaded data.
@@ -718,7 +693,6 @@ toolkit.redoLayout()
 ```
 
 {% include method-doc file="redolayout" %}
-
 ### RedoPagePitchPosLayout
 
 Redo the layout of the pitch postitions of the current drawing page.
@@ -742,7 +716,6 @@ toolkit.redoPagePitchPosLayout()
 ```
 
 {% include method-doc file="redopagepitchposlayout" %}
-
 ### RenderToMIDI
 
 Render the document to MIDI.
@@ -764,7 +737,6 @@ result = toolkit.renderToMIDI()
 ```
 
 {% include method-doc file="rendertomidi" %}
-
 ### RenderToMIDIFile
 
 Render a document to MIDI and save it to the file.
@@ -795,7 +767,6 @@ result = toolkit.renderToMIDIFile(filename)
 ```
 
 {% include method-doc file="rendertomidifile-filename" %}
-
 ### RenderToPAE
 
 Render a document to Plaine and Easie.
@@ -819,7 +790,6 @@ result = toolkit.renderToPAE()
 ```
 
 {% include method-doc file="rendertopae" %}
-
 ### RenderToPAEFile
 
 Render a document to Plaine and Easie and save it to the file.
@@ -850,7 +820,6 @@ result = toolkit.renderToPAEFile(filename)
 ```
 
 {% include method-doc file="rendertopaefile-filename" %}
-
 ### RenderToSVG
 
 Render a page to SVG.
@@ -880,7 +849,6 @@ result = toolkit.renderToSVG(pageNo, xmlDeclaration)
 ```
 
 {% include method-doc file="rendertosvg-pageno-xmldeclaration" %}
-
 ### RenderToSVGFile
 
 Render a page to SVG and save it to the file.
@@ -912,7 +880,6 @@ result = toolkit.renderToSVGFile(filename, pageNo)
 ```
 
 {% include method-doc file="rendertosvgfile-filename-pageno" %}
-
 ### RenderToTimemap
 
 Render a document to a timemap.
@@ -934,7 +901,6 @@ result = toolkit.renderToTimemap()
 ```
 
 {% include method-doc file="rendertotimemap" %}
-
 ### RenderToTimemapFile
 
 Render a document to timemap and save it to the file.
@@ -965,7 +931,6 @@ result = toolkit.renderToTimemapFile(filename)
 ```
 
 {% include method-doc file="rendertotimemapfile-filename" %}
-
 ### SaveFile
 
 Get the MEI and save it to the file.
@@ -997,7 +962,6 @@ result = toolkit.saveFile(filename, jsonOptions)
 ```
 
 {% include method-doc file="savefile-filename-jsonoptions" %}
-
 ### SetInputFrom
 
 Set the input from option.
@@ -1026,7 +990,6 @@ result = toolkit.setInputFrom(inputFrom)
 ```
 
 {% include method-doc file="setinputfrom-inputfrom" %}
-
 ### SetOption
 
 Set the value for an option.
@@ -1056,7 +1019,6 @@ result = toolkit.setOption(option, value)
 ```
 
 {% include method-doc file="setoption-option-value" %}
-
 ### SetOptions
 
 Set option values.
@@ -1087,7 +1049,6 @@ result = toolkit.setOptions(jsonOptions)
 ```
 
 {% include method-doc file="setoptions-jsonoptions" %}
-
 ### SetOutputTo
 
 Set the output to option.
@@ -1116,7 +1077,6 @@ result = toolkit.setOutputTo(outputTo)
 ```
 
 {% include method-doc file="setoutputto-outputto" %}
-
 ### SetResourcePath
 
 Set the resource path for the Toolkit instance.
@@ -1147,7 +1107,6 @@ result = toolkit.setResourcePath(path)
 ```
 
 {% include method-doc file="setresourcepath-path" %}
-
 ### SetScale
 
 Set the scale option.
@@ -1176,7 +1135,6 @@ result = toolkit.setScale(scale)
 ```
 
 {% include method-doc file="setscale-scale" %}
-
 ### Toolkit
 
 Constructor.
