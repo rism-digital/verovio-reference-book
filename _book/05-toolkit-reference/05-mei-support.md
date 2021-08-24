@@ -74,7 +74,7 @@ no-edit: true
 [\<artic\>](https://music-encoding.org/guidelines/dev/elements/artic.html)
 {% endcol %}
 {% col 10 %}
-[att.articulation](https://music-encoding.org/guidelines/dev/attribute-classes/att.articulation.html), [att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.extSym](https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html), [att.facsimile](https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.placementRelEvent](https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelEvent.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+[att.articulation](https://music-encoding.org/guidelines/dev/attribute-classes/att.articulation.html), [att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.enclosingChars](https://music-encoding.org/guidelines/dev/attribute-classes/att.enclosingChars.html), [att.extSym](https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html), [att.facsimile](https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.placementRelEvent](https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelEvent.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -126,6 +126,15 @@ no-edit: true
 {% row %}
 {% col 2 %}
 [\<breath\>](https://music-encoding.org/guidelines/dev/elements/breath.html)
+{% endcol %}
+{% col 10 %}
+[att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.placementRelStaff](https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html), [att.staffIdent](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html), [att.startId](https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html), [att.timestamp.logical](https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
+[\<caesura\>](https://music-encoding.org/guidelines/dev/elements/caesura.html)
 {% endcol %}
 {% col 10 %}
 [att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.placementRelStaff](https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html), [att.staffIdent](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html), [att.startId](https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html), [att.timestamp.logical](https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
@@ -299,7 +308,7 @@ no-edit: true
 [\<fermata\>](https://music-encoding.org/guidelines/dev/elements/fermata.html)
 {% endcol %}
 {% col 10 %}
-[att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.extSym](https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html), [att.fermata.vis](https://music-encoding.org/guidelines/dev/attribute-classes/att.fermata.vis.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.placementRelStaff](https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html), [att.staffIdent](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html), [att.startId](https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html), [att.timestamp.logical](https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+[att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.enclosingChars](https://music-encoding.org/guidelines/dev/attribute-classes/att.enclosingChars.html), [att.extSym](https://music-encoding.org/guidelines/dev/attribute-classes/att.extSym.html), [att.fermata.vis](https://music-encoding.org/guidelines/dev/attribute-classes/att.fermata.vis.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.placementRelStaff](https://music-encoding.org/guidelines/dev/attribute-classes/att.placementRelStaff.html), [att.staffIdent](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html), [att.startId](https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html), [att.timestamp.logical](https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -458,6 +467,15 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
+[\<lv\>](https://music-encoding.org/guidelines/dev/elements/lv.html)
+{% endcol %}
+{% col 10 %}
+[att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.curvature](https://music-encoding.org/guidelines/dev/attribute-classes/att.curvature.html), [att.curveRend](https://music-encoding.org/guidelines/dev/attribute-classes/att.curveRend.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.staffIdent](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffIdent.html), [att.startEndId](https://music-encoding.org/guidelines/dev/attribute-classes/att.startEndId.html), [att.startId](https://music-encoding.org/guidelines/dev/attribute-classes/att.startId.html), [att.timestamp.logical](https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html), [att.timestamp.logical](https://music-encoding.org/guidelines/dev/attribute-classes/att.timestamp.logical.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
 [\<mNum\>](https://music-encoding.org/guidelines/dev/elements/mNum.html)
 {% endcol %}
 {% col 10 %}
@@ -506,7 +524,7 @@ no-edit: true
 [\<mdiv\>](https://music-encoding.org/guidelines/dev/elements/mdiv.html)
 {% endcol %}
 {% col 10 %}
-[att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html)
+[att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -534,6 +552,15 @@ no-edit: true
 {% endcol %}
 {% col 10 %}
 [att.facsimile](https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.meterSig.log](https://music-encoding.org/guidelines/dev/attribute-classes/att.meterSig.log.html), [att.meterSig.vis](https://music-encoding.org/guidelines/dev/attribute-classes/att.meterSig.vis.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
+[\<meterSigGrp\>](https://music-encoding.org/guidelines/dev/elements/meterSigGrp.html)
+{% endcol %}
+{% col 10 %}
+[att.basic](https://music-encoding.org/guidelines/dev/attribute-classes/att.basic.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.meterSigGrp.log](https://music-encoding.org/guidelines/dev/attribute-classes/att.meterSigGrp.log.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -615,6 +642,15 @@ no-edit: true
 {% endcol %}
 {% col 10 %}
 [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.source](https://music-encoding.org/guidelines/dev/attribute-classes/att.source.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
+[\<pageElementEnd\>](https://music-encoding.org/guidelines/dev/elements/pageElementEnd.html)
+{% endcol %}
+{% col 10 %}
+[att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -785,7 +821,7 @@ no-edit: true
 [\<score\>](https://music-encoding.org/guidelines/dev/elements/score.html)
 {% endcol %}
 {% col 10 %}
-[att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html)
+[att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -803,7 +839,7 @@ no-edit: true
 [\<section\>](https://music-encoding.org/guidelines/dev/elements/section.html)
 {% endcol %}
 {% col 10 %}
-[att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+[att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html), [att.section.vis](https://music-encoding.org/guidelines/dev/attribute-classes/att.section.vis.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -857,7 +893,7 @@ no-edit: true
 [\<staffGrp\>](https://music-encoding.org/guidelines/dev/elements/staffGrp.html)
 {% endcol %}
 {% col 10 %}
-[att.basic](https://music-encoding.org/guidelines/dev/attribute-classes/att.basic.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.staffGroupingSym](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffGroupingSym.html), [att.staffGrp.vis](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffGrp.vis.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+[att.basic](https://music-encoding.org/guidelines/dev/attribute-classes/att.basic.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.nNumberLike](https://music-encoding.org/guidelines/dev/attribute-classes/att.nNumberLike.html), [att.staffGroupingSym](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffGroupingSym.html), [att.staffGrp.vis](https://music-encoding.org/guidelines/dev/attribute-classes/att.staffGrp.vis.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 
@@ -903,6 +939,15 @@ no-edit: true
 {% endcol %}
 {% col 10 %}
 [att.color](https://music-encoding.org/guidelines/dev/attribute-classes/att.color.html), [att.facsimile](https://music-encoding.org/guidelines/dev/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/dev/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/dev/attribute-classes/att.linking.html), [att.slashCount](https://music-encoding.org/guidelines/dev/attribute-classes/att.slashCount.html), [att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
+[\<systemElementEnd\>](https://music-encoding.org/guidelines/dev/elements/systemElementEnd.html)
+{% endcol %}
+{% col 10 %}
+[att.typed](https://music-encoding.org/guidelines/dev/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 

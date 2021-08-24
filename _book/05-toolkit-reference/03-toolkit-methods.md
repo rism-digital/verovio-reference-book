@@ -4,6 +4,62 @@ no-edit: true
 # This file is auto-generated - do not edit
 ---
 
+### ConvertHumdrumToHumdrum
+
+Filter Humdrum data.
+
+**Returns**
+
+`std::string` – The Humdrum data as a string
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `humdrumData` | `const std::string &` | ∅ |  |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::ConvertHumdrumToHumdrum(const std::string &humdrumData)
+```
+
+**Example call**
+
+```python
+result = toolkit.convertHumdrumToHumdrum(humdrumData)
+```
+
+{% include method-doc file="converthumdrumtohumdrum-humdrumdata" %}
+### ConvertMEIToHumdrum
+
+Convert MEI data into Humdrum data.
+
+**Returns**
+
+`std::string` – The Humdrum data as a string
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `meiData` | `const std::string &` | ∅ |  |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::ConvertMEIToHumdrum(const std::string &meiData)
+```
+
+**Example call**
+
+```python
+result = toolkit.convertMEIToHumdrum(meiData)
+```
+
+{% include method-doc file="convertmeitohumdrum-meidata" %}
 ### Edit
 
 Edit the MEI data.
@@ -76,6 +132,36 @@ result = toolkit.getAvailableOptions()
 ```
 
 {% include method-doc file="getavailableoptions" %}
+### GetDescriptiveFeatures
+
+Return descriptive features as a JSON string.
+
+The features are tailored for implementing incipit search
+
+**Returns**
+
+`std::string` – A stringified JSON object with the requested features
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `options` | `const std::string &` | ∅ | A stringified JSON object with the feature extraction options |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::GetDescriptiveFeatures(const std::string &options)
+```
+
+**Example call**
+
+```python
+result = toolkit.getDescriptiveFeatures(options)
+```
+
+{% include method-doc file="getdescriptivefeatures-options" %}
 ### GetElementAttr
 
 Return element attributes as a JSON string.
@@ -931,6 +1017,57 @@ result = toolkit.renderToTimemapFile(filename)
 ```
 
 {% include method-doc file="rendertotimemapfile-filename" %}
+### ResetOptions
+
+Reset all options to default values.
+
+**Returns**
+
+`void`
+
+**Original header**
+
+```cpp
+void vrv::Toolkit::ResetOptions()
+```
+
+**Example call**
+
+```python
+toolkit.resetOptions()
+```
+
+{% include method-doc file="resetoptions" %}
+### ResetXmlIdSeed
+
+Reset the @xml:id seed.
+
+This method should be called only if the xmlIdSeed parameter was set when creating the Toolkit
+
+**Returns**
+
+`void`
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `seed` | `int` | ∅ | The seed value for generating the xml:id values (0 for a time-based random seed) |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+void vrv::Toolkit::ResetXmlIdSeed(int seed)
+```
+
+**Example call**
+
+```python
+toolkit.resetXmlIdSeed(seed)
+```
+
+{% include method-doc file="resetxmlidseed-seed" %}
 ### SaveFile
 
 Get the MEI and save it to the file.
