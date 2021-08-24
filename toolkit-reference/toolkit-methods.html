@@ -27,18 +27,18 @@
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Toolkit methods" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Edit" />
-<meta property="og:description" content="Edit" />
+<meta name="description" content="ConvertHumdrumToHumdrum" />
+<meta property="og:description" content="ConvertHumdrumToHumdrum" />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-07-23T06:53:48+00:00" />
+<meta property="article:published_time" content="2021-08-24T19:22:20+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Edit","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit methods","dateModified":"2021-07-23T06:53:48+00:00","datePublished":"2021-07-23T06:53:48+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"@context":"https://schema.org"}</script>
+{"description":"ConvertHumdrumToHumdrum","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit methods","dateModified":"2021-08-24T19:22:20+00:00","datePublished":"2021-08-24T19:22:20+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -122,11 +122,17 @@
     
         
         
+<a class="toc-item toc-subsection" href="#converthumdrumtohumdrum">ConvertHumdrumToHumdrum</a>
+
+<a class="toc-item toc-subsection" href="#convertmeitohumdrum">ConvertMEIToHumdrum</a>
+
 <a class="toc-item toc-subsection" href="#edit">Edit</a>
 
 <a class="toc-item toc-subsection" href="#editinfo">EditInfo</a>
 
 <a class="toc-item toc-subsection" href="#getavailableoptions">GetAvailableOptions</a>
+
+<a class="toc-item toc-subsection" href="#getdescriptivefeatures">GetDescriptiveFeatures</a>
 
 <a class="toc-item toc-subsection" href="#getelementattr">GetElementAttr</a>
 
@@ -192,6 +198,10 @@
 
 <a class="toc-item toc-subsection" href="#rendertotimemapfile">RenderToTimemapFile</a>
 
+<a class="toc-item toc-subsection" href="#resetoptions">ResetOptions</a>
+
+<a class="toc-item toc-subsection" href="#resetxmlidseed">ResetXmlIdSeed</a>
+
 <a class="toc-item toc-subsection" href="#savefile">SaveFile</a>
 
 <a class="toc-item toc-subsection" href="#setinputfrom">SetInputFrom</a>
@@ -231,7 +241,81 @@
         
         
         <h2>Toolkit methods</h2>
-        <h3 id="edit">Edit</h3>
+        <h3 id="converthumdrumtohumdrum">ConvertHumdrumToHumdrum</h3>
+
+<p>Filter Humdrum data.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – The Humdrum data as a string</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">humdrumData</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">ConvertHumdrumToHumdrum</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">humdrumData</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">convertHumdrumToHumdrum</span><span class="p">(</span><span class="n">humdrumData</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="convertmeitohumdrum">ConvertMEIToHumdrum</h3>
+
+<p>Convert MEI data into Humdrum data.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – The Humdrum data as a string</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">meiData</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">ConvertMEIToHumdrum</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">meiData</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">convertMEIToHumdrum</span><span class="p">(</span><span class="n">meiData</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="edit">Edit</h3>
 
 <p>Edit the MEI data.</p>
 
@@ -309,6 +393,45 @@
 <h4 id="more-info-here">More info here</h4>
 
 <p>Example how to extended the documentation for a method</p>
+
+<h3 id="getdescriptivefeatures">GetDescriptiveFeatures</h3>
+
+<p>Return descriptive features as a JSON string.</p>
+
+<p>The features are tailored for implementing incipit search</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with the requested features</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">options</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td>A stringified JSON object with the feature extraction options</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetDescriptiveFeatures</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">options</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getDescriptiveFeatures</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h3 id="getelementattr">GetElementAttr</h3>
 
@@ -1341,6 +1464,63 @@
 <p><strong>Example call</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToTimemapFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="resetoptions">ResetOptions</h3>
+
+<p>Reset all options to default values.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">ResetOptions</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">resetOptions</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="resetxmlidseed">ResetXmlIdSeed</h3>
+
+<p>Reset the @xml:id seed.</p>
+
+<p>This method should be called only if the xmlIdSeed parameter was set when creating the Toolkit</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">seed</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td>∅</td>
+      <td>The seed value for generating the xml:id values (0 for a time-based random seed)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">ResetXmlIdSeed</span><span class="p">(</span><span class="kt">int</span> <span class="n">seed</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">resetXmlIdSeed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="savefile">SaveFile</h3>
