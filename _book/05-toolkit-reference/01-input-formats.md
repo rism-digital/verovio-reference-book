@@ -712,6 +712,61 @@ JSON input
 
 {% include music-notation-only example="pae-09" %}
 
+#### PAE Validation
+
+The toolkit can be used to validate Plaine & Easie input data with the `ValidatePAE` or `ValidatePAEFile` methods. The methods load the PAE data passed as a string or from a file respectively. They both return a stringified JSON object with validation error or warning messages.
+
+The JSON object can contain one or more validation messages. When a global input error is encountered (e.g, `data` is missing in the input), a single object is returned. Otherwise, the object is structured with keys corresponding to the JSON input keys (`clef`, `keysig`, `timesig` and `data`). Each key can have one single validation message, except for `data` that contains an array of one or more messages. Only keys for which a validation message is given will exist in the validation object. In non-pendantic mode, syntax problems are marked as `warning` as long as parsing can continue.
+
+Each validation message is structured as follow:
+```json
+{
+  "column": 0,
+  "row": 0,
+  "text": "A description of the validation problem",
+  "type": "error"
+}
+```
+
+Description of the values:
+* The `column` indicates the position where the problem occurs in the input string. It is always `0` for `clef`, `keysig` and `timesig`. It can be `-1` in `data` when no position can be indicated.
+* The `row` is always `0`.
+* The `type` can be `error` or `warning`.
+
+Here is an example of invalid input data and the object returned by the validation call:
+```json
+{ 
+    "clef": "GG2",
+    "keysig": "bB",
+    "data": "=1/4-''DC'tB/''tCC"
+}
+```
+
+```json
+{
+  "clef": {
+    "column": 0,
+    "row": 0,
+    "text": "Unexpected second character in clef sign",
+    "type": "warning"
+  },
+  "data": [
+    {
+      "column": 10,
+      "row": 0,
+      "text": "Invalid t not after a note",
+      "type": "warning"
+    },
+    {
+      "column": 15,
+      "row": 0,
+      "text": "Invalid t not after a note",
+      "type": "warning"
+    }
+  ]
+}
+```
+
 ### ABC
 
 Abc is a text-based music notation system originally designed for use with folk and traditional tunes and used throughout the web. You can find the documentation on the [ABC notation](http://abcnotation.com/wiki/abc:standard) website.
