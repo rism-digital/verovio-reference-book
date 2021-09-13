@@ -141,6 +141,8 @@ examples:
 
     - name: pae-01
       url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/beams_and_tuplets.pae
+    - name: pae-01-json
+      url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/beams_and_tuplets.json
     - name: pae-02
       url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/measure_rest_and_keysig_change.pae
     - name: pae-03
@@ -602,6 +604,8 @@ Plaine and Easie input in Verovio is a text file (or string) with a list of the 
 * `@timesig` – the initial time signature
 * `@data` – the incipit content
 
+From version 3.7, the content can be structured as a JSON object with a `clef`, `keysig`, `timesig` and `data` key. Verovio will auto detect both as Plaine & Easie format. Internaly, text files with `@key:value` lines are converted into a JSON object.
+
 {% aside %}
 The structure of this input format is not part of the PAE specification but only a convention put in place for Verovio
 {% endaside %}
@@ -610,10 +614,20 @@ The structure of this input format is not part of the PAE specification but only
 
 **Beams and tuplets**
 
-{% assign pae_02 = page.examples | where: "name", "pae-01" | first %}
+Text file input
+
+{% assign pae = page.examples | where: "name", "pae-01" | first %}
 
 ```
-{% remote_include {{ pae_02.url }} %}
+{% remote_include {{ pae.url }} %}
+```
+
+JSON input
+
+{% assign pae = page.examples | where: "name", "pae-01-json" | first %}
+
+```json
+{% remote_include {{ pae.url }} %}
 ```
 
 {% include music-notation-only example="pae-01" %}
