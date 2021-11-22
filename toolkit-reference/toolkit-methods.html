@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-24T19:27:10+00:00" />
+<meta property="article:published_time" content="2021-11-22T14:56:33+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"ConvertHumdrumToHumdrum","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit methods","dateModified":"2021-08-24T19:27:10+00:00","datePublished":"2021-08-24T19:27:10+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"description":"ConvertHumdrumToHumdrum","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit methods","dateModified":"2021-11-22T14:56:33+00:00","datePublished":"2021-11-22T14:56:33+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -217,6 +217,10 @@
 <a class="toc-item toc-subsection" href="#setscale">SetScale</a>
 
 <a class="toc-item toc-subsection" href="#toolkit">Toolkit</a>
+
+<a class="toc-item toc-subsection" href="#validatepae">ValidatePAE</a>
+
+<a class="toc-item toc-subsection" href="#validatepaefile">ValidatePAEFile</a>
 
     
 
@@ -1488,7 +1492,7 @@
 
 <p>Reset the @xml:id seed.</p>
 
-<p>This method should be called only if the xmlIdSeed parameter was set when creating the Toolkit</p>
+<p>Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.</p>
 
 <p><strong>Returns</strong></p>
 
@@ -1831,6 +1835,84 @@
 <p><strong>Example call</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">toolkit</span><span class="p">(</span><span class="n">initFont</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="validatepae">ValidatePAE</h3>
+
+<p>Validate the Plaine and Easie code passed in the string data.</p>
+
+<p>A single JSON object is returned when there is a global input error. When reading the input succeeds, validation is grouped by input keys. The methods always returns errors in PAE pedantic mode. No data remains loaded after the validation.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with the validation warnings or errors</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td>A string with the data in JSON or with PAE @ keys</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">ValidatePAE</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">validatePAE</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="validatepaefile">ValidatePAEFile</h3>
+
+<p>Validate the Plaine and Easie file from the file system.</p>
+
+<p>The method calls Toolkit::ValidatePAE. This methods is not available in the JavaScript version of the toolkit.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with the validation warnings or errors</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">filename</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td>The filename to be validated</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">ValidatePAEFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">validatePAEFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div></div>
 
 

@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-24T19:27:10+00:00" />
+<meta property="article:published_time" content="2021-11-22T14:56:33+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Input formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-08-24T19:27:10+00:00","datePublished":"2021-08-24T19:27:10+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/input-formats.html"},"description":"When data is loaded into Verovio with no input format specifies, it tries to detect it based on the initial content of the data. MEI is assume to be the default format if auto detection fails. In such cases, the format can be given explicitly with the option --input-from (or -f).","url":"/toolkit-reference/input-formats.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Input formats","dateModified":"2021-11-22T14:56:33+00:00","datePublished":"2021-11-22T14:56:33+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -5381,6 +5381,8 @@
   <li><code class="language-plaintext highlighter-rouge">@data</code> – the incipit content</li>
 </ul>
 
+<p>From version 3.7, the content can be structured as a JSON object with a <code class="language-plaintext highlighter-rouge">clef</code>, <code class="language-plaintext highlighter-rouge">keysig</code>, <code class="language-plaintext highlighter-rouge">timesig</code> and <code class="language-plaintext highlighter-rouge">data</code> key. Verovio will auto detect both as Plaine &amp; Easie format. Internaly, text files with <code class="language-plaintext highlighter-rouge">@key:value</code> lines are converted into a JSON object.</p>
+
 <aside>
 <p>The structure of this input format is not part of the PAE specification but only a convention put in place for Verovio</p>
 </aside>
@@ -5389,11 +5391,23 @@
 
 <p><strong>Beams and tuplets</strong></p>
 
+<p>Text file input</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@clef:G-2
 @keysig:xFCGD
 @timesig:3/8
 @data:'6B/{8B+(6B''E'B})({AFD})/{6.E3G},8B-/({6'EGF})({FAG})({GEB})/4F6-
 </code></pre></div></div>
+
+<p>JSON input</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"clef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"G-2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"keysig"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xFCGD"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timesig"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3/8"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'6B/{8B+(6B''E'B})({AFD})/{6.E3G},8B-/({6'EGF})({FAG})({GEB})/4F6-"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p><img class="img-responsive hidden-print" src="/images/examples/05-toolkit-reference/01-input-formats/pae-01.svg" alt="examples/05-toolkit-reference/01-input-formats/pae-01.svg]" /></p>
 <div class="visible-print"><svg width="607px" height="141.5px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mei="http://www.music-encoding.org/ns/mei" overflow="visible">
@@ -7972,7 +7986,7 @@
 <p><strong>Abbreviated writing</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@clef:G-2
-@keysig:none
+@keysig:
 @timesig:3/4
 @data:'6!{GGCC}!f{GCGC}/i/i/
 </code></pre></div></div>
@@ -8420,6 +8434,60 @@
    </svg>
 </svg>
 </div>
+
+<h4 id="pae-validation">PAE Validation</h4>
+
+<p>The toolkit can be used to validate Plaine &amp; Easie input data with the <code class="language-plaintext highlighter-rouge">ValidatePAE</code> or <code class="language-plaintext highlighter-rouge">ValidatePAEFile</code> methods. The methods load the PAE data passed as a string or from a file respectively. They both return a stringified JSON object with validation error or warning messages.</p>
+
+<p>The JSON object can contain one or more validation messages. When a global input error is encountered (e.g, <code class="language-plaintext highlighter-rouge">data</code> is missing in the input), a single object is returned. Otherwise, the object is structured with keys corresponding to the JSON input keys (<code class="language-plaintext highlighter-rouge">clef</code>, <code class="language-plaintext highlighter-rouge">keysig</code>, <code class="language-plaintext highlighter-rouge">timesig</code> and <code class="language-plaintext highlighter-rouge">data</code>). Each key can have one single validation message, except for <code class="language-plaintext highlighter-rouge">data</code> that contains an array of one or more messages. Only keys for which a validation message is given will exist in the validation object. In non-pendantic mode, syntax problems are marked as <code class="language-plaintext highlighter-rouge">warning</code> as long as parsing can continue.</p>
+
+<p>Each validation message is structured as follow:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"column"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"row"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A description of the validation problem"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Description of the values:</p>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">column</code> indicates the position where the problem occurs in the input string. It is always <code class="language-plaintext highlighter-rouge">0</code> for <code class="language-plaintext highlighter-rouge">clef</code>, <code class="language-plaintext highlighter-rouge">keysig</code> and <code class="language-plaintext highlighter-rouge">timesig</code>. It can be <code class="language-plaintext highlighter-rouge">-1</code> in <code class="language-plaintext highlighter-rouge">data</code> when no position can be indicated.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">row</code> is always <code class="language-plaintext highlighter-rouge">0</code>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">type</code> can be <code class="language-plaintext highlighter-rouge">error</code> or <code class="language-plaintext highlighter-rouge">warning</code>.</li>
+</ul>
+
+<p>Here is an example of invalid input data and the object returned by the validation call:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> 
+    </span><span class="nl">"clef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GG2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"keysig"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bB"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"=1/4-''DC'tB/''tCC"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"clef"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"column"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"row"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unexpected second character in clef sign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"warning"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"column"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"row"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid t not after a note"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"warning"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"column"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"row"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid t not after a note"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"warning"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="abc">ABC</h3>
 
