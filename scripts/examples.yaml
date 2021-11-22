@@ -225,6 +225,12 @@
   svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-01.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: pae-01-json
+  url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/beams_and_tuplets.json
+  mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-01-json.mei
+  svg-example-file: examples/05-toolkit-reference/01-input-formats/pae-01-json.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: pae-02
   url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/measure_rest_and_keysig_change.pae
   mei-example-file: examples/05-toolkit-reference/01-input-formats/pae-02.mei

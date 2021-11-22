@@ -1042,7 +1042,7 @@ toolkit.resetOptions()
 
 Reset the @xml:id seed.
 
-This method should be called only if the xmlIdSeed parameter was set when creating the Toolkit
+Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.
 
 **Returns**
 
@@ -1296,3 +1296,63 @@ result = toolkit.toolkit(initFont)
 ```
 
 {% include method-doc file="toolkit-initfont" %}
+### ValidatePAE
+
+Validate the Plaine and Easie code passed in the string data.
+
+A single JSON object is returned when there is a global input error. When reading the input succeeds, validation is grouped by input keys. The methods always returns errors in PAE pedantic mode. No data remains loaded after the validation.
+
+**Returns**
+
+`std::string` – A stringified JSON object with the validation warnings or errors
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `data` | `const std::string &` | ∅ | A string with the data in JSON or with PAE @ keys |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::ValidatePAE(const std::string &data)
+```
+
+**Example call**
+
+```python
+result = toolkit.validatePAE(data)
+```
+
+{% include method-doc file="validatepae-data" %}
+### ValidatePAEFile
+
+Validate the Plaine and Easie file from the file system.
+
+The method calls Toolkit::ValidatePAE. This methods is not available in the JavaScript version of the toolkit.
+
+**Returns**
+
+`std::string` – A stringified JSON object with the validation warnings or errors
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `filename` | `const std::string &` | ∅ | The filename to be validated |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::ValidatePAEFile(const std::string &filename)
+```
+
+**Example call**
+
+```python
+result = toolkit.validatePAEFile(filename)
+```
+
+{% include method-doc file="validatepaefile-filename" %}

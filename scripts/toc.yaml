@@ -70,10 +70,14 @@
 "/toolkit-reference/output-formats.html#midi": MIDI
 "/toolkit-reference/output-formats.html#timemap": Timemap
 "/toolkit-reference/output-formats.html#plaine-and-easie": Plaine and Easie
+"/toolkit-reference/output-formats.html#humdrum": Humdrum
 "/toolkit-reference/toolkit-methods.html": Toolkit methods
+"/toolkit-reference/toolkit-methods.html#converthumdrumtohumdrum": ConvertHumdrumToHumdrum
+"/toolkit-reference/toolkit-methods.html#convertmeitohumdrum": ConvertMEIToHumdrum
 "/toolkit-reference/toolkit-methods.html#edit": Edit
 "/toolkit-reference/toolkit-methods.html#editinfo": EditInfo
 "/toolkit-reference/toolkit-methods.html#getavailableoptions": GetAvailableOptions
+"/toolkit-reference/toolkit-methods.html#getdescriptivefeatures": GetDescriptiveFeatures
 "/toolkit-reference/toolkit-methods.html#getelementattr": GetElementAttr
 "/toolkit-reference/toolkit-methods.html#getelementsattime": GetElementsAtTime
 "/toolkit-reference/toolkit-methods.html#getexpansionidsforelement": GetExpansionIdsForElement
@@ -106,6 +110,8 @@
 "/toolkit-reference/toolkit-methods.html#rendertosvgfile": RenderToSVGFile
 "/toolkit-reference/toolkit-methods.html#rendertotimemap": RenderToTimemap
 "/toolkit-reference/toolkit-methods.html#rendertotimemapfile": RenderToTimemapFile
+"/toolkit-reference/toolkit-methods.html#resetoptions": ResetOptions
+"/toolkit-reference/toolkit-methods.html#resetxmlidseed": ResetXmlIdSeed
 "/toolkit-reference/toolkit-methods.html#savefile": SaveFile
 "/toolkit-reference/toolkit-methods.html#setinputfrom": SetInputFrom
 "/toolkit-reference/toolkit-methods.html#setoption": SetOption
@@ -114,6 +120,8 @@
 "/toolkit-reference/toolkit-methods.html#setresourcepath": SetResourcePath
 "/toolkit-reference/toolkit-methods.html#setscale": SetScale
 "/toolkit-reference/toolkit-methods.html#toolkit": Toolkit
+"/toolkit-reference/toolkit-methods.html#validatepae": ValidatePAE
+"/toolkit-reference/toolkit-methods.html#validatepaefile": ValidatePAEFile
 "/toolkit-reference/toolkit-options.html": Toolkit options
 "/toolkit-reference/toolkit-options.html#base-short-options": Base short options
 "/toolkit-reference/toolkit-options.html#input-and-page-layout-options": Input and
@@ -156,6 +164,10 @@
 "/contributing/guidelines.html#comments": Comments
 "/contributing/guidelines.html#libmei": LibMEI
 "/contributing/workflow.html": Contributing workflow
+"/contributing/workflow.html#adding-examples-to-the-test-suite": Adding examples to
+  the test-suite
+"/contributing/workflow.html#what-to-expect-with-an-open-issue": What to expect with
+  an open issue
 "/contributing/generate-code-with-libmei.html": Generate code with libMEI
 "/contributing/generate-code-with-libmei.html#running-libmei": Running LibMEI
 "/contributing/generate-code-with-libmei.html#customization": Customization
