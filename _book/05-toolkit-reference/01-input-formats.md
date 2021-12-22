@@ -723,6 +723,7 @@ Each validation message is structured as follow:
 {
   "column": 0,
   "row": 0,
+  "code": 1,
   "text": "A description of the validation problem",
   "type": "error"
 }
@@ -732,6 +733,9 @@ Description of the values:
 * The `column` indicates the position where the problem occurs in the input string. It is always `0` for `clef`, `keysig` and `timesig`. It can be `-1` in `data` when no position can be indicated.
 * The `row` is always `0`.
 * The `type` can be `error` or `warning`.
+* The `code` corresponds to a numeric error code that can be used to map the errors into another system and (for example) to translate the messages.
+
+Whenever the error message contains a string interpolation `%s`, then the json message also contains a `value` key with the value to be used for the interpolation.
 
 Here is an example of invalid input data and the object returned by the validation call:
 ```json
@@ -747,6 +751,7 @@ Here is an example of invalid input data and the object returned by the validati
   "clef": {
     "column": 0,
     "row": 0,
+    "code": 43,
     "text": "Unexpected second character in clef sign",
     "type": "warning"
   },
@@ -754,12 +759,14 @@ Here is an example of invalid input data and the object returned by the validati
     {
       "column": 10,
       "row": 0,
+      "code": 17,
       "text": "Invalid t not after a note",
       "type": "warning"
     },
     {
       "column": 15,
       "row": 0,
+      "code": 17,
       "text": "Invalid t not after a note",
       "type": "warning"
     }
