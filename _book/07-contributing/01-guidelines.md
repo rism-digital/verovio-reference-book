@@ -100,6 +100,10 @@ In the implementation files, the first include in always the include of the corr
 
 The null pointer value should be written as `NULL`. Boolean values should be written as `true` and `false`.
 
+### Integer data types
+
+Integer numbers should be `int`, or `char` but only when this is clearly appropropriate. The use of `short` is to be avoided unless there are some particular reasons to use it. Variables and class members should not be `unsigned` numbers unless strictly necessary.
+
 ### Class, method and member names
 
 All class names must be in upper CamelCase. The internal capitalization follows the MEI one:
