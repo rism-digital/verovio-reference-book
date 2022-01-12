@@ -14,8 +14,9 @@ Whichever use you make of the library, you have to give **visible credit** to th
 
 Here are some minimal examples to follow:
 
-* NomadPlay [web application](https://www.nomadplay.app/fr/legal-notice) and in the [App Store](https://apps.apple.com/fr/app/nomadplay-partitions-musique/id1443790777)
-* Trala in the [App Store](https://apps.apple.com/us/app/trala-learn-violin/id1143205265)
+* Enote in the [App Store](https://apps.apple.com/us/app/enote-intelligent-sheet-music/id1539408514)
+* Trala in [Google Play](https://play.google.com/store/apps/details?id=com.trala.learn.violin&hl=en_US&gl=US)
+* NomadPlay [web application](https://www.nomadplay.app/fr/legal-notice)
 
 Using Verovio in a product without giving credit is a clear **license violation**. However, it is also important to understand that, by giving the appropriate credits, you are not only fulfilling the very basic and free-of-charge requirements of the license but also supporting the community by recognizing its work. This will help us make Verovio better and more sustainable and will be beneficial to all users - including you - in the long-run.
 
