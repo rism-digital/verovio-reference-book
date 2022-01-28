@@ -19,7 +19,7 @@ attribute_classes_exceptions = {
     "att.time.base": "att.timeBase"
 }
 
-element_exceptions = ["barLineAttr", "boundaryEnd", "dots", "flag", "page", "pages", "object", "stem", "system", "text", "textElement", "timestampAttr", "tupletBracket", "tupletNum"]
+element_exceptions = ["barLineAttr", "dots", "flag", "page", "pageElementEnd", "pages", "object", "stem", "system", "systemElementEnd", "text", "textElement", "timestampAttr", "tupletBracket", "tupletNum"]
 
 doxygen_repo_url = "https://github.com/rism-digital/verovio-doxygen"
 tmp_dir = "scripts/tmp/doxygen"
