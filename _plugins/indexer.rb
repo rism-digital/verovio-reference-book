@@ -30,7 +30,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
     File.open(@pagesFile, "w") { |f| f.write @pages.to_json }
 end
 
-Jekyll::Hooks.register :documents, :post_write do |page|
+Jekyll::Hooks.register :documents, :post_convert do |page|
     indexDoc(page)
 end
 

@@ -109,7 +109,7 @@ no-edit: true
                 if ( docRef )
                 {
                     title.innerHTML = docRef.title;
-                    title.setAttribute( "href", docRef.url );
+                    title.setAttribute( "href", docRef.url + "?q=" + query_term );
                     summary.innerHTML = docRef.body.substring( 0, 200 ) + '...';
                     searchResults.appendChild( output );
                 }
