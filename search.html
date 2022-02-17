@@ -2,7 +2,7 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>Controlling the SVG output</title>
+        <title>Search results</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -23,22 +23,20 @@
         <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
 
         <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Controlling the SVG output | Reference book for Verovio</title>
+<title>Search results | Reference book for Verovio</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Controlling the SVG output" />
+<meta property="og:title" content="Search results" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="[in preparation]" />
-<meta property="og:description" content="[in preparation]" />
+<meta name="description" content="Everything you need to use the Verovio music notation engraving library" />
+<meta property="og:description" content="Everything you need to use the Verovio music notation engraving library" />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-02-17T12:17:45+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
-<meta property="twitter:title" content="Controlling the SVG output" />
+<meta property="twitter:title" content="Search results" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"[in preparation]","mainEntityOfPage":{"@type":"WebPage","@id":"/advanced-topics/controlling-the-svg-output.html"},"url":"/advanced-topics/controlling-the-svg-output.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Controlling the SVG output","dateModified":"2022-02-17T12:17:45+00:00","datePublished":"2022-02-17T12:17:45+00:00","@context":"https://schema.org"}</script>
+{"description":"Everything you need to use the Verovio music notation engraving library","url":"/search.html","@type":"WebPage","image":"https://book.verovio.org/images/card.png","headline":"Search results","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -108,36 +106,6 @@
 
     <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
     
-        
-        
-<a class="toc-item toc-section " href="/advanced-topics/">Introduction</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/internal-structure.html">Internal structure</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/transposition.html">Transposition</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/smufl.html">SMuFL fonts</a>
-    
-
-<a class="toc-item toc-section selected" href="/advanced-topics/controlling-the-svg-output.html">Controlling the SVG output</a>
-    
-        
-        
-<a class="toc-item toc-subsection" href="#html5">HTML5</a>
-
-<a class="toc-item toc-subsection" href="#towards-svg-20">Towards SVG 2.0</a>
-
-<a class="toc-item toc-subsection" href="#converting-to-pdf">Converting to PDF</a>
-
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/mensural-notation.html">Mensural notation</a>
-    
-
-    
 
     <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
     
@@ -165,17 +133,156 @@
 
     <div class="col-md-9">
         
-        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/04-advanced-topics/04-controlling-the-svg-output.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
         
         
-        <h2>Controlling the SVG output</h2>
-        <p>[in preparation]</p>
+        
+<div id="search-results-header" style="display: none;">
+    <h2>Search results</h2>
 
-<h3 id="html5">HTML5</h3>
+    <p id="search-results-p" class="mb-5"><i><span id="search-results-count"></span> result(s)</i></p>
+</div>
 
-<h3 id="towards-svg-20">Towards SVG 2.0</h3>
+<div id="search-results">
+</div>
 
-<h3 id="converting-to-pdf">Converting to PDF</h3>
+<template id="search-item-template">
+    <div class="mb-5">
+        <h3 class="mb-1"><a></a></h3>
+        <p class="post-info is-italic mb-1"></p>
+        <p class="text"></p>
+    </div>
+</template>
+
+<script src="/js/lunr.js"></script>
+
+<script>
+
+    // HTML element defined above
+    let searchResults = document.querySelector( "#search-results" );
+    let searchResultsHeader = document.querySelector( "#search-results-header" );
+    let searchResultsP = document.querySelector( "#search-results-p" );
+    let searchResultsCount = document.querySelector( "#search-results-count" );
+
+    // Async Function to Start LunrJS
+    async function startLunrJSAsync()
+    {
+        console.log( "search: Starting Lunr..." );
+
+        let idx, pages;
+        let ok = false;
+
+        const lunrPages = "/pages.json";
+
+        // Load the Page Summaries
+        console.log( "search: Fetching Pages..." );
+        response = await fetch( lunrPages );
+        pages = await response.json();
+        console.log( "search: Pages Loaded!" );
+
+        // Build the index
+        idx = lunr( function ()
+        {
+            this.ref( 'id' )
+            this.field( 'title' )
+            this.field( 'body' )
+
+            pages.forEach( function ( doc )
+            {
+                this.add( doc )
+            }, this )
+        } );
+
+        // Lunr is Ready; Return */
+        console.log( "search: Lunr Is Ready!" );
+        ok = true;
+        let obj = {
+            idx: idx,
+            pages: pages,
+            ok: ok
+        };
+        return obj;
+    }
+
+    // Clear the Search Results element then populate with search results
+    function searchSite( search, query, query_term )
+    {
+        let template = document.querySelector( "#search-item-template" );
+
+        let allResults = search.idx.search( query );
+
+        if ( allResults.length === 0 ) {
+            searchResultsP.innerHTML = "No result found when searching for '" + query_term + "'";
+        }
+        else {
+            searchResultsCount.innerHTML = allResults.length;
+            allResults.forEach( function ( result )
+            {
+                let output = document.importNode( template.content, true );
+                let title = output.querySelector( "a" );
+                let summary = output.querySelector( "p.text" );
+                let docRef;
+
+                // Find the requisite document summary for the search result
+                for ( let i = 0; i < search.pages.length; i++ )
+                {
+                    if ( search.pages[i].id == result.ref )
+                    {
+                        docRef = search.pages[i];
+                        break;
+                    }
+                }
+                if ( docRef )
+                {
+                    title.innerHTML = docRef.title;
+                    title.setAttribute( "href", docRef.url );
+                    summary.innerHTML = docRef.body.substring( 0, 200 ) + '...';
+                    searchResults.appendChild( output );
+                }
+            } );
+        }
+    }
+
+    ( async () =>
+    {
+        // Initialize Lunr
+        let Search = await startLunrJSAsync();
+
+        // Hide the progress bar
+        searchResults.innerHTML = "";
+        
+        // HTML elements from the sidebar (if any) - these can be undefined
+        let searchForm = document.getElementById("website-search");
+
+        let params = new URLSearchParams( document.location.search.substring( 1 ) );
+        if ( params.get( "q" ) )
+        {
+            let query = params.get( "q" );
+            // Also make sure we preserve the query term in the form
+            // This can be in the navbar or in the sidebar
+            document.getElementById("website-search").value = query;
+            // Preserve the original query for logging
+            let query_term = query;
+            // Remove quotes and trim
+            query = query.replace(/\'|\"/g, ' ');
+            query = query.trim();
+            // Make it an AND query
+            query = query.replace(/\s+/g, ' +');
+            if (!query.startsWith("+")) {
+                query = "+" + query;
+            }
+            console.log(query);
+            //console.log( query )
+            searchSite( Search, query, query_term );
+        }
+        else {
+            // Display message to enter a query
+            searchResultsP.innerHTML = "Enter a search term ...";
+        }
+        // Show the header with the message (result count, no query or no result)
+        searchResultsHeader.style.display = "block";
+    } )();
+</script>
+
 
     </div>
 </div>
