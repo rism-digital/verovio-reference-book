@@ -8,7 +8,10 @@ layout: default
 
 <div class="row">
     <div class="col-md-3 sidebar-offcanvas" id="sidebar">
-        {% include sidebar-chapters.html %}
+        <div class="toc-group">
+            {% include sidebar-chapters.html %}
+            {% include sidebar-search.html %}
+        </div>
     </div>
 
     <div class="col-md-9">

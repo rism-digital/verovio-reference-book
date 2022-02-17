@@ -18,10 +18,11 @@ require 'json'
 # The site for accessing the site.active_lang status
 @site = nil
 
-Jekyll::Hooks.register :site, :after_init do |site, payload|
+Jekyll::Hooks.register :site, :after_reset do |site, payload|
     File.delete(@pagesFile) if File.exist?(@pagesFile)
     puts "Delete index file"
     @site = site
+    @pages = []
 end
   
 Jekyll::Hooks.register :site, :post_write do |site|
