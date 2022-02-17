@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-9" id="content">
         
         
         
@@ -139,7 +139,7 @@
 
 <h4 id="for-verovio-version-38">For Verovio version 3.8</h4>
 
-<p>Generated on 17 February 2022 from <a href="https://github.com/rism-digital/verovio-reference-book/commits/9fcede403d17e5b3125698336d55cb826aa040b8">9fcede4</a></p>
+<p>Generated on 17 February 2022 from <a href="https://github.com/rism-digital/verovio-reference-book/commits/dfb762d5fda2f2386111581adf0eb75cb590d165">dfb762d</a></p>
 
 <p>DOI: <a href="https://doi.org/10.5448/7em6-my23">10.5448/7em6-my23</a></p>
 
@@ -152,6 +152,8 @@
 
     </div>
 </div>
+
+<script src="/js/highlighter.js"></script>
 
 <script>
     let options = {
@@ -212,6 +214,29 @@
         });
 
     });
+
+    let params = new URLSearchParams( document.location.search.substring( 1 ) );
+    if ( params.get( "q" ) )
+    {
+        let query = params.get( "q" );
+        // Also make sure we preserve the query term in the form in the sidebar
+        document.getElementById("website-search").value = query;
+        // Preserve the original query for logging
+        let query_term = query;
+        // Remove quotes and trim
+        query = query.replace(/\'|\"/g, ' ');
+        query = query.trim();
+        // Make it an AND query
+        console.log(query);
+
+        let terms = query.split(' ');
+        var container = document.getElementById("content");
+
+        for (var i = 0; i < terms.length; i++) {
+            InstantSearch.highlight(container, terms[i]);
+        }
+    }
+
 </script>
 
 

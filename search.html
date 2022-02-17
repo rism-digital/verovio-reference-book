@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-9" id="content">
         
         
         
@@ -234,7 +234,7 @@
                 if ( docRef )
                 {
                     title.innerHTML = docRef.title;
-                    title.setAttribute( "href", docRef.url );
+                    title.setAttribute( "href", docRef.url + "?q=" + query_term );
                     summary.innerHTML = docRef.body.substring( 0, 200 ) + '...';
                     searchResults.appendChild( output );
                 }
@@ -286,6 +286,8 @@
 
     </div>
 </div>
+
+<script src="/js/highlighter.js"></script>
 
 <script>
     let options = {
@@ -346,6 +348,29 @@
         });
 
     });
+
+    let params = new URLSearchParams( document.location.search.substring( 1 ) );
+    if ( params.get( "q" ) )
+    {
+        let query = params.get( "q" );
+        // Also make sure we preserve the query term in the form in the sidebar
+        document.getElementById("website-search").value = query;
+        // Preserve the original query for logging
+        let query_term = query;
+        // Remove quotes and trim
+        query = query.replace(/\'|\"/g, ' ');
+        query = query.trim();
+        // Make it an AND query
+        console.log(query);
+
+        let terms = query.split(' ');
+        var container = document.getElementById("content");
+
+        for (var i = 0; i < terms.length; i++) {
+            InstantSearch.highlight(container, terms[i]);
+        }
+    }
+
 </script>
 
 
