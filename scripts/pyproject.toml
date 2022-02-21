@@ -8,7 +8,7 @@ authors = ["Andrew Hankinson <andrew.hankinson@rism.digital>"]
 python = "^3.9"
 verovio = "^3.3.0"
 PyYAML = "^5.4.1"
-lxml = "^4.6.2"
+lxml = "^4.6.5"
 requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
