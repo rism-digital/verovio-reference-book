@@ -40,7 +40,11 @@ npm install verovio
 
 The homepage of the Verovio package includes [documentation](https://www.npmjs.com/package/verovio#usage) on how to use it.
 
-The version with Humdrum support is also available via [NPM](https://www.npmjs.com/package/verovio-humdrum) registry since version 3.9.0. It is also in WebAssembly.
+The version with Humdrum support is also available via [NPM](https://www.npmjs.com/package/verovio-humdrum) registry since version 3.9.0. It is also in WebAssembly. It can be installed with:
+
+```bash
+npm install verovio-humdrum
+```
 
 ### Basic usage of the toolkit
 
