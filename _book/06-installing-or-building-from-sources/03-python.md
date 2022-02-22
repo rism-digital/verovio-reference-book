@@ -133,6 +133,12 @@ If you want to enable or disable other specific options, you can do:
 cmake ../cmake -B python -DBUILD_AS_PYTHON=ON -DNO_PAE_SUPPORT=ON
 ```
 
+By default, Python 3 is used. If you want to use a specific version of Python, you can do:
+
+```bash
+cmake ../cmake -B python -DBUILD_AS_PYTHON=ON -DPYTHON_VERSION=3.9
+```
+
 *Installation with CMake has not be tested yet*
 
 #### Resources for versions built locally
