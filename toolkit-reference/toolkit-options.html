@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-02-22T14:14:10+00:00" />
+<meta property="article:published_time" content="2022-02-22T14:51:04+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit options" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Command-line parameters JSON keys","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit options","dateModified":"2022-02-22T14:14:10+00:00","datePublished":"2022-02-22T14:14:10+00:00","@context":"https://schema.org"}</script>
+{"description":"Command-line parameters JSON keys","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit options","dateModified":"2022-02-22T14:51:04+00:00","datePublished":"2022-02-22T14:51:04+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -439,6 +439,11 @@
 <div class="col col-md-6"><p>Include bounding boxes in SVG output</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgCss":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-css  &lt;s&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>CSS (as a string) to be added to the SVG output<br />(default: “”)</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgFormatRaw":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-format-raw </code></span></p>
 </div>
 <div class="col col-md-6"><p>Writes SVG out with no line indenting or non-content newlines</p>
@@ -649,14 +654,14 @@
 <div class="col col-md-6"><p>The lyric word space length<br />(default: 1.2; min: 0.5; max: 3.0)</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"measureMinWidth":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--measure-min-width  &lt;i&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>The minimal measure width in MEI units<br />(default: 15; min: 1; max: 30)</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"midiTempoAdjustment":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--midi-tempo-adjustment  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The MIDI tempo adjustment factor<br />(default: 1.0; min: 0.2; max: 4.0)</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"minMeasureWidth":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--min-measure-width  &lt;i&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>The minimal measure width in MEI units<br />(default: 15; min: 1; max: 30)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mnumInterval":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mnum-interval  &lt;i&gt;</code></span></p>
@@ -874,7 +879,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginHeader":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-header  &lt;f&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for header in MEI units<br />(default: 8.0; min: 0.0; max: 24.0)</p>
+<div class="col col-md-6"><p>The margin for header in MEI units<br />(default: 2.0; min: 0.0; max: 24.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultBottomMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-bottom-margin  &lt;f&gt;</code></span></p>
@@ -1075,6 +1080,11 @@
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginHarm":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-harm  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The margin for harm in MEI units<br />(default: 1.0; min: 0.0; max: 10.0)</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginPgFooter":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-pg-footer  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>The margin for footer in MEI units<br />(default: 2.0; min: 0.0; max: 24.0)</p>
 </div>
 </div>
 
