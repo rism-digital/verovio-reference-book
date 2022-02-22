@@ -766,19 +766,26 @@ This can be called once the rendering option were changed, for example with a ne
 
 `void`
 
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON object with the action options resetCache: true or false; true by default; |
+{: .table .table-condensed .table-sm .text-xsmall}
+
 **Original header**
 
 ```cpp
-void vrv::Toolkit::RedoLayout()
+void vrv::Toolkit::RedoLayout(const std::string &jsonOptions="")
 ```
 
 **Example call**
 
 ```python
-toolkit.redoLayout()
+toolkit.redoLayout(jsonOptions)
 ```
 
-{% include method-doc file="redolayout" %}
+{% include method-doc file="redolayout-jsonoptions" %}
 ### RedoPagePitchPosLayout
 
 Redo the layout of the pitch postitions of the current drawing page.
@@ -974,19 +981,26 @@ Render a document to a timemap.
 
 `std::string` – The timemap as a string
 
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON objects with the timemap options |
+{: .table .table-condensed .table-sm .text-xsmall}
+
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::RenderToTimemap()
+std::string vrv::Toolkit::RenderToTimemap(const std::string &jsonOptions="")
 ```
 
 **Example call**
 
 ```python
-result = toolkit.renderToTimemap()
+result = toolkit.renderToTimemap(jsonOptions)
 ```
 
-{% include method-doc file="rendertotimemap" %}
+{% include method-doc file="rendertotimemap-jsonoptions" %}
 ### RenderToTimemapFile
 
 Render a document to timemap and save it to the file.
@@ -1002,21 +1016,22 @@ This methods is not available in the JavaScript version of the toolkit.
 |---|---|---|
 | Name | Type | Default | Description |
 | `filename` | `const std::string &` | ∅ |  |
+| `jsonOptions` | `const std::string &` | `""` |  |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
 
 ```cpp
-bool vrv::Toolkit::RenderToTimemapFile(const std::string &filename)
+bool vrv::Toolkit::RenderToTimemapFile(const std::string &filename, const std::string &jsonOptions="")
 ```
 
 **Example call**
 
 ```python
-result = toolkit.renderToTimemapFile(filename)
+result = toolkit.renderToTimemapFile(filename, jsonOptions)
 ```
 
-{% include method-doc file="rendertotimemapfile-filename" %}
+{% include method-doc file="rendertotimemapfile-filename-jsonoptions" %}
 ### ResetOptions
 
 Reset all options to default values.

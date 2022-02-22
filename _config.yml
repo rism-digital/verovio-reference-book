@@ -3,7 +3,7 @@ description: Everything you need to use the Verovio music notation engraving lib
 baseurl: ""
 exclude: ['scripts']
 
-verovio-version: 3.8
+verovio-version: 3.9
 
 markdown: kramdown
 highlighter: rouge
