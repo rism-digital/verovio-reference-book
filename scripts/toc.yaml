@@ -73,6 +73,7 @@
 "/toolkit-reference/output-formats.html#humdrum": Humdrum
 "/toolkit-reference/toolkit-methods.html": Toolkit methods
 "/toolkit-reference/toolkit-methods.html#converthumdrumtohumdrum": ConvertHumdrumToHumdrum
+"/toolkit-reference/toolkit-methods.html#converthumdrumtomidi": ConvertHumdrumToMIDI
 "/toolkit-reference/toolkit-methods.html#convertmeitohumdrum": ConvertMEIToHumdrum
 "/toolkit-reference/toolkit-methods.html#edit": Edit
 "/toolkit-reference/toolkit-methods.html#editinfo": EditInfo
@@ -91,6 +92,7 @@
 "/toolkit-reference/toolkit-methods.html#getoptions": GetOptions
 "/toolkit-reference/toolkit-methods.html#getpagecount": GetPageCount
 "/toolkit-reference/toolkit-methods.html#getpagewithelement": GetPageWithElement
+"/toolkit-reference/toolkit-methods.html#getresourcepath": GetResourcePath
 "/toolkit-reference/toolkit-methods.html#getscale": GetScale
 "/toolkit-reference/toolkit-methods.html#gettimeforelement": GetTimeForElement
 "/toolkit-reference/toolkit-methods.html#gettimesforelement": GetTimesForElement
@@ -113,6 +115,8 @@
 "/toolkit-reference/toolkit-methods.html#resetoptions": ResetOptions
 "/toolkit-reference/toolkit-methods.html#resetxmlidseed": ResetXmlIdSeed
 "/toolkit-reference/toolkit-methods.html#savefile": SaveFile
+"/toolkit-reference/toolkit-methods.html#select": Select
+"/toolkit-reference/toolkit-methods.html#setfont": SetFont
 "/toolkit-reference/toolkit-methods.html#setinputfrom": SetInputFrom
 "/toolkit-reference/toolkit-methods.html#setoption": SetOption
 "/toolkit-reference/toolkit-methods.html#setoptions": SetOptions

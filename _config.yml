@@ -1,4 +1,4 @@
-name: Reference book for Verovio
+title: Reference book for Verovio
 description: Everything you need to use the Verovio music notation engraving library
 baseurl: ""
 exclude: ['scripts']
