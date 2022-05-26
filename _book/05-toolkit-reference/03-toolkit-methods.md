@@ -32,6 +32,34 @@ result = toolkit.convertHumdrumToHumdrum(humdrumData)
 ```
 
 {% include method-doc file="converthumdrumtohumdrum-humdrumdata" %}
+### ConvertHumdrumToMIDI
+
+Convert Humdrum data to MIDI.
+
+**Returns**
+
+`std::string` – The MIDI file as a base64-encoded string
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `humdrumData` | `const std::string &` | ∅ |  |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::ConvertHumdrumToMIDI(const std::string &humdrumData)
+```
+
+**Example call**
+
+```python
+result = toolkit.convertHumdrumToMIDI(humdrumData)
+```
+
+{% include method-doc file="converthumdrumtomidi-humdrumdata" %}
 ### ConvertMEIToHumdrum
 
 Convert MEI data into Humdrum data.
@@ -516,6 +544,27 @@ result = toolkit.getPageWithElement(xmlId)
 ```
 
 {% include method-doc file="getpagewithelement-xmlid" %}
+### GetResourcePath
+
+Get the resource path for the Toolkit instance.
+
+**Returns**
+
+`std::string`
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::GetResourcePath() const
+```
+
+**Example call**
+
+```python
+result = toolkit.getResourcePath()
+```
+
+{% include method-doc file="getresourcepath" %}
 ### GetScale
 
 Get the scale option.
@@ -1114,6 +1163,64 @@ result = toolkit.saveFile(filename, jsonOptions)
 ```
 
 {% include method-doc file="savefile-filename-jsonoptions" %}
+### Select
+
+Set the value for a selection.
+
+The selection will be applied only when some data is loaded or the layout is redone. The selection can be reset (cancelled) by passing an empty string or an empty JSON object. A selection across multiple mdivs is not possible.
+
+**Returns**
+
+`bool` – True if the selection was successfully parsed or reset
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `selection` | `const std::string &` | ∅ | The selection as a stringified JSON object |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+bool vrv::Toolkit::Select(const std::string &selection)
+```
+
+**Example call**
+
+```python
+result = toolkit.select(selection)
+```
+
+{% include method-doc file="select-selection" %}
+### SetFont
+
+Set the font in the resources.
+
+**Returns**
+
+`bool`
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `fontName` | `const std::string &` | ∅ |  |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+bool vrv::Toolkit::SetFont(const std::string &fontName)
+```
+
+**Example call**
+
+```python
+result = toolkit.setFont(fontName)
+```
+
+{% include method-doc file="setfont-fontname" %}
 ### SetInputFrom
 
 Set the input from option.
