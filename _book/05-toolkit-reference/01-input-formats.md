@@ -579,7 +579,22 @@ Verovio has two converters for importing MusicXML data. The first one directly c
 
 #### Compressed MusicXML files
 
-Verovio supports MusicXML compressed (MXL) files. It only loads basic single-file MusicXML MXL files containing the index file (`META-INF/container.xml`) and the MusicXML file, with the extension `.xml`. The input process searches for the `META-INF/container.xml` file from which the filename of the MusicXML file is extracted. The filename extracted is the first `./rootfile@full-path` listed in `/container/rootfiles`. Input of MXL files is auto detected and the `xml` value does not have to be passed to  `--input-format`.
+Verovio supports MusicXML compressed (MXL) files. It only loads basic single-file MusicXML MXL files containing the index file (`META-INF/container.xml`) and the MusicXML file, with the extension `.xml`. The input process searches for the `META-INF/container.xml` file from which the filename of the MusicXML file is extracted. The filename extracted is the first `./rootfile@full-path` listed in `/container/rootfiles`. 
+
+Input of MXL files is auto detected and the `xml` value does not have to be passed to  `--input-format`. However, when using the JavaScript toolkit, you need to make sure your data is an `ArrayBuffer` or a base64 string, and use `loadZipDataBuffer()` or `loadZipDataBase64()` respectively to load it instead `loadData()`. Here is an example using the JavaScript Fetch API, loading the file as an `ArrayBuffer`:
+
+```js
+fetch( mxlUrl )
+    .then( response => response.arrayBuffer() )
+    .then( data =>
+    {
+        vrvToolkit.loadZipDataBuffer( data )
+        // Do anything else you want with the file here
+    } ).catch( e =>
+    {
+        console.log( e );
+    } );
+```
 
 #### Importing MusicXML via Humdrum
 

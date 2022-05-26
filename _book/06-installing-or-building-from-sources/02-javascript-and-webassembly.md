@@ -8,7 +8,7 @@ The verovio.org [GitHub repository](https://github.com/rism-digital/verovio.org)
 
 1. **verovio-toolkit.js** - in JavaScript (more precisely in [asm.js](https://asmjs.org))
 2. **verovio-toolkit-wasm.js** – in [WebAssembly](https://webassembly.org/)
-3. **verovio-toolkit-hum.js** – in JavaScript with the Humdrum support
+3. **verovio-toolkit-hum.js** – in WebAssenbly and with the Humdrum support
 
 A build of each of these is provided by CI for the development version as well as for each [release](https://github.com/rism-digital/verovio/releases).
 
@@ -39,6 +39,12 @@ npm install verovio
 ```
 
 The homepage of the Verovio package includes [documentation](https://www.npmjs.com/package/verovio#usage) on how to use it.
+
+The version with Humdrum support is also available via [NPM](https://www.npmjs.com/package/verovio-humdrum) registry since version 3.9.0. It is also in WebAssembly. It can be installed with:
+
+```bash
+npm install verovio-humdrum
+```
 
 ### Basic usage of the toolkit
 
