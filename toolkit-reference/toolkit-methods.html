@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-04-06T07:02:23+00:00" />
+<meta property="article:published_time" content="2022-05-26T10:49:53+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"ConvertHumdrumToHumdrum","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit methods","dateModified":"2022-04-06T07:02:23+00:00","datePublished":"2022-04-06T07:02:23+00:00","@context":"https://schema.org"}</script>
+{"headline":"Toolkit methods","dateModified":"2022-05-26T10:49:53+00:00","datePublished":"2022-05-26T10:49:53+00:00","description":"ConvertHumdrumToHumdrum","url":"/toolkit-reference/toolkit-methods.html","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -125,6 +125,8 @@
         
 <a class="toc-item toc-subsection" href="#converthumdrumtohumdrum">ConvertHumdrumToHumdrum</a>
 
+<a class="toc-item toc-subsection" href="#converthumdrumtomidi">ConvertHumdrumToMIDI</a>
+
 <a class="toc-item toc-subsection" href="#convertmeitohumdrum">ConvertMEIToHumdrum</a>
 
 <a class="toc-item toc-subsection" href="#edit">Edit</a>
@@ -160,6 +162,8 @@
 <a class="toc-item toc-subsection" href="#getpagecount">GetPageCount</a>
 
 <a class="toc-item toc-subsection" href="#getpagewithelement">GetPageWithElement</a>
+
+<a class="toc-item toc-subsection" href="#getresourcepath">GetResourcePath</a>
 
 <a class="toc-item toc-subsection" href="#getscale">GetScale</a>
 
@@ -204,6 +208,10 @@
 <a class="toc-item toc-subsection" href="#resetxmlidseed">ResetXmlIdSeed</a>
 
 <a class="toc-item toc-subsection" href="#savefile">SaveFile</a>
+
+<a class="toc-item toc-subsection" href="#select">Select</a>
+
+<a class="toc-item toc-subsection" href="#setfont">SetFont</a>
 
 <a class="toc-item toc-subsection" href="#setinputfrom">SetInputFrom</a>
 
@@ -293,6 +301,43 @@
 <p><strong>Example call</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">convertHumdrumToHumdrum</span><span class="p">(</span><span class="n">humdrumData</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="converthumdrumtomidi">ConvertHumdrumToMIDI</h3>
+
+<p>Convert Humdrum data to MIDI.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – The MIDI file as a base64-encoded string</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">humdrumData</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">ConvertHumdrumToMIDI</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">humdrumData</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">convertHumdrumToMIDI</span><span class="p">(</span><span class="n">humdrumData</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="convertmeitohumdrum">ConvertMEIToHumdrum</h3>
@@ -890,6 +935,24 @@
 <p><strong>Example call</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getPageWithElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="getresourcepath">GetResourcePath</h3>
+
+<p>Get the resource path for the Toolkit instance.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetResourcePath</span><span class="p">()</span> <span class="k">const</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getResourcePath</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getscale">GetScale</h3>
@@ -1627,6 +1690,82 @@
 <p><strong>Example call</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">saveFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="select">Select</h3>
+
+<p>Set the value for a selection.</p>
+
+<p>The selection will be applied only when some data is loaded or the layout is redone. The selection can be reset (cancelled) by passing an empty string or an empty JSON object. A selection across multiple mdivs is not possible.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the selection was successfully parsed or reset</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">selection</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td>The selection as a stringified JSON object</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">Select</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">selection</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="setfont">SetFont</h3>
+
+<p>Set the font in the resources.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fontName</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">SetFont</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">fontName</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">fontName</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="setinputfrom">SetInputFrom</h3>

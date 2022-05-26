@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-04-06T07:02:23+00:00" />
+<meta property="article:published_time" content="2022-05-26T10:49:53+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit options" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Command-line parameters JSON keys","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","headline":"Toolkit options","dateModified":"2022-04-06T07:02:23+00:00","datePublished":"2022-04-06T07:02:23+00:00","@context":"https://schema.org"}</script>
+{"headline":"Toolkit options","dateModified":"2022-05-26T10:49:53+00:00","datePublished":"2022-05-26T10:49:53+00:00","description":"Command-line parameters JSON keys","url":"/toolkit-reference/toolkit-options.html","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -507,9 +507,14 @@
 <div class="col col-md-6"><p>The barLine width<br />(default: 0.3; min: 0.1; max: 0.8)</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamFrenchStyle":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-french-style </code></span></p>
+</div>
+<div class="col col-md-6"><p>For notes in beams, stems will stop at first outermost sub-beam without crossing it</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMaxSlope":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-max-slope  &lt;i&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The maximum beam slope<br />(default: 10; min: 1; max: 20)</p>
+<div class="col col-md-6"><p>The maximum beam slope<br />(default: 10; min: 0; max: 20)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMinSlope":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-min-slope  &lt;i&gt;</code></span></p>
@@ -525,11 +530,6 @@
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaksNoWidow":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks-no-widow </code></span></p>
 </div>
 <div class="col col-md-6"><p>Prevent single measures on the last page by fitting it into previous system</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"clefChangeFactor":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--clef-change-factor  &lt;f&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>Set the ratio of normal clefs to changing clefs<br />(default: 0.66; min: 0.25; max: 1.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dynamDist":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dynam-dist  &lt;f&gt;</code></span></p>
@@ -599,6 +599,11 @@
 <div class="col col-md-6"><p>Space between staves inside a bracketed group justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationMaxVertical":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-max-vertical  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>Maximum ratio of justifiable height to page height that can be used for the vertical justification<br />(default: 0.3; min: 0.0; max: 1.0)</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationStaff":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-staff  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The staff justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
@@ -659,11 +664,6 @@
 <div class="col col-md-6"><p>The minimal measure width in MEI units<br />(default: 15; min: 1; max: 30)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"midiTempoAdjustment":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--midi-tempo-adjustment  &lt;f&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>The MIDI tempo adjustment factor<br />(default: 1.0; min: 0.2; max: 4.0)</p>
-</div>
-</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mnumInterval":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mnum-interval  &lt;i&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>How frequently to place measure numbers</p>
@@ -709,9 +709,14 @@
 <div class="col col-md-6"><p>Slur curve factor - high value means rounder slurs<br />(default: 1.0; min: 0.2; max: 5.0)</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurEndpointFlexibility":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-endpoint-flexibility  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>Slur endpoint flexibility - allow more endpoint movement during adjustment<br />(default: 0.0; min: 0.0; max: 1.0)</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurEndpointThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-endpoint-thickness  &lt;f&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The Endpoint slur thickness in MEI units<br />(default: 0.1; min: 0.05; max: 0.25)</p>
+<div class="col col-md-6"><p>The endpoint slur thickness in MEI units<br />(default: 0.1; min: 0.05; max: 0.25)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-margin  &lt;f&gt;</code></span></p>
@@ -721,12 +726,17 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMaxSlope":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-max-slope  &lt;i&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The maximum slur slope in degrees<br />(default: 40; min: 0; max: 80)</p>
+<div class="col col-md-6"><p>The maximum slur slope in degrees<br />(default: 60; min: 30; max: 85)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMidpointThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-midpoint-thickness  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The midpoint slur thickness in MEI units<br />(default: 0.6; min: 0.2; max: 1.2)</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurSymmetry":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-symmetry  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>Slur symmetry - high value means more symmetric slurs<br />(default: 0.0; min: 0.0; max: 1.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingBraceGroup":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-brace-group  &lt;i&gt;</code></span></p>
@@ -854,14 +864,24 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transpose":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose  &lt;s&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>SUMMARY<br />(default: “”)</p>
+<div class="col col-md-6"><p>Transpose the entire content<br />(default: “”)</p>
 </div>
 <div class="col col-md-3"><p>See also: <a href="/advanced-topics/transposition.html">Transposition</a></p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeMdiv":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-mdiv  &lt;s&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>Json mapping the mdiv uuids to the corresponding transposition</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeSelectedOnly":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-selected-only </code></span></p>
 </div>
 <div class="col col-md-6"><p>Transpose only the selected content and ignore unselected editorial content</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeToSoundingPitch":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-to-sounding-pitch </code></span></p>
+</div>
+<div class="col col-md-6"><p>Transpose to sounding pitch by evaluating @trans.semi</p>
 </div>
 </div>
 
@@ -989,7 +1009,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginAccid":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-accid  &lt;f&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for accid in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-6"><p>The right margin for accid in MEI units<br />(default: 0.5; min: 0.0; max: 2.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginBarLine":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-bar-line  &lt;f&gt;</code></span></p>
