@@ -6,7 +6,7 @@ This document describes the coding style for the Verovio project for the C++ par
 
 ### Formatting
 
-Verovio uses a [ClangFormat](http://clang.llvm.org/docs/ClangFormat.html) (**10.0**) coding style based on the [WebKit](https://webkit.org/code-style-guidelines/) style, with a few minor modifications. The modifications include:
+Verovio uses a [ClangFormat](http://clang.llvm.org/docs/ClangFormat.html) (**14.0**) coding style based on the [WebKit](https://webkit.org/code-style-guidelines/) style, with a few minor modifications. The modifications include:
 
 ```yaml
 AllowShortIfStatementsOnASingleLine: true
