@@ -25,7 +25,7 @@ To start Verovio, you should add the following to your page in the head, after t
 ```html
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
-      Module.onRuntimeInitialized = () => {
+      verovio.module.onRuntimeInitialized = () => {
         let tk = new verovio.toolkit();
       }
   });
@@ -36,7 +36,7 @@ To start Verovio, you should add the following to your page in the head, after t
 
 When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let's start from the inside out.
 
-The line `tk = new verovio.toolkit();` creates a new instance of the Verovio toolkit. This is what we will eventually use to render the notation. However, we first need to wait until the Verovio library is fully downloaded and ready to use by your browser. The `Module.onRuntimeInitialized` line, and the `document.addEventListener` lines do just that -- they tell your browser to wait until other things have happened before trying to work with Verovio. This is a good, safe way to ensure all the requirements are met before we try to start working with Verovio.
+The line `tk = new verovio.toolkit();` creates a new instance of the Verovio toolkit. This is what we will eventually use to render the notation. However, we first need to wait until the Verovio library is fully downloaded and ready to use by your browser. The `verovio.module.onRuntimeInitialized` line, and the `document.addEventListener` lines do just that -- they tell your browser to wait until other things have happened before trying to work with Verovio. This is a good, safe way to ensure all the requirements are met before we try to start working with Verovio.
 
 ### Logging to the Console
 
@@ -64,7 +64,7 @@ At the end of this first section you should have a working web page, with a mess
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
-          Module.onRuntimeInitialized = () => {
+          verovio.module.onRuntimeInitialized = () => {
             let tk = new verovio.toolkit();
             console.log("Verovio has loaded!");
           }
