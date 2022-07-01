@@ -33,7 +33,7 @@ verovio.module.onRuntimeInitialized = function ()
 
 ## Usage with ESM
 
-Since version 3.11.0 there is an ESM compatible version of the *npm* package with a modularized build of the Verovio module, that needs a slightly different setup to wait for the asynchronous Emscripten module to be ready for usage which is now [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) based instead of using the `onRuntimeInitialized` callback function.
+Since version 3.11.0 there is an ESM compatible version of the *npm* package with a modularized build of the Verovio module. This is because we need to wait for the asynchronous module to be ready for usage, and this is now [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) based instead of using the `onRuntimeInitialized` callback function.
 
  Use `.mjs` as file extension when using this directly in Node.js or set `"type": "module"` in your `package.json`.
 
