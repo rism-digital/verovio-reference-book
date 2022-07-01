@@ -2,7 +2,7 @@
 title: "Usage with npm"
 ---
 
-The latest stable version is available via NPM registry. The version distributed via NPM it the WebAssembly build. It can be installed with: 
+The latest stable version is available in the NPM registry. The version distributed via NPM is the WebAssembly build. It can be installed with: 
 
 ```bash
 npm install verovio
