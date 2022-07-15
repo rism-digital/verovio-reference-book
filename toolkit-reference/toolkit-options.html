@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-06-16T09:08:08+00:00" />
+<meta property="article:published_time" content="2022-07-15T15:04:30+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit options" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"headline":"Toolkit options","dateModified":"2022-06-16T09:08:08+00:00","datePublished":"2022-06-16T09:08:08+00:00","description":"Command-line parameters JSON keys","url":"/toolkit-reference/toolkit-options.html","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"@type":"BlogPosting","image":"https://book.verovio.org/images/card.png","@context":"https://schema.org"}</script>
+{"image":"https://book.verovio.org/images/card.png","headline":"Toolkit options","dateModified":"2022-07-15T15:04:30+00:00","datePublished":"2022-07-15T15:04:30+00:00","description":"Command-line parameters JSON keys","url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -205,7 +205,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-t, --output-to  &lt;s&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Select output format to: "mei", "pb-mei", "svg", or "midi"<br />(default: “svg”)</p>
+<div class="col col-md-6"><p>Select output format to: "mei", "mei-pb", "mei-basic", "svg", or "midi"<br />(default: “svg”)</p>
 </div>
 <div class="col col-md-3"><p>See also: <a href="/toolkit-reference/output-formats.html">Output formats</a></p>
 </div>
@@ -277,6 +277,11 @@
 <div class="col col-md-6"><p>When condensing a score also condense the first page</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseNotLastSystem":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-not-last-system </code></span></p>
+</div>
+<div class="col col-md-6"><p>When condensing a score never condense the last system</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseTempoPages":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-tempo-pages </code></span></p>
 </div>
 <div class="col col-md-6"><p>When condensing a score also condense pages with a tempo change</p>
@@ -337,6 +342,11 @@
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mmOutput":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mm-output </code></span></p>
 </div>
 <div class="col col-md-6"><p>Specify that the output in the SVG is given in mm (default is px)</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"moveScoreDefinitionToStaff":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--move-score-definition-to-staff </code></span></p>
+</div>
+<div class="col col-md-6"><p>Move score definition (clef, keySig, meterSig, etc.) from scoreDef to staffDef</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"noJustification":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--no-justification </code></span></p>
@@ -504,7 +514,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"barLineWidth":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bar-line-width  &lt;f&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The barLine width<br />(default: 0.3; min: 0.1; max: 0.8)</p>
+<div class="col col-md-6"><p>The barline width<br />(default: 0.3; min: 0.1; max: 0.8)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamFrenchStyle":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-french-style </code></span></p>
@@ -522,6 +532,16 @@
 <div class="col col-md-6"><p>The minimum beam slope</p>
 </div>
 </div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMixedPreserve":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-mixed-preserve </code></span></p>
+</div>
+<div class="col col-md-6"><p>Mixed beams will be drawn even if there is not enough space</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMixedStemMin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-mixed-stem-min  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>The minimal stem length in MEI units used to draw mixed beams<br />(default: 3.5; min: 1.0; max: 8.0)</p>
+</div>
+</div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bracketThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bracket-thickness  &lt;f&gt;</code></span></p>
 </div>
 <div class="col col-md-6"><p>The thickness of the system bracket<br />(default: 1.0; min: 0.5; max: 2.0)</p>
@@ -530,6 +550,16 @@
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaksNoWidow":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks-no-widow </code></span></p>
 </div>
 <div class="col col-md-6"><p>Prevent single measures on the last page by fitting it into previous system</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dashedBarLineDashLength":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dashed-bar-line-dash-length  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>The dash length of dashed barlines<br />(default: 1.14; min: 0.1; max: 5.0)</p>
+</div>
+</div>
+<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dashedBarLineGapLength":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dashed-bar-line-gap-length  &lt;f&gt;</code></span></p>
+</div>
+<div class="col col-md-6"><p>The gap length of dashed barlines<br />(default: 1.14; min: 0.1; max: 5.0)</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dynamDist":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dynam-dist  &lt;f&gt;</code></span></p>
@@ -871,7 +901,7 @@
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeMdiv":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-mdiv  &lt;s&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Json mapping the mdiv uuids to the corresponding transposition</p>
+<div class="col col-md-6"><p>Json mapping the mdiv ids to the corresponding transposition</p>
 </div>
 </div>
 <div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeSelectedOnly":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-selected-only </code></span></p>
