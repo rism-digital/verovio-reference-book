@@ -327,6 +327,27 @@ result = toolkit.getHumdrumFile(filename)
 ```
 
 {% include method-doc file="gethumdrumfile-filename" %}
+### GetID
+
+Return the ID of the Toolkit instance.
+
+**Returns**
+
+`std::string` – The ID as as string
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::GetID()
+```
+
+**Example call**
+
+```python
+result = toolkit.getID()
+```
+
+{% include method-doc file="getid" %}
 ### GetLog
 
 Get the log content for the latest operation.
@@ -648,11 +669,9 @@ result = toolkit.getTimesForElement(xmlId)
 {% include method-doc file="gettimesforelement-xmlid" %}
 ### GetUuid
 
-Return the ID of the Toolkit instance.
-
 **Returns**
 
-`std::string` – The ID as as string
+`std::string`
 
 **Original header**
 
