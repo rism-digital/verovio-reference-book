@@ -41,7 +41,7 @@ At the end of this section, you should have a page with some rendered music nota
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
-          Module.onRuntimeInitialized = async _ => {
+          verovio.module.onRuntimeInitialized = async _ => {
             let tk = new verovio.toolkit();
             console.log("Verovio has loaded!");
 
