@@ -56,7 +56,7 @@ In this section we have explored Verovio's default options, and looked at how to
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
-          Module.onRuntimeInitialized = async _ => {
+          verovio.module.onRuntimeInitialized = async _ => {
             let tk = new verovio.toolkit();
             console.log("Verovio has loaded!");
             tk.setOptions({
@@ -64,7 +64,6 @@ In this section we have explored Verovio's default options, and looked at how to
               landscape: true,
               adjustPageWidth: true
             });
-            tk.renderToSVG
             console.log("Verovio options:", tk.getOptions());
 
             fetch("https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei")
