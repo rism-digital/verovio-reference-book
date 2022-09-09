@@ -25,7 +25,7 @@ To start Verovio, you should add the following to your page in the head, after t
 ```html
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
-      Module.onRuntimeInitialized = async _ => {
+      verovio.module.onRuntimeInitialized = async _ => {
         let tk = new verovio.toolkit();
       }
   });
@@ -64,7 +64,7 @@ At the end of this first section you should have a working web page, with a mess
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
-          Module.onRuntimeInitialized = async _ => {
+          verovio.module.onRuntimeInitialized = async _ => {
             let tk = new verovio.toolkit();
             console.log("Verovio has loaded!");
           }
