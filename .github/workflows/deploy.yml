@@ -52,6 +52,7 @@ jobs:
       
       - name: "Run a server locally and generate the PDF"
         run: |
+          bundle add jekyll
           bundle exec jekyll build --baseurl="" --verbose
           cd _site
           ls
