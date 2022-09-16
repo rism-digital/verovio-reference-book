@@ -20,6 +20,8 @@ jobs:
       - name: "Change config to generate full-chapter pages"
         run: |
           sed -i 's/generate-full-chapters: false/generate-full-chapters: true/g' _config.yml
+          # avoid 'fatal: detected dubious ownership in repository' for jekyll-github-metadata
+          git config --global --add safe.directory '*'
      
       - name: "Install the VerovioText font"
         run: |
