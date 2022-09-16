@@ -49,11 +49,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - name: "Build the site"
-        uses:  lemonarc/jekyll-action@1.0.0
+      #- name: "Build the site"
+      #  uses:  lemonarc/jekyll-action@1.0.0
       
       - name: "Run a server locally and generate the PDF"
         run: |
+          bundle config path vendor/bundle
+          bundle install
+          bundle exec jekyll build --verbose
           cd _site
           ls
           gem install webrick
