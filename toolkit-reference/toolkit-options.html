@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-16T15:34:23+00:00" />
+<meta property="article:published_time" content="2022-09-16T18:41:59+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit options" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Command-line parameters JSON keys","image":"https://book.verovio.org/images/card.png","headline":"Toolkit options","dateModified":"2022-09-16T15:34:23+00:00","datePublished":"2022-09-16T15:34:23+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"Command-line parameters JSON keys","headline":"Toolkit options","datePublished":"2022-09-16T18:41:59+00:00","dateModified":"2022-09-16T18:41:59+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -181,960 +181,969 @@
 
 <p>All of the base options are short options in the command-line version of the toolkit. Most of them are command-line options that have no direct corresponding JSON key.</p>
 
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-a, --all-pages </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-a, --all-pages </code></span></p>
 </div>
-<div class="col col-md-6"><p>Output all pages</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-h, --help </code></span></p>
-</div>
-<div class="col col-md-6"><p>Display this message</p>
+<div class="col col-md-8"><p>Output all pages</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"inputFrom":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">-f, --input-from  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-h, --help </code></span></p>
 </div>
-<div class="col col-md-6"><p>Select input format from: "abc", "darms", "humdrum", "mei", "pae", "xml" (musicxml)<br />(default: “mei”)</p>
-</div>
-<div class="col col-md-3"><p>See also: <a href="/toolkit-reference/input-formats.html">Input formats</a></p>
+<div class="col col-md-8"><p>Display this message</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-o, --outfile  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"inputFrom": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">-f, --input-from &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Output file name (use "-" as file name for standard output)<br />(default: “svg”)</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-t, --output-to  &lt;s&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>Select output format to: "mei", "mei-pb", "mei-basic", "svg", or "midi"<br />(default: “svg”)</p>
-</div>
-<div class="col col-md-3"><p>See also: <a href="/toolkit-reference/output-formats.html">Output formats</a></p>
+<div class="col col-md-8"><p>Select input format from: "abc", "darms", "humdrum", "mei", "pae", "xml" (musicxml)<br />(default: “mei”)</p>
+
+<p>See also: <a href="/toolkit-reference/input-formats.html">Input formats</a></p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-p, --page  &lt;i&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-o, --outfile &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Select the page to engrave (default is 1)</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-r, --resource-path  &lt;s&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>Path to the directory with Verovio resources<br />(default: “/usr/local/share/verovio”)</p>
-</div>
-<div class="col col-md-3"><p>See also: <a href="/toolkit-reference/toolkit-methods.html#setresourcepath">SetResourcePath</a> | <a href="/installing-or-building-from-sources/python.html#building-the-toolkit">Building the toolkit</a></p>
+<div class="col col-md-8"><p>Output file name (use "-" as file name for standard output)<br />(default: “svg”)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"scale":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">-s, --scale  &lt;i&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-t, --output-to &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Scale of the output in percent<br />(default: 100; min: 1; max: 1000)</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">- , --stdin </code></span></p>
-</div>
-<div class="col col-md-6"><p>Use "-" as input file or set the "–stdin" option for reading from the standard input</p>
+<div class="col col-md-8"><p>Select output format to: "mei", "mei-pb", "mei-basic", "svg", or "midi"<br />(default: “svg”)</p>
+
+<p>See also: <a href="/toolkit-reference/output-formats.html">Output formats</a></p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-v, --version </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-p, --page &lt;integer&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Display the version number</p>
+<div class="col col-md-8"><p>Select the page to engrave (default is 1)</p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-r, --resource-path &lt;string&gt;</code></span></p>
+</div>
+<div class="col col-md-8"><p>Path to the directory with Verovio resources<br />(default: “/usr/local/share/verovio”)</p>
+
+<p>See also: <a href="/toolkit-reference/toolkit-methods.html#setresourcepath">SetResourcePath</a> | <a href="/installing-or-building-from-sources/python.html#building-the-toolkit">Building the toolkit</a></p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"scale": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">-s, --scale &lt;integer&gt;</code></span></p>
+</div>
+<div class="col col-md-8"><p>Scale of the output in percent<br />(default: 100; min: 1; max: 1000)</p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">- , --stdin </code></span></p>
+</div>
+<div class="col col-md-8"><p>Use "-" as input file or set the "–stdin" option for reading from the standard input</p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-v, --version </code></span></p>
+</div>
+<div class="col col-md-8"><p>Display the version number</p>
 
 <p>The version number includes major, minor and revision numbers and the last number of the git commit.</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"xmlIdSeed":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">-x, --xml-id-seed  &lt;i&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"xmlIdSeed": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">-x, --xml-id-seed &lt;integer&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Seed the random number generator for XML IDs (default is random)</p>
+<div class="col col-md-8"><p>Seed the random number generator for XML IDs (default is random)</p>
 </div>
 </div>
 
 <h3 id="input-and-page-layout-options">Input and page layout options</h3>
 
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"adjustPageHeight":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--adjust-page-height </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"adjustPageHeight":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--adjust-page-height </code></span></p>
 </div>
-<div class="col col-md-6"><p>Adjust the page height to the height of the content</p>
+<div class="col col-md-8"><p>Adjust the page height to the height of the content</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"adjustPageWidth":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--adjust-page-width </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"adjustPageWidth":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--adjust-page-width </code></span></p>
 </div>
-<div class="col col-md-6"><p>Adjust the page width to the width of the content</p>
+<div class="col col-md-8"><p>Adjust the page width to the width of the content</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaks":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaks": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Define page and system breaks layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘line’, ‘smart’, ‘encoded’])</p>
+<div class="col col-md-8"><p>Define page and system breaks layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘line’, ‘smart’, ‘encoded’])</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaksSmartSb":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks-smart-sb  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaksSmartSb": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks-smart-sb &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>In smart breaks mode, the portion of system width usage at which an encoded sb will be used<br />(default: 0.66; min: 0.0; max: 1.0)</p>
+<div class="col col-md-8"><p>In smart breaks mode, the portion of system width usage at which an encoded sb will be used<br />(default: 0.66; min: 0.0; max: 1.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condense":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condense": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Control condensed score layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘encoded’])</p>
+<div class="col col-md-8"><p>Control condensed score layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘encoded’])</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseFirstPage":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-first-page </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseFirstPage":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-first-page </code></span></p>
 </div>
-<div class="col col-md-6"><p>When condensing a score also condense the first page</p>
+<div class="col col-md-8"><p>When condensing a score also condense the first page</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseNotLastSystem":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-not-last-system </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseNotLastSystem":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-not-last-system </code></span></p>
 </div>
-<div class="col col-md-6"><p>When condensing a score never condense the last system</p>
+<div class="col col-md-8"><p>When condensing a score never condense the last system</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseTempoPages":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-tempo-pages </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"condenseTempoPages":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--condense-tempo-pages </code></span></p>
 </div>
-<div class="col col-md-6"><p>When condensing a score also condense pages with a tempo change</p>
+<div class="col col-md-8"><p>When condensing a score also condense pages with a tempo change</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"evenNoteSpacing":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--even-note-spacing </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"evenNoteSpacing":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--even-note-spacing </code></span></p>
 </div>
-<div class="col col-md-6"><p>Specify the linear spacing factor</p>
+<div class="col col-md-8"><p>Specify the linear spacing factor</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"expand":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--expand  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"expand": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--expand &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Expand all referenced elements in the expansion &lt;xml:id&gt;<br />(default: “”)</p>
+<div class="col col-md-8"><p>Expand all referenced elements in the expansion &lt;xml:id&gt;<br />(default: “”)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"footer":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--footer  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"footer": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--footer &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Control footer layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘encoded’, ‘always’])</p>
+<div class="col col-md-8"><p>Control footer layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘encoded’, ‘always’])</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"header":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--header  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"header": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--header &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Control header layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘encoded’])</p>
+<div class="col col-md-8"><p>Control header layout<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘encoded’])</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"humType":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--hum-type </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"humType":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--hum-type </code></span></p>
 </div>
-<div class="col col-md-6"><p>Include type attributes when importing from Humdrum</p>
+<div class="col col-md-8"><p>Include type attributes when importing from Humdrum</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justifyVertically":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justify-vertically </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justifyVertically":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justify-vertically </code></span></p>
 </div>
-<div class="col col-md-6"><p>Justify spacing vertically to fill the page</p>
+<div class="col col-md-8"><p>Justify spacing vertically to fill the page</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"landscape":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--landscape </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"landscape":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--landscape </code></span></p>
 </div>
-<div class="col col-md-6"><p>The landscape paper orientation flag</p>
+<div class="col col-md-8"><p>The landscape paper orientation flag</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"ligatureAsBracket":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--ligature-as-bracket </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"ligatureAsBracket":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--ligature-as-bracket </code></span></p>
 </div>
-<div class="col col-md-6"><p>Render ligatures as bracket instead of original notation</p>
+<div class="col col-md-8"><p>Render ligatures as bracket instead of original notation</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mensuralToMeasure":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mensural-to-measure </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mensuralToMeasure":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mensural-to-measure </code></span></p>
 </div>
-<div class="col col-md-6"><p>Convert mensural sections to measure-based MEI</p>
+<div class="col col-md-8"><p>Convert mensural sections to measure-based MEI</p>
+
+<p>See also: <a href="/advanced-topics/mensural-notation.html#ligatures">Ligatures</a> | <a href="/advanced-topics/mensural-notation.html#layout">Layout</a></p>
 </div>
-<div class="col col-md-3"><p>See also: <a href="/advanced-topics/mensural-notation.html#ligatures">Ligatures</a> | <a href="/advanced-topics/mensural-notation.html#layout">Layout</a></p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"minLastJustification": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--min-last-justification &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"minLastJustification":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--min-last-justification  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The last system is only justified if the unjustified width is greater than this percent<br />(default: 0.8; min: 0.0; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>The last system is only justified if the unjustified width is greater than this percent<br />(default: 0.8; min: 0.0; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mmOutput":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mm-output </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mmOutput":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mm-output </code></span></p>
+<div class="col col-md-8"><p>Specify that the output in the SVG is given in mm (default is px)</p>
 </div>
-<div class="col col-md-6"><p>Specify that the output in the SVG is given in mm (default is px)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"moveScoreDefinitionToStaff":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--move-score-definition-to-staff </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"moveScoreDefinitionToStaff":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--move-score-definition-to-staff </code></span></p>
+<div class="col col-md-8"><p>Move score definition (clef, keySig, meterSig, etc.) from scoreDef to staffDef</p>
 </div>
-<div class="col col-md-6"><p>Move score definition (clef, keySig, meterSig, etc.) from scoreDef to staffDef</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"noJustification":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--no-justification </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"noJustification":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--no-justification </code></span></p>
+<div class="col col-md-8"><p>Do not justify the system</p>
 </div>
-<div class="col col-md-6"><p>Do not justify the system</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"openControlEvents":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--open-control-events </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"openControlEvents":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--open-control-events </code></span></p>
+<div class="col col-md-8"><p>Render open control events</p>
 </div>
-<div class="col col-md-6"><p>Render open control events</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputFormatRaw":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-format-raw </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputFormatRaw":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-format-raw </code></span></p>
+<div class="col col-md-8"><p>Writes MEI out with no line indenting or non-content newlines.</p>
 </div>
-<div class="col col-md-6"><p>Writes MEI out with no line indenting or non-content newlines.</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputIndent": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-indent &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputIndent":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-indent  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>Output indentation value for MEI and SVG<br />(default: 3; min: 1; max: 10)</p>
 </div>
-<div class="col col-md-6"><p>Output indentation value for MEI and SVG<br />(default: 3; min: 1; max: 10)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputIndentTab":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-indent-tab </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputIndentTab":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-indent-tab </code></span></p>
+<div class="col col-md-8"><p>Output indentation with tabulation for MEI and SVG</p>
 </div>
-<div class="col col-md-6"><p>Output indentation with tabulation for MEI and SVG</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputSmuflXmlEntities":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-smufl-xml-entities </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"outputSmuflXmlEntities":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--output-smufl-xml-entities </code></span></p>
+<div class="col col-md-8"><p>Output SMuFL characters as XML entities instead of hex byte codes</p>
 </div>
-<div class="col col-md-6"><p>Output SMuFL characters as XML entities instead of hex byte codes</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageHeight": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-height &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageHeight":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-height  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The page height<br />(default: 2970; min: 100; max: 60000)</p>
 </div>
-<div class="col col-md-6"><p>The page height<br />(default: 2970; min: 100; max: 60000)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginBottom": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-bottom &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginBottom":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-bottom  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The page bottom margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
-<div class="col col-md-6"><p>The page bottom margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginLeft": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-left &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginLeft":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-left  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The page left margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
-<div class="col col-md-6"><p>The page left margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginRight": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-right &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginRight":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-right  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The page right margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
-<div class="col col-md-6"><p>The page right margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginTop": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-top &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageMarginTop":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-margin-top  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The page top margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
-<div class="col col-md-6"><p>The page top margin<br />(default: 50; min: 0; max: 500)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageWidth": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-width &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pageWidth":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--page-width  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The page width<br />(default: 2100; min: 100; max: 60000)</p>
 </div>
-<div class="col col-md-6"><p>The page width<br />(default: 2100; min: 100; max: 60000)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pedalStyle": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--pedal-style &lt;string&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pedalStyle":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--pedal-style  &lt;s&gt;</code></span></p>
+<div class="col col-md-8"><p>The global pedal style<br />(default: “auto”; other values: [‘auto’, ‘line’, ‘pedstar’, ‘altpedstar’])</p>
 </div>
-<div class="col col-md-6"><p>The global pedal style<br />(default: “auto”; other values: [‘auto’, ‘line’, ‘pedstar’, ‘altpedstar’])</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"preserveAnalyticalMarkup":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--preserve-analytical-markup </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"preserveAnalyticalMarkup":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--preserve-analytical-markup </code></span></p>
+<div class="col col-md-8"><p>Preserves the analytical markup in MEI</p>
 </div>
-<div class="col col-md-6"><p>Preserves the analytical markup in MEI</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"removeIds":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--remove-ids </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"removeIds":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--remove-ids </code></span></p>
+<div class="col col-md-8"><p>Remove XML IDs in the MEI output that are not referenced</p>
 </div>
-<div class="col col-md-6"><p>Remove XML IDs in the MEI output that are not referenced</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"showRuntime":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--show-runtime </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"showRuntime":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--show-runtime </code></span></p>
+<div class="col col-md-8"><p>Display the total runtime on command-line</p>
 </div>
-<div class="col col-md-6"><p>Display the total runtime on command-line</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"shrinkToFit":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--shrink-to-fit </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"shrinkToFit":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--shrink-to-fit </code></span></p>
+<div class="col col-md-8"><p>Scale down page content to fit the page height if needed</p>
 </div>
-<div class="col col-md-6"><p>Scale down page content to fit the page height if needed</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"staccatoCenter":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--staccato-center </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"staccatoCenter":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--staccato-center </code></span></p>
+<div class="col col-md-8"><p>Align staccato and staccatissimo articulations with center of the note</p>
 </div>
-<div class="col col-md-6"><p>Align staccato and staccatissimo articulations with center of the note</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgAdditionalAttribute": &lt;string&gt; *</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-additional-attribute &lt;string&gt; *</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgAdditionalAttribute": * &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-additional-attribute * &lt;s&gt;</code></span></p>
+<div class="col col-md-8"><p>Add additional attribute for graphical elements in SVG as "data-*", for example, "note@pname" would add a "data-pname" to all note elements</p>
 </div>
-<div class="col col-md-6"><p>Add additional attribute for graphical elements in SVG as "data-*", for example, "note@pname" would add a "data-pname" to all note elements</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgBoundingBoxes":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-bounding-boxes </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgBoundingBoxes":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-bounding-boxes </code></span></p>
+<div class="col col-md-8"><p>Include bounding boxes in SVG output</p>
 </div>
-<div class="col col-md-6"><p>Include bounding boxes in SVG output</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgCss": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-css &lt;string&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgCss":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-css  &lt;s&gt;</code></span></p>
+<div class="col col-md-8"><p>CSS (as a string) to be added to the SVG output<br />(default: “”)</p>
 </div>
-<div class="col col-md-6"><p>CSS (as a string) to be added to the SVG output<br />(default: “”)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgFormatRaw":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-format-raw </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgFormatRaw":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-format-raw </code></span></p>
+<div class="col col-md-8"><p>Writes SVG out with no line indenting or non-content newlines</p>
 </div>
-<div class="col col-md-6"><p>Writes SVG out with no line indenting or non-content newlines</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgHtml5":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-html5 </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgHtml5":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-html5 </code></span></p>
+<div class="col col-md-8"><p>Write data-id and data-class attributes for JS usage and id clash avoidance</p>
 </div>
-<div class="col col-md-6"><p>Write data-id and data-class attributes for JS usage and id clash avoidance</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgRemoveXlink":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-remove-xlink </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgRemoveXlink":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-remove-xlink </code></span></p>
+<div class="col col-md-8"><p>Removes the xlink: prefix on href attributes for compatibility with some newer browsers</p>
 </div>
-<div class="col col-md-6"><p>Removes the xlink: prefix on href attributes for compatibility with some newer browsers</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgViewBox":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-view-box </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"svgViewBox":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--svg-view-box </code></span></p>
+<div class="col col-md-8"><p>Use viewBox on svg root element for easy scaling of document</p>
 </div>
-<div class="col col-md-6"><p>Use viewBox on svg root element for easy scaling of document</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"unit": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--unit &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"unit":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--unit  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The MEI unit (1⁄2 of the distance between the staff lines)<br />(default: 9; min: 6; max: 20)</p>
 </div>
-<div class="col col-md-6"><p>The MEI unit (1⁄2 of the distance between the staff lines)<br />(default: 9; min: 6; max: 20)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"useBraceGlyph":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-brace-glyph </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"useBraceGlyph":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-brace-glyph </code></span></p>
+<div class="col col-md-8"><p>Use brace glyph from current font</p>
 </div>
-<div class="col col-md-6"><p>Use brace glyph from current font</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"useFacsimile":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-facsimile </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"useFacsimile":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-facsimile </code></span></p>
+<div class="col col-md-8"><p>Use information in the &lt;facsimile&gt; element to control the layout</p>
 </div>
-<div class="col col-md-6"><p>Use information in the &lt;facsimile&gt; element to control the layout</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"usePgFooterForAll":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-pg-footer-for-all </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"usePgFooterForAll":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-pg-footer-for-all </code></span></p>
+<div class="col col-md-8"><p>Use the pgFooter for all pages</p>
 </div>
-<div class="col col-md-6"><p>Use the pgFooter for all pages</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"usePgHeaderForAll":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-pg-header-for-all </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"usePgHeaderForAll":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--use-pg-header-for-all </code></span></p>
+<div class="col col-md-8"><p>Use the pgHeader for all pages</p>
 </div>
-<div class="col col-md-6"><p>Use the pgHeader for all pages</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"xmlIdChecksum":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--xml-id-checksum </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"xmlIdChecksum":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--xml-id-checksum </code></span></p>
-</div>
-<div class="col col-md-6"><p>Seed the generator for XML IDs using the checksum of the input data</p>
+<div class="col col-md-8"><p>Seed the generator for XML IDs using the checksum of the input data</p>
 </div>
 </div>
 
 <h3 id="general-layout-options">General layout options</h3>
 
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"barLineSeparation":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bar-line-separation  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"barLineSeparation": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bar-line-separation &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The default distance between multiple barlines when locked together<br />(default: 0.8; min: 0.5; max: 2.0)</p>
+<div class="col col-md-8"><p>The default distance between multiple barlines when locked together<br />(default: 0.8; min: 0.5; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"barLineWidth":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bar-line-width  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"barLineWidth": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bar-line-width &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The barline width<br />(default: 0.3; min: 0.1; max: 0.8)</p>
+<div class="col col-md-8"><p>The barline width<br />(default: 0.3; min: 0.1; max: 0.8)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamFrenchStyle":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-french-style </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamFrenchStyle":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-french-style </code></span></p>
 </div>
-<div class="col col-md-6"><p>For notes in beams, stems will stop at first outermost sub-beam without crossing it</p>
+<div class="col col-md-8"><p>For notes in beams, stems will stop at first outermost sub-beam without crossing it</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMaxSlope":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-max-slope  &lt;i&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMaxSlope": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-max-slope &lt;integer&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The maximum beam slope<br />(default: 10; min: 0; max: 20)</p>
+<div class="col col-md-8"><p>The maximum beam slope<br />(default: 10; min: 0; max: 20)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMinSlope":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-min-slope  &lt;i&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMinSlope": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-min-slope &lt;integer&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The minimum beam slope</p>
+<div class="col col-md-8"><p>The minimum beam slope</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMixedPreserve":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-mixed-preserve </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMixedPreserve":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-mixed-preserve </code></span></p>
 </div>
-<div class="col col-md-6"><p>Mixed beams will be drawn even if there is not enough space</p>
+<div class="col col-md-8"><p>Mixed beams will be drawn even if there is not enough space</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMixedStemMin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-mixed-stem-min  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"beamMixedStemMin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--beam-mixed-stem-min &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The minimal stem length in MEI units used to draw mixed beams<br />(default: 3.5; min: 1.0; max: 8.0)</p>
+<div class="col col-md-8"><p>The minimal stem length in MEI units used to draw mixed beams<br />(default: 3.5; min: 1.0; max: 8.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bracketThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bracket-thickness  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bracketThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bracket-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The thickness of the system bracket<br />(default: 1.0; min: 0.5; max: 2.0)</p>
+<div class="col col-md-8"><p>The thickness of the system bracket<br />(default: 1.0; min: 0.5; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaksNoWidow":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks-no-widow </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"breaksNoWidow":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--breaks-no-widow </code></span></p>
 </div>
-<div class="col col-md-6"><p>Prevent single measures on the last page by fitting it into previous system</p>
+<div class="col col-md-8"><p>Prevent single measures on the last page by fitting it into previous system</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dashedBarLineDashLength":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dashed-bar-line-dash-length  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dashedBarLineDashLength": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dashed-bar-line-dash-length &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The dash length of dashed barlines<br />(default: 1.14; min: 0.1; max: 5.0)</p>
+<div class="col col-md-8"><p>The dash length of dashed barlines<br />(default: 1.14; min: 0.1; max: 5.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dashedBarLineGapLength":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dashed-bar-line-gap-length  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dashedBarLineGapLength": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dashed-bar-line-gap-length &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The gap length of dashed barlines<br />(default: 1.14; min: 0.1; max: 5.0)</p>
+<div class="col col-md-8"><p>The gap length of dashed barlines<br />(default: 1.14; min: 0.1; max: 5.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dynamDist":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dynam-dist  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"dynamDist": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--dynam-dist &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The default distance from the staff for dynamic marks<br />(default: 1.0; min: 0.5; max: 16.0)</p>
+<div class="col col-md-8"><p>The default distance from the staff for dynamic marks<br />(default: 1.0; min: 0.5; max: 16.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"engravingDefaults":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--engraving-defaults  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"engravingDefaults": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--engraving-defaults &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Json describing defaults for engraving SMuFL elements</p>
+<div class="col col-md-8"><p>Json describing defaults for engraving SMuFL elements</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"fingeringScale":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--fingering-scale  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"fingeringScale": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--fingering-scale &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The scale of fingering font compared to default font size<br />(default: 0.75; min: 0.25; max: 1.0)</p>
+<div class="col col-md-8"><p>The scale of fingering font compared to default font size<br />(default: 0.75; min: 0.25; max: 1.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"font":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--font  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"font": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--font &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Set the music font<br />(default: “Leipzig”)</p>
+<div class="col col-md-8"><p>Set the music font<br />(default: “Leipzig”)</p>
+
+<p>See also: <a href="/advanced-topics/smufl.html">SMuFL fonts</a></p>
 </div>
-<div class="col col-md-3"><p>See also: <a href="/advanced-topics/smufl.html">SMuFL fonts</a></p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"graceFactor": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--grace-factor &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"graceFactor":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--grace-factor  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The grace size ratio numerator<br />(default: 0.75; min: 0.5; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>The grace size ratio numerator<br />(default: 0.75; min: 0.5; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"graceRhythmAlign":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--grace-rhythm-align </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"graceRhythmAlign":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--grace-rhythm-align </code></span></p>
+<div class="col col-md-8"><p>Align grace notes rhythmically with all staves</p>
 </div>
-<div class="col col-md-6"><p>Align grace notes rhythmically with all staves</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"graceRightAlign":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--grace-right-align </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"graceRightAlign":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--grace-right-align </code></span></p>
+<div class="col col-md-8"><p>Align the right position of a grace group with all staves</p>
 </div>
-<div class="col col-md-6"><p>Align the right position of a grace group with all staves</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"hairpinSize": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--hairpin-size &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"hairpinSize":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--hairpin-size  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The haripin size in MEI units<br />(default: 3.0; min: 1.0; max: 8.0)</p>
 </div>
-<div class="col col-md-6"><p>The haripin size in MEI units<br />(default: 3.0; min: 1.0; max: 8.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"hairpinThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--hairpin-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"hairpinThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--hairpin-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the hairpin<br />(default: 0.2; min: 0.1; max: 0.8)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the hairpin<br />(default: 0.2; min: 0.1; max: 0.8)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"handwrittenFont": &lt;string&gt; *</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--handwritten-font &lt;string&gt; *</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"handwrittenFont": * &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--handwritten-font * &lt;s&gt;</code></span></p>
+<div class="col col-md-8"><p>Fonts that emulate hand writing and require special handling</p>
 </div>
-<div class="col col-md-6"><p>Fonts that emulate hand writing and require special handling</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"harmDist": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--harm-dist &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"harmDist":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--harm-dist  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The default distance from the staff of harmonic indications<br />(default: 1.0; min: 0.5; max: 16.0)</p>
 </div>
-<div class="col col-md-6"><p>The default distance from the staff of harmonic indications<br />(default: 1.0; min: 0.5; max: 16.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationBraceGroup": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-brace-group &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationBraceGroup":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-brace-group  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Space between staves inside a braced group justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
-<div class="col col-md-6"><p>Space between staves inside a braced group justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationBracketGroup": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-bracket-group &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationBracketGroup":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-bracket-group  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Space between staves inside a bracketed group justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
-<div class="col col-md-6"><p>Space between staves inside a bracketed group justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationMaxVertical": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-max-vertical &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationMaxVertical":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-max-vertical  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Maximum ratio of justifiable height to page height that can be used for the vertical justification<br />(default: 0.3; min: 0.0; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>Maximum ratio of justifiable height to page height that can be used for the vertical justification<br />(default: 0.3; min: 0.0; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationStaff": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-staff &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationStaff":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-staff  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The staff justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
-<div class="col col-md-6"><p>The staff justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationSystem": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-system &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"justificationSystem":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--justification-system  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The system spacing justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
-<div class="col col-md-6"><p>The system spacing justification<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"ledgerLineExtension": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--ledger-line-extension &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"ledgerLineExtension":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--ledger-line-extension  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The amount by which a ledger line should extend either side of a notehead<br />(default: 0.54; min: 0.2; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>The amount by which a ledger line should extend either side of a notehead<br />(default: 0.54; min: 0.2; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"ledgerLineThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--ledger-line-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"ledgerLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--ledger-line-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the ledger lines<br />(default: 0.25; min: 0.1; max: 0.5)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the ledger lines<br />(default: 0.25; min: 0.1; max: 0.5)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricHyphenLength": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-hyphen-length &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricHyphenLength":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-hyphen-length  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The lyric hyphen and dash length<br />(default: 1.2; min: 0.5; max: 3.0)</p>
 </div>
-<div class="col col-md-6"><p>The lyric hyphen and dash length<br />(default: 1.2; min: 0.5; max: 3.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricLineThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-line-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-line-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The lyric extender line thickness<br />(default: 0.25; min: 0.1; max: 0.5)</p>
 </div>
-<div class="col col-md-6"><p>The lyric extender line thickness<br />(default: 0.25; min: 0.1; max: 0.5)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricNoStartHyphen":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-no-start-hyphen </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricNoStartHyphen":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-no-start-hyphen </code></span></p>
+<div class="col col-md-8"><p>Do not show hyphens at the beginning of a system</p>
 </div>
-<div class="col col-md-6"><p>Do not show hyphens at the beginning of a system</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricSize": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-size &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricSize":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-size  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The lyrics size in MEI units<br />(default: 4.5; min: 2.0; max: 8.0)</p>
 </div>
-<div class="col col-md-6"><p>The lyrics size in MEI units<br />(default: 4.5; min: 2.0; max: 8.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricTopMinMargin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-top-min-margin &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricTopMinMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-top-min-margin  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The minmal margin above the lyrics in MEI units<br />(default: 2.0; min: 0.0; max: 8.0)</p>
 </div>
-<div class="col col-md-6"><p>The minmal margin above the lyrics in MEI units<br />(default: 2.0; min: 0.0; max: 8.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricVerseCollapse":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-verse-collapse </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricVerseCollapse":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-verse-collapse </code></span></p>
+<div class="col col-md-8"><p>Collapse empty verse lines in lyrics</p>
 </div>
-<div class="col col-md-6"><p>Collapse empty verse lines in lyrics</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricWordSpace": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-word-space &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"lyricWordSpace":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--lyric-word-space  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The lyric word space length<br />(default: 1.2; min: 0.5; max: 3.0)</p>
 </div>
-<div class="col col-md-6"><p>The lyric word space length<br />(default: 1.2; min: 0.5; max: 3.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"measureMinWidth": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--measure-min-width &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"measureMinWidth":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--measure-min-width  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The minimal measure width in MEI units<br />(default: 15; min: 1; max: 30)</p>
 </div>
-<div class="col col-md-6"><p>The minimal measure width in MEI units<br />(default: 15; min: 1; max: 30)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mnumInterval": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mnum-interval &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mnumInterval":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mnum-interval  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>How frequently to place measure numbers</p>
 </div>
-<div class="col col-md-6"><p>How frequently to place measure numbers</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"multiRestStyle": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--multi-rest-style &lt;string&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"multiRestStyle":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--multi-rest-style  &lt;s&gt;</code></span></p>
+<div class="col col-md-8"><p>Rendering style of multiple measure rests<br />(default: “auto”; other values: [‘auto’, ‘default’, ‘block’, ‘symbols’])</p>
+
+<p>Description of the values:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">auto</code>: changes to block style if the number of measures exceeds four. It takes the block attribute into account.</li>
+  <li><code class="language-plaintext highlighter-rouge">default</code>: same as auto, but ignoring the block attribute</li>
+  <li><code class="language-plaintext highlighter-rouge">block</code>: always displays block style except for single measure rests</li>
+  <li><code class="language-plaintext highlighter-rouge">symbols</code>: always display symbols except for large numbers of measures (&gt;30)</li>
+</ul>
+
 </div>
-<div class="col col-md-6"><p>Rendering style of multiple measure rests<br />(default: “auto”; other values: [‘auto’, ‘default’, ‘block’, ‘symbols’])</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"multiRestThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--multi-rest-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"multiRestThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--multi-rest-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the multi rest in unit<br />(default: 2.0; min: 0.5; max: 6.0)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the multi rest in unit<br />(default: 2.0; min: 0.5; max: 6.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveAlternativeSymbols":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-alternative-symbols </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveAlternativeSymbols":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-alternative-symbols </code></span></p>
+<div class="col col-md-8"><p>Use alternative symbols for displaying octaves</p>
 </div>
-<div class="col col-md-6"><p>Use alternative symbols for displaying octaves</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveLineThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-line-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-line-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the line used for an octave line<br />(default: 0.2; min: 0.1; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the line used for an octave line<br />(default: 0.2; min: 0.1; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pedalLineThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--pedal-line-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pedalLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--pedal-line-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the line used for piano pedaling<br />(default: 0.2; min: 0.1; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the line used for piano pedaling<br />(default: 0.2; min: 0.1; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"repeatBarLineDotSeparation": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--repeat-bar-line-dot-separation &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"repeatBarLineDotSeparation":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--repeat-bar-line-dot-separation  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The default horizontal distance between the dots and the inner barline of a repeat barline<br />(default: 0.36; min: 0.1; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>The default horizontal distance between the dots and the inner barline of a repeat barline<br />(default: 0.36; min: 0.1; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"repeatEndingLineThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--repeat-ending-line-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"repeatEndingLineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--repeat-ending-line-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Repeat and ending line thickness<br />(default: 0.15; min: 0.1; max: 2.0)</p>
 </div>
-<div class="col col-md-6"><p>Repeat and ending line thickness<br />(default: 0.15; min: 0.1; max: 2.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurCurveFactor": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-curve-factor &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurCurveFactor":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-curve-factor  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Slur curve factor - high value means rounder slurs<br />(default: 1.0; min: 0.2; max: 5.0)</p>
 </div>
-<div class="col col-md-6"><p>Slur curve factor - high value means rounder slurs<br />(default: 1.0; min: 0.2; max: 5.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurEndpointFlexibility": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-endpoint-flexibility &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurEndpointFlexibility":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-endpoint-flexibility  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Slur endpoint flexibility - allow more endpoint movement during adjustment<br />(default: 0.0; min: 0.0; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>Slur endpoint flexibility - allow more endpoint movement during adjustment<br />(default: 0.0; min: 0.0; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurEndpointThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-endpoint-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurEndpointThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-endpoint-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The endpoint slur thickness in MEI units<br />(default: 0.1; min: 0.05; max: 0.25)</p>
 </div>
-<div class="col col-md-6"><p>The endpoint slur thickness in MEI units<br />(default: 0.1; min: 0.05; max: 0.25)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMargin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-margin &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-margin  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Slur safety distance in MEI units to obstacles<br />(default: 1.0; min: 0.1; max: 4.0)</p>
 </div>
-<div class="col col-md-6"><p>Slur safety distance in MEI units to obstacles<br />(default: 1.0; min: 0.1; max: 4.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMaxSlope": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-max-slope &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMaxSlope":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-max-slope  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The maximum slur slope in degrees<br />(default: 60; min: 30; max: 85)</p>
 </div>
-<div class="col col-md-6"><p>The maximum slur slope in degrees<br />(default: 60; min: 30; max: 85)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMidpointThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-midpoint-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurMidpointThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-midpoint-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The midpoint slur thickness in MEI units<br />(default: 0.6; min: 0.2; max: 1.2)</p>
 </div>
-<div class="col col-md-6"><p>The midpoint slur thickness in MEI units<br />(default: 0.6; min: 0.2; max: 1.2)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurSymmetry": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-symmetry &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"slurSymmetry":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--slur-symmetry  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Slur symmetry - high value means more symmetric slurs<br />(default: 0.0; min: 0.0; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>Slur symmetry - high value means more symmetric slurs<br />(default: 0.0; min: 0.0; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingBraceGroup": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-brace-group &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingBraceGroup":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-brace-group  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>Minimum space between staves inside a braced group in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
-<div class="col col-md-6"><p>Minimum space between staves inside a braced group in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingBracketGroup": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-bracket-group &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingBracketGroup":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-bracket-group  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>Minimum space between staves inside a bracketed group in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
-<div class="col col-md-6"><p>Minimum space between staves inside a bracketed group in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingDurDetection":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-dur-detection </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingDurDetection":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-dur-detection </code></span></p>
+<div class="col col-md-8"><p>Detect long duration for adjusting spacing</p>
 </div>
-<div class="col col-md-6"><p>Detect long duration for adjusting spacing</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingLinear": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-linear &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingLinear":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-linear  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Specify the linear spacing factor<br />(default: 0.25; min: 0.0; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>Specify the linear spacing factor<br />(default: 0.25; min: 0.0; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingNonLinear": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-non-linear &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingNonLinear":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-non-linear  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>Specify the non-linear spacing factor<br />(default: 0.6; min: 0.0; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>Specify the non-linear spacing factor<br />(default: 0.6; min: 0.0; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingStaff": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-staff &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingStaff":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-staff  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The staff minimal spacing in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
-<div class="col col-md-6"><p>The staff minimal spacing in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingSystem": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-system &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"spacingSystem":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--spacing-system  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>The system minimal spacing in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
-<div class="col col-md-6"><p>The system minimal spacing in MEI units<br />(default: 12; min: 0; max: 48)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"staffLineWidth": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--staff-line-width &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"staffLineWidth":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--staff-line-width  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The staff line width in unit<br />(default: 0.15; min: 0.1; max: 0.3)</p>
 </div>
-<div class="col col-md-6"><p>The staff line width in unit<br />(default: 0.15; min: 0.1; max: 0.3)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"stemWidth": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--stem-width &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"stemWidth":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--stem-width  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The stem width<br />(default: 0.2; min: 0.1; max: 0.5)</p>
 </div>
-<div class="col col-md-6"><p>The stem width<br />(default: 0.2; min: 0.1; max: 0.5)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"subBracketThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--sub-bracket-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"subBracketThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--sub-bracket-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of system sub-bracket<br />(default: 0.2; min: 0.1; max: 2.0)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of system sub-bracket<br />(default: 0.2; min: 0.1; max: 2.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"systemDivider": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--system-divider &lt;string&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"systemDivider":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--system-divider  &lt;s&gt;</code></span></p>
+<div class="col col-md-8"><p>The display of system dividers<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘left’, ‘left-right’])</p>
 </div>
-<div class="col col-md-6"><p>The display of system dividers<br />(default: “auto”; other values: [‘none’, ‘auto’, ‘left’, ‘left-right’])</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"systemMaxPerPage": &lt;integer&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--system-max-per-page &lt;integer&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"systemMaxPerPage":  &lt;i&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--system-max-per-page  &lt;i&gt;</code></span></p>
+<div class="col col-md-8"><p>Maximun number of systems per page</p>
 </div>
-<div class="col col-md-6"><p>Maximun number of systems per page</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"textEnclosureThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--text-enclosure-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"textEnclosureThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--text-enclosure-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the line text enclosing box<br />(default: 0.2; min: 0.1; max: 0.8)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the line text enclosing box<br />(default: 0.2; min: 0.1; max: 0.8)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"thickBarlineThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--thick-barline-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"thickBarlineThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--thick-barline-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the thick barline<br />(default: 1.0; min: 0.5; max: 2.0)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the thick barline<br />(default: 1.0; min: 0.5; max: 2.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tieEndpointThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tie-endpoint-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tieEndpointThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tie-endpoint-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The Endpoint tie thickness in MEI units<br />(default: 0.1; min: 0.05; max: 0.25)</p>
 </div>
-<div class="col col-md-6"><p>The Endpoint tie thickness in MEI units<br />(default: 0.1; min: 0.05; max: 0.25)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tieMidpointThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tie-midpoint-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tieMidpointThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tie-midpoint-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The midpoint tie thickness in MEI units<br />(default: 0.5; min: 0.2; max: 1.0)</p>
 </div>
-<div class="col col-md-6"><p>The midpoint tie thickness in MEI units<br />(default: 0.5; min: 0.2; max: 1.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tieMinLength": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tie-min-length &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tieMinLength":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tie-min-length  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The minimum length of tie in MEI units<br />(default: 2.0; min: 0.0; max: 10.0)</p>
 </div>
-<div class="col col-md-6"><p>The minimum length of tie in MEI units<br />(default: 2.0; min: 0.0; max: 10.0)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tupletBracketThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tuplet-bracket-thickness &lt;decimal&gt;</code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tupletBracketThickness":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tuplet-bracket-thickness  &lt;f&gt;</code></span></p>
+<div class="col col-md-8"><p>The thickness of the tuplet bracket<br />(default: 0.2; min: 0.1; max: 0.8)</p>
 </div>
-<div class="col col-md-6"><p>The thickness of the tuplet bracket<br />(default: 0.2; min: 0.1; max: 0.8)</p>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tupletNumHead":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tuplet-num-head </code></span></p>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"tupletNumHead":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--tuplet-num-head </code></span></p>
-</div>
-<div class="col col-md-6"><p>Placement of tuplet number on the side of the note head</p>
+<div class="col col-md-8"><p>Placement of tuplet number on the side of the note head</p>
 </div>
 </div>
 
 <h3 id="element-selectors-and-processing">Element selectors and processing</h3>
 
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"appXPathQuery": * &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--app-x-path-query * &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"appXPathQuery": &lt;string&gt; *</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--app-x-path-query &lt;string&gt; *</code></span></p>
 </div>
-<div class="col col-md-6"><p>Set the xPath query for selecting &lt;app&gt; child elements, for example: "./rdg[contains(@source, 'source-id')]"; by default the &lt;lem&gt; or the first &lt;rdg&gt; is selected</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"choiceXPathQuery": * &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--choice-x-path-query * &lt;s&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>Set the xPath query for selecting &lt;choice&gt; child elements, for example: "./orig"; by default the first child is selected</p>
+<div class="col col-md-8"><p>Set the xPath query for selecting &lt;app&gt; child elements, for example: "./rdg[contains(@source, 'source-id')]"; by default the &lt;lem&gt; or the first &lt;rdg&gt; is selected</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mdivAll":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mdiv-all </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"choiceXPathQuery": &lt;string&gt; *</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--choice-x-path-query &lt;string&gt; *</code></span></p>
 </div>
-<div class="col col-md-6"><p>Load and render all &lt;mdiv&gt; elements in the MEI files</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mdivXPathQuery":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mdiv-x-path-query  &lt;s&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>Set the xPath query for selecting the &lt;mdiv&gt; to be rendered; only one &lt;mdiv&gt; can be rendered<br />(default: “”)</p>
+<div class="col col-md-8"><p>Set the xPath query for selecting &lt;choice&gt; child elements, for example: "./orig"; by default the first child is selected</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"substXPathQuery": * &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--subst-x-path-query * &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mdivAll":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mdiv-all </code></span></p>
 </div>
-<div class="col col-md-6"><p>Set the xPath query for selecting &lt;subst&gt; child elements, for example: "./del"; by default the first child is selected</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transpose":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose  &lt;s&gt;</code></span></p>
-</div>
-<div class="col col-md-6"><p>Transpose the entire content<br />(default: “”)</p>
-</div>
-<div class="col col-md-3"><p>See also: <a href="/advanced-topics/transposition.html">Transposition</a></p>
+<div class="col col-md-8"><p>Load and render all &lt;mdiv&gt; elements in the MEI files</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeMdiv":  &lt;s&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-mdiv  &lt;s&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mdivXPathQuery": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mdiv-x-path-query &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>Json mapping the mdiv ids to the corresponding transposition</p>
-</div>
-</div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeSelectedOnly":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-selected-only </code></span></p>
-</div>
-<div class="col col-md-6"><p>Transpose only the selected content and ignore unselected editorial content</p>
+<div class="col col-md-8"><p>Set the xPath query for selecting the &lt;mdiv&gt; to be rendered; only one &lt;mdiv&gt; can be rendered<br />(default: “”)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeToSoundingPitch":  &lt;b&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-to-sounding-pitch </code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"substXPathQuery": &lt;string&gt; *</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--subst-x-path-query &lt;string&gt; *</code></span></p>
 </div>
-<div class="col col-md-6"><p>Transpose to sounding pitch by evaluating @trans.semi</p>
+<div class="col col-md-8"><p>Set the xPath query for selecting &lt;subst&gt; child elements, for example: "./del"; by default the first child is selected</p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transpose": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose &lt;string&gt;</code></span></p>
+</div>
+<div class="col col-md-8"><p>Transpose the entire content<br />(default: “”)</p>
+
+<p>See also: <a href="/advanced-topics/transposition.html">Transposition</a></p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeMdiv": &lt;string&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-mdiv &lt;string&gt;</code></span></p>
+</div>
+<div class="col col-md-8"><p>Json mapping the mdiv ids to the corresponding transposition</p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeSelectedOnly":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-selected-only </code></span></p>
+</div>
+<div class="col col-md-8"><p>Transpose only the selected content and ignore unselected editorial content</p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"transposeToSoundingPitch":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--transpose-to-sounding-pitch </code></span></p>
+</div>
+<div class="col col-md-8"><p>Transpose to sounding pitch by evaluating @trans.semi</p>
 </div>
 </div>
 
 <h3 id="element-margins">Element margins</h3>
 
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginArtic":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-artic  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginArtic": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-artic &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for artic in MEI units<br />(default: 0.75; min: 0.0; max: 10.0)</p>
+<div class="col col-md-8"><p>The margin for artic in MEI units<br />(default: 0.75; min: 0.0; max: 10.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginHarm":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-harm  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginHarm": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-harm &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for harm in MEI units<br />(default: 1.0; min: 0.0; max: 10.0)</p>
+<div class="col col-md-8"><p>The margin for harm in MEI units<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginHeader":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-header  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginHeader": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-header &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for header in MEI units<br />(default: 2.0; min: 0.0; max: 24.0)</p>
+<div class="col col-md-8"><p>The margin for header in MEI units<br />(default: 2.0; min: 0.0; max: 24.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultBottomMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-bottom-margin  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultBottomMargin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-bottom-margin &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The default bottom margin<br />(default: 0.5; min: 0.0; max: 5.0)</p>
+<div class="col col-md-8"><p>The default bottom margin<br />(default: 0.5; min: 0.0; max: 5.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultLeftMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-left-margin  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultLeftMargin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-left-margin &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The default left margin<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The default left margin<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultRightMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-right-margin  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultRightMargin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-right-margin &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The default right margin<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The default right margin<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultTopMargin":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-top-margin  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultTopMargin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-top-margin &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The default top margin<br />(default: 0.5; min: 0.0; max: 6.0)</p>
+<div class="col col-md-8"><p>The default top margin<br />(default: 0.5; min: 0.0; max: 6.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginAccid":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-accid  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginAccid": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-accid &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for accid in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for accid in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginBarLine":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-bar-line  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginBarLine": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-bar-line &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for barLine in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for barLine in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginBeatRpt":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-beat-rpt  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginBeatRpt": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-beat-rpt &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for beatRpt in MEI units<br />(default: 2.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for beatRpt in MEI units<br />(default: 2.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginChord":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-chord  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginChord": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-chord &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for chord in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for chord in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginClef":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-clef  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginClef": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-clef &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for clef in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for clef in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginKeySig":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-key-sig  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginKeySig": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-key-sig &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for keySig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for keySig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginLeftBarLine":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-left-bar-line  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginLeftBarLine": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-left-bar-line &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for left barLine in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for left barLine in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMRest":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-m-rest  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMRest": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-m-rest &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for mRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for mRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMRpt2":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-m-rpt2  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMRpt2": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-m-rpt2 &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for mRpt2 in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for mRpt2 in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMensur":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-mensur  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMensur": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-mensur &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for mensur in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for mensur in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMeterSig":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-meter-sig  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMeterSig": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-meter-sig &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for meterSig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for meterSig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMultiRest":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-multi-rest  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMultiRest": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-multi-rest &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for multiRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for multiRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMultiRpt":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-multi-rpt  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginMultiRpt": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-multi-rpt &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for multiRpt in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for multiRpt in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginNote":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-note  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginNote": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-note &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for note in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for note in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginRest":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-rest  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginRest": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-rest &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for rest in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for rest in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginRightBarLine":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-right-bar-line  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginRightBarLine": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-right-bar-line &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for right barLine in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for right barLine in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginTabDurSym":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-tab-dur-sym  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"leftMarginTabDurSym": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--left-margin-tab-dur-sym &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for tabDurSym in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The margin for tabDurSym in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginAccid":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-accid  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginAccid": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-accid &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for accid in MEI units<br />(default: 0.5; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for accid in MEI units<br />(default: 0.5; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginBarLine":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-bar-line  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginBarLine": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-bar-line &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for barLine in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for barLine in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginBeatRpt":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-beat-rpt  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginBeatRpt": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-beat-rpt &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for beatRpt in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for beatRpt in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginChord":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-chord  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginChord": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-chord &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for chord in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for chord in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginClef":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-clef  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginClef": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-clef &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for clef in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for clef in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginKeySig":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-key-sig  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginKeySig": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-key-sig &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for keySig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for keySig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginLeftBarLine":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-left-bar-line  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginLeftBarLine": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-left-bar-line &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for left barLine in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for left barLine in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMRest":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-m-rest  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMRest": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-m-rest &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for mRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for mRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMRpt2":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-m-rpt2  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMRpt2": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-m-rpt2 &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for mRpt2 in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for mRpt2 in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMensur":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-mensur  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMensur": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-mensur &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for mensur in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for mensur in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMeterSig":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-meter-sig  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMeterSig": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-meter-sig &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for meterSig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for meterSig in MEI units<br />(default: 1.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMultiRest":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-multi-rest  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMultiRest": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-multi-rest &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for multiRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for multiRest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMultiRpt":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-multi-rpt  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginMultiRpt": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-multi-rpt &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for multiRpt in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for multiRpt in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginNote":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-note  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginNote": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-note &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for note in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for note in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginRest":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-rest  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginRest": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-rest &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for rest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for rest in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginRightBarLine":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-right-bar-line  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginRightBarLine": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-right-bar-line &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for right barLine in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for right barLine in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginTabDurSym":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-tab-dur-sym  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"rightMarginTabDurSym": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--right-margin-tab-dur-sym &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The right margin for tabDurSym in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
+<div class="col col-md-8"><p>The right margin for tabDurSym in MEI units<br />(default: 0.0; min: 0.0; max: 2.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginArtic":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-artic  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginArtic": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-artic &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for artic in MEI units<br />(default: 0.75; min: 0.0; max: 10.0)</p>
+<div class="col col-md-8"><p>The margin for artic in MEI units<br />(default: 0.75; min: 0.0; max: 10.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginHarm":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-harm  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginHarm": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-harm &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for harm in MEI units<br />(default: 1.0; min: 0.0; max: 10.0)</p>
+<div class="col col-md-8"><p>The margin for harm in MEI units<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
 </div>
-<div class="row"><div class="col col-md-3"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginPgFooter":  &lt;f&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-pg-footer  &lt;f&gt;</code></span></p>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"topMarginPgFooter": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--top-margin-pg-footer &lt;decimal&gt;</code></span></p>
 </div>
-<div class="col col-md-6"><p>The margin for footer in MEI units<br />(default: 2.0; min: 0.0; max: 24.0)</p>
+<div class="col col-md-8"><p>The margin for footer in MEI units<br />(default: 2.0; min: 0.0; max: 24.0)</p>
 </div>
 </div>
 

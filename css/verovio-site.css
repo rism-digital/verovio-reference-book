@@ -43,3 +43,5 @@ div.search-form form { margin-top: 10px; }
 img.title-page { padding: 180px; padding-top: 50px; padding-bottom: 550px; }
 
 img.example { border: 1px #ddd solid; margin-bottom: 50px; display: block; margin-left: auto; margin-right: auto; width: 60%; }
+
+div.option_row { border-bottom: 1px solid #bbb; margin-bottom: 5px; }
