@@ -13,6 +13,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+
+      - name: "Avoid 'fatal: detected dubious ownership in repository' for jekyll-github-metadata"
+        run: |
+          git config --global --add safe.directory /github/workspace
       
       - name: "Checks-out the repository"
         uses: actions/checkout@v2
@@ -20,8 +24,6 @@ jobs:
       - name: "Change config to generate full-chapter pages"
         run: |
           sed -i 's/generate-full-chapters: false/generate-full-chapters: true/g' _config.yml
-          # avoid 'fatal: detected dubious ownership in repository' for jekyll-github-metadata
-          git config --global --add safe.directory /github/workspace
      
       - name: "Install the VerovioText font"
         run: |
