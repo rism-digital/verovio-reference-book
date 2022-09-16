@@ -17,7 +17,7 @@ jobs:
       - name: "Checks-out the repository"
         uses: actions/checkout@v3.0.2
         with:
-          set-safe-directory: '/github/workspace'
+          set-safe-directory: '*'
         
       - name: "Change config to generate full-chapter pages"
         run: |
