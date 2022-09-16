@@ -24,7 +24,7 @@ jobs:
       - name: "Install the VerovioText font"
         run: |
           cd scripts
-          wget https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf
+          wget https://raw.githubusercontent.com/rism-digital/verovio/master/fonts/VerovioText-1.0.ttf
           sudo cp ./VerovioText-1.0.ttf /usr/local/share/fonts
           sudo cp ./VerovioText-1.0.ttf /usr/share/fonts
           sudo fc-cache -f -v
