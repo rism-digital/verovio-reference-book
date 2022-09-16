@@ -52,8 +52,6 @@ jobs:
       
       - name: "Run a server locally and generate the PDF"
         run: |
-          ls
-          ls vendor/bundle
           bundle config path vendor/bundle
           bundle install
           bundle exec jekyll build
