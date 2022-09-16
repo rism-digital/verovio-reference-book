@@ -15,7 +15,6 @@ gem "verovio-theme", git: 'https://github.com/rism-digital/verovio-theme'
 gem "jekyll-github-metadata", "~> 2.15"
 gem "webrick", "~> 1.7"
 gem "nokogiri", "~> 1.13"
-gem "faraday-retry", "~> 2.0"
 
 group :jekyll_plugins do
     gem "jekyll-seo-tag"
