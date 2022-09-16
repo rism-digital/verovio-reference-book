@@ -52,8 +52,6 @@ jobs:
       
       - name: "Run a server locally and generate the PDF"
         run: |
-          bundle install
-          bundle exec jekyll build --baseurl="" --verbose
           cd _site
           ls
           gem install webrick
