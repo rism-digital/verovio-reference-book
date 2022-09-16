@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "> 4.1.1"
+gem "jekyll", "> 4.2.0"
 
 gem "verovio-theme", git: 'https://github.com/rism-digital/verovio-theme'
 #gem "verovio-theme", path: '/Users/laurent/Documents/verovio/verovio-theme'
