@@ -92,19 +92,19 @@ if __name__ == "__main__":
             opt_type_str = ""
             opt_type = option.get('type')
             if opt_type == 'double':
-                opt_type_str = " <f>"
+                opt_type_str = "<decimal>"
             elif opt_type == 'int':
-                opt_type_str = " <i>"
+                opt_type_str = "<integer>"
             elif opt_type == 'std::string':
-                opt_type_str = " <s>"
+                opt_type_str = "<string>"
             elif opt_type == 'array':
-                opt_type_str = "* <s>"
+                opt_type_str = "<string> *"
             elif opt_type != 'bool':
-                opt_type_str = " <s>"
+                opt_type_str = "<string>"
 
             opt_type_json_str = opt_type_str
             if opt_type == 'bool':
-                opt_type_json_str = " <b>"
+                opt_type_json_str = " <boolean>"
 
             cmd_option_str = f"`{cmd_option} {opt_type_str}`"
             json_option_str = f"`\"{option_id}\": {opt_type_json_str}`"
@@ -142,23 +142,24 @@ if __name__ == "__main__":
             see_also_this = see_also.get(option_id)
             see_also_str = ""
             if see_also_this:
-                see_also_str = "See also: "
+                see_also_str = "\n\nSee also: "
                 see_also_links = []
                 for ref in see_also_this:
                     # Get the name of the link target from the scripts/toc.yaml file
                     link = f"[{toc.get(ref, '[missing]')}]({ref})"
                     see_also_links.append(link)
                 see_also_str += " \\| ".join(see_also_links)
+            description += see_also_str
 
             if option.get('cmdOnly'):
                 json_option_str = "∅"
 
             # Add the table line with span.lang1 / span.lang2 for toggling JSON and Cmd-line
             #f.write("| <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span> ".format(json_option_str, cmd_option_str))
-            f.write("{% row %}")
-            f.write("{{% col 3 %}} <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span> {{% endcol %}}".format(json_option_str, cmd_option_str))
+            f.write("{% row option_row %}")
+            f.write("{{% col 4 %}} <span class=\"lang1\">{}</span><span class=\"lang2\">{}</span> {{% endcol %}}".format(json_option_str, cmd_option_str))
             # Add the descripion and the links
-            f.write("{{% col 6 %}} {} {{% endcol %}}{{% col 3 %}} {} {{% endcol %}}\n".format(description, see_also_str))
+            f.write("{{% col 8 %}} {} {{% endcol %}}\n".format(description))
             f.write("{% endrow %}")
 
         f.close()

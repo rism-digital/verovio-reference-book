@@ -8,15 +8,16 @@ module Jekyll
   # {% row %} starts a row to which {% col %} can be added
   class RowTagBlock < Liquid::Block
     
-    def initialize(tag_name, markup, tokens)
+    def initialize(tag_name, css_class, tokens)
       super
+      @css_class = css_class
     end
 
     def render(context)
       site = context.registers[:site]
       converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
       output = converter.convert(super(context))
-      "<div class=\"row\">#{output}</div>"
+      "<div class=\"row #{@css_class}\">#{output}</div>"
     end
   end
 

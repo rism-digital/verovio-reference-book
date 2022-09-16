@@ -1,3 +1,3 @@
-{% row %}{% col 3 %} <span class="lang1">`"midiNoCue":  <b>`</span><span class="lang2">`--midi-no-cue `</span> {% endcol %}{% col 6 %} Skip cue notes in MIDI output {% endcol %}{% col 3 %}  {% endcol %}
-{% endrow %}{% row %}{% col 3 %} <span class="lang1">`"midiTempoAdjustment":  <f>`</span><span class="lang2">`--midi-tempo-adjustment  <f>`</span> {% endcol %}{% col 6 %} The MIDI tempo adjustment factor<br/>(default: 1.0; min: 0.2; max: 4.0) {% endcol %}{% col 3 %}  {% endcol %}
+{% row option_row %}{% col 4 %} <span class="lang1">`"midiNoCue":  <boolean>`</span><span class="lang2">`--midi-no-cue `</span> {% endcol %}{% col 8 %} Skip cue notes in MIDI output {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"midiTempoAdjustment": <decimal>`</span><span class="lang2">`--midi-tempo-adjustment <decimal>`</span> {% endcol %}{% col 8 %} The MIDI tempo adjustment factor<br/>(default: 1.0; min: 0.2; max: 4.0) {% endcol %}
 {% endrow %}
