@@ -12,7 +12,7 @@ gem "jekyll", "> 4.2.0"
 gem "verovio-theme", git: 'https://github.com/rism-digital/verovio-theme'
 #gem "verovio-theme", path: '/Users/laurent/Documents/verovio/verovio-theme'
 
-gem "jekyll-github-metadata"
+gem "jekyll-github-metadata", "~> 2.15"
 gem "webrick", "~> 1.7"
 gem "nokogiri", "~> 1.13"
 
