@@ -49,8 +49,6 @@ jobs:
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}-${{ env.GEMS_CACHE_ID }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
       
       - name: "Run a server locally and generate the PDF"
         run: |
