@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-19T06:53:06+00:00" />
+<meta property="article:published_time" content="2022-09-19T07:34:09+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Getting started" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"To get started with Verovio, you need to load the JavaScript library in a web page. If you were building your own website, you may choose to host this on your own servers, but in this tutorial we will use a version that is hosted on the Verovio website.","headline":"Getting started","datePublished":"2022-09-19T06:53:06+00:00","dateModified":"2022-09-19T06:53:06+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/first-steps/getting-started.html"},"url":"/first-steps/getting-started.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"To get started with Verovio, you need to load the JavaScript library in a web page. If you were building your own website, you may choose to host this on your own servers, but in this tutorial we will use a version that is hosted on the Verovio website.","headline":"Getting started","datePublished":"2022-09-19T07:34:09+00:00","dateModified":"2022-09-19T07:34:09+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/first-steps/getting-started.html"},"url":"/first-steps/getting-started.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -126,6 +126,9 @@
 <a class="toc-item toc-section " href="/first-steps/score-navigation.html">Score navigation</a>
     
 
+<a class="toc-item toc-section " href="/first-steps/npm-usage.html">Usage with npm</a>
+    
+
     
 
     <a class="toc-item" href="/interactive-notation/">Tutorial 2: Interactive notation</a>
@@ -185,7 +188,7 @@
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
   <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
       <span class="p">}</span>
   <span class="p">});</span>
@@ -196,7 +199,7 @@
 
 <p>When you refresh your page, you should still see nothing, and there should be no errors in the browser console. To help you understand what this is doing, let’s start from the inside out.</p>
 
-<p>The line <code class="language-plaintext highlighter-rouge">tk = new verovio.toolkit();</code> creates a new instance of the Verovio toolkit. This is what we will eventually use to render the notation. However, we first need to wait until the Verovio library is fully downloaded and ready to use by your browser. The <code class="language-plaintext highlighter-rouge">Module.onRuntimeInitialized</code> line, and the <code class="language-plaintext highlighter-rouge">document.addEventListener</code> lines do just that – they tell your browser to wait until other things have happened before trying to work with Verovio. This is a good, safe way to ensure all the requirements are met before we try to start working with Verovio.</p>
+<p>The line <code class="language-plaintext highlighter-rouge">tk = new verovio.toolkit();</code> creates a new instance of the Verovio toolkit. This is what we will eventually use to render the notation. However, we first need to wait until the Verovio library is fully downloaded and ready to use by your browser. The <code class="language-plaintext highlighter-rouge">verovio.module.onRuntimeInitialized</code> line, and the <code class="language-plaintext highlighter-rouge">document.addEventListener</code> lines do just that – they tell your browser to wait until other things have happened before trying to work with Verovio. This is a good, safe way to ensure all the requirements are met before we try to start working with Verovio.</p>
 
 <h3 id="logging-to-the-console">Logging to the Console</h3>
 
@@ -223,7 +226,7 @@
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;script&gt;</span>
       <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-          <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="k">async</span> <span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
             <span class="kd">let</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Verovio has loaded!</span><span class="dl">"</span><span class="p">);</span>
           <span class="p">}</span>
