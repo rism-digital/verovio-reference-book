@@ -25,12 +25,14 @@ see-also:
   <label><input type="radio" name="lang" checked>Command-line parameters</label>
 </div>
 <div class="hidden-print radio-inline">
-  <label><input type="radio" name="lang">JSON keys</label>
+  <label><input type="radio" name="lang">JSON objects</label>
 </div>
+
+For the Python toollkit, options have to be passed as [stringified JSON objects](/installing-or-building-from-sources/python.html#basic-usage-of-the-toolkit). For the JavaScript toolkit, the have to be passed as [JSON objects](/first-steps/layout-options.html#passing-options-to-verovio) directly.
 
 ### Base short options
 
-All of the base options are short options in the command-line version of the toolkit. Most of them are command-line options that have no direct corresponding JSON key.
+All of the base options are short options in the command-line version of the toolkit. Most of them are command-line options that have no direct corresponding JSON key / value.
 
 {% include options/0-base.md %}
 
