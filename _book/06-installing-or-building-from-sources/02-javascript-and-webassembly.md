@@ -12,7 +12,7 @@ If you need Humdrum support, the file to include is:
 
 **`verovio-toolkit-hum.js`**
 
-If you need to have support for old browser, there is a [asm.js](https://asmjs.org)) version, which is not recommended for new project. The file to include is:
+If you need to have support for old browsers, there is an [asm.js](https://asmjs.org) version available. This version is obsolete and is not recommended for new. The file to include is:
 
 **`verovio-toolkit.js`**
 
