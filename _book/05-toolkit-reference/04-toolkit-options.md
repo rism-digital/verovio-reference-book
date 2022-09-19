@@ -25,7 +25,7 @@ see-also:
   <label><input type="radio" name="lang" checked>Command-line parameters</label>
 </div>
 <div class="hidden-print radio-inline">
-  <label><input type="radio" name="lang">JSON objects</label>
+  <label><input type="radio" name="lang">JavaScript/Python options</label>
 </div>
 
 For the Python toolkit, options have to be passed as [stringified JSON objects](/installing-or-building-from-sources/python.html#basic-usage-of-the-toolkit). For the JavaScript toolkit, they have to be passed as [JSON objects](/first-steps/layout-options.html#passing-options-to-verovio) directly.
