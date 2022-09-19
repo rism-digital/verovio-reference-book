@@ -32,7 +32,7 @@ For the Python toolkit, options have to be passed as [stringified JSON objects](
 
 ### Base short options
 
-All of the base options are short options in the command-line version of the toolkit. Most of them are command-line options that have no direct corresponding JSON key / value.
+All of the base options are short options in the command-line version of the toolkit. Most of them are command-line only and are not used in the JavaScript or Python toolkits.
 
 {% include options/0-base.md %}
 
