@@ -28,7 +28,7 @@ see-also:
   <label><input type="radio" name="lang">JSON objects</label>
 </div>
 
-For the Python toollkit, options have to be passed as [stringified JSON objects](/installing-or-building-from-sources/python.html#basic-usage-of-the-toolkit). For the JavaScript toolkit, the have to be passed as [JSON objects](/first-steps/layout-options.html#passing-options-to-verovio) directly.
+For the Python toolkit, options have to be passed as [stringified JSON objects](/installing-or-building-from-sources/python.html#basic-usage-of-the-toolkit). For the JavaScript toolkit, they have to be passed as [JSON objects](/first-steps/layout-options.html#passing-options-to-verovio) directly.
 
 ### Base short options
 
