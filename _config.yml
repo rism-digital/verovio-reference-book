@@ -25,6 +25,8 @@ theme: verovio-theme
 twitter:
   card: summary
 
+# Needed to avoid 'jekyll-github-metadata' to crash locally
+github: [metadata]
 plugins:
   - "jekyll-github-metadata"
 
