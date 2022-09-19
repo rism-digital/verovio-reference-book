@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-19T07:41:47+00:00" />
+<meta property="article:published_time" content="2022-09-19T08:52:56+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="JavaScript and WebAssembly" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Pre-build versions","headline":"JavaScript and WebAssembly","datePublished":"2022-09-19T07:41:47+00:00","dateModified":"2022-09-19T07:41:47+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/javascript-and-webassembly.html"},"url":"/installing-or-building-from-sources/javascript-and-webassembly.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"Pre-build versions","headline":"JavaScript and WebAssembly","datePublished":"2022-09-19T08:52:56+00:00","dateModified":"2022-09-19T08:52:56+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/javascript-and-webassembly.html"},"url":"/installing-or-building-from-sources/javascript-and-webassembly.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -125,7 +125,7 @@
         
 <a class="toc-item toc-subsection" href="#pre-build-versions">Pre-build versions</a>
 
-<a class="toc-item toc-subsection" href="#basic-usage-of-the-toolkit">Basic usage of the toolkit</a>
+<a class="toc-item toc-subsection" href="#npm">NPM</a>
 
 <a class="toc-item toc-subsection" href="#building-the-toolkit">Building the toolkit</a>
 
@@ -165,32 +165,37 @@
         <h2>JavaScript and WebAssembly</h2>
         <h3 id="pre-build-versions">Pre-build versions</h3>
 
-<p>The verovio.org <a href="https://github.com/rism-digital/verovio.org">GitHub repository</a> provides compiled versions of the JavaScript toolkit. The toolkit is available in three options.</p>
+<p>The verovio.org <a href="https://github.com/rism-digital/verovio.org">GitHub repository</a> provides compiled versions of the JavaScript toolkit. The toolkit is available in three options. The recommended version is one built as <a href="https://webassembly.org/">WebAssembly</a> because it is the fastest and supported by <a href="https://caniuse.com/wasm">all recent browsers</a>. To use it, the file you need to include is:</p>
 
-<ol>
-  <li><strong>verovio-toolkit.js</strong> - in JavaScript (more precisely in <a href="https://asmjs.org">asm.js</a>)</li>
-  <li><strong>verovio-toolkit-wasm.js</strong> – in <a href="https://webassembly.org/">WebAssembly</a></li>
-  <li><strong>verovio-toolkit-hum.js</strong> – in WebAssenbly and with the Humdrum support</li>
-</ol>
+<p><strong><code class="language-plaintext highlighter-rouge">verovio-toolkit-wasm.js</code></strong></p>
 
-<p>A build of each of these is provided by CI for the development version as well as for each <a href="https://github.com/rism-digital/verovio/releases">release</a>.</p>
+<p>If you need Humdrum support, the file to include is:</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">verovio-toolkit-hum.js</code></strong></p>
+
+<p>If you need to have support for old browser, there is a <a href="https://asmjs.org">asm.js</a>) version, which is not recommended for new project. The file to include is:</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">verovio-toolkit.js</code></strong></p>
+
+<p>A build for the development version is available through CI, as well as for each <a href="https://github.com/rism-digital/verovio/releases">release</a> for the Humdrum and the legacy <code class="language-plaintext highlighter-rouge">asm.js</code> version.</p>
 
 <p>The latest release is always available from:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/latest/verovio-toolkit.js
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js
 </code></pre></div></div>
 
 <p>The latest development version is available from:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/develop/verovio-toolkit.js
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js
 </code></pre></div></div>
 
 <p>Previous releases are available from their corresponding directory, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/2.7.1/verovio-toolkit.js
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.verovio.org/javascript/2.7.1/verovio-toolkit-wasm.js
 </code></pre></div></div>
 
-<h4 id="npm">NPM</h4>
+<p>For instructions on a basic usage of the JavaScript version of the toolkit, see the <a href="/first-steps/getting-started.html">Getting started</a> section of the <a href="/first-steps/">Tutorial 1: First steps</a> chapter.</p>
+
+<h3 id="npm">NPM</h3>
 
 <p>The latest stable version is available via <a href="https://www.npmjs.com/package/verovio">NPM</a> registry. The version distributed via NPM it the WebAssembly build. It can be installed with:</p>
 
@@ -199,14 +204,62 @@
 
 <p>The homepage of the Verovio package includes <a href="https://www.npmjs.com/package/verovio#usage">documentation</a> on how to use it.</p>
 
-<p>The version with Humdrum support is also available via <a href="https://www.npmjs.com/package/verovio-humdrum">NPM</a> registry since version 3.9.0. It is also in WebAssembly. It can be installed with:</p>
+<h4 id="basic-usage-with-npm">Basic usage with NPM</h4>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>verovio-humdrum
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">verovio</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="cm">/* Wait for verovio to load */</span>
+<span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// create the toolkit instance</span>
+    <span class="kd">const</span> <span class="nx">vrvToolkit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+    <span class="c1">// read the MEI file</span>
+    <span class="nx">mei</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.mei</span><span class="dl">'</span><span class="p">);</span>
+    <span class="c1">// load the MEI data as string into the toolkit</span>
+    <span class="nx">vrvToolkit</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">mei</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+    <span class="c1">// render the fist page as SVG</span>
+    <span class="nx">svg</span> <span class="o">=</span> <span class="nx">vrvToolkit</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">{});</span>
+    <span class="c1">// save the SVG into a file</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.svg</span><span class="dl">'</span><span class="p">,</span> <span class="nx">svg</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
-<h3 id="basic-usage-of-the-toolkit">Basic usage of the toolkit</h3>
+<h4 id="usage-with-esm">Usage with ESM</h4>
 
-<p>For instructions on a basic usage of the JavaScript version of the toolkit, see the <a href="/first-steps/getting-started.html">Getting started</a> section of the <a href="/first-steps/">Tutorial 1: First steps</a> chapter.</p>
+<p>Since version 3.11.0 there is an ESM compatible version of the <em>npm</em> package with a modularized build of the Verovio module. This is because we need to wait for the asynchronous module to be ready for usage, and this is now <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> based instead of using the <code class="language-plaintext highlighter-rouge">onRuntimeInitialized</code> callback function.</p>
+
+<p>Use <code class="language-plaintext highlighter-rouge">.mjs</code> as file extension when using this directly in Node.js or set <code class="language-plaintext highlighter-rouge">"type": "module"</code> in your <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">createVerovioModule</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">verovio/wasm</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">VerovioToolkit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">verovio/esm</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">fs</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">node:fs</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">createVerovioModule</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">VerovioModule</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="kd">const</span> <span class="nx">verovioToolkit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VerovioToolkit</span><span class="p">(</span><span class="nx">VerovioModule</span><span class="p">);</span>
+   <span class="kd">const</span> <span class="nx">score</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.mei</span><span class="dl">'</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
+   <span class="nx">verovioToolkit</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
+   <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">verovioToolkit</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">{});</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>This is the recommended way to use Verovio when creating a website or web app with bundlers like webpack or Vite or when using JavaScript frameworks like React or Vue.js.</p>
+
+<h4 id="usage-with-commonjs">Usage with CommonJS</h4>
+
+<p>Alternatively this package also exports a version compatible with CommonJS</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">createVerovioModule</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio/wasm</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">VerovioToolkit</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio/esm</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="humdrum-support">Humdrum support</h4>
+
+<p>Since version 3.11.0 the NPM package provides an additional module with Humdrum support:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">createVerovioModule</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">verovio/wasm-hum</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h3 id="building-the-toolkit">Building the toolkit</h3>
 
