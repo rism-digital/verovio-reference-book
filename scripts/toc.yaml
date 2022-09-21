@@ -74,6 +74,7 @@
 "/toolkit-reference/output-formats.html#humdrum": Humdrum
 "/toolkit-reference/toolkit-methods.html": Toolkit methods
 "/toolkit-reference/toolkit-methods.html#converthumdrumtohumdrum": ConvertHumdrumToHumdrum
+"/toolkit-reference/toolkit-methods.html#converthumdrumtomidi": ConvertHumdrumToMIDI
 "/toolkit-reference/toolkit-methods.html#convertmeitohumdrum": ConvertMEIToHumdrum
 "/toolkit-reference/toolkit-methods.html#edit": Edit
 "/toolkit-reference/toolkit-methods.html#editinfo": EditInfo
@@ -84,6 +85,7 @@
 "/toolkit-reference/toolkit-methods.html#getexpansionidsforelement": GetExpansionIdsForElement
 "/toolkit-reference/toolkit-methods.html#gethumdrum": GetHumdrum
 "/toolkit-reference/toolkit-methods.html#gethumdrumfile": GetHumdrumFile
+"/toolkit-reference/toolkit-methods.html#getid": GetID
 "/toolkit-reference/toolkit-methods.html#getlog": GetLog
 "/toolkit-reference/toolkit-methods.html#getmei": GetMEI
 "/toolkit-reference/toolkit-methods.html#getmidivaluesforelement": GetMIDIValuesForElement
@@ -92,10 +94,10 @@
 "/toolkit-reference/toolkit-methods.html#getoptions": GetOptions
 "/toolkit-reference/toolkit-methods.html#getpagecount": GetPageCount
 "/toolkit-reference/toolkit-methods.html#getpagewithelement": GetPageWithElement
+"/toolkit-reference/toolkit-methods.html#getresourcepath": GetResourcePath
 "/toolkit-reference/toolkit-methods.html#getscale": GetScale
 "/toolkit-reference/toolkit-methods.html#gettimeforelement": GetTimeForElement
 "/toolkit-reference/toolkit-methods.html#gettimesforelement": GetTimesForElement
-"/toolkit-reference/toolkit-methods.html#getuuid": GetUuid
 "/toolkit-reference/toolkit-methods.html#getversion": GetVersion
 "/toolkit-reference/toolkit-methods.html#loaddata": LoadData
 "/toolkit-reference/toolkit-methods.html#loadfile": LoadFile
@@ -103,6 +105,7 @@
 "/toolkit-reference/toolkit-methods.html#loadzipdatabuffer": LoadZipDataBuffer
 "/toolkit-reference/toolkit-methods.html#redolayout": RedoLayout
 "/toolkit-reference/toolkit-methods.html#redopagepitchposlayout": RedoPagePitchPosLayout
+"/toolkit-reference/toolkit-methods.html#renderdata": RenderData
 "/toolkit-reference/toolkit-methods.html#rendertomidi": RenderToMIDI
 "/toolkit-reference/toolkit-methods.html#rendertomidifile": RenderToMIDIFile
 "/toolkit-reference/toolkit-methods.html#rendertopae": RenderToPAE
@@ -114,6 +117,7 @@
 "/toolkit-reference/toolkit-methods.html#resetoptions": ResetOptions
 "/toolkit-reference/toolkit-methods.html#resetxmlidseed": ResetXmlIdSeed
 "/toolkit-reference/toolkit-methods.html#savefile": SaveFile
+"/toolkit-reference/toolkit-methods.html#select": Select
 "/toolkit-reference/toolkit-methods.html#setinputfrom": SetInputFrom
 "/toolkit-reference/toolkit-methods.html#setoption": SetOption
 "/toolkit-reference/toolkit-methods.html#setoptions": SetOptions

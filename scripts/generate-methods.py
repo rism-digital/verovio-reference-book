@@ -21,7 +21,13 @@ def get_text_for_nodes(xml_nodes):
     for node_text in xml_nodes:
         text += node_text
     return text.strip()
-    
+
+def extract_nojs_name(xml_node):
+    description = """
+        Extract the name of nojs method from a Doxygen XML node
+    """
+    return xml_node.findtext('name')
+
 def extract_method(xml_node):
     description = """
         Extract the method relevant part from a Doxygen XML node
@@ -99,6 +105,9 @@ def print_method(method, file):
         file.write("{}\n\n".format(method['briefdescription']))
     if method.get('detaileddescription'):
         file.write("{}\n\n".format(method['detaileddescription']))
+
+    if method.get('nojs'):
+        file.write("{{% aside .warning %}}{}{{% endaside %}}\n\n".format("This method is not available in the JavaScript distributed version of the toolkit"))
 
     # return
     if method.get('type'):
@@ -188,6 +197,14 @@ if __name__ == "__main__":
     # get the toolkit class
     toolkit = index_xml.xpath('//compoundname[text()="vrv::Toolkit"]')[0]
 
+   # get all the methods not supported in the JS toolkit
+    doxygen_nojss = toolkit.xpath('//memberdef[@kind="function" and @prot="public" and starts-with(@id, "group__nojs_")]')
+
+    # extract their content into an array of dictionaries
+    nojs_methods = []
+    for doxygen_nojs in doxygen_nojss:
+        nojs_methods.append(extract_nojs_name(doxygen_nojs))
+
     # get all the public methods
     doxygen_methods = toolkit.xpath('//memberdef[@kind="function" and @prot="public" and not(starts-with(@id, "group__nodoc_"))]')
 
@@ -209,6 +226,9 @@ if __name__ == "__main__":
     print_frontmatter(file)
 
     for method in methods:
+        if method.get('name') in nojs_methods:
+            print(method['name'])
+            method['nojs'] = True
         print_method(method, file)
 
     file.close()
