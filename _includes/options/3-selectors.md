@@ -7,6 +7,8 @@
 
 See also: [Transposition](/advanced-topics/transposition.html) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"transposeMdiv": <string>`</span><span class="lang2">`--transpose-mdiv <string>`</span> {% endcol %}{% col 8 %} Json mapping the mdiv ids to the corresponding transposition {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"transposeSelectedOnly":  <boolean>`</span><span class="lang2">`--transpose-selected-only `</span> {% endcol %}{% col 8 %} Transpose only the selected content and ignore unselected editorial content {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"transposeSelectedOnly":  <boolean>`</span><span class="lang2">`--transpose-selected-only `</span> {% endcol %}{% col 8 %} Transpose only the selected content and ignore unselected editorial content
+
+{% include options/3-selectors/transposeSelectedOnly.md %} {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"transposeToSoundingPitch":  <boolean>`</span><span class="lang2">`--transpose-to-sounding-pitch `</span> {% endcol %}{% col 8 %} Transpose to sounding pitch by evaluating @trans.semi {% endcol %}
 {% endrow %}
