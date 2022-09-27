@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-23T16:39:37+00:00" />
+<meta property="article:published_time" content="2022-09-27T15:23:55+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Adding SMuFL glyphs" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"All SMuFL glyphs used by Verovio have to be available in the Leipzig font. For adding support for a new SMuFL glyph, the steps are:","headline":"Adding SMuFL glyphs","datePublished":"2022-09-23T16:39:37+00:00","dateModified":"2022-09-23T16:39:37+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/adding-smufl-glyphs.html"},"url":"/contributing/adding-smufl-glyphs.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"All SMuFL glyphs used by Verovio have to be available in the Leipzig font. For adding support for a new SMuFL glyph, the steps are:","headline":"Adding SMuFL glyphs","datePublished":"2022-09-27T15:23:55+00:00","dateModified":"2022-09-27T15:23:55+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/adding-smufl-glyphs.html"},"url":"/contributing/adding-smufl-glyphs.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -161,31 +161,39 @@
 
 <ol>
   <li>Add the glyph to the Leipzig font file</li>
-  <li>Generate the Leipzig font as SVG font</li>
-  <li>Add the glyph to the list of supported glyph in the XSL list</li>
+  <li>Generate the Leipzig in various format and the metadata with the script available in <a href="https://github.com/rism-digital/leipzig">Leipzig</a> repository</li>
+  <li>Add the glyph to the list of supported glyph in the XML list and re-generate the fonts.</li>
 </ol>
 
-<p>Make sure you always add glyphs <strong>only</strong> in the develop-leipzig branch because conflict solving is problematic with the process of adding a glyph, in particular for the Leipzig font file. For this reason, make sure you always pull the latest version from the develop-leipzig branch before starting your work and do not wait too long before making a PR. If changes have been made in between, you will need to add your glyphs again.</p>
+<p>Make sure you always add glyphs <strong>only</strong> in the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> font. Because conflict solving is quickly very when adding a glyph (in particular with the binary font files), make sure you always pull the latest version of the font file branch before starting your work and do not wait too long before making a PR. If changes have been made in between, you will need to add your glyphs again.</p>
 
 <p>When making a PR, always add an image (e.g., screenshot of FontForge) showing the glyphs.</p>
 
 <h4 id="adding-the-glyph-to-the-leipzig-font-file">Adding the glyph to the Leipzig font file</h4>
 
-<p>The file is <code class="language-plaintext highlighter-rouge">./fonts/Leipzig-5.2.sfd</code> and should be edited with <a href="https://fontforge.org/">FontForge</a>. Very often it is possible to copy another existing glyph as basis for the new glyph. Leipzig is visually lighter and thinner than Bravura and new glyphs have to follow this design choice. Do not copy glyphs from Bravura. Make sure the font is valid by running “Element =&gt; “Find Problems…”.</p>
+<p>The file to modify is <code class="language-plaintext highlighter-rouge">./Leipzig.sfd</code> and should be edited with <a href="https://fontforge.org/">FontForge</a>. Very often it is possible to copy another existing glyph as basis for the new glyph. Leipzig is visually lighter and thinner than Bravura and new glyphs have to follow this design choice. <strong>Do not simply copy glyphs from Bravura.</strong> Make sure the font is valid by running “Element =&gt; “Find Problems…”.</p>
 
-<p>Once the new glyph(s) has/have been added, you also need to change the version number in the font info (menu “Element” =&gt; “Font Info” and then tab “PS Names” in fields “Version” and “Copyright” and tab “Comment” where you also need to add a comment together with the version number. The file can be saved.</p>
+<p>Once the new glyph(s) has/have been added, you also need to change the version number in the font info (menu “Element” =&gt; “Font Info” and then tab “PS Names” in fields “Version” and “Copyright” and tab “FONTLOG” where you also need to add a comment together with the version number. The file can be saved.</p>
 
-<h4 id="generate-the-leipzig-font-as-svg-font">Generate the Leipzig font as SVG font</h4>
+<h4 id="generate-other-font-formats-and-the-metadata">Generate other font formats and the metadata</h4>
 
-<p>From FontForge, export the with menu “File” =&gt; “Generate Fonts…” and select “SVG font” (option “validate before saving” can be turned off). The file needs to be written to <code class="language-plaintext highlighter-rouge">./fonts/Leipzig.svg</code>.</p>
+<p>Once the <code class="language-plaintext highlighter-rouge">./Leipzig.sfd</code> has been modify and saved, you have to run the <code class="language-plaintext highlighter-rouge">./generate_font.py</code> script that will generate different font formats and the metadata. You are now ready to make a PR to the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> repository.</p>
 
-<h4 id="add-the-glyph-to-the-list-of-supported-glyph-in-the-xsl-list">Add the glyph to the list of supported glyph in the XSL list</h4>
+<h4 id="add-the-glyph-to-the-list-of-supported-glyph-in-the-xml-list-and-re-generate-the-fonts">Add the glyph to the list of supported glyph in the XML list and re-generate the fonts</h4>
 
-<p>Open the file <code class="language-plaintext highlighter-rouge">./fonts/supported.xsl</code> and uncomment the glyph(s) you added to Leipzig. The XSL file is then used to extract the glyphs supported by Verovio</p>
+<p>Once the PR to the <a href="https://github.com/rism-digital/leipzig">Leipzig</a> repository has been approved and merged, the new glyphs have to be added to the Verovio codebase. The first thing to do is to add them to the list of glyphs supported by Verovio.</p>
 
-<h4 id="make-a-pr-to-the-develop-leipzig-branch">Make a PR to the develop-leipzig branch</h4>
+<p>Open the file <code class="language-plaintext highlighter-rouge">./fonts/supported.xml</code> and uncomment the glyph(s) you added to Leipzig. The XML file is then used to extract the glyphs supported by Verovio.</p>
 
-<p>Once the PR will have been merged, the glyphs will be extracted from the SVG font by running the script <code class="language-plaintext highlighter-rouge">./fonts/generate_all.sh</code> (from <code class="language-plaintext highlighter-rouge">./fonts/</code>). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in <code class="language-plaintext highlighter-rouge">./data/</code> and in <code class="language-plaintext highlighter-rouge">./include/vrv/smufl.h</code></p>
+<p>To do so, you need to copy to <code class="language-plaintext highlighter-rouge">./fonts/Leipzig</code> the new Leipzig files:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Leipzig.woff2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Leipzig.ttf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Leipzig.svg</code></li>
+  <li><code class="language-plaintext highlighter-rouge">leipzig_metadata.json</code></li>
+</ul>
+
+<p>The glyphs will be extracted from the SVG font by running the script <code class="language-plaintext highlighter-rouge">./fonts/generate_all.sh</code> (from <code class="language-plaintext highlighter-rouge">./fonts/</code>). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in <code class="language-plaintext highlighter-rouge">./data/</code> and in <code class="language-plaintext highlighter-rouge">./include/vrv/smufl.h</code>. The CSS font files will also be updated.</p>
 
     </div>
 </div>
