@@ -5,27 +5,33 @@ title: "Adding SMuFL glyphs"
 All SMuFL glyphs used by Verovio have to be available in the [Leipzig](https://github.com/rism-digital/leipzig) font. For adding support for a new SMuFL glyph, the steps are:
 
 1. Add the glyph to the Leipzig font file
-2. Generate the Leipzig font as SVG font
-3. Add the glyph to the list of supported glyph in the XSL list
+2. Generate the Leipzig in various format and the metadata with the script available in [Leipzig](https://github.com/rism-digital/leipzig) repository
+3. Add the glyph to the list of supported glyph in the XML list and re-generate the fonts.
 
-Make sure you always add glyphs **only** in the develop-leipzig branch because conflict solving is problematic with the process of adding a glyph, in particular for the Leipzig font file. For this reason, make sure you always pull the latest version from the develop-leipzig branch before starting your work and do not wait too long before making a PR. If changes have been made in between, you will need to add your glyphs again.
+Make sure you always add glyphs **only** in the [Leipzig](https://github.com/rism-digital/leipzig) font. Because conflict solving is quickly very when adding a glyph (in particular with the binary font files), make sure you always pull the latest version of the font file branch before starting your work and do not wait too long before making a PR. If changes have been made in between, you will need to add your glyphs again.
 
 When making a PR, always add an image (e.g., screenshot of FontForge) showing the glyphs.
 
 #### Adding the glyph to the Leipzig font file
 
-The file is `./fonts/Leipzig-5.2.sfd` and should be edited with [FontForge](https://fontforge.org/). Very often it is possible to copy another existing glyph as basis for the new glyph. Leipzig is visually lighter and thinner than Bravura and new glyphs have to follow this design choice. Do not copy glyphs from Bravura. Make sure the font is valid by running "Element => "Find Problems...".
+The file to modify is `./Leipzig.sfd` and should be edited with [FontForge](https://fontforge.org/). Very often it is possible to copy another existing glyph as basis for the new glyph. Leipzig is visually lighter and thinner than Bravura and new glyphs have to follow this design choice. **Do not simply copy glyphs from Bravura.** Make sure the font is valid by running "Element => "Find Problems...".
 
-Once the new glyph(s) has/have been added, you also need to change the version number in the font info (menu "Element" => "Font Info" and then tab "PS Names" in fields "Version" and "Copyright" and tab "Comment" where you also need to add a comment together with the version number. The file can be saved.
+Once the new glyph(s) has/have been added, you also need to change the version number in the font info (menu "Element" => "Font Info" and then tab "PS Names" in fields "Version" and "Copyright" and tab "FONTLOG" where you also need to add a comment together with the version number. The file can be saved.
 
-#### Generate the Leipzig font as SVG font
+#### Generate other font formats and the metadata
 
-From FontForge, export the with menu "File" => "Generate Fonts..." and select "SVG font" (option "validate before saving" can be turned off). The file needs to be written to `./fonts/Leipzig.svg`.
+Once the `./Leipzig.sfd` has been modify and saved, you have to run the `./generate_font.py` script that will generate different font formats and the metadata. You are now ready to make a PR to the [Leipzig](https://github.com/rism-digital/leipzig) repository.
 
-#### Add the glyph to the list of supported glyph in the XSL list
+#### Add the glyph to the list of supported glyph in the XML list and re-generate the fonts
 
-Open the file `./fonts/supported.xsl` and uncomment the glyph(s) you added to Leipzig. The XSL file is then used to extract the glyphs supported by Verovio
+Once the PR to the [Leipzig](https://github.com/rism-digital/leipzig) repository has been approved and merged, the new glyphs have to be added to the Verovio codebase. The first thing to do is to add them to the list of glyphs supported by Verovio.
 
-#### Make a PR to the develop-leipzig branch
+Open the file `./fonts/supported.xml` and uncomment the glyph(s) you added to Leipzig. The XML file is then used to extract the glyphs supported by Verovio.
 
-Once the PR will have been merged, the glyphs will be extracted from the SVG font by running the script `./fonts/generate_all.sh` (from `./fonts/`). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in `./data/` and in `./include/vrv/smufl.h`
+To do so, you need to copy to `./fonts/Leipzig` the new Leipzig files:
+* `Leipzig.woff2`
+* `Leipzig.ttf`
+* `Leipzig.svg`
+* `leipzig_metadata.json`
+
+The glyphs will be extracted from the SVG font by running the script `./fonts/generate_all.sh` (from `./fonts/`). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in `./data/` and in `./include/vrv/smufl.h`. The CSS font files will also be updated.
