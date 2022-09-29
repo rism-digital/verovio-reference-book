@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-29T12:37:24+00:00" />
+<meta property="article:published_time" content="2022-09-29T20:34:52+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"ConvertHumdrumToHumdrum","headline":"Toolkit methods","datePublished":"2022-09-29T12:37:24+00:00","dateModified":"2022-09-29T12:37:24+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"ConvertHumdrumToHumdrum","headline":"Toolkit methods","datePublished":"2022-09-29T20:34:52+00:00","dateModified":"2022-09-29T20:34:52+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -173,8 +173,6 @@
 
 <a class="toc-item toc-subsection" href="#gettimesforelement">GetTimesForElement</a>
 
-<a class="toc-item toc-subsection" href="#getuuid">GetUuid</a>
-
 <a class="toc-item toc-subsection" href="#getversion">GetVersion</a>
 
 <a class="toc-item toc-subsection" href="#loaddata">LoadData</a>
@@ -188,6 +186,8 @@
 <a class="toc-item toc-subsection" href="#redolayout">RedoLayout</a>
 
 <a class="toc-item toc-subsection" href="#redopagepitchposlayout">RedoPagePitchPosLayout</a>
+
+<a class="toc-item toc-subsection" href="#renderdata">RenderData</a>
 
 <a class="toc-item toc-subsection" href="#rendertomidi">RenderToMIDI</a>
 
@@ -212,8 +212,6 @@
 <a class="toc-item toc-subsection" href="#savefile">SaveFile</a>
 
 <a class="toc-item toc-subsection" href="#select">Select</a>
-
-<a class="toc-item toc-subsection" href="#setfont">SetFont</a>
 
 <a class="toc-item toc-subsection" href="#setinputfrom">SetInputFrom</a>
 
@@ -634,7 +632,8 @@
 
 <p>Write the humdrum buffer to the file.</p>
 
-<p>This methods is not available in the JavaScript version of the toolkit.</p>
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -673,6 +672,9 @@
 
 <p>Return the ID of the Toolkit instance.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – The ID as as string</p>
@@ -690,6 +692,9 @@
 <h3 id="getlog">GetLog</h3>
 
 <p>Get the log content for the latest operation.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -822,6 +827,9 @@
 
 <p>Get the value for an option.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – The option value as a string</p>
@@ -904,6 +912,9 @@
 
 <p>The number of pages depends one the page size and if encoded layout was taken into account or not.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">int</code> – The number of pages</p>
@@ -961,9 +972,12 @@
 
 <p>Get the resource path for the Toolkit instance.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – A string with the resource path</p>
 
 <p><strong>Original header</strong></p>
 
@@ -978,6 +992,9 @@
 <h3 id="getscale">GetScale</h3>
 
 <p>Get the scale option.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1071,25 +1088,12 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getTimesForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="getuuid">GetUuid</h3>
-
-<p><strong>Returns</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
-
-<p><strong>Original header</strong></p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetUuid</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p><strong>Example call</strong></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getUuid</span><span class="p">()</span>
-</code></pre></div></div>
-
 <h3 id="getversion">GetVersion</h3>
 
 <p>Return the version number.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1110,6 +1114,9 @@
 <p>Load a string data with the type previously specified in the options.</p>
 
 <p>By default, the methods try to auto-detect the type.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1150,6 +1157,9 @@
 
 <p>Previously convert UTF16 files to UTF8 or extract files from MusicXML compressed files.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully loaded</p>
@@ -1187,6 +1197,9 @@
 
 <p>Load a MusicXML compressed file passed as base64 encoded string.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the data was successfully loaded</p>
@@ -1223,6 +1236,9 @@
 <h3 id="loadzipdatabuffer">LoadZipDataBuffer</h3>
 
 <p>Load a MusicXML compressed file passed as a buffer of bytes.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1322,6 +1338,51 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">redoPagePitchPosLayout</span><span class="p">()</span>
 </code></pre></div></div>
 
+<h3 id="renderdata">RenderData</h3>
+
+<p>Render the first page of the data to SVG.</p>
+
+<p>This method is a wrapper for setting options, loading data and rendering the first page. It will return an empty string if the options cannot be set or the data cannot be loaded.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – The SVG first page as a string</p>
+
+<p><strong>Parameters</strong></p>
+
+<table class="table table-condensed table-sm text-xsmall">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Default</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">data</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td>A string with the data (e.g., MEI data) to be loaded</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
+      <td>∅</td>
+      <td>A stringified JSON objects with the output options</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">RenderData</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">jsonOptions</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
+</code></pre></div></div>
+
 <h3 id="rendertomidi">RenderToMIDI</h3>
 
 <p>Render the document to MIDI.</p>
@@ -1344,7 +1405,8 @@
 
 <p>Render a document to MIDI and save it to the file.</p>
 
-<p>This methods is not available in the JavaScript version of the toolkit.</p>
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1403,7 +1465,10 @@
 
 <p>Render a document to Plaine and Easie and save it to the file.</p>
 
-<p>Only the top staff / layer is exported. This methods is not available in the JavaScript version of the toolkit.</p>
+<p>Only the top staff / layer is exported.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1485,7 +1550,8 @@
 
 <p>Render a page to SVG and save it to the file.</p>
 
-<p>This methods is not available in the JavaScript version of the toolkit.</p>
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1532,7 +1598,7 @@
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">std::string</code> – The timemap as a string</p>
+<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1548,7 +1614,7 @@
       <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td><code class="language-plaintext highlighter-rouge">""</code></td>
-      <td>A stringified JSON objects with the timemap options</td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -1567,7 +1633,8 @@
 
 <p>Render a document to timemap and save it to the file.</p>
 
-<p>This methods is not available in the JavaScript version of the toolkit.</p>
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1628,9 +1695,12 @@
 
 <h3 id="resetxmlidseed">ResetXmlIdSeed</h3>
 
-<p>Reset the @xml:id seed.</p>
+<p>Reset the seed used to generate MEI xml:id attribute values.</p>
 
 <p>Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1669,7 +1739,8 @@
 
 <p>Get the MEI and save it to the file.</p>
 
-<p>This methods is not available in the JavaScript version of the toolkit.</p>
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1749,46 +1820,12 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="setfont">SetFont</h3>
-
-<p>Set the font in the resources.</p>
-
-<p><strong>Returns</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
-
-<p><strong>Parameters</strong></p>
-
-<table class="table table-condensed table-sm text-xsmall">
-  <tbody>
-    <tr>
-      <td>Name</td>
-      <td>Type</td>
-      <td>Default</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">fontName</code></td>
-      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
-      <td>∅</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Original header</strong></p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">SetFont</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">fontName</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p><strong>Example call</strong></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">fontName</span><span class="p">)</span>
-</code></pre></div></div>
-
 <h3 id="setinputfrom">SetInputFrom</h3>
 
 <p>Set the input from option.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1826,6 +1863,9 @@
 <h3 id="setoption">SetOption</h3>
 
 <p>Set the value for an option.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1909,6 +1949,9 @@
 
 <p>Set the output to option.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the option was successfully set</p>
@@ -1927,7 +1970,7 @@
       <td><code class="language-plaintext highlighter-rouge">outputTo</code></td>
       <td><code class="language-plaintext highlighter-rouge">std::string const &amp;</code></td>
       <td>∅</td>
-      <td> </td>
+      <td>the output to value as string</td>
     </tr>
   </tbody>
 </table>
@@ -1947,6 +1990,9 @@
 <p>Set the resource path for the Toolkit instance.</p>
 
 <p>This method needs to be called if the constructor had initFont=false or if the resource path needs to be changed.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1984,6 +2030,9 @@
 <h3 id="setscale">SetScale</h3>
 
 <p>Set the scale option.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -2057,6 +2106,9 @@
 
 <p>A single JSON object is returned when there is a global input error. When reading the input succeeds, validation is grouped by input keys. The methods always returns errors in PAE pedantic mode. No data remains loaded after the validation.</p>
 
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
+
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object with the validation warnings or errors</p>
@@ -2094,7 +2146,10 @@
 
 <p>Validate the Plaine and Easie file from the file system.</p>
 
-<p>The method calls Toolkit::ValidatePAE. This methods is not available in the JavaScript version of the toolkit.</p>
+<p>The method calls Toolkit::ValidatePAE.</p>
+
+<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
+</aside>
 
 <p><strong>Returns</strong></p>
 
