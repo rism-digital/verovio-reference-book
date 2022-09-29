@@ -31,7 +31,6 @@
 "/first-steps/layout-options.html#end-of-section-3": End of Section 3
 "/first-steps/score-navigation.html": Score navigation
 "/first-steps/score-navigation.html#creating-the-controls": Creating the controls
-"/first-steps/npm-usage.html": Usage with npm
 "/interactive-notation/": Introduction
 "/interactive-notation/working-with-css-and-svg.html": Working with CSS and SVG
 "/interactive-notation/xpath-queries.html": XPath queries
@@ -146,8 +145,7 @@
   and WebAssembly
 "/installing-or-building-from-sources/javascript-and-webassembly.html#pre-build-versions": Pre-build
   versions
-"/installing-or-building-from-sources/javascript-and-webassembly.html#basic-usage-of-the-toolkit": Basic
-  usage of the toolkit
+"/installing-or-building-from-sources/javascript-and-webassembly.html#npm": NPM
 "/installing-or-building-from-sources/javascript-and-webassembly.html#building-the-toolkit": Building
   the toolkit
 "/installing-or-building-from-sources/python.html": Python
@@ -164,6 +162,7 @@
 "/contributing/guidelines.html#includes-and-forward-declarations": Includes and forward
   declarations
 "/contributing/guidelines.html#null-and-boolean": Null and boolean
+"/contributing/guidelines.html#integer-data-types": Integer data types
 "/contributing/guidelines.html#class-method-and-member-names": Class, method and member
   names
 "/contributing/guidelines.html#comments": Comments
