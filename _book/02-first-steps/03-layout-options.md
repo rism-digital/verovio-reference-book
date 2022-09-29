@@ -8,7 +8,7 @@ To start, we will first try and reduce the size of the image output, to demonstr
 
 ### Passing options to Verovio
 
-Passing options to Verovio is as easy as creating a set of key and value pairs, and using the `setOptions` method on the toolkit. To scale the output we will use the `scale` option. Add the following to your page, after we have instantiated the toolkit but before we render the data:
+Passing options to Verovio is as easy as creating a set of key and value pairs, and using the `setOptions` method on the toolkit. To scale the output we will use the `scale` option given as percentage of the normal (100) output. Add the following to your page, after we have instantiated the toolkit but before we render the data:
 
 ```js
 tk.setOptions({
