@@ -31,6 +31,7 @@
 "/first-steps/layout-options.html#end-of-section-3": End of Section 3
 "/first-steps/score-navigation.html": Score navigation
 "/first-steps/score-navigation.html#creating-the-controls": Creating the controls
+"/first-steps/npm-usage.html": Usage with npm
 "/interactive-notation/": Introduction
 "/interactive-notation/working-with-css-and-svg.html": Working with CSS and SVG
 "/interactive-notation/xpath-queries.html": XPath queries
@@ -97,7 +98,6 @@
 "/toolkit-reference/toolkit-methods.html#getscale": GetScale
 "/toolkit-reference/toolkit-methods.html#gettimeforelement": GetTimeForElement
 "/toolkit-reference/toolkit-methods.html#gettimesforelement": GetTimesForElement
-"/toolkit-reference/toolkit-methods.html#getuuid": GetUuid
 "/toolkit-reference/toolkit-methods.html#getversion": GetVersion
 "/toolkit-reference/toolkit-methods.html#loaddata": LoadData
 "/toolkit-reference/toolkit-methods.html#loadfile": LoadFile
@@ -105,6 +105,7 @@
 "/toolkit-reference/toolkit-methods.html#loadzipdatabuffer": LoadZipDataBuffer
 "/toolkit-reference/toolkit-methods.html#redolayout": RedoLayout
 "/toolkit-reference/toolkit-methods.html#redopagepitchposlayout": RedoPagePitchPosLayout
+"/toolkit-reference/toolkit-methods.html#renderdata": RenderData
 "/toolkit-reference/toolkit-methods.html#rendertomidi": RenderToMIDI
 "/toolkit-reference/toolkit-methods.html#rendertomidifile": RenderToMIDIFile
 "/toolkit-reference/toolkit-methods.html#rendertopae": RenderToPAE
@@ -117,7 +118,6 @@
 "/toolkit-reference/toolkit-methods.html#resetxmlidseed": ResetXmlIdSeed
 "/toolkit-reference/toolkit-methods.html#savefile": SaveFile
 "/toolkit-reference/toolkit-methods.html#select": Select
-"/toolkit-reference/toolkit-methods.html#setfont": SetFont
 "/toolkit-reference/toolkit-methods.html#setinputfrom": SetInputFrom
 "/toolkit-reference/toolkit-methods.html#setoption": SetOption
 "/toolkit-reference/toolkit-methods.html#setoptions": SetOptions
@@ -146,7 +146,8 @@
   and WebAssembly
 "/installing-or-building-from-sources/javascript-and-webassembly.html#pre-build-versions": Pre-build
   versions
-"/installing-or-building-from-sources/javascript-and-webassembly.html#npm": NPM
+"/installing-or-building-from-sources/javascript-and-webassembly.html#basic-usage-of-the-toolkit": Basic
+  usage of the toolkit
 "/installing-or-building-from-sources/javascript-and-webassembly.html#building-the-toolkit": Building
   the toolkit
 "/installing-or-building-from-sources/python.html": Python
@@ -163,7 +164,6 @@
 "/contributing/guidelines.html#includes-and-forward-declarations": Includes and forward
   declarations
 "/contributing/guidelines.html#null-and-boolean": Null and boolean
-"/contributing/guidelines.html#integer-data-types": Integer data types
 "/contributing/guidelines.html#class-method-and-member-names": Class, method and member
   names
 "/contributing/guidelines.html#comments": Comments

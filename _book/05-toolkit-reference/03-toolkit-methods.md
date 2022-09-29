@@ -301,7 +301,7 @@ result = toolkit.getHumdrum()
 
 Write the humdrum buffer to the file.
 
-This methods is not available in the JavaScript version of the toolkit.
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -331,6 +331,8 @@ result = toolkit.getHumdrumFile(filename)
 
 Return the ID of the Toolkit instance.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `std::string` – The ID as as string
@@ -351,6 +353,8 @@ result = toolkit.getID()
 ### GetLog
 
 Get the log content for the latest operation.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -459,6 +463,8 @@ result = toolkit.getNotatedIdForElement(xmlId)
 
 Get the value for an option.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `std::string` – The option value as a string
@@ -518,6 +524,8 @@ Return the number of pages in the loaded document.
 
 The number of pages depends one the page size and if encoded layout was taken into account or not.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `int` – The number of pages
@@ -569,9 +577,11 @@ result = toolkit.getPageWithElement(xmlId)
 
 Get the resource path for the Toolkit instance.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
-`std::string`
+`std::string` – A string with the resource path
 
 **Original header**
 
@@ -589,6 +599,8 @@ result = toolkit.getResourcePath()
 ### GetScale
 
 Get the scale option.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -667,28 +679,11 @@ result = toolkit.getTimesForElement(xmlId)
 ```
 
 {% include method-doc file="gettimesforelement-xmlid" %}
-### GetUuid
-
-**Returns**
-
-`std::string`
-
-**Original header**
-
-```cpp
-std::string vrv::Toolkit::GetUuid()
-```
-
-**Example call**
-
-```python
-result = toolkit.getUuid()
-```
-
-{% include method-doc file="getuuid" %}
 ### GetVersion
 
 Return the version number.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -712,6 +707,8 @@ result = toolkit.getVersion()
 Load a string data with the type previously specified in the options.
 
 By default, the methods try to auto-detect the type.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -743,6 +740,8 @@ Load a file from the file system.
 
 Previously convert UTF16 files to UTF8 or extract files from MusicXML compressed files.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `bool` – True if the file was successfully loaded
@@ -771,6 +770,8 @@ result = toolkit.loadFile(filename)
 
 Load a MusicXML compressed file passed as base64 encoded string.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `bool` – True if the data was successfully loaded
@@ -798,6 +799,8 @@ result = toolkit.loadZipDataBase64(data)
 ### LoadZipDataBuffer
 
 Load a MusicXML compressed file passed as a buffer of bytes.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -877,6 +880,37 @@ toolkit.redoPagePitchPosLayout()
 ```
 
 {% include method-doc file="redopagepitchposlayout" %}
+### RenderData
+
+Render the first page of the data to SVG.
+
+This method is a wrapper for setting options, loading data and rendering the first page. It will return an empty string if the options cannot be set or the data cannot be loaded.
+
+**Returns**
+
+`std::string` – The SVG first page as a string
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `data` | `const std::string &` | ∅ | A string with the data (e.g., MEI data) to be loaded |
+| `jsonOptions` | `const std::string &` | ∅ | A stringified JSON objects with the output options |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::RenderData(const std::string &data, const std::string &jsonOptions)
+```
+
+**Example call**
+
+```python
+result = toolkit.renderData(data, jsonOptions)
+```
+
+{% include method-doc file="renderdata-data-jsonoptions" %}
 ### RenderToMIDI
 
 Render the document to MIDI.
@@ -902,7 +936,7 @@ result = toolkit.renderToMIDI()
 
 Render a document to MIDI and save it to the file.
 
-This methods is not available in the JavaScript version of the toolkit.
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -955,7 +989,9 @@ result = toolkit.renderToPAE()
 
 Render a document to Plaine and Easie and save it to the file.
 
-Only the top staff / layer is exported. This methods is not available in the JavaScript version of the toolkit.
+Only the top staff / layer is exported.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1014,7 +1050,7 @@ result = toolkit.renderToSVG(pageNo, xmlDeclaration)
 
 Render a page to SVG and save it to the file.
 
-This methods is not available in the JavaScript version of the toolkit.
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1047,13 +1083,13 @@ Render a document to a timemap.
 
 **Returns**
 
-`std::string` – The timemap as a string
+`std::string`
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `jsonOptions` | `const std::string &` | `""` | A stringified JSON objects with the timemap options |
+| `jsonOptions` | `const std::string &` | `""` |  |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1073,7 +1109,7 @@ result = toolkit.renderToTimemap(jsonOptions)
 
 Render a document to timemap and save it to the file.
 
-This methods is not available in the JavaScript version of the toolkit.
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1127,6 +1163,8 @@ Reset the @xml:id seed.
 
 Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `void`
@@ -1155,7 +1193,7 @@ toolkit.resetXmlIdSeed(seed)
 
 Get the MEI and save it to the file.
 
-This methods is not available in the JavaScript version of the toolkit.
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1212,37 +1250,11 @@ result = toolkit.select(selection)
 ```
 
 {% include method-doc file="select-selection" %}
-### SetFont
-
-Set the font in the resources.
-
-**Returns**
-
-`bool`
-
-**Parameters**
-
-|---|---|---|
-| Name | Type | Default | Description |
-| `fontName` | `const std::string &` | ∅ |  |
-{: .table .table-condensed .table-sm .text-xsmall}
-
-**Original header**
-
-```cpp
-bool vrv::Toolkit::SetFont(const std::string &fontName)
-```
-
-**Example call**
-
-```python
-result = toolkit.setFont(fontName)
-```
-
-{% include method-doc file="setfont-fontname" %}
 ### SetInputFrom
 
 Set the input from option.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1271,6 +1283,8 @@ result = toolkit.setInputFrom(inputFrom)
 ### SetOption
 
 Set the value for an option.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1331,6 +1345,8 @@ result = toolkit.setOptions(jsonOptions)
 
 Set the output to option.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `bool` – True if the option was successfully set
@@ -1339,7 +1355,7 @@ Set the output to option.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `outputTo` | `std::string const &` | ∅ |  |
+| `outputTo` | `std::string const &` | ∅ | the output to value as string |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1360,6 +1376,8 @@ result = toolkit.setOutputTo(outputTo)
 Set the resource path for the Toolkit instance.
 
 This method needs to be called if the constructor had initFont=false or if the resource path needs to be changed.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1388,6 +1406,8 @@ result = toolkit.setResourcePath(path)
 ### SetScale
 
 Set the scale option.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1443,6 +1463,8 @@ Validate the Plaine and Easie code passed in the string data.
 
 A single JSON object is returned when there is a global input error. When reading the input succeeds, validation is grouped by input keys. The methods always returns errors in PAE pedantic mode. No data remains loaded after the validation.
 
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
 **Returns**
 
 `std::string` – A stringified JSON object with the validation warnings or errors
@@ -1471,7 +1493,9 @@ result = toolkit.validatePAE(data)
 
 Validate the Plaine and Easie file from the file system.
 
-The method calls Toolkit::ValidatePAE. This methods is not available in the JavaScript version of the toolkit.
+The method calls Toolkit::ValidatePAE.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
