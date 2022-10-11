@@ -6,7 +6,7 @@ The Verovio codebase is C++17 compliant and is cross-platform. It has been teste
 
 ### Homebrew on macOS
 
-For macOS users using Homebrew, the command-line version can be installed with:
+For macOS users using [Homebrew](https://brew.sh), the command-line version can be installed with:
 
 ```bash
 brew install verovio
