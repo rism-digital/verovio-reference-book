@@ -90,7 +90,7 @@ By default the executable is not stripped. To strip it during the installation d
 sudo make install/strip
 ```
 
-To building Verovio without Plaine and Easy support, run:
+To build Verovio without Plaine and Easy support, run:
 
 ```bash
 cmake ../cmake -DNO_PAE_SUPPORT=ON
