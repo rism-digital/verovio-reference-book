@@ -4,6 +4,10 @@ title: "Command-line version"
 
 Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward.
 
+### Homebrew on macOS
+
+The easiest way to install Verovio on a Mac is to use [Homebrew](https://brew.sh). `brew install verovio` will install the latest stable release, while `brew install verovio --HEAD` will build and install the latest development version from GitHub.
+
 ### MacOS or Linux
 
 To build the the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
