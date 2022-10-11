@@ -27,18 +27,18 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Command-line version" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward." />
-<meta property="og:description" content="Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward." />
+<meta name="description" content="The Verovio codebase is C++17 compliant and is cross-platform. It has been tested on several operating systems and architectures. This section describes how to build and install the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-built binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward." />
+<meta property="og:description" content="The Verovio codebase is C++17 compliant and is cross-platform. It has been tested on several operating systems and architectures. This section describes how to build and install the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-built binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-30T15:31:49+00:00" />
+<meta property="article:published_time" content="2022-10-11T15:55:10+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Command-line version" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward.","headline":"Command-line version","datePublished":"2022-09-30T15:31:49+00:00","dateModified":"2022-09-30T15:31:49+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/command-line.html"},"url":"/installing-or-building-from-sources/command-line.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"The Verovio codebase is C++17 compliant and is cross-platform. It has been tested on several operating systems and architectures. This section describes how to build and install the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-built binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward.","headline":"Command-line version","datePublished":"2022-10-11T15:55:10+00:00","dateModified":"2022-10-11T15:55:10+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/command-line.html"},"url":"/installing-or-building-from-sources/command-line.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -120,7 +120,9 @@
     
         
         
-<a class="toc-item toc-subsection" href="#macos-or-linux">MacOS or Linux</a>
+<a class="toc-item toc-subsection" href="#homebrew-on-macos">Homebrew on macOS</a>
+
+<a class="toc-item toc-subsection" href="#building-on-macos-or-linux">Building on macOS or Linux</a>
 
 <a class="toc-item toc-subsection" href="#windows-10">Windows 10</a>
 
@@ -165,9 +167,23 @@
         
         
         <h2>Command-line version</h2>
-        <p>Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward.</p>
+        <p>The Verovio codebase is C++17 compliant and is cross-platform. It has been tested on several operating systems and architectures. This section describes how to build and install the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-built binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward.</p>
 
-<h3 id="macos-or-linux">MacOS or Linux</h3>
+<h3 id="homebrew-on-macos">Homebrew on macOS</h3>
+
+<p>For macOS users using <a href="https://brew.sh">Homebrew</a>, the command-line version can be installed with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>verovio
+</code></pre></div></div>
+
+<p>This also installs the resources and you will be ready to go.</p>
+
+<p>You can also intall the latest development source with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>verovio <span class="nt">--HEAD</span>
+</code></pre></div></div>
+
+<h3 id="building-on-macos-or-linux">Building on macOS or Linux</h3>
 
 <p>To build the the command-line tool, you need <a href="https://cmake.org">CMake</a> to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:</p>
 
@@ -188,16 +204,28 @@ make
 
 <p>If you do not install it and run it from <code class="language-plaintext highlighter-rouge">./tools</code> or from another directory, you need to use the <code class="language-plaintext highlighter-rouge">-r</code> option to set the appropriate resource directory. The parameter of the <code class="language-plaintext highlighter-rouge">-r</code> option has to be a path to the <code class="language-plaintext highlighter-rouge">./data</code> folder of the codebase.</p>
 
-<p>Keep in mind that if you have installed, you should not run another version without re-installing it or using the <code class="language-plaintext highlighter-rouge">-r</code> options because otherwise the resources installed can be invalid. A typical problem is missing font glyphs that a newer version needs but that are not in the older version of the resources.</p>
+<p>To see the current default resource path, look for the “resource path” section in the full help output. You should see something like this:</p>
 
-<p>For seeing the command-line options, run:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./verovio <span class="nt">--help</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-h</span> full
+...
+<span class="nt">-r</span>, <span class="nt">--resource-path</span> &lt;s&gt;        Path to the directory with Verovio resources <span class="o">(</span>default: <span class="s2">"/usr/local/share/verovio"</span><span class="o">)</span>
 </code></pre></div></div>
+
+<p>Keep in mind that if you have installed, you should not run another version without re-installing it or using the <code class="language-plaintext highlighter-rouge">-r</code> options to point to a non-default path, because otherwise the resources installed can be invalid. A typical problem is missing font glyphs that a newer version needs but that are not in the older version of the resources.</p>
 
 <p>(Until version 2.6.0, the cmake command was <code class="language-plaintext highlighter-rouge">cmake .</code> and not <code class="language-plaintext highlighter-rouge">cmake ../cmake</code>.)</p>
 
 <h4 id="basic-usage">Basic usage</h4>
+
+<p>To seeing the basic command-line options, run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">--help</span>
+</code></pre></div></div>
+
+<p>To see all command-line options, run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-h</span> full
+</code></pre></div></div>
 
 <p>For typesetting an MEI file with the default options, you need to do:</p>
 
@@ -216,7 +244,7 @@ make
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>make <span class="nb">install</span>/strip
 </code></pre></div></div>
 
-<p>For building it without Plain and Easy support, run:</p>
+<p>To build Verovio without Plaine and Easy support, run:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ../cmake <span class="nt">-DNO_PAE_SUPPORT</span><span class="o">=</span>ON
 </code></pre></div></div>
@@ -239,6 +267,11 @@ make
 </ul>
 
 <h4 id="uninstall-a-previous-version">Uninstall a previous version</h4>
+
+<p>If you have installed Verovio with Homebrew, run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew uninstall verovio
+</code></pre></div></div>
 
 <p>To uninstall a previously installed version of Verovio from the system, run:</p>
 
@@ -272,7 +305,7 @@ nmake <span class="nb">install</span>
 
 <h3 id="xcode">Xcode</h3>
 
-<p>For MacOS users, there is also an Xcode project in the Verovio root directory.</p>
+<p>For macOS users, there is also an Xcode project in the Verovio root directory.</p>
 
 <p>By default, humdrum support is turned off in Xcode. To turn in on, you need to use the <code class="language-plaintext highlighter-rouge">Verovio-Humdrum</code> building scheme.</p>
 
