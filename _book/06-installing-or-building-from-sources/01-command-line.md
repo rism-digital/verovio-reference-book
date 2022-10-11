@@ -2,9 +2,23 @@
 title: "Command-line version"
 ---
 
-Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward.
+Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward.
 
-### MacOS or Linux
+### Homebrew on macOS
+
+For macOS users using Homebrew, the command-line version can be installed with:
+```bash
+brew install verovio
+```
+
+This also installs the resources and you will be ready to go.
+
+You can also intall the latest development source with: 
+```bash
+brew install verovio --HEAD
+```
+
+### Building macOS or Linux
 
 To build the the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
 
@@ -120,7 +134,7 @@ When running the commands, the resource path should be provided explicitly with 
 
 ### Xcode
 
-For MacOS users, there is also an Xcode project in the Verovio root directory. 
+For macOS users, there is also an Xcode project in the Verovio root directory. 
 
 By default, humdrum support is turned off in Xcode. To turn in on, you need to use the `Verovio-Humdrum` building scheme.
 
