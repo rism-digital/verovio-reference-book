@@ -18,7 +18,7 @@ You can also intall the latest development source with:
 brew install verovio --HEAD
 ```
 
-### Building macOS or Linux
+### Building on macOS or Linux
 
 To build the the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
 
