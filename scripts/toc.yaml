@@ -136,8 +136,10 @@
 "/toolkit-reference/toolkit-options.html#element-margins": Element margins
 "/toolkit-reference/mei-support.html": MEI supported elements
 "/installing-or-building-from-sources/command-line.html": Command-line version
-"/installing-or-building-from-sources/command-line.html#macos-or-linux": MacOS or
-  Linux
+"/installing-or-building-from-sources/command-line.html#homebrew-on-macos": Homebrew
+  on macOS
+"/installing-or-building-from-sources/command-line.html#building-macos-or-linux": Building
+  macOS or Linux
 "/installing-or-building-from-sources/command-line.html#windows-10": Windows 10
 "/installing-or-building-from-sources/command-line.html#xcode": Xcode
 "/installing-or-building-from-sources/command-line.html#visual-studio": Visual Studio

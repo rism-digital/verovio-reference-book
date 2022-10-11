@@ -6,7 +6,7 @@ title: "Python"
 
 Pre-build versions of the Python version of the toolkit are available through [PyPi](https://pypi.org/project/verovio/) for every release since version 3.1.0.
 
-The Python versions for which a pre-build is provided are 3.6, 3.7, 3.8 and 3.9. The platforms supported are MacOS 10.9, Linux with [manylinux](https://github.com/pypa/manylinux) for x86-64, Win-32 and Win-amd64. 
+The Python versions for which a pre-build is provided are 3.6, 3.7, 3.8 and 3.9. The platforms supported are macOS 10.9, Linux with [manylinux](https://github.com/pypa/manylinux) for x86-64, Win-32 and Win-amd64. 
 
 The latest release can be installed with:
 
@@ -77,7 +77,7 @@ tk.renderToSVGFile( "page-square.svg", 1 )
 
 ### Building the toolkit
 
-To build the Python toolkit you need to have swig and swig-python installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) and the Python distutils package. Version 4.0 or newer of SWIG is recommended but older versions should work too.  To install SWIG in MacOS using [Homebrew](http://brew.sh), type the command `brew install swig`. 
+To build the Python toolkit you need to have swig and swig-python installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) and the Python distutils package. Version 4.0 or newer of SWIG is recommended but older versions should work too.  To install SWIG in macOS using [Homebrew](http://brew.sh), type the command `brew install swig`. 
 
 The toolkit needs to be built from from the root directory of the repository content. To build it in-place, run:
 

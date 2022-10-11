@@ -2,9 +2,25 @@
 title: "Command-line version"
 ---
 
-Verovio codebase is C++17 compliant and is cross-platform. It has be tested on several operating systems and architectures. This sections describes how to build the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-build binaries of the command-line toolkit available since building it is very straight-forward.
+The Verovio codebase is C++17 compliant and is cross-platform. It has been tested on several operating systems and architectures. This section describes how to build and install the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-built binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward.
 
-### MacOS or Linux
+### Homebrew on macOS
+
+For macOS users using [Homebrew](https://brew.sh), the command-line version can be installed with:
+
+```bash
+brew install verovio
+```
+
+This also installs the resources and you will be ready to go.
+
+You can also intall the latest development source with: 
+
+```bash
+brew install verovio --HEAD
+```
+
+### Building on macOS or Linux
 
 To build the the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
 
@@ -28,17 +44,31 @@ sudo make install
 
 If you do not install it and run it from `./tools` or from another directory, you need to use the `-r` option to set the appropriate resource directory. The parameter of the `-r` option has to be a path to the `./data` folder of the codebase.
 
-Keep in mind that if you have installed, you should not run another version without re-installing it or using the `-r` options because otherwise the resources installed can be invalid. A typical problem is missing font glyphs that a newer version needs but that are not in the older version of the resources.
-
-For seeing the command-line options, run:
+To see the current default resource path, look for the "resource path" section in the full help output. You should see something like this:
 
 ```bash
-./verovio --help
+verovio -h full
+...
+-r, --resource-path <s>        Path to the directory with Verovio resources (default: "/usr/local/share/verovio")
 ```
+
+Keep in mind that if you have installed, you should not run another version without re-installing it or using the `-r` options to point to a non-default path, because otherwise the resources installed can be invalid. A typical problem is missing font glyphs that a newer version needs but that are not in the older version of the resources.
 
 (Until version 2.6.0, the cmake command was `cmake .` and not `cmake ../cmake`.)
 
 #### Basic usage
+
+To seeing the basic command-line options, run:
+
+```bash
+verovio --help
+```
+
+To see all command-line options, run:
+
+```bash
+verovio -h full
+```
 
 For typesetting an MEI file with the default options, you need to do:
 
@@ -60,7 +90,7 @@ By default the executable is not stripped. To strip it during the installation d
 sudo make install/strip
 ```
 
-For building it without Plain and Easy support, run:
+To build Verovio without Plaine and Easy support, run:
 
 ```bash
 cmake ../cmake -DNO_PAE_SUPPORT=ON
@@ -83,6 +113,12 @@ The other building options are:
 * `BUILD_AS_LIBRARY` for Verovio to be built as dynamic shared library instead of a command-line executable
 
 #### Uninstall a previous version
+
+If you have installed Verovio with Homebrew, run:
+
+```bash
+brew uninstall verovio
+```
 
 To uninstall a previously installed version of Verovio from the system, run:
 
@@ -120,7 +156,7 @@ When running the commands, the resource path should be provided explicitly with 
 
 ### Xcode
 
-For MacOS users, there is also an Xcode project in the Verovio root directory. 
+For macOS users, there is also an Xcode project in the Verovio root directory. 
 
 By default, humdrum support is turned off in Xcode. To turn in on, you need to use the `Verovio-Humdrum` building scheme.
 
