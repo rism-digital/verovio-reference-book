@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-10-12T07:33:40+00:00" />
+<meta property="article:published_time" content="2022-11-09T12:23:31+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"ConvertHumdrumToHumdrum","headline":"Toolkit methods","datePublished":"2022-10-12T07:33:40+00:00","dateModified":"2022-10-12T07:33:40+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"ConvertHumdrumToHumdrum","headline":"Toolkit methods","datePublished":"2022-11-09T12:23:31+00:00","dateModified":"2022-11-09T12:23:31+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -632,12 +632,14 @@
 
 <p>Write the humdrum buffer to the file.</p>
 
+<p>filename The output filename</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -692,9 +694,6 @@
 <h3 id="getlog">GetLog</h3>
 
 <p>Get the log content for the latest operation.</p>
-
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -912,9 +911,6 @@
 
 <p>The number of pages depends one the page size and if encoded layout was taken into account or not.</p>
 
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">int</code> – The number of pages</p>
@@ -1092,9 +1088,6 @@
 
 <p>Return the version number.</p>
 
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – the version number as a string</p>
@@ -1114,9 +1107,6 @@
 <p>Load a string data with the type previously specified in the options.</p>
 
 <p>By default, the methods try to auto-detect the type.</p>
-
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1197,9 +1187,6 @@
 
 <p>Load a MusicXML compressed file passed as base64 encoded string.</p>
 
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
-
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">bool</code> – True if the data was successfully loaded</p>
@@ -1236,9 +1223,6 @@
 <h3 id="loadzipdatabuffer">LoadZipDataBuffer</h3>
 
 <p>Load a MusicXML compressed file passed as a buffer of bytes.</p>
-
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -1405,12 +1389,14 @@
 
 <p>Render a document to MIDI and save it to the file.</p>
 
+<p>filename The output filename</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1467,12 +1453,14 @@
 
 <p>Only the top staff / layer is exported.</p>
 
+<p>filename The output filename</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1550,12 +1538,16 @@
 
 <p>Render a page to SVG and save it to the file.</p>
 
+<p>filename The output filename</p>
+
+<p>pageNo The page to render (1-based)</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1596,9 +1588,11 @@
 
 <p>Render a document to a timemap.</p>
 
+<p>jsonOptions A stringified JSON objects with the timemap options</p>
+
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – The timemap as a string</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1633,12 +1627,16 @@
 
 <p>Render a document to timemap and save it to the file.</p>
 
+<p>filename The output filename</p>
+
+<p>jsonOptions A stringified JSON objects with the timemap options</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1698,9 +1696,6 @@
 <p>Reset the seed used to generate MEI xml:id attribute values.</p>
 
 <p>Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.</p>
-
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
 
 <p><strong>Returns</strong></p>
 
@@ -2105,9 +2100,6 @@
 <p>Validate the Plaine and Easie code passed in the string data.</p>
 
 <p>A single JSON object is returned when there is a global input error. When reading the input succeeds, validation is grouped by input keys. The methods always returns errors in PAE pedantic mode. No data remains loaded after the validation.</p>
-
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
 
 <p><strong>Returns</strong></p>
 
