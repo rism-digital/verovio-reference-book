@@ -197,8 +197,8 @@ if __name__ == "__main__":
     # get the toolkit class
     toolkit = index_xml.xpath('//compoundname[text()="vrv::Toolkit"]')[0]
 
-   # get all the methods not supported in the JS toolkit
-    doxygen_nojss = toolkit.xpath('//memberdef[@kind="function" and @prot="public" and starts-with(@id, "group__nojs_")]')
+   # get all the methods not supported in the JS toolkit mark with a @remark nojs
+    doxygen_nojss = toolkit.xpath('//memberdef[@kind="function" and @prot="public" and ./detaileddescription/para/simplesect[@kind="remark"]/para/text()="nojs"]')
 
     # extract their content into an array of dictionaries
     nojs_methods = []
