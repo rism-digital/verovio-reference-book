@@ -1237,6 +1237,16 @@ The selection will be applied only when some data is loaded or the layout is red
 | `selection` | `const std::string &` | ∅ | The selection as a stringified JSON object |
 {: .table .table-condensed .table-sm .text-xsmall}
 
+**Examples for selection parameter**
+
+```json
+{ "measureRange": "2-3" }
+{ "measureRange": "82-end" }
+{ "measureRange": "38" }
+{ "start": "measure-L337", "end": "measure-L355" }
+{}
+```
+
 **Original header**
 
 ```cpp
