@@ -3,6 +3,7 @@
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"inputFrom": <string>`</span><span class="lang2">`-f, --input-from <string>`</span> {% endcol %}{% col 8 %} Select input format from: &quot;abc&quot;, &quot;darms&quot;, &quot;humdrum&quot;, &quot;mei&quot;, &quot;pae&quot;, &quot;xml&quot; (musicxml)<br/>(default: "mei")
 
 See also: [Input formats](/toolkit-reference/input-formats.html) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-l, --log-level <string>`</span> {% endcol %}{% col 8 %} Set the log level: &quot;off&quot;, &quot;error&quot;, &quot;warning&quot;, &quot;info&quot;, or &quot;debug&quot;<br/>(default: "warning") {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-o, --outfile <string>`</span> {% endcol %}{% col 8 %} Output file name (use &quot;-&quot; as file name for standard output)<br/>(default: "svg") {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-t, --output-to <string>`</span> {% endcol %}{% col 8 %} Select output format to: &quot;mei&quot;, &quot;mei-pb&quot;, &quot;mei-basic&quot;, &quot;svg&quot;, or &quot;midi&quot;<br/>(default: "svg")
 

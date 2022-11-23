@@ -67,7 +67,7 @@ if __name__ == "__main__":
     log.info("Using Verovio %s", tk.getVersion())
 
     # keep all the options to be able to reset them for each example
-    options: Dict = json.loads(tk.getAvailableOptions())
+    options: Dict = tk.getAvailableOptions()
 
     for grp_id, grp in options['groups'].items():
         # Open the file for the option group

@@ -160,6 +160,27 @@ result = toolkit.getAvailableOptions()
 ```
 
 {% include method-doc file="getavailableoptions" %}
+### GetDefaultOptions
+
+Return a dictionary of all the options with their default value.
+
+**Returns**
+
+`std::string` – A stringified JSON object
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::GetDefaultOptions() const
+```
+
+**Example call**
+
+```python
+result = toolkit.getDefaultOptions()
+```
+
+{% include method-doc file="getdefaultoptions" %}
 ### GetDescriptiveFeatures
 
 Return descriptive features as a JSON string.
@@ -301,13 +322,11 @@ result = toolkit.getHumdrum()
 
 Write the humdrum buffer to the file.
 
-filename The output filename
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -492,32 +511,25 @@ result = toolkit.getOption(option, defaultValue)
 {% include method-doc file="getoption-option-defaultvalue" %}
 ### GetOptions
 
-Return a dictionary of all the options.
+Return a dictionary of all the options with their current value.
 
 **Returns**
 
 `std::string` – A stringified JSON object
 
-**Parameters**
-
-|---|---|---|
-| Name | Type | Default | Description |
-| `defaultValues` | `bool` | ∅ | True for getting the default values and false for the current values |
-{: .table .table-condensed .table-sm .text-xsmall}
-
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetOptions(bool defaultValues) const
+std::string vrv::Toolkit::GetOptions() const
 ```
 
 **Example call**
 
 ```python
-result = toolkit.getOptions(defaultValues)
+result = toolkit.getOptions()
 ```
 
-{% include method-doc file="getoptions-defaultvalues" %}
+{% include method-doc file="getoptions" %}
 ### GetPageCount
 
 Return the number of pages in the loaded document.
@@ -926,13 +938,11 @@ result = toolkit.renderToMIDI()
 
 Render a document to MIDI and save it to the file.
 
-filename The output filename
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -983,15 +993,11 @@ Render a document to Plaine and Easie and save it to the file.
 
 Only the top staff / layer is exported.
 
-
-
-filename The output filename
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -1046,15 +1052,11 @@ result = toolkit.renderToSVG(pageNo, xmlDeclaration)
 
 Render a page to SVG and save it to the file.
 
-filename The output filename 
-
-pageNo The page to render (1-based)
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -1081,11 +1083,9 @@ result = toolkit.renderToSVGFile(filename, pageNo)
 
 Render a document to a timemap.
 
-jsonOptions A stringified JSON objects with the timemap options
-
 **Returns**
 
-`std::string` – The timemap as a string
+`std::string`
 
 **Parameters**
 
@@ -1111,15 +1111,11 @@ result = toolkit.renderToTimemap(jsonOptions)
 
 Render a document to timemap and save it to the file.
 
-filename The output filename 
-
-jsonOptions A stringified JSON objects with the timemap options
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
