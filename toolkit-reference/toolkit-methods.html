@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-09T12:23:31+00:00" />
+<meta property="article:published_time" content="2022-11-23T11:10:19+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"ConvertHumdrumToHumdrum","headline":"Toolkit methods","datePublished":"2022-11-09T12:23:31+00:00","dateModified":"2022-11-09T12:23:31+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"ConvertHumdrumToHumdrum","headline":"Toolkit methods","datePublished":"2022-11-23T11:10:19+00:00","dateModified":"2022-11-23T11:10:19+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -134,6 +134,8 @@
 <a class="toc-item toc-subsection" href="#editinfo">EditInfo</a>
 
 <a class="toc-item toc-subsection" href="#getavailableoptions">GetAvailableOptions</a>
+
+<a class="toc-item toc-subsection" href="#getdefaultoptions">GetDefaultOptions</a>
 
 <a class="toc-item toc-subsection" href="#getdescriptivefeatures">GetDescriptiveFeatures</a>
 
@@ -456,6 +458,24 @@
 
 <p>Example how to extended the documentation for a method</p>
 
+<h3 id="getdefaultoptions">GetDefaultOptions</h3>
+
+<p>Return a dictionary of all the options with their default value.</p>
+
+<p><strong>Returns</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object</p>
+
+<p><strong>Original header</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetDefaultOptions</span><span class="p">()</span> <span class="k">const</span>
+</code></pre></div></div>
+
+<p><strong>Example call</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getDefaultOptions</span><span class="p">()</span>
+</code></pre></div></div>
+
 <h3 id="getdescriptivefeatures">GetDescriptiveFeatures</h3>
 
 <p>Return descriptive features as a JSON string.</p>
@@ -632,14 +652,12 @@
 
 <p>Write the humdrum buffer to the file.</p>
 
-<p>filename The output filename</p>
-
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
+<p><code class="language-plaintext highlighter-rouge">bool</code></p>
 
 <p><strong>Parameters</strong></p>
 
@@ -870,39 +888,20 @@
 
 <h3 id="getoptions">GetOptions</h3>
 
-<p>Return a dictionary of all the options.</p>
+<p>Return a dictionary of all the options with their current value.</p>
 
 <p><strong>Returns</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">std::string</code> – A stringified JSON object</p>
 
-<p><strong>Parameters</strong></p>
-
-<table class="table table-condensed table-sm text-xsmall">
-  <tbody>
-    <tr>
-      <td>Name</td>
-      <td>Type</td>
-      <td>Default</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">defaultValues</code></td>
-      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
-      <td>∅</td>
-      <td>True for getting the default values and false for the current values</td>
-    </tr>
-  </tbody>
-</table>
-
 <p><strong>Original header</strong></p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetOptions</span><span class="p">(</span><span class="kt">bool</span> <span class="n">defaultValues</span><span class="p">)</span> <span class="k">const</span>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetOptions</span><span class="p">()</span> <span class="k">const</span>
 </code></pre></div></div>
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getOptions</span><span class="p">(</span><span class="n">defaultValues</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getOptions</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getpagecount">GetPageCount</h3>
@@ -1389,14 +1388,12 @@
 
 <p>Render a document to MIDI and save it to the file.</p>
 
-<p>filename The output filename</p>
-
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
+<p><code class="language-plaintext highlighter-rouge">bool</code></p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1453,14 +1450,12 @@
 
 <p>Only the top staff / layer is exported.</p>
 
-<p>filename The output filename</p>
-
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
+<p><code class="language-plaintext highlighter-rouge">bool</code></p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1538,16 +1533,12 @@
 
 <p>Render a page to SVG and save it to the file.</p>
 
-<p>filename The output filename</p>
-
-<p>pageNo The page to render (1-based)</p>
-
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
+<p><code class="language-plaintext highlighter-rouge">bool</code></p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1588,11 +1579,9 @@
 
 <p>Render a document to a timemap.</p>
 
-<p>jsonOptions A stringified JSON objects with the timemap options</p>
-
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">std::string</code> – The timemap as a string</p>
+<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1627,16 +1616,12 @@
 
 <p>Render a document to timemap and save it to the file.</p>
 
-<p>filename The output filename</p>
-
-<p>jsonOptions A stringified JSON objects with the timemap options</p>
-
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
+<p><code class="language-plaintext highlighter-rouge">bool</code></p>
 
 <p><strong>Parameters</strong></p>
 
