@@ -1,5 +1,4 @@
 import argparse
-import json
 import os
 import sys
 import pprint
@@ -61,7 +60,7 @@ if __name__ == "__main__":
     log.info("Using Verovio %s", tk.getVersion())
 
     # keep all the options to be able to reset them for each example
-    defaultOptions: Dict = json.loads(tk.getOptions(True))
+    defaultOptions: Dict = tk.getDefaultOptions()
     # Overwrite the default options with our locally-defined options
     defaultOptions.update(VRV_OPTIONS)
 
@@ -128,7 +127,7 @@ if __name__ == "__main__":
             if meta:
                 # Overwrite any pre-defined options with the options from the MEI file.
                 log.info("Found some locally-defined meta options: %s", meta)
-                metaOptions = json.loads(meta)
+                metaOptions = meta
                 options.update(metaOptions)
 
             # If the example has additional options, load them.
@@ -167,7 +166,7 @@ if __name__ == "__main__":
                 f.write(mei_snippet)
 
             log.debug("Running Verovio with the following options: %s", pprint.pformat(options))
-            tk.setOptions(json.dumps(options))
+            tk.setOptions(options)
             tk.loadData(mei_example)
 
             svg: str = tk.renderToSVG(1)
