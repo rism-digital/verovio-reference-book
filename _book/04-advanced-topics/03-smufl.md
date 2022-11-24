@@ -108,12 +108,21 @@ Fonts included can be selected by setting the `--font` option. For example, the 
 
 ### Music symbols in text
 
-For cases when music symbols are displayed within text, Verovio uses the [VerovioText](https://github.com/rism-digital/verovio/blob/develop/fonts/VerovioText-1.0.ttf) font. This font is a based on Leipzig and includes a limited set of [symbols](https://torinak.com/font/lsfont.html#https://raw.githubusercontent.com/rism-digital/verovio/develop/fonts/VerovioText-1.0.ttf?raw=true). They include:
+For cases when music symbols are displayed within text, Verovio uses a text [WOFF2](https://www.w3.org/TR/WOFF2/) version of the selected music font. The font is included in the SVG as CSS.
 
-* Note symbols for tempo indications
-* Lyric elision symbols
-* Figured bass symbols
-* Dynamic symbols
+The `--smufl-text-font` allows to change how the font is included. By default, it is simply embedded as a base64 string. This means that the SVG is fully self-contained and does not require network access for the font glyphs to be displayed. The include of the font can also be ignored with `none`, which can be useful when the font is included seperately in the environment.
+
+With `linked`, the text font will be included in the SVG but with the following CSS import:
+```xml
+<style type="text/css">
+    @import url("https://www.verovio.org/javascript/3.13.0/data/Leipzig.css");
+</style>
+```
+The version of the font path is based on the Verovio version release number, or is `develop` for the develop version of the toolkit.
+
+When a music glyph is displayed within text and the music font selected is not Leipzig or Bravura, Verovio will also check if the music glyph exists in the selected music font. If not, it will fallback to the Leipzig font. If other text elements include music glyphs that do exist in the selected font, then both Leipzig and the selected font will be included. In other words, the fallback to Leipzig will be enabled only for the text elements displaying a missing music glyphs but not for the others.
+
+{% aside .warning %}Version 3.13.0 always fallback to Leipzig even when the glyphs are not missing. The issue will be fixed in the next release.{% endaside %}
 
 #### Examples
 
@@ -125,8 +134,6 @@ Characters in tempo indications can be encoded as Unicode characters or as entit
 
 #### Dynamics
 
-For dynamics, the font is used only where text and dynamic symbols are mixed together. Verovio automatically detects dynamic symbols within text and displays them appropriately. In such cases, however, the music font will always be VerovioText and the font specified with the `--font` option will not be used.
+For dynamics, Verovio automatically detects dynamic symbols within text and displays them appropriately. In some cases, it might be desirable to disable the automatic detection of dynamic symbols and the use of the music font. This can be achieved by setting a text font explicitly, as illustrated with the `<rend fontfam="Times">` in the second dynamic in this example:
 
 {% include music-notation example="dynam-01" %}
-
-In some cases, it might be desirable to disable the automatic detection of dynamic symbols and the use of the music font. This can be achieved by setting a text font explicitly, as illustrated with the `<rend fontfam="Times">` in the second dynamic in the example above.
