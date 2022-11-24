@@ -4,6 +4,8 @@ no-edit: true
 # This file is auto-generated - do not edit
 ---
 
+{% include method-doc file="introduction" %}
+
 ### ConvertHumdrumToHumdrum
 
 Filter Humdrum data.

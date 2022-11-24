@@ -144,6 +144,9 @@ def print_frontmatter(file):
     file.write('---\ntitle: "Toolkit methods"\nno-edit: true\n')
     file.write('# This file is auto-generated - do not edit\n---\n\n')
 
+    # Extended documentation include
+    file.write("{% include method-doc file=\"introduction\" %}\n\n")
+
 if __name__ == "__main__":
     description = """
         Generates documentation for the options available in the Verovio toolkit.
