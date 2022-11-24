@@ -78,6 +78,7 @@
 "/toolkit-reference/toolkit-methods.html#edit": Edit
 "/toolkit-reference/toolkit-methods.html#editinfo": EditInfo
 "/toolkit-reference/toolkit-methods.html#getavailableoptions": GetAvailableOptions
+"/toolkit-reference/toolkit-methods.html#getdefaultoptions": GetDefaultOptions
 "/toolkit-reference/toolkit-methods.html#getdescriptivefeatures": GetDescriptiveFeatures
 "/toolkit-reference/toolkit-methods.html#getelementattr": GetElementAttr
 "/toolkit-reference/toolkit-methods.html#getelementsattime": GetElementsAtTime
@@ -135,6 +136,10 @@
   selectors and processing
 "/toolkit-reference/toolkit-options.html#element-margins": Element margins
 "/toolkit-reference/mei-support.html": MEI supported elements
+"/toolkit-reference/environment-functions.html": Environment functions
+"/toolkit-reference/environment-functions.html#setdefaultresourcepath": SetDefaultResourcePath
+"/toolkit-reference/environment-functions.html#enablelog": EnableLog
+"/toolkit-reference/environment-functions.html#enablelogtobuffer": EnableLogToBuffer
 "/installing-or-building-from-sources/command-line.html": Command-line version
 "/installing-or-building-from-sources/command-line.html#homebrew-on-macos": Homebrew
   on macOS
@@ -154,8 +159,8 @@
 "/installing-or-building-from-sources/python.html#pre-build-versions": Pre-build versions
 "/installing-or-building-from-sources/python.html#basic-usage-of-the-toolkit": Basic
   usage of the toolkit
-"/installing-or-building-from-sources/python.html#building-the-toolkit": Building
-  the toolkit
+"/installing-or-building-from-sources/python.html#building-the-toolkit-without-cmake": Building
+  the toolkit without CMake
 "/installing-or-building-from-sources/other-bindings.html": Other bindings
 "/installing-or-building-from-sources/other-bindings.html#java": Java
 "/installing-or-building-from-sources/other-bindings.html#cocoapods": CocoaPods
