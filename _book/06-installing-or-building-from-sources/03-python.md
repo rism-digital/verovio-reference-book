@@ -52,34 +52,45 @@ tk.renderToSVGFile( "page.svg", 1 )
 
 #### Setting options
 
-The options are set on the toolkit instance. For example, the following code will change the dimensions of the page and redo the layout for the previously loaded data:
+The options are set on the toolkit instance. For the Python version of the toolkit, the options (and all other parameters or values return by a function that are a JSON string in the C++ version) are a Python Dictionary. For example, the following code will change the dimensions of the page and redo the layout for the previously loaded data:
 
 ```python
-tk.setOption( "pageHeight", "2100" )
-tk.setOption( "pageWidth", "2900" )
-tk.setScale(25)
+options = { "pageHeight": 2100, "pageWidth": 2950, "scale": 25 }
+tk.setOptions(options)
 tk.redoLayout()
 tk.renderToSVGFile( "page-scaled.svg", 1 )
 ```
 
-It is also possbile to collect options in a Python Dictionary and pass them as Json dump to the toolkit:  
-
-```python
-import json
-options = {
-    'pageHeight': 1000,
-    'pageWidth': 1000
-}
-tk.setOptions(json.dumps(options))    
-tk.redoLayout()
-tk.renderToSVGFile( "page-square.svg", 1 )
-```
-
-### Building the toolkit
+#### Building the toolkit
 
 To build the Python toolkit you need to have swig and swig-python installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) and the Python distutils package. Version 4.0 or newer of SWIG is recommended but older versions should work too.  To install SWIG in macOS using [Homebrew](http://brew.sh), type the command `brew install swig`. 
 
-The toolkit needs to be built from from the root directory of the repository content. To build it in-place, run:
+The Python toolkit can be built with [CMake](https://cmake.org), You need at least version 3.13 of CMake because it uses the option `-B` introduced in that version of CMake. The steps are:
+
+```bash
+cd bindings
+cmake ../cmake -B python -DBUILD_AS_PYTHON=ON
+cd python
+make -j8
+```
+
+If you want to enable or disable other specific options, you can do:
+
+```bash
+cmake ../cmake -B python -DBUILD_AS_PYTHON=ON -DNO_PAE_SUPPORT=ON
+```
+
+By default, Python 3 is used. If you want to use a specific version of Python, you can do:
+
+```bash
+cmake ../cmake -B python -DBUILD_AS_PYTHON=ON -DPYTHON_VERSION=3.9
+```
+
+*Installation with CMake has not be tested yet*
+
+### Building the toolkit without CMake
+
+The toolkit can be build without CMake. However, SWIG is still needed. It needs to be built from from the root directory of the repository content. To build it in-place, run:
 
 ```bash
 python setup.py build_ext --inplace
@@ -113,33 +124,6 @@ python setup.py sdist
 ```
 
 In both cases, the wheel will be written to the `./dist` directory.
-
-#### Building with CMake
-
-The Python toolkit can be built with [CMake](https://cmake.org), which can be significantly faster because parallel processing can be used. This is also the approach to recommend when developing because it will not rebuild the entire codebase when a change it made to a file but only the files that actually need to rebuilt.
-
-For this approach to work you need at least version 3.13 of CMake because it uses the option `-B` introduced in that version of CMake. The steps are:
-
-```bash
-cd bindings
-cmake ../cmake -B python -DBUILD_AS_PYTHON=ON
-cd python
-make -j8
-```
-
-If you want to enable or disable other specific options, you can do:
-
-```bash
-cmake ../cmake -B python -DBUILD_AS_PYTHON=ON -DNO_PAE_SUPPORT=ON
-```
-
-By default, Python 3 is used. If you want to use a specific version of Python, you can do:
-
-```bash
-cmake ../cmake -B python -DBUILD_AS_PYTHON=ON -DPYTHON_VERSION=3.9
-```
-
-*Installation with CMake has not be tested yet*
 
 #### Resources for versions built locally
 
