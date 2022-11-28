@@ -122,8 +122,6 @@ The version of the font path is based on the Verovio version release number, or 
 
 When a music glyph is displayed within text and the music font selected is not Leipzig or Bravura, Verovio will also check if the music glyph exists in the selected music font. If not, it will fallback to the Leipzig font. If other text elements include music glyphs that do exist in the selected font, then both Leipzig and the selected font will be included. In other words, the fallback to Leipzig will be enabled only for the text elements displaying a missing music glyphs but not for the others.
 
-{% aside .warning %}Version 3.13.0 always fallback to Leipzig even when the glyphs are not missing. The issue will be fixed in the next release.{% endaside %}
-
 #### Examples
 
 {% include music-notation example="lyric-01" %}
