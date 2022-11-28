@@ -2,7 +2,7 @@
 title: "Environment functions"
 ---
 
-Verovio includes a few environment-level functions for configuring the global setup in which the toolkit works. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level function.
+Verovio includes a few environment-level functions for configuring the global setup in which the toolkit runs. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level functions.
 
 ### SetDefaultResourcePath
 
@@ -67,7 +67,7 @@ The `LogLevel` enum includes the following values:
 * `LOG_WARNING`: log error and warning messages (default)
 * `LOG_ERROR`: log error messages only
 
-For both the Python and the JavaScript binding, the values are available in the modules. This means that the log level can be changed with:
+For both the Python and the JavaScript bindings, the values are available in the modules. This means that the log level can be changed with:
 
 ```python
 import verovio
@@ -86,7 +86,7 @@ verovio.enableLog(verovio.LOG_ERROR)
 
 ### EnableLogToBuffer
 
-Redirect the log messages to a buffer instead of the std::err or the console. The messages can be access from the toolkit instance via the `GetLog()` method.
+Redirect the log messages to a buffer instead of the `std::err` or the console. The messages can be accessed from the toolkit instance via the `GetLog()` method.
 
 **Returns**
 
