@@ -27,18 +27,18 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Environment functions" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Verovio includes a few environment-level functions for configuring the global setup in which the toolkit works. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level function." />
-<meta property="og:description" content="Verovio includes a few environment-level functions for configuring the global setup in which the toolkit works. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level function." />
+<meta name="description" content="Verovio includes a few environment-level functions for configuring the global setup in which the toolkit runs. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level functions." />
+<meta property="og:description" content="Verovio includes a few environment-level functions for configuring the global setup in which the toolkit runs. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level functions." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-24T16:09:06+00:00" />
+<meta property="article:published_time" content="2022-11-28T06:57:53+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Environment functions" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Verovio includes a few environment-level functions for configuring the global setup in which the toolkit works. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level function.","headline":"Environment functions","datePublished":"2022-11-24T16:09:06+00:00","dateModified":"2022-11-24T16:09:06+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/environment-functions.html"},"url":"/toolkit-reference/environment-functions.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"Verovio includes a few environment-level functions for configuring the global setup in which the toolkit runs. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level functions.","headline":"Environment functions","datePublished":"2022-11-28T06:57:53+00:00","dateModified":"2022-11-28T06:57:53+00:00","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/environment-functions.html"},"url":"/toolkit-reference/environment-functions.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -169,7 +169,7 @@
         
         
         <h2>Environment functions</h2>
-        <p>Verovio includes a few environment-level functions for configuring the global setup in which the toolkit works. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level function.</p>
+        <p>Verovio includes a few environment-level functions for configuring the global setup in which the toolkit runs. They are namespace-level functions in the C++ codebase. For the Python and JavaScript bindings, they are module-level functions.</p>
 
 <h3 id="setdefaultresourcepath">SetDefaultResourcePath</h3>
 
@@ -257,7 +257,7 @@
   <li><code class="language-plaintext highlighter-rouge">LOG_ERROR</code>: log error messages only</li>
 </ul>
 
-<p>For both the Python and the JavaScript binding, the values are available in the modules. This means that the log level can be changed with:</p>
+<p>For both the Python and the JavaScript bindings, the values are available in the modules. This means that the log level can be changed with:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">verovio</span>
 <span class="n">verovio</span><span class="p">.</span><span class="n">enableLog</span><span class="p">(</span><span class="n">verovio</span><span class="p">.</span><span class="n">LOG_ERROR</span><span class="p">)</span>
@@ -274,7 +274,7 @@
 
 <h3 id="enablelogtobuffer">EnableLogToBuffer</h3>
 
-<p>Redirect the log messages to a buffer instead of the std::err or the console. The messages can be access from the toolkit instance via the <code class="language-plaintext highlighter-rouge">GetLog()</code> method.</p>
+<p>Redirect the log messages to a buffer instead of the <code class="language-plaintext highlighter-rouge">std::err</code> or the console. The messages can be accessed from the toolkit instance via the <code class="language-plaintext highlighter-rouge">GetLog()</code> method.</p>
 
 <p><strong>Returns</strong></p>
 
