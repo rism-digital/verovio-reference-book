@@ -50,10 +50,9 @@
 "/advanced-topics/smufl.html": SMuFL fonts
 "/advanced-topics/smufl.html#music-symbols-in-text": Music symbols in text
 "/advanced-topics/controlling-the-svg-output.html": Controlling the SVG output
-"/advanced-topics/controlling-the-svg-output.html#html5": HTML5
-"/advanced-topics/controlling-the-svg-output.html#towards-svg-20": Towards SVG 2.0
-"/advanced-topics/controlling-the-svg-output.html#converting-to-pdf": Converting to
-  PDF
+"/advanced-topics/controlling-the-svg-output.html#page-units-and-dimensions": Page
+  units and dimensions
+"/advanced-topics/controlling-the-svg-output.html#scaling": Scaling
 "/advanced-topics/mensural-notation.html": Mensural notation
 "/advanced-topics/mensural-notation.html#duration-alignment": Duration alignment
 "/advanced-topics/mensural-notation.html#layout": Layout

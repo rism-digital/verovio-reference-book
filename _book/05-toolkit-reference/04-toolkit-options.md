@@ -15,10 +15,21 @@ see-also:
       - "/toolkit-reference/output-formats.html"
     transpose:
       - "/advanced-topics/transposition.html"
+    pageHeight:
+      - "/advanced-topics/controlling-the-svg-output.html"
+    pageWidth:
+      - "/advanced-topics/controlling-the-svg-output.html"
     resourcePath:
       - "/toolkit-reference/toolkit-methods.html#setresourcepath"
       - "/installing-or-building-from-sources/python.html#building-the-toolkit"
-    
+    scale:
+      - "/advanced-topics/controlling-the-svg-output.html#scaling"
+    scaleToPageSize:
+      - "/advanced-topics/controlling-the-svg-output.html#scaling"
+    smuflTextFont:
+      - "/advanced-topics/smufl.html#music-symbols-in-text"
+    unit:
+      - "/advanced-topics/controlling-the-svg-output.html"   
 ---
 
 <div class="hidden-print radio-inline">
