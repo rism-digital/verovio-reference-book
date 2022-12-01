@@ -42,7 +42,7 @@ jobs:
       - name: "Install ruby"
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: '3.0'
+          ruby-version: '3.1'
 
       - name: "Install gems with cache"
         uses: actions/cache@v3.0.8
