@@ -121,8 +121,6 @@ The example below is the same file rendered with the same page dimensions as abo
 
 {% include music-notation-only example="05-responsive-page" %}
 
-#### Layout recalculation
-
 Changing the values of some options often requires the layout to be recalculated. For example, when the page dimensions are changed, then a call to `RedoLayout` must be made before rendering a page again. It is also important to keep in mind that redoing the layout might yield a different number of pages and that it is important to check the a page still exists with `GetPageCount` before rendering it.
 
 When the `--scale-to-page-size` option is not turned on (default), then changing the scale option only does not require the layout to be recalculated before rendering a page again because the amount of music per page and the number of pages will not change. However, when the option `--scale-to-page-size` is turned on, then the layout recalculation and the page existence check need to happen before rendering a page.
