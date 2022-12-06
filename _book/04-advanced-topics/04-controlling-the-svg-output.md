@@ -61,7 +61,7 @@ examples:
 
 ### Page units and dimensions
 
-Verovio uses an abstract unit for specifying the page dimensions. By default, the page height is `2970` and the page width is `2100`. These are equivalent to the dimension of an A4 page in tenths of a millimeter. When generating SVG, these units are interpreted as pixels, which means that the default SVG image size is **2970px** height by **2100px** width. 
+Verovio uses an abstract unit for specifying the page dimensions. By default, the page height is `2970` and the page width is `2100`. These are equivalent to the dimension of an A4 page in portrait orientation in tenths of a millimeter. When generating SVG, these units are interpreted as pixels, which means that the default SVG image size is **2970px** height by **2100px** width. 
 
 The example below shows an empty page with the default dimensions – and the option `--justifyVertically` turned on.
 
