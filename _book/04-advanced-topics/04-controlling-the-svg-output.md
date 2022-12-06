@@ -67,7 +67,7 @@ The example below shows an empty page with the default dimensions – and the op
 
 {% include music-notation-only example="01-default" %}
 
-The option `--mm-output` can be turned on to have the page dimension being interpreted as millimeters. In that case, the SVG image will have a size of **297mm** by **210mm**, which is recommended if the SVG is meant to be printed or converted to PDF.
+The option `--mm-output` can be enabled to change the page dimensions to millimeters. In this case, the SVG image will have a size of **297mm** by **210mm**, which is recommended if the SVG is meant to be printed or converted to PDF.
 
 Page margins (`--page-margin-bottom`,  `--page-margin-left`,  `--page-margin-right` and  `--page-margin-top`) are all specified in abstract units, with a default value of `50`. That is **50px** with the default SVG output and **5mm** with the `--mm-output` option turned on.
 
