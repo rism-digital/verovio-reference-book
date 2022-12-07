@@ -20,7 +20,7 @@ VRV_OPTIONS: Dict = {
     'pageWidth': 2100,
     'header': 'none',
     'footer': 'none',
-    'scale': 50,
+    'scale': 45,
     'spacingStaff': 4,
     'xmlIdSeed': 1
 }
@@ -55,6 +55,7 @@ if __name__ == "__main__":
     log = logging.getLogger(__name__)
     log.info("Running at logging level %s", level_msg)
 
+    verovio.enableLog(verovio.LOG_DEBUG)
     tk = verovio.toolkit()
     # version of the toolkit
     log.info("Using Verovio %s", tk.getVersion())

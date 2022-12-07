@@ -23,6 +23,9 @@
         margin-top: -70px;
         visibility: hidden;
     }
+    .visible-print-notation {
+        display: none;
+    }
 }
 
 @media print {
@@ -35,6 +38,9 @@
     }
     h1:not(:first-of-type) {
         page-break-before: always;
+    }
+    .visible-print-notation {
+        display: block !important;
     }
 }
 

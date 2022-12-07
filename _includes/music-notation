@@ -12,7 +12,7 @@ In both cases check the the file exists
 {% if example and example['svg-example-exists'] %}
 {% assign svgFile = example['svg-example-file'] %}
 <img class="img-responsive hidden-print" src="/images/{{ example['svg-example-file'] }}" alt="{{ example['svg-example-file'] }}]">
-<div class="visible-print">{% include  {{ svgFile }} %}</div>
+<div class="visible-print-notation">{% include  {{ svgFile }} %}</div>
 {% else %}
 [SVG file is missing and need to be generated]
 {% endif %}
