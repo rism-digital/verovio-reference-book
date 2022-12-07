@@ -32,7 +32,7 @@ Modifying the appearance can be done with a CSS file, or programmatically.
 
 ### Applying CSS to the SVG
 
-In the CSS file you need to create rules to be applied to the SVG `<g>` elements - simply `g` in CSS - together with the class selector corresponding to the MEI element name. For example, `g.tempo` to modifying MEI `<tempo>` elements.
+In the CSS file you need to create rules to be applied to the SVG `<g>` elements - simply `g` in CSS - together with the class selector corresponding to the MEI element name. For example, `g.tempo` modifies MEI `<tempo>` elements.
 
 ```
 g.tempo {
