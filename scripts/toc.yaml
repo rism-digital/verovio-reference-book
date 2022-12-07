@@ -31,10 +31,34 @@
 "/first-steps/layout-options.html#end-of-section-3": End of Section 3
 "/first-steps/score-navigation.html": Score navigation
 "/first-steps/score-navigation.html#creating-the-controls": Creating the controls
-"/interactive-notation/": Introduction
-"/interactive-notation/working-with-css-and-svg.html": Working with CSS and SVG
-"/interactive-notation/xpath-queries.html": XPath queries
-"/interactive-notation/working-with-midi.html": Working with MIDI
+"/interactive-notation/css-and-svg.html": CSS and SVG
+"/interactive-notation/css-and-svg.html#understanding-the-structure-of-the-svg": Understanding
+  the structure of the SVG
+"/interactive-notation/css-and-svg.html#applying-css-to-the-svg": Applying CSS to
+  the SVG
+"/interactive-notation/css-and-svg.html#adjusting-the-style-programmatically": Adjusting
+  the style programmatically
+"/interactive-notation/css-and-svg.html#full-example": Full example
+"/interactive-notation/encoding-formats.html": Encoding formats
+"/interactive-notation/encoding-formats.html#saving-as-mei": Saving as MEI
+"/interactive-notation/encoding-formats.html#compressed-musicxml": Compressed MusicXML
+"/interactive-notation/encoding-formats.html#wrapping-up": Wrapping up
+"/interactive-notation/encoding-formats.html#full-example": Full example
+"/interactive-notation/playing-midi.html": Playing the MIDI output
+"/interactive-notation/playing-midi.html#add-a-midi-player": Add a MIDI player
+"/interactive-notation/playing-midi.html#highlighting-the-notes-while-playing": Highlighting
+  the notes while playing
+"/interactive-notation/playing-midi.html#full-example": Full example
+"/interactive-notation/content-selection.html": Score content selection
+"/interactive-notation/content-selection.html#selecting-parts-of-a-score": Selecting
+  parts of a score
+"/interactive-notation/content-selection.html#full-example": Full example
+"/interactive-notation/editorial-markup.html": Interacting with editorial markup
+"/interactive-notation/editorial-markup.html#selection-with-an-xpath-query": Selection
+  with an xpath query
+"/interactive-notation/editorial-markup.html#switching-between-readings": Switching
+  between readings
+"/interactive-notation/editorial-markup.html#full-example": Full example
 "/advanced-topics/": Introduction
 "/advanced-topics/internal-structure.html": Internal structure
 "/advanced-topics/internal-structure.html#layout-and-positioning": Layout and positioning
