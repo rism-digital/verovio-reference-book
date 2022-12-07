@@ -96,7 +96,7 @@ In traditional music engraving, the staff size corresponds to the raster which w
 
 #### Using the SVG ViewBox
 
-For simple cases where the output SVG image is embedded in a web environment, enabling the `--svg-view-box` is the simplest way to have the image scaled down to the fit its container. The include responsive environments when the container size can change. The example below is the default output page with the option `--svg-view-box` enabled and embedded in a `<div>` with a with of `210px`. As a result, the SVG image is scaled down to fit in it.
+For simple cases where the output SVG image is embedded in a web environment, enabling the `--svg-view-box` is the simplest way to have the image scaled down to the fit its container. It includes responsive environments when the container size can change interactively. The example below is the default output page with the option `--svg-view-box` enabled and embedded in a `<div>` with a with of `210px`. As a result, the SVG image is scaled down to fit in it.
 
 ```html
 <div style="width: 210px;">
