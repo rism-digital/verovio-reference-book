@@ -59,7 +59,7 @@ See also: [Music symbols in text](/advanced-topics/smufl.html#music-symbols-in-t
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"svgViewBox":  <boolean>`</span><span class="lang2">`--svg-view-box `</span> {% endcol %}{% col 8 %} Use viewBox on svg root element for easy scaling of document {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"unit": <integer>`</span><span class="lang2">`--unit <integer>`</span> {% endcol %}{% col 8 %} The MEI unit (1⁄2 of the distance between the staff lines)<br/>(default: 9; min: 6; max: 20)
 
-See also: [Controlling the SVG output](/advanced-topics/controlling-the-svg-output.html) {% endcol %}
+See also: [Units and page dimensions](/advanced-topics/controlling-the-svg-output.html#units-and-page-dimensions) \| [Scaling](/advanced-topics/controlling-the-svg-output.html#scaling) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"useBraceGlyph":  <boolean>`</span><span class="lang2">`--use-brace-glyph `</span> {% endcol %}{% col 8 %} Use brace glyph from current font {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"useFacsimile":  <boolean>`</span><span class="lang2">`--use-facsimile `</span> {% endcol %}{% col 8 %} Use information in the &lt;facsimile&gt; element to control the layout {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"usePgFooterForAll":  <boolean>`</span><span class="lang2">`--use-pg-footer-for-all `</span> {% endcol %}{% col 8 %} Use the pgFooter for all pages {% endcol %}

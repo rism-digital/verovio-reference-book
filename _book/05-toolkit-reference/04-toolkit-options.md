@@ -29,7 +29,8 @@ see-also:
     smuflTextFont:
       - "/advanced-topics/smufl.html#music-symbols-in-text"
     unit:
-      - "/advanced-topics/controlling-the-svg-output.html"   
+      - "/advanced-topics/controlling-the-svg-output.html#units-and-page-dimensions"   
+      - "/advanced-topics/controlling-the-svg-output.html#scaling"   
 ---
 
 <div class="hidden-print radio-inline">
