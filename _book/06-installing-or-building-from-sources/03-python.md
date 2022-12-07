@@ -125,7 +125,7 @@ python setup.py sdist
 
 In both cases, the wheel will be written to the `./dist` directory.
 
-#### Resources for versions built locally
+### Resources for versions built locally
 
 When using a version built locally, you usually have to specify the path to the Verovio resources. To do so, you can do
 

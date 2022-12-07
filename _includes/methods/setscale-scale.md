@@ -1,0 +1,1 @@
+See also: [Scaling](/advanced-topics/controlling-the-svg-output.html#scaling)

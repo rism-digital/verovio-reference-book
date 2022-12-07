@@ -8,6 +8,8 @@ see-also:
       - "/advanced-topics/smufl.html"
     inputFrom:
       - "/toolkit-reference/input-formats.html"
+    logLevel:
+      - "/toolkit-reference/environment-functions.html"
     mensuralToMeasure:
       - "/advanced-topics/mensural-notation.html#ligatures"
       - "/advanced-topics/mensural-notation.html#layout"
@@ -21,7 +23,8 @@ see-also:
       - "/advanced-topics/controlling-the-svg-output.html"
     resourcePath:
       - "/toolkit-reference/toolkit-methods.html#setresourcepath"
-      - "/installing-or-building-from-sources/python.html#building-the-toolkit"
+      - "/toolkit-reference/environment-functions.html"
+      - "/installing-or-building-from-sources/python.html#resources-for-versions-built-locally"
     scale:
       - "/advanced-topics/controlling-the-svg-output.html#scaling"
     scaleToPageSize:

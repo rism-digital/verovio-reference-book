@@ -11,7 +11,7 @@ See also: [Output formats](/toolkit-reference/output-formats.html) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-p, --page <integer>`</span> {% endcol %}{% col 8 %} Select the page to engrave (default is 1) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-r, --resource-path <string>`</span> {% endcol %}{% col 8 %} Path to the directory with Verovio resources<br/>(default: "/usr/local/share/verovio")
 
-See also: [SetResourcePath](/toolkit-reference/toolkit-methods.html#setresourcepath) \| [[missing]](/installing-or-building-from-sources/python.html#building-the-toolkit) {% endcol %}
+See also: [SetResourcePath](/toolkit-reference/toolkit-methods.html#setresourcepath) \| [Environment functions](/toolkit-reference/environment-functions.html) \| [Resources for versions built locally](/installing-or-building-from-sources/python.html#resources-for-versions-built-locally) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"scale": <integer>`</span><span class="lang2">`-s, --scale <integer>`</span> {% endcol %}{% col 8 %} Scale of the output in percent (100 is normal size)<br/>(default: 100; min: 1; max: 1000)
 
 See also: [Scaling](/advanced-topics/controlling-the-svg-output.html#scaling) {% endcol %}
