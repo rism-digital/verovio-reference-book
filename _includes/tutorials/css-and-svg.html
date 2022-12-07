@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Understanding the structure of the SVG</title>
+        <!-- A stylesheet for modifying the appearance of the output -->
+        <link href="solution.css" rel="stylesheet" type="text/css" />
+        <!-- Verovio -->
+        <script src="https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js" defer></script>
+    </head>
+    <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                verovio.module.onRuntimeInitialized = function () {
+                    // This line initializes the Verovio toolkit
+                    const tk = new verovio.toolkit();
+
+                    let zoom = 80;
+                    let pageHeight = document.body.clientHeight * 100 / zoom;
+                    let pageWidth = document.body.clientWidth * 100 / zoom;
+
+                    options = {
+                        pageHeight: pageHeight,
+                        pageWidth: pageWidth,
+                        scale: zoom,
+                        // Add an option to pass note@pname and note@oct as svg @data-*
+                        svgAdditionalAttribute: ["note@pname", "note@oct"]
+                    };
+                    tk.setOptions(options);
+
+                    // This line fetches the MEI file we want to render...
+                    fetch('https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei')
+                        // ... then receives the response and "unpacks" the MEI from it
+                        .then((response) => response.text())
+                        .then((mei) => {
+                            // ... then we can load the data into Verovio ...
+                            tk.loadData(mei);
+                            // ... and generate the SVG for the first page
+                            let svg = tk.renderToSVG(1);
+                            // ... and finally gets the <div> element with the ID we specified, 
+                            // and sets the content (innerHTML) to the SVG that we just generated.
+                            document.getElementById("notation").innerHTML = svg;
+
+                            // Get all the rests by selecting <g> with attribute class 'rest' ...
+                            let rests = document.querySelectorAll('g.rest');
+                            // ... and change their color by setting their style.fill value
+                            for (let rest of rests) {
+                                rest.style.fill = "dodgerblue";
+                            }
+
+                            // Get all the notes with @pname="c" and @oct="5" and change their color
+                            let c5s = document.querySelectorAll('g[data-pname="c"][data-oct="5"]');
+                            for (let c5 of c5s) {
+                                c5.style.fill = "aqua";
+                            }
+
+                            // Get all the verses ...
+                            let verses = document.querySelectorAll('g.verse');
+                            // ... and use the 'getElementAttr()' to retrieve all attributes ...
+                            for (let verse of verses) {
+                                let attr = tk.getElementAttr(verse.id);
+                                // ... and change to color when @n exists and is greater than 1
+                                if (attr.n && attr.n > 1) verse.style.fill = "darkcyan";
+                            }
+                        });
+                }
+            });
+        </script>
+        <!-- The div where we are going to insert the SVG -->
+        <div id="notation" />
+    </body>
+</html>
