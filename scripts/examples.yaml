@@ -184,21 +184,7 @@
   svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/01-default.svg
   svg-example-exists: true
   mei-example-exists: true
-- name: 02-units
-  test-suite: score/score-013.mei
-  options:
-    breaks: auto
-    unit: 6.0
-    spacingStaff: 12
-    adjustPageHeight: false
-    header: auto
-    footer: auto
-    justifyVertically: true
-  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/02-units.mei
-  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/02-units.svg
-  svg-example-exists: true
-  mei-example-exists: true
-- name: 03-page-size
+- name: 02-page-size
   test-suite: score/score-013.mei
   options:
     pageHeight: 3050
@@ -210,11 +196,11 @@
     header: auto
     footer: auto
     justifyVertically: true
-  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/03-page-size.mei
-  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/03-page-size.svg
+  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/02-page-size.mei
+  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/02-page-size.svg
   svg-example-exists: true
   mei-example-exists: true
-- name: 04-responsive-page
+- name: 03-responsive-page
   test-suite: score/score-013.mei
   options:
     adjustPageHeight: false
@@ -224,11 +210,11 @@
     scale: 100
     scaleToPageSize: true
     spacingStaff: 12
-  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/04-responsive-page.mei
-  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/04-responsive-page.svg
+  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/03-responsive-page.mei
+  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/03-responsive-page.svg
   svg-example-exists: true
   mei-example-exists: true
-- name: 05-responsive-page
+- name: 04-responsive-page
   test-suite: score/score-013.mei
   options:
     adjustPageHeight: false
@@ -238,8 +224,22 @@
     scale: 30
     scaleToPageSize: true
     spacingStaff: 12
-  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/05-responsive-page.mei
-  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/05-responsive-page.svg
+  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/04-responsive-page.mei
+  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/04-responsive-page.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: 05-units
+  test-suite: score/score-013.mei
+  options:
+    breaks: auto
+    unit: 6.0
+    spacingStaff: 12
+    adjustPageHeight: false
+    header: auto
+    footer: auto
+    justifyVertically: true
+  mei-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/05-units.mei
+  svg-example-file: examples/04-advanced-topics/04-controlling-the-svg-output/05-units.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: humdrum-01
