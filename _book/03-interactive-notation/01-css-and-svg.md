@@ -26,7 +26,7 @@ will have a the following structure in the SVG:
 
 You will notice that both the tree structure is preserved and that the MEI element names are passed as `@class` attribute values in the SVG elements, as well as the `@xml:id` of the MEI element as `@id` in the SVG.
 
-Thanks to this, and because SVG can be styled with CSS, it is straightforward to modify the appearance of elements and their content.
+Since SVG can be styled with CSS, it is straightforward to modify the appearance of elements and their contents.
 
 Modifying the appearance can be done with a CSS file, or programmatically.
 
