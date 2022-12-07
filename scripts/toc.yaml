@@ -39,6 +39,14 @@
 "/advanced-topics/internal-structure.html": Internal structure
 "/advanced-topics/internal-structure.html#layout-and-positioning": Layout and positioning
 "/advanced-topics/internal-structure.html#svg-structure": SVG structure
+"/advanced-topics/controlling-the-svg-output.html": Controlling the SVG output
+"/advanced-topics/controlling-the-svg-output.html#units-and-page-dimensions": Units
+  and page dimensions
+"/advanced-topics/controlling-the-svg-output.html#scaling": Scaling
+"/advanced-topics/controlling-the-svg-output.html#svg-optimised-for-pdf-generation": SVG
+  optimised for PDF generation
+"/advanced-topics/smufl.html": SMuFL fonts
+"/advanced-topics/smufl.html#music-symbols-in-text": Music symbols in text
 "/advanced-topics/transposition.html": Transposition
 "/advanced-topics/transposition.html#transposition-by-chromatic-interval": Transposition
   by chromatic interval
@@ -47,14 +55,6 @@
 "/advanced-topics/transposition.html#illustrated-examples": Illustrated examples
 "/advanced-topics/transposition.html#algorithm-for-transposition-by-tonic": Algorithm
   for transposition by tonic
-"/advanced-topics/smufl.html": SMuFL fonts
-"/advanced-topics/smufl.html#music-symbols-in-text": Music symbols in text
-"/advanced-topics/controlling-the-svg-output.html": Controlling the SVG output
-"/advanced-topics/controlling-the-svg-output.html#units-and-page-dimensions": Units
-  and page dimensions
-"/advanced-topics/controlling-the-svg-output.html#scaling": Scaling
-"/advanced-topics/controlling-the-svg-output.html#svg-optimised-for-pdf-generation": SVG
-  optimised for PDF generation
 "/advanced-topics/mensural-notation.html": Mensural notation
 "/advanced-topics/mensural-notation.html#duration-alignment": Duration alignment
 "/advanced-topics/mensural-notation.html#layout": Layout
