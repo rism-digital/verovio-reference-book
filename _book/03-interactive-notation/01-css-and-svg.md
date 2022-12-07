@@ -110,7 +110,7 @@ However, in many cases, applications need to have access at other attribute valu
 }
 ```
 
-With this option, each `g.note` element in the SVG will also have a `data-pname` and a `data-oct` attritute carrying the original MEI attribute value. For example, and note in MEI and the corresponding SVG element will be:
+With this option, each `g.note` element in the SVG will also have a `data-pname` and a `data-oct` attribute carrying the original MEI attribute value. For example, a note in MEI and the corresponding SVG element will be:
 
 ```xml
 <note pname="c" oct="5"/>
