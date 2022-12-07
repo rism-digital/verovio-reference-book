@@ -94,15 +94,33 @@ In traditional music engraving, the staff size corresponds to the raster which w
 
 ### Scaling
 
+#### Using the SVG ViewBox
+
+For simple cases where the output SVG image is embedded in a web environment, enabling the `--svg-view-box` is the simplest way to have the image scaled down to the fit its container. The include responsive environments when the container size can change. The example below is the default output page with the option `--svg-view-box` enabled and embedded in a `<div>` with a with of `210px`. As a result, the SVG image is scaled down to fit in it.
+
+```html
+<div style="width: 210px;">
+  <!-- SVG image included here -->
+</div>
+```
+
+<div style="width: 210px; height: 297px;">
+{% include music-notation-only example="view-box" %}
+</div>
+
+#### Using the Verovio option
+
 The SVG output in Verovio can be scaled by using the `--scale` option. The option value is an integer representing a scaling percentage. It is `100` percent by default.
 
 When changing the scale option, Verovio will by default change the size of the output SVG image. For example, with the default page size and a scale option set to `50` percent, the resulting SVG image will have a size of **1485px** by **1050px**. The same amount of music will be engraved on the page as with the default scale value.
 
 In responsive environments, Verovio can be used to create user interfaces where the user can change the magnification ("zoom"). This can be achieved by changing the scale and the page dimensions. Zooming out means increasing the page dimensions and reducing the scale by the same factor, and zooming in the opposite. For example, if the window in which the output of Verovio will be displayed is **1800px** by **800px**, these can be set as a page height and page width and Verovio will produce an SVG image that fits the window with the default scale value of `100` percent. To implement a zooming out function, for example by a factor 2, the page dimensions have to be changed to `3600` by `1600` and the scale to `50`. The output SVG image will then still have a size that fits the window.
 
-Verovio has a `--scale-to-page-size` option that simplifies this process. Using this option is recommended in responsive environments. The advantage is that does not require the page dimensions to be calculated and changed by the user. With this option, the SVG output image will always have the same size independently from the scale percentage. The scale percentage determines how the rendering is scaled within this image. For example, reducing the scale percentage will increase the amount of music on the page. When this option is enabled, the layout needs to be recalculated when the scale value is changed – see below.
+#### Scaling to the page size
 
-The example below shows a file rendered with a page height of `800`, a width of `1600` and the default scale of `100` percent.
+Verovio has a `--scale-to-page-size` option that simplifies the scaling process described above. Using this option is recommended in responsive environments. The advantage is that does not require the page dimensions to be calculated and changed by the user. With this option, the SVG output image will always have the same size independently from the scale percentage. The scale percentage determines how the rendering is scaled within this image. For example, reducing the scale percentage will increase the amount of music on the page. When this option is enabled, the layout needs to be recalculated when the scale value is changed – see below.
+
+The example below shows a file rendered with a page height of `800`, a width of `900` and the default scale of `100` percent.
 
 {% include music-notation-only example="responsive-page-100" %}
 
