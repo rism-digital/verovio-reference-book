@@ -2,17 +2,28 @@
 title: "Controlling the SVG output"
 
 examples:
-    - name: 01-default
+    - name: default
       test-suite: score/score-013.mei
       options:
         breaks: 'auto'
         spacingStaff: 12
         adjustPageHeight: False
-        header: 'auto'
         footer: 'auto'
+        header: 'auto'
         justifyVertically: True
 
-    - name: 02-page-size
+    - name: view-box
+      test-suite: score/score-013.mei
+      options:
+        breaks: 'auto'
+        spacingStaff: 12
+        adjustPageHeight: False
+        footer: 'auto'
+        header: 'auto'
+        justifyVertically: True
+        svgViewBox: True
+
+    - name: page-size
       test-suite: score/score-013.mei
       options:
         pageHeight: 3050
@@ -21,45 +32,47 @@ examples:
         scale: 41
         spacingStaff: 12
         adjustPageHeight: False
-        header: 'auto'
         footer: 'auto'
+        header: 'auto'
         justifyVertically: True
 
-    - name: 03-responsive-page
+    - name: responsive-page-100
       test-suite: score/score-013.mei
       options:
         adjustPageHeight: False
         breaks: 'auto'
         pageHeight: 800
-        pageWidth: 1800
+        pageWidth: 900
         scale: 100
         scaleToPageSize: True
         spacingStaff: 12
 
-    - name: 04-responsive-page
+    - name: responsive-page-30
       test-suite: score/score-013.mei
       options:
         adjustPageHeight: False
         breaks: 'auto'
         pageHeight: 800
-        pageWidth: 1800
+        pageWidth: 900
         scale: 30
         scaleToPageSize: True
         spacingStaff: 12
 
-    - name: 05-units
+    - name: units
       test-suite: score/score-013.mei
       options:
         breaks: 'auto'
         unit: 6.0
         spacingStaff: 12
         adjustPageHeight: False
-        header: 'auto'
         footer: 'auto'
+        header: 'auto'
         justifyVertically: True
 ---
 
-### Page units and dimensions
+### Units and page dimensions
+
+#### Verovio abstract unit
 
 Verovio layout calculation is based on an internal abstract unit. This abstract unit is also used for specifying a few options, such as the page dimensions. By default, the page height is `2970` and the page width is `2100`. These are equivalent to the dimension of an A4 page in portrait orientation in tenths of a millimeter. When generating SVG, these units are interpreted as pixels, which means that the default SVG image size is **2970px** height by **2100px** width. 
 
@@ -71,7 +84,7 @@ Page margins (`--page-margin-bottom`,  `--page-margin-left`,  `--page-margin-rig
 
 Changing the page dimension will increase the amount of music that fits on the page. The example below if the same file rendered with a page height of `3050` and a page width of `2290`, a more typical paper size for sheet music than A4.
 
-{% include music-notation-only example="02-page-size" %}
+{% include music-notation-only example="page-size" %}
 
 #### MEI unit
 
@@ -91,11 +104,11 @@ Verovio has a `--scale-to-page-size` option that simplifies this process. Using 
 
 The example below shows a file rendered with a page height of `800`, a width of `1600` and the default scale of `100` percent.
 
-{% include music-notation-only example="03-responsive-page" %}
+{% include music-notation-only example="responsive-page-100" %}
 
 The example below is the same file rendered with the same page dimensions as above, but with the option `--scale-to-page-size` enabled and a scale of `30` percent. The SVG image size remains the same but the amount of music rendered has increased accordingly.
 
-{% include music-notation-only example="04-responsive-page" %}
+{% include music-notation-only example="responsive-page-30" %}
 
 Changing the values of some options often requires the layout to be recalculated. For example, when the ratio of the page dimension are changed, or the margins are changed, then a call to `RedoLayout` must be made before rendering a page again. It is also important to keep in mind that redoing the layout might yield a different number of pages and that it is important to check the a page still exists with `GetPageCount` before rendering it.
 
@@ -133,4 +146,4 @@ Up to Verovio 3.13 only integer MEI units are supported.
 
 The example below shows the same file as above with the default A4 page size but with a unit value of `6.0`. More music is rendered on a page because the staff size is smaller.
 
-{% include music-notation-only example="05-units" %}
+{% include music-notation-only example="units" %}
