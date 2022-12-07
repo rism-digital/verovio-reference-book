@@ -102,7 +102,7 @@ rest.style.fill = "dodgerblue";
 
 The attributes in the SVG `<g>` elements corresponding to the MEI elements is not limited to the `@class` carrying the MEI element name and the MEI `@xml:id` passed as `@id`. Verovio also passed MEI `@type` values as additional `@class` in the SVG.
 
-However, in many cases, applications need to have access at other attribute values. To do so, one can use the `svgAdditionalAttribute` option to specify which attributes needs to be made available directly in the SVG output. For example, for making the note pitch name and the note octave accessible, you will need to add the following option value:
+However, in many cases, applications need to have access at other attribute values. To do so, one can use the `svgAdditionalAttribute` option to specify which attributes can be made available in the SVG output. For example, for making the note pitch name and the note octave accessible, you can add the following option values to Verovio's `setOptions()` method:
 
 ```json
 {
