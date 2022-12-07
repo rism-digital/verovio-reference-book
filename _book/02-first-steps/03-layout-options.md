@@ -24,6 +24,8 @@ All of the options have default values. You can use the `getOptions` method to v
 
 ```js
 console.log("Verovio options:", tk.getOptions());
+// for the default values
+console.log("Verovio options:", tk.getDefaultOptions());
 ```
 
 When you refresh your page and open your browser's console you should see the text "Verovio options:" followed by a small disclosure triangle. Clicking this triangle will produce a long list of options that you can pass to `setOptions`. Let's try a few more.
