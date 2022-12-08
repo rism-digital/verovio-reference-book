@@ -11,8 +11,8 @@ In both cases check the the file exists
 {% assign example = page.examples | where: "name", include.example | first %}
 {% if example and example['svg-example-exists'] %}
 {% assign svgFile = example['svg-example-file'] %}
-<img class="img-responsive hidden-print" src="/images/{{ example['svg-example-file'] }}" alt="{{ example['svg-example-file'] }}]">
-<div class="visible-print-notation">{% include  {{ svgFile }} %}</div>
+<img class="{{ include.class }} img-responsive hidden-print" src="/images/{{ example['svg-example-file'] }}" alt="{{ example['svg-example-file'] }}]">
+<div class="{{ include.class }} visible-print-notation">{% include  {{ svgFile }} %}</div>
 {% else %}
 [SVG file is missing and need to be generated]
 {% endif %}
