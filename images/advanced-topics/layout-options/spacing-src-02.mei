@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0" ?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron" ?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.0">
+   <meiHead>
+      <fileDesc>
+         <titleStmt>
+            <title>Text example</title>
+         </titleStmt>
+         <pubStmt/>
+      </fileDesc>
+   </meiHead>
+   <music>
+      <body>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <pgHead xml:id="pghead-0000000012068167">
+                     <rend xml:id="rend-0000000149363456" halign="center" valign="middle">
+                        <rend xml:id="rend-0000000742427957" fontsize="x-large">Text example</rend>
+                     </rend>
+                  </pgHead>
+                  <pgFoot>
+                     <rend fontsize="smaller" halign="left" valign="bottom">https://www.verovio.org – © 2022</rend>
+                  </pgFoot>
+                  <staffGrp>
+                     <staffDef n="1" lines="5" clef.shape="G" clef.line="2" key.mode="major" key.sig="0" meter.count="4" meter.unit="4" meter.sym="common" />
+                  </staffGrp>
+               </scoreDef>
+               <section>
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <note pname="e" oct="5" dur="4"/>
+                           <note pname="f" oct="5" dur="4"/>
+                           <note pname="g" oct="5" dur="4"/>
+                           <note pname="a" oct="5" dur="4"/>
+                        </layer>
+                     </staff>
+                  </measure>
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <mRest/>
+                        </layer>
+                     </staff>
+                  </measure>
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <mRest/>
+                        </layer>
+                     </staff>
+                  </measure>
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <mRest/>
+                        </layer>
+                     </staff>
+                  </measure>
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <mRest/>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+         </mdiv>
+      </body>
+   </music>
+</mei>
