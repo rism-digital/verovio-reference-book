@@ -128,7 +128,7 @@ let c5s = document.querySelectorAll('g[data-pname="c"][data-oct="5"]');
 
 #### Accessing MEI attribute values programmatically
 
-Custom data-* attributes are quite straightforward and easy to use. However, selectors have limitations, and it is not always possible to know in advance all the attributes that one need to have available in the SVG. Furthermore, if the list of attributes becomes too long, the SVG might become overloaded.
+Custom `data-*` attributes are straightforward and easy to use with CSS selectors. However, selectors can have some limits, and it is not always possible to know in advance all the attributes that needed in the SVG. Furthermore, if the list of attributes becomes too long, the SVG might become overloaded.
 
 In such cases, it is possible and preferable to access them programmatically. This can be done through the `getElementAttr()` toolkit method that gives access to all the MEI attributes of a given element, including attributes not currently supported or not used by Verovio. It takes an `@id` as parameter and returns a JSON object with all the attributes. For example, if you currently have `rest` variable holding the SVG node corresponding to an MEI rest, you can retrieve all the attributes by passing  the `rest.id` value to the method:
 
