@@ -44,4 +44,8 @@ img.title-page { padding: 180px; padding-top: 50px; padding-bottom: 550px; }
 
 img.example { border: 1px #ddd solid; margin-bottom: 50px; display: block; margin-left: auto; margin-right: auto; width: 60%; }
 
+img.example-80 { margin-top: 10px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; width: 80%; }
+
+img.centered { display: block; margin-left: auto; margin-right: auto; }
+
 div.option_row { border-bottom: 1px solid #bbb; margin-bottom: 5px; }
