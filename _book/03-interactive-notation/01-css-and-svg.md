@@ -136,7 +136,7 @@ In this case, it is possible and preferable to access them programmatically with
 <rest xml:id="r123" dur="4" dots="1">
 
 ```js
-let attr = tk.getElementAttr(rest.id);
+let attr = tk.getElementAttr("r123");
 ```
 
 You can then look at any attributes specifically in the JSON object returned, for example `attr.dur` for the MEI `@dur` of the rest:
