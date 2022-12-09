@@ -115,7 +115,6 @@
 "/toolkit-reference/toolkit-methods.html#getmei": GetMEI
 "/toolkit-reference/toolkit-methods.html#getmidivaluesforelement": GetMIDIValuesForElement
 "/toolkit-reference/toolkit-methods.html#getnotatedidforelement": GetNotatedIdForElement
-"/toolkit-reference/toolkit-methods.html#getoption": GetOption
 "/toolkit-reference/toolkit-methods.html#getoptions": GetOptions
 "/toolkit-reference/toolkit-methods.html#getpagecount": GetPageCount
 "/toolkit-reference/toolkit-methods.html#getpagewithelement": GetPageWithElement
@@ -144,7 +143,6 @@
 "/toolkit-reference/toolkit-methods.html#savefile": SaveFile
 "/toolkit-reference/toolkit-methods.html#select": Select
 "/toolkit-reference/toolkit-methods.html#setinputfrom": SetInputFrom
-"/toolkit-reference/toolkit-methods.html#setoption": SetOption
 "/toolkit-reference/toolkit-methods.html#setoptions": SetOptions
 "/toolkit-reference/toolkit-methods.html#setoutputto": SetOutputTo
 "/toolkit-reference/toolkit-methods.html#setresourcepath": SetResourcePath

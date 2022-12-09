@@ -324,11 +324,13 @@ result = toolkit.getHumdrum()
 
 Write the humdrum buffer to the file.
 
+filename The output filename
+
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
@@ -480,37 +482,6 @@ result = toolkit.getNotatedIdForElement(xmlId)
 ```
 
 {% include method-doc file="getnotatedidforelement-xmlid" %}
-### GetOption
-
-Get the value for an option.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
-
-**Returns**
-
-`std::string` – The option value as a string
-
-**Parameters**
-
-|---|---|---|
-| Name | Type | Default | Description |
-| `option` | `const std::string &` | ∅ | The name of the option |
-| `defaultValue` | `bool` | `false` | True to get the default value of the option |
-{: .table .table-condensed .table-sm .text-xsmall}
-
-**Original header**
-
-```cpp
-std::string vrv::Toolkit::GetOption(const std::string &option, bool defaultValue=false) const
-```
-
-**Example call**
-
-```python
-result = toolkit.getOption(option, defaultValue)
-```
-
-{% include method-doc file="getoption-option-defaultvalue" %}
 ### GetOptions
 
 Return a dictionary of all the options with their current value.
@@ -940,11 +911,13 @@ result = toolkit.renderToMIDI()
 
 Render a document to MIDI and save it to the file.
 
+filename The output filename
+
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
@@ -995,11 +968,15 @@ Render a document to Plaine and Easie and save it to the file.
 
 Only the top staff / layer is exported.
 
+
+
+filename The output filename
+
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
@@ -1054,11 +1031,15 @@ result = toolkit.renderToSVG(pageNo, xmlDeclaration)
 
 Render a page to SVG and save it to the file.
 
+filename The output filename 
+
+pageNo The page to render (1-based)
+
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
@@ -1085,9 +1066,11 @@ result = toolkit.renderToSVGFile(filename, pageNo)
 
 Render a document to a timemap.
 
+jsonOptions A stringified JSON objects with the timemap options
+
 **Returns**
 
-`std::string`
+`std::string` – The timemap as a string
 
 **Parameters**
 
@@ -1113,11 +1096,15 @@ result = toolkit.renderToTimemap(jsonOptions)
 
 Render a document to timemap and save it to the file.
 
+filename The output filename 
+
+jsonOptions A stringified JSON objects with the timemap options
+
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
@@ -1282,37 +1269,6 @@ result = toolkit.setInputFrom(inputFrom)
 ```
 
 {% include method-doc file="setinputfrom-inputfrom" %}
-### SetOption
-
-Set the value for an option.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
-
-**Returns**
-
-`bool` – True if the option was successfully set
-
-**Parameters**
-
-|---|---|---|
-| Name | Type | Default | Description |
-| `option` | `const std::string &` | ∅ | The name of the option |
-| `value` | `const std::string &` | ∅ | The option value as string |
-{: .table .table-condensed .table-sm .text-xsmall}
-
-**Original header**
-
-```cpp
-bool vrv::Toolkit::SetOption(const std::string &option, const std::string &value)
-```
-
-**Example call**
-
-```python
-result = toolkit.setOption(option, value)
-```
-
-{% include method-doc file="setoption-option-value" %}
 ### SetOptions
 
 Set option values.
