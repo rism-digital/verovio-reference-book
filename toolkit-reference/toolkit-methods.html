@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-12-09T14:30:16+00:00" />
+<meta property="article:published_time" content="2022-12-09T15:01:59+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","datePublished":"2022-12-09T14:30:16+00:00","dateModified":"2022-12-09T14:30:16+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","headline":"Toolkit methods","@context":"https://schema.org"}</script>
+{"description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","datePublished":"2022-12-09T15:01:59+00:00","dateModified":"2022-12-09T15:01:59+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","headline":"Toolkit methods","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -159,8 +159,6 @@
 
 <a class="toc-item toc-subsection" href="#getnotatedidforelement">GetNotatedIdForElement</a>
 
-<a class="toc-item toc-subsection" href="#getoption">GetOption</a>
-
 <a class="toc-item toc-subsection" href="#getoptions">GetOptions</a>
 
 <a class="toc-item toc-subsection" href="#getpagecount">GetPageCount</a>
@@ -216,8 +214,6 @@
 <a class="toc-item toc-subsection" href="#select">Select</a>
 
 <a class="toc-item toc-subsection" href="#setinputfrom">SetInputFrom</a>
-
-<a class="toc-item toc-subsection" href="#setoption">SetOption</a>
 
 <a class="toc-item toc-subsection" href="#setoptions">SetOptions</a>
 
@@ -662,12 +658,14 @@
 
 <p>Write the humdrum buffer to the file.</p>
 
+<p>filename The output filename</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -848,52 +846,6 @@
 <p><strong>Example call</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getNotatedIdForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="getoption">GetOption</h3>
-
-<p>Get the value for an option.</p>
-
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
-
-<p><strong>Returns</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">std::string</code> – The option value as a string</p>
-
-<p><strong>Parameters</strong></p>
-
-<table class="table table-condensed table-sm text-xsmall">
-  <tbody>
-    <tr>
-      <td>Name</td>
-      <td>Type</td>
-      <td>Default</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">option</code></td>
-      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
-      <td>∅</td>
-      <td>The name of the option</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">defaultValue</code></td>
-      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
-      <td><code class="language-plaintext highlighter-rouge">false</code></td>
-      <td>True to get the default value of the option</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Original header</strong></p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetOption</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">defaultValue</span><span class="o">=</span><span class="nb">false</span><span class="p">)</span> <span class="k">const</span>
-</code></pre></div></div>
-
-<p><strong>Example call</strong></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getOption</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getoptions">GetOptions</h3>
@@ -1398,12 +1350,14 @@
 
 <p>Render a document to MIDI and save it to the file.</p>
 
+<p>filename The output filename</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1460,12 +1414,14 @@
 
 <p>Only the top staff / layer is exported.</p>
 
+<p>filename The output filename</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1543,12 +1499,16 @@
 
 <p>Render a page to SVG and save it to the file.</p>
 
+<p>filename The output filename</p>
+
+<p>pageNo The page to render (1-based)</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1589,9 +1549,11 @@
 
 <p>Render a document to a timemap.</p>
 
+<p>jsonOptions A stringified JSON objects with the timemap options</p>
+
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – The timemap as a string</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1626,12 +1588,16 @@
 
 <p>Render a document to timemap and save it to the file.</p>
 
+<p>filename The output filename</p>
+
+<p>jsonOptions A stringified JSON objects with the timemap options</p>
+
 <aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
 </aside>
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1857,52 +1823,6 @@
 <p><strong>Example call</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setInputFrom</span><span class="p">(</span><span class="n">inputFrom</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="setoption">SetOption</h3>
-
-<p>Set the value for an option.</p>
-
-<aside class="warning"><p>This method is not available in the JavaScript distributed version of the toolkit</p>
-</aside>
-
-<p><strong>Returns</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the option was successfully set</p>
-
-<p><strong>Parameters</strong></p>
-
-<table class="table table-condensed table-sm text-xsmall">
-  <tbody>
-    <tr>
-      <td>Name</td>
-      <td>Type</td>
-      <td>Default</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">option</code></td>
-      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
-      <td>∅</td>
-      <td>The name of the option</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">value</code></td>
-      <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
-      <td>∅</td>
-      <td>The option value as string</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Original header</strong></p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">SetOption</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">option</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">value</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p><strong>Example call</strong></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setOption</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="setoptions">SetOptions</h3>
