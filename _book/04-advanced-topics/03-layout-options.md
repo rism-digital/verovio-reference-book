@@ -70,7 +70,7 @@ To remove the spacing above and below the staff completely, the staff space has 
 
 ![spacing 03](/images/advanced-topics/layout-options/spacing-03.png){:.img-responsive .example-80}
 
-The half staff spacing above and below the staff means that having music content above or below the staff line does not change vertical positioning when the content fits within that space. Because the default value for `--spacing-staff` is `12` MEI units, it means that up to 3 staff spaces (e.g., up to a D6 with a G-2 clef) will fit in that space.
+The half staff space above and below the staff means that having music content above or below the staff line does not change vertical positioning when the content fits within that space. Because the default value for `--spacing-staff` is `12` MEI units, it means that up to 3 staff spaces (e.g., up to a D6 with a G-2 clef) will fit in that space.
 
 ![spacing 04](/images/advanced-topics/layout-options/spacing-04.png){:.img-responsive .example-80}
 
