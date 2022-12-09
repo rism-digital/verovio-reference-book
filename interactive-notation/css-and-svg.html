@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS and SVG</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap.min.css" type="text/css" /><!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/fileinput.min.css" />
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/verovio.css" />
+        <link rel="stylesheet" href="/assets/css/midiplayer.css" />
+
+        <link rel="stylesheet" href="/css/verovio-site.css" />
+
+        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>CSS and SVG | Reference book for Verovio</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="CSS and SVG" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding the structure of the SVG" />
+<meta property="og:description" content="Understanding the structure of the SVG" />
+<meta property="og:site_name" content="Reference book for Verovio" />
+<meta property="og:image" content="https://book.verovio.org/images/card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-09T14:30:16+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
+<meta property="twitter:title" content="CSS and SVG" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"description":"Understanding the structure of the SVG","datePublished":"2022-12-09T14:30:16+00:00","dateModified":"2022-12-09T14:30:16+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/interactive-notation/css-and-svg.html"},"image":"https://book.verovio.org/images/card.png","url":"/interactive-notation/css-and-svg.html","@type":"BlogPosting","headline":"CSS and SVG","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a href="https://www.verovio.org/index.xhtml">Homepage</a>
+                </li>
+                <li class="active">
+                    <a href="https://book.verovio.org/">Reference book</a>
+                </li>
+                <li >
+                    <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+        <div class="top-header"> 
+    <div class="container" style="color: #eee; height: 140px; padding-top: 5px;">
+        <h1 style="color: #eee;" class="hidden-print hidden-xs">A music notation engraving library</h1> 
+        <h3 style="color: #eee;" class="hidden-print visible-xs">A music notation engraving library</h3> 
+        <p class="hidden-print">Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies</p>
+    </div>
+</div>
+
+
+        <div class="container with-footer">
+
+            
+
+
+
+<div class="row">
+    <div class="col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="toc-group">
+            <div>
+
+    <a class="toc-item" href="/introduction/">Introduction</a>
+    
+
+    <a class="toc-item" href="/first-steps/">Tutorial 1: First Steps</a>
+    
+
+    <a class="toc-item" href="/interactive-notation/css-and-svg.html">Tutorial 2: Interactive notation</a>
+    
+        
+        
+<a class="toc-item toc-section selected" href="/interactive-notation/css-and-svg.html">CSS and SVG</a>
+    
+        
+        
+<a class="toc-item toc-subsection" href="#understanding-the-structure-of-the-svg">Understanding the structure of the SVG</a>
+
+<a class="toc-item toc-subsection" href="#applying-css-to-the-svg">Applying CSS to the SVG</a>
+
+<a class="toc-item toc-subsection" href="#adjusting-the-style-programmatically">Adjusting the style programmatically</a>
+
+<a class="toc-item toc-subsection" href="#full-example">Full example</a>
+
+    
+
+<a class="toc-item toc-section " href="/interactive-notation/encoding-formats.html">Encoding formats</a>
+    
+
+<a class="toc-item toc-section " href="/interactive-notation/playing-midi.html">Playing the MIDI output</a>
+    
+
+<a class="toc-item toc-section " href="/interactive-notation/content-selection.html">Score content selection</a>
+    
+
+<a class="toc-item toc-section " href="/interactive-notation/editorial-markup.html">Interacting with editorial markup</a>
+    
+
+    
+
+    <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
+    
+
+    <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
+    
+
+    <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+
+    <a class="toc-item" href="/contributing/guidelines.html">Contributing</a>
+    
+
+</div>
+            <div id="website-search-form" class="toc-item search-form">
+    
+    <form action="/search.html">
+        <div class="form-group">
+            <input id="website-search" class="form-control" type="text" name="q" placeholder="Search the reference book ...">
+        </div>
+        <button type="submit" class="btn btn-small">Search</button>
+    </form>
+</div>
+
+
+        </div>
+    </div>
+
+    <div class="col-md-9" id="content">
+        
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/03-interactive-notation/01-css-and-svg.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        
+        
+        <h2>CSS and SVG</h2>
+        <h3 id="understanding-the-structure-of-the-svg">Understanding the structure of the SVG</h3>
+
+<p>The SVG produced by Verovio can be manipulated further. In this tutorial, you are going to use CSS to highlight some content of the output.</p>
+
+<p>One key feature of Verovio is that it preserves the structure of the MEI in the SVG output. For example, a chord with two notes encoded in MEI:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;chord</span> <span class="na">xml:id=</span><span class="s">"c1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;note/&gt;</span>
+  <span class="nt">&lt;note/&gt;</span>
+<span class="nt">&lt;/chord&gt;</span>
+</code></pre></div></div>
+
+<p>will have a the following structure in the SVG:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"chord"</span> <span class="na">id=</span><span class="s">"c1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/g&gt;</span>
+</code></pre></div></div>
+
+<p>You will notice that both the tree structure is preserved and that the MEI element names are passed as <code class="language-plaintext highlighter-rouge">@class</code> attribute values in the SVG elements, as well as the <code class="language-plaintext highlighter-rouge">@xml:id</code> of the MEI element as <code class="language-plaintext highlighter-rouge">@id</code> in the SVG.</p>
+
+<p>Since SVG can be styled with CSS, it is straightforward to modify the appearance of elements and their contents.</p>
+
+<p>Modifying the appearance can be done with a CSS file, or programmatically.</p>
+
+<h3 id="applying-css-to-the-svg">Applying CSS to the SVG</h3>
+
+<p>In the CSS file you need to create rules to be applied to the SVG <code class="language-plaintext highlighter-rouge">&lt;g&gt;</code> elements - simply <code class="language-plaintext highlighter-rouge">g</code> in CSS - together with the class selector corresponding to the MEI element name. For example, <code class="language-plaintext highlighter-rouge">g.tempo</code> modifies MEI <code class="language-plaintext highlighter-rouge">&lt;tempo&gt;</code> elements.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g.tempo {
+  // ... some CSS properties
+}
+</code></pre></div></div>
+
+<p>To modify the color, you need to change the <code class="language-plaintext highlighter-rouge">fill</code> property, and - in some cases - also the <code class="language-plaintext highlighter-rouge">color</code> property. The CSS rule will look like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  fill: crimson;
+  color: crimson;
+}
+</code></pre></div></div>
+
+<p>You can also select elements based on their hierarchy. For example, you can select <code class="language-plaintext highlighter-rouge">&lt;artic&gt;</code> within <code class="language-plaintext highlighter-rouge">&lt;chord&gt;</code> with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g.chord g.artic {
+}
+</code></pre></div></div>
+
+<p>CSS can be animated, for example by making the colors pulsing. You need to specify an animation name with a duration and an iteration count together with corresponding key frames:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  animation-name: pulse;
+  animation-duration: 1.0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0%   { fill: orange; }
+  50%  { fill: brown; }
+  100% { fill: orange; }
+}
+</code></pre></div></div>
+
+<p>CSS can also be used to change the opacity of an element. The opacity value can range from 0.0 (transparent) to 1.0 (normal default value).</p>
+
+<h3 id="adjusting-the-style-programmatically">Adjusting the style programmatically</h3>
+
+<p>In applications, it is often useful to modify the CSS programmatically, for example in response to some user interactions.</p>
+
+<p>To do so, elements can be accessed by element and class name in the same way as with CSS. For example, for retrieving all rests, you can do:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">rests</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.rest</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>You can then loop through the list of rests with:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">rest</span> <span class="k">of</span> <span class="nx">rests</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// you have now access to the rest one by one and can modify their style</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>To modify the style of an element, you can assign the desired value to the corresponding key. For example, in order to change the color (fill) or a rest (element), you need to do:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">rest</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">dodgerblue</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h4 id="using-custom-data--attributes">Using custom data-* attributes</h4>
+
+<p>The attributes in the SVG <code class="language-plaintext highlighter-rouge">&lt;g&gt;</code> elements corresponding to the MEI elements is not limited to the <code class="language-plaintext highlighter-rouge">@class</code> carrying the MEI element name and the MEI <code class="language-plaintext highlighter-rouge">@xml:id</code> passed as <code class="language-plaintext highlighter-rouge">@id</code>. Verovio also passes MEI <code class="language-plaintext highlighter-rouge">@type</code> values as additional <code class="language-plaintext highlighter-rouge">@class</code> in the SVG.</p>
+
+<p>However, in many cases, applications need to have access at other attribute values. To do so, one can use the <code class="language-plaintext highlighter-rouge">svgAdditionalAttribute</code> option to specify which attributes can be made available in the SVG output. For example, for making the note pitch name and the note octave accessible, you can add the following option values to Verovio’s <code class="language-plaintext highlighter-rouge">setOptions()</code> method:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="err">svgAdditionalAttribute:</span><span class="w"> </span><span class="p">[</span><span class="s2">"note@pname"</span><span class="p">,</span><span class="w"> </span><span class="s2">"note@oct"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>With this option, each <code class="language-plaintext highlighter-rouge">g.note</code> element in the SVG will also have a <code class="language-plaintext highlighter-rouge">data-pname</code> and a <code class="language-plaintext highlighter-rouge">data-oct</code> attribute carrying the original MEI attribute value. For example, a note in MEI and the corresponding SVG element will be:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;note</span> <span class="na">pname=</span><span class="s">"c"</span> <span class="na">oct=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;g</span> <span class="na">class=</span><span class="s">"note"</span> <span class="na">data-pname=</span><span class="s">"c"</span> <span class="na">data-oct=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>This can be used in the query selector to restrict the matches to elements having specific attribute values. For example, for selecting the C5 notes, you would do:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">c5s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g[data-pname="c"][data-oct="5"]</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="accessing-mei-attribute-values-programmatically">Accessing MEI attribute values programmatically</h4>
+
+<p>Custom <code class="language-plaintext highlighter-rouge">data-*</code> attributes are straightforward and easy to use with CSS selectors. However, selectors can have some limits, and it is not always possible to know in advance all the attributes that needed in the SVG. Furthermore, if the list of attributes becomes too long, the SVG might become overloaded.</p>
+
+<p>In this case, it is possible and preferable to access them programmatically with JavaScript. This can be done through the <code class="language-plaintext highlighter-rouge">getElementAttr()</code> toolkit method that gives access to all the MEI attributes of a given element, including attributes not currently supported or not used by Verovio. It takes an <code class="language-plaintext highlighter-rouge">xml:id</code> value as the input parameter and returns a JSON object with all the attributes for that element from the MEI encoding. For example, given this MEI:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;rest</span> <span class="na">xml:id=</span><span class="s">"r123"</span> <span class="na">dur=</span><span class="s">"4"</span> <span class="na">dots=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+
+```js
+let attr = tk.getElementAttr("r123");
+</code></pre></div></div>
+
+<p>You can then look at any attributes specifically in the JSON object returned, for example <code class="language-plaintext highlighter-rouge">attr.dur</code> for the MEI <code class="language-plaintext highlighter-rouge">@dur</code> of the rest:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">attr</span><span class="p">.</span><span class="nx">dur</span> <span class="o">&amp;&amp;</span> <span class="nx">attr</span><span class="p">.</span><span class="nx">dur</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// This is a whole note rest </span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="full-example">Full example</h3>
+
+<p>Open <a href="/tutorials/css-and-svg.html" target="_blank">this example</a> in a new window.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Understanding the structure of the SVG<span class="nt">&lt;/title&gt;</span>
+        <span class="c">&lt;!-- A stylesheet for modifying the appearance of the output --&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"solution.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- Verovio --&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;script&gt;</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                    <span class="c1">// This line initializes the Verovio toolkit</span>
+                    <span class="kd">const</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+
+                    <span class="kd">let</span> <span class="nx">zoom</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
+                    <span class="kd">let</span> <span class="nx">pageHeight</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientHeight</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nx">zoom</span><span class="p">;</span>
+                    <span class="kd">let</span> <span class="nx">pageWidth</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientWidth</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nx">zoom</span><span class="p">;</span>
+
+                    <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="na">pageHeight</span><span class="p">:</span> <span class="nx">pageHeight</span><span class="p">,</span>
+                        <span class="na">pageWidth</span><span class="p">:</span> <span class="nx">pageWidth</span><span class="p">,</span>
+                        <span class="na">scale</span><span class="p">:</span> <span class="nx">zoom</span><span class="p">,</span>
+                        <span class="c1">// Add an option to pass note@pname and note@oct as svg @data-*</span>
+                        <span class="na">svgAdditionalAttribute</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">note@pname</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">note@oct</span><span class="dl">"</span><span class="p">]</span>
+                    <span class="p">};</span>
+                    <span class="nx">tk</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+
+                    <span class="c1">// This line fetches the MEI file we want to render...</span>
+                    <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">'</span><span class="p">)</span>
+                        <span class="c1">// ... then receives the response and "unpacks" the MEI from it</span>
+                        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
+                        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">mei</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                            <span class="c1">// ... then we can load the data into Verovio ...</span>
+                            <span class="nx">tk</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">mei</span><span class="p">);</span>
+                            <span class="c1">// ... and generate the SVG for the first page</span>
+                            <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                            <span class="c1">// ... and finally gets the </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span> <span class="nx">element</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">ID</span> <span class="nx">we</span> <span class="nx">specified</span><span class="p">,</span> 
+                            <span class="c1">// and sets the content (innerHTML) to the SVG that we just generated.</span>
+                            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+
+                            <span class="c1">// Get all the rests by selecting </span><span class="o">&lt;</span><span class="nx">g</span><span class="o">&gt;</span> <span class="kd">with</span> <span class="nx">attribute</span> <span class="kd">class</span> <span class="dl">'</span><span class="s1">rest</span><span class="dl">'</span> <span class="p">...</span>
+                            <span class="kd">let</span> <span class="nx">rests</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.rest</span><span class="dl">'</span><span class="p">);</span>
+                            <span class="c1">// ... and change their color by setting their style.fill value</span>
+                            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">rest</span> <span class="k">of</span> <span class="nx">rests</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="nx">rest</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">dodgerblue</span><span class="dl">"</span><span class="p">;</span>
+                            <span class="p">}</span>
+
+                            <span class="c1">// Get all the notes with @pname="c" and @oct="5" and change their color</span>
+                            <span class="kd">let</span> <span class="nx">c5s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g[data-pname="c"][data-oct="5"]</span><span class="dl">'</span><span class="p">);</span>
+                            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">c5</span> <span class="k">of</span> <span class="nx">c5s</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="nx">c5</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">aqua</span><span class="dl">"</span><span class="p">;</span>
+                            <span class="p">}</span>
+
+                            <span class="c1">// Get all the verses ...</span>
+                            <span class="kd">let</span> <span class="nx">verses</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.verse</span><span class="dl">'</span><span class="p">);</span>
+                            <span class="c1">// ... and use the 'getElementAttr()' to retrieve all attributes ...</span>
+                            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">verse</span> <span class="k">of</span> <span class="nx">verses</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="kd">let</span> <span class="nx">attr</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">getElementAttr</span><span class="p">(</span><span class="nx">verse</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+                                <span class="c1">// ... and change to color when @n exists and is greater than 1</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="nx">attr</span><span class="p">.</span><span class="nx">n</span> <span class="o">&amp;&amp;</span> <span class="nx">attr</span><span class="p">.</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">verse</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">darkcyan</span><span class="dl">"</span><span class="p">;</span>
+                            <span class="p">}</span>
+                        <span class="p">});</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+        <span class="nt">&lt;/script&gt;</span>
+        <span class="c">&lt;!-- The div where we are going to insert the SVG --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div></div>
+
+
+    </div>
+</div>
+
+<script src="/js/highlighter.js"></script>
+
+<script>
+    let options = {
+        rootMargin: '60px'
+    }
+    function adjustSideBar() {
+        elem = document.getElementsByClassName("toc-group")[0];
+        // 992 is the breakpoint for which the sidebar moves to the top; 35 is the footer height
+        elem.style.height = (window.innerWidth < 992) ? "" : `${window.innerHeight - elem.offsetTop - 35}px`;
+    }
+
+    window.onresize = function () {
+        adjustSideBar();
+    };
+    window.onload = function() {
+        adjustSideBar();
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    // First deselect everything
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection`);
+                    for (i = 0; i < sections.length; i++){
+                        sections[i].classList.remove('selected');
+                    }
+                    // The one entering is marked as .on-screen
+                    document.querySelector(`.toc-group a[href="#${id}"]`).classList.add('on-screen');
+                    // Select the first that in .on-screen
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    sections[0].classList.add('selected');
+
+                } else {
+                    leaving = document.querySelector(`.toc-group a[href="#${id}"]`)
+                    // Remove the .on-screen from the one leaving
+                    leaving.classList.remove('on-screen');
+                    sections = document.querySelectorAll(`.toc-group a.toc-subsection.on-screen`);
+                    // If no other one is on screen, just leave things as they are
+                    if (sections.length > 0) {
+                        // Otherwise de-select the one that is leaving
+                        leaving.classList.remove('selected');
+                        // Selected the first .on-screen one and de-select the other ones
+                        sections[0].classList.add('selected');
+                        for (i = 1; i < sections.length; i++){
+                            console.log(sections[i].getAttribute('id'))
+                            sections[i].classList.remove('selected');
+                        }
+                    }
+                }
+            });
+        }, options);
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+    });
+
+    let params = new URLSearchParams( document.location.search.substring( 1 ) );
+    if ( params.get( "q" ) )
+    {
+        let query = params.get( "q" );
+        // Also make sure we preserve the query term in the form in the sidebar
+        document.getElementById("website-search").value = query;
+        // Preserve the original query for logging
+        let query_term = query;
+        // Remove quotes and trim
+        query = query.replace(/\'|\"/g, ' ');
+        query = query.trim();
+        // Make it an AND query
+        console.log(query);
+
+        let terms = query.split(' ');
+        var container = document.getElementById("content");
+
+        for (var i = 0; i < terms.length; i++) {
+            InstantSearch.highlight(container, terms[i]);
+        }
+    }
+
+</script>
+
+
+
+        </div>
+
+        <footer class="hidden-print footer navbar-fixed-bottom">
+            <p>
+                
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).ready(function() {
+
+                
+
+            });
+        //]]>
+        </script>
+    </body>
+</html>
