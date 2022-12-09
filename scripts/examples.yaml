@@ -84,12 +84,74 @@
   svg-example-file: examples/04-advanced-topics/02-controlling-the-svg-output/units.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: default
+  test-suite: score/score-014.mei
+  options:
+    adjustPageHeight: false
+    breaks: auto
+    footer: auto
+    header: auto
+    scale: 20
+    spacingStaff: 10
+    spacingSystem: 10
+  mei-example-file: examples/04-advanced-topics/03-layout-options/default.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/default.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: justification-default
+  test-suite: score/score-014.mei
+  options:
+    adjustPageHeight: false
+    breaks: auto
+    footer: auto
+    header: auto
+    justifyVertically: true
+    scale: 20
+    spacingStaff: 10
+    spacingSystem: 10
+  mei-example-file: examples/04-advanced-topics/03-layout-options/justification-default.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/justification-default.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: justification-brace-group-0
+  test-suite: score/score-014.mei
+  options:
+    adjustPageHeight: false
+    breaks: auto
+    footer: auto
+    header: auto
+    justificationBraceGroup: 0.0
+    justifyVertically: true
+    scale: 20
+    spacingStaff: 10
+    spacingSystem: 10
+  mei-example-file: examples/04-advanced-topics/03-layout-options/justification-brace-group-0.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/justification-brace-group-0.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: justification-bracket-group-0-5
+  test-suite: score/score-014.mei
+  options:
+    adjustPageHeight: false
+    breaks: auto
+    footer: auto
+    header: auto
+    justificationBraceGroup: 0.0
+    justificationBracketGroup: 0.2
+    justifyVertically: true
+    scale: 20
+    spacingStaff: 10
+    spacingSystem: 10
+  mei-example-file: examples/04-advanced-topics/03-layout-options/justification-bracket-group-0-5.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/justification-bracket-group-0-5.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: ex-01
   test-suite: dynam/dynam-003.mei
   options:
     xmlIdSeed: 0
-  mei-example-file: examples/04-advanced-topics/03-smufl/ex-01.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/ex-01.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/ex-01.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/ex-01.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: ex-02
@@ -97,8 +159,8 @@
   options:
     xmlIdSeed: 0
     font: Bravura
-  mei-example-file: examples/04-advanced-topics/03-smufl/ex-02.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/ex-02.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/ex-02.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/ex-02.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: ex-03
@@ -106,8 +168,8 @@
   options:
     xmlIdSeed: 0
     font: Gootville
-  mei-example-file: examples/04-advanced-topics/03-smufl/ex-03.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/ex-03.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/ex-03.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/ex-03.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: ex-04
@@ -115,8 +177,8 @@
   options:
     xmlIdSeed: 0
     font: Leland
-  mei-example-file: examples/04-advanced-topics/03-smufl/ex-04.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/ex-04.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/ex-04.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/ex-04.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: ex-05
@@ -124,8 +186,8 @@
   options:
     xmlIdSeed: 0
     scale: 60
-  mei-example-file: examples/04-advanced-topics/03-smufl/ex-05.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/ex-05.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/ex-05.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/ex-05.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: ex-06
@@ -134,8 +196,8 @@
     xmlIdSeed: 0
     scale: 60
     font: Bravura
-  mei-example-file: examples/04-advanced-topics/03-smufl/ex-06.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/ex-06.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/ex-06.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/ex-06.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: lyric-01
@@ -144,8 +206,8 @@
     xmlIdSeed: 0
   xpath:
   - ".//mei:note[1]/mei:verse"
-  mei-example-file: examples/04-advanced-topics/03-smufl/lyric-01.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/lyric-01.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/lyric-01.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/lyric-01.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: tempo-01
@@ -154,8 +216,8 @@
   test-suite: tempo/tempo-001.mei
   xpath:
   - ".//mei:tempo"
-  mei-example-file: examples/04-advanced-topics/03-smufl/tempo-01.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/tempo-01.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/tempo-01.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/tempo-01.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: dynam-01
@@ -164,96 +226,96 @@
   test-suite: dynam/dynam-006.mei
   xpath:
   - ".//mei:dynam"
-  mei-example-file: examples/04-advanced-topics/03-smufl/dynam-01.mei
-  svg-example-file: examples/04-advanced-topics/03-smufl/dynam-01.svg
+  mei-example-file: examples/04-advanced-topics/04-smufl/dynam-01.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/dynam-01.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-01
   test-suite: chord/chord-005.mei
   xpath:
   - ".//mei:score"
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-01.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-01.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-01.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-01.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-02
   test-suite: chord/chord-005.mei
   options:
     transpose: M2
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-02.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-02.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-02.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-02.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-03
   test-suite: chord/chord-005.mei
   options:
     transpose: "-m2"
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-03.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-03.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-03.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-03.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-04
   test-suite: chord/chord-005.mei
   options:
     transpose: '1'
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-04.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-04.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-04.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-04.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-05
   test-suite: chord/chord-005.mei
   options:
     transpose: m2
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-05.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-05.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-05.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-05.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-06
   test-suite: chord/chord-005.mei
   options:
     transpose: a1
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-06.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-06.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-06.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-06.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-07
   test-suite: chord/chord-005.mei
   options:
     transpose: E
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-07.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-07.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-07.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-07.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-08
   test-suite: chord/chord-005.mei
   options:
     transpose: F#
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-08.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-08.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-08.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-08.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-09
   test-suite: chord/chord-005.mei
   options:
     transpose: Gb
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-09.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-09.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-09.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-09.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-10
   test-suite: chord/chord-005.mei
   options:
     transpose: "+Gb"
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-10.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-10.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-10.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-10.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: t-11
   test-suite: chord/chord-005.mei
   options:
     transpose: "++Gb"
-  mei-example-file: examples/04-advanced-topics/04-transposition/t-11.mei
-  svg-example-file: examples/04-advanced-topics/04-transposition/t-11.svg
+  mei-example-file: examples/04-advanced-topics/05-transposition/t-11.mei
+  svg-example-file: examples/04-advanced-topics/05-transposition/t-11.svg
   svg-example-exists: true
   mei-example-exists: true
 - name: humdrum-01

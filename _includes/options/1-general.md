@@ -13,7 +13,9 @@
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"footer": <string>`</span><span class="lang2">`--footer <string>`</span> {% endcol %}{% col 8 %} Control footer layout<br/>(default: "auto"; other values: ['none', 'auto', 'encoded', 'always']) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"header": <string>`</span><span class="lang2">`--header <string>`</span> {% endcol %}{% col 8 %} Control header layout<br/>(default: "auto"; other values: ['none', 'auto', 'encoded']) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"humType":  <boolean>`</span><span class="lang2">`--hum-type `</span> {% endcol %}{% col 8 %} Include type attributes when importing from Humdrum {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"justifyVertically":  <boolean>`</span><span class="lang2">`--justify-vertically `</span> {% endcol %}{% col 8 %} Justify spacing vertically to fill the page {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"justifyVertically":  <boolean>`</span><span class="lang2">`--justify-vertically `</span> {% endcol %}{% col 8 %} Justify spacing vertically to fill the page
+
+See also: [Vertical justification](/advanced-topics/layout-options.html#vertical-justification) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"landscape":  <boolean>`</span><span class="lang2">`--landscape `</span> {% endcol %}{% col 8 %} The landscape paper orientation flag {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"ligatureAsBracket":  <boolean>`</span><span class="lang2">`--ligature-as-bracket `</span> {% endcol %}{% col 8 %} Render ligatures as bracket instead of original notation {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"mensuralToMeasure":  <boolean>`</span><span class="lang2">`--mensural-to-measure `</span> {% endcol %}{% col 8 %} Convert mensural sections to measure-based MEI

@@ -1,0 +1,1794 @@
+<svg width="420px" height="594px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mei="http://www.music-encoding.org/ns/mei" overflow="visible">
+   <desc>Engraved by Verovio 3.13.1-010bd42</desc>
+   <defs>
+      <symbol id="E003-15q9i53" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
+      </symbol>
+      <symbol id="E004-15q9i53" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M0 0h53c30 0 59 -1 83 -5c206 -95 258 -264 263 -271c0 -1 -14 -7 -15 -6c-88 154 -251 170 -321 170c-1 0 -63 1 -63 1v111z" />
+      </symbol>
+      <symbol id="E050-15q9i53" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
+      </symbol>
+      <symbol id="E062-15q9i53" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M582 -120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM582 120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM158 96c51 0 73 -14 88 -49l16 -39c0 -17 -2 -30 -7 -40c-3 -11 -10 -21 -19 -31c-17 -18 -49 -43 -84 -43 c-55 0 -77 13 -112 44c-24 21 -35 55 -35 100c0 46 14 81 32 112c30 52 71 79 137 93l36 6l26 2c154 0 235 -68 274 -182c11 -32 18 -68 18 -107c0 -103 -26 -182 -68 -250c-89 -145 -234 -230 -412 -288l-30 -5c-9 0 -14 3 -14 8c3 10 5 11 10 16c35 15 70 30 96 44l78 43 c96 57 162 136 197 258c9 33 17 60 22 100c3 22 5 35 6 39c-7 69 -16 115 -23 140s-4 22 -16 40c-8 12 -19 23 -31 34c-24 21 -62 44 -118 44c-48 0 -84 -8 -113 -28c-28 -19 -42 -44 -42 -73v-16c2 -5 3 -9 4 -11c24 22 52 39 84 39z" />
+      </symbol>
+   </defs>
+   <style type="text/css">g.page-margin{font-family:Times;} g.ending, g.fing, g.reh, g.tempo{font-weight:bold;} g.dir, g.dynam, g.mNum{font-style:italic;} g.label{font-weight:normal;}</style>
+   <svg class="definition-scale" color="black" viewBox="0 0 21000 29700">
+      <g class="page-margin" transform="translate(500, 500)">
+         <g id="mtmdeed" class="mdiv pageMilestone" />
+         <g id="s1ytwwdn" class="score pageMilestone" />
+         <g id="spfnf9k" class="system">
+            <path d="M13 1177 L13 9997" stroke="currentColor" stroke-width="27" />
+            <g id="g1psgjy2" class="grpSym">
+               <use xlink:href="#E003-15q9i53" x="-180" y="1126" height="720px" width="720px" />
+               <use xlink:href="#E004-15q9i53" x="-180" y="5188" height="720px" width="720px" />
+               <rect x="-180" y="1120" height="4074" width="90" />
+            </g>
+            <g id="g1ufz328" class="grpSym">
+               <path d="M-72,9979 C-432,9439 18,9007 -252,8827 C81,9007 -369,9439 -72,9979" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" />
+               <path d="M-72,7675 C-369,8215 81,8647 -252,8827 C18,8647 -432,8215 -72,7675" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" />
+            </g>
+            <g id="s1rjlykc" class="section systemMilestone" />
+            <g id="m1mw7zrl" class="measure">
+               <g id="s6zhf6m" class="staff">
+                  <path d="M0 1177 L2086 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 1357 L2086 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 1537 L2086 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 1717 L2086 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 1897 L2086 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="cmohafg" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="1717" height="720px" width="720px" />
+                  </g>
+                  <g id="k1mnedqz" class="keySig" />
+                  <g id="l164j9s7" class="layer" />
+               </g>
+               <g id="stwti83" class="staff">
+                  <path d="M0 2797 L2086 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 2977 L2086 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 3157 L2086 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 3337 L2086 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 3517 L2086 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="c1cdwywc" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="3337" height="720px" width="720px" />
+                  </g>
+                  <g id="k1rnvzzr" class="keySig" />
+                  <g id="l1bphtqe" class="layer" />
+               </g>
+               <g id="s1w1fj4l" class="staff">
+                  <path d="M0 4417 L2086 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 4597 L2086 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 4777 L2086 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 4957 L2086 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 5137 L2086 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="c3ovr7k" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="4957" height="720px" width="720px" />
+                  </g>
+                  <g id="k19tpj1y" class="keySig" />
+                  <g id="lt8zkfl" class="layer" />
+               </g>
+               <g id="s11vd3cp" class="staff">
+                  <path d="M0 6037 L2086 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 6217 L2086 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 6397 L2086 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 6577 L2086 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 6757 L2086 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="c9k1t8g" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="6577" height="720px" width="720px" />
+                  </g>
+                  <g id="k1uoi0sw" class="keySig" />
+                  <g id="le15r7n" class="layer" />
+               </g>
+               <g id="s1d57h6s" class="staff">
+                  <path d="M0 7657 L2086 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 7837 L2086 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 8017 L2086 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 8197 L2086 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 8377 L2086 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="c991kvr" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="8197" height="720px" width="720px" />
+                  </g>
+                  <g id="k1mcfxi2" class="keySig" />
+                  <g id="lkkm5ug" class="layer" />
+               </g>
+               <g id="smet4hd" class="staff">
+                  <path d="M0 9277 L2086 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 9457 L2086 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 9637 L2086 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 9817 L2086 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 9997 L2086 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="c1ajf8up" class="clef">
+                     <use xlink:href="#E062-15q9i53" x="117" y="9457" height="720px" width="720px" />
+                  </g>
+                  <g id="kaxqqpn" class="keySig" />
+                  <g id="la3f0ob" class="layer" />
+               </g>
+               <g id="b1bmm5zc" class="barLine">
+                  <path d="M2073 1177 L2073 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 2797 L2073 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 1897 L2073 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 4417 L2073 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 3517 L2073 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 6037 L2073 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 7657 L2073 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 9277 L2073 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m1crgkek" class="measure">
+               <g id="s1axbio0" class="staff">
+                  <path d="M2086 1177 L3464 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 1357 L3464 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 1537 L3464 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 1717 L3464 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 1897 L3464 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1h556f8" class="layer" />
+               </g>
+               <g id="sl7aas9" class="staff">
+                  <path d="M2086 2797 L3464 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 2977 L3464 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 3157 L3464 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 3337 L3464 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 3517 L3464 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="ljx4kfj" class="layer" />
+               </g>
+               <g id="svotdr6" class="staff">
+                  <path d="M2086 4417 L3464 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 4597 L3464 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 4777 L3464 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 4957 L3464 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 5137 L3464 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l1k29xw7" class="layer" />
+               </g>
+               <g id="sfrzwqv" class="staff">
+                  <path d="M2086 6037 L3464 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 6217 L3464 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 6397 L3464 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 6577 L3464 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 6757 L3464 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l7bykuy" class="layer" />
+               </g>
+               <g id="s57lm6x" class="staff">
+                  <path d="M2086 7657 L3464 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 7837 L3464 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 8017 L3464 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 8197 L3464 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 8377 L3464 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="lvtbb6w" class="layer" />
+               </g>
+               <g id="sxbw8wm" class="staff">
+                  <path d="M2086 9277 L3464 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 9457 L3464 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 9637 L3464 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 9817 L3464 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 9997 L3464 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l1sjdpu1" class="layer" />
+               </g>
+               <g id="b1y8mnf3" class="barLine">
+                  <path d="M3451 1177 L3451 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 2797 L3451 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 1897 L3451 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 4417 L3451 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 3517 L3451 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 6037 L3451 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 7657 L3451 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 9277 L3451 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m6tx8lf" class="measure">
+               <g id="s1c7ux5f" class="staff">
+                  <path d="M3464 1177 L4842 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 1357 L4842 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 1537 L4842 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 1717 L4842 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 1897 L4842 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1t4imxy" class="layer" />
+               </g>
+               <g id="sf15nd4" class="staff">
+                  <path d="M3464 2797 L4842 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 2977 L4842 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 3157 L4842 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 3337 L4842 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 3517 L4842 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1so4aao" class="layer" />
+               </g>
+               <g id="siv16ea" class="staff">
+                  <path d="M3464 4417 L4842 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 4597 L4842 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 4777 L4842 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 4957 L4842 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 5137 L4842 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="ll8ebre" class="layer" />
+               </g>
+               <g id="syx0aaf" class="staff">
+                  <path d="M3464 6037 L4842 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 6217 L4842 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 6397 L4842 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 6577 L4842 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 6757 L4842 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l15ick27" class="layer" />
+               </g>
+               <g id="s3sgcfj" class="staff">
+                  <path d="M3464 7657 L4842 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 7837 L4842 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 8017 L4842 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 8197 L4842 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 8377 L4842 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1473mmv" class="layer" />
+               </g>
+               <g id="s14s302h" class="staff">
+                  <path d="M3464 9277 L4842 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 9457 L4842 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 9637 L4842 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 9817 L4842 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 9997 L4842 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l17lwqmf" class="layer" />
+               </g>
+               <g id="b5xu055" class="barLine">
+                  <path d="M4829 1177 L4829 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 2797 L4829 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 1897 L4829 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 4417 L4829 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 3517 L4829 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 6037 L4829 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 7657 L4829 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 9277 L4829 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="maf794j" class="measure">
+               <g id="s1vh3k1t" class="staff">
+                  <path d="M4842 1177 L6220 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 1357 L6220 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 1537 L6220 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 1717 L6220 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 1897 L6220 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1dbnqlt" class="layer" />
+               </g>
+               <g id="sz0t4ct" class="staff">
+                  <path d="M4842 2797 L6220 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 2977 L6220 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 3157 L6220 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 3337 L6220 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 3517 L6220 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="ltf3pj7" class="layer" />
+               </g>
+               <g id="s12edjsw" class="staff">
+                  <path d="M4842 4417 L6220 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 4597 L6220 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 4777 L6220 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 4957 L6220 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 5137 L6220 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l3jqins" class="layer" />
+               </g>
+               <g id="s1idfjel" class="staff">
+                  <path d="M4842 6037 L6220 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 6217 L6220 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 6397 L6220 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 6577 L6220 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 6757 L6220 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l122cibx" class="layer" />
+               </g>
+               <g id="s37ycjq" class="staff">
+                  <path d="M4842 7657 L6220 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 7837 L6220 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 8017 L6220 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 8197 L6220 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 8377 L6220 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1b5ebec" class="layer" />
+               </g>
+               <g id="s9xwq8l" class="staff">
+                  <path d="M4842 9277 L6220 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 9457 L6220 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 9637 L6220 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 9817 L6220 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 9997 L6220 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l10kmnra" class="layer" />
+               </g>
+               <g id="btesczb" class="barLine">
+                  <path d="M6207 1177 L6207 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 2797 L6207 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 1897 L6207 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 4417 L6207 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 3517 L6207 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 6037 L6207 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 7657 L6207 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 9277 L6207 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m1ka9jpe" class="measure">
+               <g id="s9w58b0" class="staff">
+                  <path d="M6220 1177 L7598 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 1357 L7598 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 1537 L7598 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 1717 L7598 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 1897 L7598 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1rdaiaz" class="layer" />
+               </g>
+               <g id="s1lcl990" class="staff">
+                  <path d="M6220 2797 L7598 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 2977 L7598 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 3157 L7598 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 3337 L7598 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 3517 L7598 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="lqtixb2" class="layer" />
+               </g>
+               <g id="ss8wk6c" class="staff">
+                  <path d="M6220 4417 L7598 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 4597 L7598 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 4777 L7598 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 4957 L7598 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 5137 L7598 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l128t947" class="layer" />
+               </g>
+               <g id="sbqturr" class="staff">
+                  <path d="M6220 6037 L7598 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 6217 L7598 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 6397 L7598 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 6577 L7598 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 6757 L7598 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1ac027h" class="layer" />
+               </g>
+               <g id="s1tvqs3o" class="staff">
+                  <path d="M6220 7657 L7598 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 7837 L7598 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 8017 L7598 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 8197 L7598 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 8377 L7598 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="lpns9ix" class="layer" />
+               </g>
+               <g id="sop9yb4" class="staff">
+                  <path d="M6220 9277 L7598 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 9457 L7598 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 9637 L7598 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 9817 L7598 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 9997 L7598 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l14k4sn0" class="layer" />
+               </g>
+               <g id="bvtjadn" class="barLine">
+                  <path d="M7585 1177 L7585 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 2797 L7585 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 1897 L7585 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 4417 L7585 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 3517 L7585 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 6037 L7585 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 7657 L7585 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 9277 L7585 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m1hbwssy" class="measure">
+               <g id="sp528ig" class="staff">
+                  <path d="M7598 1177 L8976 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 1357 L8976 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 1537 L8976 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 1717 L8976 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 1897 L8976 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="los67d6" class="layer" />
+               </g>
+               <g id="s1i7o82k" class="staff">
+                  <path d="M7598 2797 L8976 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 2977 L8976 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 3157 L8976 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 3337 L8976 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 3517 L8976 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="lj68hw4" class="layer" />
+               </g>
+               <g id="spbowio" class="staff">
+                  <path d="M7598 4417 L8976 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 4597 L8976 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 4777 L8976 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 4957 L8976 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 5137 L8976 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l1rmvr0s" class="layer" />
+               </g>
+               <g id="s1hgyq4h" class="staff">
+                  <path d="M7598 6037 L8976 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 6217 L8976 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 6397 L8976 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 6577 L8976 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 6757 L8976 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="lueodwe" class="layer" />
+               </g>
+               <g id="s1qlounw" class="staff">
+                  <path d="M7598 7657 L8976 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 7837 L8976 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 8017 L8976 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 8197 L8976 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 8377 L8976 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1wj7d9l" class="layer" />
+               </g>
+               <g id="stu7x4" class="staff">
+                  <path d="M7598 9277 L8976 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 9457 L8976 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 9637 L8976 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 9817 L8976 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 9997 L8976 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l1b4ht1u" class="layer" />
+               </g>
+               <g id="b1hc8sqh" class="barLine">
+                  <path d="M8963 1177 L8963 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 2797 L8963 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 1897 L8963 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 4417 L8963 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 3517 L8963 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 6037 L8963 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 7657 L8963 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 9277 L8963 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mzdpyer" class="measure">
+               <g id="s15309k0" class="staff">
+                  <path d="M8976 1177 L10354 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 1357 L10354 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 1537 L10354 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 1717 L10354 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 1897 L10354 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1uwdskp" class="layer" />
+               </g>
+               <g id="sszngpe" class="staff">
+                  <path d="M8976 2797 L10354 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 2977 L10354 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 3157 L10354 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 3337 L10354 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 3517 L10354 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="lqz76xi" class="layer" />
+               </g>
+               <g id="sgu3rnq" class="staff">
+                  <path d="M8976 4417 L10354 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 4597 L10354 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 4777 L10354 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 4957 L10354 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 5137 L10354 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l1i6vete" class="layer" />
+               </g>
+               <g id="s1s61jyf" class="staff">
+                  <path d="M8976 6037 L10354 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 6217 L10354 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 6397 L10354 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 6577 L10354 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 6757 L10354 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1it1zon" class="layer" />
+               </g>
+               <g id="s14qyo4w" class="staff">
+                  <path d="M8976 7657 L10354 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 7837 L10354 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 8017 L10354 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 8197 L10354 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 8377 L10354 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="llem246" class="layer" />
+               </g>
+               <g id="s7c8b3" class="staff">
+                  <path d="M8976 9277 L10354 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 9457 L10354 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 9637 L10354 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 9817 L10354 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 9997 L10354 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l1ivzbet" class="layer" />
+               </g>
+               <g id="bp8kgxi" class="barLine">
+                  <path d="M10341 1177 L10341 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 2797 L10341 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 1897 L10341 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 4417 L10341 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 3517 L10341 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 6037 L10341 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 7657 L10341 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 9277 L10341 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m17u3xch" class="measure">
+               <g id="sxfhc36" class="staff">
+                  <path d="M10354 1177 L11732 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 1357 L11732 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 1537 L11732 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 1717 L11732 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 1897 L11732 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1sj85sx" class="layer" />
+               </g>
+               <g id="s1ib5dit" class="staff">
+                  <path d="M10354 2797 L11732 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 2977 L11732 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 3157 L11732 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 3337 L11732 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 3517 L11732 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="l18a02ms" class="layer" />
+               </g>
+               <g id="sx76bre" class="staff">
+                  <path d="M10354 4417 L11732 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 4597 L11732 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 4777 L11732 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 4957 L11732 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 5137 L11732 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l14gfvk" class="layer" />
+               </g>
+               <g id="sj3v6bb" class="staff">
+                  <path d="M10354 6037 L11732 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 6217 L11732 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 6397 L11732 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 6577 L11732 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 6757 L11732 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1u0obp9" class="layer" />
+               </g>
+               <g id="s1n2qc6w" class="staff">
+                  <path d="M10354 7657 L11732 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 7837 L11732 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 8017 L11732 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 8197 L11732 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 8377 L11732 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1d2p8t5" class="layer" />
+               </g>
+               <g id="s135ssr9" class="staff">
+                  <path d="M10354 9277 L11732 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 9457 L11732 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 9637 L11732 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 9817 L11732 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 9997 L11732 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l1yu9luv" class="layer" />
+               </g>
+               <g id="bpdkuep" class="barLine">
+                  <path d="M11719 1177 L11719 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 2797 L11719 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 1897 L11719 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 4417 L11719 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 3517 L11719 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 6037 L11719 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 7657 L11719 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 9277 L11719 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m4z7fc0" class="measure">
+               <g id="s4orprf" class="staff">
+                  <path d="M11732 1177 L13110 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 1357 L13110 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 1537 L13110 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 1717 L13110 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 1897 L13110 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="lgd2ah2" class="layer" />
+               </g>
+               <g id="s1hnsy4t" class="staff">
+                  <path d="M11732 2797 L13110 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 2977 L13110 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 3157 L13110 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 3337 L13110 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 3517 L13110 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="l103n9h4" class="layer" />
+               </g>
+               <g id="s1hjqv97" class="staff">
+                  <path d="M11732 4417 L13110 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 4597 L13110 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 4777 L13110 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 4957 L13110 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 5137 L13110 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="letbz4f" class="layer" />
+               </g>
+               <g id="s1tk9zx4" class="staff">
+                  <path d="M11732 6037 L13110 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 6217 L13110 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 6397 L13110 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 6577 L13110 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 6757 L13110 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l3i2r5n" class="layer" />
+               </g>
+               <g id="s1ejg5u1" class="staff">
+                  <path d="M11732 7657 L13110 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 7837 L13110 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 8017 L13110 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 8197 L13110 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 8377 L13110 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="l10usdky" class="layer" />
+               </g>
+               <g id="s8trw7b" class="staff">
+                  <path d="M11732 9277 L13110 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 9457 L13110 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 9637 L13110 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 9817 L13110 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 9997 L13110 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="lc8j9kl" class="layer" />
+               </g>
+               <g id="bwzaook" class="barLine">
+                  <path d="M13097 1177 L13097 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 2797 L13097 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 1897 L13097 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 4417 L13097 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 3517 L13097 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 6037 L13097 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 7657 L13097 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 9277 L13097 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m1eu345" class="measure">
+               <g id="skia835" class="staff">
+                  <path d="M13110 1177 L14488 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 1357 L14488 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 1537 L14488 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 1717 L14488 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 1897 L14488 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l129unu7" class="layer" />
+               </g>
+               <g id="sggmrpp" class="staff">
+                  <path d="M13110 2797 L14488 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 2977 L14488 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 3157 L14488 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 3337 L14488 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 3517 L14488 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="l139mlyg" class="layer" />
+               </g>
+               <g id="s1wqfowe" class="staff">
+                  <path d="M13110 4417 L14488 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 4597 L14488 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 4777 L14488 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 4957 L14488 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 5137 L14488 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l1nt61il" class="layer" />
+               </g>
+               <g id="sjroxnb" class="staff">
+                  <path d="M13110 6037 L14488 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 6217 L14488 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 6397 L14488 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 6577 L14488 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 6757 L14488 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l8tiwls" class="layer" />
+               </g>
+               <g id="sgled98" class="staff">
+                  <path d="M13110 7657 L14488 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 7837 L14488 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 8017 L14488 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 8197 L14488 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 8377 L14488 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="ljtwjqi" class="layer" />
+               </g>
+               <g id="s6i4bot" class="staff">
+                  <path d="M13110 9277 L14488 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 9457 L14488 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 9637 L14488 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 9817 L14488 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 9997 L14488 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l15luoqr" class="layer" />
+               </g>
+               <g id="b1p36s35" class="barLine">
+                  <path d="M14475 1177 L14475 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 2797 L14475 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 1897 L14475 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 4417 L14475 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 3517 L14475 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 6037 L14475 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 7657 L14475 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 9277 L14475 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m14hq35g" class="measure">
+               <g id="sgjqoxh" class="staff">
+                  <path d="M14488 1177 L15866 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 1357 L15866 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 1537 L15866 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 1717 L15866 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 1897 L15866 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1eyg8nx" class="layer" />
+               </g>
+               <g id="s1lbux41" class="staff">
+                  <path d="M14488 2797 L15866 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 2977 L15866 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 3157 L15866 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 3337 L15866 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 3517 L15866 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="l17jdkzm" class="layer" />
+               </g>
+               <g id="srjsx5g" class="staff">
+                  <path d="M14488 4417 L15866 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 4597 L15866 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 4777 L15866 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 4957 L15866 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 5137 L15866 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="lubnmtv" class="layer" />
+               </g>
+               <g id="s1pc6980" class="staff">
+                  <path d="M14488 6037 L15866 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 6217 L15866 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 6397 L15866 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 6577 L15866 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 6757 L15866 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1hemgja" class="layer" />
+               </g>
+               <g id="s1h2h2jk" class="staff">
+                  <path d="M14488 7657 L15866 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 7837 L15866 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 8017 L15866 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 8197 L15866 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 8377 L15866 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="ludyqrh" class="layer" />
+               </g>
+               <g id="s13ida58" class="staff">
+                  <path d="M14488 9277 L15866 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 9457 L15866 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 9637 L15866 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 9817 L15866 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 9997 L15866 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="luff707" class="layer" />
+               </g>
+               <g id="bkky5ur" class="barLine">
+                  <path d="M15853 1177 L15853 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 2797 L15853 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 1897 L15853 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 4417 L15853 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 3517 L15853 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 6037 L15853 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 7657 L15853 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 9277 L15853 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m9oxj2q" class="measure">
+               <g id="s1jjk0eg" class="staff">
+                  <path d="M15866 1177 L17244 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 1357 L17244 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 1537 L17244 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 1717 L17244 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 1897 L17244 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="lg15wt0" class="layer" />
+               </g>
+               <g id="s17s0t71" class="staff">
+                  <path d="M15866 2797 L17244 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 2977 L17244 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 3157 L17244 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 3337 L17244 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 3517 L17244 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1en6yb6" class="layer" />
+               </g>
+               <g id="s2k1yrz" class="staff">
+                  <path d="M15866 4417 L17244 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 4597 L17244 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 4777 L17244 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 4957 L17244 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 5137 L17244 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l13r9c4p" class="layer" />
+               </g>
+               <g id="s1ah6gqo" class="staff">
+                  <path d="M15866 6037 L17244 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 6217 L17244 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 6397 L17244 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 6577 L17244 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 6757 L17244 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="lw3ur0" class="layer" />
+               </g>
+               <g id="s97u2tv" class="staff">
+                  <path d="M15866 7657 L17244 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 7837 L17244 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 8017 L17244 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 8197 L17244 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 8377 L17244 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="l541o2g" class="layer" />
+               </g>
+               <g id="skwpkkx" class="staff">
+                  <path d="M15866 9277 L17244 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 9457 L17244 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 9637 L17244 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 9817 L17244 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 9997 L17244 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l1wpfn56" class="layer" />
+               </g>
+               <g id="b7mvhgg" class="barLine">
+                  <path d="M17231 1177 L17231 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 2797 L17231 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 1897 L17231 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 4417 L17231 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 3517 L17231 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 6037 L17231 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 7657 L17231 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 9277 L17231 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mpmn6l0" class="measure">
+               <g id="sdvqgt6" class="staff">
+                  <path d="M17244 1177 L18622 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 1357 L18622 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 1537 L18622 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 1717 L18622 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 1897 L18622 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1uoe3fv" class="layer" />
+               </g>
+               <g id="s15allxy" class="staff">
+                  <path d="M17244 2797 L18622 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 2977 L18622 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 3157 L18622 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 3337 L18622 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 3517 L18622 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="lqd14ef" class="layer" />
+               </g>
+               <g id="s1wwg7oj" class="staff">
+                  <path d="M17244 4417 L18622 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 4597 L18622 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 4777 L18622 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 4957 L18622 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 5137 L18622 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l3jwgtx" class="layer" />
+               </g>
+               <g id="s1o5fpv3" class="staff">
+                  <path d="M17244 6037 L18622 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 6217 L18622 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 6397 L18622 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 6577 L18622 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 6757 L18622 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1gmpg1a" class="layer" />
+               </g>
+               <g id="sh1bfss" class="staff">
+                  <path d="M17244 7657 L18622 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 7837 L18622 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 8017 L18622 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 8197 L18622 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 8377 L18622 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="ll7rboz" class="layer" />
+               </g>
+               <g id="sz2mhpe" class="staff">
+                  <path d="M17244 9277 L18622 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 9457 L18622 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 9637 L18622 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 9817 L18622 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 9997 L18622 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="leikehw" class="layer" />
+               </g>
+               <g id="bbh9ypn" class="barLine">
+                  <path d="M18609 1177 L18609 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 2797 L18609 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 1897 L18609 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 4417 L18609 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 3517 L18609 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 6037 L18609 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 7657 L18609 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 9277 L18609 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m181aodg" class="measure">
+               <g id="s2th3u7" class="staff">
+                  <path d="M18622 1177 L20000 1177" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 1357 L20000 1357" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 1537 L20000 1537" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 1717 L20000 1717" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 1897 L20000 1897" stroke="currentColor" stroke-width="13" />
+                  <g id="lyjn0fb" class="layer" />
+               </g>
+               <g id="s1lt68w5" class="staff">
+                  <path d="M18622 2797 L20000 2797" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 2977 L20000 2977" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 3157 L20000 3157" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 3337 L20000 3337" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 3517 L20000 3517" stroke="currentColor" stroke-width="13" />
+                  <g id="l172gaq7" class="layer" />
+               </g>
+               <g id="s1i5zh33" class="staff">
+                  <path d="M18622 4417 L20000 4417" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 4597 L20000 4597" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 4777 L20000 4777" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 4957 L20000 4957" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 5137 L20000 5137" stroke="currentColor" stroke-width="13" />
+                  <g id="l14em7w1" class="layer" />
+               </g>
+               <g id="swc7iaf" class="staff">
+                  <path d="M18622 6037 L20000 6037" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 6217 L20000 6217" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 6397 L20000 6397" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 6577 L20000 6577" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 6757 L20000 6757" stroke="currentColor" stroke-width="13" />
+                  <g id="lmjj4ps" class="layer" />
+               </g>
+               <g id="s11rxuei" class="staff">
+                  <path d="M18622 7657 L20000 7657" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 7837 L20000 7837" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 8017 L20000 8017" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 8197 L20000 8197" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 8377 L20000 8377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1y803pm" class="layer" />
+               </g>
+               <g id="s7rl1oi" class="staff">
+                  <path d="M18622 9277 L20000 9277" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 9457 L20000 9457" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 9637 L20000 9637" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 9817 L20000 9817" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 9997 L20000 9997" stroke="currentColor" stroke-width="13" />
+                  <g id="l156h23c" class="layer" />
+               </g>
+               <g id="b4z1yna" class="barLine">
+                  <path d="M19987 1177 L19987 1897" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 2797 L19987 3517" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 1897 L19987 2797" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 4417 L19987 5137" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 3517 L19987 4417" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 6037 L19987 6757" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 7657 L19987 8377" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 9277 L19987 9997" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+         </g>
+         <g id="s1b04ntu" class="system">
+            <path d="M13 11557 L13 20377" stroke="currentColor" stroke-width="27" />
+            <g id="g35b5lx" class="grpSym">
+               <use xlink:href="#E003-15q9i53" x="-180" y="11506" height="720px" width="720px" />
+               <use xlink:href="#E004-15q9i53" x="-180" y="15568" height="720px" width="720px" />
+               <rect x="-180" y="11500" height="4074" width="90" />
+            </g>
+            <g id="gvtbt1o" class="grpSym">
+               <path d="M-72,20359 C-432,19819 18,19387 -252,19207 C81,19387 -369,19819 -72,20359" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" />
+               <path d="M-72,18055 C-369,18595 81,19027 -252,19207 C18,19027 -432,18595 -72,18055" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" />
+            </g>
+            <g id="madf74y" class="measure">
+               <g id="sitfg6f" class="staff">
+                  <path d="M0 11557 L2086 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 11737 L2086 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 11917 L2086 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 12097 L2086 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 12277 L2086 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="c1xtc4l6" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="12097" height="720px" width="720px" />
+                  </g>
+                  <g id="k1xoym77" class="keySig" />
+                  <g id="l9e804j" class="layer" />
+               </g>
+               <g id="s4pmitt" class="staff">
+                  <path d="M0 13177 L2086 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 13357 L2086 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 13537 L2086 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 13717 L2086 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 13897 L2086 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="ctk0lgf" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="13717" height="720px" width="720px" />
+                  </g>
+                  <g id="kmpwa3i" class="keySig" />
+                  <g id="l1ia92fw" class="layer" />
+               </g>
+               <g id="sqachp2" class="staff">
+                  <path d="M0 14797 L2086 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 14977 L2086 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 15157 L2086 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 15337 L2086 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 15517 L2086 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="c11rbh68" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="15337" height="720px" width="720px" />
+                  </g>
+                  <g id="k2h9zq6" class="keySig" />
+                  <g id="lf3zfae" class="layer" />
+               </g>
+               <g id="s18q9b55" class="staff">
+                  <path d="M0 16417 L2086 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 16597 L2086 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 16777 L2086 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 16957 L2086 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 17137 L2086 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="c1c8tnxc" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="16957" height="720px" width="720px" />
+                  </g>
+                  <g id="k8t9sw" class="keySig" />
+                  <g id="l59vxsa" class="layer" />
+               </g>
+               <g id="sexfsgd" class="staff">
+                  <path d="M0 18037 L2086 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 18217 L2086 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 18397 L2086 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 18577 L2086 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 18757 L2086 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="c10fh9g4" class="clef">
+                     <use xlink:href="#E050-15q9i53" x="117" y="18577" height="720px" width="720px" />
+                  </g>
+                  <g id="krfb9ty" class="keySig" />
+                  <g id="l6rzx3a" class="layer" />
+               </g>
+               <g id="s1hgvpg9" class="staff">
+                  <path d="M0 19657 L2086 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 19837 L2086 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 20017 L2086 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 20197 L2086 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M0 20377 L2086 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="cl8v3p2" class="clef">
+                     <use xlink:href="#E062-15q9i53" x="117" y="19837" height="720px" width="720px" />
+                  </g>
+                  <g id="kmixrhn" class="keySig" />
+                  <g id="lbirzza" class="layer" />
+               </g>
+               <g id="bwtrxqp" class="barLine">
+                  <path d="M2073 11557 L2073 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 13177 L2073 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 12277 L2073 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 14797 L2073 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 13897 L2073 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 16417 L2073 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 18037 L2073 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M2073 19657 L2073 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m4q533k" class="measure">
+               <g id="s14ye2gn" class="staff">
+                  <path d="M2086 11557 L3464 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 11737 L3464 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 11917 L3464 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 12097 L3464 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 12277 L3464 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="l119n2ts" class="layer" />
+               </g>
+               <g id="s1nn2fbn" class="staff">
+                  <path d="M2086 13177 L3464 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 13357 L3464 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 13537 L3464 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 13717 L3464 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 13897 L3464 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1tou689" class="layer" />
+               </g>
+               <g id="s189tt9s" class="staff">
+                  <path d="M2086 14797 L3464 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 14977 L3464 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 15157 L3464 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 15337 L3464 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 15517 L3464 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="lipa28s" class="layer" />
+               </g>
+               <g id="sn1tstv" class="staff">
+                  <path d="M2086 16417 L3464 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 16597 L3464 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 16777 L3464 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 16957 L3464 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 17137 L3464 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="l4oo48f" class="layer" />
+               </g>
+               <g id="s1fplvnu" class="staff">
+                  <path d="M2086 18037 L3464 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 18217 L3464 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 18397 L3464 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 18577 L3464 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 18757 L3464 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1g7n9tn" class="layer" />
+               </g>
+               <g id="s114p2kk" class="staff">
+                  <path d="M2086 19657 L3464 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 19837 L3464 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 20017 L3464 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 20197 L3464 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M2086 20377 L3464 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1iujnvb" class="layer" />
+               </g>
+               <g id="b19f68uu" class="barLine">
+                  <path d="M3451 11557 L3451 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 13177 L3451 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 12277 L3451 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 14797 L3451 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 13897 L3451 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 16417 L3451 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 18037 L3451 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M3451 19657 L3451 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m1gc3yfi" class="measure">
+               <g id="s17t66jy" class="staff">
+                  <path d="M3464 11557 L4842 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 11737 L4842 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 11917 L4842 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 12097 L4842 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 12277 L4842 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="l1hq192u" class="layer" />
+               </g>
+               <g id="s1veqp5b" class="staff">
+                  <path d="M3464 13177 L4842 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 13357 L4842 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 13537 L4842 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 13717 L4842 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 13897 L4842 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="ls8qix3" class="layer" />
+               </g>
+               <g id="s1vhpgqk" class="staff">
+                  <path d="M3464 14797 L4842 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 14977 L4842 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 15157 L4842 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 15337 L4842 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 15517 L4842 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1tpu9se" class="layer" />
+               </g>
+               <g id="s13jfaod" class="staff">
+                  <path d="M3464 16417 L4842 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 16597 L4842 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 16777 L4842 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 16957 L4842 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 17137 L4842 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="legecun" class="layer" />
+               </g>
+               <g id="s1t1b3x5" class="staff">
+                  <path d="M3464 18037 L4842 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 18217 L4842 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 18397 L4842 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 18577 L4842 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 18757 L4842 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="lkgp4l" class="layer" />
+               </g>
+               <g id="s19kk1xw" class="staff">
+                  <path d="M3464 19657 L4842 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 19837 L4842 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 20017 L4842 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 20197 L4842 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M3464 20377 L4842 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1tss6wp" class="layer" />
+               </g>
+               <g id="b1fr04b4" class="barLine">
+                  <path d="M4829 11557 L4829 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 13177 L4829 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 12277 L4829 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 14797 L4829 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 13897 L4829 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 16417 L4829 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 18037 L4829 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M4829 19657 L4829 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mrpakl6" class="measure">
+               <g id="s1lf0h4m" class="staff">
+                  <path d="M4842 11557 L6220 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 11737 L6220 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 11917 L6220 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 12097 L6220 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 12277 L6220 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="l1t9az4c" class="layer" />
+               </g>
+               <g id="sq5zbik" class="staff">
+                  <path d="M4842 13177 L6220 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 13357 L6220 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 13537 L6220 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 13717 L6220 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 13897 L6220 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="ls1qovs" class="layer" />
+               </g>
+               <g id="s179t6wr" class="staff">
+                  <path d="M4842 14797 L6220 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 14977 L6220 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 15157 L6220 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 15337 L6220 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 15517 L6220 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1wf65cq" class="layer" />
+               </g>
+               <g id="s2h3xzg" class="staff">
+                  <path d="M4842 16417 L6220 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 16597 L6220 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 16777 L6220 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 16957 L6220 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 17137 L6220 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="lccto7b" class="layer" />
+               </g>
+               <g id="sp6ozbr" class="staff">
+                  <path d="M4842 18037 L6220 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 18217 L6220 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 18397 L6220 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 18577 L6220 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 18757 L6220 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l8z1eav" class="layer" />
+               </g>
+               <g id="s5ks8l9" class="staff">
+                  <path d="M4842 19657 L6220 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 19837 L6220 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 20017 L6220 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 20197 L6220 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M4842 20377 L6220 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l9leuqz" class="layer" />
+               </g>
+               <g id="b1tsclwb" class="barLine">
+                  <path d="M6207 11557 L6207 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 13177 L6207 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 12277 L6207 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 14797 L6207 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 13897 L6207 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 16417 L6207 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 18037 L6207 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M6207 19657 L6207 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m1d8jw7g" class="measure">
+               <g id="s12el63" class="staff">
+                  <path d="M6220 11557 L7598 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 11737 L7598 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 11917 L7598 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 12097 L7598 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 12277 L7598 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="lxj64yi" class="layer" />
+               </g>
+               <g id="scijxko" class="staff">
+                  <path d="M6220 13177 L7598 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 13357 L7598 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 13537 L7598 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 13717 L7598 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 13897 L7598 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="l7hhwhx" class="layer" />
+               </g>
+               <g id="snl4gnd" class="staff">
+                  <path d="M6220 14797 L7598 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 14977 L7598 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 15157 L7598 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 15337 L7598 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 15517 L7598 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="lzqf6lw" class="layer" />
+               </g>
+               <g id="s9az1w9" class="staff">
+                  <path d="M6220 16417 L7598 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 16597 L7598 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 16777 L7598 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 16957 L7598 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 17137 L7598 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="l1qwt44b" class="layer" />
+               </g>
+               <g id="s1lhyip7" class="staff">
+                  <path d="M6220 18037 L7598 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 18217 L7598 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 18397 L7598 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 18577 L7598 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 18757 L7598 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l11ygo3l" class="layer" />
+               </g>
+               <g id="sohj3gy" class="staff">
+                  <path d="M6220 19657 L7598 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 19837 L7598 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 20017 L7598 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 20197 L7598 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M6220 20377 L7598 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="ljzrn27" class="layer" />
+               </g>
+               <g id="bnqjrtt" class="barLine">
+                  <path d="M7585 11557 L7585 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 13177 L7585 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 12277 L7585 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 14797 L7585 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 13897 L7585 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 16417 L7585 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 18037 L7585 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M7585 19657 L7585 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m1uryl3y" class="measure">
+               <g id="s1wlgzzo" class="staff">
+                  <path d="M7598 11557 L8976 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 11737 L8976 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 11917 L8976 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 12097 L8976 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 12277 L8976 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="lwnyrgj" class="layer" />
+               </g>
+               <g id="sujh5c6" class="staff">
+                  <path d="M7598 13177 L8976 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 13357 L8976 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 13537 L8976 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 13717 L8976 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 13897 L8976 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="l12t2j64" class="layer" />
+               </g>
+               <g id="solhycn" class="staff">
+                  <path d="M7598 14797 L8976 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 14977 L8976 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 15157 L8976 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 15337 L8976 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 15517 L8976 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1kq4ana" class="layer" />
+               </g>
+               <g id="s14zmkib" class="staff">
+                  <path d="M7598 16417 L8976 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 16597 L8976 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 16777 L8976 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 16957 L8976 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 17137 L8976 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="lkam5f3" class="layer" />
+               </g>
+               <g id="s8zjhyo" class="staff">
+                  <path d="M7598 18037 L8976 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 18217 L8976 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 18397 L8976 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 18577 L8976 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 18757 L8976 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="lytmszh" class="layer" />
+               </g>
+               <g id="s1vhd8li" class="staff">
+                  <path d="M7598 19657 L8976 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 19837 L8976 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 20017 L8976 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 20197 L8976 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M7598 20377 L8976 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l16jzqbx" class="layer" />
+               </g>
+               <g id="b1sb6uea" class="barLine">
+                  <path d="M8963 11557 L8963 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 13177 L8963 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 12277 L8963 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 14797 L8963 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 13897 L8963 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 16417 L8963 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 18037 L8963 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M8963 19657 L8963 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mm9xrxg" class="measure">
+               <g id="sme46yd" class="staff">
+                  <path d="M8976 11557 L10354 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 11737 L10354 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 11917 L10354 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 12097 L10354 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 12277 L10354 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="lgplvgp" class="layer" />
+               </g>
+               <g id="s1rf7t7t" class="staff">
+                  <path d="M8976 13177 L10354 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 13357 L10354 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 13537 L10354 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 13717 L10354 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 13897 L10354 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1lwaw8p" class="layer" />
+               </g>
+               <g id="s151n97c" class="staff">
+                  <path d="M8976 14797 L10354 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 14977 L10354 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 15157 L10354 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 15337 L10354 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 15517 L10354 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l12mt17x" class="layer" />
+               </g>
+               <g id="sd2j94m" class="staff">
+                  <path d="M8976 16417 L10354 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 16597 L10354 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 16777 L10354 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 16957 L10354 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 17137 L10354 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="ldl2nz1" class="layer" />
+               </g>
+               <g id="s1jytnn8" class="staff">
+                  <path d="M8976 18037 L10354 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 18217 L10354 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 18397 L10354 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 18577 L10354 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 18757 L10354 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l15tqa4s" class="layer" />
+               </g>
+               <g id="s17h16c2" class="staff">
+                  <path d="M8976 19657 L10354 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 19837 L10354 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 20017 L10354 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 20197 L10354 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M8976 20377 L10354 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l3f3a7e" class="layer" />
+               </g>
+               <g id="b1pcu6ov" class="barLine">
+                  <path d="M10341 11557 L10341 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 13177 L10341 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 12277 L10341 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 14797 L10341 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 13897 L10341 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 16417 L10341 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 18037 L10341 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M10341 19657 L10341 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m3tuoaz" class="measure">
+               <g id="s1pmc8ft" class="staff">
+                  <path d="M10354 11557 L11732 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 11737 L11732 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 11917 L11732 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 12097 L11732 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 12277 L11732 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="l1xdolcz" class="layer" />
+               </g>
+               <g id="s1juazs9" class="staff">
+                  <path d="M10354 13177 L11732 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 13357 L11732 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 13537 L11732 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 13717 L11732 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 13897 L11732 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="lqqyhxt" class="layer" />
+               </g>
+               <g id="si3axhe" class="staff">
+                  <path d="M10354 14797 L11732 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 14977 L11732 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 15157 L11732 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 15337 L11732 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 15517 L11732 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1x62o5x" class="layer" />
+               </g>
+               <g id="s5uc28t" class="staff">
+                  <path d="M10354 16417 L11732 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 16597 L11732 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 16777 L11732 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 16957 L11732 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 17137 L11732 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="l16ybs10" class="layer" />
+               </g>
+               <g id="sb7ee7h" class="staff">
+                  <path d="M10354 18037 L11732 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 18217 L11732 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 18397 L11732 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 18577 L11732 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 18757 L11732 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1mvg9wu" class="layer" />
+               </g>
+               <g id="sevp368" class="staff">
+                  <path d="M10354 19657 L11732 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 19837 L11732 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 20017 L11732 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 20197 L11732 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M10354 20377 L11732 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l14tlo9n" class="layer" />
+               </g>
+               <g id="b110b8" class="barLine">
+                  <path d="M11719 11557 L11719 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 13177 L11719 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 12277 L11719 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 14797 L11719 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 13897 L11719 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 16417 L11719 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 18037 L11719 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M11719 19657 L11719 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mtnam2w" class="measure">
+               <g id="s1oyszhk" class="staff">
+                  <path d="M11732 11557 L13110 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 11737 L13110 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 11917 L13110 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 12097 L13110 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 12277 L13110 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="l2l998y" class="layer" />
+               </g>
+               <g id="s1hmtvxd" class="staff">
+                  <path d="M11732 13177 L13110 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 13357 L13110 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 13537 L13110 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 13717 L13110 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 13897 L13110 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="l1k2l19i" class="layer" />
+               </g>
+               <g id="s1dl0e9r" class="staff">
+                  <path d="M11732 14797 L13110 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 14977 L13110 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 15157 L13110 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 15337 L13110 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 15517 L13110 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1ryr3sj" class="layer" />
+               </g>
+               <g id="s1pekkdq" class="staff">
+                  <path d="M11732 16417 L13110 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 16597 L13110 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 16777 L13110 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 16957 L13110 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 17137 L13110 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="lbxaaw" class="layer" />
+               </g>
+               <g id="smx4qmx" class="staff">
+                  <path d="M11732 18037 L13110 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 18217 L13110 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 18397 L13110 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 18577 L13110 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 18757 L13110 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="lirlihz" class="layer" />
+               </g>
+               <g id="s1bna640" class="staff">
+                  <path d="M11732 19657 L13110 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 19837 L13110 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 20017 L13110 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 20197 L13110 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M11732 20377 L13110 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="lx74wsf" class="layer" />
+               </g>
+               <g id="b5b2sbo" class="barLine">
+                  <path d="M13097 11557 L13097 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 13177 L13097 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 12277 L13097 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 14797 L13097 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 13897 L13097 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 16417 L13097 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 18037 L13097 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M13097 19657 L13097 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mw0xobp" class="measure">
+               <g id="s98x7mw" class="staff">
+                  <path d="M13110 11557 L14488 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 11737 L14488 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 11917 L14488 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 12097 L14488 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 12277 L14488 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="l186bfyt" class="layer" />
+               </g>
+               <g id="s13vpp2y" class="staff">
+                  <path d="M13110 13177 L14488 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 13357 L14488 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 13537 L14488 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 13717 L14488 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 13897 L14488 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="luk6v7j" class="layer" />
+               </g>
+               <g id="sbx5ua8" class="staff">
+                  <path d="M13110 14797 L14488 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 14977 L14488 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 15157 L14488 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 15337 L14488 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 15517 L14488 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1x64dlo" class="layer" />
+               </g>
+               <g id="stwqhb9" class="staff">
+                  <path d="M13110 16417 L14488 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 16597 L14488 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 16777 L14488 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 16957 L14488 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 17137 L14488 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="l1c57obt" class="layer" />
+               </g>
+               <g id="s1cmto19" class="staff">
+                  <path d="M13110 18037 L14488 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 18217 L14488 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 18397 L14488 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 18577 L14488 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 18757 L14488 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="le3rk6g" class="layer" />
+               </g>
+               <g id="sjge6lm" class="staff">
+                  <path d="M13110 19657 L14488 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 19837 L14488 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 20017 L14488 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 20197 L14488 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M13110 20377 L14488 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="lub4etn" class="layer" />
+               </g>
+               <g id="bmjl44a" class="barLine">
+                  <path d="M14475 11557 L14475 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 13177 L14475 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 12277 L14475 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 14797 L14475 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 13897 L14475 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 16417 L14475 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 18037 L14475 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M14475 19657 L14475 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mpkj9y" class="measure">
+               <g id="s1b2nddn" class="staff">
+                  <path d="M14488 11557 L15866 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 11737 L15866 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 11917 L15866 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 12097 L15866 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 12277 L15866 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="l10rjns0" class="layer" />
+               </g>
+               <g id="sj6yb1q" class="staff">
+                  <path d="M14488 13177 L15866 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 13357 L15866 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 13537 L15866 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 13717 L15866 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 13897 L15866 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="l163hwb" class="layer" />
+               </g>
+               <g id="shxbvsh" class="staff">
+                  <path d="M14488 14797 L15866 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 14977 L15866 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 15157 L15866 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 15337 L15866 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 15517 L15866 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="ll82dba" class="layer" />
+               </g>
+               <g id="s1oq2j5m" class="staff">
+                  <path d="M14488 16417 L15866 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 16597 L15866 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 16777 L15866 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 16957 L15866 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 17137 L15866 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="l12eoi9s" class="layer" />
+               </g>
+               <g id="s11hfbti" class="staff">
+                  <path d="M14488 18037 L15866 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 18217 L15866 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 18397 L15866 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 18577 L15866 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 18757 L15866 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1p2thlt" class="layer" />
+               </g>
+               <g id="s1kz7s92" class="staff">
+                  <path d="M14488 19657 L15866 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 19837 L15866 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 20017 L15866 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 20197 L15866 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M14488 20377 L15866 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="ld5cw4k" class="layer" />
+               </g>
+               <g id="b1jjwb0f" class="barLine">
+                  <path d="M15853 11557 L15853 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 13177 L15853 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 12277 L15853 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 14797 L15853 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 13897 L15853 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 16417 L15853 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 18037 L15853 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M15853 19657 L15853 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m14nx18y" class="measure">
+               <g id="s4repf6" class="staff">
+                  <path d="M15866 11557 L17244 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 11737 L17244 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 11917 L17244 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 12097 L17244 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 12277 L17244 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="lx2vewe" class="layer" />
+               </g>
+               <g id="s1lnshdz" class="staff">
+                  <path d="M15866 13177 L17244 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 13357 L17244 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 13537 L17244 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 13717 L17244 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 13897 L17244 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="local79" class="layer" />
+               </g>
+               <g id="s1972ej4" class="staff">
+                  <path d="M15866 14797 L17244 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 14977 L17244 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 15157 L17244 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 15337 L17244 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 15517 L17244 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l4uf2zr" class="layer" />
+               </g>
+               <g id="s1iw9k7x" class="staff">
+                  <path d="M15866 16417 L17244 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 16597 L17244 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 16777 L17244 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 16957 L17244 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 17137 L17244 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="lque7ij" class="layer" />
+               </g>
+               <g id="s1e4ibb1" class="staff">
+                  <path d="M15866 18037 L17244 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 18217 L17244 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 18397 L17244 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 18577 L17244 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 18757 L17244 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l5nm29n" class="layer" />
+               </g>
+               <g id="sgx4r96" class="staff">
+                  <path d="M15866 19657 L17244 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 19837 L17244 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 20017 L17244 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 20197 L17244 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M15866 20377 L17244 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1xt69la" class="layer" />
+               </g>
+               <g id="b14emtmh" class="barLine">
+                  <path d="M17231 11557 L17231 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 13177 L17231 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 12277 L17231 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 14797 L17231 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 13897 L17231 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 16417 L17231 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 18037 L17231 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M17231 19657 L17231 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="m35kxuw" class="measure">
+               <g id="s14g9eps" class="staff">
+                  <path d="M17244 11557 L18622 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 11737 L18622 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 11917 L18622 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 12097 L18622 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 12277 L18622 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="ldb5bzb" class="layer" />
+               </g>
+               <g id="sbfme8c" class="staff">
+                  <path d="M17244 13177 L18622 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 13357 L18622 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 13537 L18622 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 13717 L18622 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 13897 L18622 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="l113jn2p" class="layer" />
+               </g>
+               <g id="sx5v4sa" class="staff">
+                  <path d="M17244 14797 L18622 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 14977 L18622 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 15157 L18622 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 15337 L18622 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 15517 L18622 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1s7bk4h" class="layer" />
+               </g>
+               <g id="soin6dm" class="staff">
+                  <path d="M17244 16417 L18622 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 16597 L18622 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 16777 L18622 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 16957 L18622 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 17137 L18622 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="lxr0opo" class="layer" />
+               </g>
+               <g id="sfzgag9" class="staff">
+                  <path d="M17244 18037 L18622 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 18217 L18622 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 18397 L18622 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 18577 L18622 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 18757 L18622 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="l1o5xj2j" class="layer" />
+               </g>
+               <g id="s1634ayt" class="staff">
+                  <path d="M17244 19657 L18622 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 19837 L18622 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 20017 L18622 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 20197 L18622 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M17244 20377 L18622 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1nkuq1d" class="layer" />
+               </g>
+               <g id="b1awjjrw" class="barLine">
+                  <path d="M18609 11557 L18609 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 13177 L18609 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 12277 L18609 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 14797 L18609 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 13897 L18609 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 16417 L18609 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 18037 L18609 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M18609 19657 L18609 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+            <g id="mm6ibut" class="measure">
+               <g id="svb8wze" class="staff">
+                  <path d="M18622 11557 L20000 11557" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 11737 L20000 11737" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 11917 L20000 11917" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 12097 L20000 12097" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 12277 L20000 12277" stroke="currentColor" stroke-width="13" />
+                  <g id="ldpfdyt" class="layer" />
+               </g>
+               <g id="sy44ij5" class="staff">
+                  <path d="M18622 13177 L20000 13177" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 13357 L20000 13357" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 13537 L20000 13537" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 13717 L20000 13717" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 13897 L20000 13897" stroke="currentColor" stroke-width="13" />
+                  <g id="lzhhqx6" class="layer" />
+               </g>
+               <g id="sno8u6g" class="staff">
+                  <path d="M18622 14797 L20000 14797" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 14977 L20000 14977" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 15157 L20000 15157" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 15337 L20000 15337" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 15517 L20000 15517" stroke="currentColor" stroke-width="13" />
+                  <g id="l1fr2q0g" class="layer" />
+               </g>
+               <g id="smsgs5" class="staff">
+                  <path d="M18622 16417 L20000 16417" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 16597 L20000 16597" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 16777 L20000 16777" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 16957 L20000 16957" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 17137 L20000 17137" stroke="currentColor" stroke-width="13" />
+                  <g id="lesdk43" class="layer" />
+               </g>
+               <g id="szwj0jw" class="staff">
+                  <path d="M18622 18037 L20000 18037" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 18217 L20000 18217" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 18397 L20000 18397" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 18577 L20000 18577" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 18757 L20000 18757" stroke="currentColor" stroke-width="13" />
+                  <g id="lhm8zo9" class="layer" />
+               </g>
+               <g id="s1btba6l" class="staff">
+                  <path d="M18622 19657 L20000 19657" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 19837 L20000 19837" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 20017 L20000 20017" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 20197 L20000 20197" stroke="currentColor" stroke-width="13" />
+                  <path d="M18622 20377 L20000 20377" stroke="currentColor" stroke-width="13" />
+                  <g id="l1ohtjww" class="layer" />
+               </g>
+               <g id="b7vk7rr" class="barLine">
+                  <path d="M19987 11557 L19987 12277" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 13177 L19987 13897" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 12277 L19987 13177" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 14797 L19987 15517" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 13897 L19987 14797" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 16417 L19987 17137" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 18037 L19987 18757" stroke="currentColor" stroke-width="27" />
+                  <path d="M19987 19657 L19987 20377" stroke="currentColor" stroke-width="27" />
+               </g>
+            </g>
+         </g>
+         <g id="p1mmeu2s" class="pgHead autogenerated">
+            <text x="0" y="0" font-size="0px">
+               <tspan id="r1ebm42f" class="rend" x="10000" y="415" text-anchor="middle">
+                  <title class="labelAttr">title</title>
+                  <tspan id="rp8effy" class="rend">
+                     <tspan id="t1j82pev" class="text">
+                        <tspan font-size="607px" class="text">Score with bracket and brace groups</tspan>
+                     </tspan>
+                  </tspan>
+               </tspan>
+            </text>
+         </g>
+         <g id="pngj83q" class="pgFoot autogenerated">
+            <g id="f1xobypg" class="fig">
+               <g id="s75dlp7" class="svg" transform="translate(10000, 28699) scale(10, 10)" />
+            </g>
+         </g>
+      </g>
+   </svg>
+</svg>

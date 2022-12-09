@@ -8,6 +8,16 @@ see-also:
       - "/advanced-topics/smufl.html"
     inputFrom:
       - "/toolkit-reference/input-formats.html"
+    justificationBraceGroup:
+      - "/advanced-topics/layout-options.html#vertical-justification"
+    justificationBracketGroup:
+      - "/advanced-topics/layout-options.html#vertical-justification"
+    justificationStaff:
+      - "/advanced-topics/layout-options.html#vertical-justification"
+    justificationSystem:
+      - "/advanced-topics/layout-options.html#vertical-justification"
+    justifyVertically:
+      - "/advanced-topics/layout-options.html#vertical-justification"  
     logLevel:
       - "/toolkit-reference/environment-functions.html"
     mensuralToMeasure:
@@ -31,6 +41,10 @@ see-also:
       - "/advanced-topics/controlling-the-svg-output.html#scaling"
     smuflTextFont:
       - "/advanced-topics/smufl.html#music-symbols-in-text"
+    spacingStaff:
+      - "/advanced-topics/layout-options.html#staff-and-system-spacing"
+    spacingSystem:
+      - "/advanced-topics/layout-options.html#staff-and-system-spacing"
     unit:
       - "/advanced-topics/controlling-the-svg-output.html#units-and-page-dimensions"   
       - "/advanced-topics/controlling-the-svg-output.html#scaling"   
