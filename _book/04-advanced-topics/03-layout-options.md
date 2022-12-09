@@ -62,7 +62,7 @@ Verovio adds half a staff space above the first staff of a system and below the 
 
 ![spacing 01](/images/advanced-topics/layout-options/spacing-01.png){:.img-responsive .example-80}
 
-When removing the top and bottom page margins (`--page-margin-top 0` and  `--page-margin-bottom 0`), there will be only the half staff spacing above and below.
+When removing the top and bottom page margins (`--page-margin-top 0` and  `--page-margin-bottom 0`), there will be only the half staff space above and below.
 
 ![spacing 02](/images/advanced-topics/layout-options/spacing-02.png){:.img-responsive .example-80}
 
