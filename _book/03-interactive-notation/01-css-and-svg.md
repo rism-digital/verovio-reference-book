@@ -100,7 +100,7 @@ rest.style.fill = "dodgerblue";
 
 #### Using custom data-* attributes
 
-The attributes in the SVG `<g>` elements corresponding to the MEI elements is not limited to the `@class` carrying the MEI element name and the MEI `@xml:id` passed as `@id`. Verovio also passed MEI `@type` values as additional `@class` in the SVG.
+The attributes in the SVG `<g>` elements corresponding to the MEI elements is not limited to the `@class` carrying the MEI element name and the MEI `@xml:id` passed as `@id`. Verovio also passes MEI `@type` values as additional `@class` in the SVG.
 
 However, in many cases, applications need to have access at other attribute values. To do so, one can use the `svgAdditionalAttribute` option to specify which attributes can be made available in the SVG output. For example, for making the note pitch name and the note octave accessible, you can add the following option values to Verovio's `setOptions()` method:
 
