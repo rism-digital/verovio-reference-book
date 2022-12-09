@@ -58,7 +58,7 @@ examples:
 
 Staff and system spacing in Verovio is controlled by two options, namely `--spacing-staff` and `--spacing-system`. Their value is given in MEI units and the default value is `12` units. Since a five line staff is 8 units, it means the default spacing between two staves will be one and a half staff height, and an additional equivalent system spacing between two systems.
 
-Verovio adds half of a staff spacing above the first staff of a system and below the last one. This is the illustrated below with the default spacing options.
+Verovio adds half a staff space above the first staff of a system and below the last one. This is the illustrated below with the default spacing options.
 
 ![spacing 01](/images/advanced-topics/layout-options/spacing-01.png){:.img-responsive .example-80}
 
