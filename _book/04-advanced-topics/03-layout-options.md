@@ -66,7 +66,7 @@ When removing the top and bottom page margins (`--page-margin-top 0` and  `--pag
 
 ![spacing 02](/images/advanced-topics/layout-options/spacing-02.png){:.img-responsive .example-80}
 
-To remove the spacing above and below the staff completely, the staff spacing has to be removed with `--spacing-staff 0`.
+To remove the spacing above and below the staff completely, the staff space has to be removed with `--spacing-staff 0`.
 
 ![spacing 03](/images/advanced-topics/layout-options/spacing-03.png){:.img-responsive .example-80}
 
