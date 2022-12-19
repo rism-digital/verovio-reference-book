@@ -452,7 +452,7 @@ The following elements / attributes are upgraded:
 *Upgraded data*
 
 ```xml
-<mensur tempus="3" sign="0"/>
+<mensur tempus="3" sign="O"/>
 <mensur tempus="2" sign="C"/>
 ```
 
