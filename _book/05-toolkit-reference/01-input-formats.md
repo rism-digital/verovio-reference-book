@@ -292,20 +292,20 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<beatRpt rend="4"/>
-<beatRpt rend="8"/>
-<beatRpt rend="16"/>
-<beatRpt form="4"/>
+<beatRpt rend="4" />
+<beatRpt rend="8" />
+<beatRpt rend="16" />
+<beatRpt form="4" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<beatRpt slash="1"/>
-<beatRpt slash="1"/>
-<beatRpt slash="2"/>
-<beatRpt slash="1"/>
+<beatRpt slash="1" />
+<beatRpt slash="1" />
+<beatRpt slash="2" />
+<beatRpt slash="1" />
 ```
 
 {% endcol %}{% endrow %}
@@ -314,14 +314,14 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<fTrem slash="2"/>
+<fTrem slash="2" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<fTrem beams="2"/>
+<fTrem beams="2" />
 ```
 
 {% endcol %}{% endrow %}
@@ -330,14 +330,14 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<instrDef midi.volume="111"/>
+<instrDef midi.volume="111" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<instrDef midi.volume="87.40%"/>
+<instrDef midi.volume="87.40%" />
 ```
 
 {% endcol %}{% endrow %}
@@ -346,16 +346,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<mordent form="inv"/>
-<mordent form="norm"/>
+<mordent form="inv" />
+<mordent form="norm" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<mordent form="upper"/>
-<mordent form="lower"/>
+<mordent form="upper" />
+<mordent form="lower" />
 ```
 
 {% endcol %}{% endrow %}
@@ -364,16 +364,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<turn form="inv"/>
-<turn form="norm"/>
+<turn form="inv" />
+<turn form="norm" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<turn form="lower"/>
-<turn form="upper"/>
+<turn form="lower" />
+<turn form="upper" />
 ```
 
 {% endcol %}{% endrow %}
@@ -382,14 +382,14 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<staff barthru="true"/>
+<staff barthru="true" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<staff bar.thru="true"/>
+<staff bar.thru="true" />
 ```
 
 {% endcol %}{% endrow %}
@@ -398,7 +398,7 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<staffDef label="violin I" label.abbr="vl I"/>
+<staffDef label="violin I" label.abbr="vl I" />
 ```
 
 {% endcol %}{% col %}
@@ -417,18 +417,18 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<note dur.ges="8p"/>
-<note dur.ges="32r"/>
-<note dur.ges="32s"/>
+<note dur.ges="8p" />
+<note dur.ges="32r" />
+<note dur.ges="32s" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<note dur.ppq="8"/>
-<note dur.recip="32"/>
-<note dur.real="32"/>
+<note dur.ppq="8" />
+<note dur.recip="32" />
+<note dur.real="32" />
 ```
 
 {% endcol %}{% endrow %}
@@ -444,16 +444,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<mensur tempus="3"/>
-<mensur tempus="2"/>
+<mensur tempus="3" />
+<mensur tempus="2" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<mensur tempus="3" sign="0"/>
-<mensur tempus="2" sign="C"/>
+<mensur tempus="3" sign="O" />
+<mensur tempus="2" sign="C" />
 ```
 
 {% endcol %}{% endrow %}
@@ -462,16 +462,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<mensur prolatio="3"/>
-<mensur prolatio="2"/>
+<mensur prolatio="3" />
+<mensur prolatio="2" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<mensur prolatio="3" dot="true"/>
-<mensur prolatio="2" dot="false"/>
+<mensur prolatio="3" dot="true" />
+<mensur prolatio="2" dot="false" />
 ```
 
 {% endcol %}{% endrow %}
