@@ -103,7 +103,7 @@ python setup.py build_ext
 sudo python setup.py install
 ```
 
-For building it with one or more specific options (e.g., without Plain and Easy support), run:
+For building it with one or more specific options (e.g., without Plaine & Easie support), run:
 
 ```bash
 python setup.py build_ext --inplace --define NO_PAE_SUPPORT
