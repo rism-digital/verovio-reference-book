@@ -13,6 +13,7 @@
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"footer": <string>`</span><span class="lang2">`--footer <string>`</span> {% endcol %}{% col 8 %} Control footer layout<br/>(default: "auto"; other values: ['none', 'auto', 'encoded', 'always']) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"header": <string>`</span><span class="lang2">`--header <string>`</span> {% endcol %}{% col 8 %} Control header layout<br/>(default: "auto"; other values: ['none', 'auto', 'encoded']) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"humType":  <boolean>`</span><span class="lang2">`--hum-type `</span> {% endcol %}{% col 8 %} Include type attributes when importing from Humdrum {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"incip":  <boolean>`</span><span class="lang2">`--incip `</span> {% endcol %}{% col 8 %} Read &lt;incip&gt; elements as data input {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"justifyVertically":  <boolean>`</span><span class="lang2">`--justify-vertically `</span> {% endcol %}{% col 8 %} Justify spacing vertically to fill the page
 
 See also: [Vertical justification](/advanced-topics/layout-options.html#vertical-justification) {% endcol %}
@@ -59,7 +60,7 @@ See also: [Music symbols in text](/advanced-topics/smufl.html#music-symbols-in-t
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"svgHtml5":  <boolean>`</span><span class="lang2">`--svg-html5 `</span> {% endcol %}{% col 8 %} Write data-id and data-class attributes for JS usage and id clash avoidance {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"svgRemoveXlink":  <boolean>`</span><span class="lang2">`--svg-remove-xlink `</span> {% endcol %}{% col 8 %} Removes the xlink: prefix on href attributes for compatibility with some newer browsers {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"svgViewBox":  <boolean>`</span><span class="lang2">`--svg-view-box `</span> {% endcol %}{% col 8 %} Use viewBox on svg root element for easy scaling of document {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"unit": <integer>`</span><span class="lang2">`--unit <integer>`</span> {% endcol %}{% col 8 %} The MEI unit (1⁄2 of the distance between the staff lines)<br/>(default: 9; min: 6; max: 20)
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"unit": <decimal>`</span><span class="lang2">`--unit <decimal>`</span> {% endcol %}{% col 8 %} The MEI unit (1⁄2 of the distance between the staff lines)<br/>(default: 9.0; min: 4.5; max: 12.0)
 
 See also: [Units and page dimensions](/advanced-topics/controlling-the-svg-output.html#units-and-page-dimensions) \| [Scaling](/advanced-topics/controlling-the-svg-output.html#scaling) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"useBraceGlyph":  <boolean>`</span><span class="lang2">`--use-brace-glyph `</span> {% endcol %}{% col 8 %} Use brace glyph from current font {% endcol %}

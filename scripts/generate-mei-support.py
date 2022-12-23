@@ -150,7 +150,7 @@ if __name__ == "__main__":
             # Skip hidden files
             if not item1.endswith('.xml'):
                 continue
-            if item1 == 'index.xml':
+            if item1 == 'index.xml' or item1 == 'Doxyfile.xml':
                 continue 
 
             xml_file = os.path.join('./', tmp_dir, 'xml', item1)

@@ -143,7 +143,7 @@ result = toolkit.editInfo()
 
 Return all available options grouped by category.
 
-For each option, returns the type, the default value, and the minimum and maximum value (when available)
+For each option, returns the type, the default value, and the minimum and maximum value (when available).
 
 **Returns**
 
@@ -187,7 +187,7 @@ result = toolkit.getDefaultOptions()
 
 Return descriptive features as a JSON string.
 
-The features are tailored for implementing incipit search
+The features are tailored for implementing incipit search.
 
 **Returns**
 
@@ -217,7 +217,7 @@ result = toolkit.getDescriptiveFeatures(options)
 
 Return element attributes as a JSON string.
 
-The attributes returned include the ones not supported by Verovio
+The attributes returned include the ones not supported by Verovio.
 
 **Returns**
 
@@ -245,7 +245,7 @@ result = toolkit.getElementAttr(xmlId)
 {% include method-doc file="getelementattr-xmlid" %}
 ### GetElementsAtTime
 
-Returns array of IDs of elements being currently played.
+Return array of IDs of elements being currently played.
 
 **Returns**
 
@@ -273,7 +273,7 @@ result = toolkit.getElementsAtTime(millisec)
 {% include method-doc file="getelementsattime-millisec" %}
 ### GetExpansionIdsForElement
 
-Returns a vector of ID strings of all elements (the notated and the expanded) for a given element.
+Return a vector of ID strings of all elements (the notated and the expanded) for a given element.
 
 **Returns**
 
@@ -324,13 +324,11 @@ result = toolkit.getHumdrum()
 
 Write the humdrum buffer to the file.
 
-filename The output filename
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -426,9 +424,9 @@ result = toolkit.getMEI(jsonOptions)
 {% include method-doc file="getmei-jsonoptions" %}
 ### GetMIDIValuesForElement
 
-Return MIDI values of the element with the ID (xml:id)
+Return MIDI values of the element with the ID (xml:id).
 
-RenderToMIDI() must be called prior to using this method
+RenderToMIDI() must be called prior to using this method.
 
 **Returns**
 
@@ -456,11 +454,11 @@ result = toolkit.getMIDIValuesForElement(xmlId)
 {% include method-doc file="getmidivaluesforelement-xmlid" %}
 ### GetNotatedIdForElement
 
-Returns the ID string of the notated (the original) element.
+Return the ID string of the notated (the original) element.
 
 **Returns**
 
-`std::string` – A stringified JSON object with all IDs
+`std::string` – An ID string
 
 **Parameters**
 
@@ -911,13 +909,11 @@ result = toolkit.renderToMIDI()
 
 Render a document to MIDI and save it to the file.
 
-filename The output filename
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -941,7 +937,7 @@ result = toolkit.renderToMIDIFile(filename)
 {% include method-doc file="rendertomidifile-filename" %}
 ### RenderToPAE
 
-Render a document to Plaine and Easie.
+Render a document to Plaine & Easie code.
 
 Only the top staff / layer is exported.
 
@@ -964,19 +960,15 @@ result = toolkit.renderToPAE()
 {% include method-doc file="rendertopae" %}
 ### RenderToPAEFile
 
-Render a document to Plaine and Easie and save it to the file.
+Render a document to Plaine & Easie code and save it to the file.
 
 Only the top staff / layer is exported.
-
-
-
-filename The output filename
 
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -1031,15 +1023,11 @@ result = toolkit.renderToSVG(pageNo, xmlDeclaration)
 
 Render a page to SVG and save it to the file.
 
-filename The output filename 
-
-pageNo The page to render (1-based)
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -1066,11 +1054,9 @@ result = toolkit.renderToSVGFile(filename, pageNo)
 
 Render a document to a timemap.
 
-jsonOptions A stringified JSON objects with the timemap options
-
 **Returns**
 
-`std::string` – The timemap as a string
+`std::string`
 
 **Parameters**
 
@@ -1096,15 +1082,11 @@ result = toolkit.renderToTimemap(jsonOptions)
 
 Render a document to timemap and save it to the file.
 
-filename The output filename 
-
-jsonOptions A stringified JSON objects with the timemap options
-
 {% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
-`bool` – True if the file was successfully written
+`bool`
 
 **Parameters**
 
@@ -1417,7 +1399,7 @@ result = toolkit.toolkit(initFont)
 {% include method-doc file="toolkit-initfont" %}
 ### ValidatePAE
 
-Validate the Plaine and Easie code passed in the string data.
+Validate the Plaine & Easie code passed in the string data.
 
 A single JSON object is returned when there is a global input error. When reading the input succeeds, validation is grouped by input keys. The methods always returns errors in PAE pedantic mode. No data remains loaded after the validation.
 
@@ -1447,7 +1429,7 @@ result = toolkit.validatePAE(data)
 {% include method-doc file="validatepae-data" %}
 ### ValidatePAEFile
 
-Validate the Plaine and Easie file from the file system.
+Validate the Plaine & Easie code from a file.
 
 The method calls Toolkit::ValidatePAE.
 
