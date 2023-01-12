@@ -81,6 +81,10 @@ All of the base options are short options in the command-line version of the too
 
 {% include options/4-elementMargins.md %}
 
+### Midi options
+
+{% include options/5-midi.md %}
+
 <script type="text/javascript">
 $('input:radio[name="lang"]').click(function() {
     $("span").toggleClass("lang1 lang2");
