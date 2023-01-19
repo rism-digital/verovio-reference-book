@@ -140,6 +140,14 @@ The timemap is an array of JSON objects, with each entry having these keys:
 * on: This is an array of note ids that start at the current event time. This list will not be given if there are no note ons at the current event.
 * off: This is an array of note ids that end at the current event time. This list will not be given if there are no note offs at the current event.
 
+#### Usage
+
+With the command-line tool, for generating a timemap JSON with the default options, you need to do:
+
+```bash
+verovio -t timemap -o output.json input-file.mei
+```
+
 #### Examples
 
 {% include music-notation example="t-01" %}
