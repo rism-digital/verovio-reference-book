@@ -14,7 +14,7 @@ brew install verovio
 
 This also installs the resources and you will be ready to go.
 
-You can also intall the latest development source with: 
+You can also install the latest development source with: 
 
 ```bash
 brew install verovio --HEAD
@@ -22,7 +22,7 @@ brew install verovio --HEAD
 
 ### Building on macOS or Linux
 
-To build the the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
+To build the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
 
 ```bash
 cd tools
@@ -84,7 +84,7 @@ If you use a version locally that is not installed, do not forget to add the `-r
 
 #### Additional building options
 
-By default the executable is not stripped. To strip it during the installation do
+By default, the executable is not stripped. To strip it during the installation do
 
 ```bash
 sudo make install/strip
