@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-12T09:12:03+00:00" />
+<meta property="article:published_time" content="2023-01-26T11:16:56+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Output formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"SVG","datePublished":"2023-01-12T09:12:03+00:00","dateModified":"2023-01-12T09:12:03+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/output-formats.html","@type":"BlogPosting","headline":"Output formats","@context":"https://schema.org"}</script>
+{"description":"SVG","datePublished":"2023-01-26T11:16:56+00:00","dateModified":"2023-01-26T11:16:56+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/output-formats.html","@type":"BlogPosting","headline":"Output formats","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -273,6 +273,8 @@
 
 <p>Verovio provides a basic MIDI output feature that can be used from the command-line tool or from the JavaScript toolkit. The MIDI output can be written to a file for further processing or for building application with MIDI playback, including in online environments. However, since MIDI is not supported in web-browsers in a standard way, an additional player will be required in such cases.</p>
 
+<p>When a file is loaded in the toolkit only to render a MIDI file, then setting the <code class="language-plaintext highlighter-rouge">--breaks</code> option to <code class="language-plaintext highlighter-rouge">none</code> is more efficient because it will avoid the unecessary step of calculating the page layout of the document.</p>
+
 <h4 id="the-midi-output-takes-into-account">The MIDI output takes into account:</h4>
 
 <ul>
@@ -305,6 +307,8 @@
   <li>on: This is an array of note ids that start at the current event time. This list will not be given if there are no note ons at the current event.</li>
   <li>off: This is an array of note ids that end at the current event time. This list will not be given if there are no note offs at the current event.</li>
 </ul>
+
+<p>When a file is loaded in the toolkit only to render the timemap file, then setting the <code class="language-plaintext highlighter-rouge">--breaks</code> option to <code class="language-plaintext highlighter-rouge">none</code> is more efficient because it will avoid the unecessary step of calculating the page layout of the document.</p>
 
 <h4 id="examples">Examples</h4>
 
