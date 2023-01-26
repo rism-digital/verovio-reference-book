@@ -95,7 +95,7 @@ rm -rf /usr/local/share/verovio
 Occasionally there are problems with updates necessary to the `Makefile` when compiling a new version of Verovio with make. It may be necessary to clear out the automatically generated cmake files and regenerate them. To do that, run:
 
 ```bash
-rm -rf Files CMakeCache.txt Makefile cmake_install.cmake
+rm -rf CMakeFiles CMakeCache.txt Makefile cmake_install.cmake
 ```
 
 Or, when using CMake 3.24 or later, you can simply run: 
