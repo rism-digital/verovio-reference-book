@@ -110,6 +110,8 @@ The MEI page-based model is not part of MEI. It was put in place for the develop
 
 Verovio provides a basic MIDI output feature that can be used from the command-line tool or from the JavaScript toolkit. The MIDI output can be written to a file for further processing or for building application with MIDI playback, including in online environments. However, since MIDI is not supported in web-browsers in a standard way, an additional player will be required in such cases.
 
+When a file is loaded in the toolkit only to render a MIDI file, then setting the `--breaks` option to `none` is more efficient because it will avoid the unecessary step of calculating the page layout of the document.
+
 #### The MIDI output takes into account:
 
 * Tempo indication (`@midi.bpm`) provided in the first `scoreDef` and in `tempo` elements.
@@ -139,6 +141,8 @@ The timemap is an array of JSON objects, with each entry having these keys:
 * tempo: when the tempo changes the new tempo will be given for the current event. Also the tempo changes are only allowed to occur at the starts of measures in the current code for creating MIDI files, and this is the same limitation for the timemap file. The tempo and qstamp values can be used to re-calculate a new set of tstamp values if the tempo changes.
 * on: This is an array of note ids that start at the current event time. This list will not be given if there are no note ons at the current event.
 * off: This is an array of note ids that end at the current event time. This list will not be given if there are no note offs at the current event.
+
+When a file is loaded in the toolkit only to render the timemap file, then setting the `--breaks` option to `none` is more efficient because it will avoid the unecessary step of calculating the page layout of the document.
 
 #### Examples
 
