@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-26T11:16:56+00:00" />
+<meta property="article:published_time" content="2023-01-26T12:00:57+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Command-line version" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"The Verovio codebase is C++17 compliant and is cross-platform. It has been tested on several operating systems and architectures. This section describes how to build and install the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-built binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward.","datePublished":"2023-01-26T11:16:56+00:00","dateModified":"2023-01-26T11:16:56+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/command-line.html"},"image":"https://book.verovio.org/images/card.png","url":"/installing-or-building-from-sources/command-line.html","@type":"BlogPosting","headline":"Command-line version","@context":"https://schema.org"}</script>
+{"description":"The Verovio codebase is C++17 compliant and is cross-platform. It has been tested on several operating systems and architectures. This section describes how to build and install the command-line version of the toolkit from the command-line or using some of the most popular IDEs. There are currently no pre-built binaries of the command-line toolkit available except for Homebrew on macOS. However, building it is very straight-forward.","datePublished":"2023-01-26T12:00:57+00:00","dateModified":"2023-01-26T12:00:57+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/command-line.html"},"image":"https://book.verovio.org/images/card.png","url":"/installing-or-building-from-sources/command-line.html","@type":"BlogPosting","headline":"Command-line version","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -130,6 +130,8 @@
 
 <a class="toc-item toc-subsection" href="#visual-studio">Visual Studio</a>
 
+<a class="toc-item toc-subsection" href="#visual-studio-code">Visual Studio Code</a>
+
     
 
 <a class="toc-item toc-section " href="/installing-or-building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
@@ -139,6 +141,9 @@
     
 
 <a class="toc-item toc-section " href="/installing-or-building-from-sources/other-bindings.html">Other bindings</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/troubleshooting.html">Troubleshooting</a>
     
 
     
@@ -178,14 +183,14 @@
 
 <p>This also installs the resources and you will be ready to go.</p>
 
-<p>You can also intall the latest development source with:</p>
+<p>You can also install the latest development source with:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>verovio <span class="nt">--HEAD</span>
 </code></pre></div></div>
 
 <h3 id="building-on-macos-or-linux">Building on macOS or Linux</h3>
 
-<p>To build the the command-line tool, you need <a href="https://cmake.org">CMake</a> to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:</p>
+<p>To build the command-line tool, you need <a href="https://cmake.org">CMake</a> to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>tools
 cmake ../cmake
@@ -239,7 +244,7 @@ make
 
 <h4 id="additional-building-options">Additional building options</h4>
 
-<p>By default the executable is not stripped. To strip it during the installation do</p>
+<p>By default, the executable is not stripped. To strip it during the installation do</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>make <span class="nb">install</span>/strip
 </code></pre></div></div>
@@ -279,9 +284,16 @@ make
 <span class="nb">rm</span> <span class="nt">-rf</span> /usr/local/share/verovio
 </code></pre></div></div>
 
+<h4 id="troubleshooting">Troubleshooting</h4>
 <p>Occasionally there are problems with updates necessary to the <code class="language-plaintext highlighter-rouge">Makefile</code> when compiling a new version of Verovio with make. It may be necessary to clear out the automatically generated cmake files and regenerate them. To do that, run:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-rf</span> CMakeFiles CMakeCache.txt Makefile cmake_install.cmake
+</code></pre></div></div>
+
+<p>Or, when using CMake 3.24 or later, you can simply run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>tools
+cmake ../cmake <span class="nt">--fresh</span>
 </code></pre></div></div>
 
 <h3 id="windows-10">Windows 10</h3>
@@ -317,6 +329,12 @@ nmake <span class="nb">install</span>
   <li>Execute <code class="language-plaintext highlighter-rouge">cmake ../cmake -DNO_PAE_SUPPORT=ON</code> (add <code class="language-plaintext highlighter-rouge">-DCMAKE_GENERATOR_PLATFORM=x64</code> for a x64 solution)</li>
   <li>Open the resulting <code class="language-plaintext highlighter-rouge">Verovio.sln</code> with Visual Studio and build it from there</li>
 </ul>
+
+<h3 id="visual-studio-code">Visual Studio Code</h3>
+
+<p>Verovio contains simple predefined build tasks in the <code class="language-plaintext highlighter-rouge">tasks.json</code> file.</p>
+
+<p>You can build Verovio by pressing <code class="language-plaintext highlighter-rouge">Ctrl+Shift+B</code> / <code class="language-plaintext highlighter-rouge">⇧⌘B</code> or running <strong>Run Build Task</strong> from the global <strong>Terminal</strong> menu.</p>
 
     </div>
 </div>
