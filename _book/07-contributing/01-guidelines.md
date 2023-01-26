@@ -104,6 +104,16 @@ The null pointer value should be written as `NULL`. Boolean values should be wri
 
 Integer numbers should be `int`, or `char` but only when this is clearly appropropriate. The use of `short` is to be avoided unless there are some particular reasons to use it. Variables and class members should not be `unsigned` numbers unless strictly necessary.
 
+We use `int` and not `size_t`, even when working with C++ standard containers. Values such as the one returned by `std::vector::size()` need to be cast to `int` when assigned or compared to variables.
+
+### Loop variable scope and increment
+
+Variables should be made local to loops when possible (C99) and preferably pre-incremented.
+
+```cpp
+for (int i = 0; i < limit; ++i) {}
+```
+
 ### Class, method and member names
 
 All class names must be in upper CamelCase. The internal capitalization follows the MEI one:
