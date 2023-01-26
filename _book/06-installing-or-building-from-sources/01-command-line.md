@@ -138,3 +138,9 @@ By default, humdrum support is turned off in Xcode. To turn in on, you need to u
 * Go into the tools folder of Verovio
 * Execute `cmake ../cmake -DNO_PAE_SUPPORT=ON` (add `-DCMAKE_GENERATOR_PLATFORM=x64` for a x64 solution)
 * Open the resulting `Verovio.sln` with Visual Studio and build it from there
+
+### Visual Studio Code
+
+Verovio contains simple predefined build tasks in the `tasks.json` file.
+
+You can build Verovio by pressing `Ctrl+Shift+B` / `⇧⌘B` or running **Run Build Task** from the global **Terminal** menu.
