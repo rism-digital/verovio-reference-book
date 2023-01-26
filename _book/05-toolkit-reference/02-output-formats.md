@@ -110,7 +110,7 @@ The MEI page-based model is not part of MEI. It was put in place for the develop
 
 Verovio provides a basic MIDI output feature that can be used from the command-line tool or from the JavaScript toolkit. The MIDI output can be written to a file for further processing or for building application with MIDI playback, including in online environments. However, since MIDI is not supported in web-browsers in a standard way, an additional player will be required in such cases.
 
-When a file is loaded in the toolkit only to render a MIDI file, then setting the `--breaks` option to `none` is more efficient because it will avoid the unecessary step of calculating the page layout of the document.
+When a file is loaded in the toolkit only to render a MIDI file, then setting the `--breaks` option to `none` is more efficient because it will avoid the unecessary step of calculating the page layout of the document. The command-line version of the toolkit does this automatically.
 
 #### The MIDI output takes into account:
 
