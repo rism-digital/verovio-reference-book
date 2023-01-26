@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-26T12:14:08+00:00" />
+<meta property="article:published_time" content="2023-01-26T12:47:44+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Coding guidelines" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"This document describes the coding style for the Verovio project for the C++ part of the codebase.","datePublished":"2023-01-26T12:14:08+00:00","dateModified":"2023-01-26T12:14:08+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/guidelines.html"},"image":"https://book.verovio.org/images/card.png","url":"/contributing/guidelines.html","@type":"BlogPosting","headline":"Coding guidelines","@context":"https://schema.org"}</script>
+{"description":"This document describes the coding style for the Verovio project for the C++ part of the codebase.","datePublished":"2023-01-26T12:47:44+00:00","dateModified":"2023-01-26T12:47:44+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/guidelines.html"},"image":"https://book.verovio.org/images/card.png","url":"/contributing/guidelines.html","@type":"BlogPosting","headline":"Coding guidelines","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -130,6 +130,8 @@
 <a class="toc-item toc-subsection" href="#null-and-boolean">Null and boolean</a>
 
 <a class="toc-item toc-subsection" href="#integer-data-types">Integer data types</a>
+
+<a class="toc-item toc-subsection" href="#loop-variable-scope-and-increment">Loop variable scope and increment</a>
 
 <a class="toc-item toc-subsection" href="#class-method-and-member-names">Class, method and member names</a>
 
@@ -265,6 +267,15 @@
 <h3 id="integer-data-types">Integer data types</h3>
 
 <p>Integer numbers should be <code class="language-plaintext highlighter-rouge">int</code>, or <code class="language-plaintext highlighter-rouge">char</code> but only when this is clearly appropropriate. The use of <code class="language-plaintext highlighter-rouge">short</code> is to be avoided unless there are some particular reasons to use it. Variables and class members should not be <code class="language-plaintext highlighter-rouge">unsigned</code> numbers unless strictly necessary.</p>
+
+<p>We use <code class="language-plaintext highlighter-rouge">int</code> and not <code class="language-plaintext highlighter-rouge">size_t</code>, even when working with C++ standard containers. Values such as the one returned by <code class="language-plaintext highlighter-rouge">std::vector::size()</code> need to be cast to <code class="language-plaintext highlighter-rouge">int</code> when assigned or compared to variables.</p>
+
+<h3 id="loop-variable-scope-and-increment">Loop variable scope and increment</h3>
+
+<p>Variables should be made local to loops when possible (C99) and preferably pre-incremented.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div></div>
 
 <h3 id="class-method-and-member-names">Class, method and member names</h3>
 
