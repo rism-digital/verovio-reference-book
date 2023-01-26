@@ -14,7 +14,7 @@ brew install verovio
 
 This also installs the resources and you will be ready to go.
 
-You can also intall the latest development source with: 
+You can also install the latest development source with: 
 
 ```bash
 brew install verovio --HEAD
@@ -22,7 +22,7 @@ brew install verovio --HEAD
 
 ### Building on macOS or Linux
 
-To build the the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
+To build the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
 
 ```bash
 cd tools
@@ -84,7 +84,7 @@ If you use a version locally that is not installed, do not forget to add the `-r
 
 #### Additional building options
 
-By default the executable is not stripped. To strip it during the installation do
+By default, the executable is not stripped. To strip it during the installation do
 
 ```bash
 sudo make install/strip
@@ -127,10 +127,18 @@ rm -f /usr/local/bin/verovio
 rm -rf /usr/local/share/verovio
 ```
 
+#### Troubleshooting
 Occasionally there are problems with updates necessary to the `Makefile` when compiling a new version of Verovio with make. It may be necessary to clear out the automatically generated cmake files and regenerate them. To do that, run:
 
 ```bash
 rm -rf CMakeFiles CMakeCache.txt Makefile cmake_install.cmake
+```
+
+Or, when using CMake 3.24 or later, you can simply run: 
+
+```bash
+cd tools
+cmake ../cmake --fresh
 ```
 
 ### Windows 10
@@ -166,3 +174,9 @@ By default, humdrum support is turned off in Xcode. To turn in on, you need to u
 * Go into the tools folder of Verovio
 * Execute `cmake ../cmake -DNO_PAE_SUPPORT=ON` (add `-DCMAKE_GENERATOR_PLATFORM=x64` for a x64 solution)
 * Open the resulting `Verovio.sln` with Visual Studio and build it from there
+
+### Visual Studio Code
+
+Verovio contains simple predefined build tasks in the `tasks.json` file.
+
+You can build Verovio by pressing `Ctrl+Shift+B` / `⇧⌘B` or running **Run Build Task** from the global **Terminal** menu.
