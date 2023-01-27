@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-26T12:47:44+00:00" />
+<meta property="article:published_time" content="2023-01-27T13:39:23+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Coding guidelines" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"This document describes the coding style for the Verovio project for the C++ part of the codebase.","datePublished":"2023-01-26T12:47:44+00:00","dateModified":"2023-01-26T12:47:44+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/guidelines.html"},"image":"https://book.verovio.org/images/card.png","url":"/contributing/guidelines.html","@type":"BlogPosting","headline":"Coding guidelines","@context":"https://schema.org"}</script>
+{"description":"This document describes the coding style for the Verovio project for the C++ part of the codebase.","datePublished":"2023-01-27T13:39:23+00:00","dateModified":"2023-01-27T13:39:23+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/guidelines.html"},"image":"https://book.verovio.org/images/card.png","url":"/contributing/guidelines.html","@type":"BlogPosting","headline":"Coding guidelines","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -268,7 +268,9 @@
 
 <p>Integer numbers should be <code class="language-plaintext highlighter-rouge">int</code>, or <code class="language-plaintext highlighter-rouge">char</code> but only when this is clearly appropropriate. The use of <code class="language-plaintext highlighter-rouge">short</code> is to be avoided unless there are some particular reasons to use it. Variables and class members should not be <code class="language-plaintext highlighter-rouge">unsigned</code> numbers unless strictly necessary.</p>
 
-<p>We use <code class="language-plaintext highlighter-rouge">int</code> and not <code class="language-plaintext highlighter-rouge">size_t</code>, even when working with C++ standard containers. Values such as the one returned by <code class="language-plaintext highlighter-rouge">std::vector::size()</code> need to be cast to <code class="language-plaintext highlighter-rouge">int</code> when assigned or compared to variables.</p>
+<p>We use <code class="language-plaintext highlighter-rouge">int</code> and not <code class="language-plaintext highlighter-rouge">size_t</code>, even when working with C++ standard containers. Values such as the one returned by <code class="language-plaintext highlighter-rouge">std::vector::size()</code> need to be cast to <code class="language-plaintext highlighter-rouge">int</code> when assigned or compared to variables. However, in cases where the scope is limited to local operations on the container and the use of <code class="language-plaintext highlighter-rouge">int</code> would yield a warning, <code class="language-plaintext highlighter-rouge">size_t</code> is acceptable.</p>
+
+<p>We avoid the use of <code class="language-plaintext highlighter-rouge">auto</code> and prefer explicit typing.</p>
 
 <h3 id="loop-variable-scope-and-increment">Loop variable scope and increment</h3>
 
