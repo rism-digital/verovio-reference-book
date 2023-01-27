@@ -104,7 +104,9 @@ The null pointer value should be written as `NULL`. Boolean values should be wri
 
 Integer numbers should be `int`, or `char` but only when this is clearly appropropriate. The use of `short` is to be avoided unless there are some particular reasons to use it. Variables and class members should not be `unsigned` numbers unless strictly necessary.
 
-We use `int` and not `size_t`, even when working with C++ standard containers. Values such as the one returned by `std::vector::size()` need to be cast to `int` when assigned or compared to variables.
+We use `int` and not `size_t`, even when working with C++ standard containers. Values such as the one returned by `std::vector::size()` need to be cast to `int` when assigned or compared to variables. However, in cases where the scope is limited to local operations on the container and the use of `int` would yield a warning, `size_t` is acceptable.
+
+We avoid the use of `auto` and prefer explicit typing.
 
 ### Loop variable scope and increment
 
