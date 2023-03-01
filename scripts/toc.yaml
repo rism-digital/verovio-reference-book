@@ -162,6 +162,7 @@
 "/toolkit-reference/toolkit-options.html#element-selectors-and-processing": Element
   selectors and processing
 "/toolkit-reference/toolkit-options.html#element-margins": Element margins
+"/toolkit-reference/toolkit-options.html#midi-options": Midi options
 "/toolkit-reference/mei-support.html": MEI supported elements
 "/toolkit-reference/environment-functions.html": Environment functions
 "/toolkit-reference/environment-functions.html#setdefaultresourcepath": SetDefaultResourcePath
@@ -175,6 +176,8 @@
 "/installing-or-building-from-sources/command-line.html#windows-10": Windows 10
 "/installing-or-building-from-sources/command-line.html#xcode": Xcode
 "/installing-or-building-from-sources/command-line.html#visual-studio": Visual Studio
+"/installing-or-building-from-sources/command-line.html#visual-studio-code": Visual
+  Studio Code
 "/installing-or-building-from-sources/javascript-and-webassembly.html": JavaScript
   and WebAssembly
 "/installing-or-building-from-sources/javascript-and-webassembly.html#pre-build-versions": Pre-build
@@ -193,12 +196,17 @@
 "/installing-or-building-from-sources/other-bindings.html": Other bindings
 "/installing-or-building-from-sources/other-bindings.html#java": Java
 "/installing-or-building-from-sources/other-bindings.html#cocoapods": CocoaPods
+"/installing-or-building-from-sources/troubleshooting.html": Troubleshooting
+"/installing-or-building-from-sources/troubleshooting.html#c-compiler-error-on-macos": C-Compiler
+  error on macOS
 "/contributing/guidelines.html": Coding guidelines
 "/contributing/guidelines.html#formatting": Formatting
 "/contributing/guidelines.html#includes-and-forward-declarations": Includes and forward
   declarations
 "/contributing/guidelines.html#null-and-boolean": Null and boolean
 "/contributing/guidelines.html#integer-data-types": Integer data types
+"/contributing/guidelines.html#loop-variable-scope-and-increment": Loop variable scope
+  and increment
 "/contributing/guidelines.html#class-method-and-member-names": Class, method and member
   names
 "/contributing/guidelines.html#comments": Comments
@@ -209,6 +217,6 @@
 "/contributing/workflow.html#what-to-expect-with-an-open-issue": What to expect with
   an open issue
 "/contributing/generate-code-with-libmei.html": Generate code with libMEI
-"/contributing/generate-code-with-libmei.html#running-libmei": Running LibMEI
+"/contributing/generate-code-with-libmei.html#generating-libmei": Generating LibMEI
 "/contributing/generate-code-with-libmei.html#customization": Customization
 "/contributing/adding-smufl-glyphs.html": Adding SMuFL glyphs

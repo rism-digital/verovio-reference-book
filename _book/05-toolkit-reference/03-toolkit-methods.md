@@ -197,22 +197,22 @@ The features are tailored for implementing incipit search.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `options` | `const std::string &` | ∅ | A stringified JSON object with the feature extraction options |
+| `jsonOptions` | `const std::string &` | ∅ | A stringified JSON object with the feature extraction options |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetDescriptiveFeatures(const std::string &options)
+std::string vrv::Toolkit::GetDescriptiveFeatures(const std::string &jsonOptions)
 ```
 
 **Example call**
 
 ```python
-result = toolkit.getDescriptiveFeatures(options)
+result = toolkit.getDescriptiveFeatures(jsonOptions)
 ```
 
-{% include method-doc file="getdescriptivefeatures-options" %}
+{% include method-doc file="getdescriptivefeatures-jsonoptions" %}
 ### GetElementAttr
 
 Return element attributes as a JSON string.
@@ -227,7 +227,7 @@ The attributes returned include the ones not supported by Verovio.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -283,7 +283,7 @@ Return a vector of ID strings of all elements (the notated and the expanded) for
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -328,13 +328,13 @@ Write the humdrum buffer to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -424,7 +424,7 @@ result = toolkit.getMEI(jsonOptions)
 {% include method-doc file="getmei-jsonoptions" %}
 ### GetMIDIValuesForElement
 
-Return MIDI values of the element with the ID (xml:id).
+Return MIDI values of the element with the ID (@xml:id)
 
 RenderToMIDI() must be called prior to using this method.
 
@@ -436,7 +436,7 @@ RenderToMIDI() must be called prior to using this method.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -464,7 +464,7 @@ Return the ID string of the notated (the original) element.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -526,7 +526,7 @@ result = toolkit.getPageCount()
 {% include method-doc file="getpagecount" %}
 ### GetPageWithElement
 
-Return the page on which the element is the ID (xml:id) is rendered.
+Return the page on which the element is the ID (@xml:id) is rendered.
 
 This takes into account the current layout options.
 
@@ -538,7 +538,7 @@ This takes into account the current layout options.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -602,7 +602,7 @@ result = toolkit.getScale()
 {% include method-doc file="getscale" %}
 ### GetTimeForElement
 
-Return the time at which the element is the ID (xml:id) is played.
+Return the time at which the element is the ID (@xml:id) is played.
 
 RenderToMIDI() must be called prior to using this method.
 
@@ -614,7 +614,7 @@ RenderToMIDI() must be called prior to using this method.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -644,7 +644,7 @@ Return scoreTimeOnset, scoreTimeOffset, scoreTimeTiedDuration, realTimeOnsetMill
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -913,13 +913,13 @@ Render a document to MIDI and save it to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -968,13 +968,13 @@ Only the top staff / layer is exported.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1027,14 +1027,14 @@ Render a page to SVG and save it to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
-| `pageNo` | `int` | `1` |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
+| `pageNo` | `int` | `1` | The page to render (1-based) |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1056,13 +1056,13 @@ Render a document to a timemap.
 
 **Returns**
 
-`std::string`
+`std::string` – The timemap as a string
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `jsonOptions` | `const std::string &` | `""` |  |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON objects with the timemap options |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1086,14 +1086,14 @@ Render a document to timemap and save it to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
-| `jsonOptions` | `const std::string &` | `""` |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON objects with the timemap options |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1132,9 +1132,9 @@ toolkit.resetOptions()
 {% include method-doc file="resetoptions" %}
 ### ResetXmlIdSeed
 
-Reset the seed used to generate MEI xml:id attribute values.
+Reset the seed used to generate MEI @xml:id attribute values.
 
-Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.
+Passing 0 will seed the @xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.
 
 **Returns**
 
@@ -1144,7 +1144,7 @@ Passing 0 will seed the xml:id generator with a random (time-based) seed value. 
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `seed` | `int` | ∅ | The seed value for generating the xml:id values (0 for a time-based random seed) |
+| `seed` | `int` | ∅ | The seed value for generating the @xml:id values (0 for a time-based random seed) |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**

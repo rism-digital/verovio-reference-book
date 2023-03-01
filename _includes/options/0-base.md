@@ -7,7 +7,7 @@ See also: [Input formats](/toolkit-reference/input-formats.html) {% endcol %}
 
 See also: [Environment functions](/toolkit-reference/environment-functions.html) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-o, --outfile <string>`</span> {% endcol %}{% col 8 %} Output file name (use &quot;-&quot; as file name for standard output)<br/>(default: "svg") {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-t, --output-to <string>`</span> {% endcol %}{% col 8 %} Select output format to: &quot;mei&quot;, &quot;mei-pb&quot;, &quot;mei-basic&quot;, &quot;svg&quot;, or &quot;midi&quot;<br/>(default: "svg")
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-t, --output-to <string>`</span> {% endcol %}{% col 8 %} Select output format to: &quot;mei&quot;, &quot;mei-pb&quot;, &quot;mei-basic&quot;, &quot;svg&quot;, &quot;midi&quot;, &quot;timemap&quot;, &quot;humdrum&quot; or &quot;pae&quot;<br/>(default: "svg")
 
 See also: [Output formats](/toolkit-reference/output-formats.html) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-p, --page <integer>`</span> {% endcol %}{% col 8 %} Select the page to engrave (default is 1) {% endcol %}
