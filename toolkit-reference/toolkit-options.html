@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-01T13:56:23+00:00" />
+<meta property="article:published_time" content="2023-03-01T13:57:52+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit options" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Command-line parameters JavaScript/Python options","datePublished":"2023-03-01T13:56:23+00:00","dateModified":"2023-03-01T13:56:23+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","headline":"Toolkit options","@context":"https://schema.org"}</script>
+{"description":"Command-line parameters JavaScript/Python options","datePublished":"2023-03-01T13:57:52+00:00","dateModified":"2023-03-01T13:57:52+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-options.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/toolkit-options.html","@type":"BlogPosting","headline":"Toolkit options","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -219,7 +219,7 @@
 </div>
 <div class="row option_row "><div class="col col-md-4"><p><span class="lang1">∅</span><span class="lang2"><code class="language-plaintext highlighter-rouge">-t, --output-to &lt;string&gt;</code></span></p>
 </div>
-<div class="col col-md-8"><p>Select output format to: "mei", "mei-pb", "mei-basic", "svg", or "midi"<br />(default: “svg”)</p>
+<div class="col col-md-8"><p>Select output format to: "mei", "mei-pb", "mei-basic", "svg", "midi", "timemap", "humdrum" or "pae"<br />(default: “svg”)</p>
 
 <p>See also: <a href="/toolkit-reference/output-formats.html">Output formats</a></p>
 </div>
@@ -796,6 +796,11 @@
 <div class="col col-md-8"><p>The thickness of the line used for an octave line<br />(default: 0.2; min: 0.1; max: 1.0)</p>
 </div>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"octaveNoSpanningParentheses":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--octave-no-spanning-parentheses </code></span></p>
+</div>
+<div class="col col-md-8"><p>Do not enclose octaves that are spanning over systems with parentheses.</p>
+</div>
+</div>
 <div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"pedalLineThickness": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--pedal-line-thickness &lt;decimal&gt;</code></span></p>
 </div>
 <div class="col col-md-8"><p>The thickness of the line used for piano pedaling<br />(default: 0.2; min: 0.1; max: 1.0)</p>
@@ -958,6 +963,11 @@
 <div class="col col-md-8"><p>Set the xPath query for selecting &lt;choice&gt; child elements, for example: "./orig"; by default the first child is selected</p>
 </div>
 </div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"loadSelectedMdivOnly":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--load-selected-mdiv-only </code></span></p>
+</div>
+<div class="col col-md-8"><p>Load only the selected mdiv; the content of the other is skipped</p>
+</div>
+</div>
 <div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"mdivAll":  &lt;boolean&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--mdiv-all </code></span></p>
 </div>
 <div class="col col-md-8"><p>Load and render all &lt;mdiv&gt; elements in the MEI files</p>
@@ -1013,6 +1023,11 @@
 <div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginHeader": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-header &lt;decimal&gt;</code></span></p>
 </div>
 <div class="col col-md-8"><p>The margin for header in MEI units<br />(default: 2.0; min: 0.0; max: 24.0)</p>
+</div>
+</div>
+<div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"bottomMarginOctave": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--bottom-margin-octave &lt;decimal&gt;</code></span></p>
+</div>
+<div class="col col-md-8"><p>The margin for octave in MEI units<br />(default: 1.0; min: 0.0; max: 10.0)</p>
 </div>
 </div>
 <div class="row option_row "><div class="col col-md-4"><p><span class="lang1"><code class="language-plaintext highlighter-rouge">"defaultBottomMargin": &lt;decimal&gt;</code></span><span class="lang2"><code class="language-plaintext highlighter-rouge">--default-bottom-margin &lt;decimal&gt;</code></span></p>

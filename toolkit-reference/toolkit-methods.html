@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-01T13:56:23+00:00" />
+<meta property="article:published_time" content="2023-03-01T13:57:52+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","datePublished":"2023-03-01T13:56:23+00:00","dateModified":"2023-03-01T13:56:23+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","headline":"Toolkit methods","@context":"https://schema.org"}</script>
+{"description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","datePublished":"2023-03-01T13:57:52+00:00","dateModified":"2023-03-01T13:57:52+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"image":"https://book.verovio.org/images/card.png","url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","headline":"Toolkit methods","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -503,7 +503,7 @@
       <td>Description</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">options</code></td>
+      <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
       <td>A stringified JSON object with the feature extraction options</td>
@@ -513,12 +513,12 @@
 
 <p><strong>Original header</strong></p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetDescriptiveFeatures</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">options</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">::</span><span class="n">GetDescriptiveFeatures</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getDescriptiveFeatures</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getDescriptiveFeatures</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getelementattr">GetElementAttr</h3>
@@ -545,7 +545,7 @@
       <td><code class="language-plaintext highlighter-rouge">xmlId</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td>the ID (xml:id) of the element being looked for</td>
+      <td>the ID (@xml:id) of the element being looked for</td>
     </tr>
   </tbody>
 </table>
@@ -621,7 +621,7 @@
       <td><code class="language-plaintext highlighter-rouge">xmlId</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td>the ID (xml:id) of the element being looked for</td>
+      <td>the ID (@xml:id) of the element being looked for</td>
     </tr>
   </tbody>
 </table>
@@ -663,7 +663,7 @@
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -679,7 +679,7 @@
       <td><code class="language-plaintext highlighter-rouge">filename</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td> </td>
+      <td>The output filename</td>
     </tr>
   </tbody>
 </table>
@@ -772,7 +772,7 @@
 
 <h3 id="getmidivaluesforelement">GetMIDIValuesForElement</h3>
 
-<p>Return MIDI values of the element with the ID (xml:id).</p>
+<p>Return MIDI values of the element with the ID (@xml:id)</p>
 
 <p>RenderToMIDI() must be called prior to using this method.</p>
 
@@ -794,7 +794,7 @@
       <td><code class="language-plaintext highlighter-rouge">xmlId</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td>the ID (xml:id) of the element being looked for</td>
+      <td>the ID (@xml:id) of the element being looked for</td>
     </tr>
   </tbody>
 </table>
@@ -831,7 +831,7 @@
       <td><code class="language-plaintext highlighter-rouge">xmlId</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td>the ID (xml:id) of the element being looked for</td>
+      <td>the ID (@xml:id) of the element being looked for</td>
     </tr>
   </tbody>
 </table>
@@ -886,7 +886,7 @@
 
 <h3 id="getpagewithelement">GetPageWithElement</h3>
 
-<p>Return the page on which the element is the ID (xml:id) is rendered.</p>
+<p>Return the page on which the element is the ID (@xml:id) is rendered.</p>
 
 <p>This takes into account the current layout options.</p>
 
@@ -908,7 +908,7 @@
       <td><code class="language-plaintext highlighter-rouge">xmlId</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td>the ID (xml:id) of the element being looked for</td>
+      <td>the ID (@xml:id) of the element being looked for</td>
     </tr>
   </tbody>
 </table>
@@ -967,7 +967,7 @@
 
 <h3 id="gettimeforelement">GetTimeForElement</h3>
 
-<p>Return the time at which the element is the ID (xml:id) is played.</p>
+<p>Return the time at which the element is the ID (@xml:id) is played.</p>
 
 <p>RenderToMIDI() must be called prior to using this method.</p>
 
@@ -989,7 +989,7 @@
       <td><code class="language-plaintext highlighter-rouge">xmlId</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td>the ID (xml:id) of the element being looked for</td>
+      <td>the ID (@xml:id) of the element being looked for</td>
     </tr>
   </tbody>
 </table>
@@ -1028,7 +1028,7 @@
       <td><code class="language-plaintext highlighter-rouge">xmlId</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td>the ID (xml:id) of the element being looked for</td>
+      <td>the ID (@xml:id) of the element being looked for</td>
     </tr>
   </tbody>
 </table>
@@ -1353,7 +1353,7 @@
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1369,7 +1369,7 @@
       <td><code class="language-plaintext highlighter-rouge">filename</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td> </td>
+      <td>The output filename</td>
     </tr>
   </tbody>
 </table>
@@ -1415,7 +1415,7 @@
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1431,7 +1431,7 @@
       <td><code class="language-plaintext highlighter-rouge">filename</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td> </td>
+      <td>The output filename</td>
     </tr>
   </tbody>
 </table>
@@ -1498,7 +1498,7 @@
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1514,13 +1514,13 @@
       <td><code class="language-plaintext highlighter-rouge">filename</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td> </td>
+      <td>The output filename</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">pageNo</code></td>
       <td><code class="language-plaintext highlighter-rouge">int</code></td>
       <td><code class="language-plaintext highlighter-rouge">1</code></td>
-      <td> </td>
+      <td>The page to render (1-based)</td>
     </tr>
   </tbody>
 </table>
@@ -1541,7 +1541,7 @@
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">std::string</code></p>
+<p><code class="language-plaintext highlighter-rouge">std::string</code> – The timemap as a string</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1557,7 +1557,7 @@
       <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td><code class="language-plaintext highlighter-rouge">""</code></td>
-      <td> </td>
+      <td>A stringified JSON objects with the timemap options</td>
     </tr>
   </tbody>
 </table>
@@ -1581,7 +1581,7 @@
 
 <p><strong>Returns</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">bool</code></p>
+<p><code class="language-plaintext highlighter-rouge">bool</code> – True if the file was successfully written</p>
 
 <p><strong>Parameters</strong></p>
 
@@ -1597,13 +1597,13 @@
       <td><code class="language-plaintext highlighter-rouge">filename</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td>∅</td>
-      <td> </td>
+      <td>The output filename</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">jsonOptions</code></td>
       <td><code class="language-plaintext highlighter-rouge">const std::string &amp;</code></td>
       <td><code class="language-plaintext highlighter-rouge">""</code></td>
-      <td> </td>
+      <td>A stringified JSON objects with the timemap options</td>
     </tr>
   </tbody>
 </table>
@@ -1638,9 +1638,9 @@
 
 <h3 id="resetxmlidseed">ResetXmlIdSeed</h3>
 
-<p>Reset the seed used to generate MEI xml:id attribute values.</p>
+<p>Reset the seed used to generate MEI @xml:id attribute values.</p>
 
-<p>Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.</p>
+<p>Passing 0 will seed the @xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.</p>
 
 <p><strong>Returns</strong></p>
 
@@ -1660,7 +1660,7 @@
       <td><code class="language-plaintext highlighter-rouge">seed</code></td>
       <td><code class="language-plaintext highlighter-rouge">int</code></td>
       <td>∅</td>
-      <td>The seed value for generating the xml:id values (0 for a time-based random seed)</td>
+      <td>The seed value for generating the @xml:id values (0 for a time-based random seed)</td>
     </tr>
   </tbody>
 </table>
