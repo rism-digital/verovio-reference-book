@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-27T13:39:23+00:00" />
+<meta property="article:published_time" content="2023-03-01T13:56:23+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Generate code with libMEI" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Verovio uses a forked version of LibMEI, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the ./libmei directory and the LibMEI repository does not need to be cloned for building Verovio.","datePublished":"2023-01-27T13:39:23+00:00","dateModified":"2023-01-27T13:39:23+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/generate-code-with-libmei.html"},"image":"https://book.verovio.org/images/card.png","url":"/contributing/generate-code-with-libmei.html","@type":"BlogPosting","headline":"Generate code with libMEI","@context":"https://schema.org"}</script>
+{"description":"Verovio uses a forked version of LibMEI, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the ./libmei directory and the LibMEI repository does not need to be cloned for building Verovio.","datePublished":"2023-03-01T13:56:23+00:00","dateModified":"2023-03-01T13:56:23+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/generate-code-with-libmei.html"},"image":"https://book.verovio.org/images/card.png","url":"/contributing/generate-code-with-libmei.html","@type":"BlogPosting","headline":"Generate code with libMEI","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -129,7 +129,7 @@
     
         
         
-<a class="toc-item toc-subsection" href="#running-libmei">Running LibMEI</a>
+<a class="toc-item toc-subsection" href="#generating-libmei">Generating LibMEI</a>
 
 <a class="toc-item toc-subsection" href="#customization">Customization</a>
 
@@ -161,24 +161,22 @@
         
         
         <h2>Generate code with libMEI</h2>
-        <p>Verovio uses a <a href="https://github.com/rism-digital/libmei">forked version</a> of <a href="https://github.com/DDMAL/libmei">LibMEI</a>, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the <code class="language-plaintext highlighter-rouge">./libmei</code> directory and the LibMEI repository does not need to be cloned for building Verovio.</p>
+        <p>Verovio uses a forked version of <a href="https://github.com/DDMAL/libmei">LibMEI</a>, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the <code class="language-plaintext highlighter-rouge">./libmei</code> directory and the LibMEI repository does not need to be cloned for building Verovio.</p>
 
-<p>Whenever the MEI schema is modified, this code needs to be re-generated in order to integrate these changes. However, since Verovio implements only a small subset of the MEI schema, this really needs to be done only for the changes in the schema that touch features supported by Verovio. This means that the code within the <code class="language-plaintext highlighter-rouge">./libmei</code> directory should never be edited by hand because any change will be overwritten by the LibMEI output when the code generated from the schema needs to be updated and LibMEI is run again.</p>
+<p>Whenever the MEI schema is modified, this code needs to be re-generated in order to integrate these changes. However, since Verovio implements only a small subset of the MEI schema, this really needs to be done only for the changes in the schema that touch features supported by Verovio. This means that the code within the <code class="language-plaintext highlighter-rouge">./libmei/dist</code> directory should never be edited by hand because any change will be overwritten by the LibMEI output when the code generated from the schema needs to be updated and LibMEI is run again.</p>
 
-<h3 id="running-libmei">Running LibMEI</h3>
+<h3 id="generating-libmei">Generating LibMEI</h3>
 
-<p>In order to update to code generated with LibMEI, you need to clone the <a href="https://github.com/rism-digital/libmei">forked version</a> of LibMEI.</p>
+<p>You can regenerate the LibMEI code with a compiled ODD as input.</p>
 
-<p>LibMEI takes a compiled ODD as input. You need to run, from the LibMEI directory:</p>
+<p>Go to the <code class="language-plaintext highlighter-rouge">./libmei/tools</code> directory and run:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python tools/parseschema2.py <span class="nt">-l</span> vrv <span class="nt">-o</span> /path/to/the/verovio/directory <span class="nt">-i</span> tools/includes/vrv mei/develop/mei-verovio_compiled.odd
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python parseschema2.py <span class="nt">-c</span> config.yml ../mei/develop/mei-verovio_compiled.odd
 </code></pre></div></div>
-
-<p>You need to set to option <code class="language-plaintext highlighter-rouge">-o</code> to point to the Verovio directory where the <code class="language-plaintext highlighter-rouge">./libmei</code> files will be written.</p>
 
 <h3 id="customization">Customization</h3>
 
-<p>Verovio currently uses an MEI customization that added or modified a few elements. It is defined in the <code class="language-plaintext highlighter-rouge">./mei/develop/mei-verovio.xml</code> file. If you want to makes changes to it, you can make them there. You will need to re-generate the <code class="language-plaintext highlighter-rouge">./mei/develop/mei-verovio_compiled.odd</code> ODD file. This can be done using the Edirom <a href="https://meigarage.edirom.de/">MEI Garage</a>. Alternatively, you can also use the MEI command-line script. To do so, you will need to a clone of the <a href="https://github.com/music-encoding/music-encoding">MEI</a> repository, copy your customization file (e.g., <code class="language-plaintext highlighter-rouge">mei-verovio.xml</code>) into it and do:</p>
+<p>Verovio currently uses an MEI customization that has added or modified a few elements. It is defined in the file <code class="language-plaintext highlighter-rouge">./libmei/mei/develop/mei-verovio.xml</code>. If you want to make changes to it, you can make them there. You will need to regenerate the ODD file <code class="language-plaintext highlighter-rouge">./libmei/mei/develop/mei-verovio_compiled.odd</code>. This can be done with the Edirom <a href="https://meigarage.edirom.de/">MEI Garage</a>. Alternatively, you can also use the MEI command line script. To do so, you need to create a clone of the <a href="https://github.com/music-encoding/music-encoding">MEI</a> repository, copy your customization file (e.g., <code class="language-plaintext highlighter-rouge">mei-verovio.xml</code>) into it and do:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ant init
 ant <span class="nt">-lib</span> lib/saxon/saxon9he.jar <span class="nt">-Dcustomization</span>.path<span class="o">=</span>mei-verovio.xml
