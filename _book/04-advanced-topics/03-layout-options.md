@@ -54,6 +54,12 @@ examples:
 
 ---
 
+### Output layout
+
+By default, Verovio generates an output where the content is organized in pages, which size can be changed with the `--page-height` and `--page-width` options. The content of the music will laid out on one or more pages. It is possible to adjust the option `--breaks` to control how the layout is organized, namely where system and page breaks occur.
+
+By setting the option `--breaks` to `none`, no system and page breaks will occur, and Verovio will output a single system with the entire music content. With this option, the page width will be adjusted (e.g., increased) automatically to ensure that it can contains the entire content. Be aware that this can produce very large files, regarding both the dimension of the SVG image and the actual file size.
+
 ### Staff and system spacing
 
 Staff and system spacing in Verovio is controlled by two options, namely `--spacing-staff` and `--spacing-system`. Their value is given in MEI units and the default value is `12` units. Since a five line staff is 8 units, it means the default spacing between two staves will be one and a half staff height, and an additional equivalent system spacing between two systems.
