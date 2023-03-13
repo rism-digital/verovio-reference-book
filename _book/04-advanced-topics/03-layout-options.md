@@ -2,6 +2,31 @@
 title: "Layout options"
 
 examples:
+    - name: spacing-default
+      url: https://kern.humdrum.org/cgi-bin/ksdata?l=users/craig/classical/bach/371chorales&file=chor010.krn&f=kern
+      options:
+        breaks: 'auto'
+        pageHeight: 300
+        adjustPageHeight: True
+
+    - name: spacing-adjusted-01
+      url: https://kern.humdrum.org/cgi-bin/ksdata?l=users/craig/classical/bach/371chorales&file=chor010.krn&f=kern
+      options:
+        breaks: 'auto'
+        pageHeight: 300
+        spacingLinear: 0.03
+        spacingNonLinear: 1.0
+        adjustPageHeight: True
+
+    - name: spacing-adjusted-02
+      url: https://kern.humdrum.org/cgi-bin/ksdata?l=users/craig/classical/bach/371chorales&file=chor010.krn&f=kern
+      options:
+        breaks: 'auto'
+        pageHeight: 300
+        spacingLinear: 1.0
+        spacingNonLinear: 0.35
+        adjustPageHeight: True
+
     - name: default
       test-suite: score/score-014.mei
       options:
@@ -59,6 +84,20 @@ examples:
 By default, Verovio generates an output where the content is organized in pages, which size can be changed with the `--page-height` and `--page-width` options. The content of the music will laid out on one or more pages. It is possible to adjust the option `--breaks` to control how the layout is organized, namely where system and page breaks occur.
 
 By setting the option `--breaks` to `none`, no system and page breaks will occur, and Verovio will output a single system with the entire music content. With this option, the page width will be adjusted (e.g., increased) automatically to ensure that it can contain the entire content. Be aware that this can produce very large files, regarding both the dimension of the SVG image and the actual file size.
+
+### Content spacing
+
+The spacing of the rhythmic values (notes and rests) is adjusted based on their durations, each value taking a bit more space than the next shorter value. This is the default output: 
+
+{% include music-notation-only example="spacing-default" class="centered" %}
+
+The spacing can be controlled with `--spacing-linear` and `--spacing-non-linear` options. In general, if one of them is increased, the other should be decrease not to have an exaggeratedly expanded - or the other way around. The default values are `0.25` for `--spacing-linear` and `0.6` for `--spacing-non-linear`. If you want all measures to have the same width, which means making no spacing difference according to the duration of the notes and rests, the `--spacing-non-linear` value needs to be set to `1.0`. This is what Verovio will produce together with `--spacing-linear` set to `0.03`: 
+
+{% include music-notation-only example="spacing-adjusted-01" class="centered" %}
+
+Alternatively, if `--spacing-non-linear` is reduced to `0.35` and `--spacing-linear` increased to `1.0`, there will be less difference in spacing between notes of different durations: 
+
+{% include music-notation-only example="spacing-adjusted-02" class="centered" %}
 
 ### Staff and system spacing
 

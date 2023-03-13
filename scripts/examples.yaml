@@ -84,6 +84,40 @@
   svg-example-file: examples/04-advanced-topics/02-controlling-the-svg-output/units.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: spacing-default
+  url: https://kern.humdrum.org/cgi-bin/ksdata?l=users/craig/classical/bach/371chorales&file=chor010.krn&f=kern
+  options:
+    breaks: auto
+    pageHeight: 300
+    adjustPageHeight: true
+  mei-example-file: examples/04-advanced-topics/03-layout-options/spacing-default.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/spacing-default.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: spacing-adjusted-01
+  url: https://kern.humdrum.org/cgi-bin/ksdata?l=users/craig/classical/bach/371chorales&file=chor010.krn&f=kern
+  options:
+    breaks: auto
+    pageHeight: 300
+    spacingLinear: 0.03
+    spacingNonLinear: 1.0
+    adjustPageHeight: true
+  mei-example-file: examples/04-advanced-topics/03-layout-options/spacing-adjusted-01.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/spacing-adjusted-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: spacing-adjusted-02
+  url: https://kern.humdrum.org/cgi-bin/ksdata?l=users/craig/classical/bach/371chorales&file=chor010.krn&f=kern
+  options:
+    breaks: auto
+    pageHeight: 300
+    spacingLinear: 1.0
+    spacingNonLinear: 0.35
+    adjustPageHeight: true
+  mei-example-file: examples/04-advanced-topics/03-layout-options/spacing-adjusted-02.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/spacing-adjusted-02.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: default
   test-suite: score/score-014.mei
   options:
