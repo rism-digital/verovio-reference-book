@@ -158,10 +158,6 @@ The table below gives an indication of values for the MEI unit in Verovio corres
 | 4.625 | 8 | 3.7 | Full score |
 {: .table .table-condensed .table-sm .text-xsmall}
 
-{% aside .warning %}
-Up to Verovio 3.13 only integer MEI units are supported.
-{% endaside %}
-
 The example below shows the same file as above with the default A4 page size but with a unit value of `6.0`. More music is rendered on a page because the staff size is smaller.
 
 {% include music-notation-only example="units" %}
