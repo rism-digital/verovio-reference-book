@@ -69,8 +69,12 @@ See also: [Vertical justification](/advanced-topics/layout-options.html#vertical
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingBraceGroup": <integer>`</span><span class="lang2">`--spacing-brace-group <integer>`</span> {% endcol %}{% col 8 %} Minimum space between staves inside a braced group in MEI units<br/>(default: 12; min: 0; max: 48) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingBracketGroup": <integer>`</span><span class="lang2">`--spacing-bracket-group <integer>`</span> {% endcol %}{% col 8 %} Minimum space between staves inside a bracketed group in MEI units<br/>(default: 12; min: 0; max: 48) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingDurDetection":  <boolean>`</span><span class="lang2">`--spacing-dur-detection `</span> {% endcol %}{% col 8 %} Detect long duration for adjusting spacing {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingLinear": <decimal>`</span><span class="lang2">`--spacing-linear <decimal>`</span> {% endcol %}{% col 8 %} Specify the linear spacing factor<br/>(default: 0.25; min: 0.0; max: 1.0) {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingNonLinear": <decimal>`</span><span class="lang2">`--spacing-non-linear <decimal>`</span> {% endcol %}{% col 8 %} Specify the non-linear spacing factor<br/>(default: 0.6; min: 0.0; max: 1.0) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingLinear": <decimal>`</span><span class="lang2">`--spacing-linear <decimal>`</span> {% endcol %}{% col 8 %} Specify the linear spacing factor<br/>(default: 0.25; min: 0.0; max: 1.0)
+
+See also: [Content spacing](/advanced-topics/layout-options.html#content-spacing) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingNonLinear": <decimal>`</span><span class="lang2">`--spacing-non-linear <decimal>`</span> {% endcol %}{% col 8 %} Specify the non-linear spacing factor<br/>(default: 0.6; min: 0.0; max: 1.0)
+
+See also: [Content spacing](/advanced-topics/layout-options.html#content-spacing) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"spacingStaff": <integer>`</span><span class="lang2">`--spacing-staff <integer>`</span> {% endcol %}{% col 8 %} The staff minimal spacing in MEI units<br/>(default: 12; min: 0; max: 48)
 
 See also: [Staff and system spacing](/advanced-topics/layout-options.html#staff-and-system-spacing) {% endcol %}

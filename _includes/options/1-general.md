@@ -2,7 +2,9 @@
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"adjustPageWidth":  <boolean>`</span><span class="lang2">`--adjust-page-width `</span> {% endcol %}{% col 8 %} Adjust the page width to the width of the content
 
 {% include options/1-general/adjustPageWidth.md %} {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"breaks": <string>`</span><span class="lang2">`--breaks <string>`</span> {% endcol %}{% col 8 %} Define page and system breaks layout<br/>(default: "auto"; other values: ['none', 'auto', 'line', 'smart', 'encoded']) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"breaks": <string>`</span><span class="lang2">`--breaks <string>`</span> {% endcol %}{% col 8 %} Define page and system breaks layout<br/>(default: "auto"; other values: ['none', 'auto', 'line', 'smart', 'encoded'])
+
+See also: [Output layout](/advanced-topics/layout-options.html#output-layout) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"breaksSmartSb": <decimal>`</span><span class="lang2">`--breaks-smart-sb <decimal>`</span> {% endcol %}{% col 8 %} In smart breaks mode, the portion of system width usage at which an encoded sb will be used<br/>(default: 0.66; min: 0.0; max: 1.0) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"condense": <string>`</span><span class="lang2">`--condense <string>`</span> {% endcol %}{% col 8 %} Control condensed score layout<br/>(default: "auto"; other values: ['none', 'auto', 'encoded']) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"condenseFirstPage":  <boolean>`</span><span class="lang2">`--condense-first-page `</span> {% endcol %}{% col 8 %} When condensing a score also condense the first page {% endcol %}

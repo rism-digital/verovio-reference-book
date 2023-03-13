@@ -4,6 +4,8 @@ title: "Toolkit options"
 # If an option is documented in a section, add the link here
 # The script scripts/generate-options.py needs to be run for the links to be updated
 see-also:
+    breaks:
+      - "/advanced-topics/layout-options.html#output-layout"
     font:
       - "/advanced-topics/smufl.html"
     inputFrom:
@@ -41,6 +43,10 @@ see-also:
       - "/advanced-topics/controlling-the-svg-output.html#scaling"
     smuflTextFont:
       - "/advanced-topics/smufl.html#music-symbols-in-text"
+    spacingLinear:
+      - "/advanced-topics/layout-options.html#content-spacing"
+    spacingNonLinear:
+      - "/advanced-topics/layout-options.html#content-spacing"
     spacingStaff:
       - "/advanced-topics/layout-options.html#staff-and-system-spacing"
     spacingSystem:
