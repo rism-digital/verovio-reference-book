@@ -18,6 +18,8 @@ PointerAlignment: Right
 
 The simplest way to fullfil the Verovio coding style is to use a clang-format tool and to apply the style defined in the `.clang-format` file available in the project root directory.
 
+Short if-statements should be as single line only with single boolean evaluation.
+
 #### How to install clang-format on macOS
 
 An easy way to install clang-format on macOS computers is to use [Hombrew](http://brew.sh). Type this command in the terminal to install:
