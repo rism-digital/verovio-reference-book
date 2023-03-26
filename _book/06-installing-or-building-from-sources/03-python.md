@@ -20,14 +20,7 @@ A previous version can be installed with:
  pip install verovio==3.2.0
  ```
 
-For all platforms or architectures for which a pre-build version is not available in the PyPi repository, a source distribution is available. It can be installed with the same command as above. This will automatically trigger the compilation of the package. You can also build and install by passing a path to a local repository with:
-
-```bash
-pip install <path_to_local_repo>
-```
-
-Note that installing directly from GitHub with `pip install git+https://github.com/rism-digital/verovio` will not work.
-
+For all platforms or architectures for which a pre-build version is not available in the PyPi repository, a source distribution is available. It can be installed with the same command as above. This will automatically trigger the compilation of the package.
 
 ### Basic usage of the toolkit
 
@@ -115,6 +108,16 @@ For building it with one or more specific options (e.g., without Plaine & Easie 
 ```bash
 python setup.py build_ext --inplace --define NO_PAE_SUPPORT
 ```
+
+#### Building with pip
+
+You can build and install with `pip` by passing a path to a local repository with:
+
+```bash
+pip install <path_to_local_repo>
+```
+
+Note that installing directly from GitHub with `pip install git+https://github.com/rism-digital/verovio` will not work.
 
 #### Building a Python wheel locally
 
