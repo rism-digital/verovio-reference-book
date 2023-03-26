@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-17T09:52:47+00:00" />
+<meta property="article:published_time" content="2023-03-26T11:31:50+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Python" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Pre-build versions","datePublished":"2023-03-17T09:52:47+00:00","dateModified":"2023-03-17T09:52:47+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"image":"https://book.verovio.org/images/card.png","url":"/installing-or-building-from-sources/python.html","@type":"BlogPosting","headline":"Python","@context":"https://schema.org"}</script>
+{"description":"Pre-build versions","datePublished":"2023-03-26T11:31:50+00:00","dateModified":"2023-03-26T11:31:50+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"image":"https://book.verovio.org/images/card.png","url":"/installing-or-building-from-sources/python.html","@type":"BlogPosting","headline":"Python","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -184,7 +184,12 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pip <span class="nb">install </span><span class="nv">verovio</span><span class="o">==</span>3.2.0
 </code></pre></div></div>
 
-<p>For all platforms or architectures for which a pre-build version is not available in the PyPi repository, a source distribution is available. It can be installed with the same command as above. This will automatically trigger the compilation of the package.</p>
+<p>For all platforms or architectures for which a pre-build version is not available in the PyPi repository, a source distribution is available. It can be installed with the same command as above. This will automatically trigger the compilation of the package. You can also build and install by passing a path to a local repository with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> &lt;path_to_local_repo&gt;
+</code></pre></div></div>
+
+<p>Note that installing directly from GitHub with <code class="language-plaintext highlighter-rouge">pip install git+https://github.com/rism-digital/verovio</code> will not work.</p>
 
 <h3 id="basic-usage-of-the-toolkit">Basic usage of the toolkit</h3>
 
