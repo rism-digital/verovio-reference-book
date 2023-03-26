@@ -20,7 +20,14 @@ A previous version can be installed with:
  pip install verovio==3.2.0
  ```
 
-For all platforms or architectures for which a pre-build version is not available in the PyPi repository, a source distribution is available. It can be installed with the same command as above. This will automatically trigger the compilation of the package.
+For all platforms or architectures for which a pre-build version is not available in the PyPi repository, a source distribution is available. It can be installed with the same command as above. This will automatically trigger the compilation of the package. You can also build and install by passing a path to a local repository with:
+
+```bash
+pip install <path_to_local_repo>
+```
+
+Note that installing directly from GitHub with `pip install git+https://github.com/rism-digital/verovio` will not work.
+
 
 ### Basic usage of the toolkit
 
