@@ -111,13 +111,13 @@ python setup.py build_ext --inplace --define NO_PAE_SUPPORT
 
 #### Building with pip
 
-You can build and install with `pip` by passing a path to a local repository with:
+You can build and install with `pip` directly from the repository with:
 
 ```bash
-pip install <path_to_local_repo>
+pip install --global-option=build_ext git+https://github.com/rism-digital/verovio
 ```
 
-Note that installing directly from GitHub with `pip install git+https://github.com/rism-digital/verovio` will not work.
+You may specify the branch, commit hash, or tag name after an `@` at the end of the Git url.
 
 #### Building a Python wheel locally
 
