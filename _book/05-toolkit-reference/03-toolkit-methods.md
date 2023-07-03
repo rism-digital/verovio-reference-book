@@ -480,6 +480,27 @@ result = toolkit.getNotatedIdForElement(xmlId)
 ```
 
 {% include method-doc file="getnotatedidforelement-xmlid" %}
+### GetOptionUsageString
+
+Get all usage for all option categories as string.
+
+**Returns**
+
+`std::string`
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::GetOptionUsageString() const
+```
+
+**Example call**
+
+```python
+result = toolkit.getOptionUsageString()
+```
+
+{% include method-doc file="getoptionusagestring" %}
 ### GetOptions
 
 Return a dictionary of all the options with their current value.
@@ -671,7 +692,7 @@ Return the version number.
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetVersion()
+std::string vrv::Toolkit::GetVersion() const
 ```
 
 **Example call**
@@ -800,6 +821,35 @@ result = toolkit.loadZipDataBuffer(data, length)
 ```
 
 {% include method-doc file="loadzipdatabuffer-data-length" %}
+### PrintOptionUsage
+
+Print formatted option usage for specific category (with max/min/default values) to output stream.
+
+**Returns**
+
+`void`
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `category` | `const std::string &` | ∅ |  |
+| `output` | `std::ostream &` | ∅ |  |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+void vrv::Toolkit::PrintOptionUsage(const std::string &category, std::ostream &output) const
+```
+
+**Example call**
+
+```python
+toolkit.printOptionUsage(category, output)
+```
+
+{% include method-doc file="printoptionusage-category-output" %}
 ### RedoLayout
 
 Redo the layout of the loaded data.
@@ -884,6 +934,57 @@ result = toolkit.renderData(data, jsonOptions)
 ```
 
 {% include method-doc file="renderdata-data-jsonoptions" %}
+### RenderToExpansionMap
+
+Render a document's expansionMap, if existing.
+
+**Returns**
+
+`std::string` – The expansionMap as a string
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::RenderToExpansionMap()
+```
+
+**Example call**
+
+```python
+result = toolkit.renderToExpansionMap()
+```
+
+{% include method-doc file="rendertoexpansionmap" %}
+### RenderToExpansionMapFile
+
+Render a document's expansionMap and save it to a file.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
+**Returns**
+
+`bool`
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `filename` | `const std::string &` | ∅ | The output filename |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+bool vrv::Toolkit::RenderToExpansionMapFile(const std::string &filename)
+```
+
+**Example call**
+
+```python
+result = toolkit.renderToExpansionMapFile(filename)
+```
+
+{% include method-doc file="rendertoexpansionmapfile-filename" %}
 ### RenderToMIDI
 
 Render the document to MIDI.
