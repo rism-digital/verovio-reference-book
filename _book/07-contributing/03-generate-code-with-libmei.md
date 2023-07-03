@@ -10,10 +10,10 @@ Whenever the MEI schema is modified, this code needs to be re-generated in order
 
 You can regenerate the LibMEI code with a compiled ODD as input.
 
-Go to the `./libmei/tools` directory and run:
+Go to the `./libmei` directory and run:
 
 ```bash
-python parseschema2.py -c config.yml ../mei/develop/mei-verovio_compiled.odd
+python tools/parseschema2.py -c config.yml ./mei/develop/mei-verovio_compiled.odd
 ```
 
 ### Customization
