@@ -55,7 +55,7 @@ In this section we have explored Verovio's default options, and looked at how to
 ```html
 <html>
   <head>
-    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+    <script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
           verovio.module.onRuntimeInitialized = async _ => {

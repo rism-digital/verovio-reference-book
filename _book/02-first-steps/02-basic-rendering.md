@@ -38,7 +38,7 @@ At the end of this section, you should have a page with some rendered music nota
 ```html
 <html>
   <head>
-    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+    <script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
           verovio.module.onRuntimeInitialized = async _ => {
