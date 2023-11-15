@@ -77,6 +77,17 @@ examples:
         spacingStaff: 10
         spacingSystem: 10
 
+    - name: incipit
+      test-suite: score/score-004.mei
+      options:
+        adjustPageHeight: True
+        breaks: 'auto'
+        footer: 'none'
+        header: 'none'
+        spacingStaff: 10
+        pageHeight: 100
+        pageWidth: 1500
+
 ---
 
 ### Output layout
@@ -148,3 +159,9 @@ Setting one of these options to `0.0` will result in no justification space adde
 Adding `--justification-bracket-group 0.2` with reduce the space between the staves in the bracket group, even though still changing it be cause the value is not `0.0`. The spacing between the other staves and the systems is consequently increased.
 
 {% include music-notation-only example="justification-bracket-group-0-5" class="centered" %}
+
+### Generating single-system incipits
+
+Generating single-system incipits can be done with the options `--page-height 100` and `--adjust-page-height` enabled. This way, the first page will contain only the first system of music. Its width can be set as desired with `--page-width`, here with `1500`:
+
+{% include music-notation-only example="incipit" %}

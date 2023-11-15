@@ -180,6 +180,20 @@
   svg-example-file: examples/04-advanced-topics/03-layout-options/justification-bracket-group-0-5.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: incipit
+  test-suite: score/score-004.mei
+  options:
+    adjustPageHeight: true
+    breaks: auto
+    footer: none
+    header: none
+    spacingStaff: 10
+    pageHeight: 100
+    pageWidth: 1500
+  mei-example-file: examples/04-advanced-topics/03-layout-options/incipit.mei
+  svg-example-file: examples/04-advanced-topics/03-layout-options/incipit.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: ex-01
   test-suite: dynam/dynam-003.mei
   options:

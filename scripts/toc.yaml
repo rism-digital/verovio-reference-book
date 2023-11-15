@@ -75,6 +75,8 @@
 "/advanced-topics/layout-options.html#staff-and-system-spacing": Staff and system
   spacing
 "/advanced-topics/layout-options.html#vertical-justification": Vertical justification
+"/advanced-topics/layout-options.html#generating-single-system-incipits": Generating
+  single-system incipits
 "/advanced-topics/smufl.html": SMuFL fonts
 "/advanced-topics/smufl.html#music-symbols-in-text": Music symbols in text
 "/advanced-topics/transposition.html": Transposition
@@ -121,6 +123,7 @@
 "/toolkit-reference/toolkit-methods.html#getmei": GetMEI
 "/toolkit-reference/toolkit-methods.html#getmidivaluesforelement": GetMIDIValuesForElement
 "/toolkit-reference/toolkit-methods.html#getnotatedidforelement": GetNotatedIdForElement
+"/toolkit-reference/toolkit-methods.html#getoptionusagestring": GetOptionUsageString
 "/toolkit-reference/toolkit-methods.html#getoptions": GetOptions
 "/toolkit-reference/toolkit-methods.html#getpagecount": GetPageCount
 "/toolkit-reference/toolkit-methods.html#getpagewithelement": GetPageWithElement
@@ -133,9 +136,12 @@
 "/toolkit-reference/toolkit-methods.html#loadfile": LoadFile
 "/toolkit-reference/toolkit-methods.html#loadzipdatabase64": LoadZipDataBase64
 "/toolkit-reference/toolkit-methods.html#loadzipdatabuffer": LoadZipDataBuffer
+"/toolkit-reference/toolkit-methods.html#printoptionusage": PrintOptionUsage
 "/toolkit-reference/toolkit-methods.html#redolayout": RedoLayout
 "/toolkit-reference/toolkit-methods.html#redopagepitchposlayout": RedoPagePitchPosLayout
 "/toolkit-reference/toolkit-methods.html#renderdata": RenderData
+"/toolkit-reference/toolkit-methods.html#rendertoexpansionmap": RenderToExpansionMap
+"/toolkit-reference/toolkit-methods.html#rendertoexpansionmapfile": RenderToExpansionMapFile
 "/toolkit-reference/toolkit-methods.html#rendertomidi": RenderToMIDI
 "/toolkit-reference/toolkit-methods.html#rendertomidifile": RenderToMIDIFile
 "/toolkit-reference/toolkit-methods.html#rendertopae": RenderToPAE
