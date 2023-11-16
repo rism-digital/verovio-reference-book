@@ -119,7 +119,7 @@ pip install --global-option=build_ext git+https://github.com/rism-digital/verovi
 
 You may specify the branch, commit hash, or tag name after an `@` at the end of the Git url.
 
-If you have a local copy of the repository just run.
+If you have a local copy of the repository just run:
 
 ```bash
 pip install <path_to_local_repo>
