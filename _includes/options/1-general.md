@@ -20,10 +20,6 @@ See also: [Output layout](/advanced-topics/layout-options.html#output-layout) {%
 
 See also: [Vertical justification](/advanced-topics/layout-options.html#vertical-justification) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"landscape":  <boolean>`</span><span class="lang2">`--landscape `</span> {% endcol %}{% col 8 %} Swap the values for page height and page width {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"ligatureAsBracket":  <boolean>`</span><span class="lang2">`--ligature-as-bracket `</span> {% endcol %}{% col 8 %} Render ligatures as bracket instead of original notation {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"mensuralToMeasure":  <boolean>`</span><span class="lang2">`--mensural-to-measure `</span> {% endcol %}{% col 8 %} Convert mensural sections to measure-based MEI
-
-See also: [Ligatures](/advanced-topics/mensural-notation.html#ligatures) \| [Layout](/advanced-topics/mensural-notation.html#layout) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"minLastJustification": <decimal>`</span><span class="lang2">`--min-last-justification <decimal>`</span> {% endcol %}{% col 8 %} The last system is only justified if the unjustified width is greater than this percent<br/>(default: 0.8; min: 0.0; max: 1.0) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"mmOutput":  <boolean>`</span><span class="lang2">`--mm-output `</span> {% endcol %}{% col 8 %} Specify that the output in the SVG is given in mm (default is px) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"moveScoreDefinitionToStaff":  <boolean>`</span><span class="lang2">`--move-score-definition-to-staff `</span> {% endcol %}{% col 8 %} Move score definition (clef, keySig, meterSig, etc.) from scoreDef to staffDef {% endcol %}
