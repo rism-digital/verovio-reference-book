@@ -62,7 +62,7 @@ Running `./main` should display the Verovio version.
 To use Verovio with any language that supports a plain C function interface you will first need to build Verovio as a library.
 The compiled library (`libverovio.so`/`verovio.dll`) will contain callable C symbols. These wrapper symbols are defined in `./tools/c_wrapper.h`
 
-## Complete example in C
+#### Example in C
 
 To run the `main.c` example you can use gcc to compile the example and link to the pre-built library.
 
@@ -70,7 +70,7 @@ To run the `main.c` example you can use gcc to compile the example and link to t
 gcc main.c -o main -L../../tools -lverovio
 ```
 
-Run (without changing your default LD LIBRARY PATH):
+Run (without changing your default `LD_LIBRARY_PATH`):
 
 ```sh
 LD_LIBRARY_PATH=../../tools ./main
