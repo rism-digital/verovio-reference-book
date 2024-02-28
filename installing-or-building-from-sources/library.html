@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-28T18:13:03+00:00" />
+<meta property="article:published_time" content="2024-02-28T18:45:07+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Using as a library" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Verovio can be built and use as C++ or C library.","image":"https://book.verovio.org/images/card.png","headline":"Using as a library","dateModified":"2024-02-28T18:13:03+00:00","datePublished":"2024-02-28T18:13:03+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/library.html"},"url":"/installing-or-building-from-sources/library.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"description":"Verovio can be built and use as C++ or C library.","image":"https://book.verovio.org/images/card.png","headline":"Using as a library","dateModified":"2024-02-28T18:45:07+00:00","datePublished":"2024-02-28T18:45:07+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/library.html"},"url":"/installing-or-building-from-sources/library.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -132,13 +132,7 @@
     
         
         
-<a class="toc-item toc-subsection" href="#building-libverovioso-on-linux-or-libveroviodylib-on-macos">Building libverovio.so on Linux or libverovio.dylib on macOS</a>
-
-<a class="toc-item toc-subsection" href="#building-veroviodll-on-windows-using-microsoft-visual-studio-build-tools-2022">Building verovio.dll on Windows using Microsoft Visual Studio Build Tools 2022</a>
-
 <a class="toc-item toc-subsection" href="#examples">Examples</a>
-
-<a class="toc-item toc-subsection" href="#c-function-interface">C function interface</a>
 
     
 
@@ -173,7 +167,7 @@
         <h2>Using as a library</h2>
         <p>Verovio can be built and use as C++ or C library.</p>
 
-<h3 id="building-libverovioso-on-linux-or-libveroviodylib-on-macos">Building libverovio.so on Linux or libverovio.dylib on macOS</h3>
+<h4 id="building-libverovioso-on-linux-or-libveroviodylib-on-macos">Building libverovio.so on Linux or libverovio.dylib on macOS</h4>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>tools
 cmake <span class="nt">-DBUILD_AS_LIBRARY</span><span class="o">=</span>ON <span class="nb">.</span>
@@ -182,7 +176,7 @@ make
 
 <p>Running <code class="language-plaintext highlighter-rouge">sudo make install</code> will copy the library and the headers in <code class="language-plaintext highlighter-rouge">/usr/local/lib</code> and <code class="language-plaintext highlighter-rouge">/usr/local/include/verovio</code> respectively.</p>
 
-<h3 id="building-veroviodll-on-windows-using-microsoft-visual-studio-build-tools-2022">Building verovio.dll on Windows using Microsoft Visual Studio Build Tools 2022</h3>
+<h4 id="building-veroviodll-on-windows-using-microsoft-visual-studio-build-tools-2022">Building verovio.dll on Windows using Microsoft Visual Studio Build Tools 2022</h4>
 
 <p>In addition to Microsoft Visual Studio Build Tools 2022, also <a href="https://gnuwin32.sourceforge.net/packages/make.htm">Make</a> is used.</p>
 
@@ -222,14 +216,12 @@ make
 
 <p>Running <code class="language-plaintext highlighter-rouge">./main</code> should display the Verovio version.</p>
 
-<h3 id="c-function-interface">C function interface</h3>
+<h4 id="c-function-interface">C function interface</h4>
 
 <p>To use Verovio with any language that supports a plain C function interface you will first need to build Verovio as a library.
 The compiled library (<code class="language-plaintext highlighter-rouge">libverovio.so</code>/<code class="language-plaintext highlighter-rouge">verovio.dll</code>) will contain callable C symbols. These wrapper symbols are defined in <code class="language-plaintext highlighter-rouge">./tools/c_wrapper.h</code></p>
 
-<h4 id="example-in-c">Example in C</h4>
-
-<p>To run the <code class="language-plaintext highlighter-rouge">main.c</code> example you can use gcc to compile the example and link to the pre-built library.</p>
+<p>To run a <code class="language-plaintext highlighter-rouge">main.c</code> example you can use gcc to compile the example and link to the pre-built library.</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcc main.c <span class="nt">-o</span> main <span class="nt">-L</span>../../tools <span class="nt">-lverovio</span>
 </code></pre></div></div>
