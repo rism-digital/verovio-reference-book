@@ -4,7 +4,7 @@ title: "Using as a library"
 
 Verovio can be built and use as C++ or C library.
 
-### Building libverovio.so on Linux or libverovio.dylib on macOS
+#### Building libverovio.so on Linux or libverovio.dylib on macOS
 
 ```sh
 cd tools
@@ -14,7 +14,7 @@ make
 
 Running `sudo make install` will copy the library and the headers in `/usr/local/lib` and `/usr/local/include/verovio` respectively.
 
-### Building verovio.dll on Windows using Microsoft Visual Studio Build Tools 2022
+#### Building verovio.dll on Windows using Microsoft Visual Studio Build Tools 2022
 
 In addition to Microsoft Visual Studio Build Tools 2022, also [Make](https://gnuwin32.sourceforge.net/packages/make.htm) is used.
 
@@ -57,14 +57,12 @@ g++ main.cpp -o main --std=c++17 -lverovio -I/usr/local/include/verovio
 
 Running `./main` should display the Verovio version.
 
-### C function interface
+#### C function interface
 
 To use Verovio with any language that supports a plain C function interface you will first need to build Verovio as a library.
 The compiled library (`libverovio.so`/`verovio.dll`) will contain callable C symbols. These wrapper symbols are defined in `./tools/c_wrapper.h`
 
-#### Example in C
-
-To run the `main.c` example you can use gcc to compile the example and link to the pre-built library.
+To run a `main.c` example you can use gcc to compile the example and link to the pre-built library.
 
 ```sh
 gcc main.c -o main -L../../tools -lverovio
