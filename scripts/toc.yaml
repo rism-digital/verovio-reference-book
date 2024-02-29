@@ -204,6 +204,8 @@
 "/installing-or-building-from-sources/other-bindings.html": Other bindings
 "/installing-or-building-from-sources/other-bindings.html#java": Java
 "/installing-or-building-from-sources/other-bindings.html#cocoapods": CocoaPods
+"/installing-or-building-from-sources/library.html": Using as a library
+"/installing-or-building-from-sources/library.html#examples": Examples
 "/installing-or-building-from-sources/troubleshooting.html": Troubleshooting
 "/installing-or-building-from-sources/troubleshooting.html#c-compiler-error-on-macos": C-Compiler
   error on macOS
