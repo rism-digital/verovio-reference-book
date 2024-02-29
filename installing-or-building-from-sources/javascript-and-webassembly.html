@@ -2,7 +2,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>JavaScript and WebAssembly</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -19,12 +18,12 @@
 
         <link rel="stylesheet" href="/css/verovio-site.css" />
 
-        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
-        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/jquery-3.6.0.min.js"></script>
+        <script src="/assets/javascript/bootstrap.min.js"></script>
 
-        <!-- Begin Jekyll SEO tag v2.7.1 -->
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>JavaScript and WebAssembly | Reference book for Verovio</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="JavaScript and WebAssembly" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Pre-build versions" />
@@ -32,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-29T08:46:17+00:00" />
+<meta property="article:published_time" content="2024-02-29T08:57:38+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="JavaScript and WebAssembly" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Pre-build versions","image":"https://book.verovio.org/images/card.png","headline":"JavaScript and WebAssembly","dateModified":"2024-02-29T08:46:17+00:00","datePublished":"2024-02-29T08:46:17+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/javascript-and-webassembly.html"},"url":"/installing-or-building-from-sources/javascript-and-webassembly.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-02-29T08:57:38+00:00","datePublished":"2024-02-29T08:57:38+00:00","description":"Pre-build versions","headline":"JavaScript and WebAssembly","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/javascript-and-webassembly.html"},"url":"/installing-or-building-from-sources/javascript-and-webassembly.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -54,7 +53,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml">
+                <img alt="Verovio logo" src="/assets/images/verovio-fadded-50.png" />
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,6 +69,9 @@
                 </li>
                 <li >
                     <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+                <li>
+                    <a class="image" href="https://github.com/rism-digital/verovio"><img alt="Verovio logo" src="/assets/images/github-logo.png" /></a>
                 </li>
               </ul>
         </div>
@@ -212,22 +216,22 @@
 
 <h4 id="basic-usage-with-npm">Basic usage with NPM</h4>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">verovio</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">verovio</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="cm">/* Wait for verovio to load */</span>
-<span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span>
+<span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span>
 <span class="p">{</span>
     <span class="c1">// create the toolkit instance</span>
-    <span class="kd">const</span> <span class="nx">vrvToolkit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+    <span class="kd">const</span> <span class="nx">vrvToolkit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">();</span>
     <span class="c1">// read the MEI file</span>
-    <span class="nx">mei</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.mei</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">mei</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nf">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.mei</span><span class="dl">'</span><span class="p">);</span>
     <span class="c1">// load the MEI data as string into the toolkit</span>
-    <span class="nx">vrvToolkit</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">mei</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+    <span class="nx">vrvToolkit</span><span class="p">.</span><span class="nf">loadData</span><span class="p">(</span><span class="nx">mei</span><span class="p">.</span><span class="nf">toString</span><span class="p">());</span>
     <span class="c1">// render the fist page as SVG</span>
-    <span class="nx">svg</span> <span class="o">=</span> <span class="nx">vrvToolkit</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">{});</span>
+    <span class="nx">svg</span> <span class="o">=</span> <span class="nx">vrvToolkit</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">{});</span>
     <span class="c1">// save the SVG into a file</span>
-    <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.svg</span><span class="dl">'</span><span class="p">,</span> <span class="nx">svg</span><span class="p">);</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nf">writeFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.svg</span><span class="dl">'</span><span class="p">,</span> <span class="nx">svg</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -241,12 +245,12 @@
 <span class="k">import</span> <span class="p">{</span> <span class="nx">VerovioToolkit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">verovio/esm</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">fs</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">node:fs</span><span class="dl">'</span><span class="p">;</span>
 
-<span class="nx">createVerovioModule</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">VerovioModule</span> <span class="o">=&gt;</span> <span class="p">{</span>
-   <span class="kd">const</span> <span class="nx">verovioToolkit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VerovioToolkit</span><span class="p">(</span><span class="nx">VerovioModule</span><span class="p">);</span>
-   <span class="kd">const</span> <span class="nx">score</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.mei</span><span class="dl">'</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
-   <span class="nx">verovioToolkit</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
-   <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">verovioToolkit</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">{});</span>
-   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="nf">createVerovioModule</span><span class="p">().</span><span class="nf">then</span><span class="p">(</span><span class="nx">VerovioModule</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="kd">const</span> <span class="nx">verovioToolkit</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">VerovioToolkit</span><span class="p">(</span><span class="nx">VerovioModule</span><span class="p">);</span>
+   <span class="kd">const</span> <span class="nx">score</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nf">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello.mei</span><span class="dl">'</span><span class="p">).</span><span class="nf">toString</span><span class="p">();</span>
+   <span class="nx">verovioToolkit</span><span class="p">.</span><span class="nf">loadData</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
+   <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">verovioToolkit</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">{});</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></div>
 
@@ -256,8 +260,8 @@
 
 <p>Alternatively this package also exports a version compatible with CommonJS</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">createVerovioModule</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio/wasm</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">VerovioToolkit</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio/esm</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">createVerovioModule</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio/wasm</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">VerovioToolkit</span> <span class="p">}</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">verovio/esm</span><span class="dl">'</span><span class="p">);</span>
 </code></pre></div></div>
 
 <h4 id="humdrum-support">Humdrum support</h4>
@@ -383,7 +387,7 @@
             </p>
         </footer>
 
-        <script type="text/javascript">
+        <script>
         //<![CDATA[
             $(document).ready(function() {
 

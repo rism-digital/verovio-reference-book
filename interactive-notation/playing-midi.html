@@ -2,7 +2,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>Playing the MIDI output</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -19,12 +18,12 @@
 
         <link rel="stylesheet" href="/css/verovio-site.css" />
 
-        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
-        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/jquery-3.6.0.min.js"></script>
+        <script src="/assets/javascript/bootstrap.min.js"></script>
 
-        <!-- Begin Jekyll SEO tag v2.7.1 -->
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Playing the MIDI output | Reference book for Verovio</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Playing the MIDI output" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Verovio can produce basic MIDI files and this feature is also available in the JavaScript toolkit. It can be used to play an MEI file directly in the browser as demonstrated in this tutorial." />
@@ -32,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-29T08:46:17+00:00" />
+<meta property="article:published_time" content="2024-02-29T08:57:38+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Playing the MIDI output" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Verovio can produce basic MIDI files and this feature is also available in the JavaScript toolkit. It can be used to play an MEI file directly in the browser as demonstrated in this tutorial.","image":"https://book.verovio.org/images/card.png","headline":"Playing the MIDI output","dateModified":"2024-02-29T08:46:17+00:00","datePublished":"2024-02-29T08:46:17+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/interactive-notation/playing-midi.html"},"url":"/interactive-notation/playing-midi.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-02-29T08:57:38+00:00","datePublished":"2024-02-29T08:57:38+00:00","description":"Verovio can produce basic MIDI files and this feature is also available in the JavaScript toolkit. It can be used to play an MEI file directly in the browser as demonstrated in this tutorial.","headline":"Playing the MIDI output","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/interactive-notation/playing-midi.html"},"url":"/interactive-notation/playing-midi.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -54,7 +53,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml">
+                <img alt="Verovio logo" src="/assets/images/verovio-fadded-50.png" />
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,6 +69,9 @@
                 </li>
                 <li >
                     <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+                <li>
+                    <a class="image" href="https://github.com/rism-digital/verovio"><img alt="Verovio logo" src="/assets/images/github-logo.png" /></a>
                 </li>
               </ul>
         </div>
@@ -183,17 +187,17 @@
 
 <p>You also need to make sure they do something when clicking on them:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">playMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">playMIDIHandler</span><span class="p">);</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">stopMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">stopMIDIHandler</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">playMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">playMIDIHandler</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">stopMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">stopMIDIHandler</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>We now need to define what actually happens when the user clicks. That is, defining the <code class="language-plaintext highlighter-rouge">playMIDIHandler</code> and <code class="language-plaintext highlighter-rouge">stopMIDIHandler</code> functions we just bound to the button event listeners. We can scaffold them with:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">playMIDIHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">playMIDIHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something to start playing</span>
 <span class="p">}</span>
 
-<span class="kd">const</span> <span class="nx">stopMIDIHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">stopMIDIHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something to stop playing</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -201,16 +205,16 @@
 <p>At this stage they do nothing. To start playing, we need to get the MIDI data produced by Verovio and pass it to the player. We will use the Verovio <code class="language-plaintext highlighter-rouge">renderToMIDI</code> method that returns a MIDI file encoded as a base64 string, which we can pass to MIDIjs:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Get the MIDI file from the Verovio toolkit</span>
-<span class="kd">let</span> <span class="nx">base64midi</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToMIDI</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">base64midi</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToMIDI</span><span class="p">();</span>
 <span class="c1">// Add the data URL prefixes describing the content</span>
 <span class="kd">let</span> <span class="nx">midiString</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">data:audio/midi;base64,</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">base64midi</span><span class="p">;</span>
 <span class="c1">// Pass it to play to MIDIjs</span>
-<span class="nx">MIDIjs</span><span class="p">.</span><span class="nx">play</span><span class="p">(</span><span class="nx">midiString</span><span class="p">);</span>
+<span class="nx">MIDIjs</span><span class="p">.</span><span class="nf">play</span><span class="p">(</span><span class="nx">midiString</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>Stop playing is even simpler. You only need to tell MIDIjs to do so:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">MIDIjs</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">MIDIjs</span><span class="p">.</span><span class="nf">stop</span><span class="p">();</span>
 </code></pre></div></div>
 
 <p>The examples above will be followed to write the body of the <code class="language-plaintext highlighter-rouge">playMIDIHandler</code> and <code class="language-plaintext highlighter-rouge">stopMIDIHandler</code> functions.</p>
@@ -221,7 +225,7 @@
 
 <p>You need to start by defining a callback function, similar to the button event we wrote earlier:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">midiHightlightingHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">midiHightlightingHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// Do something everytime the callback function is called</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -229,19 +233,19 @@
 <p>You will notice that the function has an <code class="language-plaintext highlighter-rouge">event</code> parameter that will give us information about the current event. What we need to use is <code class="language-plaintext highlighter-rouge">event.time</code> that indicates the current playing time in seconds. We are going to use this and the Verovio <code class="language-plaintext highlighter-rouge">getElementsAtTime</code> method that retrieves all elements being played at a given time in order to obtain the list of notes being played:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Get elements at a time in milliseconds (time from the player is in seconds)</span>
-<span class="kd">let</span> <span class="nx">currentElements</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">getElementsAtTime</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">time</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">currentElements</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">getElementsAtTime</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">time</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>Now we should check that a page number was set. This is just to ensure we do not end up in an undefined state; for example, if the file is not loaded, or if we asked for elements that do not exist. If the page is 0, something went wrong and we should return:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 </code></pre></div></div>
 
 <p>We should also check that we are currently rendering the correct page. If not, we should load it first:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">!=</span> <span class="nx">currentPage</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">!=</span> <span class="nx">currentPage</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">currentPage</span> <span class="o">=</span> <span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span><span class="p">;</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -255,9 +259,9 @@
 <p>Now we can actually highlight the notes. To do so, we are going to loop over the list of notes listed in <code class="language-plaintext highlighter-rouge">currentElements</code> and simply add the <code class="language-plaintext highlighter-rouge">playing</code> class to them:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Get all notes playing and set the class</span>
-<span class="k">for</span> <span class="p">(</span><span class="nx">note</span> <span class="k">of</span> <span class="nx">currentElements</span><span class="p">.</span><span class="nx">notes</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">noteElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">note</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">noteElement</span><span class="p">)</span> <span class="nx">noteElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
+<span class="k">for </span><span class="p">(</span><span class="nx">note</span> <span class="k">of</span> <span class="nx">currentElements</span><span class="p">.</span><span class="nx">notes</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">noteElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="nx">note</span><span class="p">);</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">noteElement</span><span class="p">)</span> <span class="nx">noteElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -269,8 +273,8 @@
 <p>This should not work! However, if it does, you will notice that we also need to de-highlight the notes that are not played anymore, otherwise they will stay highlighted. This should be done at the beginning of the <code class="language-plaintext highlighter-rouge">midiHightlightingHandler</code> callback function by removing the <code class="language-plaintext highlighter-rouge">playing</code> class to the notes that currently have it:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Remove the attribute 'playing' of all notes previously playing</span>
-<span class="kd">let</span> <span class="nx">playingNotes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.note.playing</span><span class="dl">'</span><span class="p">);</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">playingNote</span> <span class="k">of</span> <span class="nx">playingNotes</span><span class="p">)</span> <span class="nx">playingNote</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">playingNotes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.note.playing</span><span class="dl">'</span><span class="p">);</span>
+<span class="k">for </span><span class="p">(</span><span class="kd">let</span> <span class="nx">playingNote</span> <span class="k">of</span> <span class="nx">playingNotes</span><span class="p">)</span> <span class="nx">playingNote</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>The code above needs to be placed within the body of the <code class="language-plaintext highlighter-rouge">midiHighlightingHandler</code> function.</p>
@@ -301,12 +305,12 @@
                 We need to wait for the whole page to load before we try to 
                 work with Verovio.
             **/</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-                <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
                     <span class="c1">// This line initializes the Verovio toolkit</span>
-                    <span class="kd">const</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+                    <span class="kd">const</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">();</span>
 
-                    <span class="nx">tk</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span>
+                    <span class="nx">tk</span><span class="p">.</span><span class="nf">setOptions</span><span class="p">({</span>
                         <span class="na">pageWidth</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientWidth</span><span class="p">,</span>
                         <span class="na">pageHeight</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientHeight</span><span class="p">,</span>
                         <span class="na">scaleToPageSize</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -318,66 +322,66 @@
                     <span class="cm">/**
                      The handler to start playing the file
                     **/</span>
-                    <span class="kd">const</span> <span class="nx">playMIDIHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                    <span class="kd">const</span> <span class="nx">playMIDIHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
                         <span class="c1">// Get the MIDI file from the Verovio toolkit</span>
-                        <span class="kd">let</span> <span class="nx">base64midi</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToMIDI</span><span class="p">();</span>
+                        <span class="kd">let</span> <span class="nx">base64midi</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToMIDI</span><span class="p">();</span>
                         <span class="c1">// Add the data URL prefixes describing the content</span>
                         <span class="kd">let</span> <span class="nx">midiString</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">data:audio/midi;base64,</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">base64midi</span><span class="p">;</span>
                         <span class="c1">// Pass it to play to MIDIjs</span>
-                        <span class="nx">MIDIjs</span><span class="p">.</span><span class="nx">play</span><span class="p">(</span><span class="nx">midiString</span><span class="p">);</span>
+                        <span class="nx">MIDIjs</span><span class="p">.</span><span class="nf">play</span><span class="p">(</span><span class="nx">midiString</span><span class="p">);</span>
                     <span class="p">}</span>
 
                     <span class="cm">/**
                      The handler to stop playing the file
                     **/</span>
-                    <span class="kd">const</span> <span class="nx">stopMIDIHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-                        <span class="nx">MIDIjs</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+                    <span class="kd">const</span> <span class="nx">stopMIDIHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+                        <span class="nx">MIDIjs</span><span class="p">.</span><span class="nf">stop</span><span class="p">();</span>
                     <span class="p">}</span>
 
-                    <span class="kd">const</span> <span class="nx">midiHightlightingHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kd">const</span> <span class="nx">midiHightlightingHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
                         <span class="c1">// Remove the attribute 'playing' of all notes previously playing</span>
-                        <span class="kd">let</span> <span class="nx">playingNotes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.note.playing</span><span class="dl">'</span><span class="p">);</span>
-                        <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">playingNote</span> <span class="k">of</span> <span class="nx">playingNotes</span><span class="p">)</span> <span class="nx">playingNote</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
+                        <span class="kd">let</span> <span class="nx">playingNotes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.note.playing</span><span class="dl">'</span><span class="p">);</span>
+                        <span class="k">for </span><span class="p">(</span><span class="kd">let</span> <span class="nx">playingNote</span> <span class="k">of</span> <span class="nx">playingNotes</span><span class="p">)</span> <span class="nx">playingNote</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
 
                         <span class="c1">// Get elements at a time in milliseconds (time from the player is in seconds)</span>
-                        <span class="kd">let</span> <span class="nx">currentElements</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">getElementsAtTime</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">time</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+                        <span class="kd">let</span> <span class="nx">currentElements</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">getElementsAtTime</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">time</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
 
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+                        <span class="k">if </span><span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">!=</span> <span class="nx">currentPage</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">if </span><span class="p">(</span><span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span> <span class="o">!=</span> <span class="nx">currentPage</span><span class="p">)</span> <span class="p">{</span>
                             <span class="nx">currentPage</span> <span class="o">=</span> <span class="nx">currentElements</span><span class="p">.</span><span class="nx">page</span><span class="p">;</span>
-                            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
+                            <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
                         <span class="p">}</span>
 
                         <span class="c1">// Get all notes playing and set the class</span>
-                        <span class="k">for</span> <span class="p">(</span><span class="nx">note</span> <span class="k">of</span> <span class="nx">currentElements</span><span class="p">.</span><span class="nx">notes</span><span class="p">)</span> <span class="p">{</span>
-                            <span class="kd">let</span> <span class="nx">noteElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">note</span><span class="p">);</span>
-                            <span class="k">if</span> <span class="p">(</span><span class="nx">noteElement</span><span class="p">)</span> <span class="nx">noteElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
+                        <span class="k">for </span><span class="p">(</span><span class="nx">note</span> <span class="k">of</span> <span class="nx">currentElements</span><span class="p">.</span><span class="nx">notes</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="kd">let</span> <span class="nx">noteElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="nx">note</span><span class="p">);</span>
+                            <span class="k">if </span><span class="p">(</span><span class="nx">noteElement</span><span class="p">)</span> <span class="nx">noteElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">playing</span><span class="dl">"</span><span class="p">);</span>
                         <span class="p">}</span>
                     <span class="p">}</span>
 
                     <span class="cm">/**
                         Wire up the buttons to actually work.
                     */</span>
-                    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">playMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">playMIDIHandler</span><span class="p">);</span>
-                    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">stopMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">stopMIDIHandler</span><span class="p">);</span>
+                    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">playMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">playMIDIHandler</span><span class="p">);</span>
+                    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">stopMIDI</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">stopMIDIHandler</span><span class="p">);</span>
                     <span class="cm">/**
                      Set the function as message callback
                     */</span>
                     <span class="nx">MIDIjs</span><span class="p">.</span><span class="nx">player_callback</span> <span class="o">=</span> <span class="nx">midiHightlightingHandler</span><span class="p">;</span>
 
                     <span class="c1">// This line fetches the MEI file we want to render...</span>
-                    <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
+                    <span class="nf">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
                     <span class="c1">// ... then receives the response and "unpacks" the MEI from it</span>
-                    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
-                    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nf">text</span><span class="p">())</span>
+                    <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
                         <span class="c1">// ... then we can load the data into Verovio ...</span>
-                        <span class="nx">tk</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">);</span>
+                        <span class="nx">tk</span><span class="p">.</span><span class="nf">loadData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">);</span>
                         <span class="c1">// ... and generate the SVG for the first page ...</span>
-                        <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                        <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
                         <span class="c1">// ... and finally gets the </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span> <span class="nx">element</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">ID</span> <span class="nx">we</span> <span class="nx">specified</span><span class="p">,</span> 
                         <span class="c1">// and sets the content (innerHTML) to the SVG that we just generated.</span>
-                        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+                        <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
                     <span class="p">});</span>
                 <span class="p">}</span>
             <span class="p">});</span>
@@ -485,7 +489,7 @@
             </p>
         </footer>
 
-        <script type="text/javascript">
+        <script>
         //<![CDATA[
             $(document).ready(function() {
 

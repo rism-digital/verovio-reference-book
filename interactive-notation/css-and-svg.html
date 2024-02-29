@@ -2,7 +2,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>CSS and SVG</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -19,12 +18,12 @@
 
         <link rel="stylesheet" href="/css/verovio-site.css" />
 
-        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
-        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/jquery-3.6.0.min.js"></script>
+        <script src="/assets/javascript/bootstrap.min.js"></script>
 
-        <!-- Begin Jekyll SEO tag v2.7.1 -->
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>CSS and SVG | Reference book for Verovio</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="CSS and SVG" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Understanding the structure of the SVG" />
@@ -32,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-29T08:46:17+00:00" />
+<meta property="article:published_time" content="2024-02-29T08:57:38+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="CSS and SVG" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Understanding the structure of the SVG","image":"https://book.verovio.org/images/card.png","headline":"CSS and SVG","dateModified":"2024-02-29T08:46:17+00:00","datePublished":"2024-02-29T08:46:17+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/interactive-notation/css-and-svg.html"},"url":"/interactive-notation/css-and-svg.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-02-29T08:57:38+00:00","datePublished":"2024-02-29T08:57:38+00:00","description":"Understanding the structure of the SVG","headline":"CSS and SVG","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/interactive-notation/css-and-svg.html"},"url":"/interactive-notation/css-and-svg.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -54,7 +53,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml">
+                <img alt="Verovio logo" src="/assets/images/verovio-fadded-50.png" />
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,6 +69,9 @@
                 </li>
                 <li >
                     <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+                <li>
+                    <a class="image" href="https://github.com/rism-digital/verovio"><img alt="Verovio logo" src="/assets/images/github-logo.png" /></a>
                 </li>
               </ul>
         </div>
@@ -240,12 +244,12 @@
 
 <p>To do so, elements can be accessed by element and class name in the same way as with CSS. For example, for retrieving all rests, you can do:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">rests</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.rest</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">rests</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.rest</span><span class="dl">'</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>You can then loop through the list of rests with:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">rest</span> <span class="k">of</span> <span class="nx">rests</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span><span class="p">(</span><span class="kd">let</span> <span class="nx">rest</span> <span class="k">of</span> <span class="nx">rests</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// you have now access to the rest one by one and can modify their style</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -276,7 +280,7 @@
 
 <p>This can be used in the query selector to restrict the matches to elements having specific attribute values. For example, for selecting the C5 notes, you would do:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">c5s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g[data-pname="c"][data-oct="5"]</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">c5s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g[data-pname="c"][data-oct="5"]</span><span class="dl">'</span><span class="p">);</span>
 </code></pre></div></div>
 
 <h4 id="accessing-mei-attribute-values-programmatically">Accessing MEI attribute values programmatically</h4>
@@ -293,7 +297,7 @@ let attr = tk.getElementAttr("r123");
 
 <p>You can then look at any attributes specifically in the JSON object returned, for example <code class="language-plaintext highlighter-rouge">attr.dur</code> for the MEI <code class="language-plaintext highlighter-rouge">@dur</code> of the rest:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">attr</span><span class="p">.</span><span class="nx">dur</span> <span class="o">&amp;&amp;</span> <span class="nx">attr</span><span class="p">.</span><span class="nx">dur</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="nx">attr</span><span class="p">.</span><span class="nx">dur</span> <span class="o">&amp;&amp;</span> <span class="nx">attr</span><span class="p">.</span><span class="nx">dur</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// This is a whole note rest </span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -315,10 +319,10 @@ let attr = tk.getElementAttr("r123");
     <span class="nt">&lt;/head&gt;</span>
     <span class="nt">&lt;body&gt;</span>
         <span class="nt">&lt;script&gt;</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-                <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
                     <span class="c1">// This line initializes the Verovio toolkit</span>
-                    <span class="kd">const</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+                    <span class="kd">const</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">();</span>
 
                     <span class="kd">let</span> <span class="nx">zoom</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
                     <span class="kd">let</span> <span class="nx">pageHeight</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientHeight</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nx">zoom</span><span class="p">;</span>
@@ -331,46 +335,46 @@ let attr = tk.getElementAttr("r123");
                         <span class="c1">// Add an option to pass note@pname and note@oct as svg @data-*</span>
                         <span class="na">svgAdditionalAttribute</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">note@pname</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">note@oct</span><span class="dl">"</span><span class="p">]</span>
                     <span class="p">};</span>
-                    <span class="nx">tk</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+                    <span class="nx">tk</span><span class="p">.</span><span class="nf">setOptions</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
 
                     <span class="c1">// This line fetches the MEI file we want to render...</span>
-                    <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">'</span><span class="p">)</span>
+                    <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">'</span><span class="p">)</span>
                         <span class="c1">// ... then receives the response and "unpacks" the MEI from it</span>
-                        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
-                        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">mei</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                        <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nf">text</span><span class="p">())</span>
+                        <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">mei</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
                             <span class="c1">// ... then we can load the data into Verovio ...</span>
-                            <span class="nx">tk</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">mei</span><span class="p">);</span>
+                            <span class="nx">tk</span><span class="p">.</span><span class="nf">loadData</span><span class="p">(</span><span class="nx">mei</span><span class="p">);</span>
                             <span class="c1">// ... and generate the SVG for the first page</span>
-                            <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                            <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
                             <span class="c1">// ... and finally gets the </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span> <span class="nx">element</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">ID</span> <span class="nx">we</span> <span class="nx">specified</span><span class="p">,</span> 
                             <span class="c1">// and sets the content (innerHTML) to the SVG that we just generated.</span>
-                            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
+                            <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
 
-                            <span class="c1">// Get all the rests by selecting </span><span class="o">&lt;</span><span class="nx">g</span><span class="o">&gt;</span> <span class="kd">with</span> <span class="nx">attribute</span> <span class="kd">class</span> <span class="dl">'</span><span class="s1">rest</span><span class="dl">'</span> <span class="p">...</span>
-                            <span class="kd">let</span> <span class="nx">rests</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.rest</span><span class="dl">'</span><span class="p">);</span>
-                            <span class="c1">// ... and change their color by setting their style.fill value</span>
-                            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">rest</span> <span class="k">of</span> <span class="nx">rests</span><span class="p">)</span> <span class="p">{</span>
-                                <span class="nx">rest</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">dodgerblue</span><span class="dl">"</span><span class="p">;</span>
-                            <span class="p">}</span>
+                            <span class="c1">// Get all the rests by selecting </span><span class="o">&lt;</span><span class="nx">g</span><span class="o">&gt;</span> <span class="kd">with</span> <span class="nx">attribute</span> <span class="kd">class</span> <span class="err">'</span><span class="nc">rest</span><span class="dl">'</span><span class="s1"> ...
+                            let rests = document.querySelectorAll(</span><span class="dl">'</span><span class="nx">g</span><span class="p">.</span><span class="nx">rest</span><span class="dl">'</span><span class="s1">);
+                            // ... and change their color by setting their style.fill value
+                            for (let rest of rests) {
+                                rest.style.fill = "dodgerblue";
+                            }
 
-                            <span class="c1">// Get all the notes with @pname="c" and @oct="5" and change their color</span>
-                            <span class="kd">let</span> <span class="nx">c5s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g[data-pname="c"][data-oct="5"]</span><span class="dl">'</span><span class="p">);</span>
-                            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">c5</span> <span class="k">of</span> <span class="nx">c5s</span><span class="p">)</span> <span class="p">{</span>
-                                <span class="nx">c5</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">aqua</span><span class="dl">"</span><span class="p">;</span>
-                            <span class="p">}</span>
+                            // Get all the notes with @pname="c" and @oct="5" and change their color
+                            let c5s = document.querySelectorAll(</span><span class="dl">'</span><span class="nx">g</span><span class="p">[</span><span class="nx">data</span><span class="o">-</span><span class="nx">pname</span><span class="o">=</span><span class="dl">"</span><span class="s2">c</span><span class="dl">"</span><span class="p">][</span><span class="nx">data</span><span class="o">-</span><span class="nx">oct</span><span class="o">=</span><span class="dl">"</span><span class="s2">5</span><span class="dl">"</span><span class="p">]</span><span class="dl">'</span><span class="s1">);
+                            for (let c5 of c5s) {
+                                c5.style.fill = "aqua";
+                            }
 
-                            <span class="c1">// Get all the verses ...</span>
-                            <span class="kd">let</span> <span class="nx">verses</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">g.verse</span><span class="dl">'</span><span class="p">);</span>
-                            <span class="c1">// ... and use the 'getElementAttr()' to retrieve all attributes ...</span>
-                            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">verse</span> <span class="k">of</span> <span class="nx">verses</span><span class="p">)</span> <span class="p">{</span>
-                                <span class="kd">let</span> <span class="nx">attr</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">getElementAttr</span><span class="p">(</span><span class="nx">verse</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-                                <span class="c1">// ... and change to color when @n exists and is greater than 1</span>
-                                <span class="k">if</span> <span class="p">(</span><span class="nx">attr</span><span class="p">.</span><span class="nx">n</span> <span class="o">&amp;&amp;</span> <span class="nx">attr</span><span class="p">.</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">verse</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">darkcyan</span><span class="dl">"</span><span class="p">;</span>
-                            <span class="p">}</span>
-                        <span class="p">});</span>
-                <span class="p">}</span>
-            <span class="p">});</span>
-        <span class="nt">&lt;/script&gt;</span>
+                            // Get all the verses ...
+                            let verses = document.querySelectorAll(</span><span class="dl">'</span><span class="nx">g</span><span class="p">.</span><span class="nx">verse</span><span class="dl">'</span><span class="s1">);
+                            // ... and use the </span><span class="dl">'</span><span class="nf">getElementAttr</span><span class="p">()</span><span class="dl">'</span><span class="s1"> to retrieve all attributes ...
+                            for (let verse of verses) {
+                                let attr = tk.getElementAttr(verse.id);
+                                // ... and change to color when @n exists and is greater than 1
+                                if (attr.n &amp;&amp; attr.n &gt; 1) verse.style.fill = "darkcyan";
+                            }
+                        });
+                }
+            });
+        </span><span class="nt">&lt;/script&gt;</span>
         <span class="c">&lt;!-- The div where we are going to insert the SVG --&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"notation"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
@@ -478,7 +482,7 @@ let attr = tk.getElementAttr("r123");
             </p>
         </footer>
 
-        <script type="text/javascript">
+        <script>
         //<![CDATA[
             $(document).ready(function() {
 

@@ -2,7 +2,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>Toolkit methods</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -19,12 +18,12 @@
 
         <link rel="stylesheet" href="/css/verovio-site.css" />
 
-        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
-        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/jquery-3.6.0.min.js"></script>
+        <script src="/assets/javascript/bootstrap.min.js"></script>
 
-        <!-- Begin Jekyll SEO tag v2.7.1 -->
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Toolkit methods | Reference book for Verovio</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Toolkit methods" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary." />
@@ -32,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-29T08:46:17+00:00" />
+<meta property="article:published_time" content="2024-02-29T08:57:38+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","image":"https://book.verovio.org/images/card.png","headline":"Toolkit methods","dateModified":"2024-02-29T08:46:17+00:00","datePublished":"2024-02-29T08:46:17+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-02-29T08:57:38+00:00","datePublished":"2024-02-29T08:57:38+00:00","description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","headline":"Toolkit methods","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -54,7 +53,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml">
+                <img alt="Verovio logo" src="/assets/images/verovio-fadded-50.png" />
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,6 +69,9 @@
                 </li>
                 <li >
                     <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+                <li>
+                    <a class="image" href="https://github.com/rism-digital/verovio"><img alt="Verovio logo" src="/assets/images/github-logo.png" /></a>
                 </li>
               </ul>
         </div>
@@ -316,7 +320,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">convertHumdrumToHumdrum</span><span class="p">(</span><span class="n">humdrumData</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">convertHumdrumToHumdrum</span><span class="p">(</span><span class="n">humdrumData</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="converthumdrumtomidi">ConvertHumdrumToMIDI</h3>
@@ -353,7 +357,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">convertHumdrumToMIDI</span><span class="p">(</span><span class="n">humdrumData</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">convertHumdrumToMIDI</span><span class="p">(</span><span class="n">humdrumData</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="convertmeitohumdrum">ConvertMEIToHumdrum</h3>
@@ -390,7 +394,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">convertMEIToHumdrum</span><span class="p">(</span><span class="n">meiData</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">convertMEIToHumdrum</span><span class="p">(</span><span class="n">meiData</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="edit">Edit</h3>
@@ -427,7 +431,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">edit</span><span class="p">(</span><span class="n">editorAction</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">edit</span><span class="p">(</span><span class="n">editorAction</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="editinfo">EditInfo</h3>
@@ -445,7 +449,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">editInfo</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">editInfo</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getavailableoptions">GetAvailableOptions</h3>
@@ -465,7 +469,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getAvailableOptions</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getAvailableOptions</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h4 id="more-info-here">More info here</h4>
@@ -487,7 +491,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getDefaultOptions</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getDefaultOptions</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getdescriptivefeatures">GetDescriptiveFeatures</h3>
@@ -526,7 +530,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getDescriptiveFeatures</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getDescriptiveFeatures</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getelementattr">GetElementAttr</h3>
@@ -565,7 +569,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getElementAttr</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getElementAttr</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>The method performs a lookup in the loaded MEI tree and will return all attributes for the retrieved element. This includes attributes currently not supported by Verovio. Looking in the MEI tree means that looking for elements added dynamically for the rendering by Verovio will no be found. This is the case for <code class="language-plaintext highlighter-rouge">system</code> elements when loading score-based MEI, or <code class="language-plaintext highlighter-rouge">meterSig</code> or <code class="language-plaintext highlighter-rouge">clef</code> elements displayed at the beginning of a system.</p>
@@ -604,7 +608,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getElementsAtTime</span><span class="p">(</span><span class="n">millisec</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getElementsAtTime</span><span class="p">(</span><span class="n">millisec</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getexpansionidsforelement">GetExpansionIdsForElement</h3>
@@ -641,7 +645,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getExpansionIdsForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getExpansionIdsForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="gethumdrum">GetHumdrum</h3>
@@ -659,7 +663,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getHumdrum</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getHumdrum</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="gethumdrumfile">GetHumdrumFile</h3>
@@ -699,7 +703,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getHumdrumFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getHumdrumFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getid">GetID</h3>
@@ -720,7 +724,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getID</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getID</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getlog">GetLog</h3>
@@ -738,7 +742,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getLog</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getLog</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getmei">GetMEI</h3>
@@ -775,7 +779,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getMEI</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getMEI</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getmidivaluesforelement">GetMIDIValuesForElement</h3>
@@ -814,7 +818,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getMIDIValuesForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getMIDIValuesForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getnotatedidforelement">GetNotatedIdForElement</h3>
@@ -851,7 +855,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getNotatedIdForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getNotatedIdForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getoptionusagestring">GetOptionUsageString</h3>
@@ -869,7 +873,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getOptionUsageString</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getOptionUsageString</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getoptions">GetOptions</h3>
@@ -887,7 +891,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getOptions</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getOptions</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getpagecount">GetPageCount</h3>
@@ -907,7 +911,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getPageCount</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getPageCount</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getpagewithelement">GetPageWithElement</h3>
@@ -946,7 +950,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getPageWithElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getPageWithElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getresourcepath">GetResourcePath</h3>
@@ -967,7 +971,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getResourcePath</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getResourcePath</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="getscale">GetScale</h3>
@@ -988,7 +992,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getScale</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getScale</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="gettimeforelement">GetTimeForElement</h3>
@@ -1027,7 +1031,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getTimeForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getTimeForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="gettimesforelement">GetTimesForElement</h3>
@@ -1066,7 +1070,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getTimesForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getTimesForElement</span><span class="p">(</span><span class="n">xmlId</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="getversion">GetVersion</h3>
@@ -1084,7 +1088,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">getVersion</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">getVersion</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="loaddata">LoadData</h3>
@@ -1123,7 +1127,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">loadData</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">loadData</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="loadfile">LoadFile</h3>
@@ -1165,7 +1169,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">loadFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">loadFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="loadzipdatabase64">LoadZipDataBase64</h3>
@@ -1202,7 +1206,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">loadZipDataBase64</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">loadZipDataBase64</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="loadzipdatabuffer">LoadZipDataBuffer</h3>
@@ -1245,7 +1249,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">loadZipDataBuffer</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">loadZipDataBuffer</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="printoptionusage">PrintOptionUsage</h3>
@@ -1288,7 +1292,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">printOptionUsage</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="nf">printOptionUsage</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="redolayout">RedoLayout</h3>
@@ -1327,7 +1331,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">redoLayout</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="nf">redoLayout</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="redopagepitchposlayout">RedoPagePitchPosLayout</h3>
@@ -1347,7 +1351,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">redoPagePitchPosLayout</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="nf">redoPagePitchPosLayout</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="renderdata">RenderData</h3>
@@ -1392,7 +1396,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="rendertoexpansionmap">RenderToExpansionMap</h3>
@@ -1410,7 +1414,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToExpansionMap</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToExpansionMap</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="rendertoexpansionmapfile">RenderToExpansionMapFile</h3>
@@ -1450,7 +1454,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToExpansionMapFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToExpansionMapFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="rendertomidi">RenderToMIDI</h3>
@@ -1468,7 +1472,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToMIDI</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToMIDI</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="rendertomidifile">RenderToMIDIFile</h3>
@@ -1508,7 +1512,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToMIDIFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToMIDIFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="rendertopae">RenderToPAE</h3>
@@ -1528,7 +1532,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToPAE</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToPAE</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="rendertopaefile">RenderToPAEFile</h3>
@@ -1570,7 +1574,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToPAEFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToPAEFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="rendertosvg">RenderToSVG</h3>
@@ -1613,7 +1617,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToSVG</span><span class="p">(</span><span class="n">pageNo</span><span class="p">,</span> <span class="n">xmlDeclaration</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="n">pageNo</span><span class="p">,</span> <span class="n">xmlDeclaration</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="rendertosvgfile">RenderToSVGFile</h3>
@@ -1659,7 +1663,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToSVGFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">pageNo</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToSVGFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">pageNo</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="rendertotimemap">RenderToTimemap</h3>
@@ -1696,7 +1700,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToTimemap</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToTimemap</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="rendertotimemapfile">RenderToTimemapFile</h3>
@@ -1742,7 +1746,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">renderToTimemapFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">renderToTimemapFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="resetoptions">ResetOptions</h3>
@@ -1760,7 +1764,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">resetOptions</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="nf">resetOptions</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h3 id="resetxmlidseed">ResetXmlIdSeed</h3>
@@ -1799,7 +1803,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="n">resetXmlIdSeed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toolkit</span><span class="p">.</span><span class="nf">resetXmlIdSeed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="savefile">SaveFile</h3>
@@ -1845,7 +1849,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">saveFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">saveFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="select">Select</h3>
@@ -1884,7 +1888,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">select</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><strong>Examples for selection parameter</strong></p>
@@ -1933,7 +1937,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setInputFrom</span><span class="p">(</span><span class="n">inputFrom</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">setInputFrom</span><span class="p">(</span><span class="n">inputFrom</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="setoptions">SetOptions</h3>
@@ -1972,7 +1976,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setOptions</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">setOptions</span><span class="p">(</span><span class="n">jsonOptions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="setoutputto">SetOutputTo</h3>
@@ -2012,7 +2016,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setOutputTo</span><span class="p">(</span><span class="n">outputTo</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">setOutputTo</span><span class="p">(</span><span class="n">outputTo</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="setresourcepath">SetResourcePath</h3>
@@ -2054,7 +2058,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setResourcePath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">setResourcePath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="setscale">SetScale</h3>
@@ -2094,7 +2098,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">setScale</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">setScale</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>See also: <a href="/advanced-topics/controlling-the-svg-output.html#scaling">Scaling</a></p>
@@ -2129,7 +2133,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">toolkit</span><span class="p">(</span><span class="n">initFont</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">(</span><span class="n">initFont</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="validatepae">ValidatePAE</h3>
@@ -2168,7 +2172,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">validatePAE</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">validatePAE</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>See also: <a href="/toolkit-reference/input-formats.html#plaine-and-easie">Plaine and Easie</a></p>
@@ -2212,7 +2216,7 @@
 
 <p><strong>Example call</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="n">validatePAEFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">validatePAEFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>See also: <a href="/toolkit-reference/input-formats.html#plaine-and-easie">Plaine and Easie</a></p>
@@ -2317,7 +2321,7 @@
             </p>
         </footer>
 
-        <script type="text/javascript">
+        <script>
         //<![CDATA[
             $(document).ready(function() {
 

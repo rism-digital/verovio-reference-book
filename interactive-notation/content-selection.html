@@ -2,7 +2,6 @@
 <html lang="en" xml:lang="en" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>Score content selection</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/verovio-logo-big.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Latest compiled and minified CSS -->
@@ -19,12 +18,12 @@
 
         <link rel="stylesheet" href="/css/verovio-site.css" />
 
-        <script src="/assets/javascript/jquery-3.6.0.min.js" type="text/javascript" ></script>
-        <script src="/assets/javascript/bootstrap.min.js" type="text/javascript" ></script>
+        <script src="/assets/javascript/jquery-3.6.0.min.js"></script>
+        <script src="/assets/javascript/bootstrap.min.js"></script>
 
-        <!-- Begin Jekyll SEO tag v2.7.1 -->
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Score content selection | Reference book for Verovio</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Score content selection" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Verovio can extract segments of a score and display only these segments. This can be useful if you have a larger score and want to display a segment in a webpage to highlight a particular segment or portion. This can also be combined with the techniques from the previous tutorials, so you can also highlight or even play back these segments using MIDI." />
@@ -32,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-29T08:46:17+00:00" />
+<meta property="article:published_time" content="2024-02-29T08:57:38+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Score content selection" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Verovio can extract segments of a score and display only these segments. This can be useful if you have a larger score and want to display a segment in a webpage to highlight a particular segment or portion. This can also be combined with the techniques from the previous tutorials, so you can also highlight or even play back these segments using MIDI.","image":"https://book.verovio.org/images/card.png","headline":"Score content selection","dateModified":"2024-02-29T08:46:17+00:00","datePublished":"2024-02-29T08:46:17+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/interactive-notation/content-selection.html"},"url":"/interactive-notation/content-selection.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-02-29T08:57:38+00:00","datePublished":"2024-02-29T08:57:38+00:00","description":"Verovio can extract segments of a score and display only these segments. This can be useful if you have a larger score and want to display a segment in a webpage to highlight a particular segment or portion. This can also be combined with the techniques from the previous tutorials, so you can also highlight or even play back these segments using MIDI.","headline":"Score content selection","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/interactive-notation/content-selection.html"},"url":"/interactive-notation/content-selection.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -54,7 +53,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml"><img src="/assets/images/verovio-fadded-50.png" /></a>
+            <a class="navbar-brand logo-nav" href="https://www.verovio.org/index.xhtml">
+                <img alt="Verovio logo" src="/assets/images/verovio-fadded-50.png" />
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,6 +69,9 @@
                 </li>
                 <li >
                     <a href="https://www.verovio.org/musicxml.html">Online tools</a>
+                </li>
+                <li>
+                    <a class="image" href="https://github.com/rism-digital/verovio"><img alt="Verovio logo" src="/assets/images/github-logo.png" /></a>
                 </li>
               </ul>
         </div>
@@ -170,19 +174,19 @@
 
 <p>Verovio has a <code class="language-plaintext highlighter-rouge">select</code> method available on the toolkit. This method takes a JSON object where you can specify a range of measures in the format “[first]-[last]”. The selection syntax is based on a subset of the <code class="language-plaintext highlighter-rouge">measureRange</code> syntax from the <a href="https://github.com/music-addressability/ema/blob/master/docs/api.md">Enhancing Music Notation Addressability API</a>. The difference is that Verovio only supports a single measure range. For example:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nx">select</span><span class="p">({</span><span class="na">measureRange</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1-10</span><span class="dl">"</span><span class="p">});</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nf">select</span><span class="p">({</span><span class="na">measureRange</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1-10</span><span class="dl">"</span><span class="p">});</span>
 </code></pre></div></div>
 
 <p>Once the measures have been selected, calls to render the score to SVG will render only that selected portion. Importantly, it will also reduce the number of “pages” that are available to only the number that are needed to represent the selection.</p>
 
 <p>You can clear a selection by passing in an empty JSON Object:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nx">select</span><span class="p">({});</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nf">select</span><span class="p">({});</span>
 </code></pre></div></div>
 
 <p>You can also select the entire score by using <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code>:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nx">select</span><span class="p">({</span><span class="na">measureRange</span><span class="p">:</span> <span class="dl">"</span><span class="s2">start-end</span><span class="dl">"</span><span class="p">});</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tk</span><span class="p">.</span><span class="nf">select</span><span class="p">({</span><span class="na">measureRange</span><span class="p">:</span> <span class="dl">"</span><span class="s2">start-end</span><span class="dl">"</span><span class="p">});</span>
 </code></pre></div></div>
 
 <h3 id="full-example">Full example</h3>
@@ -209,12 +213,12 @@
             <span class="cm">/** 
              Load Verovio
             **/</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-                <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">verovio</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">onRuntimeInitialized</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
                     <span class="c1">// This line initializes the Verovio toolkit</span>
-                    <span class="kd">const</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">();</span>
+                    <span class="kd">const</span> <span class="nx">tk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">();</span>
 
-                    <span class="nx">tk</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span>
+                    <span class="nx">tk</span><span class="p">.</span><span class="nf">setOptions</span><span class="p">({</span>
                         <span class="na">pageWidth</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientWidth</span><span class="p">,</span>
                         <span class="na">pageHeight</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientHeight</span><span class="p">,</span>
                         <span class="na">scale</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
@@ -222,7 +226,7 @@
                     <span class="p">});</span>
 
                     <span class="c1">// Keep a variable to the notation div id</span>
-                    <span class="kd">let</span> <span class="nx">notationElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">);</span>
+                    <span class="kd">let</span> <span class="nx">notationElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">notation</span><span class="dl">"</span><span class="p">);</span>
 
                     <span class="c1">// The current page, which will change when playing through the piece</span>
                     <span class="kd">let</span> <span class="nx">currentPage</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -230,46 +234,46 @@
                     <span class="cm">/**
                      The handler to apply the selection
                     **/</span>
-                    <span class="kd">const</span> <span class="nx">applySelectionHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-                        <span class="kd">let</span> <span class="nx">start</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">start</span> <span class="o">===</span> <span class="dl">''</span><span class="p">)</span> <span class="nx">start</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">;</span>
-                        <span class="kd">let</span> <span class="nx">end</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">end</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">end</span> <span class="o">===</span> <span class="dl">''</span><span class="p">)</span> <span class="nx">end</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">end</span><span class="dl">"</span><span class="p">;</span>
+                    <span class="kd">const</span> <span class="nx">applySelectionHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+                        <span class="kd">let</span> <span class="nx">start</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+                        <span class="k">if </span><span class="p">(</span><span class="nx">start</span> <span class="o">===</span> <span class="dl">''</span><span class="p">)</span> <span class="nx">start</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">;</span>
+                        <span class="kd">let</span> <span class="nx">end</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">end</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+                        <span class="k">if </span><span class="p">(</span><span class="nx">end</span> <span class="o">===</span> <span class="dl">''</span><span class="p">)</span> <span class="nx">end</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">end</span><span class="dl">"</span><span class="p">;</span>
                         <span class="kd">let</span> <span class="nx">range</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">start</span><span class="p">}</span><span class="s2">-</span><span class="p">${</span><span class="nx">end</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
-                        <span class="nx">tk</span><span class="p">.</span><span class="nx">select</span><span class="p">({</span><span class="na">measureRange</span><span class="p">:</span> <span class="nx">range</span><span class="p">});</span>
-                        <span class="nx">tk</span><span class="p">.</span><span class="nx">redoLayout</span><span class="p">();</span>
-                        <span class="nx">notationElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
+                        <span class="nx">tk</span><span class="p">.</span><span class="nf">select</span><span class="p">({</span><span class="na">measureRange</span><span class="p">:</span> <span class="nx">range</span><span class="p">});</span>
+                        <span class="nx">tk</span><span class="p">.</span><span class="nf">redoLayout</span><span class="p">();</span>
+                        <span class="nx">notationElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
                     <span class="p">}</span>
 
                     <span class="cm">/**
                         Wire up the button to actually work.
                     */</span>
-                    <span class="kd">const</span> <span class="nx">nextPageHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-                        <span class="nx">currentPage</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">currentPage</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">getPageCount</span><span class="p">());</span>
-                        <span class="nx">notationElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
+                    <span class="kd">const</span> <span class="nx">nextPageHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+                        <span class="nx">currentPage</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">min</span><span class="p">(</span><span class="nx">currentPage</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">getPageCount</span><span class="p">());</span>
+                        <span class="nx">notationElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
                     <span class="p">}</span>
 
-                    <span class="kd">const</span> <span class="nx">prevPageHandler</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-                        <span class="nx">currentPage</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">currentPage</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-                        <span class="nx">notationElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
+                    <span class="kd">const</span> <span class="nx">prevPageHandler</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+                        <span class="nx">currentPage</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">max</span><span class="p">(</span><span class="nx">currentPage</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+                        <span class="nx">notationElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="nx">currentPage</span><span class="p">);</span>
                     <span class="p">}</span>
 
                     <span class="cm">/**
                         Wire up the buttons to actually work.
                     */</span>
-                    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">nextPage</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">nextPageHandler</span><span class="p">);</span>
-                    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">prevPage</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">prevPageHandler</span><span class="p">);</span>
-                    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">applySelection</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">applySelectionHandler</span><span class="p">);</span>
+                    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">nextPage</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">nextPageHandler</span><span class="p">);</span>
+                    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">prevPage</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">prevPageHandler</span><span class="p">);</span>
+                    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">applySelection</span><span class="dl">"</span><span class="p">).</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">applySelectionHandler</span><span class="p">);</span>
 
                     <span class="c1">// This line fetches the MEI file we want to render...</span>
-                    <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
+                    <span class="nf">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei</span><span class="dl">"</span><span class="p">)</span>
                         <span class="c1">// ... then receives the response and "unpacks" the MEI from it</span>
-                        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
-                        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                        <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nf">text</span><span class="p">())</span>
+                        <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">meiXML</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
                             <span class="c1">// ... then we can load the data into Verovio ...</span>
-                            <span class="nx">tk</span><span class="p">.</span><span class="nx">loadData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">);</span>
+                            <span class="nx">tk</span><span class="p">.</span><span class="nf">loadData</span><span class="p">(</span><span class="nx">meiXML</span><span class="p">);</span>
                             <span class="c1">// ... and generate the SVG for the first page ...</span>
-                            <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nx">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                            <span class="kd">let</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">tk</span><span class="p">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
                             <span class="c1">// ... and finally gets the </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span> <span class="nx">element</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">ID</span> <span class="nx">we</span> <span class="nx">specified</span><span class="p">,</span> 
                             <span class="c1">// and sets the content (innerHTML) to the SVG that we just generated.</span>
                             <span class="nx">notationElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">;</span>
@@ -380,7 +384,7 @@
             </p>
         </footer>
 
-        <script type="text/javascript">
+        <script>
         //<![CDATA[
             $(document).ready(function() {
 
