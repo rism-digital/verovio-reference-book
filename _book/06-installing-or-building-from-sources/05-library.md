@@ -85,8 +85,8 @@ You can use gcc to compile the example above and link to the pre-built library:
 gcc main.c -o main -lverovio -I/usr/local/include/verovio
 ```
 
-Run (without changing your default `LD_LIBRARY_PATH`):
+Run `./main` or (without having installed the library or changed your default `LD_LIBRARY_PATH`):
 
 ```sh
-LD_LIBRARY_PATH=../../tools ./main
+LD_LIBRARY_PATH=/path-to-the-library-dir ./main
 ```
