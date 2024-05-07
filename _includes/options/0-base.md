@@ -1,5 +1,5 @@
 {% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-a, --all-pages `</span> {% endcol %}{% col 8 %} Output all pages {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-h, --help `</span> {% endcol %}{% col 8 %} Display this message {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-h, --help <string>`</span> {% endcol %}{% col 8 %} Display this message<br/>(default: "") {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"inputFrom": <string>`</span><span class="lang2">`-f, --input-from <string>`</span> {% endcol %}{% col 8 %} Select input format from: &quot;abc&quot;, &quot;darms&quot;, &quot;humdrum&quot;, &quot;mei&quot;, &quot;pae&quot;, &quot;xml&quot; (musicxml)<br/>(default: "mei")
 
 See also: [Input formats](/toolkit-reference/input-formats.html) {% endcol %}
@@ -7,7 +7,7 @@ See also: [Input formats](/toolkit-reference/input-formats.html) {% endcol %}
 
 See also: [Environment functions](/toolkit-reference/environment-functions.html) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-o, --outfile <string>`</span> {% endcol %}{% col 8 %} Output file name (use &quot;-&quot; as file name for standard output)<br/>(default: "svg") {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-t, --output-to <string>`</span> {% endcol %}{% col 8 %} Select output format to: &quot;mei&quot;, &quot;mei-pb&quot;, &quot;mei-basic&quot;, &quot;svg&quot;, &quot;midi&quot;, &quot;timemap&quot;, &quot;expansionmap&quot;, &quot;humdrum&quot; or &quot;pae&quot;<br/>(default: "svg")
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-t, --output-to <string>`</span> {% endcol %}{% col 8 %} Select output format to: &quot;mei&quot;, &quot;mei-pb&quot;, &quot;mei-facs&quot;, &quot;mei-basic&quot;, &quot;svg&quot;, &quot;midi&quot;, &quot;timemap&quot;, &quot;expansionmap&quot;, &quot;humdrum&quot; or &quot;pae&quot;<br/>(default: "svg")
 
 See also: [Output formats](/toolkit-reference/output-formats.html) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">∅</span><span class="lang2">`-p, --page <integer>`</span> {% endcol %}{% col 8 %} Select the page to engrave (default is 1) {% endcol %}

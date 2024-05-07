@@ -16,6 +16,9 @@
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"font": <string>`</span><span class="lang2">`--font <string>`</span> {% endcol %}{% col 8 %} Set the music font<br/>(default: "Leipzig")
 
 See also: [SMuFL fonts](/advanced-topics/smufl.html) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"fontAddCustom": <string> *`</span><span class="lang2">`--font-add-custom <string> *`</span> {% endcol %}{% col 8 %} Add a custom music font as zip file {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"fontFallback": <string>`</span><span class="lang2">`--font-fallback <string>`</span> {% endcol %}{% col 8 %} The music font fallback for missing glyphs<br/>(default: "Leipzig"; other values: ['Leipzig', 'Bravura']) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"fontLoadAll":  <boolean>`</span><span class="lang2">`--font-load-all `</span> {% endcol %}{% col 8 %} Load all music fonts {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"graceFactor": <decimal>`</span><span class="lang2">`--grace-factor <decimal>`</span> {% endcol %}{% col 8 %} The grace size ratio numerator<br/>(default: 0.75; min: 0.5; max: 1.0) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"graceRhythmAlign":  <boolean>`</span><span class="lang2">`--grace-rhythm-align `</span> {% endcol %}{% col 8 %} Align grace notes rhythmically with all staves {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"graceRightAlign":  <boolean>`</span><span class="lang2">`--grace-right-align `</span> {% endcol %}{% col 8 %} Align the right position of a grace group with all staves {% endcol %}

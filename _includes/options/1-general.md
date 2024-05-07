@@ -46,6 +46,7 @@ See also: [Controlling the SVG output](/advanced-topics/controlling-the-svg-outp
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"scaleToPageSize":  <boolean>`</span><span class="lang2">`--scale-to-page-size `</span> {% endcol %}{% col 8 %} Scale the content within the page instead of scaling the page itself
 
 See also: [Scaling](/advanced-topics/controlling-the-svg-output.html#scaling) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"setLocale":  <boolean>`</span><span class="lang2">`--set-locale `</span> {% endcol %}{% col 8 %} Changes the global locale to C (this is not thread-safe) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"showRuntime":  <boolean>`</span><span class="lang2">`--show-runtime `</span> {% endcol %}{% col 8 %} Display the total runtime on command-line {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"shrinkToFit":  <boolean>`</span><span class="lang2">`--shrink-to-fit `</span> {% endcol %}{% col 8 %} Scale down page content to fit the page height if needed {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"smuflTextFont": <string>`</span><span class="lang2">`--smufl-text-font <string>`</span> {% endcol %}{% col 8 %} Specify if the smufl text font is embedded, linked, or ignored<br/>(default: "embedded"; other values: ['embedded', 'linked', 'none'])
