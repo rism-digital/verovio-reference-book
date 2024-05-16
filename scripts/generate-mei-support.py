@@ -13,7 +13,7 @@ import sys
 from typing import Dict, List
 import yaml
 
-endings = ["anl", "base", "cmn", "ges", "gestural", "log", "logical", "pitched", "quality", "vis"] 
+endings = ["anl", "base", "cmn", "ges", "gestural", "log", "logical", "ratio", "pitched", "quality", "vis"] 
 
 attribute_classes_exceptions = {
     "att.time.base": "att.timeBase"
