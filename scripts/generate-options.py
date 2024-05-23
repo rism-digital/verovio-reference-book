@@ -1,16 +1,14 @@
 import argparse
-import json
+import html
 import logging
 import os
 import re
 import sys
-import html
 from typing import Dict
 
 import frontmatter
 import verovio
 import yaml
-
 
 if __name__ == "__main__":
     description = """
