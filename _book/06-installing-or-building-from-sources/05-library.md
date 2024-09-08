@@ -16,14 +16,12 @@ Running `sudo make install` will copy the library and the headers in `/usr/local
 
 #### Building verovio.dll on Windows using Microsoft Visual Studio Build Tools 2022
 
-In addition to Microsoft Visual Studio Build Tools 2022, also [Make](https://gnuwin32.sourceforge.net/packages/make.htm) is used.
-
 Open `x64 Native Tools Command Prompt for VS 2022` and enter:
 
 ```
 cd cmake
-cmake -G "Unix Makefiles" -DBUILD_AS_LIBRARY=ON -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE .
-make
+cmake -G "NMake Makefiles" -DBUILD_AS_LIBRARY=ON -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE .
+nmake
 ```
 
 ### Examples
