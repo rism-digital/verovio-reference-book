@@ -91,6 +91,10 @@ All of the base options are short options in the command-line version of the too
 
 {% include options/5-midi.md %}
 
+### Mensural options
+
+{% include options/6-mensural.md %}
+
 <script type="text/javascript">
 $('input:radio[name="lang"]').click(function() {
     $("span").toggleClass("lang1 lang2");
