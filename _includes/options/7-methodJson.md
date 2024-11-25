@@ -1,0 +1,2 @@
+{% row option_row %}{% col 4 %} <span class="lang1">`"timemapOptions": <string>`</span><span class="lang2">`--timemap-options <string>`</span> {% endcol %}{% col 8 %} The JSON options to be passed when producing the timemap<br/>(default: "{}") {% endcol %}
+{% endrow %}

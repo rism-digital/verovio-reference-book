@@ -32,7 +32,7 @@ See also: [Vertical justification](/advanced-topics/layout-options.html#vertical
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"justificationBracketGroup": <decimal>`</span><span class="lang2">`--justification-bracket-group <decimal>`</span> {% endcol %}{% col 8 %} Space between staves inside a bracketed group justification<br/>(default: 1.0; min: 0.0; max: 10.0)
 
 See also: [Vertical justification](/advanced-topics/layout-options.html#vertical-justification) {% endcol %}
-{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"justificationMaxVertical": <decimal>`</span><span class="lang2">`--justification-max-vertical <decimal>`</span> {% endcol %}{% col 8 %} Maximum ratio of justifiable height to page height that can be used for the vertical justification<br/>(default: 0.3; min: 0.0; max: 1.0) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"justificationMaxVertical": <decimal>`</span><span class="lang2">`--justification-max-vertical <decimal>`</span> {% endcol %}{% col 8 %} Maximum ratio of justifiable height to page height that can be used for the vertical justification<br/>(default: 0.2; min: 0.0; max: 1.0) {% endcol %}
 {% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"justificationStaff": <decimal>`</span><span class="lang2">`--justification-staff <decimal>`</span> {% endcol %}{% col 8 %} The staff justification<br/>(default: 1.0; min: 0.0; max: 10.0)
 
 See also: [Vertical justification](/advanced-topics/layout-options.html#vertical-justification) {% endcol %}

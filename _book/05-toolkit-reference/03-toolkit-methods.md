@@ -92,7 +92,7 @@ result = toolkit.convertMEIToHumdrum(meiData)
 {% include method-doc file="convertmeitohumdrum-meidata" %}
 ### Edit
 
-Edit the MEI data.
+Edit the MEI data - experimental code not to rely on.
 
 **Returns**
 
@@ -120,7 +120,7 @@ result = toolkit.edit(editorAction)
 {% include method-doc file="edit-editoraction" %}
 ### EditInfo
 
-Return the editor status.
+Return the editor status - experimental code not to rely on.
 
 **Returns**
 
@@ -1396,7 +1396,7 @@ Set the output to option.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `outputTo` | `std::string const &` | ∅ | the output to value as string |
+| `outputTo` | `std::string const &` | ∅ | the value to output as string |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1414,7 +1414,7 @@ result = toolkit.setOutputTo(outputTo)
 {% include method-doc file="setoutputto-outputto" %}
 ### SetResourcePath
 
-Set the resource path for the Toolkit instance.
+Set the resource path for the Toolkit instance and any extra fonts.
 
 This method needs to be called if the constructor had initFont=false or if the resource path needs to be changed.
 
