@@ -897,18 +897,18 @@ Everything in imported as `mensural` notation, including sections marked as `Pla
 
 The initial `staffDef` elements have no `@clef.*` and no `@keyisg` and these are given in the `layer` instead. Every `staffDef` contains a `mensur` indicating that all level of divisions are binary by default.
 
-### MEI header
+#### MEI header
 
 The `GeneralData` element of the CMME file is used to populate the MEI header. It uses:
 * The `Title` as `title`
 * The `Section` as `title@type="subordinate"`
 * The `Composer` as `composer`
 
-### Durations
+#### Durations
 
 The CMME import forces the use of the `--duration-equivalence` option to `minima` when importing a CMME file. A warning is shown if the option was previously different - which is the case by default. This could potentially have side effects for subsequent calls since it is not set back to its original value.
 
-### Proportions
+#### Proportions
 
 Proportions in CMME can be encoded as `Proportion` element, or as `TempoChange` within `Mensuration`. Encoded a proportion as a tempo change is arguably not the proper way to do it, but as a matter of fact, it is a used practice the importer needs to deal with. The importer tries to disentangle proportions and tempo changes. One complication is that proportions and tempo changes in CMME act differently. Proportions are cumulated with the previous ones, whereas tempo changes are not.
 
@@ -922,7 +922,7 @@ The second case is where all voices have a proportion, but it differs. In this c
 
 Finally, tempo changes proportions occurring at all voices and with an identical `Num` and `Den` are preserved as an MEI `proportion` with a `@type="cmme_tempo_change"` that Verovio ignores when performing that alignment of the data.
 
-### Coloration and color change
+#### Coloration and color change
 
 Coloration in CMME is encoded with `Colored` on `Note`, and is converted to MEI `@colored` . `ColorChange` is the change of color, e.g., a change of ink. P
 
