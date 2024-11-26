@@ -886,3 +886,44 @@ Verovio correctly differentiates between ties and slurs.
 * User defined symbols are not supported
 * Multi-voice music is not supported
 * Lyrics are not supported yet
+
+### CMME
+
+The CMME format is an XML-based format developped for the [Computerized Mensural Music Editing](https://www.cmme.org) project. It can be imported into Verovio as of version 4.4. CMME files can be imported with `-f cmme.xml` but are also auto-detected.
+
+A CMME file is imported as an MEI mensural file with one single `mdiv/score`. Sections in CMME are imported as distinct `section` elements within the `score`.
+
+Everything in imported as `mensural` notation, including sections marked as `Plainchant` in CMME since there is no difference in the way the music is encoded in those sections. Where there is less voices in a section than in the rest of the score, empty and invisible staff elements `<staff visibility="false"/>` are added to the section.
+
+The initial `staffDef` elements have no `@clef.*` and no `@keyisg` and these are given in the `layer` instead. Every `staffDef` contains a `mensur` indicating that all level of divisions are binary by default.
+
+### MEI header
+
+The `GeneralData` element of the CMME file is used to populate the MEI header. It uses:
+* The `Title` as `title`
+* The `Section` as `title@type="subordinate"`
+* The `Composer` as `composer`
+
+### Durations
+
+The CMME import forces the use of the `--duration-equivalence` option to `minima` when importing a CMME file. A warning is shown if the option was previously different - which is the case by default. This could potentially have side effects for subsequent calls since it is not set back to its original value.
+
+### Proportions
+
+Proportions in CMME can be encoded as `Proportion` element, or as `TempoChange` within `Mensuration`. Encoded a proportion as a tempo change is arguably not the proper way to do it, but as a matter of fact, it is a used practice the importer needs to deal with. The importer tries to disentangle proportions and tempo changes. One complication is that proportions and tempo changes in CMME act differently. Proportions are cumulated with the previous ones, whereas tempo changes are not.
+
+Ideally proportions encoded in a mensur indications that are actual tempo changes should be ignored in the conversion because they do not represent a proportion in the notation. Furthermore, when converting to CMN, this will yield measure content that hardly makes sense. However, when a proportion encoded in mensur indication is a real proportion, it must be taken into account and preserved. 
+
+The importer ignores, if possible, the proportions inserted in the mensuration signs indicating a tempo change. This is done on the basis of the presence of an identical proportion for all voices. When the proportion is not identical, or not in all voices, it will be preserved.
+
+We can here distinguish two cases. The first is when the tempo change does not occur in all voices. In this case, it quite likely corresponds to a true proportion. It is preserved as an MEI `proportion` but with a `@type="reset"` to indicate that it should not be cumulated with a previous one - which is the default behavior of Verovio.
+
+The second case is where all voices have a proportion, but it differs. In this case, there is no straightforward way of knowing which proportion is a tempo change, and which is a mixture of the two. The conversion will maintained an MEI `proportion` with `@type="reset"` at all voices. Even though the conversion result will be properly aligned in mensural MEI, it will yield a combination of corresponding tuplets when converted into CMN that will not be fully satisfactory. The best thing to do would be to correct the CMME files and to remove the tempo changes, or to separate the proportions and the tempo changes.
+
+Finally, tempo changes proportions occurring at all voices and with an identical `Num` and `Den` are preserved as an MEI `proportion` with a `@type="cmme_tempo_change"` that Verovio ignores when performing that alignment of the data.
+
+### Coloration and color change
+
+Coloration in CMME is encoded with `Colored` on `Note`, and is converted to MEI `@colored` . `ColorChange` is the change of color, e.g., a change of ink. P
+
+The CMME `ColorChange` (i.e., the change of the color of the ink) is converted by applying the color (non-black) to `note@color` and `rest@color`. The possible colors are `black` (assumed to be the default and not encoded), `red`, `yellow`, `green` or `blue`.
