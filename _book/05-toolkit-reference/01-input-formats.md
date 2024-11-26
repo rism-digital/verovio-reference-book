@@ -910,17 +910,18 @@ The CMME import forces the use of the `--duration-equivalence` option to `minima
 
 #### Proportions
 
-Proportions in CMME can be encoded as `Proportion` element, or as `TempoChange` within `Mensuration`. Encoded a proportion as a tempo change is arguably not the proper way to do it, but as a matter of fact, it is a used practice the importer needs to deal with. The importer tries to disentangle proportions and tempo changes. One complication is that proportions and tempo changes in CMME act differently. Proportions are cumulated with the previous ones, whereas tempo changes are not.
+Proportions in CMME can be encoded as `Proportion` element, or as `TempoChange` within `Mensuration`. Encoding a proportion as a tempo change is arguably not the proper way to do it, but as a matter of fact, it is a used practice the importer needs to deal with. The importer tries to disentangle proportions and tempo changes. One complication is that proportions and tempo changes in CMME act differently. Proportions are cumulated with the previous ones, whereas tempo changes are not.
 
-Ideally proportions encoded in a mensur indications that are actual tempo changes should be ignored in the conversion because they do not represent a proportion in the notation. Furthermore, when converting to CMN, this will yield measure content that hardly makes sense. However, when a proportion encoded in mensur indication is a real proportion, it must be taken into account and preserved. 
+Ideally proportions encoded in a mensur indications that are actual tempo changes should be ignored in the conversion because they do not represent a proportion in the notation. Furthermore, when converting the imported data to CMN, this will yield measure content that hardly makes sense since tuplets will be used to represent the proportions. However, when a proportion encoded in a mensur indication is a real proportion, it must be taken into account and preserved. 
 
-The importer ignores, if possible, the proportions inserted in the mensuration signs indicating a tempo change. This is done on the basis of the presence of an identical proportion for all voices. When the proportion is not identical, or not in all voices, it will be preserved.
+The importer ignores, if possible, the proportions inserted in the mensuration signs indicating a tempo change. This is done on the basis of the presence of an identical proportion for all voices. When tempo change proportions are occurring at all voices and with an identical `Num` and `Den`, they are preserved as an MEI `proportion` with a `@type="cmme_tempo_change"`. Verovio ignores when performing that alignment of the data, including when converting to CMN.
 
-We can here distinguish two cases. The first is when the tempo change does not occur in all voices. In this case, it quite likely corresponds to a true proportion. It is preserved as an MEI `proportion` but with a `@type="reset"` to indicate that it should not be cumulated with a previous one - which is the default behavior of Verovio.
+
+When the proportion is not identical in all voices, it has to be preserved and taken into account for the alignment of the data. We can here distinguish two cases. The first is when the tempo change does not occur in all voices. In this case, it quite likely corresponds to a true proportion. It is preserved as an MEI `proportion` but with a `@type="reset"` to indicate that it should not be cumulated with a previous one - which is the default behavior of Verovio.
 
 The second case is where all voices have a proportion, but it differs. In this case, there is no straightforward way of knowing which proportion is a tempo change, and which is a mixture of the two. The conversion will maintained an MEI `proportion` with `@type="reset"` at all voices. Even though the conversion result will be properly aligned in mensural MEI, it will yield a combination of corresponding tuplets when converted into CMN that will not be fully satisfactory. The best thing to do would be to correct the CMME files and to remove the tempo changes, or to separate the proportions and the tempo changes.
 
-Finally, tempo changes proportions occurring at all voices and with an identical `Num` and `Den` are preserved as an MEI `proportion` with a `@type="cmme_tempo_change"` that Verovio ignores when performing that alignment of the data.
+Finally, a CMME `Proportion` will converted to MEI `proportion` with no `@type`, impliying that the proportion has to be cumulated with a previous one.
 
 #### Coloration and color change
 
