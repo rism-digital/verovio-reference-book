@@ -97,6 +97,6 @@ All of the base options are short options in the command-line version of the too
 
 <script type="text/javascript">
 $('input:radio[name="lang"]').click(function() {
-    $("span").toggleClass("lang1 lang2");
+    $("span.lang1, span.lang2").toggleClass("lang1 lang2");
 });
 </script>
