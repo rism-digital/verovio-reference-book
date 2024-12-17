@@ -1,15 +1,12 @@
 import argparse
-import frontmatter
-import json
 import logging
-from lxml import etree
 import os
-import pprint
-import regex
-import requests
 import sys
 from typing import Dict, List
+
+import requests
 import yaml
+from lxml import etree
 
 header_url = "https://raw.githubusercontent.com/rism-digital/verovio-doxygen/{}/xml/classvrv_1_1_toolkit.xml"
 header_tmp_dir = "scripts/tmp"
