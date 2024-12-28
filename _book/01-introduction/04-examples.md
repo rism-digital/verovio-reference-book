@@ -2,9 +2,9 @@
 title: "Example uses"
 ---
 
-### Example resources using verovio
+### Resources using Verovio
 
-| name | type  | description |
+| Name | Type  | Description |
 | ---- | ----- | ----------- |
 | [Verovio Humdrum Viewer](https://verovio.humdrum.org) | editor | An online semi-graphical Humdrum data editor (can also be used to textually edit other digital scores compliant with verovio). |
 | [MoVI](https://dme.mozarteum.at/movi/en) | repertory | The digital Mozart digital score VIewer at the [Mozarteum](https://mozarteum.at) |
@@ -13,13 +13,14 @@ title: "Example uses"
 | [Probstücke Digital](http://probstuecke-digital.de) | repertory | open and critical digital edition of Mattheson's test pieces |
 | [370 Bach Chorales](https://chorales.sapp.org) | repertory | Online edition of Bach chorales, including an interactive [typesetter page](https://chorales.sapp.org/typesetter) that allows for creating musical examples for online display or use in papers. |
 | [Humdrum Notation Plugin](https://plugin.humdrum.org) | tool | Javascript interface to verovio for displaying multiple musical examples on a webpage |
-| [Music Sheet Viewer](http://www.partitionnumerique.com/music-sheet-viewer-wordpress-plugin) | tool | WordPress plugin for displaying graphical music from MEI data | 
+| [Music Sheet Viewer](http://www.partitionnumerique.com/music-sheet-viewer-wordpress-plugin) | tool | WordPress plugin for displaying graphical music from MEI data |
+{: .table .table-condensed .table-sm}
 
 ### Digital score repositories on Github
 
 Here is a list of digital score repositories on Github that can be displayed with verovio:
 
-| link | encoding | description |
+| Link | Encoding | Description |
 | ---- | -------- | ----------- | 
 | [MEI complete examples](https://github.com/music-encoding/sample-encodings/tree/master/MEI_4.0/Music/Complete_examples) | MEI | 86 various works encoded in MEI |
 | [Mozart Piano Sonatas](https://github.com/craigsapp/mozart-piano-sonatas) | Humdrum | 17 Piano sonatas by W.A. Mozart from the Alte Mozart-Ausgabe ([in VHV](http://verovio.humdrum.org/?file=mozart/sonatas&k=e)) |
@@ -33,7 +34,4 @@ Here is a list of digital score repositories on Github that can be displayed wit
 | [370 Bach chorales](https://github.com/craigsapp/bach-370-chorales) | Humdrum | Chorales collected by C.P.E. Bach after his father's death ([website](https://chorales.sapp.org)) |
 | [Deutscher Liederschatz](https://github.com/craigsapp/erk-liederschatz) | Humdrum | 200 harmonized songs from vol. 1, edited by Ludwig Erk |
 | [Beethoven string quartets](https://github.com/craigsapp/beethoven-string-quartets) | Humdrum | 18 string quartets by Ludwig van Beethoven |
-
-
-
-
+{: .table .table-condensed .table-sm}
