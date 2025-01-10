@@ -24,4 +24,5 @@ CMake Error at /usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeTestCComp
 ```
 
 #### Solution
-Delete the `tools/CMakeFiles` directory before [installing it from sources](/installing-or-building-from-sources/command-line.html).
+
+Rerun cmake with the `--fresh` option (CMake 3.24 and later) or simply delete the `tools/CMakeFiles` directory before [installing it from sources](/installing-or-building-from-sources/command-line.html).
