@@ -152,7 +152,7 @@ In the class declaration, the methods are declared first, and then the member va
 
 #### Use of `this`
 
-The convention for the pointer `this` is to use it for method calls and not to use if for member access because these are prefixed with `m_`.
+The convention for the pointer `this` is to use it for method calls and not to use it for member access because these are prefixed with `m_`.
 
 *As it stands, the codebase is not consistently following this convention*
 
