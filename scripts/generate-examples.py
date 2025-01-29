@@ -1,15 +1,14 @@
 import argparse
-import os
-import sys
-import pprint
-from typing import Dict, List
 import logging
+import os
+import pprint
+import sys
+from typing import Dict, List
 
 import requests
 import verovio
 import yaml
 from lxml import etree
-
 
 MEI_NS: Dict = {'mei': 'http://www.music-encoding.org/ns/mei'}
 
@@ -134,8 +133,8 @@ if __name__ == "__main__":
             # If the example has additional options, load them.
             example_options: Dict = example.get("options", {})
             if example_options:
-              log.info("Adding example options")
-              options.update(example_options)
+                log.info("Adding example options")
+                options.update(example_options)
 
             # Always returns a list, even if it's empty; won't raise an error
             # if 'xpath' doesn't exist.
