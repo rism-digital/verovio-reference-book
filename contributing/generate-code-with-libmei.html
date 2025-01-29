@@ -22,22 +22,22 @@
         <script src="/assets/javascript/bootstrap.min.js"></script>
 
         <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Generate code with libMEI | Reference book for Verovio</title>
+<title>Generate code with LibMEI | Reference book for Verovio</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Generate code with libMEI" />
+<meta property="og:title" content="Generate code with LibMEI" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Verovio uses a forked version of LibMEI, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the ./libmei directory and the LibMEI repository does not need to be cloned for building Verovio." />
 <meta property="og:description" content="Verovio uses a forked version of LibMEI, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the ./libmei directory and the LibMEI repository does not need to be cloned for building Verovio." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-01-27T09:10:25+00:00" />
+<meta property="article:published_time" content="2025-01-29T09:17:12+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
-<meta property="twitter:title" content="Generate code with libMEI" />
+<meta property="twitter:title" content="Generate code with LibMEI" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-27T09:10:25+00:00","datePublished":"2025-01-27T09:10:25+00:00","description":"Verovio uses a forked version of LibMEI, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the ./libmei directory and the LibMEI repository does not need to be cloned for building Verovio.","headline":"Generate code with libMEI","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/generate-code-with-libmei.html"},"url":"/contributing/generate-code-with-libmei.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-29T09:17:12+00:00","datePublished":"2025-01-29T09:17:12+00:00","description":"Verovio uses a forked version of LibMEI, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the ./libmei directory and the LibMEI repository does not need to be cloned for building Verovio.","headline":"Generate code with LibMEI","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/contributing/generate-code-with-libmei.html"},"url":"/contributing/generate-code-with-libmei.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -129,7 +129,7 @@
 <a class="toc-item toc-section " href="/contributing/workflow.html">Contributing workflow</a>
     
 
-<a class="toc-item toc-section selected" href="/contributing/generate-code-with-libmei.html">Generate code with libMEI</a>
+<a class="toc-item toc-section selected" href="/contributing/generate-code-with-libmei.html">Generate code with LibMEI</a>
     
         
         
@@ -164,7 +164,7 @@
         <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/07-contributing/03-generate-code-with-libmei.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
         
         
-        <h2>Generate code with libMEI</h2>
+        <h2>Generate code with LibMEI</h2>
         <p>Verovio uses a forked version of <a href="https://github.com/DDMAL/libmei">LibMEI</a>, a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the <code class="language-plaintext highlighter-rouge">./libmei</code> directory and the LibMEI repository does not need to be cloned for building Verovio.</p>
 
 <p>Whenever the MEI schema is modified, this code needs to be re-generated in order to integrate these changes. However, since Verovio implements only a small subset of the MEI schema, this really needs to be done only for the changes in the schema that touch features supported by Verovio. This means that the code within the <code class="language-plaintext highlighter-rouge">./libmei/dist</code> directory should never be edited by hand because any change will be overwritten by the LibMEI output when the code generated from the schema needs to be updated and LibMEI is run again.</p>
