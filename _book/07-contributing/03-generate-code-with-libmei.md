@@ -1,5 +1,5 @@
 ---
-title: "Generate code with libMEI"
+title: "Generate code with LibMEI"
 ---
 
 Verovio uses a forked version of [LibMEI](https://github.com/DDMAL/libmei), a library that generates code directly from the MEI schema. It can be adapted to generate code in any language. For Verovio, it is used to generate C++ code. The code generated with LibMEI is included in the Verovio repository in the `./libmei` directory and the LibMEI repository does not need to be cloned for building Verovio.
