@@ -31,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-02-27T14:46:06+00:00" />
+<meta property="article:published_time" content="2025-03-24T12:37:52+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Python" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-27T14:46:06+00:00","datePublished":"2025-02-27T14:46:06+00:00","description":"Pre-build versions","headline":"Python","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"url":"/installing-or-building-from-sources/python.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-24T12:37:52+00:00","datePublished":"2025-03-24T12:37:52+00:00","description":"Pre-build versions","headline":"Python","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"url":"/installing-or-building-from-sources/python.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -215,6 +215,16 @@
 <p>It can also be rendered to a file:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tk</span><span class="p">.</span><span class="nf">renderToSVGFile</span><span class="p">(</span> <span class="sh">"</span><span class="s">page.svg</span><span class="sh">"</span><span class="p">,</span> <span class="mi">1</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="setting-the-resource-path">Setting the resource path</h4>
+
+<p>The Python wheels include the resource directory and it is normally resolved by default when using the module. However, in some cases, it might be not found. This will typically raise some errors about the Bravura and the Leipzig default fonts being not found. In such cases, the resource path must be set explicitly. It should still be possible to use the resources included in the module, with:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">verovio</span>
+<span class="kn">import</span> <span class="n">os</span>
+
+<span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">(</span><span class="bp">False</span><span class="p">);</span>
+<span class="n">tk</span><span class="p">.</span><span class="nf">setResourcePath</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="n">verovio</span><span class="p">.</span><span class="n">__file__</span><span class="p">),</span><span class="sh">"</span><span class="s">data</span><span class="sh">"</span><span class="p">));</span>
 </code></pre></div></div>
 
 <h4 id="setting-options">Setting options</h4>
