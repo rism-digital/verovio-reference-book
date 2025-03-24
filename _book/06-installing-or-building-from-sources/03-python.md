@@ -50,6 +50,17 @@ It can also be rendered to a file:
 tk.renderToSVGFile( "page.svg", 1 )
 ```
 
+#### Setting the resource path
+
+The Python wheels include the resource directory and it is normally resolved by default when using the module. However, in some cases, it might be not found. This will typically raise some errors about the Bravura and the Leipzig default fonts being not found. In such cases, the resource path must be set explicitly. It should still be possible to use the resources included in the module, with:
+```python
+import verovio
+import os
+
+tk = verovio.toolkit(False);
+tk.setResourcePath(os.path.join(os.path.dirname(verovio.__file__),"data"));
+```
+
 #### Setting options
 
 The options are set on the toolkit instance. For the Python version of the toolkit, the options (and all other parameters or values return by a function that are a JSON string in the C++ version) are a Python Dictionary. For example, the following code will change the dimensions of the page and redo the layout for the previously loaded data:
