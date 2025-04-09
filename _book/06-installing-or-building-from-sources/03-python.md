@@ -6,7 +6,7 @@ title: "Python"
 
 Pre-build versions of the Python version of the toolkit are available through [PyPi](https://pypi.org/project/verovio/) for every release since version 3.1.0.
 
-The Python versions for which a pre-build is provided are 3.9, 3.10, 3.11, 3.12 and 3.11. The platforms supported are macOS, Linux with [manylinux](https://github.com/pypa/manylinux) for x86-64, Win-32 and Win-amd64. 
+The Python versions for which a pre-build is provided are 3.9, 3.10, 3.11, 3.12 and 3.13. The platforms supported are macOS, Linux with [manylinux](https://github.com/pypa/manylinux) for x86-64, Win-32 and Win-amd64. 
 
 The latest release can be installed with:
 
