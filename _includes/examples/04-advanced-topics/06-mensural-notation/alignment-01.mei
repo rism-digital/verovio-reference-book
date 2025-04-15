@@ -1,0 +1,18 @@
+<measure>
+  <staff n="1">
+    <layer n="1">
+      <note dur="breve" oct="4" pname="c"/>
+      <note dur="1" oct="4" pname="d"/>
+      <note dur="2" oct="4" pname="d"/>
+      <note dur="2" oct="4" pname="c"/>
+    </layer>
+  </staff>
+  <staff n="2">
+    <layer n="1">
+      <note dur="brevis" oct="4" pname="c"/>
+      <note dur="semibrevis" oct="4" pname="d"/>
+      <note dur="minima" oct="4" pname="d"/>
+      <note dur="minima" oct="4" pname="c"/>
+    </layer>
+  </staff>
+</measure>

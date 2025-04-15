@@ -1,0 +1,28 @@
+<measure>
+  <staff n="1">
+    <layer n="1">
+      <note dur="breve" oct="4" pname="c"/>
+      <tuplet num="9" numbase="4" num.visible="false" bracket.visible="false">
+        <note dur="2" oct="4" pname="d"/>
+      </tuplet>
+      <tuplet num="9" numbase="4" num.visible="false" bracket.visible="false">
+        <note dur="2" oct="4" pname="c"/>
+      </tuplet>
+      <tuplet num="9" numbase="4" num.visible="false" bracket.visible="false">
+        <note dur="4" oct="4" pname="d"/>
+      </tuplet>
+      <tuplet num="9" numbase="4" num.visible="false" bracket.visible="false">
+        <note dur="4" oct="4" pname="c"/>
+      </tuplet>
+    </layer>
+  </staff>
+  <staff n="2">
+    <layer n="1">
+      <note dur="brevis" oct="4" pname="c"/>
+      <note dur="minima" oct="4" pname="d"/>
+      <note dur="minima" oct="4" pname="c"/>
+      <note dur="semiminima" oct="4" pname="d"/>
+      <note dur="semiminima" oct="4" pname="c"/>
+    </layer>
+  </staff>
+</measure>

@@ -386,6 +386,26 @@
   svg-example-file: examples/04-advanced-topics/05-transposition/t-11.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: alignment-01
+  test-suite: mensural/mensural-024.mei
+  xpath:
+  - ".//mei:measure[1]"
+  options:
+    spacingStaff: '8'
+  mei-example-file: examples/04-advanced-topics/06-mensural-notation/alignment-01.mei
+  svg-example-file: examples/04-advanced-topics/06-mensural-notation/alignment-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: alignment-02
+  test-suite: mensural/mensural-025.mei
+  xpath:
+  - ".//mei:measure[1]"
+  options:
+    spacingStaff: '8'
+  mei-example-file: examples/04-advanced-topics/06-mensural-notation/alignment-02.mei
+  svg-example-file: examples/04-advanced-topics/06-mensural-notation/alignment-02.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: humdrum-01
   options:
     breaks: auto
