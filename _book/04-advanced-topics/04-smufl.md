@@ -54,6 +54,20 @@ examples:
       test-suite: dynam/dynam-006.mei
       xpath:
         - ".//mei:dynam"
+
+    - name: turn-01
+      options:
+        xmlIdSeed: 0
+      test-suite: turn/turn-003.mei
+      xpath:
+        - ".//mei:turn"
+
+    - name: keySig-01
+      options:
+        xmlIdSeed: 0
+      test-suite: keysig/keysig-005.mei
+      xpath:
+        - ".//mei:keySig"
 ---
 
 Most music notation software applications use music fonts for rendering music symbols or parts of music symbols. These may include clefs, note heads, time signatures or articulation signs. However, these fonts often have incompatible code points – the internal location within the font that points to a symbol. They are most of the time developed with no common agreement on which code point represents which character. The code point for the G clef symbol in one font may be the code point used for a quarter rest in another, or may be simply undefined. Furthermore, they usually have their own metric and positioning system for specifying what the size of the glyph is and where its baseline is. Because of this, music fonts are difficult to use interchangeably.
@@ -135,3 +149,11 @@ Characters in tempo indications can be encoded as Unicode characters or as entit
 For dynamics, Verovio automatically detects dynamic symbols within text and displays them appropriately. In some cases, it might be desirable to disable the automatic detection of dynamic symbols and the use of the music font. This can be achieved by setting a text font explicitly, as illustrated with the `<rend fontfam="Times">` in the second dynamic in this example:
 
 {% include music-notation example="dynam-01" %}
+
+### Use alternate SMuFL glyphs
+
+For some elements, Verovio support the use of alternate SMuFL glyphs through the `@glyph.auth` and `@glyph.name` or `@glyph.num` attributes. The `@glyph.auth` is expected to the value `smufl`. When both `@glyph.auth` and `@glyph.num` are provided, then the priority is given to `@glyph.num`.
+
+{% include music-notation example="turn-01" %}
+
+{% include music-notation example="keySig-01" %}

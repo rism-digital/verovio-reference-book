@@ -278,6 +278,26 @@
   svg-example-file: examples/04-advanced-topics/04-smufl/dynam-01.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: turn-01
+  options:
+    xmlIdSeed: 0
+  test-suite: turn/turn-003.mei
+  xpath:
+  - ".//mei:turn"
+  mei-example-file: examples/04-advanced-topics/04-smufl/turn-01.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/turn-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: keySig-01
+  options:
+    xmlIdSeed: 0
+  test-suite: keysig/keysig-005.mei
+  xpath:
+  - ".//mei:keySig"
+  mei-example-file: examples/04-advanced-topics/04-smufl/keySig-01.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/keySig-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: t-01
   test-suite: chord/chord-005.mei
   xpath:

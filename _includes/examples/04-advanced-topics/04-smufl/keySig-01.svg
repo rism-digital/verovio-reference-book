@@ -1,0 +1,71 @@
+<svg width="209px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="d1m8w8iq">
+   <desc>Engraved by Verovio 5.1.0-8c3069d</desc>
+   <defs>
+      <symbol id="E4E4-d1m8w8iq" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M0 10v105c0 9 1 10 10 10h280c9 0 10 -1 10 -10v-105c0 -9 -1 -10 -10 -10h-280c-9 0 -10 1 -10 10z" />
+      </symbol>
+      <symbol id="E444-d1m8w8iq" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M106 179v-91l-44 -14v-165l44 12v-91l-46 -14v-155h-17v149l-43 -13v90l43 14v167l-43 -14v92l43 13v169h17v-163z" />
+      </symbol>
+      <symbol id="E447-d1m8w8iq" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M158 186v169h17v-164l44 14v-91l-44 -14v-52.5481l64 19.5481v-56l-64 -19.5481v-56.4519l44 12v-91l-44 -13v-155h-17v150l-76 -22v-155h-17v149l-43 -13v90l43 14v56.8536l-65 -19.8536v56l65 19.8536v54.1464l-43 -14v92l43 13v169h17v-163zM82 -36.954v-57.046l76 22 v58.2594zM82 19.046l76 23.2134v53.7406l-76 -23v-53.954z" />
+      </symbol>
+      <symbol id="E082-d1m8w8iq" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M124 -185c-18 0 -55 -14 -65 -65h-36l-3 30c0 25 6 45 18 63c11 19 22 30 39 43l121 82l37 29c15 11 27 29 38 54c12 24 18 47 18 70c0 40 -19 88 -94 88c-25 0 -32 0 -50 -8c-14 -5 -23 -12 -26 -22c3 -9 7 -15 10 -18l24 -17c12 -7 17 -11 27 -21c5 -7 7 -16 7 -27 c0 -12 0 -57 -79 -74c-30 0 -76 26 -76 94c0 66 81 135 197 135c72 0 181 -32 181 -150c0 -53 -32 -95 -113 -133l-91 -41c-26 -11 -45 -23 -57 -37l49 7c84 0 115 -41 148 -41c20 0 33 20 39 61h35c0 -152 -68 -168 -114 -168c-17 0 -65 0 -79 7h10l-28 17 c-49 37 -69 40 -87 42z" />
+      </symbol>
+      <symbol id="E084-d1m8w8iq" viewBox="0 0 1000 1000" overflow="inherit">
+         <path transform="scale(1,-1)" d="M20 -78c84 97 114 180 134 329h170c-13 -32 -82 -132 -99 -151l-84 -97c-33 -36 -59 -63 -80 -81h162v102l127 123v-225h57v-39h-57v-34c0 -43 19 -65 57 -65v-34h-244v36c48 0 60 26 60 70v27h-203v39z" />
+      </symbol>
+   </defs>
+   <style type="text/css">#d1m8w8iq g.page-margin {font-family:Times,serif;} #d1m8w8iq g.ending, #d1m8w8iq g.fing, #d1m8w8iq g.reh, #d1m8w8iq g.tempo {font-weight:bold;} #d1m8w8iq g.dir, #d1m8w8iq g.dynam, #d1m8w8iq g.mNum {font-style:italic;} #d1m8w8iq g.label {font-weight:normal;} #d1m8w8iq path {stroke:currentColor}</style>
+   <svg class="definition-scale" color="black" viewBox="0 0 4640 2080">
+      <g class="page-margin" transform="translate(500, 500)">
+         <g id="mh1nj2s" class="mdiv pageMilestone" />
+         <g id="s1nzrqbj" class="score pageMilestone" />
+         <g id="smsjj7w" class="system">
+            <g id="l1bqllzb" class="label">
+               <text x="1150" y="630" text-anchor="end" font-size="0px">
+                  <tspan id="t1r6v2zm" class="text">
+                     <tspan font-size="405px">Canto</tspan>
+                  </tspan>
+               </text>
+            </g>
+            <g id="s14hx6yn" class="section systemMilestone" />
+            <g id="m179cgaq" class="measure">
+               <g id="sxn8sgp" class="staff">
+                  <path d="M1330 180 L3641 180" stroke-width="13" />
+                  <path d="M1330 360 L3641 360" stroke-width="13" />
+                  <path d="M1330 540 L3641 540" stroke-width="13" />
+                  <path d="M1330 720 L3641 720" stroke-width="13" />
+                  <path d="M1330 900 L3641 900" stroke-width="13" />
+                  <g id="c122d0gp" class="clef" visibility="hidden" />
+                  <g id="k1ora7e8" class="keySig">
+                     <g id="kwfjsqu" class="keyAccid">
+                        <use xlink:href="#E444-d1m8w8iq" x="1420" y="540" height="720px" width="720px" />
+                     </g>
+                     <g id="k1xzel97" class="keyAccid">
+                        <use xlink:href="#E447-d1m8w8iq" x="1533" y="810" height="720px" width="720px" />
+                     </g>
+                  </g>
+                  <g id="m7s0cj0" class="meterSig">
+                     <use xlink:href="#E084-d1m8w8iq" x="1876" y="360" height="720px" width="720px" />
+                     <use xlink:href="#E082-d1m8w8iq" x="1871" y="720" height="720px" width="720px" />
+                  </g>
+                  <g id="l4jqhnv" class="layer">
+                     <g id="r1um11rt" class="rest">
+                        <use xlink:href="#E4E4-d1m8w8iq" x="2462" y="540" height="720px" width="720px" />
+                        <g class="ledgerLines" />
+                     </g>
+                  </g>
+               </g>
+               <g id="b1laen25" class="barLine">
+                  <path d="M3628 180 L3628 900" stroke-width="27" />
+               </g>
+            </g>
+            <g id="s1i9ev3p" class="systemMilestoneEnd s14hx6yn" />
+         </g>
+         <g id="pt10oih" class="pageMilestoneEnd s1nzrqbj" />
+         <g id="p1dlocsk" class="pageMilestoneEnd mh1nj2s" />
+      </g>
+   </svg>
+</svg>
