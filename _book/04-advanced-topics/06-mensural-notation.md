@@ -2,6 +2,12 @@
 title: "Mensural notation"
 
 examples:
+    - name: ex-01
+      test-suite: mensur/mensur-05.mei
+      xpath:
+        - ".//mei:staff[1]//mei:mensur"
+      options:
+        spacingStaff: "8"
     - name: alignment-01
       test-suite: mensural/mensural-024.mei
       xpath:
@@ -16,13 +22,19 @@ examples:
         spacingStaff: "8"
 ---
 
-[in preparation]
-
 ### Duration alignment
+
+One of the unique features of Verovio is to treat mensural notation to be ternary by default. This means that when the notation type on `staffDef@notation.type` is set to `mensural.*`, duration will be aligned on a ternary basis by default. Binary alignment can be triggered with `@modusmaior="2"`, `@modusminor="2"`, `@tempus="2"`, or `@prolatio="2"`, as appropriate.
+
+{% include music-notation example="ex-01" %}
 
 ### Layout
 
+[in preparation]
+
 ### Ligatures
+
+[in preparation]
 
 ### Alignment with CMN
 

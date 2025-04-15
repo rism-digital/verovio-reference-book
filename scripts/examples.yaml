@@ -386,6 +386,16 @@
   svg-example-file: examples/04-advanced-topics/05-transposition/t-11.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: ex-01
+  test-suite: mensur/mensur-05.mei
+  xpath:
+  - ".//mei:staff[1]//mei:mensur"
+  options:
+    spacingStaff: '8'
+  mei-example-file: examples/04-advanced-topics/06-mensural-notation/ex-01.mei
+  svg-example-file: examples/04-advanced-topics/06-mensural-notation/ex-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: alignment-01
   test-suite: mensural/mensural-024.mei
   xpath:
