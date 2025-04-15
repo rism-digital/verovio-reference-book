@@ -13,7 +13,7 @@ import sys
 from typing import Dict, List
 import yaml
 
-endings = ["anl", "base", "cmn", "ges", "gestural", "log", "logical", "ratio", "pitched", "quality", "vis"] 
+endings = ["auth", "anl", "base", "cmn", "ges", "log", "names", "pitched", "quality", "ratio", "vis"] 
 
 attribute_classes_exceptions = {
     "att.time.base": "att.timeBase"
@@ -25,8 +25,8 @@ doxygen_repo_url = "https://github.com/rism-digital/verovio-doxygen"
 tmp_dir = "scripts/tmp/doxygen"
 mei_support_output_page = "./_book/05-toolkit-reference/05-mei-support.md"
 
-mei_attribute_base_url = "https://music-encoding.org/guidelines/dev/attribute-classes/"
-mei_element_base_url = "https://music-encoding.org/guidelines/dev/elements/"
+mei_attribute_base_url = "https://music-encoding.org/guidelines/v5/attribute-classes/"
+mei_element_base_url = "https://music-encoding.org/guidelines/v5/elements/"
 
 def format_attribute(vrv_attribute):
     description = """
