@@ -6,7 +6,7 @@ title: "Python"
 
 Pre-build versions of the Python version of the toolkit are available through [PyPi](https://pypi.org/project/verovio/) for every release since version 3.1.0.
 
-The Python versions for which a pre-build is provided are 3.7, 3.8, 3.9, 3.10 and 3.11. The platforms supported are macOS 10.9, Linux with [manylinux](https://github.com/pypa/manylinux) for x86-64, Win-32 and Win-amd64. 
+The Python versions for which a pre-build is provided are 3.9, 3.10, 3.11, 3.12 and 3.13. The platforms supported are macOS, Linux with [manylinux](https://github.com/pypa/manylinux) for x86-64, Win-32 and Win-amd64. 
 
 The latest release can be installed with:
 
@@ -48,6 +48,17 @@ It can also be rendered to a file:
 
 ```python
 tk.renderToSVGFile( "page.svg", 1 )
+```
+
+#### Setting the resource path
+
+The Python wheels include the resource directory and it is normally resolved by default when using the module. However, in some cases, it might be not found. This will typically raise some errors about the Bravura and the Leipzig default fonts being not found. In such cases, the resource path must be set explicitly. It should still be possible to use the resources included in the module, with:
+```python
+import verovio
+import os
+
+tk = verovio.toolkit(False);
+tk.setResourcePath(os.path.join(os.path.dirname(verovio.__file__),"data"));
 ```
 
 #### Setting options
