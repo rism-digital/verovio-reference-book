@@ -21,6 +21,10 @@ attribute_classes_exceptions = {
 
 element_exceptions = ["barLineAttr", "dots", "flag", "page", "pageElementEnd", "pages", "object", "stem", "system", "systemElementEnd", "text", "textElement", "timestampAttr", "tupletBracket", "tupletNum"]
 
+class_to_mei = {
+    "annotScore": "annot"
+}
+
 doxygen_repo_url = "https://github.com/rism-digital/verovio-doxygen"
 tmp_dir = "scripts/tmp/doxygen"
 mei_support_output_page = "./_book/05-toolkit-reference/05-mei-support.md"
@@ -68,6 +72,10 @@ def print_element(element, attributes, file):
         element = element[len("vrv::"):]
     # Change first letter to lower case (StaffGrp into staffGrp)
     element = element[0].lower() + element[1:]
+
+    # handle exceptions
+    if class_to_mei.get(element):
+        element = class_to_mei.get(element)
 
     # Skip exceptions
     if element in element_exceptions:

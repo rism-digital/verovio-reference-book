@@ -53,7 +53,7 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
-[\<annotScore\>](https://music-encoding.org/guidelines/v5/elements/annotScore.html)
+[\<annot\>](https://music-encoding.org/guidelines/v5/elements/annot.html)
 {% endcol %}
 {% col 10 %}
 [att.altSym](https://music-encoding.org/guidelines/v5/attribute-classes/att.altSym.html), [att.color](https://music-encoding.org/guidelines/v5/attribute-classes/att.color.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/v5/attribute-classes/att.linking.html), [att.partIdent](https://music-encoding.org/guidelines/v5/attribute-classes/att.partIdent.html), [att.plist](https://music-encoding.org/guidelines/v5/attribute-classes/att.plist.html), [att.staffIdent](https://music-encoding.org/guidelines/v5/attribute-classes/att.staffIdent.html), [att.startEndId](https://music-encoding.org/guidelines/v5/attribute-classes/att.startEndId.html), [att.startId](https://music-encoding.org/guidelines/v5/attribute-classes/att.startId.html), [att.timestamp.log](https://music-encoding.org/guidelines/v5/attribute-classes/att.timestamp.log.html), [att.timestamp.log](https://music-encoding.org/guidelines/v5/attribute-classes/att.timestamp.log.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html)
