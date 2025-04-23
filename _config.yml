@@ -4,7 +4,7 @@ repository: rism-digital/verovio-reference-book
 baseurl: ""
 exclude: ['scripts']
 
-verovio-version: "5.1"
+verovio-version: "5.2"
 
 markdown: kramdown
 highlighter: rouge
