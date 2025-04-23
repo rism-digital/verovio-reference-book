@@ -19,7 +19,7 @@ attribute_classes_exceptions = {
     "att.time.base": "att.timeBase"
 }
 
-element_exceptions = ["barLineAttr", "dots", "flag", "page", "pageElementEnd", "pages", "object", "stem", "system", "systemElementEnd", "text", "textElement", "timestampAttr", "tupletBracket", "tupletNum"]
+element_exceptions = ["annot", "barLineAttr", "dots", "flag", "page", "pageElementEnd", "pages", "object", "stem", "system", "systemElementEnd", "text", "textElement", "timestampAttr", "tupletBracket", "tupletNum"]
 
 class_to_mei = {
     "annotScore": "annot"
@@ -73,13 +73,13 @@ def print_element(element, attributes, file):
     # Change first letter to lower case (StaffGrp into staffGrp)
     element = element[0].lower() + element[1:]
 
-    # handle exceptions
-    if class_to_mei.get(element):
-        element = class_to_mei.get(element)
-
     # Skip exceptions
     if element in element_exceptions:
         return
+
+    # Handle name exceptions
+    if class_to_mei.get(element):
+        element = class_to_mei.get(element)
 
     # Element column
     file.write("{% row %}\n")
