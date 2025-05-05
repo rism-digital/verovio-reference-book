@@ -31,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-04-23T12:37:09+00:00" />
+<meta property="article:published_time" content="2025-05-05T08:25:32+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Toolkit methods" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-23T12:37:09+00:00","datePublished":"2025-04-23T12:37:09+00:00","description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","headline":"Toolkit methods","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-05T08:25:32+00:00","datePublished":"2025-05-05T08:25:32+00:00","description":"This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ vrv::Toolkit class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit. The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation. For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.","headline":"Toolkit methods","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/toolkit-methods.html"},"url":"/toolkit-reference/toolkit-methods.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -1912,8 +1912,11 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">toolkit</span><span class="p">.</span><span class="nf">select</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><strong>Examples for selection parameter</strong></p>
+<p><strong>Selection parameter</strong></p>
 
+<p>The JSON object can have a <code class="language-plaintext highlighter-rouge">measureRange</code>, a <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code>, or can be empty for re-setting the selection. The measure range in <code class="language-plaintext highlighter-rouge">measureRange</code> is 1-based. The position value is the index position of the measure and not the <code class="language-plaintext highlighter-rouge">measure@n</code> value. The values <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> can be used as range to specify the beginning and respectively the end of the document. When specifying <code class="language-plaintext highlighter-rouge">start</code> or <code class="language-plaintext highlighter-rouge">end</code> keys, the values must refer to the <code class="language-plaintext highlighter-rouge">measure@xml:id</code>.</p>
+
+<p>Examples of parameters:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"measureRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2-3"</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span><span class="p">{</span><span class="w"> </span><span class="nl">"measureRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"82-end"</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span><span class="p">{</span><span class="w"> </span><span class="nl">"measureRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"38"</span><span class="w"> </span><span class="p">}</span><span class="w">
