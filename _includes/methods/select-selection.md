@@ -10,3 +10,5 @@ Examples of parameters:
 { "start": "measure-L337", "end": "measure-L355" }
 {}
 ```
+
+See also: [Score content selection](/interactive-notation/content-selection.html)
