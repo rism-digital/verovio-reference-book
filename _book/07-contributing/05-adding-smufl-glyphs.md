@@ -35,3 +35,7 @@ To do so, you need to copy to `./fonts/Leipzig` the new Leipzig files:
 * `leipzig_metadata.json`
 
 The glyphs will be extracted from the SVG font by running the script `./fonts/generate_all.sh` (from `./fonts/`). This will extract all the glyphs from the SVG font file and calculate the their bounding boxes. When this is done you will see your glyphs in `./data/` and in `./include/vrv/smufl.h`. The CSS font files will also be updated.
+
+When using a custom FontForge binary (e.g. latest [AppImage](https://fontforge.org/en-US/downloads/gnulinux-dl/)) the specific location needs to be provided to `generate.py` via the `--fontforge <path-to-fontforge-binary>` command line argument. When using `generate_all.sh`, all command line arguments are passed on to the python scripts.
+
+Example: `./generate_all.sh --fontforge /mnt/linux-data/henry/Apps/FontForge-2023-01-01-a1dad3e-x86_64.AppImage`
