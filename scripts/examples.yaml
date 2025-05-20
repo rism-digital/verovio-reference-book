@@ -298,6 +298,16 @@
   svg-example-file: examples/04-advanced-topics/04-smufl/keySig-01.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: custom-01
+  options:
+    xmlIdSeed: 0
+    fontAddCustom:
+    - scripts/GoldenAge.zip
+  test-suite: font/font-002.mei
+  mei-example-file: examples/04-advanced-topics/04-smufl/custom-01.mei
+  svg-example-file: examples/04-advanced-topics/04-smufl/custom-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: t-01
   test-suite: chord/chord-005.mei
   xpath:

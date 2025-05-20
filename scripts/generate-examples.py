@@ -3,6 +3,7 @@ import os
 import sys
 import pprint
 from typing import Dict, List
+import json
 import logging
 
 import requests
@@ -128,7 +129,7 @@ if __name__ == "__main__":
             if meta:
                 # Overwrite any pre-defined options with the options from the MEI file.
                 log.info("Found some locally-defined meta options: %s", meta)
-                metaOptions = meta
+                metaOptions: Dict = json.loads(meta)
                 options.update(metaOptions)
 
             # If the example has additional options, load them.

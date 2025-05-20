@@ -68,6 +68,13 @@ examples:
       test-suite: keysig/keysig-005.mei
       xpath:
         - ".//mei:keySig"
+
+    - name: custom-01
+      options:
+        xmlIdSeed: 0
+        fontAddCustom:
+          - 'scripts/GoldenAge.zip'
+      test-suite: font/font-002.mei
 ---
 
 Most music notation software applications use music fonts for rendering music symbols or parts of music symbols. These may include clefs, note heads, time signatures or articulation signs. However, these fonts often have incompatible code points – the internal location within the font that points to a symbol. They are most of the time developed with no common agreement on which code point represents which character. The code point for the G clef symbol in one font may be the code point used for a quarter rest in another, or may be simply undefined. Furthermore, they usually have their own metric and positioning system for specifying what the size of the glyph is and where its baseline is. Because of this, music fonts are difficult to use interchangeably.
@@ -157,3 +164,28 @@ For some elements, Verovio support the use of alternate SMuFL glyphs through the
 {% include music-notation example="turn-01" %}
 
 {% include music-notation example="keySig-01" %}
+
+### Custom fonts
+
+#### Load all fonts
+
+The `--font-load-all` boolean option makes Verovio loads all the music fonts available in the resource directory. That way, a specific font other than the default font `Leipzig` or the font set with the `--font` option can be used by specifying a `@fontname` value. At this stage, this is supporting only on `clef` and `meterSig`.
+
+#### Set a specific fall back
+
+Only Bravura and Leipzig have a complete coverage of the glyphs used in Verovio. The `--font-fallback` parameter option allows to choose between `Leipzig` (default) or `Bravura` as the fallback font to be used when the font chosen is missing a glyph.
+
+#### Loading custom fonts
+
+The `--font-add-custom` parameter option allows to load and use an external font not available in the resource directory. The option is repeatable, which means that more than one external font can be loaded. For bindings that use JSON options, the value(s) must be passed in an array.
+
+The custom font must be archived in a ZIP file containing the files produced by the font script Verovio provides for extracting relevant information from an SVG font file and the corresponding SMuFL metadata. These files are:
+* The XML file with bounding boxes of the included glyphs.
+* The XML snippets for each glyph
+* The CSS file of the font for text
+
+The ZIP filename must correspond to the name of the font. For the JavaScript binding, the ZIP file must be encoded in Base64 and passed as a URL or as a based64 string.
+
+Example rendered with `--font-fallback Bravura` and `--font-add-custom GoldenAge.zip` (available [here](https://github.com/rism-digital/verovio.org/tree/gh-pages/examples/fonts/custom)) and all fonts loaded with `--font-load-all`. The elements in olive have a `@fontame="Petaluma"`. The clef in orange is a `Bravura` fallback.
+
+{% include music-notation-only example="custom-01" %}
