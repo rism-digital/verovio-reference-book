@@ -19,7 +19,7 @@ attribute_classes_exceptions = {
     "att.time.base": "att.timeBase"
 }
 
-element_exceptions = ["annot", "barLineAttr", "dots", "flag", "page", "pageElementEnd", "pages", "object", "stem", "system", "systemElementEnd", "text", "textElement", "timestampAttr", "tupletBracket", "tupletNum"]
+element_exceptions = ["annot", "barLineAttr", "divLineAttr", "dots", "flag", "genericLayerElement", "object", "page", "pageMilestoneEnd", "pages", "pitchInflection", "stem", "system", "systemMilestoneEnd", "text", "textElement", "timestampAttr", "tupletBracket", "tupletNum"]
 
 class_to_mei = {
     "annotScore": "annot"
