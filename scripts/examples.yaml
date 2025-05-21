@@ -197,7 +197,7 @@
 - name: ex-01
   test-suite: dynam/dynam-003.mei
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
   mei-example-file: examples/04-advanced-topics/04-smufl/ex-01.mei
   svg-example-file: examples/04-advanced-topics/04-smufl/ex-01.svg
   svg-example-exists: true
@@ -205,7 +205,7 @@
 - name: ex-02
   test-suite: dynam/dynam-003.mei
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
     font: Bravura
   mei-example-file: examples/04-advanced-topics/04-smufl/ex-02.mei
   svg-example-file: examples/04-advanced-topics/04-smufl/ex-02.svg
@@ -214,7 +214,7 @@
 - name: ex-03
   test-suite: dynam/dynam-003.mei
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
     font: Gootville
   mei-example-file: examples/04-advanced-topics/04-smufl/ex-03.mei
   svg-example-file: examples/04-advanced-topics/04-smufl/ex-03.svg
@@ -223,7 +223,7 @@
 - name: ex-04
   test-suite: dynam/dynam-003.mei
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
     font: Leland
   mei-example-file: examples/04-advanced-topics/04-smufl/ex-04.mei
   svg-example-file: examples/04-advanced-topics/04-smufl/ex-04.svg
@@ -232,7 +232,7 @@
 - name: ex-05
   test-suite: artic/artic-001.mei
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
     scale: 60
   mei-example-file: examples/04-advanced-topics/04-smufl/ex-05.mei
   svg-example-file: examples/04-advanced-topics/04-smufl/ex-05.svg
@@ -241,7 +241,7 @@
 - name: ex-06
   test-suite: artic/artic-001.mei
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
     scale: 60
     font: Bravura
   mei-example-file: examples/04-advanced-topics/04-smufl/ex-06.mei
@@ -251,7 +251,7 @@
 - name: lyric-01
   test-suite: lyric/lyric-007.mei
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
   xpath:
   - ".//mei:note[1]/mei:verse"
   mei-example-file: examples/04-advanced-topics/04-smufl/lyric-01.mei
@@ -260,7 +260,7 @@
   mei-example-exists: true
 - name: tempo-01
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
   test-suite: tempo/tempo-001.mei
   xpath:
   - ".//mei:tempo"
@@ -270,7 +270,7 @@
   mei-example-exists: true
 - name: dynam-01
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
   test-suite: dynam/dynam-006.mei
   xpath:
   - ".//mei:dynam"
@@ -280,7 +280,7 @@
   mei-example-exists: true
 - name: turn-01
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
   test-suite: turn/turn-003.mei
   xpath:
   - ".//mei:turn"
@@ -290,7 +290,7 @@
   mei-example-exists: true
 - name: keySig-01
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
   test-suite: keysig/keysig-005.mei
   xpath:
   - ".//mei:keySig"
@@ -300,10 +300,12 @@
   mei-example-exists: true
 - name: custom-01
   options:
-    xmlIdSeed: 0
+    xmlIdSeed: 1
     fontAddCustom:
     - scripts/GoldenAge.zip
   test-suite: font/font-002.mei
+  xpath:
+  - ".//mei:clef[@fontname='Petaluma']"
   mei-example-file: examples/04-advanced-topics/04-smufl/custom-01.mei
   svg-example-file: examples/04-advanced-topics/04-smufl/custom-01.svg
   svg-example-exists: true

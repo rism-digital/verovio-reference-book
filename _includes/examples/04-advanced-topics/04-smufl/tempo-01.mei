@@ -1,1 +1,1 @@
-<tempo midi.bpm="70" staff="1" tstamp="1.000000">Andante con moto <rend fontfam="smufl"></rend> = 70</tempo>
+<tempo staff="1" tstamp="1" midi.bpm="70">Andante con moto <rend glyph.auth="smufl"></rend> = 70</tempo>

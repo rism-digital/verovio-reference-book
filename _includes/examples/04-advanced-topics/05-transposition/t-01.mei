@@ -1,7 +1,7 @@
 <score>
   <scoreDef>
     <staffGrp>
-      <staffDef n="1" lines="5" clef.shape="G" clef.line="2" meter.sym="common" keysig="0"/>
+      <staffDef n="1" lines="5" clef.shape="G" clef.line="2" keysig="0" meter.sym="common"/>
     </staffGrp>
   </scoreDef>
   <section>

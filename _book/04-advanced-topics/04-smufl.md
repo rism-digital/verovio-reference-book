@@ -5,76 +5,78 @@ examples:
     - name: ex-01
       test-suite: dynam/dynam-003.mei
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
     - name: ex-02
       test-suite: dynam/dynam-003.mei
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
         font: "Bravura"
     - name: ex-03
       test-suite: dynam/dynam-003.mei
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
         font: "Gootville"
     - name: ex-04
       test-suite: dynam/dynam-003.mei
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
         font: "Leland"
 
     - name: ex-05
       test-suite: artic/artic-001.mei
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
         scale: 60
     - name: ex-06
       test-suite: artic/artic-001.mei
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
         scale: 60
         font: "Bravura"
 
     - name: lyric-01
       test-suite: lyric/lyric-007.mei
       options:
-        xmlIdSeed: 0  
+        xmlIdSeed: 1  
       xpath:
         - ".//mei:note[1]/mei:verse"
 
     - name: tempo-01
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
       test-suite: tempo/tempo-001.mei
       xpath:
         - ".//mei:tempo"
 
     - name: dynam-01
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
       test-suite: dynam/dynam-006.mei
       xpath:
         - ".//mei:dynam"
 
     - name: turn-01
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
       test-suite: turn/turn-003.mei
       xpath:
         - ".//mei:turn"
 
     - name: keySig-01
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
       test-suite: keysig/keysig-005.mei
       xpath:
         - ".//mei:keySig"
 
     - name: custom-01
       options:
-        xmlIdSeed: 0
+        xmlIdSeed: 1
         fontAddCustom:
           - 'scripts/GoldenAge.zip'
       test-suite: font/font-002.mei
+      xpath:
+        - ".//mei:clef[@fontname='Petaluma']"
 ---
 
 Most music notation software applications use music fonts for rendering music symbols or parts of music symbols. These may include clefs, note heads, time signatures or articulation signs. However, these fonts often have incompatible code points – the internal location within the font that points to a symbol. They are most of the time developed with no common agreement on which code point represents which character. The code point for the G clef symbol in one font may be the code point used for a quarter rest in another, or may be simply undefined. Furthermore, they usually have their own metric and positioning system for specifying what the size of the glyph is and where its baseline is. Because of this, music fonts are difficult to use interchangeably.
@@ -188,4 +190,4 @@ The ZIP filename must correspond to the name of the font. For the JavaScript bin
 
 Example rendered with `--font-fallback Bravura` and `--font-add-custom GoldenAge.zip` (available [here](https://github.com/rism-digital/verovio.org/tree/gh-pages/examples/fonts/custom)) and all fonts loaded with `--font-load-all`. The elements in olive have a `@fontame="Petaluma"`. The clef in orange is a `Bravura` fallback.
 
-{% include music-notation-only example="custom-01" %}
+{% include music-notation example="custom-01" %}
