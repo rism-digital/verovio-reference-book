@@ -13,7 +13,7 @@ You can regenerate the LibMEI code with a compiled ODD as input.
 Go to the `./libmei` directory and run:
 
 ```bash
-python tools/parseschema2.py -c config.yml ./mei/develop/mei-verovio_compiled.odd
+python tools/parseschema2.py -c config.yml ./mei/mei-verovio_compiled.odd
 ```
 
 ### Customization
