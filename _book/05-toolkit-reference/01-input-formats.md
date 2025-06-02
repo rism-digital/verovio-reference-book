@@ -925,6 +925,6 @@ Finally, a CMME `Proportion` will converted to MEI `proportion` with no `@type`,
 
 #### Coloration and color change
 
-Coloration in CMME is encoded with `Colored` on `Note`, and is converted to MEI `@colored` . `ColorChange` is the change of color, e.g., a change of ink. P
+Coloration in CMME is encoded with `Colored` on `Note`, and is converted to MEI `@colored` . 
 
 The CMME `ColorChange` (i.e., the change of the color of the ink) is converted by applying the color (non-black) to `note@color` and `rest@color`. The possible colors are `black` (assumed to be the default and not encoded), `red`, `yellow`, `green` or `blue`.
