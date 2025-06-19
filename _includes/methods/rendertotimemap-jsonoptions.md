@@ -7,7 +7,7 @@
 
 Examples:
 ```cpp
-std::string jsonOptions = "{'includeMeasures': 'true'}";
+std::string jsonOptions = "{'includeMeasures': true}";
 ```
 ```python
 jsonOptions = {'includeMeasures': True}
