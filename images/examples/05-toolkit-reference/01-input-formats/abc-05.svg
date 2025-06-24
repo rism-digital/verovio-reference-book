@@ -1,6 +1,9 @@
 <svg width="945px" height="248px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
-   <desc>Engraved by Verovio 5.3.0-5d8be2e</desc>
+   <desc>Engraved by Verovio 5.3.2-4f22bb0</desc>
    <defs>
+      <g id="E044-l19nj5e9">
+         <path transform="scale(1,-1)" d="M0 0c0 28 22 50 50 50s50 -22 50 -50s-22 -50 -50 -50s-50 22 -50 50z" />
+      </g>
       <g id="E081-l19nj5e9">
          <path transform="scale(1,-1)" d="M68 -250v36c23 0 40 6 49 18c8 14 12 33 12 57v250l-82 -129l-27 13l107 255h128v-394c0 -24 5 -42 14 -53s25 -17 47 -17v-36h-248z" />
       </g>
@@ -24,9 +27,6 @@
       </g>
       <g id="E240-l19nj5e9">
          <path transform="scale(1,-1)" d="M179 -646c15 29 29 55 46 102c18 49 30 108 30 138c0 105 -80 173 -168 200c-18 5 -47 9 -87 16v190h22c8 0 33 -61 71 -95c4 -3 -2 3 61 -56c62 -58 122 -137 122 -241c0 -38 -13 -106 -35 -163c-20 -51 -43 -99 -66 -132c-6 -5 -10 -7 -13 -7s-5 2 -5 5l4 10 c1 3 14 25 18 33z" />
-      </g>
-      <g id="E044-l19nj5e9">
-         <path transform="scale(1,-1)" d="M0 0c0 28 22 50 50 50s50 -22 50 -50s-22 -50 -50 -50s-50 22 -50 50z" />
       </g>
    </defs>
    <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 path {stroke:currentColor}</style>
