@@ -88,3 +88,10 @@ Run `./main` or (without having installed the library or changed your default `L
 ```sh
 LD_LIBRARY_PATH=/path-to-the-library-dir ./main
 ```
+
+
+### Using Verovio with Qt
+
+Using Verovio with [Qt](https://www.qt.io) is quite straighforward. It needs to be intgrated as a library in the Qt project. This gives access to the C++ `vrv::Toolkit` class. The rendering can be achieved with a Qt `WebView`.
+
+See this [demo application](https://github.com/rism-digital/verovio-qt-demo) repository for a complete example on how to do it.
