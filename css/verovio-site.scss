@@ -93,6 +93,12 @@ div.highlight {
         content: "C++";
     }
 }
+.language-objc {
+    div.highlight::before {
+        background: rgb(104, 58, 101);
+        content: "Objective-C"
+    }
+}
 .language-js {
     div.highlight::before {
         background: rgb(187, 160, 7);
@@ -109,6 +115,12 @@ div.highlight {
     div.highlight::before {
         background: rgb(187, 160, 7);
         content: "Json"
+    }
+}
+.language-kotlin {
+    div.highlight::before {
+        background: rgb(124, 106, 5);
+        content: "Kotlin"
     }
 }
 

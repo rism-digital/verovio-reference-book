@@ -53,13 +53,13 @@ pod install
 
 To use Verovio in your iOS project import
 
-```cpp
+```objc
 #import <Verovio/Verovio-umbrella.h>
 ```
 
 Then you can create an Objective-C wrapper with the following `VerovioToolkitWrapper.h/mm` files (here with a few sample methods):
 
-```c
+```objc
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 ```
 
-```c
+```objc
 #import "VerovioToolkitWrapper.h"
 
 // Include the umbrella header
