@@ -32,7 +32,7 @@ On Android, it is recommended to use the Liberation font since Times is not avai
 
 The `app/build.gradle.kts` includes a step to generate the swig binding for Java and to build the toolkit:
 
-```
+```kotlin
 ////////////////////////////////////////////
 // Generate the java and cpp files using swig and write them into the project
 val swigOutputJava = file("src/main/java/org/verovio/lib")
@@ -78,7 +78,7 @@ tasks.named("clean") {
 
 The file also includes a step to copy the resource directory:
 
-```
+```kotlin
 ////////////////////////////////////////////
 // Copy the verovio resource directory from the submodule to the project
 tasks.register<Copy>("copyVerovioData") {

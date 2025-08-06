@@ -28,6 +28,7 @@ if let resourceURL = bundle.url(forResource: "data", withExtension: nil) {
 ```
 
 Loading some data and rendering will work with the usual methods of the toolkit:
+
 ```swift
 let res = toolkit.loadData(data)
 let svg = toolkit.renderToSVG(1, false)
@@ -35,7 +36,7 @@ let svg = toolkit.renderToSVG(1, false)
 
 ### Objective-C with CocoaPods
 
-The simplest way to use Verovio in Objective-C is to use [CocoaPods](http://cocoapods.org/) to install `Verovio` by adding it to your to your `Podfile`:
+The simplest way to use Verovio in Objective-C is to use [CocoaPods](http://cocoapods.org/) to install `Verovio` by adding it to your `Podfile`:
 
 ```ruby
 platform :ios, '16.0'
