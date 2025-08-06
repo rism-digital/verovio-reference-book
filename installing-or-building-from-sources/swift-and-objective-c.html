@@ -31,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-08-06T09:36:07+00:00" />
+<meta property="article:published_time" content="2025-08-06T13:51:47+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Swift and Objective-C" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:36:07+00:00","datePublished":"2025-08-06T09:36:07+00:00","description":"Swift","headline":"Swift and Objective-C","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/swift-and-objective-c.html"},"url":"/installing-or-building-from-sources/swift-and-objective-c.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T13:51:47+00:00","datePublished":"2025-08-06T13:51:47+00:00","description":"Swift","headline":"Swift and Objective-C","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/swift-and-objective-c.html"},"url":"/installing-or-building-from-sources/swift-and-objective-c.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -198,13 +198,14 @@
 </code></pre></div></div>
 
 <p>Loading some data and rendering will work with the usual methods of the toolkit:</p>
+
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">res</span> <span class="o">=</span> <span class="n">toolkit</span><span class="o">.</span><span class="nf">loadData</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">svg</span> <span class="o">=</span> <span class="n">toolkit</span><span class="o">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="objective-c-with-cocoapods">Objective-C with CocoaPods</h3>
 
-<p>The simplest way to use Verovio in Objective-C is to use <a href="http://cocoapods.org/">CocoaPods</a> to install <code class="language-plaintext highlighter-rouge">Verovio</code> by adding it to your to your <code class="language-plaintext highlighter-rouge">Podfile</code>:</p>
+<p>The simplest way to use Verovio in Objective-C is to use <a href="http://cocoapods.org/">CocoaPods</a> to install <code class="language-plaintext highlighter-rouge">Verovio</code> by adding it to your <code class="language-plaintext highlighter-rouge">Podfile</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'16.0'</span>
 <span class="n">use_frameworks!</span>
