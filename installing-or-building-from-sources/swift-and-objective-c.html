@@ -22,22 +22,22 @@
         <script src="/assets/javascript/bootstrap.min.js"></script>
 
         <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Other bindings | Reference book for Verovio</title>
+<title>Swift and Objective-C | Reference book for Verovio</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Other bindings" />
+<meta property="og:title" content="Swift and Objective-C" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Java" />
-<meta property="og:description" content="Java" />
+<meta name="description" content="Swift" />
+<meta property="og:description" content="Swift" />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-08-04T12:12:06+00:00" />
+<meta property="article:published_time" content="2025-08-06T09:24:22+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
-<meta property="twitter:title" content="Other bindings" />
+<meta property="twitter:title" content="Swift and Objective-C" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-04T12:12:06+00:00","datePublished":"2025-08-04T12:12:06+00:00","description":"Java","headline":"Other bindings","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/other-bindings.html"},"url":"/installing-or-building-from-sources/other-bindings.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:24:22+00:00","datePublished":"2025-08-06T09:24:22+00:00","description":"Swift","headline":"Swift and Objective-C","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/swift-and-objective-c.html"},"url":"/installing-or-building-from-sources/swift-and-objective-c.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -129,13 +129,16 @@
 <a class="toc-item toc-section " href="/installing-or-building-from-sources/python.html">Python</a>
     
 
-<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/other-bindings.html">Other bindings</a>
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/java-and-android.html">Other bindings</a>
+    
+
+<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/swift-and-objective-c.html">Swift and Objective-C</a>
     
         
         
-<a class="toc-item toc-subsection" href="#java">Java</a>
+<a class="toc-item toc-subsection" href="#swift">Swift</a>
 
-<a class="toc-item toc-subsection" href="#cocoapods">CocoaPods</a>
+<a class="toc-item toc-subsection" href="#objective-c-with-cocoapods">Objective-C with CocoaPods</a>
 
     
 
@@ -167,33 +170,41 @@
 
     <div class="col-md-9" id="content">
         
-        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/06-installing-or-building-from-sources/04-other-bindings.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/06-installing-or-building-from-sources/05-swift-and-objective-c.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
         
         
-        <h2>Other bindings</h2>
-        <h3 id="java">Java</h3>
+        <h2>Swift and Objective-C</h2>
+        <h3 id="swift">Swift</h3>
 
-<p>To build the Java toolkit you need to have swig and swig-java installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) as well as <a href="https://maven.apache.org/">Maven</a>. You need to run:</p>
+<p>The Swift binding of Verovio can easily be install with the Swift Package Manager. In xcode, this can be done with adding a package dependency (e.g., through <strong>File &gt; Add Package Dependency…</strong>) and by providing the Verovio GitHub repository. You might need to add an empty <code class="language-plaintext highlighter-rouge">Bridging-Header.h</code> file to your project.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings/java
-mvn package
-mvn package
+<p>Once this is done, Verovio is available in Swift with:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">VerovioToolkit</span>
+
+<span class="k">var</span> <span class="nv">toolkit</span> <span class="o">=</span> <span class="kt">VerovioToolkit</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p>Note the <code class="language-plaintext highlighter-rouge">mvn package</code> command needs to be run twice. You can test it with the MEI and PAE examples. For example – replace <code class="language-plaintext highlighter-rouge">X.X.X</code> with the appropriate version number:</p>
+<p>Note that the constructor in the Swift binding does not set the resource path. You need to do it explicitly by calling <code class="language-plaintext highlighter-rouge">toolkit.setResourcePath</code>. The nice thing, however, is that the Swift binding provides a <code class="language-plaintext highlighter-rouge">VerovioResources.bundle</code> with the Verovio resources. So setting the resources will look like:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>example-mei
-javac <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main.java 
-java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">bundle</span> <span class="o">=</span> <span class="kt">VerovioResources</span><span class="o">.</span><span class="n">bundle</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">resourceURL</span> <span class="o">=</span> <span class="n">bundle</span><span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="s">"data"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">resourcePath</span> <span class="o">=</span> <span class="n">resourceURL</span><span class="o">.</span><span class="nf">deletingLastPathComponent</span><span class="p">()</span><span class="o">.</span><span class="n">path</span>
+    <span class="k">let</span> <span class="nv">_</span> <span class="o">=</span> <span class="n">toolkit</span><span class="o">.</span><span class="nf">setResourcePath</span><span class="p">(</span><span class="n">resourcePath</span> <span class="o">+</span> <span class="s">"/data"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Could not find resource URL for 'data'"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
-<p>This should write an <code class="language-plaintext highlighter-rouge">output.svg</code> file in the current directory. The PAE example will write the SVG to the standard output.</p>
+<p>Loading some data and rendering will work with the usual methods of the toolkit:</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">res</span> <span class="o">=</span> <span class="n">toolkit</span><span class="o">.</span><span class="nf">loadData</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">svg</span> <span class="o">=</span> <span class="n">toolkit</span><span class="o">.</span><span class="nf">renderToSVG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+</code></pre></div></div>
 
-<p>See <a href="https://github.com/rism-ch/verovio/issues/996">this</a> issue for SVG output problems on non US Ubuntu installations.</p>
+<h3 id="objective-c-with-cocoapods">Objective-C with CocoaPods</h3>
 
-<h3 id="cocoapods">CocoaPods</h3>
-
-<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code class="language-plaintext highlighter-rouge">Verovio</code> by adding it to your to your <code class="language-plaintext highlighter-rouge">Podfile</code>:</p>
+<p>The simplest way to use Verovio in Objective-C is to use <a href="http://cocoapods.org/">CocoaPods</a> to install <code class="language-plaintext highlighter-rouge">Verovio</code> by adding it to your to your <code class="language-plaintext highlighter-rouge">Podfile</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'16.0'</span>
 <span class="n">use_frameworks!</span>
@@ -212,14 +223,86 @@ java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import &lt;Verovio/Verovio-umbrella.h&gt;
 </span></code></pre></div></div>
 
-<p>See <a href="https://github.com/Noroxs/VerovioExample">https://github.com/Noroxs/VerovioExample</a> for an example how to use it. To build and run the example, you need to:</p>
+<p>Then you can create an Objective-C wrapper with the following <code class="language-plaintext highlighter-rouge">VerovioToolkitWrapper.h/mm</code> files (here with a few sample methods):</p>
 
-<ul>
-  <li>Navigate in the Terminal to the cloned directory</li>
-  <li>Execute pod update</li>
-  <li>Open the VerovioExample.xcworkspace and NOT the VerovioExample.xcodeproj</li>
-  <li>Build and Run on any simulator or device</li>
-</ul>
+<pre><code class="language-objective-c">#import &lt;Foundation/Foundation.h&gt;
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface VerovioToolkitWrapper : NSObject
+
+- (instancetype)init;
+- (NSInteger)getPageCount;
+- (NSString *)getVersion;
+- (BOOL)loadData:(NSString *)data;
+- (void)redoLayout;
+- (NSString *)renderToSVG:(NSInteger)pageNo;
+- (void)setOptions:(nullable NSString *)jsonOptions;
+
+@end
+
+NS_ASSUME_NONNULL_END
+</code></pre>
+
+<pre><code class="language-objective-c">#import "VerovioToolkitWrapper.h"
+
+// Include the umbrella header
+#import &lt;Verovio/Verovio-umbrella.h&gt;
+
+// Include the C++ Verovio header
+#include &lt;verovio/toolkit.h&gt;
+
+
+@implementation VerovioToolkitWrapper {
+    std::unique_ptr&lt;vrv::Toolkit&gt; toolkit;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        NSBundle *verovioBundle = [NSBundle bundleWithIdentifier:@"digital.rism.VerovioFramework"];
+        //NSLog(@"Bundle path: %@", verovioBundle.bundlePath);
+        NSString *resourcePath = [verovioBundle URLsForResourcesWithExtension:@"xml"
+            subdirectory:@"data"]
+            .firstObject.URLByDeletingLastPathComponent.path;
+
+        // Obviously it would be good to check that verovioBundle and resourcePath are not nil
+        toolkit = std::make_unique&lt;vrv::Toolkit&gt;(false);
+        toolkit-&gt;SetResourcePath([resourcePath cStringUsingEncoding:NSUTF8StringEncoding]);
+    }
+    return self;
+}
+
+- (NSInteger)getPageCount {
+    return toolkit-&gt;GetPageCount();
+}
+
+- (NSString *)getVersion {
+    std::string version = toolkit-&gt;GetVersion();
+    return [NSString stringWithUTF8String:version.c_str()];
+}
+
+- (BOOL)loadData:(NSString *)data {
+    std::string input = [data UTF8String];
+    return toolkit-&gt;LoadData(input);
+}
+
+- (NSString *)renderToSVG:(NSInteger)pageNo {
+    std::string svg = toolkit-&gt;RenderToSVG((int)pageNo);
+    return [NSString stringWithUTF8String:svg.c_str()];
+}
+
+- (void)redoLayout {
+    toolkit-&gt;RedoLayout();
+}
+
+- (void)setOptions:(nullable NSString *)jsonOptions {
+    std::string options = jsonOptions ? [jsonOptions UTF8String] : "";
+    toolkit-&gt;SetOptions(options);
+}
+
+@end
+</code></pre>
 
     </div>
 </div>

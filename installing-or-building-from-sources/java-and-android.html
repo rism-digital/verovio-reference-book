@@ -22,22 +22,22 @@
         <script src="/assets/javascript/bootstrap.min.js"></script>
 
         <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Repetition expansion | Reference book for Verovio</title>
+<title>Other bindings | Reference book for Verovio</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Repetition expansion" />
+<meta property="og:title" content="Other bindings" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="[in preparation]" />
-<meta property="og:description" content="[in preparation]" />
+<meta name="description" content="Java" />
+<meta property="og:description" content="Java" />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-08-06T09:24:22+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
-<meta property="twitter:title" content="Repetition expansion" />
+<meta property="twitter:title" content="Other bindings" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:24:22+00:00","datePublished":"2025-08-06T09:24:22+00:00","description":"[in preparation]","headline":"Repetition expansion","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/advanced-topics/expansions.html"},"url":"/advanced-topics/expansions.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:24:22+00:00","datePublished":"2025-08-06T09:24:22+00:00","description":"Java","headline":"Other bindings","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/java-and-android.html"},"url":"/installing-or-building-from-sources/java-and-android.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -112,41 +112,42 @@
 
     <a class="toc-item" href="/advanced-topics/">Beyond tutorials: Advanced topics</a>
     
-        
-        
-<a class="toc-item toc-section " href="/advanced-topics/">Introduction</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/internal-structure.html">Internal structure</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/controlling-the-svg-output.html">Controlling the SVG output</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/layout-options.html">Layout options</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/smufl.html">SMuFL fonts</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/transposition.html">Transposition</a>
-    
-
-<a class="toc-item toc-section " href="/advanced-topics/mensural-notation.html">Mensural notation</a>
-    
-
-<a class="toc-item toc-section selected" href="/advanced-topics/expansions.html">Repetition expansion</a>
-    
-        
-        
-    
-
-    
 
     <a class="toc-item" href="/toolkit-reference/input-formats.html">Toolkit Reference</a>
     
 
     <a class="toc-item" href="/installing-or-building-from-sources/command-line.html">Installing or building from sources</a>
+    
+        
+        
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/command-line.html">Command-line version</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/javascript-and-webassembly.html">JavaScript and WebAssembly</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/python.html">Python</a>
+    
+
+<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/java-and-android.html">Other bindings</a>
+    
+        
+        
+<a class="toc-item toc-subsection" href="#java">Java</a>
+
+<a class="toc-item toc-subsection" href="#cocoapods">CocoaPods</a>
+
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/swift-and-objective-c.html">Swift and Objective-C</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/library.html">Using as a library</a>
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/troubleshooting.html">Troubleshooting</a>
+    
+
     
 
     <a class="toc-item" href="/contributing/guidelines.html">Contributing</a>
@@ -169,11 +170,59 @@
 
     <div class="col-md-9" id="content">
         
-        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/04-advanced-topics/07-expansions.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/06-installing-or-building-from-sources/04-java-and-android.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
         
         
-        <h2>Repetition expansion</h2>
-        <p>[in preparation]</p>
+        <h2>Other bindings</h2>
+        <h3 id="java">Java</h3>
+
+<p>To build the Java toolkit you need to have swig and swig-java installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) as well as <a href="https://maven.apache.org/">Maven</a>. You need to run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings/java
+mvn package
+mvn package
+</code></pre></div></div>
+
+<p>Note the <code class="language-plaintext highlighter-rouge">mvn package</code> command needs to be run twice. You can test it with the MEI and PAE examples. For example – replace <code class="language-plaintext highlighter-rouge">X.X.X</code> with the appropriate version number:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>example-mei
+javac <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main.java 
+java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
+</code></pre></div></div>
+
+<p>This should write an <code class="language-plaintext highlighter-rouge">output.svg</code> file in the current directory. The PAE example will write the SVG to the standard output.</p>
+
+<p>See <a href="https://github.com/rism-ch/verovio/issues/996">this</a> issue for SVG output problems on non US Ubuntu installations.</p>
+
+<h3 id="cocoapods">CocoaPods</h3>
+
+<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code class="language-plaintext highlighter-rouge">Verovio</code> by adding it to your to your <code class="language-plaintext highlighter-rouge">Podfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'16.0'</span>
+<span class="n">use_frameworks!</span>
+<span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
+	<span class="n">pod</span> <span class="s1">'Verovio'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'https://github.com/rism-digital/verovio.git'</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">'master'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Then, run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>To use Verovio in your iOS project import</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import &lt;Verovio/Verovio-umbrella.h&gt;
+</span></code></pre></div></div>
+
+<p>See <a href="https://github.com/Noroxs/VerovioExample">https://github.com/Noroxs/VerovioExample</a> for an example how to use it. To build and run the example, you need to:</p>
+
+<ul>
+  <li>Navigate in the Terminal to the cloned directory</li>
+  <li>Execute pod update</li>
+  <li>Open the VerovioExample.xcworkspace and NOT the VerovioExample.xcodeproj</li>
+  <li>Build and Run on any simulator or device</li>
+</ul>
 
     </div>
 </div>
