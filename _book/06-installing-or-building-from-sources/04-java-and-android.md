@@ -1,5 +1,5 @@
 ---
-title: "Other bindings"
+title: "Java and Android"
 ---
 
 ### Java
@@ -24,33 +24,67 @@ This should write an `output.svg` file in the current directory. The PAE example
 
 See [this](https://github.com/rism-ch/verovio/issues/996) issue for SVG output problems on non US Ubuntu installations.
 
-### CocoaPods
+### Android
 
-You can use [CocoaPods](http://cocoapods.org/) to install `Verovio` by adding it to your to your `Podfile`:
+The simplest way to use Verovio in Android is to use the Java bindings provided by Verovio. You can have it generated and compiled directly in Android Studio. The [sample application repository](https://github.com/rism-digital/verovio-android-demo) provides a complete example on how to use it, with Verovio included as a submodule in `external/verovio`. You need swig to be installed on your machine.
 
-```ruby
-platform :ios, '16.0'
-use_frameworks!
-target 'MyApp' do
-	pod 'Verovio', :git => 'https://github.com/rism-digital/verovio.git', :branch => 'master'
-end
+The `app/build.gradle.kts` includes a step to generate the swig binding for Java and to build the toolkit:
+
+```
+////////////////////////////////////////////
+// Generate the java and cpp files using swig and write them into the project
+val swigOutputJava = file("src/main/java/org/verovio/lib")
+val swigOutputCpp = file("src/main/cpp/verovio_wrap.cxx")
+val swigInterfaceFile = file("${rootDir.absolutePath}/external/verovio/bindings/java/verovio.i")
+
+tasks.register<Exec>("generateSwigBindings") {
+    group = "build"
+    description = "Generate JNI bindings with SWIG"
+
+    // Adjust working directory to the project root
+    workingDir = rootProject.projectDir
+
+    // Ensure output directories exist
+    doFirst {
+        swigOutputJava.mkdirs()
+        swigOutputCpp.parentFile.mkdirs()
+    }
+
+    commandLine = listOf(
+        "/opt/homebrew/bin/swig", // Change to "/bin/swig" or something else if needed
+        "-java",
+        "-c++",
+        "-package", "org.verovio.lib",
+        "-outdir", swigOutputJava.absolutePath,
+        "-o", swigOutputCpp.absolutePath,
+        swigInterfaceFile.absolutePath
+    )
+}
+
+// Ensure SWIG runs before compilation
+tasks.named("preBuild") {
+    dependsOn("generateSwigBindings")
+}
+
+tasks.named("clean") {
+    doFirst {
+        delete("src/main/java/org/verovio/lib/*")
+        delete("src/main/cpp/verovio_wrap.cxx")
+    }
+}
 ```
 
-Then, run the following command:
+The file also includes a step to copy the resource directory:
 
-```bash
-pod install
 ```
+////////////////////////////////////////////
+// Copy the verovio resource directory from the submodule to the project
+tasks.register<Copy>("copyVerovioData") {
+    from(rootDir.resolve("external/verovio/data"))
+    into("src/main/assets/verovio/data")
+}
 
-To use Verovio in your iOS project import
-
-```cpp
-#import <Verovio/Verovio-umbrella.h>
+tasks.named("preBuild") {
+    dependsOn("copyVerovioData")
+}
 ```
-
-See [https://github.com/Noroxs/VerovioExample](https://github.com/Noroxs/VerovioExample) for an example how to use it. To build and run the example, you need to:
-
-* Navigate in the Terminal to the cloned directory
-* Execute pod update
-* Open the VerovioExample.xcworkspace and NOT the VerovioExample.xcodeproj
-* Build and Run on any simulator or device

@@ -211,9 +211,9 @@
   the toolkit without CMake
 "/installing-or-building-from-sources/python.html#resources-for-versions-built-locally": Resources
   for versions built locally
-"/installing-or-building-from-sources/java-and-android.html": Other bindings
+"/installing-or-building-from-sources/java-and-android.html": Java and Android
 "/installing-or-building-from-sources/java-and-android.html#java": Java
-"/installing-or-building-from-sources/java-and-android.html#cocoapods": CocoaPods
+"/installing-or-building-from-sources/java-and-android.html#android": Android
 "/installing-or-building-from-sources/swift-and-objective-c.html": Swift and Objective-C
 "/installing-or-building-from-sources/swift-and-objective-c.html#swift": Swift
 "/installing-or-building-from-sources/swift-and-objective-c.html#objective-c-with-cocoapods": Objective-C
