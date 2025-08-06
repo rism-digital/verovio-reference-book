@@ -117,6 +117,12 @@ div.highlight {
         content: "Json"
     }
 }
+.language-swift {
+    div.highlight::before {
+        background: rgb(51, 118, 104);
+        content: "Swift"
+    }
+}
 .language-kotlin {
     div.highlight::before {
         background: rgb(124, 106, 5);
