@@ -59,7 +59,7 @@ To use Verovio in your iOS project import
 
 Then you can create an Objective-C wrapper with the following `VerovioToolkitWrapper.h/mm` files (here with a few sample methods):
 
-```objective-c
+```c
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 ```
 
-```objective-c
+```c
 #import "VerovioToolkitWrapper.h"
 
 // Include the umbrella header
