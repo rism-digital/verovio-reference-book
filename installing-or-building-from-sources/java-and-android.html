@@ -22,22 +22,22 @@
         <script src="/assets/javascript/bootstrap.min.js"></script>
 
         <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Other bindings | Reference book for Verovio</title>
+<title>Java and Android | Reference book for Verovio</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Other bindings" />
+<meta property="og:title" content="Java and Android" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Java" />
 <meta property="og:description" content="Java" />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-08-06T09:29:51+00:00" />
+<meta property="article:published_time" content="2025-08-06T09:31:43+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
-<meta property="twitter:title" content="Other bindings" />
+<meta property="twitter:title" content="Java and Android" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:29:51+00:00","datePublished":"2025-08-06T09:29:51+00:00","description":"Java","headline":"Other bindings","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/java-and-android.html"},"url":"/installing-or-building-from-sources/java-and-android.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:31:43+00:00","datePublished":"2025-08-06T09:31:43+00:00","description":"Java","headline":"Java and Android","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/java-and-android.html"},"url":"/installing-or-building-from-sources/java-and-android.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -129,13 +129,13 @@
 <a class="toc-item toc-section " href="/installing-or-building-from-sources/python.html">Python</a>
     
 
-<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/java-and-android.html">Other bindings</a>
+<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/java-and-android.html">Java and Android</a>
     
         
         
 <a class="toc-item toc-subsection" href="#java">Java</a>
 
-<a class="toc-item toc-subsection" href="#cocoapods">CocoaPods</a>
+<a class="toc-item toc-subsection" href="#android">Android</a>
 
     
 
@@ -173,7 +173,7 @@
         <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/06-installing-or-building-from-sources/04-java-and-android.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
         
         
-        <h2>Other bindings</h2>
+        <h2>Java and Android</h2>
         <h3 id="java">Java</h3>
 
 <p>To build the Java toolkit you need to have swig and swig-java installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) as well as <a href="https://maven.apache.org/">Maven</a>. You need to run:</p>
@@ -194,35 +194,68 @@ java <span class="nt">-cp</span> .:../target/VerovioToolkit-X.X.X.jar main
 
 <p>See <a href="https://github.com/rism-ch/verovio/issues/996">this</a> issue for SVG output problems on non US Ubuntu installations.</p>
 
-<h3 id="cocoapods">CocoaPods</h3>
+<h3 id="android">Android</h3>
 
-<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code class="language-plaintext highlighter-rouge">Verovio</code> by adding it to your to your <code class="language-plaintext highlighter-rouge">Podfile</code>:</p>
+<p>The simplest way to use Verovio in Android is to use the Java bindings provided by Verovio. You can have it generated and compiled directly in Android Studio. The <a href="https://github.com/rism-digital/verovio-android-demo">sample application repository</a> provides a complete example on how to use it, with Verovio included as a submodule in <code class="language-plaintext highlighter-rouge">external/verovio</code>. You need swig to be installed on your machine.</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'16.0'</span>
-<span class="n">use_frameworks!</span>
-<span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
-	<span class="n">pod</span> <span class="s1">'Verovio'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'https://github.com/rism-digital/verovio.git'</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">'master'</span>
-<span class="k">end</span>
+<p>The <code class="language-plaintext highlighter-rouge">app/build.gradle.kts</code> includes a step to generate the swig binding for Java and to build the toolkit:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>////////////////////////////////////////////
+// Generate the java and cpp files using swig and write them into the project
+val swigOutputJava = file("src/main/java/org/verovio/lib")
+val swigOutputCpp = file("src/main/cpp/verovio_wrap.cxx")
+val swigInterfaceFile = file("${rootDir.absolutePath}/external/verovio/bindings/java/verovio.i")
+
+tasks.register&lt;Exec&gt;("generateSwigBindings") {
+    group = "build"
+    description = "Generate JNI bindings with SWIG"
+
+    // Adjust working directory to the project root
+    workingDir = rootProject.projectDir
+
+    // Ensure output directories exist
+    doFirst {
+        swigOutputJava.mkdirs()
+        swigOutputCpp.parentFile.mkdirs()
+    }
+
+    commandLine = listOf(
+        "/opt/homebrew/bin/swig", // Change to "/bin/swig" or something else if needed
+        "-java",
+        "-c++",
+        "-package", "org.verovio.lib",
+        "-outdir", swigOutputJava.absolutePath,
+        "-o", swigOutputCpp.absolutePath,
+        swigInterfaceFile.absolutePath
+    )
+}
+
+// Ensure SWIG runs before compilation
+tasks.named("preBuild") {
+    dependsOn("generateSwigBindings")
+}
+
+tasks.named("clean") {
+    doFirst {
+        delete("src/main/java/org/verovio/lib/*")
+        delete("src/main/cpp/verovio_wrap.cxx")
+    }
+}
 </code></pre></div></div>
 
-<p>Then, run the following command:</p>
+<p>The file also includes a step to copy the resource directory:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod <span class="nb">install</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>////////////////////////////////////////////
+// Copy the verovio resource directory from the submodule to the project
+tasks.register&lt;Copy&gt;("copyVerovioData") {
+    from(rootDir.resolve("external/verovio/data"))
+    into("src/main/assets/verovio/data")
+}
+
+tasks.named("preBuild") {
+    dependsOn("copyVerovioData")
+}
 </code></pre></div></div>
-
-<p>To use Verovio in your iOS project import</p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import &lt;Verovio/Verovio-umbrella.h&gt;
-</span></code></pre></div></div>
-
-<p>See <a href="https://github.com/Noroxs/VerovioExample">https://github.com/Noroxs/VerovioExample</a> for an example how to use it. To build and run the example, you need to:</p>
-
-<ul>
-  <li>Navigate in the Terminal to the cloned directory</li>
-  <li>Execute pod update</li>
-  <li>Open the VerovioExample.xcworkspace and NOT the VerovioExample.xcodeproj</li>
-  <li>Build and Run on any simulator or device</li>
-</ul>
 
     </div>
 </div>
