@@ -28,6 +28,8 @@ See [this](https://github.com/rism-ch/verovio/issues/996) issue for SVG output p
 
 The simplest way to use Verovio in Android is to use the Java bindings provided by Verovio. You can have it generated and compiled directly in Android Studio. The [sample application repository](https://github.com/rism-digital/verovio-android-demo) provides a complete example on how to use it, with Verovio included as a submodule in `external/verovio`. You need swig to be installed on your machine.
 
+On Android, it is recommended to use the Liberation font since Times is not available by default. This can be enabled with the `--font-text-liberation` option.
+
 The `app/build.gradle.kts` includes a step to generate the swig binding for Java and to build the toolkit:
 
 ```
@@ -88,3 +90,4 @@ tasks.named("preBuild") {
     dependsOn("copyVerovioData")
 }
 ```
+
