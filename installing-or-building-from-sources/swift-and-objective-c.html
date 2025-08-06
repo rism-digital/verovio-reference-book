@@ -31,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-08-06T09:24:22+00:00" />
+<meta property="article:published_time" content="2025-08-06T09:29:51+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Swift and Objective-C" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:24:22+00:00","datePublished":"2025-08-06T09:24:22+00:00","description":"Swift","headline":"Swift and Objective-C","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/swift-and-objective-c.html"},"url":"/installing-or-building-from-sources/swift-and-objective-c.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T09:29:51+00:00","datePublished":"2025-08-06T09:29:51+00:00","description":"Swift","headline":"Swift and Objective-C","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/swift-and-objective-c.html"},"url":"/installing-or-building-from-sources/swift-and-objective-c.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -225,84 +225,84 @@
 
 <p>Then you can create an Objective-C wrapper with the following <code class="language-plaintext highlighter-rouge">VerovioToolkitWrapper.h/mm</code> files (here with a few sample methods):</p>
 
-<pre><code class="language-objective-c">#import &lt;Foundation/Foundation.h&gt;
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import &lt;Foundation/Foundation.h&gt;
+</span>
+<span class="n">NS_ASSUME_NONNULL_BEGIN</span>
 
-NS_ASSUME_NONNULL_BEGIN
+<span class="err">@</span><span class="n">interface</span> <span class="n">VerovioToolkitWrapper</span> <span class="o">:</span> <span class="n">NSObject</span>
 
-@interface VerovioToolkitWrapper : NSObject
+<span class="o">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">getPageCount</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getVersion</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">loadData</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">data</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">redoLayout</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">renderToSVG</span><span class="o">:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">pageNo</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setOptions</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">jsonOptions</span><span class="p">;</span>
 
-- (instancetype)init;
-- (NSInteger)getPageCount;
-- (NSString *)getVersion;
-- (BOOL)loadData:(NSString *)data;
-- (void)redoLayout;
-- (NSString *)renderToSVG:(NSInteger)pageNo;
-- (void)setOptions:(nullable NSString *)jsonOptions;
+<span class="err">@</span><span class="n">end</span>
 
-@end
+<span class="n">NS_ASSUME_NONNULL_END</span>
+</code></pre></div></div>
 
-NS_ASSUME_NONNULL_END
-</code></pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import "VerovioToolkitWrapper.h"
+</span>
+<span class="c1">// Include the umbrella header</span>
+<span class="cp">#import &lt;Verovio/Verovio-umbrella.h&gt;
+</span>
+<span class="c1">// Include the C++ Verovio header</span>
+<span class="cp">#include</span> <span class="cpf">&lt;verovio/toolkit.h&gt;</span><span class="cp">
+</span>
 
-<pre><code class="language-objective-c">#import "VerovioToolkitWrapper.h"
+<span class="err">@</span><span class="n">implementation</span> <span class="n">VerovioToolkitWrapper</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">&gt;</span> <span class="n">toolkit</span><span class="p">;</span>
+<span class="p">}</span>
 
-// Include the umbrella header
-#import &lt;Verovio/Verovio-umbrella.h&gt;
+<span class="o">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="p">{</span>
+    <span class="n">self</span> <span class="o">=</span> <span class="p">[</span><span class="n">super</span> <span class="n">init</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSBundle</span> <span class="o">*</span><span class="n">verovioBundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSBundle</span> <span class="n">bundleWithIdentifier</span><span class="o">:</span><span class="err">@</span><span class="s">"digital.rism.VerovioFramework"</span><span class="p">];</span>
+        <span class="c1">//NSLog(@"Bundle path: %@", verovioBundle.bundlePath);</span>
+        <span class="n">NSString</span> <span class="o">*</span><span class="n">resourcePath</span> <span class="o">=</span> <span class="p">[</span><span class="n">verovioBundle</span> <span class="n">URLsForResourcesWithExtension</span><span class="o">:</span><span class="err">@</span><span class="s">"xml"</span>
+            <span class="nl">subdirectory:</span><span class="err">@</span><span class="s">"data"</span><span class="p">]</span>
+            <span class="p">.</span><span class="n">firstObject</span><span class="p">.</span><span class="n">URLByDeletingLastPathComponent</span><span class="p">.</span><span class="n">path</span><span class="p">;</span>
 
-// Include the C++ Verovio header
-#include &lt;verovio/toolkit.h&gt;
+        <span class="c1">// Obviously it would be good to check that verovioBundle and resourcePath are not nil</span>
+        <span class="n">toolkit</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+        <span class="n">toolkit</span><span class="o">-&gt;</span><span class="n">SetResourcePath</span><span class="p">([</span><span class="n">resourcePath</span> <span class="n">cStringUsingEncoding</span><span class="o">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">self</span><span class="p">;</span>
+<span class="p">}</span>
 
+<span class="o">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">getPageCount</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">toolkit</span><span class="o">-&gt;</span><span class="n">GetPageCount</span><span class="p">();</span>
+<span class="p">}</span>
 
-@implementation VerovioToolkitWrapper {
-    std::unique_ptr&lt;vrv::Toolkit&gt; toolkit;
-}
+<span class="o">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getVersion</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">version</span> <span class="o">=</span> <span class="n">toolkit</span><span class="o">-&gt;</span><span class="n">GetVersion</span><span class="p">();</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithUTF8String</span><span class="o">:</span><span class="n">version</span><span class="p">.</span><span class="n">c_str</span><span class="p">()];</span>
+<span class="p">}</span>
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        NSBundle *verovioBundle = [NSBundle bundleWithIdentifier:@"digital.rism.VerovioFramework"];
-        //NSLog(@"Bundle path: %@", verovioBundle.bundlePath);
-        NSString *resourcePath = [verovioBundle URLsForResourcesWithExtension:@"xml"
-            subdirectory:@"data"]
-            .firstObject.URLByDeletingLastPathComponent.path;
+<span class="o">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">loadData</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">data</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">input</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span> <span class="n">UTF8String</span><span class="p">];</span>
+    <span class="k">return</span> <span class="n">toolkit</span><span class="o">-&gt;</span><span class="n">LoadData</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="p">}</span>
 
-        // Obviously it would be good to check that verovioBundle and resourcePath are not nil
-        toolkit = std::make_unique&lt;vrv::Toolkit&gt;(false);
-        toolkit-&gt;SetResourcePath([resourcePath cStringUsingEncoding:NSUTF8StringEncoding]);
-    }
-    return self;
-}
+<span class="o">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">renderToSVG</span><span class="o">:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">pageNo</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">svg</span> <span class="o">=</span> <span class="n">toolkit</span><span class="o">-&gt;</span><span class="n">RenderToSVG</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">pageNo</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithUTF8String</span><span class="o">:</span><span class="n">svg</span><span class="p">.</span><span class="n">c_str</span><span class="p">()];</span>
+<span class="p">}</span>
 
-- (NSInteger)getPageCount {
-    return toolkit-&gt;GetPageCount();
-}
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">redoLayout</span> <span class="p">{</span>
+    <span class="n">toolkit</span><span class="o">-&gt;</span><span class="n">RedoLayout</span><span class="p">();</span>
+<span class="p">}</span>
 
-- (NSString *)getVersion {
-    std::string version = toolkit-&gt;GetVersion();
-    return [NSString stringWithUTF8String:version.c_str()];
-}
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setOptions</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">jsonOptions</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">options</span> <span class="o">=</span> <span class="n">jsonOptions</span> <span class="o">?</span> <span class="p">[</span><span class="n">jsonOptions</span> <span class="n">UTF8String</span><span class="p">]</span> <span class="o">:</span> <span class="s">""</span><span class="p">;</span>
+    <span class="n">toolkit</span><span class="o">-&gt;</span><span class="n">SetOptions</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="p">}</span>
 
-- (BOOL)loadData:(NSString *)data {
-    std::string input = [data UTF8String];
-    return toolkit-&gt;LoadData(input);
-}
-
-- (NSString *)renderToSVG:(NSInteger)pageNo {
-    std::string svg = toolkit-&gt;RenderToSVG((int)pageNo);
-    return [NSString stringWithUTF8String:svg.c_str()];
-}
-
-- (void)redoLayout {
-    toolkit-&gt;RedoLayout();
-}
-
-- (void)setOptions:(nullable NSString *)jsonOptions {
-    std::string options = jsonOptions ? [jsonOptions UTF8String] : "";
-    toolkit-&gt;SetOptions(options);
-}
-
-@end
-</code></pre>
+<span class="err">@</span><span class="n">end</span>
+</code></pre></div></div>
 
     </div>
 </div>
