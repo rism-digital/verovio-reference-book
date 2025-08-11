@@ -25,7 +25,8 @@ brew install verovio --HEAD
 To build the command-line tool, you need [CMake](https://cmake.org) to be installed on your machine as well as a compiler supporting C++17. The commands to build are the following:
 
 ```bash
-cd tools
+mkdir -p build
+cd build
 cmake ../cmake
 make
 ```
