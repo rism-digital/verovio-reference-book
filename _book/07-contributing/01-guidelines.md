@@ -112,11 +112,13 @@ We avoid the use of `auto` and prefer explicit typing.
 
 ### Loop variable scope and increment
 
-Variables should be made local to loops when possible (C99) and preferably pre-incremented.
+Variables should be made local to loops when possible (C99).
 
 ```cpp
 for (int i = 0; i < limit; ++i) {}
 ```
+
+They should preferably be pre-incremented, especially when not an `int` or alike.
 
 ### Class, method and member names
 
