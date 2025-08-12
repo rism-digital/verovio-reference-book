@@ -881,11 +881,9 @@ Verovio correctly differentiates between ties and slurs.
 
 #### Known limitations:
 
-* Verovio imports only the first tune in a collection
 * Tuplets are not supported
 * User defined symbols are not supported
 * Multi-voice music is not supported
-* Lyrics are not supported yet
 
 ### CMME
 
