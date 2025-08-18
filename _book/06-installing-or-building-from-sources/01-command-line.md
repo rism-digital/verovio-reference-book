@@ -37,13 +37,13 @@ You can increase the building speed by using the `-j` option when running make t
 make -j 8
 ```
 
-The generates a `verovio` binary within `./tools`. You can run Verovio from there or install it. Installing it means copying the executable and the resource files to directories which paths are globally accessible. You simply need to run:
+The generates a `verovio` binary within `./build`. You can run Verovio from there or install it. Installing it means copying the executable and the resource files to directories which paths are globally accessible. You simply need to run:
 
 ```bash
 sudo make install
 ```
 
-If you do not install it and run it from `./tools` or from another directory, you need to use the `-r` option to set the appropriate resource directory. The parameter of the `-r` option has to be a path to the `./data` folder of the codebase.
+If you do not install it and run it from `./build` or from another directory, you need to use the `-r` option to set the appropriate resource directory. The parameter of the `-r` option has to be a path to the `./data` folder of the codebase.
 
 To see the current default resource path, look for the "resource path" section in the full help output. You should see something like this:
 
