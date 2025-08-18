@@ -7,7 +7,8 @@ Verovio can be built and use as C++ or C library.
 #### Building libverovio.so on Linux or libverovio.dylib on macOS
 
 ```sh
-cd tools
+mkdir -p build
+cd build
 cmake -DBUILD_AS_LIBRARY=ON .
 make
 ```
