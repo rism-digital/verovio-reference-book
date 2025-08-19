@@ -1,17 +1,13 @@
 import argparse
-import frontmatter
-import git
-import json
 import logging
-from lxml import etree
 import os
-import pprint
-import regex
-import requests
+import re
 import shutil
 import sys
 from typing import Dict, List
-import yaml
+
+from git import Repo
+from lxml import etree
 
 endings = ["auth", "anl", "base", "cmn", "ges", "log", "names", "pitched", "quality", "ratio", "vis"] 
 
@@ -32,6 +28,7 @@ mei_support_output_page = "./_book/05-toolkit-reference/05-mei-support.md"
 mei_attribute_base_url = "https://music-encoding.org/guidelines/v5/attribute-classes/"
 mei_element_base_url = "https://music-encoding.org/guidelines/v5/elements/"
 
+
 def format_attribute(vrv_attribute):
     description = """
         Transform a Verovio attribute class into an MEI one.
@@ -40,7 +37,7 @@ def format_attribute(vrv_attribute):
 
     # Split CamelCased strings
     # E.g., AttStaffLocPitched into Att Staff Loc Pitched
-    patt = regex.compile(r'[A-Z](?:[a-z]+|[A-Z]*(?=[A-Z]|$))')
+    patt = re.compile(r'[A-Z](?:[a-z]+|[A-Z]*(?=[A-Z]|$))')
     parts = patt.findall(vrv_attribute)
     # If we have more than three parts, we need to check if the ending is of type .log, or .vis
     # See the endings list
@@ -56,11 +53,12 @@ def format_attribute(vrv_attribute):
     # change case for the first letter of each part and join with a .
     # E.g., Att StaffLoc Pitched into att.staffLoc.Pitched
     attribute = ".".join(v[0].lower() + v[1:] for v in parts)
-    
+
     # handle exceptions
     if attribute_classes_exceptions.get(attribute):
         attribute = attribute_classes_exceptions.get(attribute)
     return attribute
+
 
 def print_element(element, attributes, file):
     description = """
@@ -106,6 +104,7 @@ def print_frontmatter(file):
     file.write('---\ntitle: "MEI supported elements"\nno-edit: true\n')
     file.write('# This file is auto-generated - do not edit\n---\n\n')
     file.write('{% aside .warning %} Note that, for the MEI attribute classes listed here, some attributes may not be implemented and that not all possible attribute values are supported. {% endaside %}\n\n')
+
 
 if __name__ == "__main__":
     description = """
@@ -155,10 +154,10 @@ if __name__ == "__main__":
 
     dir1 = sorted(os.listdir(os.path.join(tmp_dir, 'xml')))
     for item1 in dir1:
-            # Skip hidden files
-            if not item1.endswith('.xml'):
-                continue
-            if item1 == 'index.xml' or item1 == 'Doxyfile.xml':
+        # Skip hidden files
+        if not item1.endswith('.xml'):
+            continue
+        if item1 == 'index.xml' or item1 == 'Doxyfile.xml':
                 continue 
 
             xml_file = os.path.join('./', tmp_dir, 'xml', item1)
@@ -172,21 +171,21 @@ if __name__ == "__main__":
             if not mei_element_xml:
                 continue
 
-            log.debug(vrv_name)
-            # Find all parents in the inheritance element
-            parents = vrv_class.xpath('//inheritancegraph/node')
-            attribute_classes = []
-            for parent in parents:
-                label = parent.xpath('./label/text()')[0]
-                # Attribute classes start with 'Att'
-                if not label.startswith('Att'):
-                    continue
-                log.debug("\t{}".format(label))
-                attribute_classes.append(label)
+        log.debug(vrv_name)
+        # Find all parents in the inheritance element
+        parents = vrv_class.xpath('//inheritancegraph/node')
+        attribute_classes = []
+        for parent in parents:
+            label = parent.xpath('./label/text()')[0]
+            # Attribute classes start with 'Att'
+            if not label.startswith('Att'):
+                continue
+            log.debug("\t{}".format(label))
+            attribute_classes.append(label)
 
-            if attribute_classes:
-                attribute_classes.sort()
-            print_element(vrv_name, attribute_classes, file)
+        if attribute_classes:
+            attribute_classes.sort()
+        print_element(vrv_name, attribute_classes, file)
 
     file.close()
 
