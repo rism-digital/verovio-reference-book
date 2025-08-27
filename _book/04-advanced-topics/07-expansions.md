@@ -117,7 +117,6 @@ The expansionmap can be generated with the output flag `-t expansionmap` and com
                 "dbf3mxc-rend2",
                 "dbf3mxc-rend3" 
         ],
-...
 ```
 
 ### Example with re-ordered sections
