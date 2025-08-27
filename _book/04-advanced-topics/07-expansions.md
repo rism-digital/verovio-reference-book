@@ -1,5 +1,98 @@
 ---
 title: "Repetition expansion"
+
+examples:
+    - name: expansion-001
+      test-suite: expansion/expansion-001.mei
+
+    - name: expansion-001-default
+      test-suite: expansion/expansion-001.mei
+      options:
+        expand: 'expansion-default'
+
+    - name: expansion-001-minimal
+      test-suite: expansion/expansion-001.mei
+      options:
+        expand: 'expansion-minimal'
+
+    - name: expansion-001-maximal
+      test-suite: expansion/expansion-001.mei
+      options:
+        expand: 'expansion-maximal'
 ---
 
-[in preparation]
+## The MEI `<expansion>` element
+
+Many scores may contain repetitions, endings, directives to repeat a section from dal segno or an entire Minuet, or similar such instructions. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific unfolding versions of a scores repetition structure. Verovio supports this element with the `--expand` toolkit option. 
+
+The `expansion` element is expected to be the first element in a section and must contain descendant `expansion`, `ending`, or `rdg` elements (see [guidelines for section](https://music-encoding.org/guidelines/v5/elements/section)). Its `@plist` attribute may point to its descendant `section`, `ending`, `rdg`, or `lem` elements to indicate a particular unfolding version of that excerpt of the score. See the [MEI guidelines for a simple expansion example](https://music-encoding.org/guidelines/v5/content/shared.html#sharedMdivContent).
+
+A typical example is given below containing a straight-forward repetition structure in which the Minuet and the Trio each is repeated once with different endings. As indicated by "Menuett da capo", the performer is requested to repeat the Minuet after the Trio, but then without repetition, going directly to `A2` to terminate the performance.
+
+{% include music-notation-only example="expansion-001" %}
+
+The default expansion with `@plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"` is engraved by Verovio by passing the xml:id of the respective expansion element as an option to the toolkit, e.g. `--expand expansion-default` for the command-line or `expand: 'expansion-default'` for Javascript/Python options:
+
+{% include music-notation-only example="expansion-001-default" %}
+
+This example also contains a minimal expansion that omits sections A1 and B1, but still repeats the Minuet (`@plist="#A #A2 #B #B2 #A #A2"`):
+
+{% include music-notation-only example="expansion-001-minimal" %}
+
+
+## Exporting the expansionmap
+
+For sections that get cloned, Verovio generates predictable xml:ids, adding a `-rendX`, while `X` is a number starting from 2 for the first repetition of a given element. Thus, `A-rend3` would refer to the third occurence (or the second repetition) of section A. To be able to retrieve the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap, a sorted associative container that contains key-value pairs with unique keys for each xml:id in the encoding (both the original and the unfolded elements). Each key entry lists all identical score elements as values, the original score element being always the first in the value list. 
+
+The expansionmap can be generated with the output flag `-t expansionmap` and comes in JSON format. The beginning of the expansionmap with the default expansion of the above Minuet example (`verovio -a -t expansionmap --expand expansion-default expansion-001.mei`) looks like this:
+
+```json
+{
+        "A": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A-rend2": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A-rend3": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A2": [
+                "A2",
+                "A2-rend2" 
+        ],
+        "A2-rend2": [
+                "A2",
+                "A2-rend2" 
+        ],
+       "B": [
+                "B",
+                "B-rend2" 
+        ],
+        "B-rend2": [
+                "B",
+                "B-rend2" 
+        ],
+        "dbf3mxc": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+        "dbf3mxc-rend2": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+        "dbf3mxc-rend3": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+...
+```
