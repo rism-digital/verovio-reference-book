@@ -4,7 +4,9 @@ title: "Repetition expansion"
 examples:
     - name: expansion-001
       test-suite: expansion/expansion-001.mei
-     
+      xpath:
+        - ".//mei:section"
+
     - name: expansion-001-default
       test-suite: expansion/expansion-001.mei
       options:
@@ -30,9 +32,9 @@ examples:
 
 ---
 
-Many scores may contain repetitions, endings, directives to repeat a section from dal segno or an entire Minuet, or similar such instructions. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific unfolding versions of a scores repetition structure. Verovio supports this element with the `--expand` toolkit option. 
+Scores may contain repetitions, endings, directives to repeat a section from a certain location in the score, such as dal segno, or similar. Such instructions advise the performer to correctly realise the repetition structure during performance. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific repetition versions of a scores' repetition structure. Verovio supports this MEI element with the `--expand` toolkit option. 
 
-The `expansion` element is expected to be the first element in a section and must contain descendant `expansion`, `ending`, or `rdg` elements (see [guidelines for section](https://music-encoding.org/guidelines/v5/elements/section)). Its `@plist` attribute may point to its descendant `section`, `ending`, `rdg`, or `lem` elements to indicate a particular unfolding version of that excerpt of the score. See the [MEI guidelines for a simple expansion example](https://music-encoding.org/guidelines/v5/content/shared.html#sharedMdivContent).
+The `expansion` element is expected to be the first element in a `section` or `ending` and must contain descendant `expansion`, `ending`, or `rdg` elements (see [guidelines for section](https://music-encoding.org/guidelines/v5/elements/section)). Its `@plist` attribute may point to its descendant `section`, `ending`, `rdg`, or `lem` elements to indicate a particular unfolding version of that excerpt of the score. See the [MEI guidelines for a simple expansion example](https://music-encoding.org/guidelines/v5/content/shared.html#sharedMdivContent).
 
 ### Minuet example
 
@@ -40,11 +42,21 @@ A typical MEI example is given below containing a straight-forward repetition st
 
 {% include music-notation-only example="expansion-001" %}
 
-The default expansion  
 ```xml
-<expansion xml:id="expansion-default" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"/>
-``` 
-is engraved by Verovio by passing the `xml:id` of the expansion element as an option to the toolkit, e.g. `--expand expansion-default` for the command-line or `expand: 'expansion-default'` for Javascript/Python options, and it looks like this:
+<section xml:id="all">
+  <expansion xml:id="expansion-default" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"/>
+  <expansion xml:id="expansion-minimal" plist="#A #A2 #B #B2 #A #A2"/>
+  <expansion xml:id="expansion-maximal" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A1 #A #A2"/>
+  <section xml:id="A"/>
+  <ending xml:id="A1" lendsym="angledown" n="1."/>
+  <ending xml:id="A2" lendsym="angledown" n="2."/>
+  <section xml:id="B"/>
+  <ending xml:id="B1" lendsym="angledown" n="1."/>
+  <ending xml:id="B2" lendsym="angledown" n="2."/>
+</section>
+```
+
+The default expansion is engraved by Verovio by passing the `xml:id` of the expansion element as an option to the toolkit, e.g. `--expand expansion-default` for the command-line or `expand: 'expansion-default'` for Javascript/Python options, and it looks like this:
 
 {% include music-notation-only example="expansion-001-default" %}
 
@@ -65,59 +77,9 @@ This example also contains a maximal expansion that realises all repeats, also i
 
 #### Exporting an expansionmap
 
-For sections that get cloned, Verovio generates predictable xml:ids, adding a `-rendX`, while `X` is a number starting from 2 for the first repetition of a given element. Thus, `A-rend3` would refer to the third occurence (or the second repetition) of section A. To be able to retrieve the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap, a sorted associative container that contains key-value pairs with unique keys for each xml:id in the encoding (both the original and the unfolded elements). Each key entry lists all identical score elements as values, the original score element being always the first in the value list. 
+For sections that get cloned, Verovio generates predictable xml:ids for all containing elements, adding a `-rendX` to the existing xml:id, while `X` is a number starting from 2 for the first repetition of a given element. Thus, `A-rend3` would refer to the third occurence (or the second repetition) of section A. To be able to retrieve the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap, a JSON object that contains key-value pairs with unique keys for each xml:id in the encoding (both the original and the unfolded elements). 
 
-The expansionmap can be generated with the output flag `-t expansionmap` and comes in JSON format. The beginning of the expansionmap with the default expansion of the above Minuet example (`verovio -a -t expansionmap --expand expansion-default expansion-001.mei`) looks like this:
-
-```json
-{
-        "A": [
-                "A",
-                "A-rend2",
-                "A-rend3" 
-        ],
-        "A-rend2": [
-                "A",
-                "A-rend2",
-                "A-rend3" 
-        ],
-        "A-rend3": [
-                "A",
-                "A-rend2",
-                "A-rend3" 
-        ],
-        "A2": [
-                "A2",
-                "A2-rend2" 
-        ],
-        "A2-rend2": [
-                "A2",
-                "A2-rend2" 
-        ],
-       "B": [
-                "B",
-                "B-rend2" 
-        ],
-        "B-rend2": [
-                "B",
-                "B-rend2" 
-        ],
-        "dbf3mxc": [
-                "dbf3mxc",
-                "dbf3mxc-rend2",
-                "dbf3mxc-rend3" 
-        ],
-        "dbf3mxc-rend2": [
-                "dbf3mxc",
-                "dbf3mxc-rend2",
-                "dbf3mxc-rend3" 
-        ],
-        "dbf3mxc-rend3": [
-                "dbf3mxc",
-                "dbf3mxc-rend2",
-                "dbf3mxc-rend3" 
-        ],
-```
+More information on expansionmap at [Output formats](/toolkit-reference/output-formats.html#expansionmap).
 
 ### Example with re-ordered sections
 
@@ -129,7 +91,7 @@ To be expanded with the default expansion
 ```xml
 <expansion xml:id="default" plist="#Upbeat #A #A1 #A #A2 #B #A #A-Fine"/>
 ```
-Verovio has to re-order the section structure so that it looks like this: 
+To accommodate this complexity, Verovio automatically re-orders the section structure so that it looks like this: 
 
 {% include music-notation-only example="expansion-002-default" %}
 
