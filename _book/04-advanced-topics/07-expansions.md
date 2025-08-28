@@ -29,7 +29,6 @@ examples:
       test-suite: expansion/expansion-002.mei
       options:
         expand: 'default'
-
 ---
 
 Scores may contain repetitions, endings, directives to repeat a section from a certain location in the score, such as dal segno, or similar. Such instructions advise the performer to correctly realise the repetition structure during performance. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific repetition versions of a scores' repetition structure. Verovio supports this MEI element with the `--expand` toolkit option. 
@@ -99,4 +98,15 @@ To accommodate this complexity, Verovio automatically re-orders the section stru
 
 ### Hierarchical expansion structure
 
-Refer to Blue Danube example with complex real-world structure.
+The elements referred to in the `expansion@plist` may itself be expansion elements situated in descendent section elements. A complex but typical example is the Waltz structure of [An der schönen blauen Donau by Johann Strauss II](https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/&scale=33&breaks=line&select=Shorter_Version_Boskovsky&page=1&speed=true&notationOrientation=left&notationProportion=0.44). (To open the public-domain encoding, please click [here](https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/&scale=33&breaks=line&select=Shorter_Version_Boskovsky&page=1&speed=true&notationOrientation=left&notationProportion=0.44).)
+
+![spacing 01](/images/advanced-topics/expansions/BlueDanube-section-structure.png){:.img-responsive .example-80}
+
+Each waltz contains itself a set of expansion elements each defining a realisation performed in the history of the Vienna New Years' Concert series. The overall expansion element then refers to these waltz-level expansions. 
+
+The expansion element referring to the longest and most typical realisation of that piece in the history of the Vienna New Years Concert series was by first conducted by Clemens Krauss and by several others ever since: 
+```xml
+<expansion xml:id="Longest_Version_Krauss" plist="#Introduktion #Walzer-1-withRep-woDalSegno #Walzer-2-withRep-withDalSegno #Walzer-3-withRep1-withRep2-woDalSegno #Walzer-4-withRep1-withRep2-woDalSegno #Walzer-5-withRep-woDalSegno #Coda"/>
+```
+
+More explanation to come...
