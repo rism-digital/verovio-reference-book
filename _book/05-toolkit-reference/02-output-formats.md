@@ -300,7 +300,7 @@ With the command-line tool, for generating an expansionmap JSON with the default
 verovio -t expansionmap --expand expansion-default -o output.json expansion-001.mei
 ```
 
-Currently, Verovio adds `'-em'` to the expansionmap file, thus creating `output-em.json` in this example.
+<!-- Currently, Verovio adds `'-em'` to the expansionmap file, thus creating `output-em.json` in this example. -->
 
 #### Examples
 
