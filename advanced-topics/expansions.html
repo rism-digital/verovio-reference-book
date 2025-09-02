@@ -26,18 +26,18 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Repetition expansion" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="[in preparation]" />
-<meta property="og:description" content="[in preparation]" />
+<meta name="description" content="Scores may contain repetitions, endings, directives to repeat a section from a certain location in the score, such as dal segno, or similar. Such instructions advise the performer to correctly realise the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific repetition versions of a scores’ repetition structure. Verovio supports this MEI element with the --expand toolkit option." />
+<meta property="og:description" content="Scores may contain repetitions, endings, directives to repeat a section from a certain location in the score, such as dal segno, or similar. Such instructions advise the performer to correctly realise the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific repetition versions of a scores’ repetition structure. Verovio supports this MEI element with the --expand toolkit option." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-09-02T08:47:30+00:00" />
+<meta property="article:published_time" content="2025-09-02T08:56:21+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Repetition expansion" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-02T08:47:30+00:00","datePublished":"2025-09-02T08:47:30+00:00","description":"[in preparation]","headline":"Repetition expansion","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/advanced-topics/expansions.html"},"url":"/advanced-topics/expansions.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-02T08:56:21+00:00","datePublished":"2025-09-02T08:56:21+00:00","description":"Scores may contain repetitions, endings, directives to repeat a section from a certain location in the score, such as dal segno, or similar. Such instructions advise the performer to correctly realise the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific repetition versions of a scores’ repetition structure. Verovio supports this MEI element with the --expand toolkit option.","headline":"Repetition expansion","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/advanced-topics/expansions.html"},"url":"/advanced-topics/expansions.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -139,6 +139,12 @@
     
         
         
+<a class="toc-item toc-subsection" href="#minuet-example">Minuet example</a>
+
+<a class="toc-item toc-subsection" href="#example-with-re-ordered-sections">Example with re-ordered sections</a>
+
+<a class="toc-item toc-subsection" href="#hierarchical-expansion-structure">Hierarchical expansion structure</a>
+
     
 
     
@@ -173,7 +179,111 @@
         
         
         <h2>Repetition expansion</h2>
-        <p>[in preparation]</p>
+        <p>Scores may contain repetitions, endings, directives to repeat a section from a certain location in the score, such as dal segno, or similar. Such instructions advise the performer to correctly realise the repetition structure during performance. The MEI schema provides the <a href="https://music-encoding.org/guidelines/v5/elements/expansion"><code class="language-plaintext highlighter-rouge">&lt;expansion&gt;</code> element</a> to encode specific repetition versions of a scores’ repetition structure. Verovio supports this MEI element with the <code class="language-plaintext highlighter-rouge">--expand</code> toolkit option.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">expansion</code> element is expected to be the first element in a <code class="language-plaintext highlighter-rouge">section</code> or <code class="language-plaintext highlighter-rouge">ending</code> and must contain descendant <code class="language-plaintext highlighter-rouge">expansion</code>, <code class="language-plaintext highlighter-rouge">ending</code>, or <code class="language-plaintext highlighter-rouge">rdg</code> elements (see <a href="https://music-encoding.org/guidelines/v5/elements/section">guidelines for section</a>). Its <code class="language-plaintext highlighter-rouge">@plist</code> attribute may point to its descendant <code class="language-plaintext highlighter-rouge">section</code>, <code class="language-plaintext highlighter-rouge">ending</code>, <code class="language-plaintext highlighter-rouge">rdg</code>, or <code class="language-plaintext highlighter-rouge">lem</code> elements to indicate a particular unfolding version of that excerpt of the score. See the <a href="https://music-encoding.org/guidelines/v5/content/shared.html#sharedMdivContent">MEI guidelines for a simple expansion example</a>.</p>
+
+<h3 id="minuet-example">Minuet example</h3>
+
+<p>A typical MEI example is given below containing a straight-forward repetition structure in which the Minuet and the Trio each is repeated once with different endings. As indicated by “Menuett da capo”, the performer is requested to repeat the Minuet after the Trio, but then without repetition, going directly to <code class="language-plaintext highlighter-rouge">A2</code> to terminate the performance.</p>
+
+<p>[SVG file is missing and need to be generated]</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"all"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-default"</span> <span class="na">plist=</span><span class="s">"#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-minimal"</span> <span class="na">plist=</span><span class="s">"#A #A2 #B #B2 #A #A2"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-maximal"</span> <span class="na">plist=</span><span class="s">"#A #A1 #A #A2 #B #B1 #B #B2 #A #A1 #A #A2"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"A"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A1"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A2"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"B"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B1"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B2"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>The default expansion is engraved by Verovio by passing the <code class="language-plaintext highlighter-rouge">xml:id</code> of the expansion element as an option to the toolkit, e.g. <code class="language-plaintext highlighter-rouge">--expand expansion-default</code> for the command-line or <code class="language-plaintext highlighter-rouge">expand: 'expansion-default'</code> for Javascript/Python options, and it looks like this:</p>
+
+<p>[SVG file is missing and need to be generated]</p>
+
+<p>This example also contains a minimal expansion that omits sections A1 and B1, but still repeats the Minuet:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-minimal"</span> <span class="na">plist=</span><span class="s">"#A #A2 #B #B2 #A #A2"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>[SVG file is missing and need to be generated]</p>
+
+<p>This example also contains a maximal expansion that realises all repeats, also in the repeated Minuet:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-maximal"</span> <span class="na">plist=</span><span class="s">"#A #A1 #A #A2 #B #B1 #B #B2 #A #A1 #A #A2"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>[SVG file is missing and need to be generated]</p>
+
+<h4 id="exporting-an-expansionmap">Exporting an expansionmap</h4>
+
+<p>For sections that get cloned, Verovio generates predictable xml:ids for all containing elements, adding a <code class="language-plaintext highlighter-rouge">-rendX</code> to the existing xml:id, while <code class="language-plaintext highlighter-rouge">X</code> is a number starting from 2 for the first repetition of a given element. Thus, <code class="language-plaintext highlighter-rouge">A-rend3</code> would refer to the third occurence (or the second repetition) of section A. To be able to retrieve the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap, a JSON object that contains key-value pairs with unique keys for each xml:id in the encoding (both the original and the unfolded elements).</p>
+
+<p>More information on expansionmap at <a href="/toolkit-reference/output-formats.html#expansionmap">Output formats</a>.</p>
+
+<h3 id="example-with-re-ordered-sections">Example with re-ordered sections</h3>
+
+<p>The following example has a slightly more complex default expansion structure that requires section A to be rendered three times, each time choosing a different ending.</p>
+
+<p>[SVG file is missing and need to be generated]</p>
+
+<p>To be expanded with the default expansion</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"default"</span> <span class="na">plist=</span><span class="s">"#Upbeat #A #A1 #A #A2 #B #A #A-Fine"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>To accommodate this complexity, Verovio automatically re-orders the section structure so that it looks like this:</p>
+
+<p>[SVG file is missing and need to be generated]</p>
+
+<h3 id="hierarchical-expansion-structure">Hierarchical expansion structure</h3>
+
+<p>The elements referred to in the <code class="language-plaintext highlighter-rouge">expansion@plist</code> may itself be expansion elements situated in descendent section elements. A complex but typical example is the Waltz structure of <a href="https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&amp;scale=33&amp;breaks=line&amp;select=Shorter_Version_Boskovsky&amp;page=1&amp;speed=true&amp;notationOrientation=left&amp;notationProportion=0.44" target="\_blank">An der schönen blauen Donau by Johann Strauss II</a>. (To open the public-domain encoding, please click <a href="https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&amp;scale=33&amp;breaks=line&amp;select=Shorter_Version_Boskovsky&amp;page=1&amp;speed=true&amp;notationOrientation=left&amp;notationProportion=0.44" target="\_blank">here</a>.)</p>
+
+<p><img src="/images/advanced-topics/expansions/BlueDanube-section-structure.png" alt="Donauwalzer-Sections" class="img-responsive example-80" /></p>
+
+<p>Each waltz contains itself a set of expansion elements, each defining a realisation performed in the history of the Vienna New Years’ Concert series. The overall expansion element then refers to these waltz-level expansions.</p>
+
+<p>The beginning of the section structure of the first two waltzes including the respective expansion structure looks like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Donauwalzer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"Longest_Version_Krauss"</span> <span class="na">plist=</span><span class="s">"#Introduktion #Walzer-1-withRep-woDalSegno #Walzer-2-withRep-withDalSegno ..."</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"Shorter_Version_Boskovsky"</span> <span class="na">plist=</span><span class="s">"#Introduktion #Walzer-1-woRep-woDalSegno #Walzer-2-woRep-withDalSegno ..."</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Introduktion"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Andantino"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Tempo-di-Valse"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/section&gt;</span>
+        <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Walzer-1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-withRep-woDalSegno"</span> <span class="na">plist=</span><span class="s">"#Walzer-1-A #Walzer-1-B-Upbeat #Walzer-1-B #Walzer-1-B-ending1 #Walzer-1-B #Walzer-1-B-Fine"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-woRep-woDalSegno"</span> <span class="na">plist=</span><span class="s">"#Walzer-1-A #Walzer-1-B-Upbeat #Walzer-1-B #Walzer-1-B-Fine"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-A"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-B-Upbeat"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-B"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-B-ending1"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-B-dalSegno"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"Walzer-1-B-Fine"</span> <span class="na">n=</span><span class="s">"Fine"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/section&gt;</span>
+        <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Walzer-2"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"Walzer-2-withRep-withDalSegno"</span> <span class="na">plist=</span><span class="s">"#Walzer-2-A-Upbeat #Walzer-2-A #Walzer-2-A-ending1 #Walzer-2-A #Walzer-2-A-ending2 #Walzer-2-B #Walzer-2-A #Walzer-2-A-Fine"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"Walzer-2-woRep-withDalSegno"</span> <span class="na">plist=</span><span class="s">"#Walzer-2-A-Upbeat #Walzer-2-A #Walzer-2-A-ending2 #Walzer-2-B #Walzer-2-A #Walzer-2-A-Fine"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Walzer-2-A-Upbeat"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Walzer-2-A"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"Walzer-2-A-ending1"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"Walzer-2-A-ending2"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"Walzer-2-A-Fine"</span> <span class="na">n=</span><span class="s">"Fine"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/section&gt;</span>
+...
+</code></pre></div></div>
+
+<p>The expansion element referring to the longest and most typical realisation of that piece in the history of the Vienna New Years Concert series was by first conducted by Clemens Krauss and by several others ever since:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"Longest_Version_Krauss"</span> <span class="na">plist=</span><span class="s">"#Introduktion #Walzer-1-withRep-woDalSegno #Walzer-2-withRep-withDalSegno #Walzer-3-withRep1-withRep2-woDalSegno #Walzer-4-withRep1-withRep2-woDalSegno #Walzer-5-withRep-woDalSegno #Coda"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
 
     </div>
 </div>
