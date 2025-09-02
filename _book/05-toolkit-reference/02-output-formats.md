@@ -12,6 +12,12 @@ examples:
 
     - name: pae-01
       url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/abbreviated_writing.pae
+
+    - name: expansionmap
+      test-suite: expansion/expansion-001.mei
+      # xpath: 
+        # - ".//mei:section[not(.//*[not(self::section or self::ending or self::rdg or self::lem)])]"
+        # - ".//mei:section"
 ---
 
 ### SVG
@@ -276,6 +282,113 @@ verovio -t timemap -o output.json input-file.mei
     ]
   }
 ]
+```
+
+### Expansionmap
+
+The expansionmap is a JSON object that is generated when an [expansion element](/advanced-topics/expansions.html) is passed to Verovio with the `--expand` option. The expansionmap provides the relationship between the original score parts and the repeated (expanded, unfolded) sections created through the expand process. 
+
+While expanding, Verovio generates new predictable xml:ids for all elements of the expanded sections (`section`, `ending`, `rdg`, `lem`), adding a `-rendX` to each xml:id, while `X` being the number of occurrence of a given element, starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurence (or the second repetition) of element `"A"`. 
+
+The keys in the expansionmap JSON object are the xml:ids in the expanded score that have been repeated somewhere, referring by their values to the xml:ids of all identical score elements in the expanded score. **The original score element is always the first the value list.**
+
+#### Usage
+
+With the command-line tool, for generating an expansionmap JSON with the default options, you need to do:
+
+```bash
+verovio -t expansionmap --expand expansion-default -o output.json expansion-001.mei
+```
+
+<!-- Currently, Verovio adds `'-em'` to the expansionmap file, thus creating `output-em.json` in this example. -->
+
+#### Examples
+
+{% include music-notation-only example="expansionmap" %}
+
+```xml
+<section xml:id="all">
+  <expansion xml:id="expansion-default" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"/>
+  <expansion xml:id="expansion-minimal" plist="#A #A2 #B #B2 #A #A2"/>
+  <expansion xml:id="expansion-maximal" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A1 #A #A2"/>
+  <section xml:id="A"/>
+  <ending xml:id="A1" lendsym="angledown" n="1."/>
+  <ending xml:id="A2" lendsym="angledown" n="2."/>
+  <section xml:id="B"/>
+  <ending xml:id="B1" lendsym="angledown" n="1."/>
+  <ending xml:id="B2" lendsym="angledown" n="2."/>
+</section>
+```
+
+The beginning of the expansionmap from this example with the default expansion  
+```xml
+<expansion xml:id="expansion-default" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"/>
+``` 
+looks like this:
+
+```json
+{
+        "A": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A-rend2": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A-rend3": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A2": [
+                "A2",
+                "A2-rend2" 
+        ],
+        "A2-rend2": [
+                "A2",
+                "A2-rend2" 
+        ],
+       "B": [
+                "B",
+                "B-rend2" 
+        ],
+        "B-rend2": [
+                "B",
+                "B-rend2" 
+        ],
+        "dbf3mxc": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+        "dbf3mxc-rend2": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+        "dbf3mxc-rend3": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+       	"c1k0s711": [
+                "c1k0s711",
+                "c1k0s711-rend2",
+                "c1k0s711-rend3" 
+        ],
+        "c1k0s711-rend2": [
+                "c1k0s711",
+                "c1k0s711-rend2",
+                "c1k0s711-rend3" 
+        ],
+        "c1k0s711-rend3": [
+                "c1k0s711",
+                "c1k0s711-rend2",
+                "c1k0s711-rend3" 
+        ],
 ```
 
 ### Plaine and Easie
