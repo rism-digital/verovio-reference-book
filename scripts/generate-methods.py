@@ -1,151 +1,164 @@
 import argparse
-import frontmatter
-import json
 import logging
-from lxml import etree
 import os
-import pprint
-import regex
-import requests
 import sys
-from typing import Dict, List
+
+import requests
 import yaml
+from lxml import etree
 
 header_url = "https://raw.githubusercontent.com/rism-digital/verovio-doxygen/{}/xml/classvrv_1_1_toolkit.xml"
 header_tmp_dir = "scripts/tmp"
 header_tmp_name = "classvrv_1_1_toolkit.xml"
-methods_ouptut_page = "./_book/05-toolkit-reference/03-toolkit-methods.md"
+methods_output_page = "./_book/05-toolkit-reference/03-toolkit-methods.md"
 
-def get_text_for_nodes(xml_nodes):
-    text = ""
-    for node_text in xml_nodes:
-        text += node_text
-    return text.strip()
 
 def extract_nojs_name(xml_node):
-    description = """
-        Extract the name of nojs method from a Doxygen XML node
     """
-    return xml_node.findtext('name')
+    Extract the name of nojs method from a Doxygen XML node
+    """
+    return xml_node.findtext("name")
 
-def extract_method(xml_node):
-    description = """
-        Extract the method relevant part from a Doxygen XML node
-        Put everything into a dictionary
+
+def extract_method(xml_node) -> dict:
+    """
+    Extract the method relevant part from a Doxygen XML node
+    Put everything into a dictionary
     """
 
-    method = {}
-    method['id'] = xml_node.get("id")
-    method['name'] = xml_node.findtext('name')
-    doc_id = method['name'].lower()
-    method['type'] = xml_node.findtext('type')
+    m: dict = {
+        "id": xml_node.get("id"),
+        "name": xml_node.findtext("name"),
+        "type": xml_node.findtext("type"),
+        "definition": xml_node.findtext("definition"),
+        "argsstring": xml_node.findtext("argsstring"),
+    }
+
+    doc_id = m["name"].lower()
     xml_desc = xml_node.xpath(".//detaileddescription/para/simplesect[@kind='return']")
     # look for the description of return
     if xml_desc:
-        texts = xml_desc[0].xpath('./descendant::*/text()')
-        method['return-simplesect'] = get_text_for_nodes(texts)
+        texts = xml_desc[0].xpath("./descendant::*/text()")
+        m["return-simplesect"] = "".join(texts).strip()
 
-    method['definition'] = xml_node.findtext('definition')
-    method['argsstring'] = xml_node.findtext('argsstring')
     params = []
     # look for all parameters
-    xml_params = xml_node.findall('param')
+    xml_params = xml_node.findall("param")
     for xml_param in xml_params:
-        param = {}
-        declname = xml_param.findtext('declname') 
-        param['declname'] = declname 
-        doc_id += "-{}".format(declname.lower())
-        param['type'] = xml_param.findtext('type') 
-        param['defval'] = xml_param.findtext('defval')    
-        # loolk for the description of a parameter
-        xml_desc = xml_node.xpath(".//parameteritem[parameternamelist/parametername/text()='{}']".format(declname))
+        declname = xml_param.findtext("declname")
+        doc_id += f"-{declname.lower()}"
+        param: dict = {
+            "declname": declname,
+            "type": xml_param.findtext("type"),
+            "defval": xml_param.findtext("defval"),
+        }
+
+        # look for the description of a parameter
+        xml_desc = xml_node.xpath(
+            f".//parameteritem[parameternamelist/parametername/text()='{declname}']"
+        )
         if xml_desc:
-            texts = xml_desc[0].xpath('./parameterdescription/descendant::*/text()')
-            param['parameterdescription'] =  get_text_for_nodes(texts)
-        params.append(param) 
+            texts = xml_desc[0].xpath("./parameterdescription/descendant::*/text()")
+            param["parameterdescription"] = "".join(texts).strip()
 
-    method['params'] = params
-    method['doc_id'] = doc_id
- 
-    briefdescription = ""
-    texts = xml_node.xpath('./briefdescription/descendant::*/text()')
-    method['briefdescription'] = get_text_for_nodes(texts)
+        params.append(param)
 
-    detaileddescription = ""
-    texts = xml_node.xpath('./detaileddescription/descendant::*[not(ancestor::parameterlist) and not(ancestor::simplesect)]/text()')
-    method['detaileddescription'] = get_text_for_nodes(texts)
-    
-    return method
+    m["params"] = params
+    m["doc_id"] = doc_id
 
-def format_python_example(method):
-    description = """
-        Format a Python example call
+    texts = xml_node.xpath("./briefdescription/descendant::*/text()")
+    m["briefdescription"] = "".join(texts).strip()
+
+    texts = xml_node.xpath(
+        "./detaileddescription/descendant::*[not(ancestor::parameterlist) and not(ancestor::simplesect)]/text()"
+    )
+    m["detaileddescription"] = "".join(texts).strip()
+
+    return m
+
+
+def format_python_example(mthd: dict) -> str:
     """
-    example = ""
-    name = method['name']
+    Format a Python example call
+    """
+    name = mthd["name"]
     name = name[0].lower() + name[1:]
-    if method.get('type') != "void":
-        example = "result = "
-    example += "toolkit." + name + "("
-    params = []
-    for param in method['params']:
-        params.append(param['declname'])
-    example += ", ".join(params)
-    example += ")"
-    return example
 
-def print_method(method, file):
-    description = """
-        Print the MD content for a method.
+    res_pfx: str = ""
+    if mthd.get("type") != "void":
+        res_pfx = "result = "
+
+    params = ", ".join([p["declname"] for p in mthd["params"]])
+
+    return f"{res_pfx}toolkit.{name}({params})"
+
+
+def write_method(mthd: dict, fptr) -> None:
+    """
+    Print the MD content for a method.
     """
 
-    # header, short and long descrtiption
-    file.write("### {}\n\n".format(method['name']))
-    if method.get('briefdescription'):
-        file.write("{}\n\n".format(method['briefdescription']))
-    if method.get('detaileddescription'):
-        file.write("{}\n\n".format(method['detaileddescription']))
+    # header, short and long description
+    fptr.write(f"### {mthd['name']}\n\n")
+    if mthd.get("briefdescription"):
+        fptr.write(f"{mthd['briefdescription']}\n\n")
+    if mthd.get("detaileddescription"):
+        fptr.write(f"{mthd['detaileddescription']}\n\n")
 
-    if method.get('nojs'):
-        file.write("{{% aside .warning %}}{}{{% endaside %}}\n\n".format("This method is not available in the JavaScript distributed version of the toolkit"))
+    if mthd.get("nojs"):
+        fptr.write(
+            f"{{% aside .warning %}}{'This method is not available in the JavaScript distributed version of the toolkit'}{{% endaside %}}\n\n"
+        )
 
     # return
-    if method.get('type'):
-        file.write("**Returns**\n\n`{}`".format(method['type']))
-        if method.get('return-simplesect'):
-            file.write(" – {}".format(method['return-simplesect']))
-        file.write("\n\n")
+    if mthd.get("type"):
+        fptr.write(f"**Returns**\n\n`{mthd['type']}`")
+        if mthd.get("return-simplesect"):
+            fptr.write(f" – {mthd['return-simplesect']}")
+        fptr.write("\n\n")
 
-    # paramter table
-    if method.get('params'):
-        file.write("**Parameters**\n\n|---|---|---|\n| Name | Type | Default | Description |\n")
-        for param in method['params']:
-            file.write("| `{}` ".format(param['declname'] if param.get('declname') else ''))
-            file.write("| `{}` ".format(param['type'] if param.get('type') else ''))
-            defval = "`{}`".format(param['defval']) if param.get('defval') and param['defval'] != 'null' else '∅'
-            file.write("| {} ".format(defval))
-            file.write("| {} |\n".format(param['parameterdescription'] if param.get('parameterdescription') else ''))
-        file.write("{: .table .table-condensed .table-sm .text-xsmall}\n\n")
+    # parameter table
+    if mthd.get("params"):
+        fptr.write(
+            "**Parameters**\n\n|---|---|---|\n| Name | Type | Default | Description |\n"
+        )
+        for param in mthd["params"]:
+            fptr.write(f"| `{param['declname'] if param.get('declname') else ''}` ")
+            fptr.write(f"| `{param['type'] if param.get('type') else ''}` ")
+            defval = (
+                f"`{param['defval']}`"
+                if param.get("defval") and param["defval"] != "null"
+                else "∅"
+            )
+            fptr.write(f"| {defval} ")
+            fptr.write(
+                f"| {param['parameterdescription'] if param.get('parameterdescription') else ''} |\n"
+            )
+        fptr.write("{: .table .table-condensed .table-sm .text-xsmall}\n\n")
 
     # C++ original header
-    if method.get('definition') and method.get('argsstring'):
-        file.write("**Original header**\n\n```cpp\n{}{}\n```\n\n".format(method['definition'], method['argsstring']))
+    if mthd.get("definition") and mthd.get("argsstring"):
+        fptr.write(
+            f"**Original header**\n\n```cpp\n{mthd['definition']}{mthd['argsstring']}\n```\n\n"
+        )
 
     # Python example call
-    file.write("**Example call**\n\n```python\n{}\n```\n\n".format(format_python_example(method)))
+    fptr.write(f"**Example call**\n\n```python\n{format_python_example(mthd)}\n```\n\n")
 
     # Extended documentation include
-    file.write("{{% include method-doc file=\"{}\" %}}\n".format(method['doc_id']))
+    fptr.write(f'{{% include method-doc file="{mthd["doc_id"]}" %}}\n')
 
-def print_frontmatter(file):
-    description = """
-        Print the front matter of the method MD file.
+
+def write_frontmatter(fptr) -> None:
     """
-    file.write('---\ntitle: "Toolkit methods"\nno-edit: true\n')
-    file.write('# This file is auto-generated - do not edit\n---\n\n')
+    Print the front matter of the method MD file.
+    """
+    fptr.write('---\ntitle: "Toolkit methods"\nno-edit: true\n')
+    fptr.write("# This file is auto-generated - do not edit\n---\n\n")
 
     # Extended documentation include
-    file.write("{% include method-doc file=\"introduction\" %}\n\n")
+    fptr.write('{% include method-doc file="introduction" %}\n\n')
+
 
 if __name__ == "__main__":
     description = """
@@ -170,15 +183,17 @@ if __name__ == "__main__":
         level_msg: str = "Error"
         level = logging.ERROR
 
-    logging.basicConfig(format="[%(asctime)s] [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)",
-                        level=level)
+    logging.basicConfig(
+        format="[%(asctime)s] [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)",
+        level=level,
+    )
     log = logging.getLogger(__name__)
     log.info("Running at logging level %s", level_msg)
 
     # Download the header_file file from the given url
     url = header_url.format(args.mode)
     log.debug("Downloading %s", url)
-    header_file = requests.get(url)
+    header_file = requests.get(url, timeout=10)
 
     if 200 <= header_file.status_code < 400:
         log.info("%s successfully downloaded", url)
@@ -186,13 +201,13 @@ if __name__ == "__main__":
         log.error("Problem downloading %s. Skipping this example", url)
         sys.exit()
 
-            # create the output directory if necessary
-    if not(os.path.isdir(header_tmp_dir)):
+        # create the output directory if necessary
+    if not os.path.isdir(header_tmp_dir):
         os.mkdir(header_tmp_dir)
 
     header_tmp_file = os.path.join(header_tmp_dir, header_tmp_name)
     # Save the file locally for parsing
-    with open(header_tmp_file, 'w') as f:
+    with open(header_tmp_file, "w") as f:
         f.write(header_file.text)
 
     index_xml = etree.parse(header_tmp_file)
@@ -200,8 +215,10 @@ if __name__ == "__main__":
     # get the toolkit class
     toolkit = index_xml.xpath('//compoundname[text()="vrv::Toolkit"]')[0]
 
-   # get all the methods not supported in the JS toolkit mark with a @remark nojs
-    doxygen_nojss = toolkit.xpath('//memberdef[@kind="function" and @prot="public" and ./detaileddescription/para/simplesect[@kind="remark"]/para/text()="nojs"]')
+    # get all the methods not supported in the JS toolkit mark with a @remark nojs
+    doxygen_nojss = toolkit.xpath(
+        '//memberdef[@kind="function" and @prot="public" and ./detaileddescription/para/simplesect[@kind="remark"]/para/text()="nojs"]'
+    )
 
     # extract their content into an array of dictionaries
     nojs_methods = []
@@ -209,35 +226,32 @@ if __name__ == "__main__":
         nojs_methods.append(extract_nojs_name(doxygen_nojs))
 
     # get all the public methods
-    doxygen_methods = toolkit.xpath('//memberdef[@kind="function" and @prot="public" and not(starts-with(@id, "group__nodoc_"))]')
+    doxygen_methods = toolkit.xpath(
+        '//memberdef[@kind="function" and @prot="public" and not(starts-with(@id, "group__nodoc_"))]'
+    )
 
     # extract their content into an array of dictionaries
-    methods = []
-    for doxygen_method in doxygen_methods:
-        # Skip the destructor
-        if doxygen_method.findtext('name') == "~Toolkit":
-            continue
-        methods.append(extract_method(doxygen_method))
+    methods = [
+        extract_method(d) for d in doxygen_methods if d.findtext("name") != "~Toolkit"
+    ]
 
     # sort them by method name
-    def sortName(elem):
-        return elem.get('name')
+    methods.sort(key=lambda n: n.get("name"))
 
-    methods.sort(key=sortName)
+    with open(methods_output_page, "w") as methods_out:
+        write_frontmatter(methods_out)
 
-    file = open(methods_ouptut_page, 'w')
-    print_frontmatter(file)
-
-    for method in methods:
-        if method.get('name') in nojs_methods:
-            print(method['name'])
-            method['nojs'] = True
-        print_method(method, file)
-
-    file.close()
+        for method in methods:
+            if method.get("name") in nojs_methods:
+                print(method["name"])
+                method["nojs"] = True
+            write_method(method, methods_out)
 
     # Save file for documentation
-    with open("_data/methods.yml", 'w') as yml_file:
+    if not (os.path.isdir("_data")):
+        os.mkdir("_data")
+
+    with open("_data/methods.yml", "w") as yml_file:
         yaml.dump(methods, yml_file)
 
     sys.exit()
