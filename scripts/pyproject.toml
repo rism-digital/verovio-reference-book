@@ -1,18 +1,52 @@
-[tool.poetry]
-name = "verovio-reference-book"
+[project]
+name = "scripts"
 version = "0.1.0"
-description = ""
-authors = ["Andrew Hankinson <andrew.hankinson@rism.digital>"]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gitpython>=3.1.45",
+    "lxml>=6.0.1",
+    "python-frontmatter>=1.1.0",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.5",
+    "verovio>=5.5.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-verovio = "^3.3.0"
-PyYAML = "^5.4.1"
-lxml = "^4.9.1"
-requests = "^2.25.1"
+[uv.tool]
+package = false
 
-[tool.poetry.dev-dependencies]
+[tool.ruff]
+target-version = "py313"
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # pycodestyle warnings
+    "W",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    ## Flake8 plugins
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-comprehensions
+    "C",
+    # flake8-django
+    "DJ",
+    # flake8-bandit
+    "S",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+ignore = [
+    # Ignore Pycodestyle line-length warnings, (mainly long comments).
+    "E501",
+    # Ignore McCabe complexity (for now).
+    "C901",
+]
