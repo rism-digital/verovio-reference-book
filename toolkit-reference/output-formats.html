@@ -31,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-09-02T11:43:43+00:00" />
+<meta property="article:published_time" content="2025-09-05T10:45:58+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Output formats" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-02T11:43:43+00:00","datePublished":"2025-09-02T11:43:43+00:00","description":"SVG","headline":"Output formats","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"url":"/toolkit-reference/output-formats.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-05T10:45:58+00:00","datePublished":"2025-09-05T10:45:58+00:00","description":"SVG","headline":"Output formats","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/toolkit-reference/output-formats.html"},"url":"/toolkit-reference/output-formats.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -737,15 +737,15 @@
 
 <h3 id="expansionmap">Expansionmap</h3>
 
-<p>The expansionmap is a JSON object that is generated when an <a href="/advanced-topics/expansions.html">expansion element</a> is passed to Verovio with the <code class="language-plaintext highlighter-rouge">--expand</code> option. The expansionmap provides the relationship between the original score parts and the repeated (expanded, unfolded) sections created through the expand process.</p>
+<p>The expansionmap is a JSON object that is generated when the <code class="language-plaintext highlighter-rouge">xml:id</code> of an <a href="/advanced-topics/expansions.html">expansion element</a> is passed to Verovio with the <code class="language-plaintext highlighter-rouge">--expand</code> option. The expansionmap represents the relationship between the original score parts and the repeated (expanded, unfolded) sections created through the expansion process.</p>
 
-<p>While expanding, Verovio generates new predictable xml:ids for all elements of the expanded sections (<code class="language-plaintext highlighter-rouge">section</code>, <code class="language-plaintext highlighter-rouge">ending</code>, <code class="language-plaintext highlighter-rouge">rdg</code>, <code class="language-plaintext highlighter-rouge">lem</code>), adding a <code class="language-plaintext highlighter-rouge">-rendX</code> to each xml:id, while <code class="language-plaintext highlighter-rouge">X</code> being the number of occurrence of a given element, starting from 2 for the first repetition of a given element. Thus, <code class="language-plaintext highlighter-rouge">xml:id="A-rend3"</code> would refer to the third occurence (or the second repetition) of element <code class="language-plaintext highlighter-rouge">"A"</code>.</p>
+<p>While expanding, Verovio generates new, predictable <code class="language-plaintext highlighter-rouge">xml:id</code>s for all expanded elements (<code class="language-plaintext highlighter-rouge">section</code>, <code class="language-plaintext highlighter-rouge">ending</code>, <code class="language-plaintext highlighter-rouge">rdg</code>, <code class="language-plaintext highlighter-rouge">lem</code>), appending a <code class="language-plaintext highlighter-rouge">-rendX</code> to each <code class="language-plaintext highlighter-rouge">xml:id</code>, with <code class="language-plaintext highlighter-rouge">X</code> being the number of occurrences, starting from 2 for the first repetition of a given element. Thus, <code class="language-plaintext highlighter-rouge">xml:id="A-rend3"</code> would refer to the third occurence (or the second repetition) of element <code class="language-plaintext highlighter-rouge">"A"</code>.</p>
 
-<p>The keys in the expansionmap JSON object are the xml:ids in the expanded score that have been repeated somewhere, referring by their values to the xml:ids of all identical score elements in the expanded score. <strong>The original score element is always the first the value list.</strong></p>
+<p>The keys in the expansionmap JSON object are the <code class="language-plaintext highlighter-rouge">xml:id</code>s of expanded elements in the score (both original and unfolded). The values contain lists of related (original and unfolded) elements, e.g. <code class="language-plaintext highlighter-rouge">["A", "A-rend2", "A-rend3"]</code>. The original score element (e.g., <code class="language-plaintext highlighter-rouge">"A"</code>) is always the first  value in the list.</p>
 
 <h4 id="usage-2">Usage</h4>
 
-<p>With the command-line tool, for generating an expansionmap JSON with the default options, you need to do:</p>
+<p>To generate an expansionmap JSON with the default options on the command line:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verovio <span class="nt">-t</span> expansionmap <span class="nt">--expand</span> expansion-default <span class="nt">-o</span> output.json expansion-001.mei
 </code></pre></div></div>
@@ -754,22 +754,402 @@
 
 <h4 id="examples-1">Examples</h4>
 
-<p>[SVG file is missing and need to be generated]</p>
+<p><img class=" img-responsive hidden-print" src="/images/examples/05-toolkit-reference/02-output-formats/expansionmap.svg" alt="examples/05-toolkit-reference/02-output-formats/expansionmap.svg]" /></p>
+<div class=" visible-print-notation"><svg width="707px" height="150px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
+   <desc>Engraved by Verovio 5.5.0-8c9036d</desc>
+   <defs>
+      <g id="E050-l19nj5e9">
+         <path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
+      </g>
+      <g id="E262-l19nj5e9">
+         <path transform="scale(1,-1)" d="M136 186v169h17v-164l44 14v-91l-44 -14v-165l44 12v-91l-44 -13v-155h-17v150l-76 -22v-155h-17v149l-43 -13v90l43 14v167l-43 -14v92l43 13v169h17v-163zM60 73v-167l76 22v168z" />
+      </g>
+      <g id="E083-l19nj5e9">
+         <path transform="scale(1,-1)" d="M208 250c97 0 177 -52 177 -116c0 -69 -40 -111 -118 -125c56 -5 125 -44 125 -116c0 -31 -10 -57 -31 -78c-19 -21 -45 -38 -78 -49l-50 -11c-15 -3 -36 -7 -55 -7c-50 0 -86 16 -113 38c-16 10 -23 18 -34 34c-7 13 -11 25 -11 38c0 43 27 83 68 83l3 -2 c61 0 75 -42 75 -70c0 -19 -24 -42 -26 -57c7 -17 20 -25 37 -25c44 0 94 29 94 78c0 75 -34 125 -138 125v36c84 0 131 22 131 98c0 54 -37 88 -87 88c-26 0 -43 -7 -51 -22c15 -22 44 -16 44 -70c0 -37 -37 -62 -71 -62c-22 0 -69 15 -69 76c0 79 101 116 178 116z" />
+      </g>
+      <g id="E084-l19nj5e9">
+         <path transform="scale(1,-1)" d="M20 -78c84 97 114 180 134 329h170c-13 -32 -82 -132 -99 -151l-84 -97c-33 -36 -59 -63 -80 -81h162v102l127 123v-225h57v-39h-57v-34c0 -43 19 -65 57 -65v-34h-244v36c48 0 60 26 60 70v27h-203v39z" />
+      </g>
+      <g id="E0A4-l19nj5e9">
+         <path transform="scale(1,-1)" d="M0 -39c0 68 73 172 200 172c66 0 114 -37 114 -95c0 -84 -106 -171 -218 -171c-64 0 -96 30 -96 94z" />
+      </g>
+      <g id="E0A3-l19nj5e9">
+         <path transform="scale(1,-1)" d="M278 64c0 22 -17 39 -43 39c-12 0 -26 -3 -41 -10c-85 -43 -165 -94 -165 -156c5 -25 15 -32 49 -32c67 11 200 95 200 159zM0 -36c0 68 73 174 200 174c66 0 114 -39 114 -97c0 -84 -106 -173 -218 -173c-64 0 -96 32 -96 96z" />
+      </g>
+      <g id="E4E5-l19nj5e9">
+         <path transform="scale(1,-1)" d="M107 292c-13 24 -30 49 -52 71c-1 1 0 2 0 3l-2 2c3 3 4 4 6 4c12 0 26 -7 40 -20s44 -40 89 -81c26 -24 28 -29 46 -47c4 -4 8 -9 10 -14c6 -8 8 -16 8 -27c0 -19 -12 -40 -36 -61c-28 -23 -49 -38 -61 -73c-4 -11 -7 -27 -10 -50c13 -43 34 -83 59 -121 c31 -47 59 -79 101 -129c-8 0 -26 7 -54 20l-62 29l-21 6l-23 1c-25 0 -45 -10 -60 -30l-4 -14l-1 -12c0 -33 20 -56 39 -78c8 -9 17 -18 26 -26c17 -15 27 -24 28 -30l-3 -3c-11 5 -19 10 -25 15c-9 3 -37 21 -45 26c-24 14 -45 32 -63 51c-19 21 -37 44 -37 71 c0 63 27 95 80 95c41 0 86 -18 136 -52c-19 26 -37 48 -55 66c-23 23 -48 44 -73 65c-28 23 -47 40 -58 53s-17 26 -18 39c75 64 113 125 113 183c0 27 -7 48 -18 68z" />
+      </g>
+      <g id="E044-l19nj5e9">
+         <path transform="scale(1,-1)" d="M0 0c0 28 22 50 50 50s50 -22 50 -50s-22 -50 -50 -50s-50 22 -50 50z" />
+      </g>
+   </defs>
+   <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 path {stroke:currentColor}</style>
+   <svg class="definition-scale" color="black" viewBox="0 0 15710 3320">
+      <g class="page-margin" transform="translate(500, 500)">
+         <g id="m4x9w72" class="mdiv pageMilestone" />
+         <g id="s130l825" class="score pageMilestone" />
+         <g id="v1n4j8tk" class="system">
+            <g id="all" class="section systemMilestone" />
+            <g id="A" class="section systemMilestone" />
+            <g id="mllgqby" class="measure">
+               <g id="s19vz3pf" class="staff">
+                  <path d="M0 656 L3865 656" stroke-width="13" />
+                  <path d="M0 836 L3865 836" stroke-width="13" />
+                  <path d="M0 1016 L3865 1016" stroke-width="13" />
+                  <path d="M0 1196 L3865 1196" stroke-width="13" />
+                  <path d="M0 1376 L3865 1376" stroke-width="13" />
+                  <g id="efdh2og" class="clef">
+                     <use xlink:href="#E050-l19nj5e9" transform="translate(90, 1196) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="fjakmhx" class="keySig">
+                     <g id="gg37udu" class="keyAccid">
+                        <use xlink:href="#E262-l19nj5e9" transform="translate(735, 656) scale(0.72, 0.72)" />
+                     </g>
+                     <g id="h1al30pf" class="keyAccid">
+                        <use xlink:href="#E262-l19nj5e9" transform="translate(913, 926) scale(0.72, 0.72)" />
+                     </g>
+                  </g>
+                  <g id="i1nb62c3" class="meterSig">
+                     <use xlink:href="#E083-l19nj5e9" transform="translate(1226, 836) scale(0.72, 0.72)" />
+                     <use xlink:href="#E084-l19nj5e9" transform="translate(1220, 1196) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="ljc87zu" class="layer">
+                     <g id="nhh1hp9" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-l19nj5e9" transform="translate(1782, 1106) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="csdt8x1" class="stem">
+                           <path d="M1999 1078 L1999 476" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="n1vcwqkb" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-l19nj5e9" transform="translate(2472, 1016) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d10jcx5a" class="stem">
+                           <path d="M2481 1044 L2481 1616" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="n1kyira7" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-l19nj5e9" transform="translate(3162, 926) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ea7j3uy" class="stem">
+                           <path d="M3171 954 L3171 1556" stroke-width="18" />
+                        </g>
+                        <g id="x15wwqth" class="accid" />
+                     </g>
+                  </g>
+               </g>
+               <g id="tj90u8f1" class="tempo">
+                  <text x="1782" y="339" font-size="0px">
+                     <tspan id="z2gqwr3" class="text">
+                        <tspan font-size="405px">Menuett</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="dbf3mxc" class="dir">
+                  <text x="1782" y="2232" font-size="0px">
+                     <tspan id="rlnnucj1" class="rend" fill="red" font-style="normal" font-weight="bold">
+                        <tspan id="c1ahluu1" class="text">
+                           <tspan font-size="445px">A</tspan>
+                        </tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="r4ks4fv" class="barLine">
+                  <path d="M3852 656 L3852 1376" stroke-width="27" />
+               </g>
+            </g>
+            <g id="y1ccvmbx" class="systemMilestoneEnd A" />
+            <g id="A1" class="ending systemMilestone">
+               <g class="voltaBracket">
+                  <text x="3925" y="334" font-size="0px">
+                     <tspan id="n1dvjb6y" class="text">
+                        <tspan font-size="405px">1.</tspan>
+                     </tspan>
+                  </text>
+                  <path d="M3852 6 L5785 6" stroke-width="13" stroke-linecap="square" />
+                  <path d="M3852 6 L3852 334" stroke-width="13" stroke-linecap="square" />
+                  <path d="M5785 6 L5785 334" stroke-width="13" stroke-linecap="square" />
+               </g>
+            </g>
+            <g id="m1rh9m44" class="measure">
+               <g id="sgn121j" class="staff">
+                  <path d="M3865 656 L5960 656" stroke-width="13" />
+                  <path d="M3865 836 L5960 836" stroke-width="13" />
+                  <path d="M3865 1016 L5960 1016" stroke-width="13" />
+                  <path d="M3865 1196 L5960 1196" stroke-width="13" />
+                  <path d="M3865 1376 L5960 1376" stroke-width="13" />
+                  <g id="l138uayg" class="layer">
+                     <g id="n1106llg" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-l19nj5e9" transform="translate(4045, 1106) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="fuiaea7" class="stem">
+                           <path d="M4262 1078 L4262 476" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="r16lb964" class="rest">
+                        <use xlink:href="#E4E5-l19nj5e9" transform="translate(5095, 1016) scale(0.72, 0.72)" />
+                     </g>
+                  </g>
+               </g>
+               <g id="dprp7mj2" class="dir">
+                  <text x="4045" y="2232" font-size="0px">
+                     <tspan id="reyoj4a" class="rend" fill="red" font-style="normal" font-weight="bold">
+                        <tspan id="t3elz0m" class="text">
+                           <tspan font-size="445px">A1</tspan>
+                        </tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="m5odh2d" class="barLine">
+                  <path d="M5785 656 L5785 1376" stroke-width="27" />
+                  <path d="M5915 656 L5915 1376" stroke-width="90" />
+                  <use xlink:href="#E044-l19nj5e9" transform="translate(5668, 926) scale(0.72, 0.72)" />
+                  <use xlink:href="#E044-l19nj5e9" transform="translate(5668, 1106) scale(0.72, 0.72)" />
+               </g>
+            </g>
+            <g id="z1onwf8y" class="systemMilestoneEnd A1" />
+            <g id="A2" class="ending systemMilestone">
+               <g class="voltaBracket">
+                  <text x="6020" y="334" font-size="0px">
+                     <tspan id="o1iafbot" class="text">
+                        <tspan font-size="405px">2.</tspan>
+                     </tspan>
+                  </text>
+                  <path d="M5947 6 L7880 6" stroke-width="13" stroke-linecap="square" />
+                  <path d="M5947 6 L5947 334" stroke-width="13" stroke-linecap="square" />
+                  <path d="M7880 6 L7880 334" stroke-width="13" stroke-linecap="square" />
+               </g>
+            </g>
+            <g id="m1tmifa3" class="measure">
+               <g id="stf3txs" class="staff">
+                  <path d="M5960 656 L7880 656" stroke-width="13" />
+                  <path d="M5960 836 L7880 836" stroke-width="13" />
+                  <path d="M5960 1016 L7880 1016" stroke-width="13" />
+                  <path d="M5960 1196 L7880 1196" stroke-width="13" />
+                  <path d="M5960 1376 L7880 1376" stroke-width="13" />
+                  <g id="losvurm" class="layer">
+                     <g id="n1jqo8a" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-l19nj5e9" transform="translate(6140, 836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="gxzwqqc" class="stem">
+                           <path d="M6149 861 L6149 1466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="r150q1ua" class="rest">
+                        <use xlink:href="#E4E5-l19nj5e9" transform="translate(7190, 1016) scale(0.72, 0.72)" />
+                     </g>
+                  </g>
+               </g>
+               <g id="dvk6xni2" class="dir">
+                  <text x="6140" y="2232" font-size="0px">
+                     <tspan id="r82f5wg" class="rend" fill="red" font-style="normal" font-weight="bold">
+                        <tspan id="k1dict13" class="text">
+                           <tspan font-size="445px">A2</tspan>
+                        </tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="d1eyoooy" class="barLine" />
+            </g>
+            <g id="au36i87" class="systemMilestoneEnd A2" />
+            <g id="B" class="section systemMilestone" />
+            <g id="m1dp0ln2" class="measure">
+               <g id="s1172cur" class="staff">
+                  <path d="M7880 656 L10526 656" stroke-width="13" />
+                  <path d="M7880 836 L10526 836" stroke-width="13" />
+                  <path d="M7880 1016 L10526 1016" stroke-width="13" />
+                  <path d="M7880 1196 L10526 1196" stroke-width="13" />
+                  <path d="M7880 1376 L10526 1376" stroke-width="13" />
+                  <g id="lnwcybk" class="layer">
+                     <g id="n1687zus" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-l19nj5e9" transform="translate(8443, 836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h3i55up" class="stem">
+                           <path d="M8452 864 L8452 1466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="n1480mzs" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-l19nj5e9" transform="translate(9133, 926) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="i12zs17z" class="stem">
+                           <path d="M9142 954 L9142 1556" stroke-width="18" />
+                        </g>
+                        <g id="z16wv72r" class="accid" />
+                     </g>
+                     <g id="n5crjrn" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-l19nj5e9" transform="translate(9823, 1016) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j1rmtrje" class="stem">
+                           <path d="M9832 1044 L9832 1616" stroke-width="18" />
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="t9chw3v2" class="tempo">
+                  <text x="8443" y="528" font-size="0px">
+                     <tspan id="c1yevvwh" class="text">
+                        <tspan font-size="405px">Trio</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="dpov44p2" class="dir">
+                  <text x="8443" y="2232" font-size="0px">
+                     <tspan id="rmtkiss1" class="rend" fill="red" font-style="normal" font-weight="bold">
+                        <tspan id="fwigvp2" class="text">
+                           <tspan font-size="445px">B</tspan>
+                        </tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="tmeaduc" class="barLine">
+                  <path d="M8015 656 L8015 1376" stroke-width="90" />
+                  <path d="M8145 656 L8145 1376" stroke-width="27" />
+                  <use xlink:href="#E044-l19nj5e9" transform="translate(8191, 926) scale(0.72, 0.72)" />
+                  <use xlink:href="#E044-l19nj5e9" transform="translate(8191, 1106) scale(0.72, 0.72)" />
+               </g>
+               <g id="u4oqxce" class="barLine">
+                  <path d="M10513 656 L10513 1376" stroke-width="27" />
+               </g>
+            </g>
+            <g id="b1bp6nfw" class="systemMilestoneEnd B" />
+            <g id="B1" class="ending systemMilestone">
+               <g class="voltaBracket">
+                  <text x="10586" y="334" font-size="0px">
+                     <tspan id="p1ql6uxa" class="text">
+                        <tspan font-size="405px">1.</tspan>
+                     </tspan>
+                  </text>
+                  <path d="M10513 6 L12446 6" stroke-width="13" stroke-linecap="square" />
+                  <path d="M10513 6 L10513 334" stroke-width="13" stroke-linecap="square" />
+                  <path d="M12446 6 L12446 334" stroke-width="13" stroke-linecap="square" />
+               </g>
+            </g>
+            <g id="m2xlnjc" class="measure">
+               <g id="s19tw80h" class="staff">
+                  <path d="M10526 656 L12621 656" stroke-width="13" />
+                  <path d="M10526 836 L12621 836" stroke-width="13" />
+                  <path d="M10526 1016 L12621 1016" stroke-width="13" />
+                  <path d="M10526 1196 L12621 1196" stroke-width="13" />
+                  <path d="M10526 1376 L12621 1376" stroke-width="13" />
+                  <g id="lbmq3cz" class="layer">
+                     <g id="n1vrkc62" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-l19nj5e9" transform="translate(10706, 1106) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="kjeoxmv" class="stem">
+                           <path d="M10923 1078 L10923 476" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="r1d6lbpc" class="rest">
+                        <use xlink:href="#E4E5-l19nj5e9" transform="translate(11756, 1016) scale(0.72, 0.72)" />
+                     </g>
+                  </g>
+               </g>
+               <g id="dionej11" class="dir">
+                  <text x="10706" y="2232" font-size="0px">
+                     <tspan id="r37cqwp1" class="rend" fill="red" font-style="normal" font-weight="bold">
+                        <tspan id="w19obtds" class="text">
+                           <tspan font-size="445px">B1</tspan>
+                        </tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="pmwmthe" class="barLine">
+                  <path d="M12446 656 L12446 1376" stroke-width="27" />
+                  <path d="M12576 656 L12576 1376" stroke-width="90" />
+                  <use xlink:href="#E044-l19nj5e9" transform="translate(12329, 926) scale(0.72, 0.72)" />
+                  <use xlink:href="#E044-l19nj5e9" transform="translate(12329, 1106) scale(0.72, 0.72)" />
+               </g>
+            </g>
+            <g id="cg7y08o" class="systemMilestoneEnd B1" />
+            <g id="B2" class="ending systemMilestone">
+               <g class="voltaBracket">
+                  <text x="12681" y="334" font-size="0px">
+                     <tspan id="q1nqzhnh" class="text">
+                        <tspan font-size="405px">2.</tspan>
+                     </tspan>
+                  </text>
+                  <path d="M12608 6 L14711 6" stroke-width="13" stroke-linecap="square" />
+                  <path d="M12608 6 L12608 334" stroke-width="13" stroke-linecap="square" />
+                  <path d="M14711 6 L14711 334" stroke-width="13" stroke-linecap="square" />
+               </g>
+            </g>
+            <g id="m1sufr06" class="measure">
+               <g id="s1iw9zf4" class="staff">
+                  <path d="M12621 656 L14716 656" stroke-width="13" />
+                  <path d="M12621 836 L14716 836" stroke-width="13" />
+                  <path d="M12621 1016 L14716 1016" stroke-width="13" />
+                  <path d="M12621 1196 L14716 1196" stroke-width="13" />
+                  <path d="M12621 1376 L14716 1376" stroke-width="13" />
+                  <g id="l1ciko0e" class="layer">
+                     <g id="nd6fmt7" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-l19nj5e9" transform="translate(12801, 836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="lke0vy6" class="stem">
+                           <path d="M12810 861 L12810 1466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="r1x5f7f" class="rest">
+                        <use xlink:href="#E4E5-l19nj5e9" transform="translate(13851, 1016) scale(0.72, 0.72)" />
+                     </g>
+                  </g>
+               </g>
+               <g id="dyso80c1" class="dir">
+                  <text x="14541" y="1798" text-anchor="end" font-size="0px">
+                     <tspan id="rbhoi2a" class="rend">
+                        <tspan id="nt9ronl" class="text">
+                           <tspan font-size="405px">Menuett da capo</tspan>
+                        </tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="d7rt3sr1" class="dir">
+                  <text x="12801" y="2232" font-size="0px">
+                     <tspan id="reb11xb" class="rend" fill="red" font-style="normal" font-weight="bold">
+                        <tspan id="qg6e4o" class="text">
+                           <tspan font-size="445px">B2</tspan>
+                        </tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="goma0gm" class="barLine">
+                  <path d="M14541 656 L14541 1376" stroke-width="27" />
+                  <path d="M14671 656 L14671 1376" stroke-width="90" />
+               </g>
+            </g>
+            <g id="dxlbg6w" class="systemMilestoneEnd B2" />
+            <g id="efwg9mm" class="systemMilestoneEnd all" />
+         </g>
+         <g id="f1pu9rwv" class="pageMilestoneEnd s130l825" />
+         <g id="g1wpyvd" class="pageMilestoneEnd m4x9w72" />
+      </g>
+   </svg>
+</svg>
+</div>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"all"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-default"</span> <span class="na">plist=</span><span class="s">"#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-minimal"</span> <span class="na">plist=</span><span class="s">"#A #A2 #B #B2 #A #A2"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-maximal"</span> <span class="na">plist=</span><span class="s">"#A #A1 #A #A2 #B #B1 #B #B2 #A #A1 #A #A2"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"A"</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A1"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A2"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A1"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A2"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"B"</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B1"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B2"</span> <span class="na">lendsym=</span><span class="s">"angledown"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B1"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B2"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/section&gt;</span>
 </code></pre></div></div>
 
-<p>The beginning of the expansionmap from this example with the default expansion</p>
+<p>The beginning of the expansionmap from this example with the “default” expansion</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"expansion-default"</span> <span class="na">plist=</span><span class="s">"#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
 <p>looks like this:</p>
