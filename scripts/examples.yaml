@@ -428,6 +428,52 @@
   svg-example-file: examples/04-advanced-topics/06-mensural-notation/alignment-02.svg
   svg-example-exists: true
   mei-example-exists: true
+- name: expansion-001
+  test-suite: expansion/expansion-001.mei
+  xpath:
+  - ".//mei:section"
+  mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001.mei
+  svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: expansion-001-default
+  test-suite: expansion/expansion-001.mei
+  options:
+    expand: expansion-default
+  mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001-default.mei
+  svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001-default.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: expansion-001-minimal
+  test-suite: expansion/expansion-001.mei
+  options:
+    expand: expansion-minimal
+  mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001-minimal.mei
+  svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001-minimal.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: expansion-001-maximal
+  test-suite: expansion/expansion-001.mei
+  options:
+    expand: expansion-maximal
+  mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001-maximal.mei
+  svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001-maximal.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: expansion-002
+  test-suite: expansion/expansion-002.mei
+  mei-example-file: examples/04-advanced-topics/07-expansions/expansion-002.mei
+  svg-example-file: examples/04-advanced-topics/07-expansions/expansion-002.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: expansion-002-default
+  test-suite: expansion/expansion-002.mei
+  options:
+    expand: default
+  mei-example-file: examples/04-advanced-topics/07-expansions/expansion-002-default.mei
+  svg-example-file: examples/04-advanced-topics/07-expansions/expansion-002-default.svg
+  svg-example-exists: true
+  mei-example-exists: true
 - name: humdrum-01
   options:
     breaks: auto
@@ -674,5 +720,11 @@
   url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/abbreviated_writing.pae
   mei-example-file: examples/05-toolkit-reference/02-output-formats/pae-01.mei
   svg-example-file: examples/05-toolkit-reference/02-output-formats/pae-01.svg
+  svg-example-exists: true
+  mei-example-exists: true
+- name: expansionmap
+  test-suite: expansion/expansion-001.mei
+  mei-example-file: examples/05-toolkit-reference/02-output-formats/expansionmap.mei
+  svg-example-file: examples/05-toolkit-reference/02-output-formats/expansionmap.svg
   svg-example-exists: true
   mei-example-exists: true

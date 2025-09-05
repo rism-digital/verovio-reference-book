@@ -99,6 +99,11 @@
 "/advanced-topics/mensural-notation.html#ligatures": Ligatures
 "/advanced-topics/mensural-notation.html#alignment-with-cmn": Alignment with CMN
 "/advanced-topics/expansions.html": Repetition expansion
+"/advanced-topics/expansions.html#minuet-example": Minuet example
+"/advanced-topics/expansions.html#example-with-re-ordered-sections": Example with
+  re-ordered sections
+"/advanced-topics/expansions.html#hierarchical-expansion-structure": Hierarchical
+  expansion structure
 "/toolkit-reference/input-formats.html": Input formats
 "/toolkit-reference/input-formats.html#mei": MEI
 "/toolkit-reference/input-formats.html#humdrum": Humdrum
@@ -111,6 +116,7 @@
 "/toolkit-reference/output-formats.html#mei": MEI
 "/toolkit-reference/output-formats.html#midi": MIDI
 "/toolkit-reference/output-formats.html#timemap": Timemap
+"/toolkit-reference/output-formats.html#expansionmap": Expansionmap
 "/toolkit-reference/output-formats.html#plaine-and-easie": Plaine and Easie
 "/toolkit-reference/output-formats.html#humdrum": Humdrum
 "/toolkit-reference/toolkit-methods.html": Toolkit methods
