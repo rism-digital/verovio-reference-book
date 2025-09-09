@@ -623,7 +623,7 @@ no-edit: true
 [\<meterSigGrp\>](https://music-encoding.org/guidelines/v5/elements/meterSigGrp.html)
 {% endcol %}
 {% col 10 %}
-[att.basic](https://music-encoding.org/guidelines/v5/attribute-classes/att.basic.html), [att.coord](https://music-encoding.org/guidelines/v5/attribute-classes/att.coord.html), [att.facsimile](https://music-encoding.org/guidelines/v5/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/v5/attribute-classes/att.linking.html), [att.meterSigGrp.log](https://music-encoding.org/guidelines/v5/attribute-classes/att.meterSigGrp.log.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html)
+[att.basic](https://music-encoding.org/guidelines/v5/attribute-classes/att.basic.html), [att.coord](https://music-encoding.org/guidelines/v5/attribute-classes/att.coord.html), [att.facsimile](https://music-encoding.org/guidelines/v5/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/v5/attribute-classes/att.linking.html), [att.meterSigGrp.log](https://music-encoding.org/guidelines/v5/attribute-classes/att.meterSigGrp.log.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html), [att.visibility](https://music-encoding.org/guidelines/v5/attribute-classes/att.visibility.html)
 {% endcol %}
 {% endrow %}
 

@@ -26,10 +26,13 @@ endings = [
 attribute_classes_exceptions = {"att.time.base": "att.timeBase"}
 
 element_exceptions = [
+    "accidFloatingObject",
     "annot",
     "barLineAttr",
     "divLineAttr",
+    "doc",
     "dots",
+    "editorTreeObject",
     "flag",
     "genericLayerElement",
     "object",
