@@ -5,8 +5,9 @@ examples:
   - name: expansion-001
     test-suite: expansion/expansion-001.mei
     xpath:
-      - ".//mei:section"
-        # - ".//mei:section[not(.//*[not(self::expansion or self::section or self::ending or self::rdg or self::lem)])]"
+  #      - ".//mei:score/mei:section[not(*)]"
+  #       - ".//score/section/expansion"
+  #      - ".//mei:section[not(.//*[not(self::expansion or self::section or self::ending or self::rdg or self::lem)])]"
 
   - name: expansion-001-default
     test-suite: expansion/expansion-001.mei
@@ -32,7 +33,7 @@ examples:
       expand: "default"
 ---
 
-Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific versions of a scores' repetition structure. Verovio supports this MEI element with the `--expand` toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure. 
+Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific versions of a scores' repetition structure. Verovio supports this MEI element with the `--expand` toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure.
 
 The `expansion` element is expected to be the first element in a `section` or `ending` and must contain descendant `expansion`, `ending`, or `rdg` elements (see [guidelines for section](https://music-encoding.org/guidelines/v5/elements/section)). Its `@plist` attribute may point to its descendant `section`, `ending`, `rdg`, or `lem` elements to indicate a particular expanded version of that excerpt of the score. See the [MEI guidelines for a simple expansion example](https://music-encoding.org/guidelines/v5/content/shared.html#sharedMdivContent).
 
@@ -76,9 +77,33 @@ This example also encodes a "maximal" expansion that realises all repeats, inclu
 
 {% include music-notation-only example="expansion-001-maximal" %}
 
+You may also encode the expansion structure of the above Minuet example in a hierarchical way (see [Verovio test suite](https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001-hierarchical)), with sections for Minuet and Trio, each having their own expansion elements embedded:
+
+```xml
+<section xml:id="all">
+  <expansion xml:id="exp-default" plist="#exp-menuett-default #exp-trio-default #exp-menuett-minimal"/>
+  <expansion xml:id="exp-minimal" plist="#exp-menuett-minimal #exp-trio-minimal #exp-menuett-minimal"/>
+  <expansion xml:id="exp-maximal" plist="#exp-menuett-default #exp-trio-default #exp-menuett-default"/>
+  <section xml:id="Menuett">
+    <expansion xml:id="exp-menuett-default" plist="#A #A1 #A #A2"/>
+    <expansion xml:id="exp-menuett-minimal" plist="#A #A2"/>
+    <section xml:id="A"/>
+    <ending xml:id="A1" n="1."/>
+    <ending xml:id="A2" n="2."/>
+  </section>
+  <section xml:id="Trio">
+    <expansion xml:id="exp-trio-default" plist="#B #B1 #B #B2"/>
+    <expansion xml:id="exp-trio-minimal" plist="#B #B2"/>
+    <section xml:id="B"/>
+    <ending xml:id="B1" n="1."/>
+    <ending xml:id="B2" n="2."/>
+  </section>
+</section>
+```
+
 #### Exporting an expansionmap
 
-For sections that get cloned, Verovio generates predictable `xml:id`s for all containing elements, appending a `-rendX` to the existing `xml:id`, where `X` is a number starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurence (or the second repetition) of section `"A"`. To track the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap. This JSON object contains key-value pairs with unique keys for each `xml:id` in the encoding (both the original and the unfolded elements) and values containing a list of related (original and unfolded) elements, e.g. `["A", "A-rend2", "A-rend3"]`. 
+For sections that get cloned, Verovio generates predictable `xml:id`s for all containing elements, appending a `-rendX` to the existing `xml:id`, where `X` is a number starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurence (or the second repetition) of section `"A"`. To track the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap. This JSON object contains key-value pairs with unique keys for each `xml:id` in the encoding (both the original and the unfolded elements) and values containing a list of related (original and unfolded) elements, e.g. `["A", "A-rend2", "A-rend3"]`.
 
 For more information on the expansionmap, see [Output formats](/toolkit-reference/output-formats.html#expansionmap).
 
@@ -92,7 +117,7 @@ The following expansion represents a sensible default:
 
 ```xml
 <expansion xml:id="default" plist="#Upbeat #A #A1 #A #A2 #B #A #A-Fine"/>
-```
+````
 
 Verovio accommodates this complexity automatically by re-ordering the section structure so that it looks like this:
 
@@ -104,7 +129,7 @@ The elements referred to in the `expansion@plist` may themselves be expansion el
 
 ![Donauwalzer-Sections](/images/advanced-topics/expansions/BlueDanube-section-structure.png){:.img-responsive .example-80}
 
-In turn, each waltz contains a set of expansion elements, each defining a repetition structure  performed within the history of the Vienna New Year's Concert series. The higher-level expansion element then refers to these waltz-level expansions.
+In turn, each waltz contains a set of expansion elements, each defining a repetition structure performed within the history of the Vienna New Year's Concert series. The higher-level expansion element then refers to these waltz-level expansions.
 
 The beginning of the section structure of the first two waltzes including the respective expansion structure looks like this:
 
