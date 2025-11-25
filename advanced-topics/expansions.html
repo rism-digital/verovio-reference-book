@@ -26,18 +26,18 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Repetition expansion" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific versions of a scores’ repetition structure. Verovio supports this MEI element with the --expand toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure." />
-<meta property="og:description" content="Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific versions of a scores’ repetition structure. Verovio supports this MEI element with the --expand toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure." />
+<meta name="description" content="Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific versions of a score’s repetition structure. Verovio supports this MEI element with the --expand toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure." />
+<meta property="og:description" content="Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific versions of a score’s repetition structure. Verovio supports this MEI element with the --expand toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-11-12T10:42:14+00:00" />
+<meta property="article:published_time" content="2025-11-25T15:33:23+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Repetition expansion" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-12T10:42:14+00:00","datePublished":"2025-11-12T10:42:14+00:00","description":"Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific versions of a scores’ repetition structure. Verovio supports this MEI element with the --expand toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure.","headline":"Repetition expansion","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/advanced-topics/expansions.html"},"url":"/advanced-topics/expansions.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-25T15:33:23+00:00","datePublished":"2025-11-25T15:33:23+00:00","description":"Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the &lt;expansion&gt; element to encode specific versions of a score’s repetition structure. Verovio supports this MEI element with the --expand toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure.","headline":"Repetition expansion","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/advanced-topics/expansions.html"},"url":"/advanced-topics/expansions.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -179,13 +179,13 @@
         
         
         <h2>Repetition expansion</h2>
-        <p>Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the <a href="https://music-encoding.org/guidelines/v5/elements/expansion"><code class="language-plaintext highlighter-rouge">&lt;expansion&gt;</code> element</a> to encode specific versions of a scores’ repetition structure. Verovio supports this MEI element with the <code class="language-plaintext highlighter-rouge">--expand</code> toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure.</p>
+        <p>Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the <a href="https://music-encoding.org/guidelines/v5/elements/expansion"><code class="language-plaintext highlighter-rouge">&lt;expansion&gt;</code> element</a> to encode specific versions of a score’s repetition structure. Verovio supports this MEI element with the <code class="language-plaintext highlighter-rouge">--expand</code> toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">expansion</code> element is expected to be the first element in a <code class="language-plaintext highlighter-rouge">section</code> or <code class="language-plaintext highlighter-rouge">ending</code> and must contain descendant <code class="language-plaintext highlighter-rouge">expansion</code>, <code class="language-plaintext highlighter-rouge">ending</code>, or <code class="language-plaintext highlighter-rouge">rdg</code> elements (see <a href="https://music-encoding.org/guidelines/v5/elements/section">guidelines for section</a>). Its <code class="language-plaintext highlighter-rouge">@plist</code> attribute may point to its descendant <code class="language-plaintext highlighter-rouge">section</code>, <code class="language-plaintext highlighter-rouge">ending</code>, <code class="language-plaintext highlighter-rouge">rdg</code>, or <code class="language-plaintext highlighter-rouge">lem</code> elements to indicate a particular expanded version of that excerpt of the score. See the <a href="https://music-encoding.org/guidelines/v5/content/shared.html#sharedMdivContent">MEI guidelines for a simple expansion example</a>.</p>
 
 <h3 id="minuet-example">Minuet example</h3>
 
-<p>A typical MEI example (from the <a href="https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001">Verovio test suite</a>) is given below containing a straight-forward repetition structure in which the Minuet and the Trio are each repeated once with different endings. As indicated by “Menuett da capo”, the performer is requested to repeat the Minuet after the Trio, but then without repetition, going directly to <code class="language-plaintext highlighter-rouge">A2</code> to terminate the performance.</p>
+<p>A typical MEI example (from the <a href="https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001">Verovio test suite example-expansion-001</a>) is given below containing a straight-forward repetition structure in which the Minuet and the Trio are each repeated once with different endings. As indicated by “Menuett da capo”, the performer is requested to repeat the Minuet after the Trio, but then without repetition, going directly to <code class="language-plaintext highlighter-rouge">A2</code> to terminate the performance.</p>
 
 <p><img class=" img-responsive hidden-print" src="/images/examples/04-advanced-topics/07-expansions/expansion-001.svg" alt="examples/04-advanced-topics/07-expansions/expansion-001.svg]" /></p>
 <div class=" visible-print-notation"><svg width="707px" height="150px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
@@ -2292,6 +2292,8 @@
    </svg>
 </svg>
 </div>
+
+<p>For an example encoding this minuet with a hierarchical expansion, see <a href="#hierarchical-expansion-structure">below</a>.</p>
 
 <h4 id="exporting-an-expansionmap">Exporting an expansionmap</h4>
 
@@ -5118,11 +5120,36 @@
 
 <h3 id="hierarchical-expansion-structure">Hierarchical expansion structure</h3>
 
-<p>The elements referred to in the <code class="language-plaintext highlighter-rouge">expansion@plist</code> may themselves be expansion elements situated in descendent section elements. A complex but typical example is the Waltz structure of <a href="https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&amp;scale=33&amp;breaks=line&amp;select=Shorter_Version_Boskovsky&amp;page=1&amp;speed=true&amp;notationOrientation=left&amp;notationProportion=0.44" target="\_blank">An der schönen blauen Donau by Johann Strauss II</a>. (To open a public-domain encoding in mei-friend, please click <a href="https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&amp;scale=33&amp;breaks=line&amp;select=Shorter_Version_Boskovsky&amp;page=1&amp;speed=true&amp;notationOrientation=left&amp;notationProportion=0.44" target="\_blank">here</a>.)</p>
+<p>The elements referred to in the <code class="language-plaintext highlighter-rouge">expansion@plist</code> may themselves be expansion elements situated in descendent section elements.</p>
+
+<p>The expansion structure of the above Minuet example could also be encoded in a hierarchical way, i.e., with separate sub-sections for Minuet and Trio, each hosting their own expansion element embedded, to which then the top-level expansion elements refer to (for the complete MEI encoding, see <a href="https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001-hierarchical">Verovio test suite example-expansion-001-hierarchical</a>):</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"all"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"exp-default"</span> <span class="na">plist=</span><span class="s">"#exp-menuett-default #exp-trio-default #exp-menuett-minimal"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"exp-minimal"</span> <span class="na">plist=</span><span class="s">"#exp-menuett-minimal #exp-trio-minimal #exp-menuett-minimal"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"exp-maximal"</span> <span class="na">plist=</span><span class="s">"#exp-menuett-default #exp-trio-default #exp-menuett-default"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Menuett"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"exp-menuett-default"</span> <span class="na">plist=</span><span class="s">"#A #A1 #A #A2"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"exp-menuett-minimal"</span> <span class="na">plist=</span><span class="s">"#A #A2"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"A"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A1"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"A2"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"Trio"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"exp-trio-default"</span> <span class="na">plist=</span><span class="s">"#B #B1 #B #B2"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;expansion</span> <span class="na">xml:id=</span><span class="s">"exp-trio-minimal"</span> <span class="na">plist=</span><span class="s">"#B #B2"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">xml:id=</span><span class="s">"B"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B1"</span> <span class="na">n=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;ending</span> <span class="na">xml:id=</span><span class="s">"B2"</span> <span class="na">n=</span><span class="s">"2."</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>A complex but typical example is the chained Waltz structure of <a href="https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&amp;scale=33&amp;breaks=line&amp;select=Shorter_Version_Boskovsky&amp;page=1&amp;speed=true&amp;notationOrientation=left&amp;notationProportion=0.44" target="\_blank">An der schönen blauen Donau by Johann Strauss II</a>. (To open a public-domain encoding in mei-friend, please click <a href="https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&amp;scale=33&amp;breaks=line&amp;select=Shorter_Version_Boskovsky&amp;page=1&amp;speed=true&amp;notationOrientation=left&amp;notationProportion=0.44" target="\_blank">here</a>.)</p>
 
 <p><img src="/images/advanced-topics/expansions/BlueDanube-section-structure.png" alt="Donauwalzer-Sections" class="img-responsive example-80" /></p>
 
-<p>In turn, each waltz contains a set of expansion elements, each defining a repetition structure  performed within the history of the Vienna New Year’s Concert series. The higher-level expansion element then refers to these waltz-level expansions.</p>
+<p>In turn, each waltz contains a set of expansion elements, each defining a repetition structure performed within the history of the Vienna New Year’s Concert series. The higher-level expansion element then refers to these waltz-level expansions.</p>
 
 <p>The beginning of the section structure of the first two waltzes including the respective expansion structure looks like this:</p>
 
