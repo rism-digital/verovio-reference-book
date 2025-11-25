@@ -39,7 +39,7 @@ The `expansion` element is expected to be the first element in a `section` or `e
 
 ### Minuet example
 
-A typical MEI example (from the [Verovio test suite](https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001)) is given below containing a straight-forward repetition structure in which the Minuet and the Trio are each repeated once with different endings. As indicated by "Menuett da capo", the performer is requested to repeat the Minuet after the Trio, but then without repetition, going directly to `A2` to terminate the performance.
+A typical MEI example (from the [Verovio test suite example-expansion-001](https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001)) is given below containing a straight-forward repetition structure in which the Minuet and the Trio are each repeated once with different endings. As indicated by "Menuett da capo", the performer is requested to repeat the Minuet after the Trio, but then without repetition, going directly to `A2` to terminate the performance.
 
 {% include music-notation-only example="expansion-001" %}
 
@@ -77,7 +77,38 @@ This example also encodes a "maximal" expansion that realises all repeats, inclu
 
 {% include music-notation-only example="expansion-001-maximal" %}
 
-You may also encode the expansion structure of the above Minuet example in a hierarchical way (see [Verovio test suite](https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001-hierarchical)), with sections for Minuet and Trio, each having their own expansion elements embedded:
+For an example encoding this minuet with a hierarchical expansion, see [below](#hierarchical-expansion-structure). 
+
+
+#### Exporting an expansionmap
+
+For sections that get cloned, Verovio generates predictable `xml:id`s for all containing elements, appending a `-rendX` to the existing `xml:id`, where `X` is a number starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurence (or the second repetition) of section `"A"`. To track the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap. This JSON object contains key-value pairs with unique keys for each `xml:id` in the encoding (both the original and the unfolded elements) and values containing a list of related (original and unfolded) elements, e.g. `["A", "A-rend2", "A-rend3"]`.
+
+For more information on the expansionmap, see [Output formats](/toolkit-reference/output-formats.html#expansionmap).
+
+### Example with re-ordered sections
+
+The following example has a slightly more complex default expansion structure that requires section A to be rendered three times, each time choosing a different ending.
+
+{% include music-notation-only example="expansion-002" %}
+
+The following expansion represents a sensible default:
+
+```xml
+<expansion xml:id="default" plist="#Upbeat #A #A1 #A #A2 #B #A #A-Fine"/>
+```
+
+Verovio accommodates this complexity automatically by re-ordering the section structure so that it looks like this:
+
+{% include music-notation-only example="expansion-002-default" %}
+
+
+
+### Hierarchical expansion structure
+
+The elements referred to in the `expansion@plist` may themselves be expansion elements situated in descendent section elements. 
+
+The expansion structure of the above Minuet example could also be encoded in a hierarchical way, i.e., with separate sub-sections for Minuet and Trio, each hosting their own expansion element embedded, to which then the top-level expansion elements refer to (for the complete MEI encoding, see [Verovio test suite example-expansion-001-hierarchical](https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001-hierarchical)):
 
 ```xml
 <section xml:id="all">
@@ -101,31 +132,7 @@ You may also encode the expansion structure of the above Minuet example in a hie
 </section>
 ```
 
-#### Exporting an expansionmap
-
-For sections that get cloned, Verovio generates predictable `xml:id`s for all containing elements, appending a `-rendX` to the existing `xml:id`, where `X` is a number starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurence (or the second repetition) of section `"A"`. To track the relationship between the original score and a unfolded repeats, Verovio provides access to the expansionmap. This JSON object contains key-value pairs with unique keys for each `xml:id` in the encoding (both the original and the unfolded elements) and values containing a list of related (original and unfolded) elements, e.g. `["A", "A-rend2", "A-rend3"]`.
-
-For more information on the expansionmap, see [Output formats](/toolkit-reference/output-formats.html#expansionmap).
-
-### Example with re-ordered sections
-
-The following example has a slightly more complex default expansion structure that requires section A to be rendered three times, each time choosing a different ending.
-
-{% include music-notation-only example="expansion-002" %}
-
-The following expansion represents a sensible default:
-
-```xml
-<expansion xml:id="default" plist="#Upbeat #A #A1 #A #A2 #B #A #A-Fine"/>
-````
-
-Verovio accommodates this complexity automatically by re-ordering the section structure so that it looks like this:
-
-{% include music-notation-only example="expansion-002-default" %}
-
-### Hierarchical expansion structure
-
-The elements referred to in the `expansion@plist` may themselves be expansion elements situated in descendent section elements. A complex but typical example is the Waltz structure of [An der schönen blauen Donau by Johann Strauss II](https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&scale=33&breaks=line&select=Shorter_Version_Boskovsky&page=1&speed=true&notationOrientation=left&notationProportion=0.44){:target="\_blank"}. (To open a public-domain encoding in mei-friend, please click [here](https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&scale=33&breaks=line&select=Shorter_Version_Boskovsky&page=1&speed=true&notationOrientation=left&notationProportion=0.44){:target="\_blank"}.)
+A complex but typical example is the chained Waltz structure of [An der schönen blauen Donau by Johann Strauss II](https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&scale=33&breaks=line&select=Shorter_Version_Boskovsky&page=1&speed=true&notationOrientation=left&notationProportion=0.44){:target="\_blank"}. (To open a public-domain encoding in mei-friend, please click [here](https://mei-friend.mdw.ac.at/?file=https://raw.githubusercontent.com/Signature-Sound-Vienna/Johann-Strauss-Sohn_Op314_Donauwalzer_Breitkopf/main/Donauwalzer-Breitkopf.mei&scale=33&breaks=line&select=Shorter_Version_Boskovsky&page=1&speed=true&notationOrientation=left&notationProportion=0.44){:target="\_blank"}.)
 
 ![Donauwalzer-Sections](/images/advanced-topics/expansions/BlueDanube-section-structure.png){:.img-responsive .example-80}
 
