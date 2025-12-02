@@ -1,5 +1,5 @@
 <svg width="355px" height="274px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
-   <desc>Engraved by Verovio 5.6.0-85e7620</desc>
+   <desc>Engraved by Verovio 5.7.0-7135340</desc>
    <defs>
       <g id="E050-l19nj5e9">
          <path transform="scale(1,-1)" d="M0 102c0 177 136 324 260 434c0 0 -43 178 -43 246c0 88 33 172 69 220s66 78 78 78c9 0 22 -8 37 -26c65 -78 98 -183 98 -279c0 -150 -83 -254 -181 -348l37 -174c11 2 22 2 33 2c138 0 238 -114 238 -240c0 -105 -68 -199 -170 -240c0 0 32 -146 32 -191 c0 -121 -82 -217 -204 -217c-73 0 -182 41 -182 151c0 56 45 101 101 101s101 -45 101 -101c0 -53 -40 -97 -92 -101c14 -12 49 -17 72 -17c97 0 171 74 171 184c0 49 -31 180 -31 180c-25 -7 -52 -10 -80 -10c-187 0 -344 162 -344 348zM94 49c0 -157 121 -269 250 -269 c26 0 51 3 74 10l-74 351c-58 -20 -96 -72 -96 -124c0 -41 19 -87 57 -110c5 -3 9 -8 9 -14c0 -8 -7 -15 -15 -15c-3 0 -8 2 -8 2c-66 29 -113 87 -113 173c0 81 55 164 144 192l-33 155c-153 -148 -195 -273 -195 -351zM262 723c0 -44 27 -160 27 -160 c80 78 159 190 159 296c0 43 -8 77 -49 77c-81 0 -137 -123 -137 -213zM377 149l73 -346c63 30 112 105 112 182c0 90 -62 165 -165 165c-7 0 -13 0 -20 -1z" />
@@ -35,7 +35,7 @@
          <path transform="scale(1,-1)" d="M-72 -167c0 8 7 13 31 13c22 0 28 19 28 19l102 338s5 17 5 23c0 7 -3 11 -11 11c-22 0 -47 -37 -57 -59s-13 -24 -18 -24s-8 3 -8 8s1 10 13 35s41 75 99 75s66 -47 66 -47s33 43 88 43c43 0 80 -40 80 -96c0 -104 -63 -192 -146 -192c-37 0 -60 17 -71 47 c0 -1 -50 -166 -50 -166s-1 -3 -1 -5c0 -4 5 -10 23 -10c24 0 31 -5 31 -13s-7 -13 -31 -13h-142c-24 0 -31 5 -31 13zM139 61c0 -21 15 -34 33 -34c71 0 98 90 98 151c0 23 -12 44 -32 44c-15 0 -36 -1 -61 -35z" />
       </g>
    </defs>
-   <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 path {stroke:currentColor}</style>
+   <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 7880 6080">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="moqsi69" class="mdiv pageMilestone" />
@@ -43,8 +43,8 @@
          <g id="anr4k48" class="system">
             <path d="M13 344 L13 4174" stroke-width="27" />
             <g id="y1j419jh" class="grpSym">
-               <path d="M-72,4156 C-432,3616 18,3083 -252,2903 C81,3083 -369,3616 -72,4156" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" />
-               <path d="M-72,1650 C-369,2190 81,2723 -252,2903 C18,2723 -432,2190 -72,1650" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" />
+               <path d="M-72,4156 C-432,3616 18,3083 -252,2903 C81,3083 -369,3616 -72,4156" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+               <path d="M-72,1650 C-369,2190 81,2723 -252,2903 C18,2723 -432,2190 -72,1650" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
             </g>
             <g id="x15wwqth" class="section systemMilestone" />
             <g id="yv3lqdm" class="measure upbeat">
@@ -68,7 +68,7 @@
                   </g>
                   <g id="izodm98" class="layer">
                      <g id="j1mj6nxn" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="1828,411 2343,344 2343,411 1828,478" />
+                        <polygon fill-opacity="1" points="1828,411 2343,344 2343,411 1828,478" />
                         <g id="note-0000000827838925" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(1670, 880) scale(0.54, 0.54)" />
@@ -132,7 +132,7 @@
                   </g>
                   <g id="u1bb0tuc" class="layer">
                      <g id="v6sh6uc" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="1879,1632 2400,1587 2400,1677 1879,1722" />
+                        <polygon fill-opacity="1" points="1879,1632 2400,1587 2400,1677 1879,1722" />
                         <g id="wgj8qwy" class="chord">
                            <g id="r1jp5f3v" class="stem">
                               <path d="M1888 2780 L1888 1650" stroke-width="18" />
@@ -198,7 +198,7 @@
                   <use xlink:href="#E52B-l19nj5e9" transform="translate(1670, 3280) scale(0.72, 0.72)" />
                </g>
                <g id="k1dict13" class="slur">
-                  <path d="M1783,3004 C1912,3040 2205,2934 2284,2824 C2250,2981 1907,3104 1783,3004" stroke-linecap="round" stroke-linejoin="round" stroke-width="9" />
+                  <path d="M1783,3004 C1912,3040 2205,2934 2284,2824 C2250,2981 1907,3104 1783,3004" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
                </g>
                <g id="g14xmp24" class="barLine">
                   <path d="M2623 344 L2623 880" stroke-width="27" />
@@ -215,14 +215,14 @@
                   <path d="M2636 884 L6884 884" stroke-width="10" />
                   <g id="v1bpmbr1" class="layer">
                      <g id="w1m11mph" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="2974,311 3688,311 3688,378 2974,378" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="3518,411 3688,411 3688,478 3518,478" />
+                        <polygon fill-opacity="1" points="2974,311 3688,311 3688,378 2974,378" />
+                        <polygon fill-opacity="1" points="3518,411 3688,411 3688,478 3518,478" />
                         <g id="d1e379" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(2816, 746) scale(0.54, 0.54)" />
                            </g>
                            <g id="u1w3vevx" class="dots">
-                              <ellipse cx="3053" cy="683" rx="27" ry="27" fill-opacity="1" stroke-opacity="1" />
+                              <ellipse cx="3053" cy="683" rx="27" ry="27" fill-opacity="1" />
                            </g>
                            <g id="t14q1aig" class="stem">
                               <path d="M2980 730 L2980 324" stroke-width="13" />
@@ -256,7 +256,7 @@
                         </g>
                      </g>
                      <g id="fwigvp2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="4043,311 4598,311 4598,378 4043,378" />
+                        <polygon fill-opacity="1" points="4043,311 4598,311 4598,378 4043,378" />
                         <g id="d1e424" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(3885, 746) scale(0.54, 0.54)" />
@@ -296,7 +296,7 @@
                         <use xlink:href="#E4E6-l19nj5e9" transform="translate(4878, 612) scale(0.54, 0.54)" />
                      </g>
                      <g id="pmwmthe" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="5486,277 6585,344 6585,411 5486,344" />
+                        <polygon fill-opacity="1" points="5486,277 6585,344 6585,411 5486,344" />
                         <g id="d1e474" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(5328, 746) scale(0.54, 0.54)" />
@@ -367,13 +367,13 @@
                   </g>
                   <g id="e11izfdo" class="layer">
                      <g id="fqn9gl2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="3025,1587 3745,1587 3745,1677 3025,1677" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="3518,1722 3745,1722 3745,1812 3518,1812" />
+                        <polygon fill-opacity="1" points="3025,1587 3745,1587 3745,1677 3025,1677" />
+                        <polygon fill-opacity="1" points="3518,1722 3745,1722 3745,1812 3518,1812" />
                         <g id="goma0gm" class="chord">
                            <g id="cc8wdp9" class="dots">
-                              <ellipse cx="3132" cy="2622" rx="36" ry="36" fill-opacity="1" stroke-opacity="1" />
-                              <ellipse cx="3132" cy="2262" rx="36" ry="36" fill-opacity="1" stroke-opacity="1" />
-                              <ellipse cx="3132" cy="2082" rx="36" ry="36" fill-opacity="1" stroke-opacity="1" />
+                              <ellipse cx="3132" cy="2622" rx="36" ry="36" fill-opacity="1" />
+                              <ellipse cx="3132" cy="2262" rx="36" ry="36" fill-opacity="1" />
+                              <ellipse cx="3132" cy="2082" rx="36" ry="36" fill-opacity="1" />
                            </g>
                            <g id="bznfzok" class="stem">
                               <path d="M3034 2600 L3034 1605" stroke-width="18" />
@@ -448,7 +448,7 @@
                         <use xlink:href="#E4E5-l19nj5e9" transform="translate(4878, 1992) scale(0.72, 0.72)" />
                      </g>
                      <g id="w1qijfro" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="5987,1722 6642,1632 6642,1722 5987,1812" />
+                        <polygon fill-opacity="1" points="5987,1722 6642,1632 6642,1722 5987,1812" />
                         <g id="xpk0tft" class="chord">
                            <g id="frvbxh6" class="stem">
                               <path d="M5996 2510 L5996 1740" stroke-width="18" />
@@ -550,10 +550,10 @@
                   <use xlink:href="#E520-l19nj5e9" transform="translate(5778, 3086) scale(0.72, 0.72)" />
                </g>
                <g id="u19knp2v" class="slur">
-                  <path d="M2929,2824 C3181,3010 3746,3010 3999,2824 C3769,3068 3158,3068 2929,2824" stroke-linecap="round" stroke-linejoin="round" stroke-width="9" />
+                  <path d="M2929,2824 C3181,3010 3746,3010 3999,2824 C3769,3068 3158,3068 2929,2824" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
                </g>
                <g id="v1gxitk" class="slur">
-                  <path d="M5891,2734 C6010,2851 6376,2903 6526,2822 C6393,2963 5977,2905 5891,2734" stroke-linecap="round" stroke-linejoin="round" stroke-width="9" />
+                  <path d="M5891,2734 C6010,2851 6376,2903 6526,2822 C6393,2963 5977,2905 5891,2734" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
                </g>
                <g id="tmeaduc" class="barLine">
                   <path d="M6871 344 L6871 880" stroke-width="27" />

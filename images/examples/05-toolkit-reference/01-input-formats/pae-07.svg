@@ -1,5 +1,5 @@
 <svg width="437px" height="133px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="pfnjo7e">
-   <desc>Engraved by Verovio 5.6.0-85e7620</desc>
+   <desc>Engraved by Verovio 5.7.0-7135340</desc>
    <defs>
       <g id="E062-pfnjo7e">
          <path transform="scale(1,-1)" d="M582 -120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM582 120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM158 96c51 0 73 -14 88 -49l16 -39c0 -17 -2 -30 -7 -40c-3 -11 -10 -21 -19 -31c-17 -18 -49 -43 -84 -43 c-55 0 -77 13 -112 44c-24 21 -35 55 -35 100c0 46 14 81 32 112c30 52 71 79 137 93l36 6l26 2c154 0 235 -68 274 -182c11 -32 18 -68 18 -107c0 -103 -26 -182 -68 -250c-89 -145 -234 -230 -412 -288l-30 -5c-9 0 -14 3 -14 8c3 10 5 11 10 16c35 15 70 30 96 44l78 43 c96 57 162 136 197 258c9 33 17 60 22 100c3 22 5 35 6 39c-7 69 -16 115 -23 140s-4 22 -16 40c-8 12 -19 23 -31 34c-24 21 -62 44 -118 44c-48 0 -84 -8 -113 -28c-28 -19 -42 -44 -42 -73v-16c2 -5 3 -9 4 -11c24 22 52 39 84 39z" />
@@ -26,7 +26,7 @@
          <path transform="scale(1,-1)" d="M20 110c32 16 54 27 93 27c26 0 35 -3 54 -13c13 -7 24 -20 27 -38l4 -25c0 -28 -16 -57 -45 -89c-23 -25 -39 -44 -65 -68l-88 -79v644h20v-359zM90 106c-32 0 -48 -10 -70 -29v-194c31 31 54 59 71 84c21 32 32 59 32 84c0 9 1 16 1 20c0 14 -3 21 -11 30l-8 3z" />
       </g>
    </defs>
-   <style type="text/css">#pfnjo7e g.page-margin {font-family:Times,serif;}#pfnjo7e g.ending, #pfnjo7e g.fing, #pfnjo7e g.reh, #pfnjo7e g.tempo {font-weight:bold;}#pfnjo7e g.dir, #pfnjo7e g.dynam, #pfnjo7e g.mNum {font-style:italic;}#pfnjo7e g.label {font-weight:normal;}#pfnjo7e path {stroke:currentColor}</style>
+   <style type="text/css">#pfnjo7e g.page-margin {font-family:Times,serif;}#pfnjo7e g.ending, #pfnjo7e g.fing, #pfnjo7e g.reh, #pfnjo7e g.tempo {font-weight:bold;}#pfnjo7e g.dir, #pfnjo7e g.dynam, #pfnjo7e g.mNum {font-style:italic;}#pfnjo7e g.label {font-weight:normal;}#pfnjo7e ellipse, #pfnjo7e path, #pfnjo7e polygon, #pfnjo7e polyline, #pfnjo7e rect {stroke:currentColor}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 9700 2950">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="ewtw03u" class="mdiv pageMilestone" />
@@ -57,11 +57,11 @@
                   <g id="u4oqxce" class="layer">
                      <g id="xfggj11" class="graceGrp">
                         <g id="t3elz0m" class="beam">
-                           <polygon stroke-opacity="1" fill-opacity="1" points="1719,382 2338,202 2338,269 1719,449" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="1719,482 2093,373 2093,440 1719,549" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="2093,373 2338,302 2338,369 2093,440" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="1719,582 2093,473 2093,540 1719,649" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="2093,473 2338,402 2338,469 2093,540" />
+                           <polygon fill-opacity="1" points="1719,382 2338,202 2338,269 1719,449" />
+                           <polygon fill-opacity="1" points="1719,482 2093,373 2093,440 1719,549" />
+                           <polygon fill-opacity="1" points="2093,373 2338,302 2338,369 2093,440" />
+                           <polygon fill-opacity="1" points="1719,582 2093,473 2093,540 1719,649" />
+                           <polygon fill-opacity="1" points="2093,473 2338,402 2338,469 2093,540" />
                            <g id="a1pfogn4" class="note">
                               <g class="notehead">
                                  <use xlink:href="#E0A4-pfnjo7e" transform="translate(1568, 1417) scale(0.54, 0.54)" />
@@ -127,11 +127,11 @@
                      </g>
                      <g id="y1waypqj" class="graceGrp">
                         <g id="u1bb0tuc" class="beam">
-                           <polygon stroke-opacity="1" fill-opacity="1" points="3079,382 3698,202 3698,269 3079,449" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="3079,482 3453,373 3453,440 3079,549" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="3453,373 3698,302 3698,369 3453,440" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="3079,582 3453,473 3453,540 3079,649" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="3453,473 3698,402 3698,469 3453,540" />
+                           <polygon fill-opacity="1" points="3079,382 3698,202 3698,269 3079,449" />
+                           <polygon fill-opacity="1" points="3079,482 3453,373 3453,440 3079,549" />
+                           <polygon fill-opacity="1" points="3453,373 3698,302 3698,369 3453,440" />
+                           <polygon fill-opacity="1" points="3079,582 3453,473 3453,540 3079,649" />
+                           <polygon fill-opacity="1" points="3453,473 3698,402 3698,469 3453,540" />
                            <g id="erbcoh7" class="note">
                               <g class="notehead">
                                  <use xlink:href="#E0A4-pfnjo7e" transform="translate(2928, 1417) scale(0.54, 0.54)" />
@@ -171,11 +171,11 @@
                      </g>
                      <g id="zfx25hn" class="graceGrp">
                         <g id="v6sh6uc" class="beam">
-                           <polygon stroke-opacity="1" fill-opacity="1" points="4244,382 4734,202 4734,269 4244,449" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="4244,482 4489,392 4489,459 4244,549" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="4489,392 4734,302 4734,369 4489,459" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="4244,582 4489,492 4489,559 4244,649" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="4489,492 4734,402 4734,469 4489,559" />
+                           <polygon fill-opacity="1" points="4244,382 4734,202 4734,269 4244,449" />
+                           <polygon fill-opacity="1" points="4244,482 4489,392 4489,459 4244,549" />
+                           <polygon fill-opacity="1" points="4489,392 4734,302 4734,369 4489,459" />
+                           <polygon fill-opacity="1" points="4244,582 4489,492 4489,559 4244,649" />
+                           <polygon fill-opacity="1" points="4489,492 4734,402 4734,469 4489,559" />
                            <g id="izodm98" class="note">
                               <g class="notehead">
                                  <use xlink:href="#E0A4-pfnjo7e" transform="translate(4093, 1417) scale(0.54, 0.54)" />
@@ -236,11 +236,11 @@
                      </g>
                      <g id="a3ie8ud" class="graceGrp">
                         <g id="wgj8qwy" class="beam">
-                           <polygon stroke-opacity="1" fill-opacity="1" points="6240,472 6730,292 6730,359 6240,539" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="6240,572 6485,482 6485,549 6240,639" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="6485,482 6730,392 6730,459 6485,549" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="6240,672 6485,582 6485,649 6240,739" />
-                           <polygon stroke-opacity="1" fill-opacity="1" points="6485,582 6730,492 6730,559 6485,649" />
+                           <polygon fill-opacity="1" points="6240,472 6730,292 6730,359 6240,539" />
+                           <polygon fill-opacity="1" points="6240,572 6485,482 6485,549 6240,639" />
+                           <polygon fill-opacity="1" points="6485,482 6730,392 6730,459 6485,549" />
+                           <polygon fill-opacity="1" points="6240,672 6485,582 6485,649 6240,739" />
+                           <polygon fill-opacity="1" points="6485,582 6730,492 6730,559 6485,649" />
                            <g id="m5odh2d" class="note">
                               <g class="notehead">
                                  <use xlink:href="#E0A4-pfnjo7e" transform="translate(6089, 1327) scale(0.54, 0.54)" />
