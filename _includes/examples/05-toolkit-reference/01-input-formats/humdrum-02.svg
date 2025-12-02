@@ -1,5 +1,5 @@
 <svg width="945px" height="791px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="moqsi69">
-   <desc>Engraved by Verovio 5.6.0-85e7620</desc>
+   <desc>Engraved by Verovio 5.7.0-7135340</desc>
    <defs>
       <g id="E003-moqsi69">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -44,7 +44,7 @@
          <path transform="scale(1,-1)" d="M206 -748c32 48 49 100 49 149c0 89 -55 168 -168 203c-18 5 -47 9 -87 16v190v190h22c8 0 33 -61 71 -95c4 -3 -2 3 61 -56c62 -58 122 -137 122 -241c0 -32 -7 -65 -17 -96c11 -29 17 -60 17 -94c0 -71 -32 -148 -67 -190c-6 -5 -10 -7 -13 -7s-5 2 -5 5l4 10 c1 3 6 8 11 16zM248 -463c4 18 7 38 7 57c0 105 -80 173 -168 200c-11 3 -27 6 -47 9c9 -17 23 -61 53 -88c4 -3 -2 3 61 -56c36 -33 71 -74 94 -122z" />
       </g>
    </defs>
-   <style type="text/css">#moqsi69 g.page-margin {font-family:Times,serif;}#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 path {stroke:currentColor}</style>
+   <style type="text/css">#moqsi69 g.page-margin {font-family:Times,serif;}#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 ellipse, #moqsi69 path, #moqsi69 polygon, #moqsi69 polyline, #moqsi69 rect {stroke:currentColor}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 21000 17560">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="njft1g2" class="mdiv pageMilestone" />
@@ -54,7 +54,7 @@
             <g id="i1l7wk64" class="grpSym">
                <use xlink:href="#E003-moqsi69" transform="translate(1132, 2434) scale(0.72, 0.72)" />
                <use xlink:href="#E004-moqsi69" transform="translate(1132, 9203) scale(0.72, 0.72)" />
-               <rect stroke-opacity="1" fill-opacity="1" x="1132" y="2428" height="6781" width="90" />
+               <rect fill-opacity="1" x="1132" y="2428" height="6781" width="90" />
             </g>
             <g id="k1p6e708" class="label">
                <text x="952" y="2935" text-anchor="end" font-size="0px">
@@ -170,7 +170,7 @@
                                     <tspan font-size="405px">Yp</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="3463" y="6063" height="22" width="98" />
+                              <rect fill-opacity="1" x="3463" y="6063" height="22" width="98" />
                            </g>
                         </g>
                      </g>
@@ -246,7 +246,7 @@
                                     <tspan font-size="405px">si</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="4056" y="6063" height="22" width="98" />
+                              <rect fill-opacity="1" x="4056" y="6063" height="22" width="98" />
                            </g>
                         </g>
                      </g>
@@ -351,7 +351,7 @@
                   </g>
                   <g id="layer-L1F2N1" class="layer">
                      <g id="beam-L20F3-L22F3" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="3199,6488 4611,6488 4611,6578 3199,6578" />
+                        <polygon fill-opacity="1" points="3199,6488 4611,6488 4611,6578 3199,6578" />
                         <g id="note-L20F3" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(2991, 7118) scale(0.72, 0.72)" />
@@ -425,7 +425,7 @@
                   </g>
                   <g id="layer-L1F1N1" class="layer">
                      <g id="beam-L20F1-L22F1" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="3199,7982 4611,7982 4611,8072 3199,8072" />
+                        <polygon fill-opacity="1" points="3199,7982 4611,7982 4611,8072 3199,8072" />
                         <g id="note-L20F1" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(2991, 8432) scale(0.72, 0.72)" />
@@ -688,7 +688,7 @@
                                     <tspan font-size="405px">Aeug</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="7431" y="4463" height="22" width="98" />
+                              <rect fill-opacity="1" x="7431" y="4463" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L29F7" class="verse">
@@ -707,7 +707,7 @@
                                     <tspan font-size="405px">Schei</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="7449" y="5263" height="22" width="98" />
+                              <rect fill-opacity="1" x="7449" y="5263" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L29F9" class="verse">
@@ -774,7 +774,7 @@
                                     <tspan font-size="405px">ei</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="8129" y="4863" height="22" width="98" />
+                              <rect fill-opacity="1" x="8129" y="4863" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L30F8" class="verse">
@@ -793,7 +793,7 @@
                                     <tspan font-size="405px">ei</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="8129" y="5663" height="22" width="98" />
+                              <rect fill-opacity="1" x="8129" y="5663" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L30F10" class="verse">
@@ -891,7 +891,7 @@
                   <path d="M6619 7208 L9202 7208" stroke-width="13" />
                   <g id="layer-L28F2N1" class="layer">
                      <g id="beam-L29F2-L31F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="7025,6443 8741,6443 8741,6533 7025,6533" />
+                        <polygon fill-opacity="1" points="7025,6443 8741,6443 8741,6533 7025,6533" />
                         <g id="chord-L29F2" class="chord">
                            <g id="o1hrir9j" class="stem">
                               <path d="M7034 7180 L7034 6461" stroke-width="18" />
@@ -1189,7 +1189,7 @@
                                     <tspan font-size="405px">Drück</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="11774" y="4063" height="22" width="98" />
+                              <rect fill-opacity="1" x="11774" y="4063" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L36F6" class="verse">
@@ -1199,7 +1199,7 @@
                                     <tspan font-size="405px">glänz</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="11774" y="4463" height="22" width="98" />
+                              <rect fill-opacity="1" x="11774" y="4463" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L36F7" class="verse">
@@ -1209,7 +1209,7 @@
                                     <tspan font-size="405px">fes</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="11637" y="4863" height="22" width="98" />
+                              <rect fill-opacity="1" x="11637" y="4863" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L36F8" class="verse">
@@ -1219,7 +1219,7 @@
                                     <tspan font-size="405px">Hal</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="11697" y="5263" height="22" width="98" />
+                              <rect fill-opacity="1" x="11697" y="5263" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L36F9" class="verse">
@@ -1259,7 +1259,7 @@
                                     <tspan font-size="405px">mei</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="12714" y="3663" height="22" width="98" />
+                              <rect fill-opacity="1" x="12714" y="3663" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L37F5" class="verse">
@@ -1409,7 +1409,7 @@
                         <use xlink:href="#E4E6-moqsi69" transform="translate(11046, 6848) scale(0.72, 0.72)" />
                      </g>
                      <g id="beam-L37F2-L38F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="12265,6488 13267,6488 13267,6578 12265,6578" />
+                        <polygon fill-opacity="1" points="12265,6488 13267,6488 13267,6578 12265,6578" />
                         <g id="chord-L37F2" class="chord">
                            <g id="d1a1rsjo" class="stem">
                               <path d="M12274 7360 L12274 6506" stroke-width="18" />
@@ -1512,7 +1512,7 @@
                            <use xlink:href="#E0A4-moqsi69" transform="translate(13843, 2755) scale(0.72, 0.72)" />
                         </g>
                         <g id="h1wk06jc" class="dots">
-                           <ellipse cx="14159" cy="2755" rx="36" ry="36" fill-opacity="1" stroke-opacity="1" />
+                           <ellipse cx="14159" cy="2755" rx="36" ry="36" fill-opacity="1" />
                         </g>
                         <g id="g15oaxo7" class="stem">
                            <path d="M13852 2783 L13852 3385" stroke-width="18" />
@@ -1528,7 +1528,7 @@
                                     <tspan font-size="405px">sü</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="14270" y="3663" height="22" width="98" />
+                              <rect fill-opacity="1" x="14270" y="3663" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L40F5" class="verse">
@@ -1538,7 +1538,7 @@
                                     <tspan font-size="405px">treu</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="14519" y="4063" height="22" width="98" />
+                              <rect fill-opacity="1" x="14519" y="4063" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L40F6" class="verse">
@@ -1548,7 +1548,7 @@
                                     <tspan font-size="405px">Lie</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="14429" y="4463" height="22" width="98" />
+                              <rect fill-opacity="1" x="14429" y="4463" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L40F7" class="verse">
@@ -1576,7 +1576,7 @@
                                     <tspan font-size="405px">jun</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="14479" y="5663" height="22" width="98" />
+                              <rect fill-opacity="1" x="14479" y="5663" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L40F10" class="verse">
@@ -1625,7 +1625,7 @@
                                     <tspan font-size="405px">bes</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="15524" y="4463" height="22" width="98" />
+                              <rect fill-opacity="1" x="15524" y="4463" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L42F7" class="verse">
@@ -1757,7 +1757,7 @@
                         <use xlink:href="#E4E6-moqsi69" transform="translate(13843, 6848) scale(0.72, 0.72)" />
                      </g>
                      <g id="beam-L41F2-L43F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="14669,6443 16258,6443 16258,6533 14669,6533" />
+                        <polygon fill-opacity="1" points="14669,6443 16258,6443 16258,6533 14669,6533" />
                         <g id="chord-L41F2" class="chord">
                            <g id="n1qdgp94" class="stem">
                               <path d="M14678 7450 L14678 6461" stroke-width="18" />
@@ -1869,7 +1869,7 @@
                                     <tspan font-size="405px">Hol</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="18011" y="4063" height="22" width="98" />
+                              <rect fill-opacity="1" x="18011" y="4063" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L45F6" class="verse">
@@ -1888,7 +1888,7 @@
                                     <tspan font-size="405px">Grüb</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="18091" y="4863" height="22" width="98" />
+                              <rect fill-opacity="1" x="18091" y="4863" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L45F8" class="verse">
@@ -1907,7 +1907,7 @@
                                     <tspan font-size="405px">zärt</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="18030" y="5663" height="22" width="98" />
+                              <rect fill-opacity="1" x="18030" y="5663" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L45F10" class="verse">
@@ -2013,7 +2013,7 @@
                                     <tspan font-size="405px">em</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="19874" y="3663" height="22" width="98" />
+                              <rect fill-opacity="1" x="19874" y="3663" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L47F5" class="verse">
@@ -2088,7 +2088,7 @@
                         <use xlink:href="#E4E6-moqsi69" transform="translate(17262, 6848) scale(0.72, 0.72)" />
                      </g>
                      <g id="beam-L46F2-L47F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="18653,6623 19561,6623 19561,6713 18653,6713" />
+                        <polygon fill-opacity="1" points="18653,6623 19561,6623 19561,6713 18653,6713" />
                         <g id="chord-L46F2" class="chord">
                            <g id="wboq5r8" class="stem">
                               <path d="M18662 7450 L18662 6641" stroke-width="18" />
@@ -2183,7 +2183,7 @@
             <g id="onuohzf" class="grpSym">
                <use xlink:href="#E003-moqsi69" transform="translate(-180, 10156) scale(0.72, 0.72)" />
                <use xlink:href="#E004-moqsi69" transform="translate(-180, 16426) scale(0.72, 0.72)" />
-               <rect stroke-opacity="1" fill-opacity="1" x="-180" y="10150" height="6282" width="90" />
+               <rect fill-opacity="1" x="-180" y="10150" height="6282" width="90" />
             </g>
             <g id="measure-L48" class="measure">
                <g id="z19a7dm8" class="mNum autogenerated">
@@ -2213,7 +2213,7 @@
                            <use xlink:href="#E0A4-moqsi69" transform="translate(1210, 10567) scale(0.72, 0.72)" />
                         </g>
                         <g id="avx90uh" class="dots">
-                           <ellipse cx="1526" cy="10477" rx="36" ry="36" fill-opacity="1" stroke-opacity="1" />
+                           <ellipse cx="1526" cy="10477" rx="36" ry="36" fill-opacity="1" />
                         </g>
                         <g id="z180a2fv" class="stem">
                            <path d="M1219 10595 L1219 11167" stroke-width="18" />
@@ -2229,7 +2229,7 @@
                                     <tspan font-size="405px">pör</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="1971" y="11385" height="22" width="98" />
+                              <rect fill-opacity="1" x="1971" y="11385" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L49F5" class="verse">
@@ -2239,7 +2239,7 @@
                                     <tspan font-size="405px">lie</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="1849" y="11785" height="22" width="98" />
+                              <rect fill-opacity="1" x="1849" y="11785" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L49F6" class="verse">
@@ -2249,7 +2249,7 @@
                                     <tspan font-size="405px">Wim</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="2107" y="12185" height="22" width="98" />
+                              <rect fill-opacity="1" x="2107" y="12185" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L49F7" class="verse">
@@ -2268,7 +2268,7 @@
                                     <tspan font-size="405px">Lie</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="1971" y="12985" height="22" width="98" />
+                              <rect fill-opacity="1" x="1971" y="12985" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L49F9" class="verse">
@@ -2278,7 +2278,7 @@
                                     <tspan font-size="405px">Schwa</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="2232" y="13385" height="22" width="98" />
+                              <rect fill-opacity="1" x="2232" y="13385" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L49F10" class="verse">
@@ -2318,7 +2318,7 @@
                                     <tspan font-size="405px">be</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="2882" y="11785" height="22" width="98" />
+                              <rect fill-opacity="1" x="2882" y="11785" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L51F6" class="verse">
@@ -2346,7 +2346,7 @@
                                     <tspan font-size="405px">bes</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="3016" y="12985" height="22" width="98" />
+                              <rect fill-opacity="1" x="3016" y="12985" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L51F9" class="verse">
@@ -2356,7 +2356,7 @@
                                     <tspan font-size="405px">nen</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="3038" y="13385" height="22" width="98" />
+                              <rect fill-opacity="1" x="3038" y="13385" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L51F10" class="verse">
@@ -2471,7 +2471,7 @@
                         <use xlink:href="#E4E6-moqsi69" transform="translate(1210, 14426) scale(0.72, 0.72)" />
                      </g>
                      <g id="beam-L50F2-L52F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="2174,14066 3525,14066 3525,14156 2174,14156" />
+                        <polygon fill-opacity="1" points="2174,14066 3525,14066 3525,14156 2174,14156" />
                         <g id="chord-L50F2" class="chord">
                            <g id="gslu5e9" class="stem">
                               <path d="M2183 15118 L2183 14084" stroke-width="18" />
@@ -2591,7 +2591,7 @@
                                     <tspan font-size="405px">Schätz</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="5532" y="11785" height="22" width="98" />
+                              <rect fill-opacity="1" x="5532" y="11785" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L54F6" class="verse">
@@ -2601,7 +2601,7 @@
                                     <tspan font-size="405px">tra</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="5193" y="12185" height="22" width="98" />
+                              <rect fill-opacity="1" x="5193" y="12185" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L54F7" class="verse">
@@ -2611,7 +2611,7 @@
                                     <tspan font-size="405px">Ro</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="5216" y="12585" height="22" width="98" />
+                              <rect fill-opacity="1" x="5216" y="12585" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L54F8" class="verse">
@@ -2621,7 +2621,7 @@
                                     <tspan font-size="405px">sa</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="5148" y="12985" height="22" width="98" />
+                              <rect fill-opacity="1" x="5148" y="12985" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L54F9" class="verse">
@@ -2631,7 +2631,7 @@
                                     <tspan font-size="405px"> a</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="5171" y="13385" height="22" width="98" />
+                              <rect fill-opacity="1" x="5171" y="13385" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L54F10" class="verse">
@@ -2689,7 +2689,7 @@
                                     <tspan font-size="405px">sen</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="6323" y="12585" height="22" width="98" />
+                              <rect fill-opacity="1" x="6323" y="12585" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L55F8" class="verse">
@@ -2811,7 +2811,7 @@
                   </g>
                   <g id="layer-L53F2N1" class="layer">
                      <g id="beam-L54F2-L56F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="4675,14066 6972,14066 6972,14156 4675,14156" />
+                        <polygon fill-opacity="1" points="4675,14066 6972,14066 6972,14156 4675,14156" />
                         <g id="chord-L54F2" class="chord">
                            <g id="p1f3vf8b" class="stem">
                               <path d="M4684 15118 L4684 14084" stroke-width="18" />
@@ -2874,7 +2874,7 @@
                   <path d="M4287 16375 L7275 16375" stroke-width="13" />
                   <g id="layer-L53F1N1" class="layer">
                      <g id="beam-L54F1-L56F1" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="4675,15835 6972,15655 6972,15745 4675,15925" />
+                        <polygon fill-opacity="1" points="4675,15835 6972,15655 6972,15745 4675,15925" />
                         <g id="note-L54F1" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(4467, 16465) scale(0.72, 0.72)" />
@@ -2924,7 +2924,7 @@
                            <use xlink:href="#E0A4-moqsi69" transform="translate(7455, 10297) scale(0.72, 0.72)" />
                         </g>
                         <g id="w1l15gim" class="dots">
-                           <ellipse cx="7771" cy="10297" rx="36" ry="36" fill-opacity="1" stroke-opacity="1" />
+                           <ellipse cx="7771" cy="10297" rx="36" ry="36" fill-opacity="1" />
                         </g>
                         <g id="v12151d0" class="stem">
                            <path d="M7464 10325 L7464 10927" stroke-width="18" />
@@ -2958,7 +2958,7 @@
                                     <tspan font-size="405px">bli</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="7950" y="12185" height="22" width="98" />
+                              <rect fill-opacity="1" x="7950" y="12185" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L58F7" class="verse">
@@ -2968,7 +2968,7 @@
                                     <tspan font-size="405px">Li</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="7927" y="12585" height="22" width="98" />
+                              <rect fill-opacity="1" x="7927" y="12585" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L58F8" class="verse">
@@ -2987,7 +2987,7 @@
                                     <tspan font-size="405px">ern</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="8028" y="13385" height="22" width="98" />
+                              <rect fill-opacity="1" x="8028" y="13385" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L58F10" class="verse">
@@ -2997,7 +2997,7 @@
                                     <tspan font-size="405px">Flü</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="8063" y="13785" height="22" width="98" />
+                              <rect fill-opacity="1" x="8063" y="13785" height="22" width="98" />
                            </g>
                         </g>
                      </g>
@@ -3037,7 +3037,7 @@
                                     <tspan font-size="405px">tzes</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="8886" y="12185" height="22" width="98" />
+                              <rect fill-opacity="1" x="8886" y="12185" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L60F7" class="verse">
@@ -3047,7 +3047,7 @@
                                     <tspan font-size="405px">lien</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="8886" y="12585" height="22" width="98" />
+                              <rect fill-opacity="1" x="8886" y="12585" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L60F8" class="verse">
@@ -3057,7 +3057,7 @@
                                     <tspan font-size="405px"> A</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="8868" y="12985" height="22" width="98" />
+                              <rect fill-opacity="1" x="8868" y="12985" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L60F9" class="verse">
@@ -3171,7 +3171,7 @@
                         <use xlink:href="#E4E6-moqsi69" transform="translate(7455, 14426) scale(0.72, 0.72)" />
                      </g>
                      <g id="beam-L59F2-L61F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="8234,14021 9350,14021 9350,14111 8234,14111" />
+                        <polygon fill-opacity="1" points="8234,14021 9350,14021 9350,14111 8234,14111" />
                         <g id="chord-L59F2" class="chord">
                            <g id="c98k6md" class="stem">
                               <path d="M8243 15028 L8243 14039" stroke-width="18" />
@@ -3292,7 +3292,7 @@
                                     <tspan font-size="405px">Aeug</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="11310" y="12185" height="22" width="98" />
+                              <rect fill-opacity="1" x="11310" y="12185" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L63F7" class="verse">
@@ -3302,7 +3302,7 @@
                                     <tspan font-size="405px">rei</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="11069" y="12585" height="22" width="98" />
+                              <rect fill-opacity="1" x="11069" y="12585" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L63F8" class="verse">
@@ -3312,7 +3312,7 @@
                                     <tspan font-size="405px">Schei</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="11310" y="12985" height="22" width="98" />
+                              <rect fill-opacity="1" x="11310" y="12985" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L63F9" class="verse">
@@ -3379,7 +3379,7 @@
                                     <tspan font-size="405px">zen</tspan>
                                  </tspan>
                               </text>
-                              <rect stroke-opacity="1" fill-opacity="1" x="12036" y="12585" height="22" width="98" />
+                              <rect fill-opacity="1" x="12036" y="12585" height="22" width="98" />
                            </g>
                         </g>
                         <g id="verse-L64F8" class="verse">
@@ -3502,7 +3502,7 @@
                         <use xlink:href="#E4E6-moqsi69" transform="translate(10484, 14426) scale(0.72, 0.72)" />
                      </g>
                      <g id="beam-L64F2-L65F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="11756,14201 12510,14201 12510,14291 11756,14291" />
+                        <polygon fill-opacity="1" points="11756,14201 12510,14201 12510,14291 11756,14291" />
                         <g id="chord-L64F2" class="chord">
                            <g id="l1dx19xn" class="stem">
                               <path d="M11765 15028 L11765 14219" stroke-width="18" />
@@ -3743,7 +3743,7 @@
             </g>
             <g id="i1pecaom" class="systemMilestoneEnd section-L10F1" />
             <g class="syl id-syl-L47F4 spanning">
-               <rect stroke-opacity="1" fill-opacity="1" x="936" y="11385" height="22" width="98" />
+               <rect fill-opacity="1" x="936" y="11385" height="22" width="98" />
             </g>
          </g>
          <g id="j1hm6l31" class="pageMilestoneEnd o168fb37" />

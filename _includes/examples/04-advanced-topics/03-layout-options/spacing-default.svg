@@ -1,5 +1,5 @@
 <svg width="945px" height="290px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="moqsi69">
-   <desc>Engraved by Verovio 5.6.0-85e7620</desc>
+   <desc>Engraved by Verovio 5.7.0-7135340</desc>
    <defs>
       <g id="E003-moqsi69">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -38,7 +38,7 @@
          <path transform="scale(1,-1)" d="M0 0c0 28 22 50 50 50s50 -22 50 -50s-22 -50 -50 -50s-50 22 -50 50z" />
       </g>
    </defs>
-   <style type="text/css">#moqsi69 g.page-margin {font-family:Times,serif;}#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 path {stroke:currentColor}</style>
+   <style type="text/css">#moqsi69 g.page-margin {font-family:Times,serif;}#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 ellipse, #moqsi69 path, #moqsi69 polygon, #moqsi69 polyline, #moqsi69 rect {stroke:currentColor}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 21000 6430">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="njft1g2" class="mdiv pageMilestone" />
@@ -48,7 +48,7 @@
             <g id="q1wpii7q" class="grpSym">
                <use xlink:href="#E003-moqsi69" transform="translate(1533, 226) scale(0.72, 0.72)" />
                <use xlink:href="#E004-moqsi69" transform="translate(1533, 5235) scale(0.72, 0.72)" />
-               <rect stroke-opacity="1" fill-opacity="1" x="1533" y="220" height="5021" width="90" />
+               <rect fill-opacity="1" x="1533" y="220" height="5021" width="90" />
             </g>
             <g id="sj89l0s" class="label">
                <text x="1353" y="727" text-anchor="end" font-size="0px">
@@ -287,7 +287,7 @@
                         <g id="accid-L27F4" class="accid" />
                      </g>
                      <g id="beam-L28F4-L29F4" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="7203,52 7733,97 7733,187 7203,142" />
+                        <polygon fill-opacity="1" points="7203,52 7733,97 7733,187 7203,142" />
                         <g id="note-L28F4" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(6995, 637) scale(0.72, 0.72)" />
@@ -344,7 +344,7 @@
                         <g id="accid-L27F3" class="accid" />
                      </g>
                      <g id="beam-L28F3-L29F3" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="7203,1532 7733,1577 7733,1667 7203,1622" />
+                        <polygon fill-opacity="1" points="7203,1532 7733,1577 7733,1667 7203,1622" />
                         <g id="note-L28F3" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(6995, 2207) scale(0.72, 0.72)" />
@@ -414,7 +414,7 @@
                         <g id="accid-L28F2" class="accid" />
                      </g>
                      <g id="beam-L30F2-L31F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="8019,3983 8549,4028 8549,3938 8019,3893" />
+                        <polygon fill-opacity="1" points="8019,3983 8549,4028 8549,3938 8019,3893" />
                         <g id="note-L30F2" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(8019, 3263) scale(0.72, 0.72)" />
@@ -471,7 +471,7 @@
                         <g id="accid-L28F1" class="accid" />
                      </g>
                      <g id="beam-L30F1-L31F1" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="8227,4239 8757,4284 8757,4374 8227,4329" />
+                        <polygon fill-opacity="1" points="8227,4239 8757,4284 8757,4374 8227,4329" />
                         <g id="note-L30F1" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(8019, 4914) scale(0.72, 0.72)" />
@@ -666,7 +666,7 @@
                         <g id="accid-L38F4" class="accid" />
                      </g>
                      <g id="beam-L40F4-L41F4" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="14586,1177 15116,1222 15116,1132 14586,1087" />
+                        <polygon fill-opacity="1" points="14586,1177 15116,1222 15116,1132 14586,1087" />
                         <g id="note-L40F4" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(14586, 547) scale(0.72, 0.72)" />
@@ -804,7 +804,7 @@
                         <g id="accid-L37F1" class="accid" />
                      </g>
                      <g id="beam-L38F1-L39F1" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="13562,5274 14092,5319 14092,5229 13562,5184" />
+                        <polygon fill-opacity="1" points="13562,5274 14092,5319 14092,5229 13562,5184" />
                         <g id="note-L38F1" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(13562, 4554) scale(0.72, 0.72)" />
@@ -909,7 +909,7 @@
                         <g id="accid-L44F3" class="accid" />
                      </g>
                      <g id="beam-L46F3-L47F3" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="17816,1802 18346,1847 18346,1937 17816,1892" />
+                        <polygon fill-opacity="1" points="17816,1802 18346,1847 18346,1937 17816,1892" />
                         <g id="note-L46F3" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(17608, 2477) scale(0.72, 0.72)" />
@@ -948,7 +948,7 @@
                   <path d="M16408 3893 L20002 3893" stroke-width="13" />
                   <g id="layer-L43F2N1" class="layer">
                      <g id="beam-L44F2-L45F2" class="beam">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="16583,4073 17114,4118 17114,4028 16583,3983" />
+                        <polygon fill-opacity="1" points="16583,4073 17114,4118 17114,4028 16583,3983" />
                         <g id="note-L44F2" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(16583, 3443) scale(0.72, 0.72)" />

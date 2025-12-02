@@ -1,5 +1,5 @@
 <svg width="975px" height="369px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
-   <desc>Engraved by Verovio 5.6.0-85e7620</desc>
+   <desc>Engraved by Verovio 5.7.0-7135340</desc>
    <defs>
       <g id="E003-l19nj5e9">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -20,7 +20,7 @@
          <path transform="scale(1,-1)" d="M0 760h30v-760h-30v760z" />
       </g>
    </defs>
-   <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 path {stroke:currentColor}</style>
+   <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}</style>
    <svg class="definition-scale" color="black" viewBox="0 0 21660 8200">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="moqsi69" class="mdiv pageMilestone" />
@@ -30,7 +30,7 @@
             <g id="m1vifptt" class="grpSym">
                <use xlink:href="#E003-l19nj5e9" transform="translate(-180, 309) scale(0.72, 0.72)" />
                <use xlink:href="#E004-l19nj5e9" transform="translate(-180, 6891) scale(0.72, 0.72)" />
-               <rect stroke-opacity="1" fill-opacity="1" x="-180" y="303" height="6594" width="90" />
+               <rect fill-opacity="1" x="-180" y="303" height="6594" width="90" />
             </g>
             <g id="hju2rxn" class="section systemMilestone" />
             <g id="rgx8bjh" class="staff">
@@ -339,34 +339,34 @@
                   </g>
                   <g id="m1c77hfv" class="note">
                      <g class="notehead">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="987,3510 1183,3510 1183,3560 987,3560" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="987,3690 1183,3690 1183,3640 987,3640" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="969" y="3480" height="240" width="18" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="1183" y="3480" height="240" width="18" />
+                        <polygon fill-opacity="1" points="987,3510 1183,3510 1183,3560 987,3560" />
+                        <polygon fill-opacity="1" points="987,3690 1183,3690 1183,3640 987,3640" />
+                        <rect fill-opacity="1" x="969" y="3480" height="240" width="18" />
+                        <rect fill-opacity="1" x="1183" y="3480" height="240" width="18" />
                      </g>
                   </g>
                   <g id="n1p91bt0" class="note">
                      <g class="notehead">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="5907,3510 6103,3510 6103,3560 5907,3560" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="5907,3690 6103,3690 6103,3640 5907,3640" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="5889" y="3480" height="240" width="18" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="6103" y="3480" height="240" width="18" />
+                        <polygon fill-opacity="1" points="5907,3510 6103,3510 6103,3560 5907,3560" />
+                        <polygon fill-opacity="1" points="5907,3690 6103,3690 6103,3640 5907,3640" />
+                        <rect fill-opacity="1" x="5889" y="3480" height="240" width="18" />
+                        <rect fill-opacity="1" x="6103" y="3480" height="240" width="18" />
                      </g>
                   </g>
                   <g id="o1hn97h8" class="note">
                      <g class="notehead">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="10827,3510 11023,3510 11023,3560 10827,3560" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="10827,3690 11023,3690 11023,3640 10827,3640" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="10809" y="3480" height="240" width="18" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="11023" y="3480" height="240" width="18" />
+                        <polygon fill-opacity="1" points="10827,3510 11023,3510 11023,3560 10827,3560" />
+                        <polygon fill-opacity="1" points="10827,3690 11023,3690 11023,3640 10827,3640" />
+                        <rect fill-opacity="1" x="10809" y="3480" height="240" width="18" />
+                        <rect fill-opacity="1" x="11023" y="3480" height="240" width="18" />
                      </g>
                   </g>
                   <g id="pmwmthe" class="note">
                      <g class="notehead">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="15747,3510 15943,3510 15943,3560 15747,3560" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="15747,3690 15943,3690 15943,3640 15747,3640" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="15729" y="3480" height="240" width="18" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="15943" y="3480" height="240" width="18" />
+                        <polygon fill-opacity="1" points="15747,3510 15943,3510 15943,3560 15747,3560" />
+                        <polygon fill-opacity="1" points="15747,3690 15943,3690 15943,3640 15747,3640" />
+                        <rect fill-opacity="1" x="15729" y="3480" height="240" width="18" />
+                        <rect fill-opacity="1" x="15943" y="3480" height="240" width="18" />
                      </g>
                   </g>
                   <g id="q14fmeoc" class="barLine">
@@ -390,22 +390,22 @@
                   </g>
                   <g id="u6oscn4" class="note">
                      <g class="notehead">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="987,4950 1183,4950 1183,5000 987,5000" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="987,5130 1183,5130 1183,5080 987,5080" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="969" y="4920" height="240" width="18" />
+                        <polygon fill-opacity="1" points="987,4950 1183,4950 1183,5000 987,5000" />
+                        <polygon fill-opacity="1" points="987,5130 1183,5130 1183,5080 987,5080" />
+                        <rect fill-opacity="1" x="969" y="4920" height="240" width="18" />
                      </g>
                      <g class="stem">
-                        <rect stroke-opacity="1" fill-opacity="1" x="1183" y="4920" height="750" width="18" />
+                        <rect fill-opacity="1" x="1183" y="4920" height="750" width="18" />
                      </g>
                   </g>
                   <g id="vyt4ad" class="note">
                      <g class="notehead">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="10827,4950 11023,4950 11023,5000 10827,5000" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="10827,5130 11023,5130 11023,5080 10827,5080" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="10809" y="4920" height="240" width="18" />
+                        <polygon fill-opacity="1" points="10827,4950 11023,4950 11023,5000 10827,5000" />
+                        <polygon fill-opacity="1" points="10827,5130 11023,5130 11023,5080 10827,5080" />
+                        <rect fill-opacity="1" x="10809" y="4920" height="240" width="18" />
                      </g>
                      <g class="stem">
-                        <rect stroke-opacity="1" fill-opacity="1" x="11023" y="4920" height="750" width="18" />
+                        <rect fill-opacity="1" x="11023" y="4920" height="750" width="18" />
                      </g>
                   </g>
                   <g id="w19obtds" class="barLine">
@@ -429,12 +429,12 @@
                   </g>
                   <g id="a1tqy1kq" class="note">
                      <g class="notehead">
-                        <polygon stroke-opacity="1" fill-opacity="1" points="987,6390 1415,6390 1415,6440 987,6440" />
-                        <polygon stroke-opacity="1" fill-opacity="1" points="987,6570 1415,6570 1415,6520 987,6520" />
-                        <rect stroke-opacity="1" fill-opacity="1" x="969" y="6360" height="240" width="18" />
+                        <polygon fill-opacity="1" points="987,6390 1415,6390 1415,6440 987,6440" />
+                        <polygon fill-opacity="1" points="987,6570 1415,6570 1415,6520 987,6520" />
+                        <rect fill-opacity="1" x="969" y="6360" height="240" width="18" />
                      </g>
                      <g class="stem">
-                        <rect stroke-opacity="1" fill-opacity="1" x="1415" y="6360" height="750" width="18" />
+                        <rect fill-opacity="1" x="1415" y="6360" height="750" width="18" />
                      </g>
                   </g>
                   <g id="bb8g0u0" class="barLine">
