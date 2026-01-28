@@ -1,5 +1,5 @@
 <svg width="413px" height="111px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="pfnjo7e">
-   <desc>Engraved by Verovio 5.7.0-7135340</desc>
+   <desc>Engraved by Verovio 6.0.0-9dac18a</desc>
    <defs>
       <g id="E062-pfnjo7e">
          <path transform="scale(1,-1)" d="M582 -120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM582 120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM158 96c51 0 73 -14 88 -49l16 -39c0 -17 -2 -30 -7 -40c-3 -11 -10 -21 -19 -31c-17 -18 -49 -43 -84 -43 c-55 0 -77 13 -112 44c-24 21 -35 55 -35 100c0 46 14 81 32 112c30 52 71 79 137 93l36 6l26 2c154 0 235 -68 274 -182c11 -32 18 -68 18 -107c0 -103 -26 -182 -68 -250c-89 -145 -234 -230 -412 -288l-30 -5c-9 0 -14 3 -14 8c3 10 5 11 10 16c35 15 70 30 96 44l78 43 c96 57 162 136 197 258c9 33 17 60 22 100c3 22 5 35 6 39c-7 69 -16 115 -23 140s-4 22 -16 40c-8 12 -19 23 -31 34c-24 21 -62 44 -118 44c-48 0 -84 -8 -113 -28c-28 -19 -42 -44 -42 -73v-16c2 -5 3 -9 4 -11c24 22 52 39 84 39z" />
@@ -20,8 +20,8 @@
          <path transform="scale(1,-1)" d="M509 -105c0 28 22 51 50 51s51 -23 51 -51s-23 -51 -51 -51s-50 23 -50 51zM509 105c0 28 22 51 50 51s51 -23 51 -51s-23 -51 -51 -51s-50 23 -50 51zM138 84c43 0 63 -11 77 -43l14 -34c0 -16 -2 -27 -6 -35c-2 -9 -8 -17 -17 -27c-22 -24 -49 -38 -73 -38 c-43 0 -63 8 -98 39c-20 18 -31 47 -31 87c0 34 9 65 28 98c26 45 62 69 120 81l32 6l22 1c125 0 203 -51 240 -159c10 -30 15 -61 15 -93c0 -83 -19 -154 -59 -219c-70 -115 -185 -194 -360 -251l-26 -5c-8 0 -13 3 -13 7c2 7 3 8 9 14c47 20 66 30 84 39l68 37 c89 53 143 125 172 226c13 48 17 60 20 87c3 19 4 31 5 34c-5 51 -12 95 -20 123c-8 30 -5 22 -14 35c-6 9 -14 17 -27 29c-29 26 -64 39 -103 39c-44 0 -75 -8 -99 -25c-24 -16 -37 -38 -37 -64v-14c2 -4 3 -7 4 -9c25 23 49 34 73 34z" />
       </g>
    </defs>
-   <style type="text/css">#pfnjo7e g.page-margin {font-family:Times,serif;}#pfnjo7e g.ending, #pfnjo7e g.fing, #pfnjo7e g.reh, #pfnjo7e g.tempo {font-weight:bold;}#pfnjo7e g.dir, #pfnjo7e g.dynam, #pfnjo7e g.mNum {font-style:italic;}#pfnjo7e g.label {font-weight:normal;}#pfnjo7e ellipse, #pfnjo7e path, #pfnjo7e polygon, #pfnjo7e polyline, #pfnjo7e rect {stroke:currentColor}</style>
-   <svg class="definition-scale" color="black" viewBox="0 0 9170 2450">
+   <style type="text/css">g.ending, g.fing, g.reh, g.tempo {font-weight:bold;} g.dir, g.dynam, g.mNum {font-style:italic;}g.label {font-weight:normal;} ellipse, path, polygon, polyline, rect {stroke:currentColor} </style>
+   <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 9170 2450">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="yv3lqdm" class="mdiv pageMilestone" />
          <g id="z2gqwr3" class="score pageMilestone" />
@@ -61,10 +61,10 @@
                   </g>
                   <g id="o1w2vfrn" class="layer">
                      <g id="s147azdb" class="beam">
-                        <polygon fill-opacity="1" points="1659,1356 2625,996 2625,906 1659,1266" />
-                        <polygon fill-opacity="1" points="1659,1221 1984,1101 1984,1011 1659,1131" />
-                        <polygon fill-opacity="1" points="1984,1101 2300,981 2300,891 1984,1011" />
-                        <polygon fill-opacity="1" points="2300,981 2625,861 2625,771 2300,891" />
+                        <polygon points="1659,1356 2625,996 2625,906 1659,1266" />
+                        <polygon points="1659,1221 1984,1101 1984,1011 1659,1131" />
+                        <polygon points="1984,1101 2300,981 2300,891 1984,1011" />
+                        <polygon points="2300,981 2625,861 2625,771 2300,891" />
                         <g id="c1k4iy3e" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-pfnjo7e" transform="translate(1659, 726) scale(0.72, 0.72)" />
@@ -102,10 +102,10 @@
                         <use xlink:href="#E07A-pfnjo7e" transform="translate(2923, 1086) scale(0.72, 0.72)" />
                      </g>
                      <g id="t1kzq82m" class="beam">
-                        <polygon fill-opacity="1" points="3375,1446 4341,1086 4341,996 3375,1356" />
-                        <polygon fill-opacity="1" points="3375,1311 3700,1191 3700,1101 3375,1221" />
-                        <polygon fill-opacity="1" points="3700,1191 4016,1071 4016,981 3700,1101" />
-                        <polygon fill-opacity="1" points="4016,1071 4341,951 4341,861 4016,981" />
+                        <polygon points="3375,1446 4341,1086 4341,996 3375,1356" />
+                        <polygon points="3375,1311 3700,1191 3700,1101 3375,1221" />
+                        <polygon points="3700,1191 4016,1071 4016,981 3700,1101" />
+                        <polygon points="4016,1071 4341,951 4341,861 4016,981" />
                         <g id="g2rcrlx" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-pfnjo7e" transform="translate(3375, 816) scale(0.72, 0.72)" />
@@ -143,10 +143,10 @@
                         <use xlink:href="#E07C-pfnjo7e" transform="translate(4637, 726) scale(0.72, 0.72)" />
                      </g>
                      <g id="ushell2" class="beam">
-                        <polygon fill-opacity="1" points="5166,1356 6132,996 6132,906 5166,1266" />
-                        <polygon fill-opacity="1" points="5166,1221 5491,1101 5491,1011 5166,1131" />
-                        <polygon fill-opacity="1" points="5491,1101 5807,981 5807,891 5491,1011" />
-                        <polygon fill-opacity="1" points="5807,981 6132,861 6132,771 5807,891" />
+                        <polygon points="5166,1356 6132,996 6132,906 5166,1266" />
+                        <polygon points="5166,1221 5491,1101 5491,1011 5166,1131" />
+                        <polygon points="5491,1101 5807,981 5807,891 5491,1011" />
+                        <polygon points="5807,981 6132,861 6132,771 5807,891" />
                         <g id="k1ffvwuh" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-pfnjo7e" transform="translate(5166, 726) scale(0.72, 0.72)" />
@@ -185,10 +185,10 @@
                         <use xlink:href="#E07A-pfnjo7e" transform="translate(6430, 1086) scale(0.72, 0.72)" />
                      </g>
                      <g id="va734np" class="beam">
-                        <polygon fill-opacity="1" points="6882,1356 7848,996 7848,906 6882,1266" />
-                        <polygon fill-opacity="1" points="6882,1221 7207,1101 7207,1011 6882,1131" />
-                        <polygon fill-opacity="1" points="7207,1101 7523,981 7523,891 7207,1011" />
-                        <polygon fill-opacity="1" points="7523,981 7848,861 7848,771 7523,891" />
+                        <polygon points="6882,1356 7848,996 7848,906 6882,1266" />
+                        <polygon points="6882,1221 7207,1101 7207,1011 6882,1131" />
+                        <polygon points="7207,1101 7523,981 7523,891 7207,1011" />
+                        <polygon points="7523,981 7848,861 7848,771 7523,891" />
                         <g id="o1vw1hrc" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-pfnjo7e" transform="translate(6882, 726) scale(0.72, 0.72)" />

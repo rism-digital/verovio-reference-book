@@ -1,5 +1,5 @@
 <svg viewBox="0 0 945 1337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
-   <desc>Engraved by Verovio 5.7.0-7135340</desc>
+   <desc>Engraved by Verovio 6.0.0-9dac18a</desc>
    <defs>
       <g id="E003-l19nj5e9">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -23,8 +23,8 @@
          <path transform="scale(1,-1)" d="M582 -120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM582 120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM158 96c51 0 73 -14 88 -49l16 -39c0 -17 -2 -30 -7 -40c-3 -11 -10 -21 -19 -31c-17 -18 -49 -43 -84 -43 c-55 0 -77 13 -112 44c-24 21 -35 55 -35 100c0 46 14 81 32 112c30 52 71 79 137 93l36 6l26 2c154 0 235 -68 274 -182c11 -32 18 -68 18 -107c0 -103 -26 -182 -68 -250c-89 -145 -234 -230 -412 -288l-30 -5c-9 0 -14 3 -14 8c3 10 5 11 10 16c35 15 70 30 96 44l78 43 c96 57 162 136 197 258c9 33 17 60 22 100c3 22 5 35 6 39c-7 69 -16 115 -23 140s-4 22 -16 40c-8 12 -19 23 -31 34c-24 21 -62 44 -118 44c-48 0 -84 -8 -113 -28c-28 -19 -42 -44 -42 -73v-16c2 -5 3 -9 4 -11c24 22 52 39 84 39z" />
       </g>
    </defs>
-   <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}</style>
-   <svg class="definition-scale" color="black" viewBox="0 0 21000 29700">
+   <style type="text/css">g.ending, g.fing, g.reh, g.tempo {font-weight:bold;} g.dir, g.dynam, g.mNum {font-style:italic;}g.label {font-weight:normal;} ellipse, path, polygon, polyline, rect {stroke:currentColor} </style>
+   <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 21000 29700">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="moqsi69" class="mdiv pageMilestone" />
          <g id="njft1g2" class="score pageMilestone" />
@@ -33,7 +33,7 @@
             <g id="nl8x0w" class="grpSym">
                <use xlink:href="#E003-l19nj5e9" transform="translate(1533, 1203) scale(0.72, 0.72)" />
                <use xlink:href="#E004-l19nj5e9" transform="translate(1533, 8649) scale(0.72, 0.72)" />
-               <rect fill-opacity="1" x="1533" y="1197" height="7458" width="90" />
+               <rect x="1533" y="1197" height="7458" width="90" />
             </g>
             <g id="p1v11tc" class="label">
                <text x="1353" y="1704" text-anchor="end" font-size="0px">
@@ -602,7 +602,7 @@
             <g id="be8f6wk" class="grpSym">
                <use xlink:href="#E003-l19nj5e9" transform="translate(460, 10505) scale(0.72, 0.72)" />
                <use xlink:href="#E004-l19nj5e9" transform="translate(460, 17951) scale(0.72, 0.72)" />
-               <rect fill-opacity="1" x="460" y="10499" height="7458" width="90" />
+               <rect x="460" y="10499" height="7458" width="90" />
             </g>
             <g id="f3p2ao2" class="labelAbbr">
                <text x="280" y="11006" text-anchor="end" font-size="0px">
@@ -1280,7 +1280,7 @@
             <g id="l18xjel" class="grpSym">
                <use xlink:href="#E003-l19nj5e9" transform="translate(460, 19981) scale(0.72, 0.72)" />
                <use xlink:href="#E004-l19nj5e9" transform="translate(460, 27427) scale(0.72, 0.72)" />
-               <rect fill-opacity="1" x="460" y="19975" height="7458" width="90" />
+               <rect x="460" y="19975" height="7458" width="90" />
             </g>
             <g id="p2s3iem" class="labelAbbr">
                <text x="280" y="20482" text-anchor="end" font-size="0px">

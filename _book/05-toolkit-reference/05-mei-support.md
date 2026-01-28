@@ -728,6 +728,15 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
+[\<ossia\>](https://music-encoding.org/guidelines/v5/elements/ossia.html)
+{% endcol %}
+{% col 10 %}
+[att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
 [\<pb\>](https://music-encoding.org/guidelines/v5/elements/pb.html)
 {% endcol %}
 {% col 10 %}

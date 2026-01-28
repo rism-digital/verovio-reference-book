@@ -1,5 +1,5 @@
 <svg width="358px" height="270px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
-   <desc>Engraved by Verovio 5.7.0-7135340</desc>
+   <desc>Engraved by Verovio 6.0.0-9dac18a</desc>
    <defs>
       <g id="E050-l19nj5e9">
          <path transform="scale(1,-1)" d="M376 415l25 -145c3 -18 3 -18 29 -18c147 0 241 -113 241 -241c0 -113 -67 -198 -168 -238c-14 -6 -15 -5 -13 -17c11 -62 29 -157 29 -214c0 -170 -130 -200 -197 -200c-151 0 -190 98 -190 163c0 62 40 115 107 115c61 0 96 -47 96 -102c0 -58 -36 -85 -67 -94 c-23 -7 -32 -10 -32 -17c0 -13 26 -29 80 -29c59 0 159 18 159 166c0 47 -15 134 -27 201c-2 12 -4 11 -15 9c-20 -4 -46 -6 -69 -6c-245 0 -364 165 -364 339c0 202 153 345 297 464c12 10 11 12 9 24c-7 41 -14 106 -14 164c0 104 24 229 98 311c20 22 51 48 65 48 c11 0 37 -28 52 -50c41 -60 65 -146 65 -233c0 -153 -82 -280 -190 -381c-6 -6 -8 -7 -6 -19zM470 943c-61 0 -133 -96 -133 -252c0 -32 2 -66 6 -92c2 -13 6 -14 13 -8c79 69 174 159 174 270c0 55 -27 82 -60 82zM361 262l-21 128c-2 11 -4 12 -14 4 c-47 -38 -93 -75 -153 -142c-83 -94 -93 -173 -93 -232c0 -139 113 -236 288 -236c20 0 40 2 56 5c15 3 16 3 14 14l-50 298c-2 11 -4 12 -20 8c-61 -17 -100 -60 -100 -117c0 -46 30 -89 72 -107c7 -3 15 -6 15 -13c0 -6 -4 -11 -12 -11c-7 0 -19 3 -27 6 c-68 23 -115 87 -115 177c0 85 57 164 145 194c18 6 18 5 15 24zM430 103l49 -285c2 -12 4 -12 16 -6c56 28 94 79 94 142c0 88 -67 156 -148 163c-12 1 -13 -2 -11 -14z" />
@@ -35,8 +35,8 @@
          <path transform="scale(1,-1)" d="M274 274c56 0 92 -31 92 -89c0 -95 -78 -195 -174 -195c-17 0 -30 2 -44 9c-16 8 -19 18 -24 18s-7 -7 -9 -12l-45 -112c-1 -3 -2 -6 -2 -7c0 -3 3 -3 9 -3h40c8 0 12 -4 12 -12c0 -9 -4 -13 -13 -13h-193c-8 0 -12 4 -12 12c0 9 4 13 13 13h31c10 0 12 2 15 10l123 305 c3 7 6 17 6 25c0 7 -3 12 -11 12c-18 0 -38 -26 -67 -76c-5 -9 -9 -15 -16 -15c-6 0 -11 4 -11 11c0 5 2 10 7 19c31 57 63 99 122 99c26 0 41 -9 48 -21c9 -17 6 -24 11 -24c4 0 7 8 21 20c18 16 40 26 71 26zM247 237c-24 0 -50 -29 -64 -63l-20 -49 c-11 -28 -19 -48 -19 -69s8 -32 25 -32c48 0 101 127 101 176c0 22 -6 37 -23 37z" />
       </g>
    </defs>
-   <style type="text/css">#l19nj5e9 g.page-margin {font-family:Times,serif;}#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}</style>
-   <svg class="definition-scale" color="black" viewBox="0 0 7940 6000">
+   <style type="text/css">g.ending, g.fing, g.reh, g.tempo {font-weight:bold;} g.dir, g.dynam, g.mNum {font-style:italic;}g.label {font-weight:normal;} ellipse, path, polygon, polyline, rect {stroke:currentColor} </style>
+   <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 7940 6000">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="moqsi69" class="mdiv pageMilestone" />
          <g id="njft1g2" class="score pageMilestone" />
@@ -68,7 +68,7 @@
                   </g>
                   <g id="izodm98" class="layer">
                      <g id="j1mj6nxn" class="beam">
-                        <polygon fill-opacity="1" points="1878,391 2393,324 2393,391 1878,458" />
+                        <polygon points="1878,391 2393,324 2393,391 1878,458" />
                         <g id="note-0000000827838925" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(1731, 860) scale(0.54, 0.54)" />
@@ -132,7 +132,7 @@
                   </g>
                   <g id="u1bb0tuc" class="layer">
                      <g id="v6sh6uc" class="beam">
-                        <polygon fill-opacity="1" points="1925,1593 2446,1548 2446,1638 1925,1683" />
+                        <polygon points="1925,1593 2446,1548 2446,1638 1925,1683" />
                         <g id="wgj8qwy" class="chord">
                            <g id="r1jp5f3v" class="stem">
                               <path d="M1934 2733 L1934 1611" stroke-width="18" />
@@ -215,14 +215,14 @@
                   <path d="M2697 864 L6945 864" stroke-width="10" />
                   <g id="v1bpmbr1" class="layer">
                      <g id="w1m11mph" class="beam">
-                        <polygon fill-opacity="1" points="3024,291 3738,291 3738,358 3024,358" />
-                        <polygon fill-opacity="1" points="3579,391 3738,391 3738,458 3579,458" />
+                        <polygon points="3024,291 3738,291 3738,358 3024,358" />
+                        <polygon points="3579,391 3738,391 3738,458 3579,458" />
                         <g id="d1e379" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(2877, 726) scale(0.54, 0.54)" />
                            </g>
                            <g id="u1w3vevx" class="dots">
-                              <ellipse cx="3102" cy="663" rx="27" ry="27" fill-opacity="1" />
+                              <ellipse cx="3102" cy="663" rx="27" ry="27" />
                            </g>
                            <g id="t14q1aig" class="stem">
                               <path d="M3030 704 L3030 304" stroke-width="13" />
@@ -256,7 +256,7 @@
                         </g>
                      </g>
                      <g id="fwigvp2" class="beam">
-                        <polygon fill-opacity="1" points="4093,291 4648,291 4648,358 4093,358" />
+                        <polygon points="4093,291 4648,291 4648,358 4093,358" />
                         <g id="d1e424" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(3946, 726) scale(0.54, 0.54)" />
@@ -296,7 +296,7 @@
                         <use xlink:href="#E4E6-l19nj5e9" transform="translate(4939, 592) scale(0.54, 0.54)" />
                      </g>
                      <g id="pmwmthe" class="beam">
-                        <polygon fill-opacity="1" points="5536,257 6635,324 6635,391 5536,324" />
+                        <polygon points="5536,257 6635,324 6635,391 5536,324" />
                         <g id="d1e474" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-l19nj5e9" transform="translate(5389, 726) scale(0.54, 0.54)" />
@@ -367,13 +367,13 @@
                   </g>
                   <g id="e11izfdo" class="layer">
                      <g id="fqn9gl2" class="beam">
-                        <polygon fill-opacity="1" points="3071,1548 3791,1548 3791,1638 3071,1638" />
-                        <polygon fill-opacity="1" points="3579,1683 3791,1683 3791,1773 3579,1773" />
+                        <polygon points="3071,1548 3791,1548 3791,1638 3071,1638" />
+                        <polygon points="3579,1683 3791,1683 3791,1773 3579,1773" />
                         <g id="goma0gm" class="chord">
                            <g id="cc8wdp9" class="dots">
-                              <ellipse cx="3179" cy="2583" rx="36" ry="36" fill-opacity="1" />
-                              <ellipse cx="3179" cy="2223" rx="36" ry="36" fill-opacity="1" />
-                              <ellipse cx="3179" cy="2043" rx="36" ry="36" fill-opacity="1" />
+                              <ellipse cx="3179" cy="2583" rx="36" ry="36" />
+                              <ellipse cx="3179" cy="2223" rx="36" ry="36" />
+                              <ellipse cx="3179" cy="2043" rx="36" ry="36" />
                            </g>
                            <g id="bznfzok" class="stem">
                               <path d="M3080 2553 L3080 1566" stroke-width="18" />
@@ -448,7 +448,7 @@
                         <use xlink:href="#E4E5-l19nj5e9" transform="translate(4939, 1953) scale(0.72, 0.72)" />
                      </g>
                      <g id="w1qijfro" class="beam">
-                        <polygon fill-opacity="1" points="6033,1683 6688,1593 6688,1683 6033,1773" />
+                        <polygon points="6033,1683 6688,1593 6688,1683 6033,1773" />
                         <g id="xpk0tft" class="chord">
                            <g id="frvbxh6" class="stem">
                               <path d="M6042 2463 L6042 1701" stroke-width="18" />

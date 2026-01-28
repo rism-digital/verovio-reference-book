@@ -4,7 +4,7 @@ title: "Repetition expansion"
 examples:
   - name: expansion-001
     test-suite: expansion/expansion-001.mei
-    xpath:
+  #  xpath:
   #      - ".//mei:score/mei:section[not(*)]"
   #       - ".//score/section/expansion"
   #      - ".//mei:section[not(.//*[not(self::expansion or self::section or self::ending or self::rdg or self::lem)])]"
