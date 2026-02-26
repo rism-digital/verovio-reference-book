@@ -692,6 +692,15 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
+[\<oStaff\>](https://music-encoding.org/guidelines/v5/elements/oStaff.html)
+{% endcol %}
+{% col 10 %}
+[att.coord](https://music-encoding.org/guidelines/v5/attribute-classes/att.coord.html), [att.facsimile](https://music-encoding.org/guidelines/v5/attribute-classes/att.facsimile.html), [att.nInteger](https://music-encoding.org/guidelines/v5/attribute-classes/att.nInteger.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html), [att.visibility](https://music-encoding.org/guidelines/v5/attribute-classes/att.visibility.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
 [\<octave\>](https://music-encoding.org/guidelines/v5/elements/octave.html)
 {% endcol %}
 {% col 10 %}

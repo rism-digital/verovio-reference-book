@@ -50,6 +50,10 @@ element_exceptions = [
     "tupletNum",
 ]
 
+element_mapped = {
+    "staff": ["vrv::OStaff"]
+}
+
 class_to_mei = {"annotScore": "annot"}
 
 doxygen_repo_url = "https://github.com/rism-digital/verovio-doxygen"
@@ -92,7 +96,9 @@ def format_attribute(vrv_attribute: str) -> str:
     return f"[{base_att}]({mei_attribute_base_url}{base_att}.html)"
 
 
-def write_element(element: str, attributes: list[str], fptr: typing.IO) -> None:
+def write_element(
+    element: str, attributes: list[str], rows_by_vrv_name: dict[str, str]
+) -> None:
     """
     Print the MD content for an element and its attributes.
     """
@@ -114,17 +120,22 @@ def write_element(element: str, attributes: list[str], fptr: typing.IO) -> None:
         elname = class_to_mei[elname]
 
     # Element column
-    fptr.write("{% row %}\n")
-    fptr.write(
+    row_output = "{% row %}\n"
+    row_output += (
         f"{{% col 2 %}}\n[\\<{elname}\\>]({mei_element_base_url}{elname}.html)\n{{% endcol %}}\n"
     )
     # Add the description and the links
-    fptr.write("{% col 10 %}\n")
+    row_output += "{% col 10 %}\n"
 
     # Attribute column
     fmt_att: list[str] = [format_attribute(a) for a in attributes]
-    fptr.write(", ".join(fmt_att))
-    fptr.write("\n{% endcol %}\n{% endrow %}\n\n")
+    row_output += ", ".join(fmt_att)
+    row_output += "\n{% endcol %}\n{% endrow %}\n\n"
+    rows_by_vrv_name[element] = row_output
+
+    if (elname in element_mapped):
+        for mapped_el in element_mapped[elname]:
+            write_element(mapped_el, attributes, rows_by_vrv_name)
 
     return None
 
@@ -202,6 +213,7 @@ if __name__ == "__main__":
 
     with open(mei_support_output_page, "w") as fptr:
         write_frontmatter(fptr)
+        rows_by_vrv_name: dict[str, str] = {}
 
         dir1 = sorted(os.listdir(os.path.join(tmp_dir, "xml")))
         for item1 in dir1:
@@ -238,6 +250,9 @@ if __name__ == "__main__":
 
             attribute_classes.sort()
 
-            write_element(vrv_name, attribute_classes, fptr)
+            write_element(vrv_name, attribute_classes, rows_by_vrv_name)
+
+        for vrv_name in sorted(rows_by_vrv_name):
+            fptr.write(rows_by_vrv_name[vrv_name])
 
     sys.exit()
