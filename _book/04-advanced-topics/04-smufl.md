@@ -181,7 +181,7 @@ Only Bravura and Leipzig have a complete coverage of the glyphs used in Verovio.
 
 The `--font-add-custom` parameter option allows to load and use an external font not available in the resource directory. The option is repeatable, which means that more than one external font can be loaded. For bindings that use JSON options, the value(s) must be passed in an array.
 
-The custom font must be archived in a ZIP file containing the files produced by the font script Verovio provides for extracting relevant information from an SVG font file and the corresponding SMuFL metadata. These files are:
+The custom font must be archived in a ZIP file containing the files produced by the font script Verovio provides in `./fonts` for extracting relevant information from an SVG font file and the corresponding SMuFL metadata file. See the [README](https://github.com/rism-digital/verovio/tree/develop/fonts#readme) for more information about the script and how to run it. The files needed are:
 * The XML file with bounding boxes of the included glyphs.
 * The XML snippets for each glyph
 * The CSS file of the font for text
