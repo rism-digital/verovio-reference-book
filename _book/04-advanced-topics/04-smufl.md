@@ -167,9 +167,7 @@ For some elements, Verovio support the use of alternate SMuFL glyphs through the
 
 {% include music-notation example="keySig-01" %}
 
-### Custom fonts
-
-#### Load all fonts
+### Loading all fonts
 
 The `--font-load-all` boolean option makes Verovio loads all the music fonts available in the resource directory. That way, a specific font other than the default font `Leipzig` or the font set with the `--font` option can be used by specifying a `@fontname` value. At this stage, this is supporting only on `clef` and `meterSig`.
 
@@ -177,16 +175,57 @@ The `--font-load-all` boolean option makes Verovio loads all the music fonts ava
 
 Only Bravura and Leipzig have a complete coverage of the glyphs used in Verovio. The `--font-fallback` parameter option allows to choose between `Leipzig` (default) or `Bravura` as the fallback font to be used when the font chosen is missing a glyph.
 
+### Custom fonts
+
+#### Perpare a custom font
+
+Custom fonts needs to be pre-processed before they can be used by Verovio. A custom font must be archived as a ZIP file containing the files produced by the font script Verovio provides in `./fonts` for extracting relevant information from an SVG font file and the corresponding SMuFL metadata file. 
+
+In order to prepare a custom font, you need to have a directory named with the font name and containing:
+
+* The SFD file of the font
+* The SVG version of the font
+* The JSON SMuFL metadata of the font
+
+For instance, your input directory should look like:
+
+```
+-- input
+ |-- MyFont
+   |-- MyFont.sdf
+   |-- MyFont.svg
+   |-- myfont_metadata.json
+```
+
+To pre-process the font, the `./fonts/generate.py` script from the Verovio repository needs to be run with:
+
+```bash
+python3 generate.py extract --source ./input --data ./output MyFont
+python3 generate.py css --source ./input --data ./output MyFont
+```
+
+This will populate the `./output` directory with:
+
+```
+-- output
+ |-- MyFont/*.xml
+ |-- MyFont.css
+ |-- MyFont.xml
+```
+
+These files are:
+
+* The XML snippets for each glyph
+* The XML file with bounding boxes of the included glyphs.
+* The CSS file of the font for text
+
+The content of the `./output` directory must be archived as a ZIP with a filename corresponding to the name of the font (i.e. `MyFont.zip` in this example). 
+
+For the JavaScript binding, the ZIP file must be encoded in Base64 and passed as a URL or as a based64 string.
+
 #### Loading custom fonts
 
 The `--font-add-custom` parameter option allows to load and use an external font not available in the resource directory. The option is repeatable, which means that more than one external font can be loaded. For bindings that use JSON options, the value(s) must be passed in an array.
-
-The custom font must be archived in a ZIP file containing the files produced by the font script Verovio provides in `./fonts` for extracting relevant information from an SVG font file and the corresponding SMuFL metadata file. See the [README](https://github.com/rism-digital/verovio/tree/develop/fonts#readme) for more information about the script and how to run it. The files needed are:
-* The XML file with bounding boxes of the included glyphs.
-* The XML snippets for each glyph
-* The CSS file of the font for text
-
-The ZIP filename must correspond to the name of the font. For the JavaScript binding, the ZIP file must be encoded in Base64 and passed as a URL or as a based64 string.
 
 Example rendered with `--font-fallback Bravura` and `--font-add-custom GoldenAge.zip` (available [here](https://github.com/rism-digital/verovio.org/tree/gh-pages/examples/fonts/custom)) and all fonts loaded with `--font-load-all`. The elements in olive have a `@fontame="Petaluma"`. The clef in orange is a `Bravura` fallback.
 
