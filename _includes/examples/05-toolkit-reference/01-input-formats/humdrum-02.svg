@@ -1,5 +1,5 @@
 <svg width="945px" height="791px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="moqsi69">
-   <desc>Engraved by Verovio 6.0.0-9dac18a</desc>
+   <desc>Engraved by Verovio 6.1.0-682d606</desc>
    <defs>
       <g id="E003-moqsi69">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -44,35 +44,35 @@
          <path transform="scale(1,-1)" d="M206 -748c32 48 49 100 49 149c0 89 -55 168 -168 203c-18 5 -47 9 -87 16v190v190h22c8 0 33 -61 71 -95c4 -3 -2 3 61 -56c62 -58 122 -137 122 -241c0 -32 -7 -65 -17 -96c11 -29 17 -60 17 -94c0 -71 -32 -148 -67 -190c-6 -5 -10 -7 -13 -7s-5 2 -5 5l4 10 c1 3 6 8 11 16zM248 -463c4 18 7 38 7 57c0 105 -80 173 -168 200c-11 3 -27 6 -47 9c9 -17 23 -61 53 -88c4 -3 -2 3 61 -56c36 -33 71 -74 94 -122z" />
       </g>
    </defs>
-   <style type="text/css">g.ending, g.fing, g.reh, g.tempo {font-weight:bold;} g.dir, g.dynam, g.mNum {font-style:italic;}g.label {font-weight:normal;} ellipse, path, polygon, polyline, rect {stroke:currentColor} </style>
+   <style type="text/css">#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 ellipse, #moqsi69 path, #moqsi69 polygon, #moqsi69 polyline, #moqsi69 rect {stroke:currentColor}</style>
    <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 21000 17560">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="njft1g2" class="mdiv pageMilestone" />
          <g id="o168fb37" class="score pageMilestone" />
-         <g id="m1tq863t" class="system">
+         <g id="y18vny2x" class="system">
             <path d="M1325 2485 L1325 9152" stroke-width="27" />
-            <g id="i1l7wk64" class="grpSym">
+            <g id="sbo8ibw" class="grpSym">
                <use xlink:href="#E003-moqsi69" transform="translate(1132, 2434) scale(0.72, 0.72)" />
                <use xlink:href="#E004-moqsi69" transform="translate(1132, 9203) scale(0.72, 0.72)" />
                <rect x="1132" y="2428" height="6781" width="90" />
             </g>
-            <g id="k1p6e708" class="label">
+            <g id="u3vulap" class="label">
                <text x="952" y="2935" text-anchor="end" font-size="0px">
-                  <tspan id="l1ept2u" class="text">
+                  <tspan id="vmgqjwl" class="text">
                      <tspan font-size="405px">Voice</tspan>
                   </tspan>
                </text>
             </g>
-            <g id="z1y3q34w" class="label">
+            <g id="jhwrb2g" class="label">
                <text x="952" y="6938" text-anchor="end" font-size="0px">
-                  <tspan id="aftclnl" class="text">
+                  <tspan id="k14f8qzv" class="text">
                      <tspan font-size="405px">Piano</tspan>
                   </tspan>
                </text>
             </g>
-            <g id="otac8kz" class="label">
+            <g id="y1gjtv33" class="label">
                <text x="952" y="8882" text-anchor="end" font-size="0px">
-                  <tspan id="p1y1atbw" class="text">
+                  <tspan id="z1a23idp" class="text">
                      <tspan font-size="405px">Piano</tspan>
                   </tspan>
                </text>
@@ -85,15 +85,15 @@
                   <path d="M1312 2845 L4973 2845" stroke-width="13" />
                   <path d="M1312 3025 L4973 3025" stroke-width="13" />
                   <path d="M1312 3205 L4973 3205" stroke-width="13" />
-                  <g id="zvaw6y0" class="clef">
+                  <g id="j1i9ejwf" class="clef">
                      <use xlink:href="#E050-moqsi69" transform="translate(1429, 3025) scale(0.72, 0.72)" />
                   </g>
-                  <g id="a1xsc2xe" class="keySig">
-                     <g id="b11abkto" class="keyAccid">
+                  <g id="k68i2jv" class="keySig">
+                     <g id="l15pgkxm" class="keyAccid">
                         <use xlink:href="#E260-moqsi69" transform="translate(2110, 2845) scale(0.72, 0.72)" />
                      </g>
                   </g>
-                  <g id="c1tdf3z7" class="meterSig">
+                  <g id="myypey6" class="meterSig">
                      <use xlink:href="#E083-moqsi69" transform="translate(2422, 2665) scale(0.72, 0.72)" />
                      <use xlink:href="#E088-moqsi69" transform="translate(2425, 3025) scale(0.72, 0.72)" />
                   </g>
@@ -333,15 +333,15 @@
                   <path d="M1312 6848 L4973 6848" stroke-width="13" />
                   <path d="M1312 7028 L4973 7028" stroke-width="13" />
                   <path d="M1312 7208 L4973 7208" stroke-width="13" />
-                  <g id="dl44n0t" class="clef">
+                  <g id="n1bhxckh" class="clef">
                      <use xlink:href="#E050-moqsi69" transform="translate(1429, 7028) scale(0.72, 0.72)" />
                   </g>
-                  <g id="e4oqixe" class="keySig">
-                     <g id="faqitng" class="keyAccid">
+                  <g id="o1bny0pk" class="keySig">
+                     <g id="p13kx5m0" class="keyAccid">
                         <use xlink:href="#E260-moqsi69" transform="translate(2110, 6848) scale(0.72, 0.72)" />
                      </g>
                   </g>
-                  <g id="g1jupyid" class="meterSig">
+                  <g id="q15cutfy" class="meterSig">
                      <use xlink:href="#E083-moqsi69" transform="translate(2422, 6668) scale(0.72, 0.72)" />
                      <use xlink:href="#E088-moqsi69" transform="translate(2425, 7028) scale(0.72, 0.72)" />
                   </g>
@@ -411,15 +411,15 @@
                   <path d="M1312 8792 L4973 8792" stroke-width="13" />
                   <path d="M1312 8972 L4973 8972" stroke-width="13" />
                   <path d="M1312 9152 L4973 9152" stroke-width="13" />
-                  <g id="h7k10y9" class="clef">
+                  <g id="r1szod22" class="clef">
                      <use xlink:href="#E062-moqsi69" transform="translate(1429, 8612) scale(0.72, 0.72)" />
                   </g>
-                  <g id="ip7mapc" class="keySig">
-                     <g id="j1a9m3ac" class="keyAccid">
+                  <g id="s8zqlio" class="keySig">
+                     <g id="taysn9c" class="keyAccid">
                         <use xlink:href="#E260-moqsi69" transform="translate(2110, 8972) scale(0.72, 0.72)" />
                      </g>
                   </g>
-                  <g id="k1viwsdt" class="meterSig">
+                  <g id="uv49zlj" class="meterSig">
                      <use xlink:href="#E083-moqsi69" transform="translate(2422, 8612) scale(0.72, 0.72)" />
                      <use xlink:href="#E088-moqsi69" transform="translate(2425, 8972) scale(0.72, 0.72)" />
                   </g>
@@ -2178,9 +2178,9 @@
                </g>
             </g>
          </g>
-         <g id="phajdfm" class="system">
+         <g id="b4akuj7" class="system">
             <path d="M13 10207 L13 16375" stroke-width="27" />
-            <g id="onuohzf" class="grpSym">
+            <g id="yc8jklh" class="grpSym">
                <use xlink:href="#E003-moqsi69" transform="translate(-180, 10156) scale(0.72, 0.72)" />
                <use xlink:href="#E004-moqsi69" transform="translate(-180, 16426) scale(0.72, 0.72)" />
                <rect x="-180" y="10150" height="6282" width="90" />
@@ -2199,11 +2199,11 @@
                   <path d="M0 10567 L4287 10567" stroke-width="13" />
                   <path d="M0 10747 L4287 10747" stroke-width="13" />
                   <path d="M0 10927 L4287 10927" stroke-width="13" />
-                  <g id="fhu0wmi" class="clef">
+                  <g id="po38ys7" class="clef">
                      <use xlink:href="#E050-moqsi69" transform="translate(117, 10747) scale(0.72, 0.72)" />
                   </g>
-                  <g id="gmwgrk9" class="keySig">
-                     <g id="h11xquxa" class="keyAccid">
+                  <g id="q59x3j2" class="keySig">
+                     <g id="r17ejf06" class="keyAccid">
                         <use xlink:href="#E260-moqsi69" transform="translate(798, 10567) scale(0.72, 0.72)" />
                      </g>
                   </g>
@@ -2452,11 +2452,11 @@
                   <path d="M0 14426 L4287 14426" stroke-width="13" />
                   <path d="M0 14606 L4287 14606" stroke-width="13" />
                   <path d="M0 14786 L4287 14786" stroke-width="13" />
-                  <g id="ijrdqck" class="clef">
+                  <g id="s1bq4e3y" class="clef">
                      <use xlink:href="#E050-moqsi69" transform="translate(117, 14606) scale(0.72, 0.72)" />
                   </g>
-                  <g id="j1gdwib0" class="keySig">
-                     <g id="k1kw8tjj" class="keyAccid">
+                  <g id="tpamh9z" class="keySig">
+                     <g id="ucuy9z6" class="keyAccid">
                         <use xlink:href="#E260-moqsi69" transform="translate(798, 14426) scale(0.72, 0.72)" />
                      </g>
                   </g>
@@ -2527,11 +2527,11 @@
                   <path d="M0 16015 L4287 16015" stroke-width="13" />
                   <path d="M0 16195 L4287 16195" stroke-width="13" />
                   <path d="M0 16375 L4287 16375" stroke-width="13" />
-                  <g id="l1ae9hqj" class="clef">
+                  <g id="vf37ypv" class="clef">
                      <use xlink:href="#E062-moqsi69" transform="translate(117, 15835) scale(0.72, 0.72)" />
                   </g>
-                  <g id="mvdhxcw" class="keySig">
-                     <g id="nhqavfr" class="keyAccid">
+                  <g id="wwijko" class="keySig">
+                     <g id="x1gsk2mb" class="keyAccid">
                         <use xlink:href="#E260-moqsi69" transform="translate(798, 16195) scale(0.72, 0.72)" />
                      </g>
                   </g>

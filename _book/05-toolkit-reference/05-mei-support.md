@@ -452,7 +452,7 @@ no-edit: true
 [\<keySig\>](https://music-encoding.org/guidelines/v5/elements/keySig.html)
 {% endcol %}
 {% col 10 %}
-[att.accidental](https://music-encoding.org/guidelines/v5/attribute-classes/att.accidental.html), [att.color](https://music-encoding.org/guidelines/v5/attribute-classes/att.color.html), [att.coord](https://music-encoding.org/guidelines/v5/attribute-classes/att.coord.html), [att.facsimile](https://music-encoding.org/guidelines/v5/attribute-classes/att.facsimile.html), [att.keyMode](https://music-encoding.org/guidelines/v5/attribute-classes/att.keyMode.html), [att.keySig.log](https://music-encoding.org/guidelines/v5/attribute-classes/att.keySig.log.html), [att.keySig.vis](https://music-encoding.org/guidelines/v5/attribute-classes/att.keySig.vis.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/v5/attribute-classes/att.linking.html), [att.pitch](https://music-encoding.org/guidelines/v5/attribute-classes/att.pitch.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html), [att.visibility](https://music-encoding.org/guidelines/v5/attribute-classes/att.visibility.html)
+[att.color](https://music-encoding.org/guidelines/v5/attribute-classes/att.color.html), [att.coord](https://music-encoding.org/guidelines/v5/attribute-classes/att.coord.html), [att.facsimile](https://music-encoding.org/guidelines/v5/attribute-classes/att.facsimile.html), [att.keySig.anl](https://music-encoding.org/guidelines/v5/attribute-classes/att.keySig.anl.html), [att.keySig.log](https://music-encoding.org/guidelines/v5/attribute-classes/att.keySig.log.html), [att.keySig.vis](https://music-encoding.org/guidelines/v5/attribute-classes/att.keySig.vis.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/v5/attribute-classes/att.linking.html), [att.pitch](https://music-encoding.org/guidelines/v5/attribute-classes/att.pitch.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html), [att.visibility](https://music-encoding.org/guidelines/v5/attribute-classes/att.visibility.html)
 {% endcol %}
 {% endrow %}
 
@@ -773,28 +773,10 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
-[\<pgFoot2\>](https://music-encoding.org/guidelines/v5/elements/pgFoot2.html)
-{% endcol %}
-{% col 10 %}
-[att.horizontalAlign](https://music-encoding.org/guidelines/v5/attribute-classes/att.horizontalAlign.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html)
-{% endcol %}
-{% endrow %}
-
-{% row %}
-{% col 2 %}
 [\<pgHead\>](https://music-encoding.org/guidelines/v5/elements/pgHead.html)
 {% endcol %}
 {% col 10 %}
 [att.formework](https://music-encoding.org/guidelines/v5/attribute-classes/att.formework.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html)
-{% endcol %}
-{% endrow %}
-
-{% row %}
-{% col 2 %}
-[\<pgHead2\>](https://music-encoding.org/guidelines/v5/elements/pgHead2.html)
-{% endcol %}
-{% col 10 %}
-[att.horizontalAlign](https://music-encoding.org/guidelines/v5/attribute-classes/att.horizontalAlign.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html)
 {% endcol %}
 {% endrow %}
 

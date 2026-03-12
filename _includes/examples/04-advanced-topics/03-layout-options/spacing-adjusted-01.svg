@@ -1,5 +1,5 @@
 <svg width="945px" height="290px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="moqsi69">
-   <desc>Engraved by Verovio 5.7.0-7135340</desc>
+   <desc>Engraved by Verovio 6.1.0-682d606</desc>
    <defs>
       <g id="E003-moqsi69">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -38,42 +38,42 @@
          <path transform="scale(1,-1)" d="M0 0c0 28 22 50 50 50s50 -22 50 -50s-22 -50 -50 -50s-50 22 -50 50z" />
       </g>
    </defs>
-   <style type="text/css">#moqsi69 g.page-margin {font-family:Times,serif;}#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 ellipse, #moqsi69 path, #moqsi69 polygon, #moqsi69 polyline, #moqsi69 rect {stroke:currentColor}</style>
-   <svg class="definition-scale" color="black" viewBox="0 0 21000 6430">
+   <style type="text/css">#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 ellipse, #moqsi69 path, #moqsi69 polygon, #moqsi69 polyline, #moqsi69 rect {stroke:currentColor}</style>
+   <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 21000 6430">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="njft1g2" class="mdiv pageMilestone" />
          <g id="o168fb37" class="score pageMilestone" />
-         <g id="h1gu45qq" class="system">
+         <g id="pa8cv8r" class="system">
             <path d="M1726 277 L1726 5184" stroke-width="27" />
-            <g id="q1wpii7q" class="grpSym">
+            <g id="o4pxhyv" class="grpSym">
                <use xlink:href="#E003-moqsi69" transform="translate(1533, 226) scale(0.72, 0.72)" />
                <use xlink:href="#E004-moqsi69" transform="translate(1533, 5235) scale(0.72, 0.72)" />
-               <rect fill-opacity="1" x="1533" y="220" height="5021" width="90" />
+               <rect x="1533" y="220" height="5021" width="90" />
             </g>
-            <g id="sj89l0s" class="label">
+            <g id="q1yc7c2t" class="label">
                <text x="1353" y="727" text-anchor="end" font-size="0px">
-                  <tspan id="t1k7ygl1" class="text">
+                  <tspan id="r1iwf9q9" class="text">
                      <tspan font-size="405px">Soprano</tspan>
                   </tspan>
                </text>
             </g>
-            <g id="fo4pcl5" class="label">
+            <g id="d2b6lqa" class="label">
                <text x="1353" y="2117" text-anchor="end" font-size="0px">
-                  <tspan id="g872woj" class="text">
+                  <tspan id="e1fztmfm" class="text">
                      <tspan font-size="405px">Alto</tspan>
                   </tspan>
                </text>
             </g>
-            <g id="s1ce6k68" class="label">
+            <g id="qdk1ie0" class="label">
                <text x="1353" y="3623" text-anchor="end" font-size="0px">
-                  <tspan id="t1ftosw1" class="text">
+                  <tspan id="r1niz9qc" class="text">
                      <tspan font-size="405px">Tenor</tspan>
                   </tspan>
                </text>
             </g>
-            <g id="f10nlwq9" class="label">
+            <g id="d1b7ouvt" class="label">
                <text x="1353" y="4914" text-anchor="end" font-size="0px">
-                  <tspan id="g150p8ar" class="text">
+                  <tspan id="ex2ulh3" class="text">
                      <tspan font-size="405px">Bass</tspan>
                   </tspan>
                </text>
@@ -92,11 +92,11 @@
                   <path d="M1713 637 L6378 637" stroke-width="13" />
                   <path d="M1713 817 L6378 817" stroke-width="13" />
                   <path d="M1713 997 L6378 997" stroke-width="13" />
-                  <g id="v1kjhg50" class="clef">
+                  <g id="tb3em8a" class="clef">
                      <use xlink:href="#E050-moqsi69" transform="translate(1830, 817) scale(0.72, 0.72)" />
                   </g>
-                  <g id="w1eaxh08" class="keySig" />
-                  <g id="x1441jh9" class="meterSig">
+                  <g id="u6acbgh" class="keySig" />
+                  <g id="v1e9yw58" class="meterSig">
                      <use xlink:href="#E08A-moqsi69" transform="translate(2511, 637) scale(0.72, 0.72)" />
                   </g>
                   <g id="layer-L1F4N1" class="layer">
@@ -135,11 +135,11 @@
                   <path d="M1713 2027 L6378 2027" stroke-width="13" />
                   <path d="M1713 2207 L6378 2207" stroke-width="13" />
                   <path d="M1713 2387 L6378 2387" stroke-width="13" />
-                  <g id="yy0fab2" class="clef">
+                  <g id="w5pwwhp" class="clef">
                      <use xlink:href="#E050-moqsi69" transform="translate(1830, 2207) scale(0.72, 0.72)" />
                   </g>
-                  <g id="z1flr1a0" class="keySig" />
-                  <g id="asncqm6" class="meterSig">
+                  <g id="xktcouq" class="keySig" />
+                  <g id="y1hn5egu" class="meterSig">
                      <use xlink:href="#E08A-moqsi69" transform="translate(2511, 2027) scale(0.72, 0.72)" />
                   </g>
                   <g id="layer-L1F3N1" class="layer">
@@ -180,11 +180,11 @@
                   <path d="M1713 3533 L6378 3533" stroke-width="13" />
                   <path d="M1713 3713 L6378 3713" stroke-width="13" />
                   <path d="M1713 3893 L6378 3893" stroke-width="13" />
-                  <g id="bbv0fvd" class="clef">
+                  <g id="z1y3q34w" class="clef">
                      <use xlink:href="#E052-moqsi69" transform="translate(1830, 3713) scale(0.72, 0.72)" />
                   </g>
-                  <g id="cgwc5d2" class="keySig" />
-                  <g id="dd1y9u8" class="meterSig">
+                  <g id="aftclnl" class="keySig" />
+                  <g id="bv8bnj" class="meterSig">
                      <use xlink:href="#E08A-moqsi69" transform="translate(2511, 3533) scale(0.72, 0.72)" />
                   </g>
                   <g id="layer-L1F2N1" class="layer">
@@ -225,11 +225,11 @@
                   <path d="M1713 4824 L6378 4824" stroke-width="13" />
                   <path d="M1713 5004 L6378 5004" stroke-width="13" />
                   <path d="M1713 5184 L6378 5184" stroke-width="13" />
-                  <g id="e1faxbnp" class="clef">
+                  <g id="cc4umgc" class="clef">
                      <use xlink:href="#E062-moqsi69" transform="translate(1830, 4644) scale(0.72, 0.72)" />
                   </g>
-                  <g id="fos5mmp" class="keySig" />
-                  <g id="g1dgx8ct" class="meterSig">
+                  <g id="dfk71a5" class="keySig" />
+                  <g id="e10gzzdx" class="meterSig">
                      <use xlink:href="#E08A-moqsi69" transform="translate(2511, 4824) scale(0.72, 0.72)" />
                   </g>
                   <g id="layer-L1F1N1" class="layer">
@@ -287,7 +287,7 @@
                         <g id="accid-L27F4" class="accid" />
                      </g>
                      <g id="beam-L28F4-L29F4" class="beam">
-                        <polygon fill-opacity="1" points="7535,52 8036,97 8036,187 7535,142" />
+                        <polygon points="7535,52 8036,97 8036,187 7535,142" />
                         <g id="note-L28F4" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(7327, 637) scale(0.72, 0.72)" />
@@ -344,7 +344,7 @@
                         <g id="accid-L27F3" class="accid" />
                      </g>
                      <g id="beam-L28F3-L29F3" class="beam">
-                        <polygon fill-opacity="1" points="7535,1532 8036,1577 8036,1667 7535,1622" />
+                        <polygon points="7535,1532 8036,1577 8036,1667 7535,1622" />
                         <g id="note-L28F3" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(7327, 2207) scale(0.72, 0.72)" />
@@ -414,7 +414,7 @@
                         <g id="accid-L28F2" class="accid" />
                      </g>
                      <g id="beam-L30F2-L31F2" class="beam">
-                        <polygon fill-opacity="1" points="8198,3983 8604,4028 8604,3938 8198,3893" />
+                        <polygon points="8198,3983 8604,4028 8604,3938 8198,3893" />
                         <g id="note-L30F2" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(8198, 3263) scale(0.72, 0.72)" />
@@ -471,7 +471,7 @@
                         <g id="accid-L28F1" class="accid" />
                      </g>
                      <g id="beam-L30F1-L31F1" class="beam">
-                        <polygon fill-opacity="1" points="8406,4239 8812,4284 8812,4374 8406,4329" />
+                        <polygon points="8406,4239 8812,4284 8812,4374 8406,4329" />
                         <g id="note-L30F1" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(8198, 4914) scale(0.72, 0.72)" />
@@ -666,7 +666,7 @@
                         <g id="accid-L38F4" class="accid" />
                      </g>
                      <g id="beam-L40F4-L41F4" class="beam">
-                        <polygon fill-opacity="1" points="14977,1177 15382,1222 15382,1132 14977,1087" />
+                        <polygon points="14977,1177 15382,1222 15382,1132 14977,1087" />
                         <g id="note-L40F4" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(14977, 547) scale(0.72, 0.72)" />
@@ -804,7 +804,7 @@
                         <g id="accid-L37F1" class="accid" />
                      </g>
                      <g id="beam-L38F1-L39F1" class="beam">
-                        <polygon fill-opacity="1" points="14201,5274 14607,5319 14607,5229 14201,5184" />
+                        <polygon points="14201,5274 14607,5319 14607,5229 14201,5184" />
                         <g id="note-L38F1" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(14201, 4554) scale(0.72, 0.72)" />
@@ -909,7 +909,7 @@
                         <g id="accid-L44F3" class="accid" />
                      </g>
                      <g id="beam-L46F3-L47F3" class="beam">
-                        <polygon fill-opacity="1" points="17697,1802 18103,1847 18103,1937 17697,1892" />
+                        <polygon points="17697,1802 18103,1847 18103,1937 17697,1892" />
                         <g id="note-L46F3" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(17489, 2477) scale(0.72, 0.72)" />
@@ -948,7 +948,7 @@
                   <path d="M16540 3893 L20002 3893" stroke-width="13" />
                   <g id="layer-L43F2N1" class="layer">
                      <g id="beam-L44F2-L45F2" class="beam">
-                        <polygon fill-opacity="1" points="16714,4073 17119,4118 17119,4028 16714,3983" />
+                        <polygon points="16714,4073 17119,4118 17119,4028 16714,3983" />
                         <g id="note-L44F2" class="note">
                            <g class="notehead">
                               <use xlink:href="#E0A4-moqsi69" transform="translate(16714, 3443) scale(0.72, 0.72)" />
