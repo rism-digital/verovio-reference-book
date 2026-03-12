@@ -108,7 +108,7 @@ Verovio accommodates this complexity automatically by re-ordering the section st
 
 The elements referred to in the `expansion@plist` may themselves be expansion elements situated in descendent section elements. 
 
-The expansion structure of the above Minuet example could also be encoded in a hierarchical way, i.e., with separate sub-sections for Minuet and Trio, each hosting their own expansion element embedded, to which then the top-level expansion elements refer to (for the complete MEI encoding, see [Verovio test suite example-expansion-001-hierarchical](https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-001-hierarchical)):
+The expansion structure of the above Minuet example could also be encoded in a hierarchical way, i.e., with separate sub-sections for Minuet and Trio, each hosting their own expansion element embedded, to which then the top-level expansion elements refer to (for the complete MEI encoding, see [Verovio test suite example-expansion-003](https://www.verovio.org/test-suite.xhtml?cat=expansion#example-expansion-003)):
 
 ```xml
 <section xml:id="all">
