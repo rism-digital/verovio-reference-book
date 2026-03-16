@@ -5,3 +5,7 @@ _site
 vendor
 methods.yml
 verovio-reference-book.pdf
+.ruby-version
+.DS_Store
+scripts/tmp
+.idea

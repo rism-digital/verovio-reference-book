@@ -1,1 +1,1 @@
-{% include music-notation example=include.example without_mei="true" %}
+{% include music-notation example=include.example without_mei="true" class=include.class %}

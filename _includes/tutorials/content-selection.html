@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Select an excerpt of a score interactively</title>
+        <script src="https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js" defer></script>
+    </head>
+    <body>
+        <label>Select: </label>
+        <input id="start" type="text" placeholder="from..." />
+        <input id="end" type="text" placeholder="...to" />
+        <button id="applySelection">Apply</button>
+        <button id="prevPage">Previous page</button>
+        <button id="nextPage">Next page</button>
+        <div id="notation"></div>
+        <script>
+            /** 
+             Load Verovio
+            **/
+            document.addEventListener("DOMContentLoaded", (event) => {
+                verovio.module.onRuntimeInitialized = function () {
+                    // This line initializes the Verovio toolkit
+                    const tk = new verovio.toolkit();
+
+                    tk.setOptions({
+                        pageWidth: document.body.clientWidth,
+                        pageHeight: document.body.clientHeight,
+                        scale: 75,
+                        scaleToPageSize: true,
+                    });
+
+                    // Keep a variable to the notation div id
+                    let notationElement = document.getElementById("notation");
+
+                    // The current page, which will change when playing through the piece
+                    let currentPage = 1;
+
+                    /**
+                     The handler to apply the selection
+                    **/
+                    const applySelectionHandler = function () {
+                        let start = document.getElementById("start").value;
+                        if (start === '') start = "start";
+                        let end = document.getElementById("end").value;
+                        if (end === '') end = "end";
+                        let range = `${start}-${end}`;
+                        tk.select({measureRange: range});
+                        tk.redoLayout();
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                    }
+
+                    /**
+                        Wire up the button to actually work.
+                    */
+                    const nextPageHandler = function () {
+                        currentPage = Math.min(currentPage + 1, tk.getPageCount());
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                    }
+
+                    const prevPageHandler = function () {
+                        currentPage = Math.max(currentPage - 1, 1);
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                    }
+
+                    /**
+                        Wire up the buttons to actually work.
+                    */
+                    document.getElementById("nextPage").addEventListener("click", nextPageHandler);
+                    document.getElementById("prevPage").addEventListener("click", prevPageHandler);
+                    document.getElementById("applySelection").addEventListener("click", applySelectionHandler);
+
+                    // This line fetches the MEI file we want to render...
+                    fetch("https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei")
+                        // ... then receives the response and "unpacks" the MEI from it
+                        .then((response) => response.text())
+                        .then((meiXML) => {
+                            // ... then we can load the data into Verovio ...
+                            tk.loadData(meiXML);
+                            // ... and generate the SVG for the first page ...
+                            let svg = tk.renderToSVG(1);
+                            // ... and finally gets the <div> element with the ID we specified, 
+                            // and sets the content (innerHTML) to the SVG that we just generated.
+                            notationElement.innerHTML = svg;
+                        });
+                }
+            });
+        </script>
+    </body>
+</html>

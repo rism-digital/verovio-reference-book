@@ -1,0 +1,5 @@
+This section documents the methods available from the Verovio toolkit. The methods are public methods of the C++ `vrv::Toolkit` class. They are all available in the Python and JavaScript bindings, unless specified otherwise. For examples, all the methods reading a file or writing to a file are not available in the JavaScript version of the toolkit.
+
+The names of the methods is also indentical across the different versions of the toolkit except for the capitalisation. The original C++ method names are UpperCamelCased in C++ but lowerCamelCased in the Python and JavaScript bindings. This is only to make the bindings follow more idiomatic capitalisation.
+
+For the methods taking parameters as stringified JSON objects (or returning one), the objects are not stringified in the JavaScript version of the toolkit. That is, a JSON object is passed or returned as is. The same applied for the Python toolkit where the object is passed or returned as a Python dictionary.

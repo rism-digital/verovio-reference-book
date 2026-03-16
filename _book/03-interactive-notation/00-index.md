@@ -1,6 +1,8 @@
 ---
 chapter-title: "Tutorial 2: Interactive notation"
-title: "Introduction"
+link_to_section: true
+layout: redirect
+redirect_to: "css-and-svg.html"
 ---
 
 [in preparation]

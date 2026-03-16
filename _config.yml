@@ -1,9 +1,10 @@
-name: Reference book for Verovio
+title: Reference book for Verovio
 description: Everything you need to use the Verovio music notation engraving library
+repository: rism-digital/verovio-reference-book
 baseurl: ""
 exclude: ['scripts']
 
-verovio-version: 3.7
+verovio-version: "6.1"
 
 markdown: kramdown
 highlighter: rouge

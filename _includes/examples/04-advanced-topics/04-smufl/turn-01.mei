@@ -1,0 +1,5 @@
+<turn staff="1" startid="#ex_0026251991" form="lower"/>
+<turn staff="1" startid="#ex_1783472943" form="upper"/>
+<turn type="vertical" staff="1" startid="#ex_0290776165" glyph.auth="smufl" glyph.num="U+E56B" form="lower"/>
+<turn type="vertical" staff="1" startid="#ex_1264550794" glyph.auth="smufl" glyph.num="U+E56A" form="upper"/>
+<turn type="slashed" staff="1" startid="#ex_0939405248" glyph.auth="smufl" glyph.num="U+E569"/>

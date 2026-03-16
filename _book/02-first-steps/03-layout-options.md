@@ -8,7 +8,7 @@ To start, we will first try and reduce the size of the image output, to demonstr
 
 ### Passing options to Verovio
 
-Passing options to Verovio is as easy as creating a set of key and value pairs, and using the `setOptions` method on the toolkit. To scale the output we will use the `scale` option. Add the following to your page, after we have instantiated the toolkit but before we render the data:
+Passing options to Verovio is as easy as creating a set of key and value pairs, and using the `setOptions` method on the toolkit. To scale the output we will use the `scale` option given as percentage of the normal (100) output. Add the following to your page, after we have instantiated the toolkit but before we render the data:
 
 ```js
 tk.setOptions({
@@ -24,6 +24,8 @@ All of the options have default values. You can use the `getOptions` method to v
 
 ```js
 console.log("Verovio options:", tk.getOptions());
+// for the default values
+console.log("Verovio options:", tk.getDefaultOptions());
 ```
 
 When you refresh your page and open your browser's console you should see the text "Verovio options:" followed by a small disclosure triangle. Clicking this triangle will produce a long list of options that you can pass to `setOptions`. Let's try a few more.
@@ -53,10 +55,10 @@ In this section we have explored Verovio's default options, and looked at how to
 ```html
 <html>
   <head>
-    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+    <script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
-          Module.onRuntimeInitialized = async _ => {
+          verovio.module.onRuntimeInitialized = async _ => {
             let tk = new verovio.toolkit();
             console.log("Verovio has loaded!");
             tk.setOptions({
@@ -64,7 +66,6 @@ In this section we have explored Verovio's default options, and looked at how to
               landscape: true,
               adjustPageWidth: true
             });
-            tk.renderToSVG
             console.log("Verovio options:", tk.getOptions());
 
             fetch("https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei")

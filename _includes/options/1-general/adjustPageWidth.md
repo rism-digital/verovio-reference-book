@@ -1,0 +1,1 @@
+The option functions in a similar manner to `--adjust--page-height`.  It shrinks the width of the music in the case where there is only a single system of music, and the music does not completely fill the full width specified by `--page-width`.

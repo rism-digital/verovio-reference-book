@@ -135,6 +135,10 @@ Note that it will generate the documentation for the latest release of Verovio. 
 python scripts/generate-methods.py develop
 ```
 
+### Include extended documentation for specific methods
+
+Extended documentation for specific methods can be added in `./_includes/methods/`. The name of the file has to be the lower case method name togehter with the lower case parameter names (if any), separated with `-`. For example, `./_includes/methods/getelementattr-xmlid.md` provides extended documentation for `GetElementAttr(xmlId)`.
+
 ## Documenting options
 
 The option documentation is generated from the Verovio codebase. To update the documentation, you need to run:
@@ -146,7 +150,7 @@ Note that it will generate the option documentation for the Python version curre
 
 ### Include extended documentation for specific options
 
-Extended documentation for specific options can be added in `_includes/options/` directory. They need to be listed in the directory corresponding to their group and in the filename corresponding to the JSON option name. For example, `_include/options/0-base/version.md` provides extended documentation for the `--version` option.
+Extended documentation for specific options can be added in `_includes/options/` directory. They need to be listed in the directory corresponding to their group and in the filename corresponding to the JSON option name. For example, `./_includes/options/0-base/version.md` provides extended documentation for the `--version` option.
 
 Once added, the option documentation needs to be re-generated in order for the extended documentation to appear.
 

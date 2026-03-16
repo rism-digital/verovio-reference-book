@@ -1,0 +1,4 @@
+{% row option_row %}{% col 4 %} <span class="lang1">`"midiNoCue":  <boolean>`</span><span class="lang2">`--midi-no-cue `</span> {% endcol %}{% col 8 %} Skip cue notes in MIDI output {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"midiTempoAdjustment": <decimal>`</span><span class="lang2">`--midi-tempo-adjustment <decimal>`</span> {% endcol %}{% col 8 %} The MIDI tempo adjustment factor<br/>(default: 1.0; min: 0.2; max: 4.0) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"tuningFile": <string>`</span><span class="lang2">`--tuning-file <string>`</span> {% endcol %}{% col 8 %} A custom tuning definition or filepath to apply to the MIDI output<br/>(default: "") {% endcol %}
+{% endrow %}

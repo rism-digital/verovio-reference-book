@@ -1,0 +1,1 @@
+By default, Verovio loads a single `mdiv`. However, transposition applies to the entire file loaded, i.e., to all `mdiv` elements. By setting `--transpose-selected-only`, only the selected `mdiv` will be transposed. 

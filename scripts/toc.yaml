@@ -14,6 +14,10 @@
 "/introduction/licensing.html#what-is-required": What is required
 "/introduction/licensing.html#what-is-not-allowed": What is not allowed
 "/introduction/licensing.html#what-is-recommended": What is recommended
+"/introduction/examples.html": Example uses
+"/introduction/examples.html#resources-using-verovio": Resources using Verovio
+"/introduction/examples.html#digital-score-repositories-on-github": Digital score
+  repositories on Github
 "/first-steps/": Introduction
 "/first-steps/#basic-browser-skills": Basic browser skills
 "/first-steps/getting-started.html": Getting started
@@ -31,15 +35,57 @@
 "/first-steps/layout-options.html#end-of-section-3": End of Section 3
 "/first-steps/score-navigation.html": Score navigation
 "/first-steps/score-navigation.html#creating-the-controls": Creating the controls
-"/first-steps/npm-usage.html": Usage with npm
-"/interactive-notation/": Introduction
-"/interactive-notation/working-with-css-and-svg.html": Working with CSS and SVG
-"/interactive-notation/xpath-queries.html": XPath queries
-"/interactive-notation/working-with-midi.html": Working with MIDI
+"/interactive-notation/css-and-svg.html": CSS and SVG
+"/interactive-notation/css-and-svg.html#understanding-the-structure-of-the-svg": Understanding
+  the structure of the SVG
+"/interactive-notation/css-and-svg.html#applying-css-to-the-svg": Applying CSS to
+  the SVG
+"/interactive-notation/css-and-svg.html#adjusting-the-style-programmatically": Adjusting
+  the style programmatically
+"/interactive-notation/css-and-svg.html#full-example": Full example
+"/interactive-notation/encoding-formats.html": Encoding formats
+"/interactive-notation/encoding-formats.html#saving-as-mei": Saving as MEI
+"/interactive-notation/encoding-formats.html#compressed-musicxml": Compressed MusicXML
+"/interactive-notation/encoding-formats.html#wrapping-up": Wrapping up
+"/interactive-notation/encoding-formats.html#full-example": Full example
+"/interactive-notation/playing-midi.html": Playing the MIDI output
+"/interactive-notation/playing-midi.html#add-a-midi-player": Add a MIDI player
+"/interactive-notation/playing-midi.html#highlighting-the-notes-while-playing": Highlighting
+  the notes while playing
+"/interactive-notation/playing-midi.html#full-example": Full example
+"/interactive-notation/content-selection.html": Score content selection
+"/interactive-notation/content-selection.html#selecting-parts-of-a-score": Selecting
+  parts of a score
+"/interactive-notation/content-selection.html#full-example": Full example
+"/interactive-notation/editorial-markup.html": Interacting with editorial markup
+"/interactive-notation/editorial-markup.html#selection-with-an-xpath-query": Selection
+  with an xpath query
+"/interactive-notation/editorial-markup.html#switching-between-readings": Switching
+  between readings
+"/interactive-notation/editorial-markup.html#full-example": Full example
 "/advanced-topics/": Introduction
 "/advanced-topics/internal-structure.html": Internal structure
 "/advanced-topics/internal-structure.html#layout-and-positioning": Layout and positioning
 "/advanced-topics/internal-structure.html#svg-structure": SVG structure
+"/advanced-topics/controlling-the-svg-output.html": Controlling the SVG output
+"/advanced-topics/controlling-the-svg-output.html#units-and-page-dimensions": Units
+  and page dimensions
+"/advanced-topics/controlling-the-svg-output.html#scaling": Scaling
+"/advanced-topics/controlling-the-svg-output.html#svg-optimised-for-pdf-generation": SVG
+  optimised for PDF generation
+"/advanced-topics/layout-options.html": Layout options
+"/advanced-topics/layout-options.html#output-layout": Output layout
+"/advanced-topics/layout-options.html#content-spacing": Content spacing
+"/advanced-topics/layout-options.html#staff-and-system-spacing": Staff and system
+  spacing
+"/advanced-topics/layout-options.html#vertical-justification": Vertical justification
+"/advanced-topics/layout-options.html#generating-single-system-incipits": Generating
+  single-system incipits
+"/advanced-topics/smufl.html": SMuFL fonts
+"/advanced-topics/smufl.html#music-symbols-in-text": Music symbols in text
+"/advanced-topics/smufl.html#use-alternate-smufl-glyphs": Use alternate SMuFL glyphs
+"/advanced-topics/smufl.html#loading-all-fonts": Loading all fonts
+"/advanced-topics/smufl.html#custom-fonts": Custom fonts
 "/advanced-topics/transposition.html": Transposition
 "/advanced-topics/transposition.html#transposition-by-chromatic-interval": Transposition
   by chromatic interval
@@ -48,28 +94,30 @@
 "/advanced-topics/transposition.html#illustrated-examples": Illustrated examples
 "/advanced-topics/transposition.html#algorithm-for-transposition-by-tonic": Algorithm
   for transposition by tonic
-"/advanced-topics/smufl.html": SMuFL fonts
-"/advanced-topics/smufl.html#music-symbols-in-text": Music symbols in text
-"/advanced-topics/controlling-the-svg-output.html": Controlling the SVG output
-"/advanced-topics/controlling-the-svg-output.html#html5": HTML5
-"/advanced-topics/controlling-the-svg-output.html#towards-svg-20": Towards SVG 2.0
-"/advanced-topics/controlling-the-svg-output.html#converting-to-pdf": Converting to
-  PDF
 "/advanced-topics/mensural-notation.html": Mensural notation
 "/advanced-topics/mensural-notation.html#duration-alignment": Duration alignment
 "/advanced-topics/mensural-notation.html#layout": Layout
 "/advanced-topics/mensural-notation.html#ligatures": Ligatures
+"/advanced-topics/mensural-notation.html#alignment-with-cmn": Alignment with CMN
+"/advanced-topics/expansions.html": Repetition expansion
+"/advanced-topics/expansions.html#minuet-example": Minuet example
+"/advanced-topics/expansions.html#example-with-re-ordered-sections": Example with
+  re-ordered sections
+"/advanced-topics/expansions.html#hierarchical-expansion-structure": Hierarchical
+  expansion structure
 "/toolkit-reference/input-formats.html": Input formats
 "/toolkit-reference/input-formats.html#mei": MEI
 "/toolkit-reference/input-formats.html#humdrum": Humdrum
 "/toolkit-reference/input-formats.html#musicxml": MusicXML
 "/toolkit-reference/input-formats.html#plaine-and-easie": Plaine and Easie
 "/toolkit-reference/input-formats.html#abc": ABC
+"/toolkit-reference/input-formats.html#cmme": CMME
 "/toolkit-reference/output-formats.html": Output formats
 "/toolkit-reference/output-formats.html#svg": SVG
 "/toolkit-reference/output-formats.html#mei": MEI
 "/toolkit-reference/output-formats.html#midi": MIDI
 "/toolkit-reference/output-formats.html#timemap": Timemap
+"/toolkit-reference/output-formats.html#expansionmap": Expansionmap
 "/toolkit-reference/output-formats.html#plaine-and-easie": Plaine and Easie
 "/toolkit-reference/output-formats.html#humdrum": Humdrum
 "/toolkit-reference/toolkit-methods.html": Toolkit methods
@@ -79,6 +127,7 @@
 "/toolkit-reference/toolkit-methods.html#edit": Edit
 "/toolkit-reference/toolkit-methods.html#editinfo": EditInfo
 "/toolkit-reference/toolkit-methods.html#getavailableoptions": GetAvailableOptions
+"/toolkit-reference/toolkit-methods.html#getdefaultoptions": GetDefaultOptions
 "/toolkit-reference/toolkit-methods.html#getdescriptivefeatures": GetDescriptiveFeatures
 "/toolkit-reference/toolkit-methods.html#getelementattr": GetElementAttr
 "/toolkit-reference/toolkit-methods.html#getelementsattime": GetElementsAtTime
@@ -90,7 +139,7 @@
 "/toolkit-reference/toolkit-methods.html#getmei": GetMEI
 "/toolkit-reference/toolkit-methods.html#getmidivaluesforelement": GetMIDIValuesForElement
 "/toolkit-reference/toolkit-methods.html#getnotatedidforelement": GetNotatedIdForElement
-"/toolkit-reference/toolkit-methods.html#getoption": GetOption
+"/toolkit-reference/toolkit-methods.html#getoptionusagestring": GetOptionUsageString
 "/toolkit-reference/toolkit-methods.html#getoptions": GetOptions
 "/toolkit-reference/toolkit-methods.html#getpagecount": GetPageCount
 "/toolkit-reference/toolkit-methods.html#getpagewithelement": GetPageWithElement
@@ -103,9 +152,12 @@
 "/toolkit-reference/toolkit-methods.html#loadfile": LoadFile
 "/toolkit-reference/toolkit-methods.html#loadzipdatabase64": LoadZipDataBase64
 "/toolkit-reference/toolkit-methods.html#loadzipdatabuffer": LoadZipDataBuffer
+"/toolkit-reference/toolkit-methods.html#printoptionusage": PrintOptionUsage
 "/toolkit-reference/toolkit-methods.html#redolayout": RedoLayout
 "/toolkit-reference/toolkit-methods.html#redopagepitchposlayout": RedoPagePitchPosLayout
 "/toolkit-reference/toolkit-methods.html#renderdata": RenderData
+"/toolkit-reference/toolkit-methods.html#rendertoexpansionmap": RenderToExpansionMap
+"/toolkit-reference/toolkit-methods.html#rendertoexpansionmapfile": RenderToExpansionMapFile
 "/toolkit-reference/toolkit-methods.html#rendertomidi": RenderToMIDI
 "/toolkit-reference/toolkit-methods.html#rendertomidifile": RenderToMIDIFile
 "/toolkit-reference/toolkit-methods.html#rendertopae": RenderToPAE
@@ -119,7 +171,6 @@
 "/toolkit-reference/toolkit-methods.html#savefile": SaveFile
 "/toolkit-reference/toolkit-methods.html#select": Select
 "/toolkit-reference/toolkit-methods.html#setinputfrom": SetInputFrom
-"/toolkit-reference/toolkit-methods.html#setoption": SetOption
 "/toolkit-reference/toolkit-methods.html#setoptions": SetOptions
 "/toolkit-reference/toolkit-methods.html#setoutputto": SetOutputTo
 "/toolkit-reference/toolkit-methods.html#setresourcepath": SetResourcePath
@@ -135,35 +186,60 @@
 "/toolkit-reference/toolkit-options.html#element-selectors-and-processing": Element
   selectors and processing
 "/toolkit-reference/toolkit-options.html#element-margins": Element margins
+"/toolkit-reference/toolkit-options.html#midi-options": Midi options
+"/toolkit-reference/toolkit-options.html#mensural-options": Mensural options
 "/toolkit-reference/mei-support.html": MEI supported elements
+"/toolkit-reference/environment-functions.html": Environment functions
+"/toolkit-reference/environment-functions.html#setdefaultresourcepath": SetDefaultResourcePath
+"/toolkit-reference/environment-functions.html#enablelog": EnableLog
+"/toolkit-reference/environment-functions.html#enablelogtobuffer": EnableLogToBuffer
 "/installing-or-building-from-sources/command-line.html": Command-line version
-"/installing-or-building-from-sources/command-line.html#macos-or-linux": MacOS or
-  Linux
+"/installing-or-building-from-sources/command-line.html#homebrew-on-macos": Homebrew
+  on macOS
+"/installing-or-building-from-sources/command-line.html#building-on-macos-or-linux": Building
+  on macOS or Linux
 "/installing-or-building-from-sources/command-line.html#windows-10": Windows 10
 "/installing-or-building-from-sources/command-line.html#xcode": Xcode
 "/installing-or-building-from-sources/command-line.html#visual-studio": Visual Studio
+"/installing-or-building-from-sources/command-line.html#visual-studio-code": Visual
+  Studio Code
 "/installing-or-building-from-sources/javascript-and-webassembly.html": JavaScript
   and WebAssembly
 "/installing-or-building-from-sources/javascript-and-webassembly.html#pre-build-versions": Pre-build
   versions
-"/installing-or-building-from-sources/javascript-and-webassembly.html#basic-usage-of-the-toolkit": Basic
-  usage of the toolkit
+"/installing-or-building-from-sources/javascript-and-webassembly.html#npm": NPM
 "/installing-or-building-from-sources/javascript-and-webassembly.html#building-the-toolkit": Building
   the toolkit
 "/installing-or-building-from-sources/python.html": Python
 "/installing-or-building-from-sources/python.html#pre-build-versions": Pre-build versions
 "/installing-or-building-from-sources/python.html#basic-usage-of-the-toolkit": Basic
   usage of the toolkit
-"/installing-or-building-from-sources/python.html#building-the-toolkit": Building
-  the toolkit
-"/installing-or-building-from-sources/other-bindings.html": Other bindings
-"/installing-or-building-from-sources/other-bindings.html#java": Java
-"/installing-or-building-from-sources/other-bindings.html#cocoapods": CocoaPods
+"/installing-or-building-from-sources/python.html#building-the-toolkit-without-cmake": Building
+  the toolkit without CMake
+"/installing-or-building-from-sources/python.html#resources-for-versions-built-locally": Resources
+  for versions built locally
+"/installing-or-building-from-sources/java-and-android.html": Java and Android
+"/installing-or-building-from-sources/java-and-android.html#java": Java
+"/installing-or-building-from-sources/java-and-android.html#android": Android
+"/installing-or-building-from-sources/swift-and-objective-c.html": Swift and Objective-C
+"/installing-or-building-from-sources/swift-and-objective-c.html#swift": Swift
+"/installing-or-building-from-sources/swift-and-objective-c.html#objective-c-with-cocoapods": Objective-C
+  with CocoaPods
+"/installing-or-building-from-sources/library.html": Using as a library
+"/installing-or-building-from-sources/library.html#examples": Examples
+"/installing-or-building-from-sources/library.html#using-verovio-with-qt": Using Verovio
+  with Qt
+"/installing-or-building-from-sources/troubleshooting.html": Troubleshooting
+"/installing-or-building-from-sources/troubleshooting.html#c-compiler-error-on-macos": C-Compiler
+  error on macOS
 "/contributing/guidelines.html": Coding guidelines
 "/contributing/guidelines.html#formatting": Formatting
 "/contributing/guidelines.html#includes-and-forward-declarations": Includes and forward
   declarations
 "/contributing/guidelines.html#null-and-boolean": Null and boolean
+"/contributing/guidelines.html#integer-data-types": Integer data types
+"/contributing/guidelines.html#loop-variable-scope-and-increment": Loop variable scope
+  and increment
 "/contributing/guidelines.html#class-method-and-member-names": Class, method and member
   names
 "/contributing/guidelines.html#comments": Comments
@@ -173,7 +249,7 @@
   the test-suite
 "/contributing/workflow.html#what-to-expect-with-an-open-issue": What to expect with
   an open issue
-"/contributing/generate-code-with-libmei.html": Generate code with libMEI
-"/contributing/generate-code-with-libmei.html#running-libmei": Running LibMEI
+"/contributing/generate-code-with-libmei.html": Generate code with LibMEI
+"/contributing/generate-code-with-libmei.html#generating-libmei": Generating LibMEI
 "/contributing/generate-code-with-libmei.html#customization": Customization
 "/contributing/adding-smufl-glyphs.html": Adding SMuFL glyphs

@@ -9,7 +9,7 @@ You can start with the following HTML page:
 ```html
 <html>
   <head>
-    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+    <script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
   </head>
   <body>
     <h1>Hello Verovio!</h1>
@@ -61,7 +61,7 @@ At the end of this first section you should have a working web page, with a mess
 ```html
 <html>
   <head>
-    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+    <script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
           verovio.module.onRuntimeInitialized = () => {

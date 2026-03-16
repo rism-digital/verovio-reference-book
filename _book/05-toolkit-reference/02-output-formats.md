@@ -12,6 +12,12 @@ examples:
 
     - name: pae-01
       url: https://raw.githubusercontent.com/rism-digital/verovio/develop/doc/tests/pae/6_mixed/abbreviated_writing.pae
+
+    - name: expansionmap
+      test-suite: expansion/expansion-001.mei
+      # xpath: 
+        # - ".//mei:section[not(.//*[not(self::section or self::ending or self::rdg or self::lem)])]"
+        # - ".//mei:section"
 ---
 
 ### SVG
@@ -110,6 +116,8 @@ The MEI page-based model is not part of MEI. It was put in place for the develop
 
 Verovio provides a basic MIDI output feature that can be used from the command-line tool or from the JavaScript toolkit. The MIDI output can be written to a file for further processing or for building application with MIDI playback, including in online environments. However, since MIDI is not supported in web-browsers in a standard way, an additional player will be required in such cases.
 
+When a file is loaded in the toolkit only to render a MIDI file, then setting the `--breaks` option to `none` is more efficient because it will avoid the unecessary step of calculating the page layout of the document. The command-line version of the toolkit does this automatically.
+
 #### The MIDI output takes into account:
 
 * Tempo indication (`@midi.bpm`) provided in the first `scoreDef` and in `tempo` elements.
@@ -139,6 +147,16 @@ The timemap is an array of JSON objects, with each entry having these keys:
 * tempo: when the tempo changes the new tempo will be given for the current event. Also the tempo changes are only allowed to occur at the starts of measures in the current code for creating MIDI files, and this is the same limitation for the timemap file. The tempo and qstamp values can be used to re-calculate a new set of tstamp values if the tempo changes.
 * on: This is an array of note ids that start at the current event time. This list will not be given if there are no note ons at the current event.
 * off: This is an array of note ids that end at the current event time. This list will not be given if there are no note offs at the current event.
+
+When a file is loaded in the toolkit only to render the timemap file, then setting the `--breaks` option to `none` is more efficient because it will avoid the unecessary step of calculating the page layout of the document. The command-line version of the toolkit does this automatically.
+
+#### Usage
+
+With the command-line tool, for generating a timemap JSON with the default options, you need to do:
+
+```bash
+verovio -t timemap -o output.json input-file.mei
+```
 
 #### Examples
 
@@ -264,6 +282,113 @@ The timemap is an array of JSON objects, with each entry having these keys:
     ]
   }
 ]
+```
+
+### Expansionmap
+
+The expansionmap is a JSON object that is generated when the `xml:id` of an [expansion element](/advanced-topics/expansions.html) is passed to Verovio with the `--expand` option. The expansionmap represents the relationship between the original score parts and the repeated (expanded, unfolded) sections created through the expansion process. 
+
+While expanding, Verovio generates new, predictable `xml:id`s for all expanded elements (`section`, `ending`, `rdg`, `lem`), appending a `-rendX` to each `xml:id`, with `X` being the number of occurrences, starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurence (or the second repetition) of element `"A"`. 
+
+The keys in the expansionmap JSON object are the `xml:id`s of expanded elements in the score (both original and unfolded). The values contain lists of related (original and unfolded) elements, e.g. `["A", "A-rend2", "A-rend3"]`. The original score element (e.g., `"A"`) is always the first  value in the list.
+
+#### Usage
+
+To generate an expansionmap JSON with the default options on the command line:
+
+```bash
+verovio -t expansionmap --expand expansion-default -o output.json expansion-001.mei
+```
+
+<!-- Currently, Verovio adds `'-em'` to the expansionmap file, thus creating `output-em.json` in this example. -->
+
+#### Examples
+
+{% include music-notation-only example="expansionmap" %}
+
+```xml
+<section xml:id="all">
+  <expansion xml:id="expansion-default" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"/>
+  <expansion xml:id="expansion-minimal" plist="#A #A2 #B #B2 #A #A2"/>
+  <expansion xml:id="expansion-maximal" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A1 #A #A2"/>
+  <section xml:id="A"/>
+  <ending xml:id="A1" n="1."/>
+  <ending xml:id="A2" n="2."/>
+  <section xml:id="B"/>
+  <ending xml:id="B1" n="1."/>
+  <ending xml:id="B2" n="2."/>
+</section>
+```
+
+The beginning of the expansionmap from this example with the "default" expansion  
+```xml
+<expansion xml:id="expansion-default" plist="#A #A1 #A #A2 #B #B1 #B #B2 #A #A2"/>
+``` 
+looks like this:
+
+```json
+{
+        "A": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A-rend2": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A-rend3": [
+                "A",
+                "A-rend2",
+                "A-rend3" 
+        ],
+        "A2": [
+                "A2",
+                "A2-rend2" 
+        ],
+        "A2-rend2": [
+                "A2",
+                "A2-rend2" 
+        ],
+       "B": [
+                "B",
+                "B-rend2" 
+        ],
+        "B-rend2": [
+                "B",
+                "B-rend2" 
+        ],
+        "dbf3mxc": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+        "dbf3mxc-rend2": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+        "dbf3mxc-rend3": [
+                "dbf3mxc",
+                "dbf3mxc-rend2",
+                "dbf3mxc-rend3" 
+        ],
+       	"c1k0s711": [
+                "c1k0s711",
+                "c1k0s711-rend2",
+                "c1k0s711-rend3" 
+        ],
+        "c1k0s711-rend2": [
+                "c1k0s711",
+                "c1k0s711-rend2",
+                "c1k0s711-rend3" 
+        ],
+        "c1k0s711-rend3": [
+                "c1k0s711",
+                "c1k0s711-rend2",
+                "c1k0s711-rend3" 
+        ],
 ```
 
 ### Plaine and Easie

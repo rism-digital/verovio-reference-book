@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Interacting with editorial markup</title>
+        <!-- A stylesheet for modifying the appearance of the editorial markup -->
+        <link href="editorial-markup.css" rel="stylesheet" type="text/css" />
+        <!-- Verovio -->
+        <script src="https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js" defer></script>
+    </head>
+    <body>
+        <button id="original">Original</button>
+        <button id="contrafactum">Contrafactum</button>
+        <button id="prevPage">Previous page</button>
+        <button id="nextPage">Next page</button>
+        <div id="notation"></div>
+        <script>
+            /** 
+             Load Verovio
+            **/
+            document.addEventListener("DOMContentLoaded", (event) => {
+            verovio.module.onRuntimeInitialized = function () {
+                // This line initializes the Verovio toolkit
+                const tk = new verovio.toolkit();
+
+                // An array to keep xpath queries for selecting editorial markup
+                let appXPath = [];
+
+                // Keep a variable to the notation div id
+                let notationElement = document.getElementById("notation");
+
+                // A function that loads the file
+                function loadFile() {
+
+                    fetch("https://raw.githubusercontent.com/marenzio/marenzio.github.io/master/mei/M-04-6/M_04_6_02_Di_nettare_amoroso_ebro_la_mente.mei")
+                        // ... then receives the response and "unpacks" the MEI from it
+                        .then((response) => response.text())
+                        .then((meiXML) => {
+                        // First we set the options, including the appXPathQuery one
+                        tk.setOptions({
+                            pageWidth: document.body.clientWidth,
+                            pageHeight: document.body.clientHeight,
+                            scale: 50,
+                            scaleToPageSize: true,
+                            appXPathQuery: appXPath
+                        });
+                        // ... then we can load the data into Verovio ...
+                        tk.loadData(meiXML);
+                        // ... and generate and set the SVG for the current page ...
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                        });
+                    }
+
+                    // The current page, which will change when playing through the piece
+                    let currentPage = 1;
+
+                    /**
+                        Wire up the button to actually work.
+                    */
+                    const nextPageHandler = function () {
+                        currentPage = Math.min(currentPage + 1, tk.getPageCount());
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                    }
+
+                    const prevPageHandler = function () {
+                        currentPage = Math.max(currentPage - 1, 1);
+                        notationElement.innerHTML = tk.renderToSVG(currentPage);
+                    }
+
+                    const originalHandler = function () {
+                        appXPath = [];
+                        loadFile();
+                    }
+
+                    const contrafactumHandler = function () {
+                        appXPath = ["./rdg[@source='English']"];
+                        loadFile();
+                    }
+
+                    /**
+                        Wire up the buttons to actually work.
+                    */
+                    document.getElementById("nextPage").addEventListener("click", nextPageHandler);
+                    document.getElementById("prevPage").addEventListener("click", prevPageHandler);
+                    document.getElementById("original").addEventListener("click", originalHandler);
+                    document.getElementById("contrafactum").addEventListener("click", contrafactumHandler);
+
+                    // This line fetches the MEI file we want to render...
+                    loadFile();
+                }
+            });
+        </script>
+    </body>
+</html>

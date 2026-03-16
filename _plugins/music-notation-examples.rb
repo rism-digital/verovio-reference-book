@@ -35,8 +35,8 @@ module Jekyll
             # The flags set here are to inform the _include/music-notation template not to actually include them
             puts svgExamples + svgFile
             puts meiExamples + meiFile
-            example['svg-example-exists'] = true unless (!File.exists?(svgExamples + svgFile))
-            example['mei-example-exists'] = true unless (!File.exists?(meiExamples + meiFile))
+            example['svg-example-exists'] = true unless (!File.exist?(svgExamples + svgFile))
+            example['mei-example-exists'] = true unless (!File.exist?(meiExamples + meiFile))
           end
         end
       end

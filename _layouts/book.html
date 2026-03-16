@@ -8,10 +8,13 @@ layout: default
 
 <div class="row">
     <div class="col-md-3 sidebar-offcanvas" id="sidebar">
-        {% include sidebar-chapters.html %}
+        <div class="toc-group">
+            {% include sidebar-chapters.html %}
+            {% include sidebar-search.html %}
+        </div>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-9" id="content">
         {% unless page.no-edit %}
         <a class="hidden-print" href="{{ site.edit-path}}/{{ page.path }}"><button class="btn btn-xs pull-right">Edit this page</button></a>
         {% endunless %}
@@ -20,6 +23,8 @@ layout: default
         {{ content }}
     </div>
 </div>
+
+<script src="/js/highlighter.js"></script>
 
 <script>
     let options = {
@@ -80,5 +85,28 @@ layout: default
         });
 
     });
+
+    let params = new URLSearchParams( document.location.search.substring( 1 ) );
+    if ( params.get( "q" ) )
+    {
+        let query = params.get( "q" );
+        // Also make sure we preserve the query term in the form in the sidebar
+        document.getElementById("website-search").value = query;
+        // Preserve the original query for logging
+        let query_term = query;
+        // Remove quotes and trim
+        query = query.replace(/\'|\"/g, ' ');
+        query = query.trim();
+        // Make it an AND query
+        console.log(query);
+
+        let terms = query.split(' ');
+        var container = document.getElementById("content");
+
+        for (var i = 0; i < terms.length; i++) {
+            InstantSearch.highlight(container, terms[i]);
+        }
+    }
+
 </script>
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Convert compressed MusicXML</title>
+        <script src="https://www.verovio.org/javascript/develop/verovio-toolkit-wasm.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    </head>
+    <body>
+        <button id="saveMEI">Save my MEI!</button>
+        <div id="notation"></div>
+        <script>
+            /** 
+                We need to wait for the whole page to load before we try to 
+                work with Verovio.
+            **/
+            document.addEventListener("DOMContentLoaded", (event) => {
+                verovio.module.onRuntimeInitialized = function () {
+                    // This line initializes the Verovio toolkit
+                    const tk = new verovio.toolkit();
+
+                    document.getElementById("saveMEI").addEventListener("click", (event) => {
+                        let meiContent = tk.getMEI();
+                        var myBlob = new Blob([meiContent], {type: "application/xml"});
+                        saveAs(myBlob, "meifile.mei");
+                    });
+
+                    fetch("https://www.verovio.org/examples/musicxml/Schubert_Staendchen_D.923.mxl")
+                        .then((response) => response.arrayBuffer())
+                        .then((mxlData) => {
+                            tk.loadZipDataBuffer(mxlData);
+                            let svg = tk.renderToSVG(1);
+                            document.getElementById("notation").innerHTML = svg;
+                        }).catch(e => {
+                            console.log("An error occurred when loading the file!");
+                            console.log(e);
+                        });
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -292,20 +292,20 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<beatRpt rend="4"/>
-<beatRpt rend="8"/>
-<beatRpt rend="16"/>
-<beatRpt form="4"/>
+<beatRpt rend="4" />
+<beatRpt rend="8" />
+<beatRpt rend="16" />
+<beatRpt form="4" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<beatRpt slash="1"/>
-<beatRpt slash="1"/>
-<beatRpt slash="2"/>
-<beatRpt slash="1"/>
+<beatRpt slash="1" />
+<beatRpt slash="1" />
+<beatRpt slash="2" />
+<beatRpt slash="1" />
 ```
 
 {% endcol %}{% endrow %}
@@ -314,14 +314,14 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<fTrem slash="2"/>
+<fTrem slash="2" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<fTrem beams="2"/>
+<fTrem beams="2" />
 ```
 
 {% endcol %}{% endrow %}
@@ -330,14 +330,14 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<instrDef midi.volume="111"/>
+<instrDef midi.volume="111" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<instrDef midi.volume="87.40%"/>
+<instrDef midi.volume="87.40%" />
 ```
 
 {% endcol %}{% endrow %}
@@ -346,16 +346,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<mordent form="inv"/>
-<mordent form="norm"/>
+<mordent form="inv" />
+<mordent form="norm" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<mordent form="upper"/>
-<mordent form="lower"/>
+<mordent form="upper" />
+<mordent form="lower" />
 ```
 
 {% endcol %}{% endrow %}
@@ -364,16 +364,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<turn form="inv"/>
-<turn form="norm"/>
+<turn form="inv" />
+<turn form="norm" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<turn form="lower"/>
-<turn form="upper"/>
+<turn form="lower" />
+<turn form="upper" />
 ```
 
 {% endcol %}{% endrow %}
@@ -382,14 +382,14 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<staff barthru="true"/>
+<staff barthru="true" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<staff bar.thru="true"/>
+<staff bar.thru="true" />
 ```
 
 {% endcol %}{% endrow %}
@@ -398,7 +398,7 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<staffDef label="violin I" label.abbr="vl I"/>
+<staffDef label="violin I" label.abbr="vl I" />
 ```
 
 {% endcol %}{% col %}
@@ -417,18 +417,18 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<note dur.ges="8p"/>
-<note dur.ges="32r"/>
-<note dur.ges="32s"/>
+<note dur.ges="8p" />
+<note dur.ges="32r" />
+<note dur.ges="32s" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<note dur.ppq="8"/>
-<note dur.recip="32"/>
-<note dur.real="32"/>
+<note dur.ppq="8" />
+<note dur.recip="32" />
+<note dur.real="32" />
 ```
 
 {% endcol %}{% endrow %}
@@ -444,16 +444,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<mensur tempus="3"/>
-<mensur tempus="2"/>
+<mensur tempus="3" />
+<mensur tempus="2" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<mensur tempus="3" sign="0"/>
-<mensur tempus="2" sign="C"/>
+<mensur tempus="3" sign="O" />
+<mensur tempus="2" sign="C" />
 ```
 
 {% endcol %}{% endrow %}
@@ -462,16 +462,16 @@ The following elements / attributes are upgraded:
 *Original data*
 
 ```xml
-<mensur prolatio="3"/>
-<mensur prolatio="2"/>
+<mensur prolatio="3" />
+<mensur prolatio="2" />
 ```
 
 {% endcol %}{% col %}
 *Upgraded data*
 
 ```xml
-<mensur prolatio="3" dot="true"/>
-<mensur prolatio="2" dot="false"/>
+<mensur prolatio="3" dot="true" />
+<mensur prolatio="2" dot="false" />
 ```
 
 {% endcol %}{% endrow %}
@@ -579,7 +579,22 @@ Verovio has two converters for importing MusicXML data. The first one directly c
 
 #### Compressed MusicXML files
 
-Verovio supports MusicXML compressed (MXL) files. It only loads basic single-file MusicXML MXL files containing the index file (`META-INF/container.xml`) and the MusicXML file, with the extension `.xml`. The input process searches for the `META-INF/container.xml` file from which the filename of the MusicXML file is extracted. The filename extracted is the first `./rootfile@full-path` listed in `/container/rootfiles`. Input of MXL files is auto detected and the `xml` value does not have to be passed to  `--input-format`.
+Verovio supports MusicXML compressed (MXL) files. It only loads basic single-file MusicXML MXL files containing the index file (`META-INF/container.xml`) and the MusicXML file, with the extension `.xml`. The input process searches for the `META-INF/container.xml` file from which the filename of the MusicXML file is extracted. The filename extracted is the first `./rootfile@full-path` listed in `/container/rootfiles`. 
+
+Input of MXL files is auto detected and the `xml` value does not have to be passed to  `--input-format`. However, when using the JavaScript toolkit, you need to make sure your data is an `ArrayBuffer` or a base64 string, and use `loadZipDataBuffer()` or `loadZipDataBase64()` respectively to load it instead `loadData()`. Here is an example using the JavaScript Fetch API, loading the file as an `ArrayBuffer`:
+
+```js
+fetch( mxlUrl )
+    .then( response => response.arrayBuffer() )
+    .then( data =>
+    {
+        vrvToolkit.loadZipDataBuffer( data )
+        // Do anything else you want with the file here
+    } ).catch( e =>
+    {
+        console.log( e );
+    } );
+```
 
 #### Importing MusicXML via Humdrum
 
@@ -866,8 +881,48 @@ Verovio correctly differentiates between ties and slurs.
 
 #### Known limitations:
 
-* Verovio imports only the first tune in a collection
 * Tuplets are not supported
 * User defined symbols are not supported
 * Multi-voice music is not supported
-* Lyrics are not supported yet
+
+### CMME
+
+The CMME format is an XML-based format developped for the [Computerized Mensural Music Editing](https://www.cmme.org) project. It can be imported into Verovio as of version 4.4. CMME files can be imported with `-f cmme.xml` but are also auto-detected.
+
+A CMME file is imported as an MEI mensural file with one single `mdiv/score`. Sections in CMME are imported as distinct `section` elements within the `score`.
+
+Everything in imported as `mensural` notation, including sections marked as `Plainchant` in CMME since there is no difference in the way the music is encoded in those sections. Where there is less voices in a section than in the rest of the score, empty and invisible staff elements `<staff visibility="false"/>` are added to the section.
+
+The initial `staffDef` elements have no `@clef.*` and no `@keyisg` and these are given in the `layer` instead. Every `staffDef` contains a `mensur` indicating that all level of divisions are binary by default.
+
+#### MEI header
+
+The `GeneralData` element of the CMME file is used to populate the MEI header. It uses:
+* The `Title` as `title`
+* The `Section` as `title@type="subordinate"`
+* The `Composer` as `composer`
+
+#### Durations
+
+The CMME import forces the use of the `--duration-equivalence` option to `minima` when importing a CMME file. A warning is shown if the option was previously different - which is the case by default. This could potentially have side effects for subsequent calls since it is not set back to its original value.
+
+#### Proportions
+
+Proportions in CMME can be encoded as `Proportion` element, or as `TempoChange` within `Mensuration`. Encoding a proportion as a tempo change is arguably not the proper way to do it, but as a matter of fact, it is a used practice the importer needs to deal with. The importer tries to disentangle proportions and tempo changes. One complication is that proportions and tempo changes in CMME act differently. Proportions are cumulated with the previous ones, whereas tempo changes are not.
+
+Ideally proportions encoded in a mensur indications that are actual tempo changes should be ignored in the conversion because they do not represent a proportion in the notation. Furthermore, when converting the imported data to CMN, this will yield measure content that hardly makes sense since tuplets will be used to represent the proportions. However, when a proportion encoded in a mensur indication is a real proportion, it must be taken into account and preserved. 
+
+The importer ignores, if possible, the proportions inserted in the mensuration signs indicating a tempo change. This is done on the basis of the presence of an identical proportion for all voices. When tempo change proportions are occurring at all voices and with an identical `Num` and `Den`, they are preserved as an MEI `proportion` with a `@type="cmme_tempo_change"`. Verovio ignores when performing that alignment of the data, including when converting to CMN.
+
+
+When the proportion is not identical in all voices, it has to be preserved and taken into account for the alignment of the data. We can here distinguish two cases. The first is when the tempo change does not occur in all voices. In this case, it quite likely corresponds to a true proportion. It is preserved as an MEI `proportion` but with a `@type="reset"` to indicate that it should not be cumulated with a previous one - which is the default behavior of Verovio.
+
+The second case is where all voices have a proportion, but it differs. In this case, there is no straightforward way of knowing which proportion is a tempo change, and which is a mixture of the two. The conversion will maintained an MEI `proportion` with `@type="reset"` at all voices. Even though the conversion result will be properly aligned in mensural MEI, it will yield a combination of corresponding tuplets when converted into CMN that will not be fully satisfactory. The best thing to do would be to correct the CMME files and to remove the tempo changes, or to separate the proportions and the tempo changes.
+
+Finally, a CMME `Proportion` will converted to MEI `proportion` with no `@type`, impliying that the proportion has to be cumulated with a previous one.
+
+#### Coloration and color change
+
+Coloration in CMME is encoded with `Colored` on `Note`, and is converted to MEI `@colored` . 
+
+The CMME `ColorChange` (i.e., the change of the color of the ink) is converted by applying the color (non-black) to `note@color` and `rest@color`. The possible colors are `black` (assumed to be the default and not encoded), `red`, `yellow`, `green` or `blue`.

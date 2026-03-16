@@ -4,6 +4,8 @@ no-edit: true
 # This file is auto-generated - do not edit
 ---
 
+{% include method-doc file="introduction" %}
+
 ### ConvertHumdrumToHumdrum
 
 Filter Humdrum data.
@@ -90,7 +92,7 @@ result = toolkit.convertMEIToHumdrum(meiData)
 {% include method-doc file="convertmeitohumdrum-meidata" %}
 ### Edit
 
-Edit the MEI data.
+Edit the MEI data - experimental code not to rely on.
 
 **Returns**
 
@@ -118,7 +120,7 @@ result = toolkit.edit(editorAction)
 {% include method-doc file="edit-editoraction" %}
 ### EditInfo
 
-Return the editor status.
+Return the editor status - experimental code not to rely on.
 
 **Returns**
 
@@ -141,7 +143,7 @@ result = toolkit.editInfo()
 
 Return all available options grouped by category.
 
-For each option, returns the type, the default value, and the minimum and maximum value (when available)
+For each option, returns the type, the default value, and the minimum and maximum value (when available).
 
 **Returns**
 
@@ -160,11 +162,32 @@ result = toolkit.getAvailableOptions()
 ```
 
 {% include method-doc file="getavailableoptions" %}
+### GetDefaultOptions
+
+Return a dictionary of all the options with their default value.
+
+**Returns**
+
+`std::string` – A stringified JSON object
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::GetDefaultOptions() const
+```
+
+**Example call**
+
+```python
+result = toolkit.getDefaultOptions()
+```
+
+{% include method-doc file="getdefaultoptions" %}
 ### GetDescriptiveFeatures
 
 Return descriptive features as a JSON string.
 
-The features are tailored for implementing incipit search
+The features are tailored for implementing incipit search.
 
 **Returns**
 
@@ -174,27 +197,27 @@ The features are tailored for implementing incipit search
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `options` | `const std::string &` | ∅ | A stringified JSON object with the feature extraction options |
+| `jsonOptions` | `const std::string &` | ∅ | A stringified JSON object with the feature extraction options |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetDescriptiveFeatures(const std::string &options)
+std::string vrv::Toolkit::GetDescriptiveFeatures(const std::string &jsonOptions)
 ```
 
 **Example call**
 
 ```python
-result = toolkit.getDescriptiveFeatures(options)
+result = toolkit.getDescriptiveFeatures(jsonOptions)
 ```
 
-{% include method-doc file="getdescriptivefeatures-options" %}
+{% include method-doc file="getdescriptivefeatures-jsonoptions" %}
 ### GetElementAttr
 
 Return element attributes as a JSON string.
 
-The attributes returned include the ones not supported by Verovio
+The attributes returned include the ones not supported by Verovio.
 
 **Returns**
 
@@ -204,7 +227,7 @@ The attributes returned include the ones not supported by Verovio
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -222,7 +245,7 @@ result = toolkit.getElementAttr(xmlId)
 {% include method-doc file="getelementattr-xmlid" %}
 ### GetElementsAtTime
 
-Returns array of IDs of elements being currently played.
+Return array of IDs of elements being currently played.
 
 **Returns**
 
@@ -250,7 +273,7 @@ result = toolkit.getElementsAtTime(millisec)
 {% include method-doc file="getelementsattime-millisec" %}
 ### GetExpansionIdsForElement
 
-Returns a vector of ID strings of all elements (the notated and the expanded) for a given element.
+Return a vector of ID strings of all elements (the notated and the expanded) for a given element.
 
 **Returns**
 
@@ -260,7 +283,7 @@ Returns a vector of ID strings of all elements (the notated and the expanded) fo
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -305,13 +328,13 @@ Write the humdrum buffer to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -354,8 +377,6 @@ result = toolkit.getID()
 
 Get the log content for the latest operation.
 
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
-
 **Returns**
 
 `std::string` – The log content as a string
@@ -385,7 +406,7 @@ Get the MEI as a string.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `jsonOptions` | `const std::string &` | `""` | A stringified JSON object with the output options pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; removeIds: true or false; false by default - remove all @xml:id not used in the data; |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON object with the output options; pageNo: integer; (1-based), all pages if none (or 0) specified; scoreBased: true or false; true by default; basic: true or false; false by default; removeIds: true or false; false by default - remove all @xml:id not used in the data; |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -403,9 +424,9 @@ result = toolkit.getMEI(jsonOptions)
 {% include method-doc file="getmei-jsonoptions" %}
 ### GetMIDIValuesForElement
 
-Return MIDI values of the element with the ID (xml:id)
+Return MIDI values of the element with the ID (@xml:id)
 
-RenderToMIDI() must be called prior to using this method
+RenderToMIDI() must be called prior to using this method.
 
 **Returns**
 
@@ -415,7 +436,7 @@ RenderToMIDI() must be called prior to using this method
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -433,17 +454,17 @@ result = toolkit.getMIDIValuesForElement(xmlId)
 {% include method-doc file="getmidivaluesforelement-xmlid" %}
 ### GetNotatedIdForElement
 
-Returns the ID string of the notated (the original) element.
+Return the ID string of the notated (the original) element.
 
 **Returns**
 
-`std::string` – A stringified JSON object with all IDs
+`std::string` – An ID string
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -459,72 +480,53 @@ result = toolkit.getNotatedIdForElement(xmlId)
 ```
 
 {% include method-doc file="getnotatedidforelement-xmlid" %}
-### GetOption
+### GetOptionUsageString
 
-Get the value for an option.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+Get all usage for all option categories as string.
 
 **Returns**
 
-`std::string` – The option value as a string
-
-**Parameters**
-
-|---|---|---|
-| Name | Type | Default | Description |
-| `option` | `const std::string &` | ∅ | The name of the option |
-| `defaultValue` | `bool` | `false` | True to get the default value of the option |
-{: .table .table-condensed .table-sm .text-xsmall}
+`std::string`
 
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetOption(const std::string &option, bool defaultValue=false) const
+std::string vrv::Toolkit::GetOptionUsageString() const
 ```
 
 **Example call**
 
 ```python
-result = toolkit.getOption(option, defaultValue)
+result = toolkit.getOptionUsageString()
 ```
 
-{% include method-doc file="getoption-option-defaultvalue" %}
+{% include method-doc file="getoptionusagestring" %}
 ### GetOptions
 
-Return a dictionary of all the options.
+Return a dictionary of all the options with their current value.
 
 **Returns**
 
 `std::string` – A stringified JSON object
 
-**Parameters**
-
-|---|---|---|
-| Name | Type | Default | Description |
-| `defaultValues` | `bool` | ∅ | True for getting the default values and false for the current values |
-{: .table .table-condensed .table-sm .text-xsmall}
-
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetOptions(bool defaultValues) const
+std::string vrv::Toolkit::GetOptions() const
 ```
 
 **Example call**
 
 ```python
-result = toolkit.getOptions(defaultValues)
+result = toolkit.getOptions()
 ```
 
-{% include method-doc file="getoptions-defaultvalues" %}
+{% include method-doc file="getoptions" %}
 ### GetPageCount
 
 Return the number of pages in the loaded document.
 
 The number of pages depends one the page size and if encoded layout was taken into account or not.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -545,7 +547,7 @@ result = toolkit.getPageCount()
 {% include method-doc file="getpagecount" %}
 ### GetPageWithElement
 
-Return the page on which the element is the ID (xml:id) is rendered.
+Return the page on which the element is the ID (@xml:id) is rendered.
 
 This takes into account the current layout options.
 
@@ -557,7 +559,7 @@ This takes into account the current layout options.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -621,7 +623,7 @@ result = toolkit.getScale()
 {% include method-doc file="getscale" %}
 ### GetTimeForElement
 
-Return the time at which the element is the ID (xml:id) is played.
+Return the time at which the element is the ID (@xml:id) is played.
 
 RenderToMIDI() must be called prior to using this method.
 
@@ -633,7 +635,7 @@ RenderToMIDI() must be called prior to using this method.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -663,7 +665,7 @@ Return scoreTimeOnset, scoreTimeOffset, scoreTimeTiedDuration, realTimeOnsetMill
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `xmlId` | `const std::string &` | ∅ | the ID (xml:id) of the element being looked for |
+| `xmlId` | `const std::string &` | ∅ | the ID (@xml:id) of the element being looked for |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -683,8 +685,6 @@ result = toolkit.getTimesForElement(xmlId)
 
 Return the version number.
 
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
-
 **Returns**
 
 `std::string` – the version number as a string
@@ -692,7 +692,7 @@ Return the version number.
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::GetVersion()
+std::string vrv::Toolkit::GetVersion() const
 ```
 
 **Example call**
@@ -707,8 +707,6 @@ result = toolkit.getVersion()
 Load a string data with the type previously specified in the options.
 
 By default, the methods try to auto-detect the type.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -770,8 +768,6 @@ result = toolkit.loadFile(filename)
 
 Load a MusicXML compressed file passed as base64 encoded string.
 
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
-
 **Returns**
 
 `bool` – True if the data was successfully loaded
@@ -800,8 +796,6 @@ result = toolkit.loadZipDataBase64(data)
 
 Load a MusicXML compressed file passed as a buffer of bytes.
 
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
-
 **Returns**
 
 `bool` – True if the data was successfully loaded
@@ -827,6 +821,35 @@ result = toolkit.loadZipDataBuffer(data, length)
 ```
 
 {% include method-doc file="loadzipdatabuffer-data-length" %}
+### PrintOptionUsage
+
+Print formatted option usage for specific category (with max/min/default values) to output stream.
+
+**Returns**
+
+`void`
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `category` | `const std::string &` | ∅ |  |
+| `output` | `std::ostream &` | ∅ |  |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+void vrv::Toolkit::PrintOptionUsage(const std::string &category, std::ostream &output) const
+```
+
+**Example call**
+
+```python
+toolkit.printOptionUsage(category, output)
+```
+
+{% include method-doc file="printoptionusage-category-output" %}
 ### RedoLayout
 
 Redo the layout of the loaded data.
@@ -911,6 +934,57 @@ result = toolkit.renderData(data, jsonOptions)
 ```
 
 {% include method-doc file="renderdata-data-jsonoptions" %}
+### RenderToExpansionMap
+
+Render a document's expansionMap, if existing.
+
+**Returns**
+
+`std::string` – The expansionMap as a string
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::RenderToExpansionMap()
+```
+
+**Example call**
+
+```python
+result = toolkit.renderToExpansionMap()
+```
+
+{% include method-doc file="rendertoexpansionmap" %}
+### RenderToExpansionMapFile
+
+Render a document's expansionMap and save it to a file.
+
+{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+
+**Returns**
+
+`bool`
+
+**Parameters**
+
+|---|---|---|
+| Name | Type | Default | Description |
+| `filename` | `const std::string &` | ∅ | The output filename |
+{: .table .table-condensed .table-sm .text-xsmall}
+
+**Original header**
+
+```cpp
+bool vrv::Toolkit::RenderToExpansionMapFile(const std::string &filename)
+```
+
+**Example call**
+
+```python
+result = toolkit.renderToExpansionMapFile(filename)
+```
+
+{% include method-doc file="rendertoexpansionmapfile-filename" %}
 ### RenderToMIDI
 
 Render the document to MIDI.
@@ -940,13 +1014,13 @@ Render a document to MIDI and save it to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -964,7 +1038,7 @@ result = toolkit.renderToMIDIFile(filename)
 {% include method-doc file="rendertomidifile-filename" %}
 ### RenderToPAE
 
-Render a document to Plaine and Easie.
+Render a document to Plaine & Easie code.
 
 Only the top staff / layer is exported.
 
@@ -987,7 +1061,7 @@ result = toolkit.renderToPAE()
 {% include method-doc file="rendertopae" %}
 ### RenderToPAEFile
 
-Render a document to Plaine and Easie and save it to the file.
+Render a document to Plaine & Easie code and save it to the file.
 
 Only the top staff / layer is exported.
 
@@ -995,13 +1069,13 @@ Only the top staff / layer is exported.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1054,14 +1128,14 @@ Render a page to SVG and save it to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
-| `pageNo` | `int` | `1` |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
+| `pageNo` | `int` | `1` | The page to render (1-based) |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1083,13 +1157,13 @@ Render a document to a timemap.
 
 **Returns**
 
-`std::string`
+`std::string` – The timemap as a string
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `jsonOptions` | `const std::string &` | `""` |  |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON objects with the timemap options |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1113,14 +1187,14 @@ Render a document to timemap and save it to the file.
 
 **Returns**
 
-`bool`
+`bool` – True if the file was successfully written
 
 **Parameters**
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `filename` | `const std::string &` | ∅ |  |
-| `jsonOptions` | `const std::string &` | `""` |  |
+| `filename` | `const std::string &` | ∅ | The output filename |
+| `jsonOptions` | `const std::string &` | `""` | A stringified JSON objects with the timemap options |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1159,11 +1233,9 @@ toolkit.resetOptions()
 {% include method-doc file="resetoptions" %}
 ### ResetXmlIdSeed
 
-Reset the @xml:id seed.
+Reset the seed used to generate MEI @xml:id attribute values.
 
-Passing 0 will seed the xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
+Passing 0 will seed the @xml:id generator with a random (time-based) seed value. This method will have no effect if the xml-id-checksum option is set.
 
 **Returns**
 
@@ -1173,7 +1245,7 @@ Passing 0 will seed the xml:id generator with a random (time-based) seed value. 
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `seed` | `int` | ∅ | The seed value for generating the xml:id values (0 for a time-based random seed) |
+| `seed` | `int` | ∅ | The seed value for generating the @xml:id values (0 for a time-based random seed) |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1280,37 +1352,6 @@ result = toolkit.setInputFrom(inputFrom)
 ```
 
 {% include method-doc file="setinputfrom-inputfrom" %}
-### SetOption
-
-Set the value for an option.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
-
-**Returns**
-
-`bool` – True if the option was successfully set
-
-**Parameters**
-
-|---|---|---|
-| Name | Type | Default | Description |
-| `option` | `const std::string &` | ∅ | The name of the option |
-| `value` | `const std::string &` | ∅ | The option value as string |
-{: .table .table-condensed .table-sm .text-xsmall}
-
-**Original header**
-
-```cpp
-bool vrv::Toolkit::SetOption(const std::string &option, const std::string &value)
-```
-
-**Example call**
-
-```python
-result = toolkit.setOption(option, value)
-```
-
-{% include method-doc file="setoption-option-value" %}
 ### SetOptions
 
 Set option values.
@@ -1355,7 +1396,7 @@ Set the output to option.
 
 |---|---|---|
 | Name | Type | Default | Description |
-| `outputTo` | `std::string const &` | ∅ | the output to value as string |
+| `outputTo` | `std::string const &` | ∅ | the value to output as string |
 {: .table .table-condensed .table-sm .text-xsmall}
 
 **Original header**
@@ -1373,7 +1414,7 @@ result = toolkit.setOutputTo(outputTo)
 {% include method-doc file="setoutputto-outputto" %}
 ### SetResourcePath
 
-Set the resource path for the Toolkit instance.
+Set the resource path for the Toolkit instance and any extra fonts.
 
 This method needs to be called if the constructor had initFont=false or if the resource path needs to be changed.
 
@@ -1459,11 +1500,9 @@ result = toolkit.toolkit(initFont)
 {% include method-doc file="toolkit-initfont" %}
 ### ValidatePAE
 
-Validate the Plaine and Easie code passed in the string data.
+Validate the Plaine & Easie code passed in the string data.
 
 A single JSON object is returned when there is a global input error. When reading the input succeeds, validation is grouped by input keys. The methods always returns errors in PAE pedantic mode. No data remains loaded after the validation.
-
-{% aside .warning %}This method is not available in the JavaScript distributed version of the toolkit{% endaside %}
 
 **Returns**
 
@@ -1491,7 +1530,7 @@ result = toolkit.validatePAE(data)
 {% include method-doc file="validatepae-data" %}
 ### ValidatePAEFile
 
-Validate the Plaine and Easie file from the file system.
+Validate the Plaine & Easie code from a file.
 
 The method calls Toolkit::ValidatePAE.
 

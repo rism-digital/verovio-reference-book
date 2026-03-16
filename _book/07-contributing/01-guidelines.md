@@ -6,7 +6,7 @@ This document describes the coding style for the Verovio project for the C++ par
 
 ### Formatting
 
-Verovio uses a [ClangFormat](http://clang.llvm.org/docs/ClangFormat.html) (**10.0**) coding style based on the [WebKit](https://webkit.org/code-style-guidelines/) style, with a few minor modifications. The modifications include:
+Verovio uses a [ClangFormat](http://clang.llvm.org/docs/ClangFormat.html) (**19.0**) coding style based on the [WebKit](https://webkit.org/code-style-guidelines/) style, with a few minor modifications. The modifications include:
 
 ```yaml
 AllowShortIfStatementsOnASingleLine: true
@@ -17,6 +17,8 @@ PointerAlignment: Right
 ```
 
 The simplest way to fullfil the Verovio coding style is to use a clang-format tool and to apply the style defined in the `.clang-format` file available in the project root directory.
+
+Short if-statements should be as single line only with single boolean evaluation.
 
 #### How to install clang-format on macOS
 
@@ -100,6 +102,24 @@ In the implementation files, the first include in always the include of the corr
 
 The null pointer value should be written as `NULL`. Boolean values should be written as `true` and `false`.
 
+### Integer data types
+
+Integer numbers should be `int`, or `char` but only when this is clearly appropropriate. The use of `short` is to be avoided unless there are some particular reasons to use it. Variables and class members should not be `unsigned` numbers unless strictly necessary.
+
+We use `int` and not `size_t`, even when working with C++ standard containers. Values such as the one returned by `std::vector::size()` need to be cast to `int` when assigned or compared to variables. However, in cases where the scope is limited to local operations on the container and the use of `int` would yield a warning, `size_t` is acceptable.
+
+We avoid the use of `auto` and prefer explicit typing.
+
+### Loop variable scope and increment
+
+Variables should be made local to loops when possible (C99).
+
+```cpp
+for (int i = 0; i < limit; ++i) {}
+```
+
+They should preferably be pre-incremented, especially when not an `int` or alike.
+
 ### Class, method and member names
 
 All class names must be in upper CamelCase. The internal capitalization follows the MEI one:
@@ -134,7 +154,7 @@ In the class declaration, the methods are declared first, and then the member va
 
 #### Use of `this`
 
-The convention for the pointer `this` is to use it for method calls and not to use if for member access because these are prefixed with `m_`.
+The convention for the pointer `this` is to use it for method calls and not to use it for member access because these are prefixed with `m_`.
 
 *As it stands, the codebase is not consistently following this convention*
 
