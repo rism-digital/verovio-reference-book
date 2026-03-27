@@ -225,6 +225,10 @@
 "/installing-or-building-from-sources/swift-and-objective-c.html#swift": Swift
 "/installing-or-building-from-sources/swift-and-objective-c.html#objective-c-with-cocoapods": Objective-C
   with CocoaPods
+"/installing-or-building-from-sources/go.html": Go binding
+"/installing-or-building-from-sources/go.html#build-and-install-verovio": Build and
+  install Verovio
+"/installing-or-building-from-sources/go.html#testing-the-binding": Testing the binding
 "/installing-or-building-from-sources/library.html": Using as a library
 "/installing-or-building-from-sources/library.html#examples": Examples
 "/installing-or-building-from-sources/library.html#using-verovio-with-qt": Using Verovio
