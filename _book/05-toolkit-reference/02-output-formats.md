@@ -286,9 +286,11 @@ verovio -t timemap -o output.json input-file.mei
 
 ### Expansionmap
 
-The expansionmap is a JSON object that is generated when the `xml:id` of an [expansion element](/advanced-topics/expansions.html) is passed to Verovio with the `--expand` option. The expansionmap represents the relationship between the original score parts and the repeated (expanded, unfolded) sections created through the expansion process. 
+The expansionmap is a JSON object that is generated from the [expansion element](/advanced-topics/expansions.html) which represents an unfolded version of the repetitions in the score. In other words, the expansionmap represents the relationship between the original score parts and the repeated (expanded, unfolded) sections created through the expansion process. 
 
-While expanding, Verovio generates new, predictable `xml:id`s for all expanded elements (`section`, `ending`, `rdg`, `lem`), appending a `-rendX` to each `xml:id`, with `X` being the number of occurrences, starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurence (or the second repetition) of element `"A"`. 
+By default, Verovio will select the first `expansion` element found in the score. However, a specific `expansion` element can be selected with the `--expand` option with the corresponding `xml:id`. When no `expansion` element is encoded, Verovio will try inferring it from the measure repetitions. Bear in mind that this feature is limited to simple repetition patterns.
+
+While expanding, Verovio generates new, predictable `xml:id`s for all expanded elements (`section`, `ending`, `rdg`, `lem`), appending a `-rendX` to each `xml:id`, with `X` being the number of occurrences, starting from 2 for the first repetition of a given element. Thus, `xml:id="A-rend3"` would refer to the third occurrence (or the second repetition) of element `"A"`. 
 
 The keys in the expansionmap JSON object are the `xml:id`s of expanded elements in the score (both original and unfolded). The values contain lists of related (original and unfolded) elements, e.g. `["A", "A-rend2", "A-rend3"]`. The original score element (e.g., `"A"`) is always the first  value in the list.
 
@@ -297,7 +299,7 @@ The keys in the expansionmap JSON object are the `xml:id`s of expanded elements 
 To generate an expansionmap JSON with the default options on the command line:
 
 ```bash
-verovio -t expansionmap --expand expansion-default -o output.json expansion-001.mei
+verovio -t expansionmap -o output.json expansion-001.mei
 ```
 
 <!-- Currently, Verovio adds `'-em'` to the expansionmap file, thus creating `output-em.json` in this example. -->

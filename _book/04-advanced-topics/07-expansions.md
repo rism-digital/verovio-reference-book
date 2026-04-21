@@ -12,16 +12,18 @@ examples:
   - name: expansion-001-default
     test-suite: expansion/expansion-001.mei
     options:
-      expand: "expansion-default"
+      expandAlways: True
 
   - name: expansion-001-minimal
     test-suite: expansion/expansion-001.mei
     options:
+      expandAlways: True
       expand: "expansion-minimal"
 
   - name: expansion-001-maximal
     test-suite: expansion/expansion-001.mei
     options:
+      expandAlways: True
       expand: "expansion-maximal"
 
   - name: expansion-002
@@ -30,10 +32,19 @@ examples:
   - name: expansion-002-default
     test-suite: expansion/expansion-002.mei
     options:
+      expandAlways: True
       expand: "default"
 ---
 
-Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific versions of a score's repetition structure. Verovio supports this MEI element with the `--expand` toolkit option, which generates an unfolded version of the score in the requested output format. This realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure.
+Scores may contain repetitions, endings, or directives to repeat a section from a certain location in the score, such as dal segno or similar. Such instructions allow performers to make informed decisions about the repetition structure during performance. The MEI schema provides the [`<expansion>` element](https://music-encoding.org/guidelines/v5/elements/expansion) to encode specific versions of a score's repetition structure. 
+
+Verovio supports the `expansion` MEI element. When loading an MEI file, it will look for the first `expansion` element, and, depending on the output format, it will apply it and produce an unfolded version of the score. It realises the encoded repetitions by copying and/or deleting score elements to match the specified repetition structure. This is the case by default for all performance related output formats, which are MIDI, Timemap, and Expansionmap. For document related output formats, such as SVG or MEI, the score will not be expanded. 
+
+The default behaviour can be modified with a couple of options. The `--expand-never` option will disable the expansion for all output formats, including the performance related ones (e.g., MIDI). Oppositely, the `--expand-always` option will enable the expansion for all output formats, including the document related one, such as SVG.
+
+When no `expansion` element is encoded, Verovio will try to infer one by parsing measure repetitions. This feature is still limited, and only simple repetition patterns will be properly inferred. Inferring `expansion` is also supported with the MusicXML input. Note that both input formats (MEI and MusicXML) use a distinct implementation for inferring the `expansion`.
+
+Verovio also features an `--expand` option, which enables a specific `expansion` element to be selected.
 
 The `expansion` element is expected to be the first element in a `section` or `ending` and must contain descendant `expansion`, `ending`, or `rdg` elements (see [guidelines for section](https://music-encoding.org/guidelines/v5/elements/section)). Its `@plist` attribute may point to its descendant `section`, `ending`, `rdg`, or `lem` elements to indicate a particular expanded version of that excerpt of the score. See the [MEI guidelines for a simple expansion example](https://music-encoding.org/guidelines/v5/content/shared.html#sharedMdivContent).
 
@@ -57,7 +68,7 @@ A typical MEI example (from the [Verovio test suite example-expansion-001](https
 </section>
 ```
 
-An expansion is engraved by Verovio by passing the `xml:id` of its expansion element as an option to the toolkit, e.g. `--expand expansion-default` for the command-line or `expand: 'expansion-default'` for Javascript/Python options, which looks like this:
+An expanded version can be engraved by Verovio by triggering its expansion by passing to the toolkit the option `--expand-always` for the command-line, or `expandAlways: true` for Javascript/Pythonl, which looks like this:
 
 {% include music-notation-only example="expansion-001-default" %}
 
