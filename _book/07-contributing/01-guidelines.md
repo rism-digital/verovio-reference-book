@@ -38,8 +38,6 @@ sudo apt install clang-format
 
 #### Running clang-format
 
-*Please make sure you use at least version 10.0*
-
 To use clang-format to adjust a single file:
 
 ```bash
