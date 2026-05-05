@@ -156,6 +156,10 @@ The convention for the pointer `this` is to use it for method calls and not to u
 
 *As it stands, the codebase is not consistently following this convention*
 
+#### Static methods
+
+Regroup `static` methods in the class declaration and at the end of the implementation file.
+
 ### Comments
 
 Comments for describing methods can be grouped using `///@{` and `///@}` delimiters together with the `@name` indication:
