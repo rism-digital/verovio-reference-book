@@ -22,22 +22,22 @@
         <script src="/assets/javascript/bootstrap.min.js"></script>
 
         <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Using as a library | Reference book for Verovio</title>
+<title>Go binding | Reference book for Verovio</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Using as a library" />
+<meta property="og:title" content="Go binding" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Verovio can be built and use as C++ or C library." />
-<meta property="og:description" content="Verovio can be built and use as C++ or C library." />
+<meta name="description" content="This package exposes the existing Verovio C API to Go through cgo." />
+<meta property="og:description" content="This package exposes the existing Verovio C API to Go through cgo." />
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2026-05-21T07:07:50+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
-<meta property="twitter:title" content="Using as a library" />
+<meta property="twitter:title" content="Go binding" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-05-21T07:07:50+00:00","datePublished":"2026-05-21T07:07:50+00:00","description":"Verovio can be built and use as C++ or C library.","headline":"Using as a library","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/library.html"},"url":"/installing-or-building-from-sources/library.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-05-21T07:07:50+00:00","datePublished":"2026-05-21T07:07:50+00:00","description":"This package exposes the existing Verovio C API to Go through cgo.","headline":"Go binding","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/go.html"},"url":"/installing-or-building-from-sources/go.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -135,17 +135,17 @@
 <a class="toc-item toc-section " href="/installing-or-building-from-sources/swift-and-objective-c.html">Swift and Objective-C</a>
     
 
-<a class="toc-item toc-section " href="/installing-or-building-from-sources/go.html">Go binding</a>
-    
-
-<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/library.html">Using as a library</a>
+<a class="toc-item toc-section selected" href="/installing-or-building-from-sources/go.html">Go binding</a>
     
         
         
-<a class="toc-item toc-subsection" href="#examples">Examples</a>
+<a class="toc-item toc-subsection" href="#build-and-install-verovio">Build and install Verovio</a>
 
-<a class="toc-item toc-subsection" href="#using-verovio-with-qt">Using Verovio with Qt</a>
+<a class="toc-item toc-subsection" href="#testing-the-binding">Testing the binding</a>
 
+    
+
+<a class="toc-item toc-section " href="/installing-or-building-from-sources/library.html">Using as a library</a>
     
 
 <a class="toc-item toc-section " href="/installing-or-building-from-sources/troubleshooting.html">Troubleshooting</a>
@@ -173,96 +173,123 @@
 
     <div class="col-md-9" id="content">
         
-        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/06-installing-or-building-from-sources/07-library.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
+        <a class="hidden-print" href="https://github.com/rism-digital/verovio-reference-book/edit/master/_book/06-installing-or-building-from-sources/06-go.md"><button class="btn btn-xs pull-right">Edit this page</button></a>
         
         
-        <h2>Using as a library</h2>
-        <p>Verovio can be built and use as C++ or C library.</p>
+        <h2>Go binding</h2>
+        <p>This package exposes the existing Verovio C API to Go through <code class="language-plaintext highlighter-rouge">cgo</code>.</p>
 
-<h4 id="building-libverovioso-on-linux-or-libveroviodylib-on-macos">Building libverovio.so on Linux or libverovio.dylib on macOS</h4>
+<p><code class="language-plaintext highlighter-rouge">NewToolkit()</code> first checks <code class="language-plaintext highlighter-rouge">VEROVIO_RESOURCE_PATH</code>. If that variable is unset, it creates a toolkit without configuring a resource directory.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> build
-<span class="nb">cd </span>build
-cmake <span class="nt">-DBUILD_AS_LIBRARY</span><span class="o">=</span>ON <span class="nb">.</span>
-make
+<h4 id="required-files-and-paths">Required files and paths</h4>
+
+<p>To use this binding, your system needs all of the following:</p>
+
+<ul>
+  <li>the Go package source in <code class="language-plaintext highlighter-rouge">bindings/go</code></li>
+  <li>the Verovio shared library:
+<code class="language-plaintext highlighter-rouge">libverovio.dylib</code> on macOS or <code class="language-plaintext highlighter-rouge">libverovio.so</code> on Linux</li>
+  <li>the generated <code class="language-plaintext highlighter-rouge">pkg-config</code> file:
+<code class="language-plaintext highlighter-rouge">verovio.pc</code></li>
+  <li>the Verovio runtime resources directory:
+<code class="language-plaintext highlighter-rouge">share/verovio</code></li>
+</ul>
+
+<p>With the example install prefix below, those paths are:</p>
+
+<ul>
+  <li>shared library:
+<code class="language-plaintext highlighter-rouge">$PWD/build/go/install/lib/libverovio.dylib</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pkg-config</code> metadata:
+<code class="language-plaintext highlighter-rouge">$PWD/build/go/verovio.pc</code></li>
+  <li>runtime resources:
+<code class="language-plaintext highlighter-rouge">$PWD/build/go/install/share/verovio</code></li>
+</ul>
+
+<h3 id="build-and-install-verovio">Build and install Verovio</h3>
+
+<p>Build and install Verovio as a shared library so <code class="language-plaintext highlighter-rouge">pkg-config</code> can locate <code class="language-plaintext highlighter-rouge">libverovio</code> and the exported headers:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings
+cmake ../cmake <span class="nt">-B</span> go <span class="nt">-DBUILD_AS_LIBRARY</span><span class="o">=</span>ON <span class="nt">-DCMAKE_INSTALL_PREFIX</span><span class="o">=</span><span class="s2">"../build/go/install"</span>
+cmake <span class="nt">--build</span> go <span class="nt">-j8</span>
+cmake <span class="nt">--install</span> go
 </code></pre></div></div>
 
-<p>Running <code class="language-plaintext highlighter-rouge">sudo make install</code> will copy the library and the headers in <code class="language-plaintext highlighter-rouge">/usr/local/lib</code> and <code class="language-plaintext highlighter-rouge">/usr/local/include/verovio</code> respectively.</p>
+<p>This will install the build in <code class="language-plaintext highlighter-rouge">build/go/install</code> (from the Verovio root directory). Note that this directory
+needs to be available to any Go project you build since the Go compiler needs to resolve the built Verovio library, so if
+you need it anywhere else, you should vary the -DCMAKE_INSTALL_PREFIX value, and then adjust the paths below as necessary.</p>
 
-<h4 id="building-veroviodll-on-windows-using-microsoft-visual-studio-build-tools-2022">Building verovio.dll on Windows using Microsoft Visual Studio Build Tools 2022</h4>
+<h4 id="environment-variables">Environment variables</h4>
 
-<p>Open <code class="language-plaintext highlighter-rouge">x64 Native Tools Command Prompt for VS 2022</code> and enter:</p>
+<p>You typically need three environment variables:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd cmake
-cmake -DBUILD_AS_LIBRARY=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE -B build 
-cmake --build build --config Release
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">PKG_CONFIG_PATH</code>
+Build-time lookup path for <code class="language-plaintext highlighter-rouge">verovio.pc</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DYLD_LIBRARY_PATH</code> on macOS or <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code> on Linux
+Runtime lookup path for <code class="language-plaintext highlighter-rouge">libverovio</code></li>
+  <li><code class="language-plaintext highlighter-rouge">VEROVIO_RESOURCE_PATH</code>
+Runtime lookup path for the Verovio font and resource files in <code class="language-plaintext highlighter-rouge">share/verovio</code></li>
+</ul>
+
+<p>Example for macOS, assuming your build artifacts are in <code class="language-plaintext highlighter-rouge">/path/to/verovio/build</code> as per the CMAKE_INSTALL_PREFIX setting:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">"/path/to/verovio/build/go"</span>
+<span class="nb">export </span><span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">"/path/to/verovio/build/go/install/lib"</span>
+<span class="nb">export </span><span class="nv">VEROVIO_RESOURCE_PATH</span><span class="o">=</span><span class="s2">"/path/to/verovio/build/go/install/share/verovio"</span>
 </code></pre></div></div>
 
-<h3 id="examples">Examples</h3>
+<p>Example for Linux:</p>
 
-<h4 id="c-interface">C++ interface</h4>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">"/path/to/verovio/build/go"</span>
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">"/path/to/verovio/build/go/install/lib"</span>
+<span class="nb">export </span><span class="nv">VEROVIO_RESOURCE_PATH</span><span class="o">=</span><span class="s2">"/path/to/verovio/build/go/install/share/verovio"</span>
+</code></pre></div></div>
 
-<p>The following code is a minimal example using the C++ Toolkit class:</p>
+<p>What each path is used for:</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">PKG_CONFIG_PATH</code>
+Used by <code class="language-plaintext highlighter-rouge">go build</code> and <code class="language-plaintext highlighter-rouge">go test</code> through <code class="language-plaintext highlighter-rouge">cgo</code> so the compiler/linker can find Verovio headers and link flags.</li>
+  <li><code class="language-plaintext highlighter-rouge">DYLD_LIBRARY_PATH</code> or <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>
+Used when your program or tests start, so the dynamic loader can find <code class="language-plaintext highlighter-rouge">libverovio</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">VEROVIO_RESOURCE_PATH</code>
+Used by <code class="language-plaintext highlighter-rouge">NewToolkit()</code> so Verovio can find fonts and resource XML/CSS files at runtime.</li>
+</ul>
 
-<span class="c1">// Include header for the vrv::Toolkit classl</span>
-<span class="cp">#include</span> <span class="cpf">"toolkit.h"</span><span class="cp">
-</span> 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">vrv</span><span class="o">::</span><span class="n">Toolkit</span> <span class="n">tk</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-    <span class="c1">// Print the version</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tk</span><span class="p">.</span><span class="n">GetVersion</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
- 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<p>If <code class="language-plaintext highlighter-rouge">VEROVIO_RESOURCE_PATH</code> is missing or wrong, you will usually see an error like:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Error] The data cannot be loaded because the font resources are not available
+</code></pre></div></div>
+
+<h3 id="testing-the-binding">Testing the binding</h3>
+
+<p>After setting the variables above:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings/go
+go <span class="nb">test</span>
+</code></pre></div></div>
+
+<h4 id="example">Example</h4>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+	<span class="s">"fmt"</span>
+
+	<span class="n">verovio</span> <span class="s">"github.com/rism-digital/verovio/bindings/go"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">tk</span> <span class="o">:=</span> <span class="n">verovio</span><span class="o">.</span><span class="n">NewToolkit</span><span class="p">()</span>
+	<span class="k">defer</span> <span class="n">tk</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+
+	<span class="n">tk</span><span class="o">.</span><span class="n">LoadData</span><span class="p">(</span><span class="s">`&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;mei meiversion="4.0.1" xmlns="http://www.music-encoding.org/ns/mei"&gt;&lt;music&gt;&lt;body&gt;&lt;mdiv&gt;&lt;score&gt;&lt;scoreDef meter.count="4" meter.unit="4"&gt;&lt;staffGrp&gt;&lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2"/&gt;&lt;/staffGrp&gt;&lt;/scoreDef&gt;&lt;section&gt;&lt;measure n="1"&gt;&lt;staff n="1"&gt;&lt;layer n="1"&gt;&lt;note oct="4" pname="c" dur="4"/&gt;&lt;/layer&gt;&lt;/staff&gt;&lt;/measure&gt;&lt;/section&gt;&lt;/score&gt;&lt;/mdiv&gt;&lt;/body&gt;&lt;/music&gt;&lt;/mei&gt;`</span><span class="p">)</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">RenderToSVG</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="no">false</span><span class="p">))</span>
 <span class="p">}</span>
 </code></pre></div></div>
-
-<p>The example can be built with:</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ main.cpp <span class="nt">-o</span> main <span class="nt">--std</span><span class="o">=</span>c++17 <span class="nt">-lverovio</span> <span class="nt">-I</span>/usr/local/include/verovio
-</code></pre></div></div>
-
-<p>Running <code class="language-plaintext highlighter-rouge">./main</code> should display the Verovio version.</p>
-
-<h4 id="c-function-interface">C function interface</h4>
-
-<p>To use Verovio with any language that supports a plain C function interface you will first need to build Verovio as a library.
-The compiled library (<code class="language-plaintext highlighter-rouge">libverovio.so</code>/<code class="language-plaintext highlighter-rouge">verovio.dll</code>) will contain callable C symbols. These wrapper symbols are defined in <code class="language-plaintext highlighter-rouge">./tools/c_wrapper.h</code></p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">"stdbool.h"</span><span class="cp">
-#include</span> <span class="cpf">"stdio.h"</span><span class="cp">
-</span>
-<span class="c1">// Include the header with the C functions</span>
-<span class="cp">#include</span> <span class="cpf">"c_wrapper.h"</span><span class="cp">
-</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">"Calling constructor</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-    <span class="kt">void</span> <span class="o">*</span><span class="n">pointer</span> <span class="o">=</span> <span class="n">vrvToolkit_constructorResourcePath</span><span class="p">(</span><span class="s">"./path-to-the-resource-dir"</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">"Pointer value %p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">pointer</span><span class="p">);</span>
-    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">options</span> <span class="o">=</span> <span class="n">vrvToolkit_getAvailableOptions</span><span class="p">(</span><span class="n">pointer</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span> <span class="n">options</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>You can use gcc to compile the example above and link to the pre-built library:</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcc main.c <span class="nt">-o</span> main <span class="nt">-lverovio</span> <span class="nt">-I</span>/usr/local/include/verovio
-</code></pre></div></div>
-
-<p>Run <code class="language-plaintext highlighter-rouge">./main</code> or (without having installed the library or changed your default <code class="language-plaintext highlighter-rouge">LD_LIBRARY_PATH</code>):</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/path-to-the-library-dir ./main
-</code></pre></div></div>
-
-<h3 id="using-verovio-with-qt">Using Verovio with Qt</h3>
-
-<p>Using Verovio with <a href="https://www.qt.io">Qt</a> is quite straightforward. It needs to be integrated as a library in the Qt project. This gives access to the C++ <code class="language-plaintext highlighter-rouge">vrv::Toolkit</code> class. The rendering can be achieved with a Qt <code class="language-plaintext highlighter-rouge">WebView</code>.</p>
-
-<p>See this <a href="https://github.com/rism-digital/verovio-qt-demo">demo application</a> repository for a complete example on how to do it.</p>
 
     </div>
 </div>
