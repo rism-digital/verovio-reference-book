@@ -287,6 +287,15 @@ no-edit: true
 
 {% row %}
 {% col 2 %}
+[\<episema\>](https://music-encoding.org/guidelines/v5/elements/episema.html)
+{% endcol %}
+{% col 10 %}
+[att.color](https://music-encoding.org/guidelines/v5/attribute-classes/att.color.html), [att.coord](https://music-encoding.org/guidelines/v5/attribute-classes/att.coord.html), [att.episema.vis](https://music-encoding.org/guidelines/v5/attribute-classes/att.episema.vis.html), [att.facsimile](https://music-encoding.org/guidelines/v5/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/v5/attribute-classes/att.linking.html), [att.note.ges](https://music-encoding.org/guidelines/v5/attribute-classes/att.note.ges.html), [att.octave](https://music-encoding.org/guidelines/v5/attribute-classes/att.octave.html), [att.pitch](https://music-encoding.org/guidelines/v5/attribute-classes/att.pitch.html), [att.pitch.ges](https://music-encoding.org/guidelines/v5/attribute-classes/att.pitch.ges.html), [att.staffLoc](https://music-encoding.org/guidelines/v5/attribute-classes/att.staffLoc.html), [att.staffLoc.pitched](https://music-encoding.org/guidelines/v5/attribute-classes/att.staffLoc.pitched.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html), [att.visualOffsetHo](https://music-encoding.org/guidelines/v5/attribute-classes/att.visualOffsetHo.html), [att.visualOffsetVo](https://music-encoding.org/guidelines/v5/attribute-classes/att.visualOffsetVo.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
 [\<expan\>](https://music-encoding.org/guidelines/v5/elements/expan.html)
 {% endcol %}
 {% col 10 %}
@@ -975,6 +984,15 @@ no-edit: true
 {% endcol %}
 {% col 10 %}
 [att.barring](https://music-encoding.org/guidelines/v5/attribute-classes/att.barring.html), [att.basic](https://music-encoding.org/guidelines/v5/attribute-classes/att.basic.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.nNumberLike](https://music-encoding.org/guidelines/v5/attribute-classes/att.nNumberLike.html), [att.staffGroupingSym](https://music-encoding.org/guidelines/v5/attribute-classes/att.staffGroupingSym.html), [att.staffGrp.vis](https://music-encoding.org/guidelines/v5/attribute-classes/att.staffGrp.vis.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html)
+{% endcol %}
+{% endrow %}
+
+{% row %}
+{% col 2 %}
+[\<strophicus\>](https://music-encoding.org/guidelines/v5/elements/strophicus.html)
+{% endcol %}
+{% col 10 %}
+[att.color](https://music-encoding.org/guidelines/v5/attribute-classes/att.color.html), [att.coord](https://music-encoding.org/guidelines/v5/attribute-classes/att.coord.html), [att.facsimile](https://music-encoding.org/guidelines/v5/attribute-classes/att.facsimile.html), [att.labelled](https://music-encoding.org/guidelines/v5/attribute-classes/att.labelled.html), [att.linking](https://music-encoding.org/guidelines/v5/attribute-classes/att.linking.html), [att.note.ges](https://music-encoding.org/guidelines/v5/attribute-classes/att.note.ges.html), [att.octave](https://music-encoding.org/guidelines/v5/attribute-classes/att.octave.html), [att.pitch](https://music-encoding.org/guidelines/v5/attribute-classes/att.pitch.html), [att.pitch.ges](https://music-encoding.org/guidelines/v5/attribute-classes/att.pitch.ges.html), [att.staffLoc](https://music-encoding.org/guidelines/v5/attribute-classes/att.staffLoc.html), [att.staffLoc.pitched](https://music-encoding.org/guidelines/v5/attribute-classes/att.staffLoc.pitched.html), [att.typed](https://music-encoding.org/guidelines/v5/attribute-classes/att.typed.html), [att.visualOffsetHo](https://music-encoding.org/guidelines/v5/attribute-classes/att.visualOffsetHo.html), [att.visualOffsetVo](https://music-encoding.org/guidelines/v5/attribute-classes/att.visualOffsetVo.html)
 {% endcol %}
 {% endrow %}
 

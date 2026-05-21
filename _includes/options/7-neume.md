@@ -1,0 +1,5 @@
+{% row option_row %}{% col 4 %} <span class="lang1">`"gabcAquitanianContext":  <boolean>`</span><span class="lang2">`--gabc-aquitanian-context `</span> {% endcol %}{% col 8 %} Render the GABC `V` left-stem (grule virga_left) using tilt=&quot;ne&quot; instead of the default tilt=&quot;n&quot; used for square notation. {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"gabcExtendedSymbols":  <boolean>`</span><span class="lang2">`--gabc-extended-symbols `</span> {% endcol %}{% col 8 %} Enable the S-GABC proposed symbols: `r` for uncertain reading and `&quot;` for clarifying lines {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"gabcStaffLines": <integer>`</span><span class="lang2">`--gabc-staff-lines <integer>`</span> {% endcol %}{% col 8 %} Number of staff lines for GABC import (the GABC `staff-lines:` header value) {% endcol %}
+{% endrow %}{% row option_row %}{% col 4 %} <span class="lang1">`"liquescentWithoutTails":  <boolean>`</span><span class="lang2">`--liquescent-without-tails `</span> {% endcol %}{% col 8 %} Render liquescent head without tails {% endcol %}
+{% endrow %}
