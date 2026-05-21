@@ -437,7 +437,7 @@
 - name: expansion-001-default
   test-suite: expansion/expansion-001.mei
   options:
-    expand: expansion-default
+    expandAlways: true
   mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001-default.mei
   svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001-default.svg
   svg-example-exists: true
@@ -445,6 +445,7 @@
 - name: expansion-001-minimal
   test-suite: expansion/expansion-001.mei
   options:
+    expandAlways: true
     expand: expansion-minimal
   mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001-minimal.mei
   svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001-minimal.svg
@@ -453,6 +454,7 @@
 - name: expansion-001-maximal
   test-suite: expansion/expansion-001.mei
   options:
+    expandAlways: true
     expand: expansion-maximal
   mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001-maximal.mei
   svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001-maximal.svg
@@ -467,6 +469,7 @@
 - name: expansion-002-default
   test-suite: expansion/expansion-002.mei
   options:
+    expandAlways: true
     expand: default
   mei-example-file: examples/04-advanced-topics/07-expansions/expansion-002-default.mei
   svg-example-file: examples/04-advanced-topics/07-expansions/expansion-002-default.svg
