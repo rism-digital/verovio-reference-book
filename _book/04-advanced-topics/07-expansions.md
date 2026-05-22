@@ -13,6 +13,7 @@ examples:
     test-suite: expansion/expansion-001.mei
     options:
       expandAlways: True
+      expand: "expansion-default"
 
   - name: expansion-001-minimal
     test-suite: expansion/expansion-001.mei

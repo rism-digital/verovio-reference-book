@@ -438,6 +438,7 @@
   test-suite: expansion/expansion-001.mei
   options:
     expandAlways: true
+    expand: expansion-default
   mei-example-file: examples/04-advanced-topics/07-expansions/expansion-001-default.mei
   svg-example-file: examples/04-advanced-topics/07-expansions/expansion-001-default.svg
   svg-example-exists: true
