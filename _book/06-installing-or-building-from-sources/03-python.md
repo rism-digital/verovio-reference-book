@@ -153,6 +153,34 @@ python -m pip install ".[dev]"
 python -m build --wheel
 ```
 
+### Building the Python module directly with CMake
+
+The underlying CMake-based Python build can be useful when working directly with the extension build rather than building a distributable wheel.
+
+To build the Python module directly from `bindings/python`, configure it against the repository CMake files and then build it:
+
+```bash
+cd bindings/python
+cmake ../../cmake -DBUILD_AS_PYTHON=ON
+make -j8
+```
+
+If you want to enable or disable other specific options, you can do:
+
+```bash
+cd bindings/python
+cmake ../../cmake -DBUILD_AS_PYTHON=ON -DNO_PAE_SUPPORT=ON
+```
+
+By default, Python 3 is used. If you want to use a specific version of Python, you can do:
+
+```bash
+cd bindings/python
+cmake ../../cmake -DBUILD_AS_PYTHON=ON -DPYTHON_VERSION=3.12
+```
+
+This selects the Python interpreter used for the build, but it still uses the stable-ABI Python extension build process.
+
 ### How the Python package is built
 
 `pyproject.toml` uses `scikit-build-core` as the build backend. It configures the existing CMake build with `BUILD_AS_PYTHON=ON`, and CMake builds the `verovio._verovio` extension module from the C++ sources and the SWIG interface.
