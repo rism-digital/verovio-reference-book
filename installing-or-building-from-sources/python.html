@@ -31,13 +31,13 @@
 <meta property="og:site_name" content="Reference book for Verovio" />
 <meta property="og:image" content="https://book.verovio.org/images/card.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-06-12T12:25:35+00:00" />
+<meta property="article:published_time" content="2026-07-09T12:47:31+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://book.verovio.org/images/card.png" />
 <meta property="twitter:title" content="Python" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-06-12T12:25:35+00:00","datePublished":"2026-06-12T12:25:35+00:00","description":"Pre-build versions","headline":"Python","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"url":"/installing-or-building-from-sources/python.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-07-09T12:47:31+00:00","datePublished":"2026-07-09T12:47:31+00:00","description":"Pre-build versions","headline":"Python","image":"https://book.verovio.org/images/card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/installing-or-building-from-sources/python.html"},"url":"/installing-or-building-from-sources/python.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     </head>
@@ -134,7 +134,11 @@
 
 <a class="toc-item toc-subsection" href="#basic-usage-of-the-toolkit">Basic usage of the toolkit</a>
 
-<a class="toc-item toc-subsection" href="#building-the-toolkit-without-cmake">Building the toolkit without CMake</a>
+<a class="toc-item toc-subsection" href="#building-the-toolkit-locally">Building the toolkit locally</a>
+
+<a class="toc-item toc-subsection" href="#building-the-python-module-directly-with-cmake">Building the Python module directly with CMake</a>
+
+<a class="toc-item toc-subsection" href="#how-the-python-package-is-built">How the Python package is built</a>
 
 <a class="toc-item toc-subsection" href="#resources-for-versions-built-locally">Resources for versions built locally</a>
 
@@ -183,9 +187,9 @@
         <h2>Python</h2>
         <h3 id="pre-build-versions">Pre-build versions</h3>
 
-<p>Pre-build versions of the Python version of the toolkit are available through <a href="https://pypi.org/project/verovio/">PyPi</a> for every release since version 3.1.0.</p>
+<p>Pre-build versions of the Python toolkit are available through <a href="https://pypi.org/project/verovio/">PyPI</a> for every release since version 3.1.0.</p>
 
-<p>The Python versions for which a pre-build is provided are 3.9, 3.10, 3.11, 3.12 and 3.13. The platforms supported are macOS, Linux with <a href="https://github.com/pypa/manylinux">manylinux</a> for x86-64, Win-32 and Win-amd64.</p>
+<p>Current wheels support Python 3.10 and newer. The package is built as a CPython stable-ABI (<code class="language-plaintext highlighter-rouge">abi3</code>) wheel, so the same wheel can be reused across multiple Python versions. The currently supported platforms are macOS, Linux with <a href="https://github.com/pypa/manylinux">manylinux</a> for x86-64 and aarch64, and Windows for win32 and win-amd64.</p>
 
 <p>The latest release can be installed with:</p>
 
@@ -194,14 +198,14 @@
 
 <p>A previous version can be installed with:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pip <span class="nb">install </span><span class="nv">verovio</span><span class="o">==</span>3.2.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span><span class="nv">verovio</span><span class="o">==</span>3.2.0
 </code></pre></div></div>
 
-<p>For all platforms or architectures for which a pre-build version is not available in the PyPi repository, a source distribution is available. It can be installed with the same command as above. This will automatically trigger the compilation of the package.</p>
+<p>For platforms or architectures for which a wheel is not available from PyPI, a source distribution is also published. Installing it with <code class="language-plaintext highlighter-rouge">pip</code> will trigger a local build of the package.</p>
 
 <h3 id="basic-usage-of-the-toolkit">Basic usage of the toolkit</h3>
 
-<p>Once installed, the Verovio tookit module can be imported with</p>
+<p>Once installed, the Verovio toolkit module can be imported with</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">verovio</span>
 </code></pre></div></div>
@@ -220,111 +224,156 @@
 
 <p>It can also be rendered to a file:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tk</span><span class="p">.</span><span class="nf">renderToSVGFile</span><span class="p">(</span> <span class="sh">"</span><span class="s">page.svg</span><span class="sh">"</span><span class="p">,</span> <span class="mi">1</span> <span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tk</span><span class="p">.</span><span class="nf">renderToSVGFile</span><span class="p">(</span><span class="sh">"</span><span class="s">page.svg</span><span class="sh">"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h4 id="setting-the-resource-path">Setting the resource path</h4>
 
-<p>The Python wheels include the resource directory and it is normally resolved by default when using the module. However, in some cases, it might be not found. This will typically raise some errors about the Bravura and the Leipzig default fonts being not found. In such cases, the resource path must be set explicitly. It should still be possible to use the resources included in the module, with:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">verovio</span>
-<span class="kn">import</span> <span class="n">os</span>
+<p>The Python wheels include the resource directory and it is normally resolved automatically when using the module. In some nonstandard environments or with locally built copies, it may still be necessary to set it explicitly. In such cases, you can use the resources included in the module with:</p>
 
-<span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">(</span><span class="bp">False</span><span class="p">);</span>
-<span class="n">tk</span><span class="p">.</span><span class="nf">setResourcePath</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="n">verovio</span><span class="p">.</span><span class="n">__file__</span><span class="p">),</span><span class="sh">"</span><span class="s">data</span><span class="sh">"</span><span class="p">));</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">verovio</span>
+
+<span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">tk</span><span class="p">.</span><span class="nf">setResourcePath</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="n">verovio</span><span class="p">.</span><span class="n">__file__</span><span class="p">),</span> <span class="sh">"</span><span class="s">data</span><span class="sh">"</span><span class="p">))</span>
 </code></pre></div></div>
 
 <h4 id="setting-options">Setting options</h4>
 
-<p>The options are set on the toolkit instance. For the Python version of the toolkit, the options (and all other parameters or values return by a function that are a JSON string in the C++ version) are a Python Dictionary. For example, the following code will change the dimensions of the page and redo the layout for the previously loaded data:</p>
+<p>The options are set on the toolkit instance. For the Python version of the toolkit, the options (and all other parameters or values returned by a function that are a JSON string in the C++ version) are a Python dictionary. For example, the following code will change the dimensions of the page and redo the layout for the previously loaded data:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">options</span> <span class="o">=</span> <span class="p">{</span> <span class="sh">"</span><span class="s">pageHeight</span><span class="sh">"</span><span class="p">:</span> <span class="mi">2100</span><span class="p">,</span> <span class="sh">"</span><span class="s">pageWidth</span><span class="sh">"</span><span class="p">:</span> <span class="mi">2950</span><span class="p">,</span> <span class="sh">"</span><span class="s">scale</span><span class="sh">"</span><span class="p">:</span> <span class="mi">25</span> <span class="p">}</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">pageHeight</span><span class="sh">"</span><span class="p">:</span> <span class="mi">2100</span><span class="p">,</span> <span class="sh">"</span><span class="s">pageWidth</span><span class="sh">"</span><span class="p">:</span> <span class="mi">2950</span><span class="p">,</span> <span class="sh">"</span><span class="s">scale</span><span class="sh">"</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
 <span class="n">tk</span><span class="p">.</span><span class="nf">setOptions</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
 <span class="n">tk</span><span class="p">.</span><span class="nf">redoLayout</span><span class="p">()</span>
-<span class="n">tk</span><span class="p">.</span><span class="nf">renderToSVGFile</span><span class="p">(</span> <span class="sh">"</span><span class="s">page-scaled.svg</span><span class="sh">"</span><span class="p">,</span> <span class="mi">1</span> <span class="p">)</span>
+<span class="n">tk</span><span class="p">.</span><span class="nf">renderToSVGFile</span><span class="p">(</span><span class="sh">"</span><span class="s">page-scaled.svg</span><span class="sh">"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h4 id="building-the-toolkit">Building the toolkit</h4>
+<h3 id="building-the-toolkit-locally">Building the toolkit locally</h3>
 
-<p>To build the Python toolkit you need to have swig and swig-python installed on your machine (see <a href="http://swig.org" target="_blank">SWIG</a>) and the Python distutils package. Version 4.0 or newer of SWIG is recommended but older versions should work too.  To install SWIG in macOS using <a href="http://brew.sh">Homebrew</a>, type the command <code class="language-plaintext highlighter-rouge">brew install swig</code>.</p>
+<p>The Python package is built from the root directory of the repository with <code class="language-plaintext highlighter-rouge">pyproject.toml</code>.</p>
 
-<p>The Python toolkit can be built with <a href="https://cmake.org">CMake</a>, You need at least version 3.13 of CMake because it uses the option <code class="language-plaintext highlighter-rouge">-B</code> introduced in that version of CMake. The steps are:</p>
+<p>A standard local build can be done with the built-in Python tools <code class="language-plaintext highlighter-rouge">venv</code> and <code class="language-plaintext highlighter-rouge">pip</code>. Create a virtual environment from the Python interpreter you want to use:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings
-cmake ../cmake <span class="nt">-B</span> python <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON
-<span class="nb">cd </span>python
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> venv .venv
+</code></pre></div></div>
+
+<p>Activate the virtual environment:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> .venv/bin/activate
+</code></pre></div></div>
+
+<p>Upgrade <code class="language-plaintext highlighter-rouge">pip</code> in the virtual environment:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+</code></pre></div></div>
+
+<p>Install the development build tools:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="s2">".[dev]"</span>
+</code></pre></div></div>
+
+<p>Build a wheel from the repository root:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> build <span class="nt">--wheel</span>
+</code></pre></div></div>
+
+<p>By default, this now produces a CPython stable-ABI <code class="language-plaintext highlighter-rouge">abi3</code> wheel targeting Python 3.10 and newer.</p>
+
+<p>Build a source distribution with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> build <span class="nt">--sdist</span>
+</code></pre></div></div>
+
+<p>Validate the built distributions with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> twine check dist/<span class="k">*</span>
+</code></pre></div></div>
+
+<p>Install the locally built wheel into the virtual environment with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--force-reinstall</span> dist/<span class="k">*</span>.whl
+</code></pre></div></div>
+
+<p>Run the installed-wheel smoke test with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python doc/python-smoke-test.py
+</code></pre></div></div>
+
+<p>The build uses an isolated PEP 517 environment. Build dependencies such as <code class="language-plaintext highlighter-rouge">scikit-build-core</code>, <code class="language-plaintext highlighter-rouge">swig</code>, and <code class="language-plaintext highlighter-rouge">ninja</code> are installed into that isolated build environment as needed.</p>
+
+<h4 id="using-uv-for-python-version-and-environment-management">Using uv for Python version and environment management</h4>
+
+<p><a href="https://docs.astral.sh/uv/">uv</a> can be used to install a specific Python version and create the virtual environment more conveniently. For example, to use Python 3.12:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uv python <span class="nb">install </span>3.12
+uv venv <span class="nt">--python</span> 3.12 .venv
+</code></pre></div></div>
+
+<p>You can then activate that environment and use the same build commands shown above:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> .venv/bin/activate
+python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="s2">".[dev]"</span>
+python <span class="nt">-m</span> build <span class="nt">--wheel</span>
+</code></pre></div></div>
+
+<h3 id="building-the-python-module-directly-with-cmake">Building the Python module directly with CMake</h3>
+
+<p>The underlying CMake-based Python build can be useful when working directly with the extension build rather than building a distributable wheel.</p>
+
+<p>To build the Python module directly from <code class="language-plaintext highlighter-rouge">bindings/python</code>, configure it against the repository CMake files and then build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings/python
+cmake ../../cmake <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON
 make <span class="nt">-j8</span>
 </code></pre></div></div>
 
 <p>If you want to enable or disable other specific options, you can do:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ../cmake <span class="nt">-B</span> python <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON <span class="nt">-DNO_PAE_SUPPORT</span><span class="o">=</span>ON
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings/python
+cmake ../../cmake <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON <span class="nt">-DNO_PAE_SUPPORT</span><span class="o">=</span>ON
 </code></pre></div></div>
 
 <p>By default, Python 3 is used. If you want to use a specific version of Python, you can do:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ../cmake <span class="nt">-B</span> python <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON <span class="nt">-DPYTHON_VERSION</span><span class="o">=</span>3.9
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>bindings/python
+cmake ../../cmake <span class="nt">-DBUILD_AS_PYTHON</span><span class="o">=</span>ON <span class="nt">-DPYTHON_VERSION</span><span class="o">=</span>3.12
 </code></pre></div></div>
 
-<p><em>Installation with CMake has not be tested yet</em></p>
+<p>This selects the Python interpreter used for the build, but it still uses the stable-ABI Python extension build process.</p>
 
-<h3 id="building-the-toolkit-without-cmake">Building the toolkit without CMake</h3>
+<h3 id="how-the-python-package-is-built">How the Python package is built</h3>
 
-<p>The toolkit can be build without CMake. However, SWIG is still needed. It needs to be built from from the root directory of the repository content. To build it in-place, run:</p>
+<p><code class="language-plaintext highlighter-rouge">pyproject.toml</code> uses <code class="language-plaintext highlighter-rouge">scikit-build-core</code> as the build backend. It configures the existing CMake build with <code class="language-plaintext highlighter-rouge">BUILD_AS_PYTHON=ON</code>, and CMake builds the <code class="language-plaintext highlighter-rouge">verovio._verovio</code> extension module from the C++ sources and the SWIG interface.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py build_ext <span class="nt">--inplace</span>
-</code></pre></div></div>
+<p>The Python packaging configuration sets <code class="language-plaintext highlighter-rouge">wheel.py-api = "cp310"</code>, so the wheel is built for the CPython stable ABI and can be reused on Python 3.10 through 3.14.</p>
 
-<p>If you want to install it, run:</p>
+<p>The generated wheel installs:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py build_ext
-<span class="nb">sudo </span>python setup.py <span class="nb">install</span>
-</code></pre></div></div>
+<ul>
+  <li>the compiled <code class="language-plaintext highlighter-rouge">_verovio</code> extension module</li>
+  <li>the generated <code class="language-plaintext highlighter-rouge">verovio.py</code> SWIG proxy</li>
+  <li><code class="language-plaintext highlighter-rouge">__init__.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">py.typed</code> and <code class="language-plaintext highlighter-rouge">verovio.pyi</code></li>
+  <li>the Verovio resource data under <code class="language-plaintext highlighter-rouge">verovio/data</code></li>
+</ul>
 
-<p>For building it with one or more specific options (e.g., without Plaine &amp; Easie support), run:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py build_ext <span class="nt">--inplace</span> <span class="nt">--define</span> NO_PAE_SUPPORT
-</code></pre></div></div>
-
-<h4 id="building-with-pip">Building with pip</h4>
-
-<p>You can build and install with <code class="language-plaintext highlighter-rouge">pip</code> directly from a remote repository with:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">--global-option</span><span class="o">=</span>build_ext git+https://github.com/rism-digital/verovio
-</code></pre></div></div>
-
-<p>You may specify the branch, commit hash, or tag name after an <code class="language-plaintext highlighter-rouge">@</code> at the end of the Git url.</p>
-
-<p>If you have a local copy of the repository just run:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> &lt;path_to_local_repo&gt;
-</code></pre></div></div>
-
-<h4 id="building-a-python-wheel-locally">Building a Python wheel locally</h4>
-
-<p>You can build a Python wheel locally with:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py bdist
-</code></pre></div></div>
-
-<p>For a source distribution, do:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py sdist
-</code></pre></div></div>
-
-<p>In both cases, the wheel will be written to the <code class="language-plaintext highlighter-rouge">./dist</code> directory.</p>
+<p>The <code class="language-plaintext highlighter-rouge">data/</code> directory is included by the CMake install rules.</p>
 
 <h3 id="resources-for-versions-built-locally">Resources for versions built locally</h3>
 
-<p>When using a version built locally, you usually have to specify the path to the Verovio resources. To do so, you can do</p>
+<p>When using a locally built version in a nonstandard environment, you may still need to specify the path to the Verovio resources explicitly:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">verovio</span>
+
 <span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">tk</span><span class="p">.</span><span class="nf">setResourcePath</span><span class="p">(</span><span class="sh">"</span><span class="s">path-to-resource-dir</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Alternatively, you can set it before you create the instance of the toolkit</p>
+<p>Alternatively, you can set it before you create the instance of the toolkit:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">verovio</span>
+
 <span class="n">verovio</span><span class="p">.</span><span class="nf">setDefaultResourcePath</span><span class="p">(</span><span class="sh">"</span><span class="s">path-to-resource-dir</span><span class="sh">"</span><span class="p">)</span>
 <span class="n">tk</span> <span class="o">=</span> <span class="n">verovio</span><span class="p">.</span><span class="nf">toolkit</span><span class="p">()</span>
 </code></pre></div></div>
