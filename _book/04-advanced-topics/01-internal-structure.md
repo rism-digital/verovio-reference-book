@@ -18,7 +18,7 @@ The page-based organization is modeled by a MEI customization that defines the s
 
 One advantage of SVG rendering over other formats (e.g., images or PDF) is that SVG is rendered natively in all modern web-browsers. Because it is in XML, it also has the advantage that it is well suited to interaction in the browser, since every graphic is an XML element that is easy addressable in the DOM. With Verovio, we also have the advantage that the SVG is organized in such a way that the MEI structure is preserved as much as possible. 
 
-To give an example, a `<note>` element with an `xml:id` attribute in the MEI file will have a corresponding `<g>` element in the SVG with and `class` attribute with a value of `"note"` and an `id` attribute corresponding to the `xml:id`. This makes interaction with the SVG using JavaScript very easy. The hierarchy of the element is also preserved as shown below. 
+To give an example, a `<note>` element with an `xml:id` attribute in the MEI file will have a corresponding `<g>` element in the SVG with a `class` attribute with a value of `"note"` and an `id` attribute corresponding to the `xml:id`. This makes interaction with the SVG using JavaScript very easy. The hierarchy of the element is also preserved as shown below. 
 
 ```xml
 <tuplet xml:id="t1" num="3" numbase="2">
