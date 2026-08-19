@@ -94,7 +94,7 @@ module Jekyll
     def render(context)
       # check if we passed a variable or directly a url
       url = @remote_include.to_s.match(/^ ?{{.*}} ?$/) ? context[@remote_include] : @remote_include
-      open("#{url}")
+      open("#{url}") rescue ""
     end
 
   end

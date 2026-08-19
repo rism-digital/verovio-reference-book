@@ -1,5 +1,5 @@
 <svg width="945px" height="791px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="moqsi69">
-   <desc>Engraved by Verovio 6.2.0-43f8060</desc>
+   <desc>Engraved by Verovio 6.3.0-425dd7b</desc>
    <defs>
       <g id="E003-moqsi69">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -44,7 +44,7 @@
          <path transform="scale(1,-1)" d="M206 -748c32 48 49 100 49 149c0 89 -55 168 -168 203c-18 5 -47 9 -87 16v190v190h22c8 0 33 -61 71 -95c4 -3 -2 3 61 -56c62 -58 122 -137 122 -241c0 -32 -7 -65 -17 -96c11 -29 17 -60 17 -94c0 -71 -32 -148 -67 -190c-6 -5 -10 -7 -13 -7s-5 2 -5 5l4 10 c1 3 6 8 11 16zM248 -463c4 18 7 38 7 57c0 105 -80 173 -168 200c-11 3 -27 6 -47 9c9 -17 23 -61 53 -88c4 -3 -2 3 61 -56c36 -33 71 -74 94 -122z" />
       </g>
    </defs>
-   <style type="text/css">#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 ellipse, #moqsi69 path, #moqsi69 polygon, #moqsi69 polyline, #moqsi69 rect {stroke:currentColor}</style>
+   <style type="text/css">#moqsi69 g.ending, #moqsi69 g.fing, #moqsi69 g.reh, #moqsi69 g.tempo {font-weight:bold;}#moqsi69 g.dir, #moqsi69 g.dynam, #moqsi69 g.mNum {font-style:italic;}#moqsi69 g.label {font-weight:normal;}#moqsi69 ellipse, #moqsi69 path, #moqsi69 polygon, #moqsi69 polyline, #moqsi69 rect {stroke:currentColor}#moqsi69 g.cursor {fill:dodgerblue; color:dodgerblue;}#moqsi69 g.cursor.chord {fill:limegreen; color:limegreen;}</style>
    <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 21000 17560">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="njft1g2" class="mdiv pageMilestone" />
@@ -3763,7 +3763,7 @@
                   </tspan>
                   <tspan id="fsm35er" class="lb" />
                   <tspan id="g2rcrlx" class="text" x="10000" y="1084">
-                     <tspan font-size="405px"></tspan>
+                     <tspan font-size="405px" />
                   </tspan>
                </tspan>
             </text>
@@ -3777,7 +3777,7 @@
             <text font-size="0px">
                <tspan id="j9ixwzy" class="rend" x="0" y="1685" text-anchor="start">
                   <tspan id="k1ffvwuh" class="text">
-                     <tspan font-size="324px"></tspan>
+                     <tspan font-size="324px" />
                   </tspan>
                </tspan>
             </text>
