@@ -34,10 +34,11 @@ jobs:
           sudo cp ./Leipzig.ttf /usr/share/fonts
           sudo fc-cache -f -v
   
-      - name: "Install wkhtmltopdf"
+      - name: Install Chromium
         run: |
-          wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
-          sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+          chromium-browser --version
 
       - name: "Install ruby"
         uses: actions/setup-ruby@v1
