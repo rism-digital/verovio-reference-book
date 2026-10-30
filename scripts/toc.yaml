@@ -214,8 +214,12 @@
 "/installing-or-building-from-sources/python.html#pre-build-versions": Pre-build versions
 "/installing-or-building-from-sources/python.html#basic-usage-of-the-toolkit": Basic
   usage of the toolkit
-"/installing-or-building-from-sources/python.html#building-the-toolkit-without-cmake": Building
-  the toolkit without CMake
+"/installing-or-building-from-sources/python.html#building-the-toolkit-locally": Building
+  the toolkit locally
+"/installing-or-building-from-sources/python.html#building-the-python-module-directly-with-cmake": Building
+  the Python module directly with CMake
+"/installing-or-building-from-sources/python.html#how-the-python-package-is-built": How
+  the Python package is built
 "/installing-or-building-from-sources/python.html#resources-for-versions-built-locally": Resources
   for versions built locally
 "/installing-or-building-from-sources/java-and-android.html": Java and Android

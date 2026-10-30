@@ -4,10 +4,7 @@
 
 chromium-browser \
   --headless \
-  --no-sandbox \
-  --disable-dev-shm-usage \
-  --disable-gpu \
   --no-pdf-header-footer \
   --virtual-time-budget=10000 \
-  --print-to-pdf=output.pdf \
-  http://localhost:4000/
+  --print-to-pdf="scripts/verovio-reference-book.pdf" \
+http://127.0.0.1:4000/pdf/index.html 
