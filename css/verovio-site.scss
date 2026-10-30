@@ -2,8 +2,6 @@
 
 ---
 
-// All to be moved to the theme once finalized
-
 @media (min-width: 992px) {
     .toc-group {
         position: fixed;
@@ -28,7 +26,36 @@
     }
 }
 
+@page {
+  size: A4 portrait;
+  margin: 15mm 10mm 15mm 15mm;
+}
+
 @media print {
+
+    html,
+    body {
+        width: auto !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .container,
+    .container-fluid,
+    .row,
+    main,
+    article {
+        max-width: 100% !important;
+    }
+
+    img,
+    svg,
+    table,
+    pre {
+        max-width: 100%;
+    }
+
     // do not show links url when printing
     a[href]:after {
         content: "";
