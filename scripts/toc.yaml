@@ -125,7 +125,8 @@
 "/toolkit-reference/toolkit-methods.html#converthumdrumtomidi": ConvertHumdrumToMIDI
 "/toolkit-reference/toolkit-methods.html#convertmeitohumdrum": ConvertMEIToHumdrum
 "/toolkit-reference/toolkit-methods.html#edit": Edit
-"/toolkit-reference/toolkit-methods.html#editinfo": EditInfo
+"/toolkit-reference/toolkit-methods.html#editresponse": EditResponse
+"/toolkit-reference/toolkit-methods.html#editstatus": EditStatus
 "/toolkit-reference/toolkit-methods.html#getavailableoptions": GetAvailableOptions
 "/toolkit-reference/toolkit-methods.html#getdefaultoptions": GetDefaultOptions
 "/toolkit-reference/toolkit-methods.html#getdescriptivefeatures": GetDescriptiveFeatures

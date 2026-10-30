@@ -118,7 +118,28 @@ result = toolkit.edit(editorAction)
 ```
 
 {% include method-doc file="edit-editoraction" %}
-### EditInfo
+### EditResponse
+
+Return the editor response - experimental code not to rely on.
+
+**Returns**
+
+`std::string` – The editor response as a string
+
+**Original header**
+
+```cpp
+std::string vrv::Toolkit::EditResponse()
+```
+
+**Example call**
+
+```python
+result = toolkit.editResponse()
+```
+
+{% include method-doc file="editresponse" %}
+### EditStatus
 
 Return the editor status - experimental code not to rely on.
 
@@ -129,16 +150,16 @@ Return the editor status - experimental code not to rely on.
 **Original header**
 
 ```cpp
-std::string vrv::Toolkit::EditInfo()
+std::string vrv::Toolkit::EditStatus()
 ```
 
 **Example call**
 
 ```python
-result = toolkit.editInfo()
+result = toolkit.editStatus()
 ```
 
-{% include method-doc file="editinfo" %}
+{% include method-doc file="editstatus" %}
 ### GetAvailableOptions
 
 Return all available options grouped by category.

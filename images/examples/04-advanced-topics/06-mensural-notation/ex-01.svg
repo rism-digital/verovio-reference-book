@@ -1,5 +1,5 @@
 <svg width="425px" height="369px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
-   <desc>Engraved by Verovio 6.3.0-425dd7b</desc>
+   <desc>Engraved by Verovio 6.4.0-cb5fcfa</desc>
    <defs>
       <g id="E003-l19nj5e9">
          <path transform="scale(1,-1)" d="M0 -0v111c0 0 62 1 63 1c70 0 233 16 321 170c1 1 15 -5 15 -6c-5 -7 -57 -176 -263 -271c-24 -4 -53 -5 -83 -5h-53z" />
@@ -20,7 +20,7 @@
          <path transform="scale(1,-1)" d="M0 760h30v-760h-30v760z" />
       </g>
    </defs>
-   <style type="text/css">#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}#l19nj5e9 g.cursor {fill:dodgerblue; color:dodgerblue;}#l19nj5e9 g.cursor.chord {fill:limegreen; color:limegreen;}</style>
+   <style type="text/css">#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}#l19nj5e9 g.cursor {fill:dodgerblue; color:dodgerblue;}#l19nj5e9 g.cursor.chord {fill:limegreen; color:limegreen;}#l19nj5e9 g.placeholder {visibility:hidden}</style>
    <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 9440 8200">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="moqsi69" class="mdiv pageMilestone" />
@@ -32,7 +32,9 @@
                <use xlink:href="#E004-l19nj5e9" transform="translate(-180, 6891) scale(0.72, 0.72)" />
                <rect x="-180" y="303" height="6594" width="90" />
             </g>
-            <g id="hju2rxn" class="section systemMilestone" />
+            <g id="hju2rxn" class="section placeholder systemMilestone">
+               <ellipse cx="0" cy="0" rx="90" ry="90" />
+            </g>
             <g id="rgx8bjh" class="staff">
                <path d="M0 360 L8442 360" stroke-width="13" />
                <path d="M0 540 L8442 540" stroke-width="13" />

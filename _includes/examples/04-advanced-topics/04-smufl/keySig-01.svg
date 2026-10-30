@@ -1,5 +1,5 @@
 <svg width="209px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="l19nj5e9">
-   <desc>Engraved by Verovio 6.3.0-425dd7b</desc>
+   <desc>Engraved by Verovio 6.4.0-cb5fcfa</desc>
    <defs>
       <g id="E444-l19nj5e9">
          <path transform="scale(1,-1)" d="M106 179v-91l-44 -14v-165l44 12v-91l-46 -14v-155h-17v149l-43 -13v90l43 14v167l-43 -14v92l43 13v169h17v-163z" />
@@ -17,20 +17,22 @@
          <path transform="scale(1,-1)" d="M0 10v105c0 9 1 10 10 10h280c9 0 10 -1 10 -10v-105c0 -9 -1 -10 -10 -10h-280c-9 0 -10 1 -10 10z" />
       </g>
    </defs>
-   <style type="text/css">#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}#l19nj5e9 g.cursor {fill:dodgerblue; color:dodgerblue;}#l19nj5e9 g.cursor.chord {fill:limegreen; color:limegreen;}</style>
+   <style type="text/css">#l19nj5e9 g.ending, #l19nj5e9 g.fing, #l19nj5e9 g.reh, #l19nj5e9 g.tempo {font-weight:bold;}#l19nj5e9 g.dir, #l19nj5e9 g.dynam, #l19nj5e9 g.mNum {font-style:italic;}#l19nj5e9 g.label {font-weight:normal;}#l19nj5e9 ellipse, #l19nj5e9 path, #l19nj5e9 polygon, #l19nj5e9 polyline, #l19nj5e9 rect {stroke:currentColor}#l19nj5e9 g.cursor {fill:dodgerblue; color:dodgerblue;}#l19nj5e9 g.cursor.chord {fill:limegreen; color:limegreen;}#l19nj5e9 g.placeholder {visibility:hidden}</style>
    <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 4640 2080">
       <g class="page-margin" transform="translate(500, 500)">
          <g id="moqsi69" class="mdiv pageMilestone" />
          <g id="njft1g2" class="score pageMilestone" />
          <g id="a1pfogn4" class="system">
-            <g id="kc0c02x" class="label">
+            <g id="qqy4i76" class="label">
                <text x="1150" y="630" text-anchor="end" font-size="0px">
-                  <tspan id="l1lqnom3" class="text">
+                  <tspan id="r3ruo0a" class="text">
                      <tspan font-size="405px">Canto</tspan>
                   </tspan>
                </text>
             </g>
-            <g id="j9ixwzy" class="section systemMilestone" />
+            <g id="j9ixwzy" class="section placeholder systemMilestone">
+               <ellipse cx="1330" cy="0" rx="90" ry="90" />
+            </g>
             <g id="k1ffvwuh" class="measure">
                <g id="t1kzq82m" class="staff">
                   <path d="M1330 180 L3641 180" stroke-width="13" />
@@ -38,16 +40,16 @@
                   <path d="M1330 540 L3641 540" stroke-width="13" />
                   <path d="M1330 720 L3641 720" stroke-width="13" />
                   <path d="M1330 900 L3641 900" stroke-width="13" />
-                  <g id="cc8wdp9" class="clef" visibility="hidden" />
-                  <g id="dxvimeh" class="keySig">
-                     <g id="er631e3" class="keyAccid">
+                  <g id="i1yz9fdu" class="clef" visibility="hidden" />
+                  <g id="j16qode7" class="keySig">
+                     <g id="k16e8mly" class="keyAccid">
                         <use xlink:href="#E444-l19nj5e9" transform="translate(1420, 540) scale(0.72, 0.72)" />
                      </g>
-                     <g id="frvbxh6" class="keyAccid">
+                     <g id="l1b9tw60" class="keyAccid">
                         <use xlink:href="#E447-l19nj5e9" transform="translate(1533, 810) scale(0.72, 0.72)" />
                      </g>
                   </g>
-                  <g id="g1gv1amb" class="meterSig">
+                  <g id="m13k1pa7" class="meterSig">
                      <use xlink:href="#E084-l19nj5e9" transform="translate(1876, 360) scale(0.72, 0.72)" />
                      <use xlink:href="#E082-l19nj5e9" transform="translate(1871, 720) scale(0.72, 0.72)" />
                   </g>
